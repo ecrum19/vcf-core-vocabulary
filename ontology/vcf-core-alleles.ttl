@@ -15,7 +15,7 @@
   rdfs:label "VCF Core allele and value-indexing module"@en ;
   dct:description "VCF-specific allele carriers and indexed values for Number=A/R/G/LA/LR/LG/P/M fields."@en ;
   owl:imports <https://w3id.org/vcf-core/vocab> ;
-  owl:versionInfo "2.0.0" .
+  owl:versionInfo "2.1.0" .
 
 vcfc:Allele a owl:Class ;
   rdfs:label "VCF allele"@en ;
@@ -92,3 +92,81 @@ vcfc:tupleArity a owl:DatatypeProperty ;
   rdfs:label "tuple arity"@en ;
   rdfs:comment "The fixed grouping width for flattened VCF value lists, such as 2 for confidence intervals and 4 for MEINFO or METRANS."@en ;
   rdfs:domain vcfc:FieldValueItem ; rdfs:range xsd:positiveInteger .
+
+#################################################################
+# REF padding-base interpretation (VCF 4.5 fixed field 4)
+#################################################################
+
+# VCF requires a padding base whenever an allele would otherwise be empty, and
+# for symbolic alleles. Which base plays that role is an interpretation layered
+# on top of REF and ALT, not part of them, so it is carried by a separate
+# resource and only asserted where the specification determines it. A shared
+# first base is NOT by itself evidence of padding: complex substitutions may
+# share a prefix while the specification leaves padding optional, and trimming
+# such a prefix would silently assert a claim about the alteration.
+
+vcfc:PaddingInterpretation a owl:Class ;
+  rdfs:label "padding-base interpretation"@en ;
+  rdfs:comment "A derived statement about which base of a record's alleles serves as the VCF padding base, together with the specification rule that determined it. It never replaces or trims vcfc:ref and vcfc:alleleValue, which keep the source strings; a consumer that ignores this resource still sees the record exactly as written."@en ;
+  vcfc:iriTemplate "file://{vcfFilePath}#record/{recordKey}/padding" .
+
+vcfc:hasPaddingInterpretation a owl:ObjectProperty ;
+  rdfs:label "has padding interpretation"@en ;
+  rdfs:comment "Associates a record with the padding interpretation derived for its alleles. At most one interpretation is asserted per record."@en ;
+  rdfs:domain vcfc:VCFRecord ; rdfs:range vcfc:PaddingInterpretation .
+
+vcfc:PaddingRule a owl:Class ;
+  rdfs:label "padding rule"@en ;
+  rdfs:comment "The VCF 4.5 provision under which a padding interpretation was derived. Naming the rule keeps the interpretation auditable and makes the undetermined case explicit rather than silent."@en .
+
+vcfc:SimpleIndelPadding a owl:NamedIndividual, vcfc:PaddingRule ;
+  rdfs:label "simple insertion or deletion"@en ;
+  rdfs:comment "One allele is a strict prefix of the other, so without a padding base one allele would be empty. VCF 4.5 requires the base before the variant, and POS denotes that base."@en .
+
+vcfc:SymbolicAllelePadding a owl:NamedIndividual, vcfc:PaddingRule ;
+  rdfs:label "symbolic alternate allele"@en ;
+  rdfs:comment "An ALT allele is an angle-bracketed symbolic ID other than '<*>'. VCF 4.5 requires the padding base and POS denotes the coordinate of the base preceding the polymorphism."@en .
+
+vcfc:PositionOnePadding a owl:NamedIndividual, vcfc:PaddingRule ;
+  rdfs:label "contig position one exception"@en ;
+  rdfs:comment "The variant occurs at position 1 of the contig, where VCF 4.5 requires the base after the variant instead of the base before it."@en .
+
+vcfc:UnspecifiedAlleleNoPadding a owl:NamedIndividual, vcfc:PaddingRule ;
+  rdfs:label "unspecified allele, no padding"@en ;
+  rdfs:comment "The only alternate allele is the unspecified allele '<*>', which VCF 4.5 exempts from the padding requirement: its reference call interval includes the POS base. The padding base count is therefore zero."@en .
+
+vcfc:PaddingNotDetermined a owl:NamedIndividual, vcfc:PaddingRule ;
+  rdfs:label "not determined by the specification"@en ;
+  rdfs:comment "Every allele already has at least one base of its own, so VCF 4.5 permits but does not require a padding base and does not say which base plays that role. No padding claim is made; the shared prefix of a complex substitution falls here."@en .
+
+vcfc:paddingRule a owl:ObjectProperty ;
+  rdfs:label "padding rule"@en ;
+  rdfs:comment "The specification provision that produced this padding interpretation."@en ;
+  rdfs:domain vcfc:PaddingInterpretation ; rdfs:range vcfc:PaddingRule .
+
+vcfc:PaddingSide a owl:Class ;
+  rdfs:label "padding side"@en ;
+  rdfs:comment "Whether the padding base precedes or follows the variant bases."@en .
+
+vcfc:PaddingBefore a owl:NamedIndividual, vcfc:PaddingSide ;
+  rdfs:label "padding before the variant"@en ;
+  rdfs:comment "The ordinary case: the padding base is the first base of REF and POS denotes it."@en .
+
+vcfc:PaddingAfter a owl:NamedIndividual, vcfc:PaddingSide ;
+  rdfs:label "padding after the variant"@en ;
+  rdfs:comment "The position-one exception: the padding base follows the variant bases."@en .
+
+vcfc:paddingSide a owl:ObjectProperty ;
+  rdfs:label "padding side"@en ;
+  rdfs:comment "Which side of the variant bases the padding base occupies. Asserted only when a padding rule determines it."@en ;
+  rdfs:domain vcfc:PaddingInterpretation ; rdfs:range vcfc:PaddingSide .
+
+vcfc:paddingBaseCount a owl:DatatypeProperty ;
+  rdfs:label "padding base count"@en ;
+  rdfs:comment "How many bases of the record's alleles serve as padding under the stated rule: one for a required padding base, zero when the rule determines that none is present or when the specification leaves it undetermined."@en ;
+  rdfs:domain vcfc:PaddingInterpretation ; rdfs:range xsd:nonNegativeInteger .
+
+vcfc:paddingAnchorPosition a owl:DatatypeProperty ;
+  rdfs:label "padding anchor position"@en ;
+  rdfs:comment "The 1-based reference coordinate of the padding base. For vcfc:PaddingBefore this equals the record's POS; for vcfc:PaddingAfter it is the coordinate following the variant bases. Absent when no padding base is asserted."@en ;
+  rdfs:domain vcfc:PaddingInterpretation ; rdfs:range xsd:integer .

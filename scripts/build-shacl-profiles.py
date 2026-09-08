@@ -2,11 +2,17 @@
 """Build portable SPARQL consistency rules and version overlays from registries.
 Run with --spec-dir to refresh legacy registry snapshots from official .tex files.
 Normal builds are offline. Generated artifacts are checked in for other validators.
+
+Every version-scoped artifact is derived from ontology/versions/registry.json:
+the SHACL overlays, the per-version reserved-key graphs, the VCF4xFile classes in
+the core vocabulary, and the version entries in ocg.config.json. Adding a VCF
+version is an edit to that table, not to this generator.
 """
 from pathlib import Path
 import argparse, hashlib, json, re
 from rdflib import Graph, Namespace, Literal, URIRef
 from rdflib.namespace import RDF, OWL, RDFS
+import version_registry
 ROOT=Path(__file__).resolve().parent.parent
 V=Namespace('https://w3id.org/vcf-core/vocab#')
 PREFIX='PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n'
@@ -21,10 +27,11 @@ def count(raw,sep):return f'(STRLEN(STR({raw})) - STRLEN(REPLACE(STR({raw}), "{s
 def clean(s):
     return re.sub(r'\\(?:texttt|textbf|emph|tt)\{([^{}]*)\}',r'\1',s).replace('\\_','_').replace('$','').strip()
 
-def legacy_snapshots(specdir):
+def legacy_snapshots(specdir,registry):
     directory=ROOT/'ontology/versions';directory.mkdir(exist_ok=True)
-    for version in ['4.1','4.2','4.3','4.4']:
-        source=(Path(specdir)/f'VCFv{version}.tex').read_text(); defs={}
+    for entry in version_registry.by_mode('snapshot',registry):
+        version=entry['id']
+        source=(Path(specdir)/entry['specFile']).read_text(); defs={}
         # Tables in 4.3+ give explicit general reserved declarations.
         for kind,label in [('INFO','reserved-info'),('FORMAT','reserved-genotypes')]:
             marker=source.find('\\label{table:'+label+'}')
@@ -39,19 +46,89 @@ def legacy_snapshots(specdir):
         normative=source[start:end if end!=-1 else len(source)]
         pattern=r'##(INFO|FORMAT)=<ID=([^,]+),Number=([^,]+),Type=([^,]+),Description='
         reserved_prose=set(re.findall(r'\\item ([A-Za-z0-9_]+)\s*:', source[:start]))
-        for text in ([source[:start]] if version in ('4.1','4.2') else [])+[normative]:
+        # Specifications without reserved tables (4.1, 4.2) declare their general
+        # keys only in prose, so fall back to that section when no table was found.
+        for text in ([source[:start]] if not defs else [])+[normative]:
             for kind,key,num,typ in re.findall(pattern,text):
                 if text!=normative and key not in reserved_prose:continue
                 if key=='ID' or typ not in ('Integer','Float','Flag','Character','String'):continue
                 if (kind,key) not in defs or text==normative:defs[kind,key]=[num,typ]
         # Earlier specifications leave some INFO formats to file headers. We do
         # not manufacture a complete registry where no fixed declaration exists.
-        data={'version':version,'source':f'https://raw.githubusercontent.com/samtools/hts-specs/master/VCFv{version}.tex','sha256':hashlib.sha256(source.encode()).hexdigest(),'scope':'Explicit reserved table rows and header declarations in the specification; earlier prose-only definitions remain producer-declared.','definitions':[{'kind':k,'id':i,'number':n,'type':t} for (k,i),(n,t) in sorted(defs.items())]}
-        (directory/f'vcf-{version}-reserved.json').write_text(json.dumps(data,indent=2)+'\n')
+        data={'version':version,'source':entry['source'],'sha256':hashlib.sha256(source.encode()).hexdigest(),'scope':'Explicit reserved table rows and header declarations in the specification; earlier prose-only definitions remain producer-declared.','definitions':[{'kind':k,'id':i,'number':n,'type':t} for (k,i),(n,t) in sorted(defs.items())]}
+        (ROOT/entry['reservedKeys']['snapshot']).write_text(json.dumps(data,indent=2)+'\n')
+
+CLASS_BEGIN='# BEGIN GENERATED VERSION CLASSES'
+CLASS_END='# END GENERATED VERSION CLASSES'
+
+def sync_version_classes(registry):
+    """Rewrite the VCF4xFile class block in the core vocabulary from the registry."""
+    path=ROOT/'ontology/vcf-core-vocabulary.ttl';text=path.read_text()
+    begin=text.find(CLASS_BEGIN);end=text.find(CLASS_END)
+    if begin<0 or end<0 or end<begin:
+        raise SystemExit(f'{path.relative_to(ROOT)} is missing the {CLASS_BEGIN} / {CLASS_END} markers; '
+                         'restore them around the VCF4xFile declarations before rebuilding.')
+    body='\n\n'.join(
+        f'vcfc:{entry["className"]} a owl:Class ; rdfs:subClassOf vcfc:VCFFile ; '
+        f'rdfs:label "VCF {entry["id"]} file"@en ; '
+        f'rdfs:comment "An optional explicit VCF {entry["id"]} file type. Use it when the VCF {entry["id"]} '
+        'SHACL version gate is wanted; VCFFile itself remains version-neutral, and the matching overlay '
+        'also scopes its rules by fileFormat."@en .'
+        for entry in version_registry.versions(registry))
+    updated=text[:begin]+CLASS_BEGIN+'\n'+body+'\n'+text[end:]
+    if updated!=text:path.write_text(updated)
+
+OCG_BLOCK=re.compile(r'(?ms)^      \{\n        "key": "%s",\n.*?^      \},?\n')
+
+def ocg_entries(registry):
+    """The version-scoped ocg.config.json entries implied by the registry."""
+    for entry in version_registry.versions(registry):
+        version=entry['id'];dashed=version.replace('.','-')
+        yield (f'audit-vcf-{dashed}-shacl',f'VCF {version} validation overlay',
+               f'shacl/vcf-{version}.shacl.ttl',
+               f'VCF {version} Number codes, reserved declarations and SV tuple rules; load with the common shapes.')
+    for entry in version_registry.by_mode('snapshot',registry):
+        version=entry['id'];dashed=version.replace('.','-')
+        yield (f'audit-vcf-{dashed}-reserved',f'VCF {version} reserved declarations',
+               entry['reservedKeys']['graph'],
+               f'Explicit INFO and FORMAT declarations from the official VCF {version} source.')
+
+def sync_ocg_config(registry):
+    """Insert or refresh the templated version entries in ocg.config.json.
+
+    Only the two fully templated families are touched. Hand-written entries such
+    as the per-version examples keep their prose and are left alone.
+    """
+    path=ROOT/'ocg.config.json';text=path.read_text();original=text
+    for key,label,artifact,description in ocg_entries(registry):
+        block=('      {\n'
+               f'        "key": "{key}",\n'
+               f'        "label": "{label}",\n'
+               f'        "path": "{artifact}",\n'
+               f'        "description": "{description}"\n'
+               '      }')
+        existing=OCG_BLOCK.pattern%re.escape(key)
+        match=re.search(existing,text)
+        if match:
+            text=text[:match.start()]+block+(',' if match.group().rstrip().endswith(',') else '')+'\n'+text[match.end():]
+            continue
+        family=key.rsplit('-',1)[1]
+        anchors=[m for m in re.finditer(OCG_BLOCK.pattern%rf'audit-vcf-[0-9-]+-{family}',text)]
+        if not anchors:
+            raise SystemExit(f'ocg.config.json has no audit-vcf-*-{family} entry to anchor {key} against; '
+                             f'add this block by hand:\n{block}')
+        anchor=anchors[-1]
+        if not anchor.group().rstrip().endswith(','):
+            raise SystemExit(f'the last audit-vcf-*-{family} entry ends its array; add {key} by hand:\n{block}')
+        text=text[:anchor.end()]+block+',\n'+text[anchor.end():]
+    if text!=original:
+        json.loads(text)  # fail loudly rather than writing a broken config
+        path.write_text(text)
 
 def main():
     parser=argparse.ArgumentParser();parser.add_argument('--spec-dir');args=parser.parse_args()
-    if args.spec_dir:legacy_snapshots(args.spec_dir)
+    registry=version_registry.load()
+    if args.spec_dir:legacy_snapshots(args.spec_dir,registry)
     # Cross-representation consistency. Raw-only values remain legal; explicitly
     # materialized collections must agree with their original source token.
     rule('HeaderVersionAgreementShape','VCFFile','File and fileformat header versions must agree.','''$this vcfc:fileFormat ?version ; vcfc:hasHeader/vcfc:hasHeaderLine ?line .
@@ -147,48 +224,88 @@ FILTER(STR(?a)!=?expected || ?i>'''+count('?raw',',')+''')''')
     rule('ReferenceBlockExtentShape','ReferenceBlock','A sample reference block must agree with FORMAT LEN and record POS.','''?sample vcfc:hasReferenceBlock $this ; vcfc:hasFormatValue ?fv . ?fv vcfc:declaredBy/vcfc:fieldId "LEN" ; vcfc:fieldValue ?raw .
 ?record vcfc:pos ?pos ; vcfc:hasCall/vcfc:hasSampleCall ?sample .
 $this vcfc:referenceBlockLength ?length ; vcfc:endPosition ?end . FILTER(?length!=xsd:integer(?raw) || ?end!=?pos+?length-1)''')
+    # VCF 4.5 section 1.6.2: the declared FORMAT key resources must reproduce the
+    # FORMAT column exactly, so the structured list cannot drift from the source.
+    rule('FormatKeyRawAgreementShape','FormatKey','Declared FORMAT keys must agree with the FORMAT column order.','''?call vcfc:hasFormatKey $this ; vcfc:formatRaw ?raw .
+$this vcfc:fieldIndex ?i ; vcfc:declaredBy/vcfc:fieldId ?key .
+BIND(REPLACE(STR(?raw),CONCAT("^([^:]*:){",STR(?i-1),"}([^:]*).*$"),"$2") AS ?expected)
+FILTER(?key != ?expected || ?i > ''' + count('?raw',':') + ''')''')
+    # VCF 4.5 fixed field 1: a bracketed CHROM names an assembly contig. The parsed
+    # identifier must agree with the source token, and the record must not also
+    # claim a declared reference contig.
+    rule('AssemblyContigAgreementShape','VCFRecord','A bracketed CHROM must agree with its parsed assembly contig and must not also name a declared contig.','''$this vcfc:chrom ?chrom .
+OPTIONAL { $this vcfc:chromAssemblyContig/vcfc:assemblyContigId ?parsed }
+OPTIONAL { $this vcfc:chromosome ?declared }
+BIND(REGEX(STR(?chrom),"^<[^<>,\\\\s]+>$") AS ?bracketed)
+FILTER((?bracketed && (!BOUND(?parsed) || CONCAT("<",?parsed,">") != STR(?chrom) || BOUND(?declared)))
+    || (!?bracketed && BOUND(?parsed)))''')
+    # VCF 4.5 fixed field 4: a padding claim must be internally coherent. A rule that
+    # determines a padding base needs a side and an anchor; one that does not must
+    # assert neither, so an undetermined case cannot masquerade as a claim.
+    rule('PaddingInterpretationAgreementShape','PaddingInterpretation','A padding interpretation must agree with its rule, and its anchor must follow from POS and side.','''?record vcfc:hasPaddingInterpretation $this ; vcfc:pos ?pos ; vcfc:ref ?ref .
+$this vcfc:paddingRule ?rule ; vcfc:paddingBaseCount ?count .
+OPTIONAL { $this vcfc:paddingSide ?side }
+OPTIONAL { $this vcfc:paddingAnchorPosition ?anchor }
+BIND(?rule IN (vcfc:SimpleIndelPadding, vcfc:SymbolicAllelePadding, vcfc:PositionOnePadding) AS ?determined)
+BIND(IF(?side = vcfc:PaddingBefore, ?pos, ?pos + STRLEN(STR(?ref)) - 1) AS ?expected)
+FILTER((?determined && (?count != 1 || !BOUND(?side) || !BOUND(?anchor) || ?anchor != ?expected))
+    || (!?determined && (?count != 0 || BOUND(?side) || BOUND(?anchor)))
+    || (?rule = vcfc:PositionOnePadding && (?side != vcfc:PaddingAfter || ?pos != 1)))''')
     (ROOT/'shacl/vcf-core-consistency.shacl.ttl').write_text(HEADER+'\n'.join(parts))
     # Each overlay is scoped by fileFormat. All overlays may be loaded together.
-    modern=Graph().parse(ROOT/'ontology/vcf-core-reserved-keys.ttl')
-    for minor in range(1,6):
-        parts.clear();version=f'4.{minor}';code=f'VCFv{version}'
-        if minor<5:
-            snapshot=json.loads((ROOT/f'ontology/versions/vcf-{version}-reserved.json').read_text());definitions=snapshot['definitions']
+    graphs={}
+    phase=version_registry.first_with('leadingPhaseIndicator',registry)
+    phase_from=phase['id'] if phase else 'a later version'
+    for entry in version_registry.versions(registry):
+        parts.clear()
+        version=entry['id'];code=entry['code'];tag=version_registry.slug(version);reserved=entry['reservedKeys']
+        if reserved['mode']=='snapshot':
+            snapshot=json.loads((ROOT/reserved['snapshot']).read_text());definitions=snapshot['definitions']
             g=Graph();g.bind('vcfc',V);g.bind('owl',OWL);g.bind('rdfs',RDFS)
             for d in definitions:
-                term=V[f'Reserved{d["kind"].title()}_v4{minor}_{d["id"]}'];g.add((term,RDF.type,OWL.NamedIndividual));g.add((term,RDF.type,V.InfoFieldDefinition if d['kind']=='INFO' else V.FormatFieldDefinition))
+                term=V[f'Reserved{d["kind"].title()}_v{tag}_{d["id"]}'];g.add((term,RDF.type,OWL.NamedIndividual));g.add((term,RDF.type,V.InfoFieldDefinition if d['kind']=='INFO' else V.FormatFieldDefinition))
                 for prop,val in [('fieldId',Literal(d['id'])),('fieldNumber',Literal(d['number'])),('fieldType',V[d['type']+'Type']),('fieldDescription',Literal(f'Reserved {d["kind"]} {d["id"]} declaration in VCF {version}.')),('reservedIn',Literal(code))]:g.add((term,V[prop],val))
-            (ROOT/f'ontology/versions/vcf-{version}-reserved.ttl').write_text(g.serialize(format='turtle').rstrip()+'\n')
+            (ROOT/reserved['graph']).write_text(g.serialize(format='turtle').rstrip()+'\n')
         else:
-            definitions=[]
+            # A full registry graph carries its own descriptions and arities; read
+            # the declarations back out rather than re-deriving them here.
+            if reserved['graph'] not in graphs:graphs[reserved['graph']]=Graph().parse(ROOT/reserved['graph'])
+            source_graph=graphs[reserved['graph']];definitions=[]
             for cls,kind in [(V.InfoFieldDefinition,'INFO'),(V.FormatFieldDefinition,'FORMAT')]:
-                for s in modern.subjects(RDF.type,cls):
-                    if modern.value(s,V.fieldId):definitions.append(dict(kind=kind,id=str(modern.value(s,V.fieldId)),number=str(modern.value(s,V.fieldNumber)),type=str(modern.value(s,V.fieldType)).split('#')[-1].replace('Type','')))
-        allowed='[0-9]+|A|G|[.]' if minor==1 else '[0-9]+|A|R|G|[.]'
-        fmt=allowed+('|P' if minor==4 else '|P|LA|LR|LG|M' if minor==5 else '')
-        rule(f'VCF4{minor}NumberShape','VCFFile',f'{code}: Number codes must be supported by this version and field kind.',f'''$this vcfc:fileFormat "{code}" ; vcfc:hasHeader/vcfc:hasHeaderLine ?d . ?d vcfc:fieldNumber ?number .
+                for s in source_graph.subjects(RDF.type,cls):
+                    if source_graph.value(s,V.fieldId):definitions.append(dict(kind=kind,id=str(source_graph.value(s,V.fieldId)),number=str(source_graph.value(s,V.fieldNumber)),type=str(source_graph.value(s,V.fieldType)).split('#')[-1].replace('Type','')))
+        allowed=version_registry.number_pattern(entry,'info');fmt=version_registry.number_pattern(entry,'format')
+        rule(f'VCF{tag}NumberShape','VCFFile',f'{code}: Number codes must be supported by this version and field kind.',f'''$this vcfc:fileFormat "{code}" ; vcfc:hasHeader/vcfc:hasHeaderLine ?d . ?d vcfc:fieldNumber ?number .
 {{ ?d a vcfc:INFOHeaderLine . FILTER(!REGEX(?number,"^({allowed})$")) }} UNION {{ ?d a vcfc:FORMATHeaderLine . FILTER(!REGEX(?number,"^({fmt})$")) }}''')
         for kind in ['INFO','FORMAT']:
             checks=['(?id='+Literal(d['id']).n3()+' && (?number!='+Literal(d['number']).n3()+' || ?type!=vcfc:'+d['type']+'Type))' for d in definitions if d['kind']==kind]
-            rule(f'VCF4{minor}{kind}ReservedShape','VCFFile',f'{code}: reserved {kind} declarations must match this version.',f'''$this vcfc:fileFormat "{code}" ; vcfc:hasHeader/vcfc:hasHeaderLine ?d .
+            # Early specifications reserve keys in prose without fixing Number or
+            # Type. There is nothing to check then, and an empty FILTER() would
+            # not parse, so emit no shape rather than an unsatisfiable one.
+            if not checks:continue
+            rule(f'VCF{tag}{kind}ReservedShape','VCFFile',f'{code}: reserved {kind} declarations must match this version.',f'''$this vcfc:fileFormat "{code}" ; vcfc:hasHeader/vcfc:hasHeaderLine ?d .
 ?d a vcfc:{kind}HeaderLine ; vcfc:fieldId ?id ; vcfc:fieldNumber ?number ; vcfc:fieldType ?type .
 FILTER({' || '.join(checks)})''')
-        if minor<=3:
-            rule(f'VCF4{minor}GTShape','VCFFile',f'{code}: leading GT phase indicators require VCF 4.4 or later.',f'''$this vcfc:fileFormat "{code}" ; vcfc:hasRecord/vcfc:hasCall/vcfc:hasSampleCall/vcfc:hasGenotype ?g .
+        if not entry['leadingPhaseIndicator']:
+            rule(f'VCF{tag}GTShape','VCFFile',f'{code}: leading GT phase indicators require VCF {phase_from} or later.',f'''$this vcfc:fileFormat "{code}" ; vcfc:hasRecord/vcfc:hasCall/vcfc:hasSampleCall/vcfc:hasGenotype ?g .
 ?g vcfc:genotypeString ?gt . FILTER(REGEX(STR(?gt),"^[|/]"))''')
-        for keys,width in [('CIPOS|CIEND'+('|CILEN|CICN' if minor>=4 else ''),2),('MEINFO|METRANS',4)]:
-            expected=str(width) if minor<=3 else f'{width} * ?altCount'
-            rule(f'VCF4{minor}Tuple{width}Shape','VCFFile',f'{code}: SV tuple cardinality must match the version-specific rule.',f'''$this vcfc:fileFormat "{code}" ; vcfc:hasRecord ?record . ?record vcfc:alt ?alt ; vcfc:hasCall/vcfc:hasInfoValue ?fv .
+        for tuple_spec in entry['svTuples']:
+            keys='|'.join(tuple_spec['keys']);width=tuple_spec['width']
+            expected=version_registry.sv_tuple_expected(entry,width)
+            rule(f'VCF{tag}Tuple{width}Shape','VCFFile',f'{code}: SV tuple cardinality must match the version-specific rule.',f'''$this vcfc:fileFormat "{code}" ; vcfc:hasRecord ?record . ?record vcfc:alt ?alt ; vcfc:hasCall/vcfc:hasInfoValue ?fv .
 ?fv vcfc:declaredBy/vcfc:fieldId ?id ; vcfc:fieldValue ?raw . FILTER(REGEX(?id,"^({keys})$"))
 BIND(IF(STR(?alt)=".",0,{count('?alt',',')}) AS ?altCount)
 FILTER(STR(?raw)!="." && {count('?raw',',')} != {expected})''')
             # Once parsed alleles exist, these tuple carriers are a complete
             # materialization contract, including the all-items-removed case.
-            rule(f'VCF4{minor}Tuple{width}ItemsShape','VCFFile',f'{code}: parsed SV tuples must contain all value items.',f'''$this vcfc:fileFormat "{code}" ; vcfc:hasRecord ?record . ?record vcfc:hasAltAllele ?allele ; vcfc:hasCall/vcfc:hasInfoValue ?fv .
+            rule(f'VCF{tag}Tuple{width}ItemsShape','VCFFile',f'{code}: parsed SV tuples must contain all value items.',f'''$this vcfc:fileFormat "{code}" ; vcfc:hasRecord ?record . ?record vcfc:hasAltAllele ?allele ; vcfc:hasCall/vcfc:hasInfoValue ?fv .
 ?fv vcfc:declaredBy/vcfc:fieldId ?id ; vcfc:fieldValue ?raw . FILTER(REGEX(?id,"^({keys})$"))
 {{ SELECT ?fv (COUNT(DISTINCT ?item) AS ?n) WHERE {{ ?fv vcfc:fieldValue ?raw . OPTIONAL {{ ?fv vcfc:hasValueItem ?item }} }} GROUP BY ?fv }}
 FILTER(?n != {count('?raw',',')})''')
-        gate=f'vcfc:VCF4{minor}FileGate a sh:NodeShape ; sh:targetClass vcfc:VCF4{minor}File ; sh:property [ sh:path vcfc:fileFormat ; sh:hasValue "{code}" ; sh:maxCount 1 ] .\n'
+        gate=f'vcfc:{entry["className"]}Gate a sh:NodeShape ; sh:targetClass vcfc:{entry["className"]} ; sh:property [ sh:path vcfc:fileFormat ; sh:hasValue "{code}" ; sh:maxCount 1 ] .\n'
         (ROOT/f'shacl/vcf-{version}.shacl.ttl').write_text(HEADER+gate+'\n'.join(parts))
-    print('Built consistency rules and five version overlays.')
+    sync_version_classes(registry)
+    sync_ocg_config(registry)
+    print(f'Built consistency rules and {len(version_registry.versions(registry))} version overlays '
+          f'({", ".join(v["code"] for v in version_registry.versions(registry))}).')
 if __name__=='__main__':main()

@@ -1,0 +1,11 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+# VCF 4.5 section 1.6.2 permits dropping trailing FORMAT fields. The record
+# declares its keys as an ordered resource sequence, so a key a sample omitted
+# is reachable structurally and is distinguishable from an undeclared key.
+SELECT ?pos ?index ?omitted WHERE {
+  ?record vcfc:pos ?pos ; vcfc:hasCall ?call .
+  ?call vcfc:hasFormatKey ?key ; vcfc:hasSampleCall ?sample .
+  ?key vcfc:fieldIndex ?index ; vcfc:declaredBy ?definition .
+  ?definition vcfc:fieldId ?omitted .
+  FILTER NOT EXISTS { ?sample vcfc:hasFormatValue/vcfc:declaredBy ?definition }
+} ORDER BY ?pos ?index

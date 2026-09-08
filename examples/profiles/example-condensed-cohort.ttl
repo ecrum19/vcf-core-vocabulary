@@ -19,11 +19,16 @@
     vcfc:filterStatus vcfc:FiltersPassed ;
     vcfc:formatRaw "GT" ;
     vcfc:hasCallMatrix <file://example-condensed-cohort.vcf#call/1/matrix> ;
+    vcfc:hasFormatKey <file://example-condensed-cohort.vcf#call/1/formatKey/1> ;
     vcfc:hasInfoValue <file://example-condensed-cohort.vcf#call/1/info/AC>,
         <file://example-condensed-cohort.vcf#call/1/info/AF>,
         <file://example-condensed-cohort.vcf#call/1/info/AN> ;
     vcfc:infoRaw "AC=4;AF=0.25;AN=16" ;
     vcfc:qual "100"^^vcfc:VCFFloat .
+
+<file://example-condensed-cohort.vcf#call/1/formatKey/1> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-condensed-cohort.vcf#header/line/9> ;
+    vcfc:fieldIndex 1 .
 
 <file://example-condensed-cohort.vcf#call/1/info/AC> a vcfc:InfoFieldValue ;
     vcfc:declaredBy <file://example-condensed-cohort.vcf#header/line/6> ;
@@ -75,11 +80,16 @@
     vcfc:filterStatus vcfc:FiltersPassed ;
     vcfc:formatRaw "GT" ;
     vcfc:hasCallMatrix <file://example-condensed-cohort.vcf#call/2/matrix> ;
+    vcfc:hasFormatKey <file://example-condensed-cohort.vcf#call/2/formatKey/1> ;
     vcfc:hasInfoValue <file://example-condensed-cohort.vcf#call/2/info/AC>,
         <file://example-condensed-cohort.vcf#call/2/info/AF>,
         <file://example-condensed-cohort.vcf#call/2/info/AN> ;
     vcfc:infoRaw "AC=9;AF=0.5625;AN=16" ;
     vcfc:qual "100"^^vcfc:VCFFloat .
+
+<file://example-condensed-cohort.vcf#call/2/formatKey/1> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-condensed-cohort.vcf#header/line/9> ;
+    vcfc:fieldIndex 1 .
 
 <file://example-condensed-cohort.vcf#call/2/info/AC> a vcfc:InfoFieldValue ;
     vcfc:declaredBy <file://example-condensed-cohort.vcf#header/line/6> ;
@@ -131,11 +141,16 @@
     vcfc:filterStatus vcfc:FiltersPassed ;
     vcfc:formatRaw "GT" ;
     vcfc:hasCallMatrix <file://example-condensed-cohort.vcf#call/3/matrix> ;
+    vcfc:hasFormatKey <file://example-condensed-cohort.vcf#call/3/formatKey/1> ;
     vcfc:hasInfoValue <file://example-condensed-cohort.vcf#call/3/info/AC>,
         <file://example-condensed-cohort.vcf#call/3/info/AF>,
         <file://example-condensed-cohort.vcf#call/3/info/AN> ;
     vcfc:infoRaw "AC=8;AF=0.5;AN=16" ;
     vcfc:qual "100"^^vcfc:VCFFloat .
+
+<file://example-condensed-cohort.vcf#call/3/formatKey/1> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-condensed-cohort.vcf#header/line/9> ;
+    vcfc:fieldIndex 1 .
 
 <file://example-condensed-cohort.vcf#call/3/info/AC> a vcfc:InfoFieldValue ;
     vcfc:declaredBy <file://example-condensed-cohort.vcf#header/line/6> ;
@@ -355,6 +370,7 @@ ex:header a vcfc:VCFHeader ;
     vcfc:chromosome <file://example-condensed-cohort.vcf#header/line/4> ;
     vcfc:hasAltAllele <file://example-condensed-cohort.vcf#record/1/allele/1> ;
     vcfc:hasCall <file://example-condensed-cohort.vcf#call/1> ;
+    vcfc:hasPaddingInterpretation <file://example-condensed-cohort.vcf#record/1/padding> ;
     vcfc:hasReferenceAllele <file://example-condensed-cohort.vcf#record/1/allele/0> ;
     vcfc:pos 61795 ;
     vcfc:recordId "."^^vcfc:Null ;
@@ -366,12 +382,17 @@ ex:header a vcfc:VCFHeader ;
     vcfc:alleleKind vcfc:BaseSequenceAllele ;
     vcfc:alleleValue "G" .
 
+<file://example-condensed-cohort.vcf#record/1/padding> a vcfc:PaddingInterpretation ;
+    vcfc:paddingBaseCount 0 ;
+    vcfc:paddingRule vcfc:PaddingNotDetermined .
+
 <file://example-condensed-cohort.vcf#record/2> a vcfc:VCFRecord ;
     vcfc:alt "C" ;
     vcfc:chrom "20" ;
     vcfc:chromosome <file://example-condensed-cohort.vcf#header/line/4> ;
     vcfc:hasAltAllele <file://example-condensed-cohort.vcf#record/2/allele/1> ;
     vcfc:hasCall <file://example-condensed-cohort.vcf#call/2> ;
+    vcfc:hasPaddingInterpretation <file://example-condensed-cohort.vcf#record/2/padding> ;
     vcfc:hasReferenceAllele <file://example-condensed-cohort.vcf#record/2/allele/0> ;
     vcfc:pos 68749 ;
     vcfc:recordId "."^^vcfc:Null ;
@@ -383,12 +404,17 @@ ex:header a vcfc:VCFHeader ;
     vcfc:alleleKind vcfc:BaseSequenceAllele ;
     vcfc:alleleValue "T" .
 
+<file://example-condensed-cohort.vcf#record/2/padding> a vcfc:PaddingInterpretation ;
+    vcfc:paddingBaseCount 0 ;
+    vcfc:paddingRule vcfc:PaddingNotDetermined .
+
 <file://example-condensed-cohort.vcf#record/3> a vcfc:VCFRecord ;
     vcfc:alt "A" ;
     vcfc:chrom "20" ;
     vcfc:chromosome <file://example-condensed-cohort.vcf#header/line/4> ;
     vcfc:hasAltAllele <file://example-condensed-cohort.vcf#record/3/allele/1> ;
     vcfc:hasCall <file://example-condensed-cohort.vcf#call/3> ;
+    vcfc:hasPaddingInterpretation <file://example-condensed-cohort.vcf#record/3/padding> ;
     vcfc:hasReferenceAllele <file://example-condensed-cohort.vcf#record/3/allele/0> ;
     vcfc:pos 69094 ;
     vcfc:recordId "."^^vcfc:Null ;
@@ -399,6 +425,10 @@ ex:header a vcfc:VCFHeader ;
     vcfc:alleleIndex 0 ;
     vcfc:alleleKind vcfc:BaseSequenceAllele ;
     vcfc:alleleValue "G" .
+
+<file://example-condensed-cohort.vcf#record/3/padding> a vcfc:PaddingInterpretation ;
+    vcfc:paddingBaseCount 0 ;
+    vcfc:paddingRule vcfc:PaddingNotDetermined .
 
 <file://example-condensed-cohort.vcf#samples/HG00096> a vcfc:VCFSample ;
     vcfc:sampleIndex 1 ;
@@ -511,6 +541,16 @@ ex:header a vcfc:VCFHeader ;
     vcfc:headerValue "<ID=AN,Number=1,Type=Integer,Description=\"Number of called alleles in the eight selected samples\",Source=\"VCF-Core-subset\",Version=\"1\">" ;
     vcfc:lineIndex 8 .
 
+ex:samples a vcfc:SampleSet ;
+    vcfc:hasSample <file://example-condensed-cohort.vcf#samples/HG00096>,
+        <file://example-condensed-cohort.vcf#samples/HG00097>,
+        <file://example-condensed-cohort.vcf#samples/HG00099>,
+        <file://example-condensed-cohort.vcf#samples/HG00100>,
+        <file://example-condensed-cohort.vcf#samples/HG00101>,
+        <file://example-condensed-cohort.vcf#samples/HG00102>,
+        <file://example-condensed-cohort.vcf#samples/HG00103>,
+        <file://example-condensed-cohort.vcf#samples/HG00105> .
+
 <file://example-condensed-cohort.vcf#header/line/9> a vcfc:FORMATHeaderLine ;
     vcfc:fieldDescription "Genotype" ;
     vcfc:fieldId "GT" ;
@@ -524,13 +564,3 @@ ex:header a vcfc:VCFHeader ;
     vcfc:headerKey "FORMAT" ;
     vcfc:headerValue "<ID=GT,Number=1,Type=String,Description=\"Genotype\">" ;
     vcfc:lineIndex 9 .
-
-ex:samples a vcfc:SampleSet ;
-    vcfc:hasSample <file://example-condensed-cohort.vcf#samples/HG00096>,
-        <file://example-condensed-cohort.vcf#samples/HG00097>,
-        <file://example-condensed-cohort.vcf#samples/HG00099>,
-        <file://example-condensed-cohort.vcf#samples/HG00100>,
-        <file://example-condensed-cohort.vcf#samples/HG00101>,
-        <file://example-condensed-cohort.vcf#samples/HG00102>,
-        <file://example-condensed-cohort.vcf#samples/HG00103>,
-        <file://example-condensed-cohort.vcf#samples/HG00105> .

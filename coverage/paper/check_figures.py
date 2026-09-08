@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Assert that every statistic quoted in the SWAT4HCLS 2027 manuscript still
-matches ``tests/coverage-report.json``.
+matches ``coverage/curated/generated/report.json``.
 
 The manuscript quotes concrete counts. This check fails if the artifacts move
 and the prose does not, so a published figure cannot go stale unnoticed.
@@ -12,8 +12,8 @@ import json
 import pathlib
 import sys
 
-ROOT = pathlib.Path(__file__).resolve().parent.parent
-REPORT = ROOT / "tests" / "coverage-report.json"
+ROOT = pathlib.Path(__file__).resolve().parents[2]
+REPORT = ROOT / "coverage/curated/generated/report.json"
 PAPER = ROOT / "SWAT4HCLS_2027" / "main.tex"
 
 
@@ -24,7 +24,8 @@ def main() -> int:
     report = json.loads(REPORT.read_text())
     tex = PAPER.read_text()
 
-    cov = report["coverage"]
+    cov = report["coverage"]["logicalModel"]
+    ser = report["coverage"]["serialization"]
     voc = report["vocabulary"]["byKind"]
     ext = report["externalVocabularies"]
     keys = report["reservedKeys"]
@@ -34,20 +35,22 @@ def main() -> int:
     expected: list[tuple[str, str]] = [
         ("construct total", str(cov["constructs"])),
         ("constructs fully covered", str(cov["full"])),
-        ("full percentage", f"{cov['fullPercent']}\\%"),
-        ("credited percentage", f"{cov['creditedPercent']}\\%"),
+        # The manuscript may state the ratio or "all N entries"; accept either.
+        ("full coverage claim", [f"{cov['fullPercent']}\\%", f"all {cov['full']} logical-model entries"]),
         ("declared terms", str(report["vocabulary"]["declaredTerms"])),
         ("classes", f"{voc['class']} classes"),
         ("object properties", f"{voc['objectProperty']} object properties"),
         ("datatype properties", f"{voc['datatypeProperty']} datatype properties"),
         ("named individuals", f"{voc['namedIndividual']} named individuals"),
-        ("reserved declarations", f"{keys['vcf45']['total']} reserved key declarations"),
-        ("reserved split", f"{keys['vcf45']['info']} INFO and {keys['vcf45']['format']} FORMAT"),
+        ("reserved declarations", f"{keys['current']['total']} reserved key declarations"),
+        ("reserved split", f"{keys['current']['info']} INFO and {keys['current']['format']} FORMAT"),
         ("portable node shapes", f"{portable['nodeShapes']} node shapes"),
         ("portable property shapes", f"{portable['propertyShapes']} property shapes"),
         ("sparql rules", f"{shapes['vcf-core-vocabulary-sparql.shacl.ttl']['sparqlConstraints']} cross-resource"),
         ("consistency rules", f"{shapes['vcf-core-consistency.shacl.ttl']['sparqlConstraints']} rules relating raw tokens"),
-        ("validated fixtures", f"{report['validation']['fixtures']} fixtures"),
+        ("validated fixtures", f"accepts {report['validation']['fixtures']} fixtures"),
+        ("serialization fixtures", f"{ser['fixturesPassed']} of {ser['fixturesChecked']} satisfy"),
+        ("enforced constructs", f"{cov['axesHeld']['enforced']} of {cov['constructs']} are enforced"),
     ]
     for prefix, count in (("SO", "so"), ("ChEBI", "chebi"), ("VRS", "vrs"),
                           ("HERO-Genomics", "hero"), ("FALDO", "faldo"), ("GENO", "geno")):
@@ -58,13 +61,17 @@ def main() -> int:
         expected.append((f"table row: {area['area']}",
                          f"{area['constructs']} & {area['full']} & "))
 
-    missing = [(label, text) for label, text in expected if text not in tex]
+    def present(value):
+        options = value if isinstance(value, list) else [value]
+        return any(option in tex for option in options)
+
+    missing = [(label, text) for label, text in expected if not present(text)]
     if missing:
         print("Manuscript figures no longer match the generated report:", file=sys.stderr)
         for label, text in missing:
             print(f"  {label}: expected to find {text!r} in main.tex", file=sys.stderr)
         return 1
-    print(f"Manuscript figures: {len(expected)} checked, all match tests/coverage-report.json.")
+    print(f"Manuscript figures: {len(expected)} checked, all match coverage/curated/generated/report.json.")
     return 0
 
 

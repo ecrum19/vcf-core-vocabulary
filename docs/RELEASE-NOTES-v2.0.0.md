@@ -53,11 +53,11 @@ all module imports.
 
 | Module | Added capability and purpose |
 | --- | --- |
-| [Core](ontology/vcf-core-vocabulary.ttl) | Structured/unstructured metadata, individual header attributes, `#CHROM`, assembly/META/SAMPLE/PEDIGREE/pedigreeDB forms; explicit header, record and field order; symbolic/fixed Number arity; raw/decoded lexical carriers; parsed IDs and FILTER/FT codes/statuses. These expose information previously embedded only in strings. |
-| [Alleles and values](ontology/vcf-core-alleles.ttl) | Ordered REF/ALT resources, allele kinds and indexed value items linked to alleles, genotype indices, GT positions or modifications. Explicit indices preserve VCF order despite RDF's unordered triples. |
-| [Genotypes](ontology/vcf-core-genotypes.ttl) | Ordered allele calls, no-calls, ploidy, per-allele preceding phase indicators, mixed phasing, phase sets and local-allele memberships. These support queries beyond a raw GT string. |
-| [Structural variation](ontology/vcf-core-sv.ttl) | Symbolic ALT types, SVCLAIM, breakend orientations/mates/events, confidence intervals, repeat sequences/units, copy number, sample reference blocks and base modifications. Resources retain VCF-specific meaning while linking to external models. |
-| [Reserved keys](ontology/vcf-core-reserved-keys.ttl) | Generated INFO/FORMAT definitions, including base-modification families and aliases, with specification provenance. This replaces scattered or manually maintained declarations. |
+| [Core](../ontology/vcf-core-vocabulary.ttl) | Structured/unstructured metadata, individual header attributes, `#CHROM`, assembly/META/SAMPLE/PEDIGREE/pedigreeDB forms; explicit header, record and field order; symbolic/fixed Number arity; raw/decoded lexical carriers; parsed IDs and FILTER/FT codes/statuses. These expose information previously embedded only in strings. |
+| [Alleles and values](../ontology/vcf-core-alleles.ttl) | Ordered REF/ALT resources, allele kinds and indexed value items linked to alleles, genotype indices, GT positions or modifications. Explicit indices preserve VCF order despite RDF's unordered triples. |
+| [Genotypes](../ontology/vcf-core-genotypes.ttl) | Ordered allele calls, no-calls, ploidy, per-allele preceding phase indicators, mixed phasing, phase sets and local-allele memberships. These support queries beyond a raw GT string. |
+| [Structural variation](../ontology/vcf-core-sv.ttl) | Symbolic ALT types, SVCLAIM, breakend orientations/mates/events, confidence intervals, repeat sequences/units, copy number, sample reference blocks and base modifications. Resources retain VCF-specific meaning while linking to external models. |
+| [Reserved keys](../ontology/vcf-core-reserved-keys.ttl) | Generated INFO/FORMAT definitions, including base-modification families and aliases, with specification provenance. This replaces scattered or manually maintained declarations. |
 
 `LocalAlleleMembership` carries each sample's local order; the shared ALT retains
 its record-global index. The preliminary `localAlleleIndex` property directly
@@ -103,7 +103,7 @@ Validation now combines three common SHACL files with five version overlays:
 core structure, cross-resource rules, raw/parsed consistency, and version-specific
 constraints. Overlays follow the owning file's `fileFormat`, so several versions
 can coexist. Optional `VCF41File`–`VCF45File` classes add explicit version gates.
-See [profile composition](shacl/README.md).
+See [profile composition](../shacl/README.md).
 
 Historical registries and record-bearing VCF 4.1–4.4 examples prevent current rules
 from being applied indiscriminately to older files. For example, a multiallelic
@@ -133,7 +133,7 @@ Two ineffective SPARQL branches were repaired after isolated mutation tests
 showed that conflicting values still passed. Malformed structural integers now
 produce decoded-validation errors rather than a traceback.
 
-The [Python semantic layer](tests/semantic_validation.py) explicitly supplements
+The [Python semantic layer](../tests/semantic_validation.py) explicitly supplements
 SHACL: it decodes vectors, checks arbitrary-ploidy G/LG cardinalities and Number=M
 counts on explicit alleles, and handles additional range, repeat and block rules.
 SHACL G/LG formulas cover ploidy 1–8. Running only the portable shapes therefore
@@ -153,7 +153,7 @@ were corrected to tabs and its RDF regenerated. The illustrative CONSTRUCT
 output also validates, although the template remains a demonstration rather than
 a production converter.
 
-The reorganized [example guide](examples/README.md) provides:
+The reorganized [example guide](../examples/README.md) provides:
 
 - `examples/core/`: a small quickstart, complete headers, one-record and three-record
   examples, with VCF, Turtle and N-Triples where applicable.
@@ -167,7 +167,7 @@ resources. Queries demonstrate, for example, fraction 0.9/depth 20, the three
 phase indicators `|`, `/`, `|`, reciprocal mates, and sample blocks ending at
 704 and 709 from respective lengths 5 and 10.
 
-The independent [example checker](tests/check_examples.py) reconstructs logical
+The independent [example checker](../tests/check_examples.py) reconstructs logical
 VCF lines from saved RDF, checks vocabulary declarations/property kinds and runs
 the queries. Its **16 RDF/source pairs** include both serializations of the expanded
 example and both paper profiles. The bounded fixture materializer and checker
@@ -180,7 +180,7 @@ retain GT:AD:DP:GQ:PL, while the condensed example retains 24 phased GT calls
 from eight 1000 Genomes samples. It preserves their actual VCF versions (4.2
 and 4.1 respectively) and reference builds, and recalculates cohort AC/AF/AN
 after sample selection. The minimal example keeps one real GT:AD:DP call.
-[Provenance](examples/provenance.json) records hashes and reductions; a ninth
+[Provenance](../examples/provenance.json) records hashes and reductions; a ninth
 query explicitly decodes a named sample's condensed GT cell. Advanced feature
 fixtures and paper evidence remain synthetic teaching examples.
 
@@ -189,7 +189,7 @@ The paper evidence preserves all six FORMAT cells in both profiles and returns
 **172 expanded / 149 condensed triples**. These tiny fixtures establish behaviour,
 not a storage or throughput benchmark. Author notes distinguish repaired working
 examples from earlier manuscript snapshots.
-The new [SWAT4HCLS 2027 manuscript draft](SWAT4HCLS_2027/README.md) explains the
+The new [SWAT4HCLS 2027 manuscript draft](../SWAT4HCLS_2027/README.md) explains the
 model and its implementation context; citation and acknowledgement files were
 updated alongside the rename. The manuscript remains a draft, not publication
 evidence for the release.
@@ -236,7 +236,7 @@ Current evidence is more usefully stated with explicit denominators:
 | Complete maintained RDF fixtures | 19/19 passed before the final real-call refresh | Historical full-suite result; the refresh received focused checks only. |
 | Independent tests and demonstrations | 35 regression tests; 16 source pairs; nine exact-answer queries | The 16 source pairs and all nine queries passed after the refresh; the vector regression was rerun separately. |
 
-The [coverage checklist](tests/coverage.md) now maps specification areas to terms,
+The [coverage checklist](../coverage/curated/README.md) now maps specification areas to terms,
 rules and probes. A defensible future percentage requires a versioned atomic
 requirement inventory, explicit full/partial criteria and linked positive/negative
 tests for every item. **Full VCF 4.5 conformance remains unclaimed.**
@@ -267,8 +267,8 @@ npm run ocg:build
 
 The release-note review reran the check and local build using Node 24.16.0,
 Python 3.14.2, pySHACL 0.30.1 and RDFLib 7.6.0. **Both passed.** Fixture summaries are in
-[validation-results.json](tests/validation-results.json); the
-[paper verifier's JSON](SWAT4HCLS_2027/evidence/verification.json) records its
+[validation-results.json](../tests/generated/validation.json); the
+[paper verifier's JSON](../coverage/paper/generated/verification.json) records its
 narrower Node assertions. A passing local run does not assert that hosted CI or
 publication has occurred.
 
@@ -276,8 +276,9 @@ For the later real-call refresh, the full suite was deliberately not rerun.
 Focused checks passed: 31 selected SHACL shapes on the merged changed graphs
 (zero violations/warnings), decoded validation, Turtle/N-Triples equivalence,
 source-call preservation, all 16 source-pair and nine query checks, and the
-truncated-vector regression. These are recorded separately in
-[real-example-results.json](tests/real-example-results.json).
+truncated-vector regression. The obsolete one-off capture has been removed; current source reconstruction
+and query checks are reproducible with `npm run validate:examples`, and full
+fixture results with `npm run validate:force`.
 
 ## Migrating from v1.1.0
 
@@ -292,10 +293,10 @@ truncated-vector regression. These are recorded separately in
    output, not just the supplied examples; the fixture materializer is not a
    substitute for converter integration tests.
 
-The [migration utility](scripts/migrate-namespace.mjs) supplies mechanical rewrite
+The [migration utility](../scripts/migrate-namespace.mjs) supplies mechanical rewrite
 and bridge-generation operations. Run it on a reviewable copy and inspect the
 result: string substitution alone cannot implement these modelling changes.
-The [legacy document](legacy/legacy-vcf-rdfizer.ttl) supplies deprecation/replacement
+The [legacy document](../legacy/legacy-vcf-rdfizer.ttl) supplies deprecation/replacement
 links and equivalence or identity mappings, subject to the gap below. It does
 not make old graphs automatically satisfy the new constraints.
 
@@ -323,10 +324,9 @@ not make old graphs automatically satisfy the new constraints.
   placeholder, and verify published assets/content negotiation before announcing
   release availability.
 
-This draft uses [the original assessment](VCF45-COVERAGE-ASSESSMENT.md) for the
-historical inventory and implementation record, and [the follow-up assessment](VCF-COVERAGE-ASSESSMENT-2026-09-07.md)
-for subsequent repairs, checked against source and Git history. Statements in the
-older report that END was deprecated in 4.4, that reference blocks subclass ALT,
-or that parsed ID/filter resources remain absent are superseded here. The
-follow-up assessment is untracked and matched by `.gitignore`; include it in the
-release archive so its supporting evidence remains available to external readers.
+The current [coverage workspace](../coverage/README.md) consolidates the maintained
+assessments, reviewer decisions and reproducible evidence. The earlier one-off
+notes have been removed. Their obsolete statements that END was deprecated in
+4.4, that reference blocks subclass ALT, or that parsed ID/filter resources remain
+absent do not describe the current implementation. Use the retained source pins,
+active inventories and executable reports when preparing the release archive.

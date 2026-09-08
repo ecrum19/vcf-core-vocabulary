@@ -1,0 +1,19 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+# VCF 4.5 section 1.6.2: a missing field may be written as one "." or as a list
+# of per-item "." tokens, and a partially missing list must keep the positions
+# of its present and absent values. The three shapes are distinguishable here
+# without parsing: a whole-field Null, all items Null, or a mix.
+SELECT ?pos ?shape WHERE {
+  ?record vcfc:pos ?pos ; vcfc:hasCall ?call .
+  ?call vcfc:hasInfoValue ?value .
+  ?value vcfc:declaredBy ?definition ; vcfc:fieldValue ?raw .
+  ?definition vcfc:fieldId "AF" .
+  OPTIONAL { ?value vcfc:hasValueItem ?anyItem }
+  BIND(DATATYPE(?raw) = vcfc:Null AS ?wholeFieldMissing)
+  BIND(EXISTS { ?value vcfc:hasValueItem ?i . ?i vcfc:itemValue ?v . FILTER(DATATYPE(?v) = vcfc:Null) } AS ?someItemMissing)
+  BIND(EXISTS { ?value vcfc:hasValueItem ?i . ?i vcfc:itemValue ?v . FILTER(DATATYPE(?v) != vcfc:Null) } AS ?someItemPresent)
+  BIND(IF(?wholeFieldMissing, "whole-field",
+       IF(?someItemMissing && !?someItemPresent, "all-items",
+       IF(?someItemMissing && ?someItemPresent, "partial", ""))) AS ?shape)
+  FILTER(?shape != "")
+} GROUP BY ?pos ?shape ORDER BY ?pos

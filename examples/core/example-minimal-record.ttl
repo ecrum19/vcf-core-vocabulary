@@ -16,9 +16,24 @@
     vcfc:filter "PASS" ;
     vcfc:filterStatus vcfc:FiltersPassed ;
     vcfc:formatRaw "GT:AD:DP" ;
+    vcfc:hasFormatKey <file://example-file1.vcf#call/1/formatKey/1>,
+        <file://example-file1.vcf#call/1/formatKey/2>,
+        <file://example-file1.vcf#call/1/formatKey/3> ;
     vcfc:hasSampleCall <file://example-file1.vcf#sample/1/NG131FQA1I> ;
     vcfc:infoRaw "." ;
     vcfc:qual "84.77"^^vcfc:VCFFloat .
+
+<file://example-file1.vcf#call/1/formatKey/1> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-file1.vcf#header/line/6> ;
+    vcfc:fieldIndex 1 .
+
+<file://example-file1.vcf#call/1/formatKey/2> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-file1.vcf#header/line/7> ;
+    vcfc:fieldIndex 2 .
+
+<file://example-file1.vcf#call/1/formatKey/3> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-file1.vcf#header/line/8> ;
+    vcfc:fieldIndex 3 .
 
 ex:header a vcfc:VCFHeader ;
     vcfc:hasColumnHeader <file://example-file1.vcf#header/columns> ;
@@ -131,6 +146,7 @@ ex:header a vcfc:VCFHeader ;
     vcfc:hasAltAllele <file://example-file1.vcf#record/1/allele/1> ;
     vcfc:hasCall <file://example-file1.vcf#call/1> ;
     vcfc:hasIdentifier <file://example-file1.vcf#record/1/id/1> ;
+    vcfc:hasPaddingInterpretation <file://example-file1.vcf#record/1/padding> ;
     vcfc:hasReferenceAllele <file://example-file1.vcf#record/1/allele/0> ;
     vcfc:pos 13613 ;
     vcfc:recordId "rs879980801" ;
@@ -140,6 +156,10 @@ ex:header a vcfc:VCFHeader ;
 <file://example-file1.vcf#record/1/id/1> a vcfc:RecordIdentifier ;
     vcfc:componentIndex 1 ;
     vcfc:identifierValue "rs879980801" .
+
+<file://example-file1.vcf#record/1/padding> a vcfc:PaddingInterpretation ;
+    vcfc:paddingBaseCount 0 ;
+    vcfc:paddingRule vcfc:PaddingNotDetermined .
 
 <file://example-file1.vcf#sample/1/NG131FQA1I> a vcfc:SampleCall ;
     vcfc:forSample <file://example-file1.vcf#samples/NG131FQA1I> ;

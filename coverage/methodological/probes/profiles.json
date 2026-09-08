@@ -1,0 +1,127 @@
+{
+  "reviewer": "Codex (first reviewer)",
+  "scope": "Full SHACL plus decoded validation, strict warnings, RDFS inference, complete positive fixture with appended declarations.",
+  "inputs": {
+    "examples/vcf-versions/vcf-4.5/example-vcf45-breakends.ttl": "537104193b97b08918b4b7fe2fa32531d9b77cbf206cf3091da282a58bd9e8db",
+    "ontology/vcf-core-alleles.ttl": "716eef354f9dbb31bef576b8fe149a23955080615f84d26cd6bd7e1a616940e8",
+    "ontology/vcf-core-genotypes.ttl": "92afbfd8711a981b30db5475282331d8a26d4f5ab3e2e0314018608e317f97b5",
+    "ontology/vcf-core-reserved-keys.ttl": "99f76b9e0fd462ef5b03e5dec6cf1e14859ab9e294776635cd90f0bb7f71105a",
+    "ontology/vcf-core-sv.ttl": "cc3e9f75c57e355b325fcd37a475b2488db6963c75838e1a1905ab4ccb0e4c54",
+    "ontology/vcf-core-vocabulary.bundle.ttl": "32cad88641c8f8ddd6a5c0582ef5b28b1f44d647a5a0c848a5ba49ed87e85a18",
+    "ontology/vcf-core-vocabulary.ttl": "a8a079128709b9b1de37e0d5bccd8ab9fd6fbc62e15d10665473ada6c5fbd129",
+    "ontology/versions/vcf-4.1-reserved.ttl": "6141e44336008dff70daccd22aaf9e673d16d8a62aa023a5260bd54722d47ca6",
+    "ontology/versions/vcf-4.2-reserved.ttl": "19b349716d15d6ab57e993ac994c268d208f9617ea8da90194e3f7118982ecf5",
+    "ontology/versions/vcf-4.3-reserved.ttl": "8e2763a91fe799d47a95860d65a4bfcd192531de1b3ddc912e37ede168a0da5a",
+    "ontology/versions/vcf-4.4-reserved.ttl": "c5444d033a4e5c04482e85bee7066bccd68251fe50c486780932751f1583a3ee",
+    "shacl/vcf-4.1.shacl.ttl": "5eafc441f2bae5c3b19d80dfc34eff0c2c6cefd61b569eadd38900f4343721f9",
+    "shacl/vcf-4.2.shacl.ttl": "186131c85a483eaec457b545a9e1d310b6eccc2c9fadc95aaa37b34946d7e226",
+    "shacl/vcf-4.3.shacl.ttl": "026105bb56660348239e3ada633e5d00a82f74df28b98798e0db2d1906b63470",
+    "shacl/vcf-4.4.shacl.ttl": "98574513333d95993a401e927bd16ff4dad95b1f52bcf5f039c9e3f57227cafb",
+    "shacl/vcf-4.5.shacl.ttl": "230b21c61a089dd109a05971de80dcde8915400114e3f1591f12ce30a195c448",
+    "shacl/vcf-core-consistency.shacl.ttl": "6513ff0aba6b788afe28d558dc9e7062bfdf937ac3e08380e51e12c72d55276f",
+    "shacl/vcf-core-vocabulary-sparql.shacl.ttl": "c032e1e6bc252cd518dc454373e4b4e20b3ed60b8a843c705b3519149ecb2168",
+    "shacl/vcf-core-vocabulary.shacl.ttl": "acfa8b0ba5ad7314eccea3efd6312eb7b841df45809dabbcc872e82244eeb7df",
+    "tests/semantic_validation.py": "e95b076ffbbf08bb2266a3559f65294da0e778ba5b460df82fafa5f0d0b06ed7",
+    "tests/validate_shacl.py": "e910f4bb899fea5bfa5a5b5da1f24a79da54ddb55803552e4b27a1cf2f4addef"
+  },
+  "observations": [
+    {
+      "id": "baseline",
+      "expectedValid": true,
+      "accepted": true,
+      "violations": 0,
+      "warnings": 0
+    },
+    {
+      "id": "extension-distinct-ids",
+      "expectedValid": true,
+      "accepted": true,
+      "violations": 0,
+      "warnings": 0
+    },
+    {
+      "id": "extension-same-id-different-prefix",
+      "expectedValid": true,
+      "accepted": true,
+      "violations": 0,
+      "warnings": 0
+    },
+    {
+      "id": "extension-duplicate-id",
+      "expectedValid": false,
+      "accepted": true,
+      "violations": 0,
+      "warnings": 0
+    },
+    {
+      "id": "extension-missing-id",
+      "expectedValid": false,
+      "accepted": true,
+      "violations": 0,
+      "warnings": 0
+    },
+    {
+      "id": "M123A-valid",
+      "expectedValid": true,
+      "accepted": true,
+      "violations": 0,
+      "warnings": 0
+    },
+    {
+      "id": "M123A-number",
+      "expectedValid": false,
+      "accepted": true,
+      "violations": 0,
+      "warnings": 0
+    },
+    {
+      "id": "M123A-type",
+      "expectedValid": false,
+      "accepted": true,
+      "violations": 0,
+      "warnings": 0
+    },
+    {
+      "id": "DPM123A-valid",
+      "expectedValid": true,
+      "accepted": true,
+      "violations": 0,
+      "warnings": 0
+    },
+    {
+      "id": "DPM123A-number",
+      "expectedValid": false,
+      "accepted": true,
+      "violations": 0,
+      "warnings": 0
+    },
+    {
+      "id": "DPM123A-type",
+      "expectedValid": false,
+      "accepted": true,
+      "violations": 0,
+      "warnings": 0
+    },
+    {
+      "id": "ADM123A-valid",
+      "expectedValid": true,
+      "accepted": true,
+      "violations": 0,
+      "warnings": 0
+    },
+    {
+      "id": "ADM123A-number",
+      "expectedValid": false,
+      "accepted": true,
+      "violations": 0,
+      "warnings": 0
+    },
+    {
+      "id": "ADM123A-type",
+      "expectedValid": false,
+      "accepted": true,
+      "violations": 0,
+      "warnings": 0
+    }
+  ]
+}

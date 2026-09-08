@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "methodVersion": 1,
+  "sources": {
+    "schemaVersion": 1,
+    "provenance": "Sources retrieved 2026-09-08 from samtools/hts-specs; all hashes match existing reserved-key artifacts. URLs can move; hashes are authoritative.",
+    "versions": {
+      "4.1": {
+        "source": "https://raw.githubusercontent.com/samtools/hts-specs/master/VCFv4.1.tex",
+        "file": "sources/VCFv4.1.tex",
+        "sha256": "7d29ef8f93745f246202da3e32107ea13b036bbefcb31f7971a3ce31f1045baa"
+      },
+      "4.2": {
+        "source": "https://raw.githubusercontent.com/samtools/hts-specs/master/VCFv4.2.tex",
+        "file": "sources/VCFv4.2.tex",
+        "sha256": "66dbd167e8fb309708e0956ffbb12808bd338a703fbf034d80d1ead56ae480cc"
+      },
+      "4.3": {
+        "source": "https://raw.githubusercontent.com/samtools/hts-specs/master/VCFv4.3.tex",
+        "file": "sources/VCFv4.3.tex",
+        "sha256": "332d8b910ac9952bfba04374118f8c4f318ea996d5017599e68f80379fd61cde"
+      },
+      "4.4": {
+        "source": "https://raw.githubusercontent.com/samtools/hts-specs/master/VCFv4.4.tex",
+        "file": "sources/VCFv4.4.tex",
+        "sha256": "4c88884cf6b016efcec691d5186432a2e0b679396204d14770e89839ef536e1a"
+      },
+      "4.5": {
+        "source": "https://raw.githubusercontent.com/samtools/hts-specs/master/VCFv4.5.tex",
+        "file": "sources/VCFv4.5.tex",
+        "sha256": "37f13e0d2e8e741ea8505b0342b6e6034637a1f476eeb3af1b8acc25d70246c5"
+      }
+    }
+  },
+  "inputs": {
+    "coverage/curated/check_serialization.py": "d4befc1b12ce8a3f9b27d4917db37b6fca240c27aab164a65f27609d62556ec3",
+    "coverage/curated/inventory.json": "369b6a56d8964eec4d54d88c667ea18656187d05d326a6255dfb7e08f6b8fa88",
+    "coverage/methodological/decisions.json": "8bb73c60f28efaea884acceccf85bbcb5b2bc390afab1abd8e6d20a139e6b8e8",
+    "coverage/methodological/evidence.py": "b238a07d17c46f2db4abc601bc6f8ff781d7d8c41e720fdee029d1ac476a894e",
+    "coverage/methodological/extract.py": "6d7fffc9116b1d7bec7f41fa320bad67ec22c18a29b61dd2cdf62f11964cdca6",
+    "coverage/methodological/probes/profiles.json": "0bc71a597edd2a2430b1fb291725c00460378437344359b76df300100aef40ba",
+    "coverage/methodological/probes/rules.json": "bd375b9db23869a8308ec07ed5a457e5ea039a03e8630ce5cf3498cc52ab8b8b",
+    "coverage/methodological/requirements.txt": "2d83193503eabec337a4ab7634e67ca2ad8ad4172762d9bb9b9dcd5b12aaee6f",
+    "coverage/methodological/review_probes.py": "251b369a513de05094ab22965b002ca6d1a34cba057af420302d53728bae9d1b",
+    "coverage/methodological/review_profile_probes.py": "c28b4349648a7c10ef4cf0450afc1010cd2da1f5b24b323f8a8cabcb4837bc84",
+    "coverage/methodological/sources/VCFv4.1.tex": "7d29ef8f93745f246202da3e32107ea13b036bbefcb31f7971a3ce31f1045baa",
+    "coverage/methodological/sources/VCFv4.2.tex": "66dbd167e8fb309708e0956ffbb12808bd338a703fbf034d80d1ead56ae480cc",
+    "coverage/methodological/sources/VCFv4.3.tex": "332d8b910ac9952bfba04374118f8c4f318ea996d5017599e68f80379fd61cde",
+    "coverage/methodological/sources/VCFv4.4.tex": "4c88884cf6b016efcec691d5186432a2e0b679396204d14770e89839ef536e1a",
+    "coverage/methodological/sources/VCFv4.5.tex": "37f13e0d2e8e741ea8505b0342b6e6034637a1f476eeb3af1b8acc25d70246c5",
+    "coverage/methodological/sources.lock.json": "07932593303353d8907702ca41ed4cd62bca9568bef0a6249d81998fbb648078",
+    "coverage/methodological/test_workflow.py": "153222193fe444bb85c9cd017e45119d47c281ccb4f345b5005acddbcb82e57e",
+    "coverage/methodological/workflow.py": "ae77e00aa356503cc0889b55b3f5ae7a8c503610e2376b40aea267d0d4d5a78f",
+    "ontology/vcf-core-alleles.ttl": "716eef354f9dbb31bef576b8fe149a23955080615f84d26cd6bd7e1a616940e8",
+    "ontology/vcf-core-genotypes.ttl": "92afbfd8711a981b30db5475282331d8a26d4f5ab3e2e0314018608e317f97b5",
+    "ontology/vcf-core-reserved-keys.ttl": "99f76b9e0fd462ef5b03e5dec6cf1e14859ab9e294776635cd90f0bb7f71105a",
+    "ontology/vcf-core-sv.ttl": "cc3e9f75c57e355b325fcd37a475b2488db6963c75838e1a1905ab4ccb0e4c54",
+    "ontology/vcf-core-vocabulary.ttl": "a8a079128709b9b1de37e0d5bccd8ab9fd6fbc62e15d10665473ada6c5fbd129",
+    "ontology/versions/registry.json": "417372f641e7b6899f48432e58337844e153f7e3a690ffc47db51eedbf53f52e",
+    "ontology/versions/vcf-4.1-reserved.json": "f56d686d574d15bfdac2e8261e50e4783e29cbaa194011ce4af6bbd2b26ac236",
+    "ontology/versions/vcf-4.1-reserved.ttl": "6141e44336008dff70daccd22aaf9e673d16d8a62aa023a5260bd54722d47ca6",
+    "ontology/versions/vcf-4.2-reserved.json": "2606f10c4beab94a28c8a89b94b15a02492958f0d4c6f7329e1dcb418152e6b2",
+    "ontology/versions/vcf-4.2-reserved.ttl": "19b349716d15d6ab57e993ac994c268d208f9617ea8da90194e3f7118982ecf5",
+    "ontology/versions/vcf-4.3-reserved.json": "36f9e0b839954aec6effea96d204a3856cd715895b80688142d84747f3393fac",
+    "ontology/versions/vcf-4.3-reserved.ttl": "8e2763a91fe799d47a95860d65a4bfcd192531de1b3ddc912e37ede168a0da5a",
+    "ontology/versions/vcf-4.4-reserved.json": "6b543163eba25ca838c168b6a5439f915b87925ac5766e4e056bd5f6b9c48b7a",
+    "ontology/versions/vcf-4.4-reserved.ttl": "c5444d033a4e5c04482e85bee7066bccd68251fe50c486780932751f1583a3ee",
+    "scripts/version_registry.py": "db5d590929bdd6fe4ce1df83315a59e0db1648b398f9b4e5659da90b1059861a",
+    "shacl/vcf-4.1.shacl.ttl": "5eafc441f2bae5c3b19d80dfc34eff0c2c6cefd61b569eadd38900f4343721f9",
+    "shacl/vcf-4.2.shacl.ttl": "186131c85a483eaec457b545a9e1d310b6eccc2c9fadc95aaa37b34946d7e226",
+    "shacl/vcf-4.3.shacl.ttl": "026105bb56660348239e3ada633e5d00a82f74df28b98798e0db2d1906b63470",
+    "shacl/vcf-4.4.shacl.ttl": "98574513333d95993a401e927bd16ff4dad95b1f52bcf5f039c9e3f57227cafb",
+    "shacl/vcf-4.5.shacl.ttl": "230b21c61a089dd109a05971de80dcde8915400114e3f1591f12ce30a195c448",
+    "shacl/vcf-core-consistency.shacl.ttl": "6513ff0aba6b788afe28d558dc9e7062bfdf937ac3e08380e51e12c72d55276f",
+    "shacl/vcf-core-vocabulary-sparql.shacl.ttl": "c032e1e6bc252cd518dc454373e4b4e20b3ed60b8a843c705b3519149ecb2168",
+    "shacl/vcf-core-vocabulary.shacl.ttl": "acfa8b0ba5ad7314eccea3efd6312eb7b841df45809dabbcc872e82244eeb7df",
+    "tests/semantic_validation.py": "e95b076ffbbf08bb2266a3559f65294da0e778ba5b460df82fafa5f0d0b06ed7"
+  },
+  "reproduction": "Python >=3.10; pinned rdflib; UTF-8; no network/timestamps/random IDs",
+  "limitations": [
+    "Candidates are mechanically selected statements, not yet reviewed atomic requirements.",
+    "Modal/declarative sweeps are incomplete; unselected prose and skipped regions remain auditable.",
+    "Earlier specifications use less normative wording. Counts cannot rank versions by coverage.",
+    "Exact text/context grouping is mechanical; fuzzy alignment and semantic applicability require decisions.",
+    "Text absence is not withdrawal, and deprecation is not removal.",
+    "Evidence suggestions are not discharges. Reviewed mappings establish traceability, not rule correctness or conformance.",
+    "This workflow does not execute the vocabulary validators. Run the repository validation suite separately."
+  ]
+}

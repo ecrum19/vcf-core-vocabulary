@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Generate the versioned VCF 4.5 reserved-key registry.
+ * Generate a full reserved-key registry for one VCF specification version.
  *
  * The VCF specification intentionally uses two source layouts: its general
  * INFO/FORMAT keys are longtables, while its SV keys are concrete ##INFO and
@@ -8,9 +8,14 @@
  * if their expected counts change, so a VCF 4.6 update cannot silently alter
  * the 4.5 registry.
  *
+ * Which versions exist, where their sources live, how many rows each is
+ * expected to yield and where the output belongs all come from
+ * ontology/versions/registry.json.  Adding a version is an edit to that table.
+ *
  * Usage:
+ *   node scripts/generate-reserved-keys.mjs                  # the current version
+ *   node scripts/generate-reserved-keys.mjs --version 4.5
  *   node scripts/generate-reserved-keys.mjs --source VCFv4.5.tex
- *   node scripts/generate-reserved-keys.mjs --source https://.../VCFv4.5.tex
  */
 
 import { createHash } from "node:crypto";
@@ -19,20 +24,34 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const DEFAULT_SOURCE =
-  "https://raw.githubusercontent.com/samtools/hts-specs/master/VCFv4.5.tex";
-const DEFAULT_OUTPUT = path.join(REPO_ROOT, "ontology", "vcf-core-reserved-keys.ttl");
-const EXPECTED_COUNTS = {
-  info: 21,
-  format: 63,
-  svInfo: 31,
-  svFormat: 8,
-  unique: 122,
-};
+const REGISTRY_PATH = path.join(REPO_ROOT, "ontology", "versions", "registry.json");
 
 function option(name, fallback) {
   const index = process.argv.indexOf(name);
   return index >= 0 ? process.argv[index + 1] : fallback;
+}
+
+async function loadVersion(requested) {
+  const registry = JSON.parse(await fs.readFile(REGISTRY_PATH, "utf8"));
+  const id = requested ?? registry.current;
+  const entry = registry.versions.find((version) => version.id === id);
+  if (!entry) {
+    const known = registry.versions.map((version) => version.id).join(", ");
+    throw new Error(`Unknown VCF version ${id}; registry.json declares ${known}`);
+  }
+  if (entry.reservedKeys.mode !== "registry") {
+    throw new Error(
+      `VCF ${id} is declared as a "${entry.reservedKeys.mode}" version. Only "registry" versions ` +
+        "have a machine-readable reserved-key source; snapshot versions are built by " +
+        "scripts/build-shacl-profiles.py --spec-dir.",
+    );
+  }
+  for (const field of ["expectedCounts", "graph", "ontologyIri"]) {
+    if (!entry.reservedKeys[field]) {
+      throw new Error(`VCF ${id} registry entry is missing reservedKeys.${field}`);
+    }
+  }
+  return entry;
 }
 
 async function readSource(source) {
@@ -152,7 +171,7 @@ function aliasTarget(id) {
   return `${prefix}${chebi}${base}`;
 }
 
-function renderDefinition(kind, definition) {
+function renderDefinition(kind, definition, entry) {
   const isPatternFamily = /^(M|DPM|ADM)\[0-9\]\+\[ACGTUN\]$/.test(definition.id);
   const statements = [
     `a owl:NamedIndividual, vcfc:${kind}FieldDefinition`,
@@ -161,7 +180,7 @@ function renderDefinition(kind, definition) {
     ...arityStatements(definition.number),
     `vcfc:fieldType vcfc:${definition.type}Type`,
     `vcfc:fieldDescription ${turtleString(definition.description)}`,
-    `vcfc:reservedIn "VCFv4.5"`,
+    `vcfc:reservedIn ${turtleString(entry.code)}`,
   ];
 
   // M, DPM, and ADM are parameterized key families in the VCF specification,
@@ -169,9 +188,10 @@ function renderDefinition(kind, definition) {
   // fabricating a fieldId that cannot satisfy the identifier lexical rule.
   if (!isPatternFamily) statements.splice(2, 0, `vcfc:fieldId ${turtleString(definition.id)}`);
 
-  if (["END", "SVTYPE"].includes(definition.id) && kind === "Info") {
-    statements.push(`vcfc:deprecatedInVersion "${definition.id === 'END' ? 'VCFv4.5' : 'VCFv4.4'}"`);
-  }
+  // Deprecations are a curated per-version table; the LaTeX source marks them
+  // only in prose, so the registry records them explicitly.
+  const deprecated = kind === "Info" ? entry.reservedKeys.deprecatedInfo?.[definition.id] : undefined;
+  if (deprecated) statements.push(`vcfc:deprecatedInVersion ${turtleString(deprecated)}`);
   if (isPatternFamily) {
     statements.push(`vcfc:keyPattern ${turtleString(definition.id)}`);
   }
@@ -205,7 +225,8 @@ function sourceIri(source) {
   return /^https?:\/\//i.test(source) ? source : new URL(`file://${path.resolve(source)}`).href;
 }
 
-function render(text, source, sourceReference) {
+function render(text, source, sourceReference, entry) {
+  const { expectedCounts: EXPECTED_COUNTS } = entry.reservedKeys;
   const info = longtableRows(text, "table:reserved-info");
   const format = longtableRows(text, "table:reserved-genotypes");
   const svInfo = declarationRows(
@@ -236,8 +257,8 @@ function render(text, source, sourceReference) {
 
   const digest = createHash("sha256").update(text).digest("hex");
   const body = [
-    ...allInfo.map((definition) => renderDefinition("Info", definition)),
-    ...allFormat.map((definition) => renderDefinition("Format", definition)),
+    ...allInfo.map((definition) => renderDefinition("Info", definition, entry)),
+    ...allFormat.map((definition) => renderDefinition("Format", definition, entry)),
   ].join("\n\n");
 
   return `@prefix vcfc:  <https://w3id.org/vcf-core/vocab#> .
@@ -248,20 +269,20 @@ function render(text, source, sourceReference) {
 @prefix chebi: <http://purl.obolibrary.org/obo/CHEBI_> .
 
 #################################################################
-# VCF 4.5 reserved-key registry
+# VCF ${entry.id} reserved-key registry
 #
 # Generated by scripts/generate-reserved-keys.mjs from ${sourceReference}
 # SHA-256: ${digest}
 # Source rows: ${info.length} general INFO, ${svInfo.length} SV INFO,
 # ${format.length} general FORMAT, ${svFormat.length} SV FORMAT.
-# Do not edit by hand; regenerate from the cited VCF 4.5 source.
+# Do not edit by hand; regenerate from the cited VCF ${entry.id} source.
 #################################################################
 
-<https://w3id.org/vcf-core/reserved-keys> a owl:Ontology ;
-  rdfs:label "VCF Core reserved-key registry for VCF 4.5"@en ;
+<${entry.reservedKeys.ontologyIri}> a owl:Ontology ;
+  rdfs:label "VCF Core reserved-key registry for VCF ${entry.id}"@en ;
   dct:source <${sourceIri(sourceReference)}> ;
   owl:imports <https://w3id.org/vcf-core/vocab> ;
-  owl:versionInfo "VCFv4.5" .
+  owl:versionInfo ${turtleString(entry.code)} .
 
 vcfc:reservedIn a owl:AnnotationProperty ;
   rdfs:label "reserved in"@en ;
@@ -283,14 +304,19 @@ ${body}
 `;
 }
 
-const source = option("--source", DEFAULT_SOURCE);
-const output = option("--output", DEFAULT_OUTPUT);
-const sourceReference = option("--source-reference", DEFAULT_SOURCE);
+const entry = await loadVersion(option("--version", undefined));
+const source = option("--source", entry.source);
+const output = option("--output", path.join(REPO_ROOT, entry.reservedKeys.graph));
+const sourceReference = option("--source-reference", entry.source);
 if (!source || !output) {
-  throw new Error("Usage: node scripts/generate-reserved-keys.mjs --source <path-or-url> [--output <path>]");
+  throw new Error(
+    "Usage: node scripts/generate-reserved-keys.mjs [--version <id>] [--source <path-or-url>] [--output <path>]",
+  );
 }
 
 const sourceText = await readSource(source);
-const generated = render(sourceText, source, sourceReference);
+const generated = render(sourceText, source, sourceReference, entry);
 await fs.writeFile(path.resolve(process.cwd(), output), generated, "utf8");
-console.log(`Generated ${path.relative(REPO_ROOT, path.resolve(process.cwd(), output))} from ${source}.`);
+console.log(
+  `Generated ${path.relative(REPO_ROOT, path.resolve(process.cwd(), output))} for VCF ${entry.id} from ${source}.`,
+);

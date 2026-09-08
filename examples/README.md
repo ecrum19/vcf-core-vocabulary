@@ -99,10 +99,9 @@ reconstruction, vocabulary declarations, property kinds, SHACL conformance and
 the expected query answers; it does not promise byte-for-byte preservation of
 arbitrary VCF serialization.
 
-The real-call refresh was checked with source reconstruction, all nine example
-queries, decoded-value checks and selected SHACL rules on the changed graphs.
-The full validation suite was deliberately not rerun; see
-[the focused results](../tests/real-example-results.json).
+Current checks are reproducible with `npm run validate:examples` and
+`npm run validate:force`; fixture results are in
+[the complete validation report](../tests/generated/validation.json).
 External FALDO and ChEBI links in synthetic feature fixtures demonstrate
 integration points rather than a complete translation to a biological variation
 ontology.

@@ -17,19 +17,49 @@
     vcfc:filter "."^^vcfc:Null ;
     vcfc:filterStatus vcfc:FiltersNotApplied ;
     vcfc:formatRaw "GT:DP:PL:LEN" ;
+    vcfc:hasFormatKey <file://example-vcf45-gvcf.vcf#call/1/formatKey/1>,
+        <file://example-vcf45-gvcf.vcf#call/1/formatKey/2>,
+        <file://example-vcf45-gvcf.vcf#call/1/formatKey/3>,
+        <file://example-vcf45-gvcf.vcf#call/1/formatKey/4> ;
     vcfc:hasSampleCall <file://example-vcf45-gvcf.vcf#sample/1/S1>,
         <file://example-vcf45-gvcf.vcf#sample/1/S2> ;
     vcfc:infoRaw "." ;
     vcfc:qual "."^^vcfc:Null .
 
+<file://example-vcf45-gvcf.vcf#call/1/formatKey/1> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-gvcf.vcf#header/line/7> ;
+    vcfc:fieldIndex 1 .
+
+<file://example-vcf45-gvcf.vcf#call/1/formatKey/2> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-gvcf.vcf#header/line/8> ;
+    vcfc:fieldIndex 2 .
+
+<file://example-vcf45-gvcf.vcf#call/1/formatKey/3> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-gvcf.vcf#header/line/9> ;
+    vcfc:fieldIndex 3 .
+
+<file://example-vcf45-gvcf.vcf#call/1/formatKey/4> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-gvcf.vcf#header/line/10> ;
+    vcfc:fieldIndex 4 .
+
 <file://example-vcf45-gvcf.vcf#call/2> a vcfc:VariantCall ;
     vcfc:filter "PASS" ;
     vcfc:filterStatus vcfc:FiltersPassed ;
     vcfc:formatRaw "GT:DP" ;
+    vcfc:hasFormatKey <file://example-vcf45-gvcf.vcf#call/2/formatKey/1>,
+        <file://example-vcf45-gvcf.vcf#call/2/formatKey/2> ;
     vcfc:hasSampleCall <file://example-vcf45-gvcf.vcf#sample/2/S1>,
         <file://example-vcf45-gvcf.vcf#sample/2/S2> ;
     vcfc:infoRaw "." ;
     vcfc:qual "60"^^vcfc:VCFFloat .
+
+<file://example-vcf45-gvcf.vcf#call/2/formatKey/1> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-gvcf.vcf#header/line/7> ;
+    vcfc:fieldIndex 1 .
+
+<file://example-vcf45-gvcf.vcf#call/2/formatKey/2> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-gvcf.vcf#header/line/8> ;
+    vcfc:fieldIndex 2 .
 
 ex:header a vcfc:VCFHeader ;
     vcfc:hasColumnHeader <file://example-vcf45-gvcf.vcf#header/columns> ;
@@ -188,22 +218,32 @@ ex:header a vcfc:VCFHeader ;
     vcfc:chromosome <file://example-vcf45-gvcf.vcf#header/line/4> ;
     vcfc:hasAltAllele <file://example-vcf45-gvcf.vcf#record/1/allele/1> ;
     vcfc:hasCall <file://example-vcf45-gvcf.vcf#call/1> ;
+    vcfc:hasPaddingInterpretation <file://example-vcf45-gvcf.vcf#record/1/padding> ;
     vcfc:hasReferenceAllele <file://example-vcf45-gvcf.vcf#record/1/allele/0> ;
     vcfc:pos 700 ;
     vcfc:recordId "."^^vcfc:Null ;
     vcfc:recordIndex 1 ;
     vcfc:ref "C" .
 
+<file://example-vcf45-gvcf.vcf#record/1/padding> a vcfc:PaddingInterpretation ;
+    vcfc:paddingBaseCount 0 ;
+    vcfc:paddingRule vcfc:UnspecifiedAlleleNoPadding .
+
 <file://example-vcf45-gvcf.vcf#record/2> a vcfc:VCFRecord ;
     vcfc:alt "."^^vcfc:Null ;
     vcfc:chrom "chr1" ;
     vcfc:chromosome <file://example-vcf45-gvcf.vcf#header/line/4> ;
     vcfc:hasCall <file://example-vcf45-gvcf.vcf#call/2> ;
+    vcfc:hasPaddingInterpretation <file://example-vcf45-gvcf.vcf#record/2/padding> ;
     vcfc:hasReferenceAllele <file://example-vcf45-gvcf.vcf#record/2/allele/0> ;
     vcfc:pos 720 ;
     vcfc:recordId "."^^vcfc:Null ;
     vcfc:recordIndex 2 ;
     vcfc:ref "A" .
+
+<file://example-vcf45-gvcf.vcf#record/2/padding> a vcfc:PaddingInterpretation ;
+    vcfc:paddingBaseCount 0 ;
+    vcfc:paddingRule vcfc:PaddingNotDetermined .
 
 <file://example-vcf45-gvcf.vcf#sample/1/S1> a vcfc:SampleCall ;
     vcfc:forSample <file://example-vcf45-gvcf.vcf#samples/S1> ;
@@ -493,6 +533,26 @@ ex:samples a vcfc:SampleSet ;
     vcfc:headerValue "<ID=*,Description=\"Synthetic * allele\">" ;
     vcfc:lineIndex 6 .
 
+<file://example-vcf45-gvcf.vcf#header/line/4> a vcfc:ContigHeaderLine ;
+    vcfc:contigId "chr1" ;
+    vcfc:contigLength 1000 ;
+    vcfc:hasAttribute <file://example-vcf45-gvcf.vcf#header/line/4/attribute/1>,
+        <file://example-vcf45-gvcf.vcf#header/line/4/attribute/2> ;
+    vcfc:headerKey "contig" ;
+    vcfc:headerValue "<ID=chr1,length=1000>" ;
+    vcfc:lineIndex 4 .
+
+<file://example-vcf45-gvcf.vcf#record/1/allele/1> a vcfc:AltAllele ;
+    vcfc:alleleIndex 1 ;
+    vcfc:alleleKind vcfc:UnspecifiedAllele ;
+    vcfc:alleleValue "<*>" ;
+    vcfc:declaredByAlt <file://example-vcf45-gvcf.vcf#header/line/6> .
+
+<file://example-vcf45-gvcf.vcf#record/2/allele/0> a vcfc:ReferenceAllele ;
+    vcfc:alleleIndex 0 ;
+    vcfc:alleleKind vcfc:BaseSequenceAllele ;
+    vcfc:alleleValue "A" .
+
 <file://example-vcf45-gvcf.vcf#header/line/10> a vcfc:FORMATHeaderLine ;
     vcfc:fieldDescription "Example LEN" ;
     vcfc:fieldId "LEN" ;
@@ -506,15 +566,6 @@ ex:samples a vcfc:SampleSet ;
     vcfc:headerKey "FORMAT" ;
     vcfc:headerValue "<ID=LEN,Number=1,Type=Integer,Description=\"Example LEN\">" ;
     vcfc:lineIndex 10 .
-
-<file://example-vcf45-gvcf.vcf#header/line/4> a vcfc:ContigHeaderLine ;
-    vcfc:contigId "chr1" ;
-    vcfc:contigLength 1000 ;
-    vcfc:hasAttribute <file://example-vcf45-gvcf.vcf#header/line/4/attribute/1>,
-        <file://example-vcf45-gvcf.vcf#header/line/4/attribute/2> ;
-    vcfc:headerKey "contig" ;
-    vcfc:headerValue "<ID=chr1,length=1000>" ;
-    vcfc:lineIndex 4 .
 
 <file://example-vcf45-gvcf.vcf#header/line/9> a vcfc:FORMATHeaderLine ;
     vcfc:fieldArity vcfc:ArityPerGenotype ;
@@ -530,17 +581,6 @@ ex:samples a vcfc:SampleSet ;
     vcfc:headerValue "<ID=PL,Number=G,Type=Integer,Description=\"Example PL\">" ;
     vcfc:lineIndex 9 .
 
-<file://example-vcf45-gvcf.vcf#record/1/allele/1> a vcfc:AltAllele ;
-    vcfc:alleleIndex 1 ;
-    vcfc:alleleKind vcfc:UnspecifiedAllele ;
-    vcfc:alleleValue "<*>" ;
-    vcfc:declaredByAlt <file://example-vcf45-gvcf.vcf#header/line/6> .
-
-<file://example-vcf45-gvcf.vcf#record/2/allele/0> a vcfc:ReferenceAllele ;
-    vcfc:alleleIndex 0 ;
-    vcfc:alleleKind vcfc:BaseSequenceAllele ;
-    vcfc:alleleValue "A" .
-
 <file://example-vcf45-gvcf.vcf#samples/S1> a vcfc:VCFSample ;
     vcfc:sampleIndex 1 ;
     vcfc:sampleName "S1" .
@@ -548,6 +588,11 @@ ex:samples a vcfc:SampleSet ;
 <file://example-vcf45-gvcf.vcf#samples/S2> a vcfc:VCFSample ;
     vcfc:sampleIndex 2 ;
     vcfc:sampleName "S2" .
+
+<file://example-vcf45-gvcf.vcf#record/1/allele/0> a vcfc:ReferenceAllele ;
+    vcfc:alleleIndex 0 ;
+    vcfc:alleleKind vcfc:BaseSequenceAllele ;
+    vcfc:alleleValue "C" .
 
 <file://example-vcf45-gvcf.vcf#header/line/7> a vcfc:FORMATHeaderLine ;
     vcfc:fieldDescription "Example GT" ;
@@ -576,8 +621,3 @@ ex:samples a vcfc:SampleSet ;
     vcfc:headerKey "FORMAT" ;
     vcfc:headerValue "<ID=DP,Number=1,Type=Integer,Description=\"Example DP\">" ;
     vcfc:lineIndex 8 .
-
-<file://example-vcf45-gvcf.vcf#record/1/allele/0> a vcfc:ReferenceAllele ;
-    vcfc:alleleIndex 0 ;
-    vcfc:alleleKind vcfc:BaseSequenceAllele ;
-    vcfc:alleleValue "C" .

@@ -1,286 +1,129 @@
 # VCF Core Vocabulary
 
-Vocabulary + SHACL shapes for representing the **logical VCF 4.5 model** — files, headers, records, alleles, indexed values, genotypes, and VCF-specific SV syntax — in RDF.
+**An RDF vocabulary for Variant Call Format (VCF) data, with validation profiles
+for VCF 4.1–4.5.**
 
-> **Renamed in 2.0.0.** This vocabulary was previously published as the *VCF-RDFizer Vocabulary* in the
-> `https://w3id.org/vcf-rdfizer/vocab#` namespace. It is a semantic target that any conversion system can
-> adopt, so its name and namespace no longer carry the name of one converter. See
-> [v2.0.0 release notes and migration guide](RELEASE-NOTES-v2.0.0.md#migrating-from-v110). The VCF-RDFizer converter is a separate project with
-> its own version line; the two version numbers are unrelated.
+VCF Core represents files, header declarations, records, alleles and sample
+genotypes as linked data. It preserves the source context needed to interpret a
+VCF call and provides links to external models of sequence variation. Any
+converter can adopt the vocabulary.
 
-This repository is intentionally **VCF-centric** (file + header metadata + row/call provenance), and is designed to **link out** to established ontologies for representing the *sequence alteration itself*. BCF 2.2's byte layout is deliberately out of scope: the RDF target is VCF's logical model.
+**Version 2.1.0** · [Release notes](docs/RELEASE-NOTES-v2.1.0.md) ·
+[Examples](examples/README.md) · [Validation](shacl/README.md) ·
+[Coverage assessment](coverage/README.md)
 
-## Why this exists
+## Start with an example
 
-- VCF is the de-facto interchange format for variant catalogs.
-- Existing semantic models (e.g., SB/gvar) focus on *variants as Linked Data*, not a complete RDF rendering of VCF files.  
-  We therefore model the **VCF artifact**, **header lines**, and **call-level fields** here, and enable alignment to SB/gvar (and optionally HERO).
+Open the [quickstart VCF](examples/core/example-quickstart.vcf) alongside its
+[RDF graph](examples/core/example-quickstart.ttl): one site, its header and its
+call, with no sample columns. Load the Turtle graph into an RDF store and run:
 
-## Expanded and condensed genotype representations
+```sparql
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
 
-A cohort-oriented representation for large multi-sample VCF files sits alongside the per-sample terms; neither profile replaces the other. A producer declares one of two profiles on the `vcfc:VCFFile`:
-
-- `vcfc:ExpandedRepresentation` for individual `vcfc:SampleCall` and `vcfc:FormatFieldValue` resources.
-- `vcfc:CondensedRepresentation` for sample-ordered `vcfc:CohortCallMatrix` and `vcfc:FormatValueVector` resources.
-
-The expanded profile is suitable for single-sample and low-sample inputs. The condensed profile prevents the RDF graph from growing with every variant × sample × FORMAT-field combination while retaining the genotype contents in an explicitly described vector encoding.
-
-## Namespace
-
-Persistent namespace, prefix `vcfc:`:
-
-- `https://w3id.org/vcf-core/vocab#`
-
-The retired namespace `https://w3id.org/vcf-rdfizer/vocab#` is **not** redirected here. It serves
-`legacy/legacy-vcf-rdfizer.ttl`, a document in which every 1.1.0 term is present, deprecated, and linked to
-its successor.
-
-
-## Canonical IRI Pattern
-
-Recommended base for VCF instance resources:
-
-- `file://{vcfFilePath}`
-
-The examples use the portable filename form, for example
-`file://example-file1.vcf#header` and
-`file://example-file1.vcf#record/var6/sample/SAMPLE2/fmt/DP`. These are local
-resource identifiers for demonstrating the pattern; they are not expected to
-resolve as web pages. When minting IRIs for a real absolute local path, use the
-corresponding absolute `file:///...` form, and use a stable project-specific
-HTTP(S) base when the RDF must be shared or dereferenced across systems.
-
-Recommended templates (also formalized in ontology via `vcfc:iriTemplate`):
-
-```text
-VCFFile          file://{vcfFilePath}
-VCFHeader        file://{vcfFilePath}#header
-HeaderLine       file://{vcfFilePath}#header/line/{lineId}
-VCFRecord        file://{vcfFilePath}#record/{recordKey}
-VariantCall      file://{vcfFilePath}#call/{recordKey}
-SampleCall       file://{vcfFilePath}#sample/{recordKey}/{sampleId}
-InfoFieldValue   file://{vcfFilePath}#call/{recordKey}/info/{fieldKey}
-FormatFieldValue file://{vcfFilePath}#sample/{recordKey}/{sampleId}/fmt/{fieldKey}
-SampleSet         file://{vcfFilePath}#samples
-VCFSample         file://{vcfFilePath}#samples/{sampleId}
-CohortCallMatrix  file://{vcfFilePath}#call/{recordKey}/matrix
-FormatValueVector file://{vcfFilePath}#call/{recordKey}/matrix/fmt/{fieldKey}
+SELECT ?chrom ?position ?ref ?alt
+WHERE {
+  ?record a vcfc:VCFRecord ;
+          vcfc:chrom ?chrom ;
+          vcfc:pos ?position ;
+          vcfc:ref ?ref ;
+          vcfc:alt ?alt .
+}
 ```
 
-## Key concepts
+The result is `chr1`, `100`, `A`, `G`. For sample data, explore the
+[expanded sample example](examples/core/example-minimal-record.ttl) or the
+[eight-sample condensed cohort](examples/profiles/example-condensed-cohort.ttl).
+The [example guide](examples/README.md) includes source provenance, versioned
+fixtures and queries for genotypes, phasing and structural variation.
 
-### VCF file and headers
+## Use the vocabulary
 
-- `vcfc:VCFFile` – a VCF file artifact (a dataset distribution)
-- `vcfc:VCFHeader` – container for header lines
-- Header line types (subclasses of `vcfc:HeaderLine`):
-  - `vcfc:FileFormatHeaderLine` for `##fileformat`
-  - `vcfc:FileDateHeaderLine` for `##fileDate`
-  - `vcfc:SourceHeaderLine` for `##source`
-  - `vcfc:ReferenceHeaderLine` for `##reference`
-  - `vcfc:ContigHeaderLine` for `##contig`
-  - `vcfc:INFOHeaderLine` for `##INFO=<...>`
-  - `vcfc:FORMATHeaderLine` for `##FORMAT=<...>`
-  - `vcfc:FILTERHeaderLine` for `##FILTER=<...>`
-  - `vcfc:ALTHeaderLine` for `##ALT=<...>`
-- `vcfc:StructuredHeaderLine` / `vcfc:UnstructuredHeaderLine` distinguish the two VCF metadata forms; `vcfc:HeaderAttribute` exposes every structured attribute without discarding `vcfc:headerValue`.
-- `vcfc:ColumnHeaderLine` represents `#CHROM`; `vcfc:hasGenotypeColumns` retains ordered sample columns.
-- `vcfc:AssemblyHeaderLine`, `vcfc:MetaHeaderLine`, `vcfc:SampleHeaderLine`, `vcfc:PedigreeHeaderLine`, and `vcfc:PedigreeDBHeaderLine` cover the remaining VCF 4.5 line forms.
+The namespace is `https://w3id.org/vcf-core/vocab#`, conventionally `vcfc:`.
+VCF specification versions (4.1–4.5) and vocabulary releases (2.1.0) are separate.
 
-### Content, arity, and syntax carriers
+The vocabulary is supplied as five Turtle modules. Load all five when working
+with the complete model; the core module alone does not contain every term.
 
-- `vcfc:fieldArity` links symbolic `Number` values to `VCFNumberArity` individuals; `fieldNumberInteger` exposes fixed counts while `fieldNumber` remains lossless.
-- `vcfc:ReferenceAllele` and `vcfc:AltAllele` carry `alleleIndex` (0 for REF; 1…n in ALT order), kind, value, declaration, and FALDO location hooks.
-- `vcfc:FieldValueItem` indexes parsed comma-list entries and links them to the applicable allele, genotype, GT allele, or base modification.
-- `vcfc:Genotype`, `vcfc:GenotypeAlleleCall`, `vcfc:PhaseSet`, and `vcfc:LocalAlleleSet` expose GT, phase, PS/PSL/PSO/PSQ, LAA, and FT without replacing the raw FORMAT values.
-- The SV module supplies VCF syntax carriers for symbolic ALT types, SVCLAIM, breakends, EVENT/EVENTTYPE, confidence intervals, tandem repeats, copy number, gVCF reference blocks, and base modifications. FALDO, VRS, SO, GENO, and ChEBI provide the aligned external semantics.
+| Module | What it describes |
+| --- | --- |
+| [Core](ontology/vcf-core-vocabulary.ttl) | Files, headers, records, calls, sample representations, ordering and missing values |
+| [Alleles and values](ontology/vcf-core-alleles.ttl) | REF/ALT alleles, indexed field values and padding interpretations |
+| [Genotypes](ontology/vcf-core-genotypes.ttl) | Parsed genotypes, phasing, phase sets and local alleles |
+| [Structural variation](ontology/vcf-core-sv.ttl) | Breakends, repeats, copy number, reference blocks and base modifications |
+| [Reserved keys](ontology/vcf-core-reserved-keys.ttl) | VCF 4.5 INFO/FORMAT definitions with specification provenance |
 
-### VCF records and calls
+[Historical reserved-key definitions](ontology/versions/) accompany the earlier
+VCF profiles. The model retains VCF syntax and can link to FALDO, SO, GENO, VRS
+and ChEBI where appropriate. These links do not establish biological equivalence
+on their own.
 
-- `vcfc:VCFRecord` – one row of a VCF (variant observation statement)
-- `vcfc:VariantCall` – call-level representation (QUAL/FILTER/INFO/FORMAT + sample calls)
-- `vcfc:SampleCall` – per-sample call values (GT/DP/AD/…)
-- `vcfc:VCFSample` – one reusable, file-scoped VCF sample-column identity
-- `vcfc:SampleSet` – the ordered sample columns of a VCF file
-- `vcfc:CohortCallMatrix` – condensed genotype data for one `vcfc:VariantCall`
-- `vcfc:FormatValueVector` – values of one FORMAT key across the matrix sample order
+Use a stable project-specific HTTP(S) base for instance identifiers you intend
+to share. The examples' `file://…` identifiers illustrate local resources;
+[IRI guidance](examples/README.md#real-sample-calls-small-files) explains the convention.
 
-### Expanded profile
+## Choose a sample representation
 
-Use `vcfc:ExpandedRepresentation` when direct RDF statements about individual samples and FORMAT values are required. Each `vcfc:VariantCall` has a `vcfc:hasSampleCall` relation for every represented sample; each `vcfc:SampleCall` has a `vcfc:hasFormatValue` relation for its FORMAT entries. `vcfc:SampleCall` and `vcfc:FormatFieldValue` are deliberately **one-sample** resources and must not be used for values spanning multiple samples.
+A file declares its choice with `vcfc:representationProfile`.
 
-The expanded profile is the original representation and remains appropriate for one sample or a small number of samples. Producers may additionally link a `SampleCall` to a reusable `vcfc:VCFSample` using `vcfc:forSample`.
+| Profile | How sample values are represented | How to access them |
+| --- | --- | --- |
+| `ExpandedRepresentation` | Individual `SampleCall` and `FormatFieldValue` resources | Direct RDF graph patterns |
+| `CondensedRepresentation` | A `CohortCallMatrix` with one `FormatValueVector` per FORMAT key | Decode each vector using the ordered `SampleSet` |
 
-### Condensed profile
+With `VCFTextVector`, tabs separate samples and commas stay inside each sample's
+value. Every sample keeps its position, including missing values. The
+[cohort query](examples/queries/cohort-genotypes.rq) demonstrates accessing an
+individual genotype from a vector.
 
-Use `vcfc:CondensedRepresentation` for large multi-sample VCF files. Model the `#CHROM` sample columns once as a `vcfc:SampleSet`; every member is a `vcfc:VCFSample` with an exact `vcfc:sampleName` and one-based `vcfc:sampleIndex`.
+Where VCF permits missing values, scalar RDF values use `"."^^vcfc:Null`.
+Inside raw fields and vector payloads, the dot remains part of the source text.
 
-For each record with genotype data, link the `vcfc:VariantCall` to one `vcfc:CohortCallMatrix` with `vcfc:hasCallMatrix`. The matrix identifies its `vcfc:appliesToSampleSet` and has one `vcfc:hasFormatValueVector` per represented FORMAT key. Each vector:
+## Validate your data
 
-- links with `vcfc:declaredBy` to the appropriate `vcfc:FormatFieldDefinition`;
-- declares a `vcfc:valueEncoding`; and
-- stores its lexical payload in `vcfc:encodedValues`.
+The [validation guide](shacl/README.md) explains the shared SHACL rules,
+version-specific overlays and supplementary Python checks. The complete runner
+checks both RDF structure and decoded values; running SHACL alone omits the
+Python checks. It selects version rules from each file's `fileFormat`.
 
-The initial standard encoding is `vcfc:VCFTextVector`: tab-separated raw VCF values in `vcfc:sampleIndex` order. It has exactly one position per sample. `.` remains the VCF missing-value token, and commas remain inside a single FORMAT value (for example `AD` or `PL`); commas are never vector separators. A consumer obtains the value for sample *i* by selecting position *i* in every needed FORMAT vector. The record's `vcfc:formatRaw` retains the source FORMAT-key order.
-
-`vcfc:encodedValues` is a compact payload, not thousands of individual RDF assertions. Consumers must decode it using the vector encoding, the linked FORMAT definition, and the matrix SampleSet. If source-level textual fidelity is required, a matrix may additionally use `vcfc:sampleDataRaw` for the original tab-separated sample blocks. It is optional because the FORMAT vectors already preserve the semantic genotype values.
-
-Use one profile consistently for a graph. A converter should not emit both expanded calls and condensed vectors for the same call unless it intentionally documents the redundant materialization. The condensed profile is semantically complete for the represented VCF values, but a SPARQL engine cannot filter inside vector payloads without a decoder or an application-level vector function.
-
-### Representation profiles
-
-The same VCF can be serialized with two different shapes for its per-sample
-genotype block. A file declares which one it follows with
-`vcfr:representationProfile`, and a consumer should read that first, because it
-decides how per-sample values are addressed.
-
-| | `vcfr:ExpandedRepresentation` | `vcfr:CondensedRepresentation` |
-|---|---|---|
-| Per-sample values | one `vcfr:SampleCall` per sample, one `vcfr:FormatFieldValue` per key | one `vcfr:CohortCallMatrix` per record, one `vcfr:FormatValueVector` per key |
-| Samples declared | per record | once per file, as a `vcfr:SampleSet` of `vcfr:VCFSample` |
-| A value is addressed | by IRI | by position, using the sample's `vcfr:sampleIndex` |
-| Genotype resources | records x samples x keys | records x keys |
-
-The condensed profile exists because the expanded one does not survive cohort
-scale: its genotype cost grows with the number of samples, and a large cohort
-is mostly genotype. The condensed terms are:
-
-- `vcfr:SampleSet` / `vcfr:hasSampleSet` – the file's sample columns, declared once
-- `vcfr:VCFSample` / `vcfr:hasSample` – one sample column, with `vcfr:sampleName` and a 1-based `vcfr:sampleIndex`
-- `vcfr:CohortCallMatrix` / `vcfr:hasCallMatrix` – a record's whole genotype block, `vcfr:appliesToSampleSet` the file's sample set
-- `vcfr:FormatValueVector` / `vcfr:hasFormatValueVector` – one FORMAT key's values across all samples
-- `vcfr:valueEncoding` / `vcfr:VCFTextVector` / `vcfr:encodedValues` – how a vector's literal is split back into per-sample values
-
-Under `vcfr:VCFTextVector`, `vcfr:encodedValues` holds one tab-separated field
-per sample in ascending `vcfr:sampleIndex` order. See
-`examples/example-condensed-record.ttl`, which is the same record as
-`examples/example-minimal-record.ttl` in the other profile.
-
-### Alignment
-
-This vocabulary:
-- can link a `vcfc:VCFRecord` / `vcfc:VariantCall` to SB/gvar’s `so:0001059` (SequenceAlteration) representation using `vcfc:asSequenceAlteration`.
-
-### Missing values (`.`)
-
-<<<<<<< HEAD
-- Missing VCF token `.` is modeled as a typed literal: `"."^^vcfc:Null`.
-- This avoids using plain `"."^^xsd:string` and keeps missingness explicit in RDF.
-=======
-- Where VCF 4.5 permits the missing token - ID, ALT, QUAL, FILTER, INFO, and any
-  INFO or FORMAT value - it is modeled as a typed literal: `"."^^vcfr:Null`.
-  This avoids plain `"."^^xsd:string` and keeps missingness explicit in RDF.
-- CHROM, POS and REF are **required** and have no missing form, so the policy
-  does not apply to them: a `.` in one of those is malformed input, and the
-  SHACL shapes state their datatype exactly so that it is reported.
-- Inside a `vcfr:FormatValueVector`, a missing per-sample value stays the
-  character `.` at that sample's position in `vcfr:encodedValues`. Lifting it
-  out into a typed literal would break the positional alignment the whole
-  profile depends on.
-
-The boundary matters: stating the policy without it put the vocabulary in
-contradiction with its own shapes, since a record with no alternative allele
-could satisfy neither `vcfr:missingValuePolicy` nor a `vcfr:alt` constrained to
-`xsd:string`.
->>>>>>> origin/main
-
-SB/gvar reference:
-- Docs: https://swat4hcls-2025-genomic-variation.github.io/genomic-variant-schema/
-- Schema source: https://github.com/swat4hcls-2025-genomic-variation/genomic-variant-schema/blob/main/gvar-schema.yaml
-
-## Validation
-
-<<<<<<< HEAD
-The validator combines shared structural/consistency shapes with VCF **4.1–4.5**
-version overlays. See [SHACL profiles](shacl/README.md) for file selection,
-integer datatype policy, warnings and the boundary between SHACL and decoded
-Python checks. Historical reserved-key snapshots are under `ontology/versions/`.
+After the [local setup](tests/README.md#local-setup), validate your Turtle graph:
 
 ```sh
-python3 -m venv .venv
-.venv/bin/python -m pip install -r requirements-dev.txt
-npm run validate
-# Validate another graph, allowing recommendation warnings:
 .venv/bin/python tests/validate_shacl.py input.ttl
 ```
 
-`npm run ocg:check` runs RDF parsing, all complete example graphs through SHACL
-and decoded semantic validation, independent regression probes, paired VCF/RDF
-reconstruction and nine example queries. It runs on PR CI as well as before
-publishing. This is a maintained conformance corpus, not exhaustive VCF
-certification; [the checklist](tests/coverage.md) records remaining boundaries.
-=======
-SHACL shapes are provided in `shacl/vcf-rdfizer-vocabulary.shacl.ttl`, covering
-both representation profiles. The condensed shapes constrain what positional
-decoding actually depends on: every `vcfr:VCFSample` carries exactly one
-`vcfr:sampleIndex`, every matrix names the sample set it applies to, and every
-vector states its encoding and its FORMAT declaration. A vector cannot be read
-without those, so they are required rather than merely recommended.
+Warnings are reported separately; add `--warnings-as-errors` to make them fail
+validation. VCF 4.0 has no validation overlay. BCF byte layout and exact
+byte-for-byte reconstruction are outside the vocabulary's scope.
 
-```bash
-pyshacl -s shacl/vcf-rdfizer-vocabulary.shacl.ttl \
-        -e ontology/vcf-rdfizer-vocabulary.ttl \
-        -df turtle examples/example-condensed-record.ttl
-```
+## What does the coverage evidence show?
 
-The profile terms (`vcfr:ExpandedRepresentation`, `vcfr:CondensedRepresentation`,
-`vcfr:VCFTextVector`) are classes used as values, following the vocabulary's
-existing `vcfr:VCFValueType` pattern. They therefore carry no `rdf:type` edge,
-and the shapes constrain them with `sh:in` rather than `sh:class`.
->>>>>>> origin/main
+The repository provides two assessments with different denominators:
 
-## Documentation
+| Assessment | Recorded result | Interpretation |
+| --- | --- | --- |
+| [Curated VCF 4.5 inventory](coverage/curated/README.md) | **104/104** constructs represented; **87** with enforcement evidence | Coverage of the selected inventory under its preservation and structure rubric |
+| [Methodological VCF 4.1–4.5 assessment](coverage/methodological/README.md) | **333/333** extracted Number/Type rows match; **133/491** retained requirements have full evidence | Specification-derived traceability under reviewed criteria; complex semantic adequacy still requires judgment |
 
-The companion site is generated at publish time by [Ontology Companion Generator (OCG) v1.3.0](https://www.npmjs.com/package/ontology-companion-generator) from `ocg.config.json`. The generated Pages output is intentionally not tracked in this repository; the GitHub Pages workflow publishes the temporary `site/` directory created by OCG.
+Neither result establishes complete VCF conformance or an overall semantic
+coverage percentage. The methodological assessment records known validation gaps
+and unfinished source-review work. See the [current report](coverage/methodological/generated/report.md)
+for the results and [review decisions](coverage/methodological/DECISIONS.md) for
+their interpretation.
 
-OCG parses `ontology/vcf-core-vocabulary.bundle.ttl`, generated from the five normative modules, so the site contains one complete reference and graph. `scripts/insert-class-hierarchy.mjs` verifies that OCG inserted the hierarchy and makes the generated hierarchy Turtle asset self-contained by restoring source prefix declarations.
+## Releases, citation and contributions
 
-Run `npm run ocg:check` to validate the configuration and source ontology, or `npm run ocg:build` to build the local companion site in `site/`.
+[Version 2.1.0](docs/RELEASE-NOTES-v2.1.0.md) adds structured assembly-contig,
+padding and FORMAT-key representations and documents the coverage methods.
+Users of the former VCF-RDFizer namespace should follow the
+[2.0.0 migration guide](docs/RELEASE-NOTES-v2.0.0.md#migrating-from-v110).
+The [VCF-RDFizer converter](https://github.com/ecrum19/VCF-RDFizer) is a separate
+project with its own releases.
 
-Regenerate the VCF 4.5 reserved-key registry from an authoritative source checkout with:
+Use [CITATION.cff](CITATION.cff) when citing the vocabulary. The vocabulary is
+licensed under [CC BY 4.0](LICENSE); [acknowledgements](ACKNOWLEDGEMENTS.md)
+record attribution and development assistance.
 
-```sh
-node scripts/generate-reserved-keys.mjs --source /path/to/VCFv4.5.tex
-npm run ontology:bundle
-```
-
-The formatted example graph (`examples/core/example.ttl`) is generated from `examples/core/example.nt` by `scripts/convert-example-nt-to-ttl.mjs`; run `npm run examples:ttl` when the N-Triples source changes.
-
-## Quick example
-
-<<<<<<< HEAD
-Start with [example-quickstart.ttl](examples/core/example-quickstart.ttl). The
-[example guide](examples/README.md) then covers both sample representations,
-structured metadata, alleles, mixed phasing, local alleles, base modifications,
-breakends, repeats, reference blocks and earlier VCF versions. Every advertised
-Turtle example is now complete; the header-only example represents a zero-record
-file and may also be merged with the single-record example.
-=======
-See:
-- `examples/example-headers.ttl`
-- `examples/example-minimal-record.ttl`
-- `examples/example-condensed-record.ttl`
-- `examples/example.ttl` (formatted from `example.nt`)
-- `examples/example.nt`
-- `examples/example.vcf`
->>>>>>> origin/main
-
-For real sample calls, use the [eight-sample 1000 Genomes cohort](examples/profiles/example-condensed-cohort.vcf)
-or the [three-record HaplotypeCaller subset](examples/core/example.vcf).
-Their source calls are retained with documented reductions in
-[the provenance record](examples/provenance.json).
-
-[manifest.json](examples/manifest.json) links source VCFs, saved RDF and executable
-queries with expected answers. Run `npm run examples:build` to regenerate the rich
-fixtures and `npm run validate:examples` to check their source agreement.
-
-
-## Versioning
-
-Release notes are in [`CHANGELOG.md`](CHANGELOG.md). The current version is
-declared by `owl:versionIRI` in the ontology and mirrored in `package.json` and
-`CITATION.cff`.
-
-## License
-
-- CC BY 4.0 (see LICENSE)
+Report problems or propose changes through the repository's issues and pull
+requests. For maintenance work, see the [build tools](scripts/README.md),
+[test guide](tests/README.md) and [coverage reproduction instructions](coverage/README.md).

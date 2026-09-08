@@ -1,0 +1,219 @@
+{
+  "assessmentStatus": "review-required",
+  "candidateOccurrences": 1024,
+  "corpusEntries": 662,
+  "manuallyAdded": 272,
+  "reviewedRequirements": 491,
+  "pendingTriage": 0,
+  "pendingMapping": 0,
+  "dischargedAllApplicableVersions": 133,
+  "dischargedByKind": {
+    "bcf": 0,
+    "processing": 0,
+    "representational": 2,
+    "serialization": 4,
+    "validity": 127
+  },
+  "pendingAlignmentPairs": 0,
+  "pendingChangelogItems": 0,
+  "derivedChangesWithoutReviewedChangelogLink": 193,
+  "findings": {
+    "duplicate": 3,
+    "enforced, not inventoried": 131,
+    "neither": 360,
+    "not a requirement": 17,
+    "out of scope": 22,
+    "split": 129
+  },
+  "byVersion": [
+    {
+      "version": "4.1",
+      "sourceLines": 1518,
+      "vcfBoundaryLine": 955,
+      "changeBoundaryLine": null,
+      "proseBlocks": 241,
+      "unselectedBlocks": 198,
+      "candidates": 105,
+      "byDiscovery": {
+        "declarative": 28,
+        "modal": 56,
+        "reserved-declaration": 31
+      },
+      "byStrength": {
+        "advisory": 29,
+        "declarative": 49,
+        "obligation": 22,
+        "prohibition": 5
+      },
+      "corpusEntries": 169,
+      "reviewedRequirements": 129,
+      "discharged": 36,
+      "pendingTriage": 0,
+      "pendingMapping": 0,
+      "excluded": 1
+    },
+    {
+      "version": "4.2",
+      "sourceLines": 1533,
+      "vcfBoundaryLine": 972,
+      "changeBoundaryLine": null,
+      "proseBlocks": 248,
+      "unselectedBlocks": 199,
+      "candidates": 110,
+      "byDiscovery": {
+        "declarative": 31,
+        "modal": 61,
+        "reserved-declaration": 31
+      },
+      "byStrength": {
+        "advisory": 34,
+        "declarative": 49,
+        "obligation": 22,
+        "prohibition": 5
+      },
+      "corpusEntries": 175,
+      "reviewedRequirements": 134,
+      "discharged": 37,
+      "pendingTriage": 0,
+      "pendingMapping": 0,
+      "excluded": 1
+    },
+    {
+      "version": "4.3",
+      "sourceLines": 2190,
+      "vcfBoundaryLine": 1452,
+      "changeBoundaryLine": 2127,
+      "proseBlocks": 264,
+      "unselectedBlocks": 201,
+      "candidates": 185,
+      "byDiscovery": {
+        "declarative": 51,
+        "modal": 83,
+        "reserved-declaration": 32,
+        "reserved-table": 37
+      },
+      "byStrength": {
+        "advisory": 19,
+        "declarative": 102,
+        "obligation": 45,
+        "prohibition": 19
+      },
+      "corpusEntries": 334,
+      "reviewedRequirements": 249,
+      "discharged": 77,
+      "pendingTriage": 0,
+      "pendingMapping": 0,
+      "excluded": 5
+    },
+    {
+      "version": "4.4",
+      "sourceLines": 2652,
+      "vcfBoundaryLine": 1880,
+      "changeBoundaryLine": 2556,
+      "proseBlocks": 362,
+      "unselectedBlocks": 244,
+      "candidates": 273,
+      "byDiscovery": {
+        "declarative": 62,
+        "modal": 158,
+        "reserved-declaration": 39,
+        "reserved-table": 40
+      },
+      "byStrength": {
+        "advisory": 53,
+        "declarative": 115,
+        "obligation": 77,
+        "prohibition": 28
+      },
+      "corpusEntries": 441,
+      "reviewedRequirements": 332,
+      "discharged": 88,
+      "pendingTriage": 0,
+      "pendingMapping": 0,
+      "excluded": 16
+    },
+    {
+      "version": "4.5",
+      "sourceLines": 2834,
+      "vcfBoundaryLine": 2048,
+      "changeBoundaryLine": 2724,
+      "proseBlocks": 396,
+      "unselectedBlocks": 258,
+      "candidates": 351,
+      "byDiscovery": {
+        "declarative": 71,
+        "modal": 185,
+        "reserved-declaration": 39,
+        "reserved-table": 84
+      },
+      "byStrength": {
+        "advisory": 70,
+        "declarative": 166,
+        "obligation": 86,
+        "prohibition": 29
+      },
+      "corpusEntries": 607,
+      "reviewedRequirements": 448,
+      "discharged": 130,
+      "pendingTriage": 0,
+      "pendingMapping": 0,
+      "excluded": 19
+    }
+  ],
+  "limitations": [
+    "Candidates are mechanically selected statements, not yet reviewed atomic requirements.",
+    "Modal/declarative sweeps are incomplete; unselected prose and skipped regions remain auditable.",
+    "Earlier specifications use less normative wording. Counts cannot rank versions by coverage.",
+    "Exact text/context grouping is mechanical; fuzzy alignment and semantic applicability require decisions.",
+    "Text absence is not withdrawal, and deprecation is not removal.",
+    "Evidence suggestions are not discharges. Reviewed mappings establish traceability, not rule correctness or conformance.",
+    "This workflow does not execute the vocabulary validators. Run the repository validation suite separately."
+  ],
+  "reservedDefinitionComparison": [
+    {
+      "version": "4.1",
+      "artifact": "ontology/versions/vcf-4.1-reserved.json",
+      "sourceRows": 31,
+      "sourceKeys": 31,
+      "exact": 31,
+      "missing": 0,
+      "different": 0
+    },
+    {
+      "version": "4.2",
+      "artifact": "ontology/versions/vcf-4.2-reserved.json",
+      "sourceRows": 31,
+      "sourceKeys": 31,
+      "exact": 31,
+      "missing": 0,
+      "different": 0
+    },
+    {
+      "version": "4.3",
+      "artifact": "ontology/versions/vcf-4.3-reserved.json",
+      "sourceRows": 69,
+      "sourceKeys": 67,
+      "exact": 69,
+      "missing": 0,
+      "different": 0
+    },
+    {
+      "version": "4.4",
+      "artifact": "ontology/versions/vcf-4.4-reserved.json",
+      "sourceRows": 79,
+      "sourceKeys": 78,
+      "exact": 79,
+      "missing": 0,
+      "different": 0
+    },
+    {
+      "version": "4.5",
+      "artifact": "ontology/vcf-core-reserved-keys.ttl",
+      "sourceRows": 123,
+      "sourceKeys": 122,
+      "exact": 123,
+      "missing": 0,
+      "different": 0
+    }
+  ]
+}

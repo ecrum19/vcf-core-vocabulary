@@ -1,0 +1,10 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+# VCF 4.5 fixed field 4: which base serves as padding is a derived
+# interpretation, so each record exposes the rule that determined it. REF and
+# the allele strings are untouched, and the undetermined case is explicit.
+SELECT ?pos ?ref ?rule ?count WHERE {
+  ?record vcfc:pos ?pos ; vcfc:ref ?ref ; vcfc:hasPaddingInterpretation ?padding .
+  ?padding vcfc:paddingRule ?ruleTerm ; vcfc:paddingBaseCount ?count .
+  BIND(STRAFTER(STR(?ruleTerm), "vocab#") AS ?rule)
+  FILTER(?rule != "PaddingNotDetermined")
+} ORDER BY ?pos

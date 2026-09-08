@@ -17,6 +17,8 @@
     vcfc:filter "PASS" ;
     vcfc:filterStatus vcfc:FiltersPassed ;
     vcfc:formatRaw "GT:DP" ;
+    vcfc:hasFormatKey <file://example-vcf42.vcf#call/1/formatKey/1>,
+        <file://example-vcf42.vcf#call/1/formatKey/2> ;
     vcfc:hasInfoValue <file://example-vcf42.vcf#call/1/info/AF>,
         <file://example-vcf42.vcf#call/1/info/CIPOS>,
         <file://example-vcf42.vcf#call/1/info/CN>,
@@ -24,6 +26,14 @@
     vcfc:hasSampleCall <file://example-vcf42.vcf#sample/1/S1> ;
     vcfc:infoRaw "AF=0.25,0.1;SVLEN=-20,30;CIPOS=-5,5;CN=2" ;
     vcfc:qual "60"^^vcfc:VCFFloat .
+
+<file://example-vcf42.vcf#call/1/formatKey/1> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf42.vcf#header/line/11> ;
+    vcfc:fieldIndex 1 .
+
+<file://example-vcf42.vcf#call/1/formatKey/2> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf42.vcf#header/line/12> ;
+    vcfc:fieldIndex 2 .
 
 <file://example-vcf42.vcf#call/1/info/AF> a vcfc:InfoFieldValue ;
     vcfc:declaredBy <file://example-vcf42.vcf#header/line/7> ;
@@ -316,6 +326,7 @@ ex:header a vcfc:VCFHeader ;
         <file://example-vcf42.vcf#record/1/allele/2> ;
     vcfc:hasCall <file://example-vcf42.vcf#call/1> ;
     vcfc:hasIdentifier <file://example-vcf42.vcf#record/1/id/1> ;
+    vcfc:hasPaddingInterpretation <file://example-vcf42.vcf#record/1/padding> ;
     vcfc:hasReferenceAllele <file://example-vcf42.vcf#record/1/allele/0> ;
     vcfc:pos 100 ;
     vcfc:recordId "legacy2" ;
@@ -325,6 +336,12 @@ ex:header a vcfc:VCFHeader ;
 <file://example-vcf42.vcf#record/1/id/1> a vcfc:RecordIdentifier ;
     vcfc:componentIndex 1 ;
     vcfc:identifierValue "legacy2" .
+
+<file://example-vcf42.vcf#record/1/padding> a vcfc:PaddingInterpretation ;
+    vcfc:paddingAnchorPosition 100 ;
+    vcfc:paddingBaseCount 1 ;
+    vcfc:paddingRule vcfc:SymbolicAllelePadding ;
+    vcfc:paddingSide vcfc:PaddingBefore .
 
 <file://example-vcf42.vcf#sample/1/S1> a vcfc:SampleCall ;
     vcfc:forSample <file://example-vcf42.vcf#samples/S1> ;
@@ -394,34 +411,6 @@ ex:samples a vcfc:SampleSet ;
     vcfc:headerKey "INFO" ;
     vcfc:headerValue "<ID=CN,Number=1,Type=Integer,Description=\"Example CN\",Source=\"Example\",Version=\"1.0\">" ;
     vcfc:lineIndex 10 .
-
-<file://example-vcf42.vcf#header/line/11> a vcfc:FORMATHeaderLine ;
-    vcfc:fieldDescription "Example GT" ;
-    vcfc:fieldId "GT" ;
-    vcfc:fieldNumber "1" ;
-    vcfc:fieldNumberInteger 1 ;
-    vcfc:fieldType vcfc:StringType ;
-    vcfc:hasAttribute <file://example-vcf42.vcf#header/line/11/attribute/1>,
-        <file://example-vcf42.vcf#header/line/11/attribute/2>,
-        <file://example-vcf42.vcf#header/line/11/attribute/3>,
-        <file://example-vcf42.vcf#header/line/11/attribute/4> ;
-    vcfc:headerKey "FORMAT" ;
-    vcfc:headerValue "<ID=GT,Number=1,Type=String,Description=\"Example GT\">" ;
-    vcfc:lineIndex 11 .
-
-<file://example-vcf42.vcf#header/line/12> a vcfc:FORMATHeaderLine ;
-    vcfc:fieldDescription "Example DP" ;
-    vcfc:fieldId "DP" ;
-    vcfc:fieldNumber "1" ;
-    vcfc:fieldNumberInteger 1 ;
-    vcfc:fieldType vcfc:IntegerType ;
-    vcfc:hasAttribute <file://example-vcf42.vcf#header/line/12/attribute/1>,
-        <file://example-vcf42.vcf#header/line/12/attribute/2>,
-        <file://example-vcf42.vcf#header/line/12/attribute/3>,
-        <file://example-vcf42.vcf#header/line/12/attribute/4> ;
-    vcfc:headerKey "FORMAT" ;
-    vcfc:headerValue "<ID=DP,Number=1,Type=Integer,Description=\"Example DP\">" ;
-    vcfc:lineIndex 12 .
 
 <file://example-vcf42.vcf#header/line/4> a vcfc:ContigHeaderLine ;
     vcfc:contigId "chr1" ;
@@ -516,6 +505,34 @@ ex:samples a vcfc:SampleSet ;
     vcfc:declaredByAlt <file://example-vcf42.vcf#header/line/6> ;
     vcfc:svLength 30 ;
     vcfc:svType vcfc:SymbolicDuplication .
+
+<file://example-vcf42.vcf#header/line/11> a vcfc:FORMATHeaderLine ;
+    vcfc:fieldDescription "Example GT" ;
+    vcfc:fieldId "GT" ;
+    vcfc:fieldNumber "1" ;
+    vcfc:fieldNumberInteger 1 ;
+    vcfc:fieldType vcfc:StringType ;
+    vcfc:hasAttribute <file://example-vcf42.vcf#header/line/11/attribute/1>,
+        <file://example-vcf42.vcf#header/line/11/attribute/2>,
+        <file://example-vcf42.vcf#header/line/11/attribute/3>,
+        <file://example-vcf42.vcf#header/line/11/attribute/4> ;
+    vcfc:headerKey "FORMAT" ;
+    vcfc:headerValue "<ID=GT,Number=1,Type=String,Description=\"Example GT\">" ;
+    vcfc:lineIndex 11 .
+
+<file://example-vcf42.vcf#header/line/12> a vcfc:FORMATHeaderLine ;
+    vcfc:fieldDescription "Example DP" ;
+    vcfc:fieldId "DP" ;
+    vcfc:fieldNumber "1" ;
+    vcfc:fieldNumberInteger 1 ;
+    vcfc:fieldType vcfc:IntegerType ;
+    vcfc:hasAttribute <file://example-vcf42.vcf#header/line/12/attribute/1>,
+        <file://example-vcf42.vcf#header/line/12/attribute/2>,
+        <file://example-vcf42.vcf#header/line/12/attribute/3>,
+        <file://example-vcf42.vcf#header/line/12/attribute/4> ;
+    vcfc:headerKey "FORMAT" ;
+    vcfc:headerValue "<ID=DP,Number=1,Type=Integer,Description=\"Example DP\">" ;
+    vcfc:lineIndex 12 .
 
 <file://example-vcf42.vcf#record/1/allele/1> a vcfc:AltAllele ;
     vcfc:alleleIndex 1 ;

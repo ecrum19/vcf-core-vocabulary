@@ -50,7 +50,7 @@ def main():
         for p in args.files:data+=load_turtle(p)
         return 0 if check('merged input',data,shapes,ontology,args.warnings_as_errors)[0] else 1
     failures=[];results=[]
-    files=sorted((ROOT/'examples').rglob('*.ttl'))+[ROOT/'examples/core/example.nt']+sorted((ROOT/'SWAT4HCLS_2027/evidence').glob('*.ttl'))+[ROOT/'tests/shacl/generic-vcf44.ttl']
+    files=sorted((ROOT/'examples').rglob('*.ttl'))+[ROOT/'examples/core/example.nt']+sorted((ROOT/'coverage/paper').glob('*.ttl'))+[ROOT/'tests/shacl/generic-vcf44.ttl']
     fixtures=[(str(p.relative_to(ROOT)),load_turtle(p)) for p in files]
     merged=load_turtle(ROOT/'examples/core/example-headers.ttl');merged+=load_turtle(ROOT/'examples/core/example-minimal-record.ttl');fixtures.append(('headers + minimal merged',merged))
     fixtures.append(('CONSTRUCT template',Graph().query((ROOT/'mappings/vcf-to-vcf-core-construct.sparql').read_text()).graph))
@@ -64,6 +64,7 @@ def main():
     if not expected<=messages:failures.append('negative control missing expected failures')
     print(f'{len(fixtures)} complete RDF fixtures checked; {len(failures)} failures.',flush=True)
     # The default suite intentionally regenerates machine-readable evidence.
-    (ROOT/'tests/validation-results.json').write_text(json.dumps(results,indent=2)+'\n')
+    (ROOT/'tests/generated').mkdir(exist_ok=True)
+    (ROOT/'tests/generated/validation.json').write_text(json.dumps(results,indent=2)+'\n')
     return bool(failures)
 if __name__=='__main__':raise SystemExit(main())

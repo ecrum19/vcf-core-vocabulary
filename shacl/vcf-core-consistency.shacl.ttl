@@ -250,3 +250,43 @@ SELECT $this WHERE {
 ?record vcfc:pos ?pos ; vcfc:hasCall/vcfc:hasSampleCall ?sample .
 $this vcfc:referenceBlockLength ?length ; vcfc:endPosition ?end . FILTER(?length!=xsd:integer(?raw) || ?end!=?pos+?length-1)
 }""" ] .
+
+vcfc:FormatKeyRawAgreementShape a sh:NodeShape ; sh:targetClass vcfc:FormatKey ;
+  sh:sparql [ sh:message "Declared FORMAT keys must agree with the FORMAT column order." ;
+    sh:select """PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT $this WHERE {
+?call vcfc:hasFormatKey $this ; vcfc:formatRaw ?raw .
+$this vcfc:fieldIndex ?i ; vcfc:declaredBy/vcfc:fieldId ?key .
+BIND(REPLACE(STR(?raw),CONCAT("^([^:]*:){",STR(?i-1),"}([^:]*).*$"),"$2") AS ?expected)
+FILTER(?key != ?expected || ?i > (STRLEN(STR(?raw)) - STRLEN(REPLACE(STR(?raw), ":", "")) + 1))
+}""" ] .
+
+vcfc:AssemblyContigAgreementShape a sh:NodeShape ; sh:targetClass vcfc:VCFRecord ;
+  sh:sparql [ sh:message "A bracketed CHROM must agree with its parsed assembly contig and must not also name a declared contig." ;
+    sh:select """PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT $this WHERE {
+$this vcfc:chrom ?chrom .
+OPTIONAL { $this vcfc:chromAssemblyContig/vcfc:assemblyContigId ?parsed }
+OPTIONAL { $this vcfc:chromosome ?declared }
+BIND(REGEX(STR(?chrom),"^<[^<>,\\\\s]+>$") AS ?bracketed)
+FILTER((?bracketed && (!BOUND(?parsed) || CONCAT("<",?parsed,">") != STR(?chrom) || BOUND(?declared)))
+    || (!?bracketed && BOUND(?parsed)))
+}""" ] .
+
+vcfc:PaddingInterpretationAgreementShape a sh:NodeShape ; sh:targetClass vcfc:PaddingInterpretation ;
+  sh:sparql [ sh:message "A padding interpretation must agree with its rule, and its anchor must follow from POS and side." ;
+    sh:select """PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+SELECT $this WHERE {
+?record vcfc:hasPaddingInterpretation $this ; vcfc:pos ?pos ; vcfc:ref ?ref .
+$this vcfc:paddingRule ?rule ; vcfc:paddingBaseCount ?count .
+OPTIONAL { $this vcfc:paddingSide ?side }
+OPTIONAL { $this vcfc:paddingAnchorPosition ?anchor }
+BIND(?rule IN (vcfc:SimpleIndelPadding, vcfc:SymbolicAllelePadding, vcfc:PositionOnePadding) AS ?determined)
+BIND(IF(?side = vcfc:PaddingBefore, ?pos, ?pos + STRLEN(STR(?ref)) - 1) AS ?expected)
+FILTER((?determined && (?count != 1 || !BOUND(?side) || !BOUND(?anchor) || ?anchor != ?expected))
+    || (!?determined && (?count != 0 || BOUND(?side) || BOUND(?anchor)))
+    || (?rule = vcfc:PositionOnePadding && (?side != vcfc:PaddingAfter || ?pos != 1)))
+}""" ] .

@@ -10,8 +10,12 @@ import re
 from urllib.parse import quote, unquote
 from rdflib import Graph, Namespace, URIRef, Literal
 from rdflib.namespace import RDF, XSD
+import version_registry
 
 ROOT = Path(__file__).resolve().parent.parent
+# Supported fixture versions and their per-version behaviour come from the
+# registry, so a new VCF version needs no edit here.
+SPECS = version_registry.by_code()
 V = Namespace('https://w3id.org/vcf-core/vocab#')
 F = Namespace('http://biohackathon.org/resource/faldo#')
 C = Namespace('http://purl.obolibrary.org/obo/CHEBI_')
@@ -55,10 +59,13 @@ def materialize(path, profile='expanded', base=None):
     def put(s,p,o):g.add((s,V[p],o if isinstance(o,(URIRef,Literal)) else Literal(o)))
     file=node('','VCFFile');header=node('header','VCFHeader');put(file,'hasHeader',header)
     put(file,'representationProfile',V.ExpandedRepresentation if profile=='expanded' else V.CondensedRepresentation)
-    defs={}; contigs={}; names=[]; records=[]; byid={}
+    defs={}; contigs={}; names=[]; records=[]; byid={}; assembly=[]
     lines=path.read_text().splitlines()
-    if not lines or not re.fullmatch('##fileformat=VCFv4[.][1-5]',lines[0]):raise ValueError('Unsupported fixture version or missing first fileformat')
-    version=lines[0].split('=')[1];put(file,'fileFormat',version);g.add((file,RDF.type,V['VCF'+version[-3:].replace('.','')+'File']))
+    if not lines or not lines[0].startswith('##fileformat='):raise ValueError('Missing first fileformat line')
+    version=lines[0].split('=',1)[1]
+    if version not in SPECS:raise ValueError(f'Unsupported fixture version {version}; registry.json declares {", ".join(SPECS)}')
+    spec=SPECS[version];tuple_widths=version_registry.sv_tuple_widths(spec)
+    put(file,'fileFormat',version);g.add((file,RDF.type,V[spec['className']]))
     for i,line in enumerate(lines,1):
         if line.startswith('##'):
             key,raw=line[2:].split('=',1); structured=raw.startswith('<')
@@ -90,7 +97,9 @@ def materialize(path, profile='expanded', base=None):
                     if k in a:put(n,p,node('declaration/'+quote(a[k]),'SampleDeclaration'))
             elif key in ('reference','source'):put(file,'referenceGenome' if key=='reference' else 'sourceSoftware',raw)
             elif key=='fileDate' and re.fullmatch('[0-9]{8}',raw):put(file,'fileDate',Literal(raw[:4]+'-'+raw[4:6]+'-'+raw[6:],datatype=XSD.date))
-            elif key in ('assembly','pedigreeDB'):put(n,'assemblyUrl' if key=='assembly' else 'pedigreeDbUrl',Literal(raw,datatype=XSD.anyURI))
+            elif key in ('assembly','pedigreeDB'):
+                put(n,'assemblyUrl' if key=='assembly' else 'pedigreeDbUrl',Literal(raw,datatype=XSD.anyURI))
+                if key=='assembly':assembly.append(n)
         elif line.startswith('#CHROM'):
             cols=line.split('\t')
             if cols[:8]!=['#CHROM','POS','ID','REF','ALT','QUAL','FILTER','INFO']:raise ValueError('Invalid fixed column header')
@@ -109,6 +118,15 @@ def materialize(path, profile='expanded', base=None):
         for p,val in [('recordIndex',ri),('chrom',chrom),('pos',int(pos)),('recordId',Literal('.',datatype=V.Null) if rid=='.' else rid),('ref',ref),('alt',Literal('.',datatype=V.Null) if alt=='.' else alt),('hasCall',call)]:put(r,p,val)
         put(file,'hasRecord',r)
         if chrom in contigs:put(r,'chromosome',contigs[chrom])
+        elif re.fullmatch(r'<[^<>,\s]+>',chrom):
+            # VCF 4.5 fixed field 1: an angle-bracketed ID names a contig in the
+            # ##assembly file, not a declared reference sequence, so it gets its
+            # own resource rather than a fabricated ContigHeaderLine.
+            cid=chrom[1:-1];ac=node('assembly/contig/'+quote(cid),'AssemblyContig')
+            put(r,'chromAssemblyContig',ac);put(ac,'assemblyContigId',cid)
+            if not assembly:raise ValueError(f'{path}: CHROM {chrom} needs an ##assembly line')
+            put(ac,'declaredInAssembly',assembly[0])
+        elif chrom not in contigs:raise ValueError(f'{path}: CHROM {chrom} is neither a declared contig nor a bracketed assembly contig')
         for j,idval in enumerate([] if rid=='.' else rid.split(';'),1):
             n=node(f'record/{ri}/id/{j}','RecordIdentifier');put(r,'hasIdentifier',n);put(n,'identifierValue',idval);put(n,'componentIndex',j);byid[idval]=ri
         put(call,'qual',Literal('.',datatype=V.Null) if qual=='.' else Literal(qual,datatype=V.VCFFloat))
@@ -138,6 +156,33 @@ def materialize(path, profile='expanded', base=None):
                     if not match:raise ValueError('Unparseable breakend '+seq)
                     loc=node(f'record/{ri}/allele/{ai}/remote','')
                     g.add((loc,RDF.type,F.ExactPosition));g.add((loc,F.position,Literal(int(match[2]))));g.add((loc,F.reference,contigs[match[1]]));g.add((a,F.location,loc))
+        # Padding-base interpretation (VCF 4.5 fixed field 4). Asserted only where
+        # the specification determines it; a shared prefix alone is not evidence.
+        alts=[x for x in seqs[1:] if x not in ('.','*')]
+        symbolic=[x for x in alts if x.startswith('<') and x not in ('<*>','<NON_REF>')]
+        unspecified_only=bool(alts) and all(x in ('<*>','<NON_REF>') for x in alts)
+        plain=[x for x in alts if re.fullmatch('[ACGTNacgtn]+',x)]
+        # A pure indel differs from REF by a whole prefix or a whole suffix. Which
+        # end is shared decides which base is padding: a shared FIRST base is the
+        # ordinary leading padding, whereas a shared LAST base is the trailing
+        # padding VCF 4.5 requires when the variant itself sits at position 1.
+        diff=[x for x in plain if len(x)!=len(ref)]
+        prefix=any(x.startswith(ref) or ref.startswith(x) for x in diff)
+        suffix=any(x.endswith(ref) or ref.endswith(x) for x in diff)
+        if symbolic:rule,side,count='SymbolicAllelePadding','PaddingBefore',1
+        elif unspecified_only:rule,side,count='UnspecifiedAlleleNoPadding',None,0
+        elif prefix:rule,side,count='SimpleIndelPadding','PaddingBefore',1
+        elif suffix and int(pos)==1:rule,side,count='PositionOnePadding','PaddingAfter',1
+        else:
+            # Includes complex substitutions, where every allele already has a base
+            # of its own and the specification leaves padding optional, and
+            # non-canonical suffix-anchored indels away from position 1.
+            rule,side,count='PaddingNotDetermined',None,0
+        pad=node(f'record/{ri}/padding','PaddingInterpretation')
+        put(r,'hasPaddingInterpretation',pad);put(pad,'paddingRule',V[rule]);put(pad,'paddingBaseCount',count)
+        if side:
+            put(pad,'paddingSide',V[side])
+            put(pad,'paddingAnchorPosition',int(pos) if side=='PaddingBefore' else int(pos)+len(ref)-1)
         infoval={}; infonodes={}
         def field(parent,key,raw,kind,index):
             if (kind,key) not in defs:raise ValueError(f'{path}: missing {kind} definition for {key}')
@@ -152,6 +197,11 @@ def materialize(path, profile='expanded', base=None):
                 item=URIRef(str(n)+f'/item/{idx}');g.add((item,RDF.type,V.FieldValueItem));put(n,'hasValueItem',item);put(item,'valueIndex',idx)
                 lit=Literal('.',datatype=V.Null) if value=='.' else Literal(int(value)) if decl['Type']=='Integer' else Literal(value,datatype=V.VCFFloat) if decl['Type']=='Float' else Literal(value)
                 put(item,'itemValue',lit);items.append(item)
+                # VCF 4.5 section 1.2: characters with special meaning are percent-encoded.
+                # Keep the source token and its decoded form side by side so a consumer
+                # never has to guess which one it is holding.
+                if '%' in value:
+                    put(item,'rawValue',value);put(item,'decodedValue',unquote(value))
                 number=decl['Number']
                 if raw!='.' and number in ('A','R'):
                     ai=idx+(1 if number=='A' else 0)
@@ -164,18 +214,18 @@ def materialize(path, profile='expanded', base=None):
             return n,items
         for idx,entry in enumerate([] if info=='.' else info.split(';'),1):
             key,sep,raw=entry.partition('=');infoval[key]=raw;n,items=field(call,key,raw,'INFO',idx);infonodes[key]=(n,items)
-            if key in ('CIPOS','CIEND','CILEN','CICN','MEINFO','METRANS'):
-                width=4 if key in ('MEINFO','METRANS') else 2
+            if key in tuple_widths:
+                width=tuple_widths[key]
                 for j,item in enumerate(items):
                     put(item,'tupleArity',width)
-                    if version>='VCFv4.4' and j//width+1<len(alleles):put(item,'forAllele',alleles[j//width+1])
+                    if spec['svTupleScope']=='perAlt' and j//width+1<len(alleles):put(item,'forAllele',alleles[j//width+1])
         symbols={'DEL':'SymbolicDeletion','INS':'SymbolicInsertion','DUP':'SymbolicDuplication','INV':'SymbolicInversion','CNV':'SymbolicCopyNumberVariation','CNV:TR':'SymbolicTandemRepeat'}
         for ai,a in enumerate(alleles[1:],1):
             code=seqs[ai][1:-1]
             if code in symbols:put(a,'svType',V[symbols[code]])
             for key,prop in [('SVLEN','svLength'),('CN','copyNumber')]:
                 if key in infoval:
-                    if key=='CN' and version<'VCFv4.4':
+                    if key=='CN' and not spec['perAlleleCopyNumber']:
                         put(call,'copyNumber',int(infoval[key]));continue
                     val=infoval[key].split(',')[min(ai-1,len(infoval[key].split(','))-1)]
                     if val!='.':put(a,prop,Literal(val,datatype=XSD.integer if key=='SVLEN' else XSD.decimal))
@@ -196,6 +246,12 @@ def materialize(path, profile='expanded', base=None):
                             val=infoval[key].split(',')[offset+j];put(repeat,prop,val if key=='RUS' else Literal(val,datatype=XSD.decimal if key=='RUC' else XSD.integer))
         if names:
             fmt=cols[8].split(':');put(call,'formatRaw',cols[8])
+            # The declared key list is a resource sequence, so an omitted trailing
+            # field is distinguishable from an undeclared key without parsing.
+            for ki,key in enumerate(fmt,1):
+                fk=node(f'call/{ri}/formatKey/{ki}','FormatKey')
+                put(call,'hasFormatKey',fk);put(fk,'fieldIndex',ki)
+                if ('FORMAT',key) in defs:put(fk,'declaredBy',defs['FORMAT',key][0])
             if profile=='condensed':
                 matrix=node(f'call/{ri}/matrix','CohortCallMatrix');put(call,'hasCallMatrix',matrix);put(matrix,'appliesToSampleSet',node('samples'));put(matrix,'sampleDataRaw','\t'.join(cols[9:]))
                 for j,key in enumerate(fmt):

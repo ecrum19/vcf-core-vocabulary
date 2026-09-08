@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "provenance": "Sources retrieved 2026-09-08 from samtools/hts-specs; all hashes match existing reserved-key artifacts. URLs can move; hashes are authoritative.",
+  "versions": {
+    "4.1": {
+      "source": "https://raw.githubusercontent.com/samtools/hts-specs/master/VCFv4.1.tex",
+      "file": "sources/VCFv4.1.tex",
+      "sha256": "7d29ef8f93745f246202da3e32107ea13b036bbefcb31f7971a3ce31f1045baa"
+    },
+    "4.2": {
+      "source": "https://raw.githubusercontent.com/samtools/hts-specs/master/VCFv4.2.tex",
+      "file": "sources/VCFv4.2.tex",
+      "sha256": "66dbd167e8fb309708e0956ffbb12808bd338a703fbf034d80d1ead56ae480cc"
+    },
+    "4.3": {
+      "source": "https://raw.githubusercontent.com/samtools/hts-specs/master/VCFv4.3.tex",
+      "file": "sources/VCFv4.3.tex",
+      "sha256": "332d8b910ac9952bfba04374118f8c4f318ea996d5017599e68f80379fd61cde"
+    },
+    "4.4": {
+      "source": "https://raw.githubusercontent.com/samtools/hts-specs/master/VCFv4.4.tex",
+      "file": "sources/VCFv4.4.tex",
+      "sha256": "4c88884cf6b016efcec691d5186432a2e0b679396204d14770e89839ef536e1a"
+    },
+    "4.5": {
+      "source": "https://raw.githubusercontent.com/samtools/hts-specs/master/VCFv4.5.tex",
+      "file": "sources/VCFv4.5.tex",
+      "sha256": "37f13e0d2e8e741ea8505b0342b6e6034637a1f476eeb3af1b8acc25d70246c5"
+    }
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "$comment": [
+    "Declarative table of the VCF specification versions this vocabulary claims to cover.",
+    "It is the single source of truth for the version-scoped artifacts: the SHACL overlays",
+    "in shacl/, the reserved-key snapshots in ontology/versions/, the VCF4xFile classes in",
+    "ontology/vcf-core-vocabulary.ttl, and the version-scoped entries in ocg.config.json.",
+    "Adding a version means appending an entry here and running 'npm run versions:build'.",
+    "See scripts/README.md for the full procedure."
+  ],
+  "current": "4.5",
+  "versions": [
+    {
+      "id": "4.1",
+      "code": "VCFv4.1",
+      "className": "VCF41File",
+      "source": "https://raw.githubusercontent.com/samtools/hts-specs/master/VCFv4.1.tex",
+      "specFile": "VCFv4.1.tex",
+      "reservedKeys": {
+        "mode": "snapshot",
+        "snapshot": "ontology/versions/vcf-4.1-reserved.json",
+        "graph": "ontology/versions/vcf-4.1-reserved.ttl"
+      },
+      "numberCodes": {
+        "info": ["[0-9]+", "A", "G", "[.]"],
+        "format": ["[0-9]+", "A", "G", "[.]"]
+      },
+      "leadingPhaseIndicator": false,
+      "perAlleleCopyNumber": false,
+      "svTupleScope": "fixed",
+      "svTuples": [
+        { "width": 2, "keys": ["CIPOS", "CIEND"] },
+        { "width": 4, "keys": ["MEINFO", "METRANS"] }
+      ]
+    },
+    {
+      "id": "4.2",
+      "code": "VCFv4.2",
+      "className": "VCF42File",
+      "source": "https://raw.githubusercontent.com/samtools/hts-specs/master/VCFv4.2.tex",
+      "specFile": "VCFv4.2.tex",
+      "reservedKeys": {
+        "mode": "snapshot",
+        "snapshot": "ontology/versions/vcf-4.2-reserved.json",
+        "graph": "ontology/versions/vcf-4.2-reserved.ttl"
+      },
+      "numberCodes": {
+        "info": ["[0-9]+", "A", "R", "G", "[.]"],
+        "format": ["[0-9]+", "A", "R", "G", "[.]"]
+      },
+      "leadingPhaseIndicator": false,
+      "perAlleleCopyNumber": false,
+      "svTupleScope": "fixed",
+      "svTuples": [
+        { "width": 2, "keys": ["CIPOS", "CIEND"] },
+        { "width": 4, "keys": ["MEINFO", "METRANS"] }
+      ]
+    },
+    {
+      "id": "4.3",
+      "code": "VCFv4.3",
+      "className": "VCF43File",
+      "source": "https://raw.githubusercontent.com/samtools/hts-specs/master/VCFv4.3.tex",
+      "specFile": "VCFv4.3.tex",
+      "reservedKeys": {
+        "mode": "snapshot",
+        "snapshot": "ontology/versions/vcf-4.3-reserved.json",
+        "graph": "ontology/versions/vcf-4.3-reserved.ttl"
+      },
+      "numberCodes": {
+        "info": ["[0-9]+", "A", "R", "G", "[.]"],
+        "format": ["[0-9]+", "A", "R", "G", "[.]"]
+      },
+      "leadingPhaseIndicator": false,
+      "perAlleleCopyNumber": false,
+      "svTupleScope": "fixed",
+      "svTuples": [
+        { "width": 2, "keys": ["CIPOS", "CIEND"] },
+        { "width": 4, "keys": ["MEINFO", "METRANS"] }
+      ]
+    },
+    {
+      "id": "4.4",
+      "code": "VCFv4.4",
+      "className": "VCF44File",
+      "source": "https://raw.githubusercontent.com/samtools/hts-specs/master/VCFv4.4.tex",
+      "specFile": "VCFv4.4.tex",
+      "reservedKeys": {
+        "mode": "snapshot",
+        "snapshot": "ontology/versions/vcf-4.4-reserved.json",
+        "graph": "ontology/versions/vcf-4.4-reserved.ttl"
+      },
+      "numberCodes": {
+        "info": ["[0-9]+", "A", "R", "G", "[.]"],
+        "format": ["[0-9]+", "A", "R", "G", "[.]", "P"]
+      },
+      "leadingPhaseIndicator": true,
+      "perAlleleCopyNumber": true,
+      "svTupleScope": "perAlt",
+      "svTuples": [
+        { "width": 2, "keys": ["CIPOS", "CIEND", "CILEN", "CICN"] },
+        { "width": 4, "keys": ["MEINFO", "METRANS"] }
+      ]
+    },
+    {
+      "id": "4.5",
+      "code": "VCFv4.5",
+      "className": "VCF45File",
+      "source": "https://raw.githubusercontent.com/samtools/hts-specs/master/VCFv4.5.tex",
+      "specFile": "VCFv4.5.tex",
+      "reservedKeys": {
+        "mode": "registry",
+        "graph": "ontology/vcf-core-reserved-keys.ttl",
+        "ontologyIri": "https://w3id.org/vcf-core/reserved-keys",
+        "expectedCounts": {
+          "info": 21,
+          "format": 63,
+          "svInfo": 31,
+          "svFormat": 8,
+          "unique": 122
+        },
+        "deprecatedInfo": {
+          "END": "VCFv4.5",
+          "SVTYPE": "VCFv4.4"
+        }
+      },
+      "numberCodes": {
+        "info": ["[0-9]+", "A", "R", "G", "[.]"],
+        "format": ["[0-9]+", "A", "R", "G", "[.]", "P", "LA", "LR", "LG", "M"]
+      },
+      "leadingPhaseIndicator": true,
+      "perAlleleCopyNumber": true,
+      "svTupleScope": "perAlt",
+      "svTuples": [
+        { "width": 2, "keys": ["CIPOS", "CIEND", "CILEN", "CICN"] },
+        { "width": 4, "keys": ["MEINFO", "METRANS"] }
+      ]
+    }
+  ]
+}

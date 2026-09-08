@@ -114,3 +114,104 @@ class ValidationRegression(unittest.TestCase):
         self.assertTrue(any(e.startswith('number-cardinality:') and str(pl) in e for e in module.validate_semantics(self.g,self.ontology)))
 
 if __name__=='__main__':unittest.main()
+
+
+class BoundaryRegression(unittest.TestCase):
+    """Probes for the boundary constructs: telomeres, assembly contigs, padding.
+
+    Each new rule is exercised in the negative as well as the positive, so a rule
+    that silently never fires cannot be mistaken for evidence.
+    """
+
+    @classmethod
+    def setUpClass(cls):cls.shapes,cls.ontology=module.load_schema()
+
+    def setUp(self):
+        self.g=Graph().parse(ROOT/'examples/vcf-versions/vcf-4.5/example-vcf45-boundaries.ttl')
+        self.byPos={int(self.g.value(r,V.pos)):r for r in self.g.subjects(RDF.type,V.VCFRecord)}
+        self.asmRecord=next(iter(self.g.subjects(V.chromAssemblyContig,None)))
+        self.asmContig=self.g.value(self.asmRecord,V.chromAssemblyContig)
+
+    def assert_shape(self,name,conforms=False):
+        actual,report,details=validate(self.g,shacl_graph=self.shapes,ont_graph=self.ontology,inference='rdfs',advanced=True,use_shapes=[str(V[name]),str(V.IntegerLiteralShape),str(V.NumericLiteralShape)])
+        self.assertEqual(actual,conforms,details)
+
+    # --- telomeric positions (inventory entry 55) ---
+    def test_telomere_boundaries_are_accepted(self):
+        self.assertIn(0,self.byPos);self.assertIn(101,self.byPos)
+        self.assert_shape('RecordContigBoundSparqlShape',True)
+
+    def test_position_beyond_contig_end_is_rejected(self):
+        self.g.set((self.byPos[101],V.pos,Literal(102)))
+        self.assert_shape('RecordContigBoundSparqlShape')
+
+    # --- assembly-contig CHROM (inventory entry 53) ---
+    def test_assembly_contig_agreement_is_accepted(self):
+        self.assert_shape('AssemblyContigAgreementShape',True)
+
+    def test_parsed_assembly_contig_must_match_the_token(self):
+        self.g.set((self.asmContig,V.assemblyContigId,Literal('other')))
+        self.assert_shape('AssemblyContigAgreementShape')
+
+    def test_bracketed_chrom_must_not_also_name_a_declared_contig(self):
+        contig=next(iter(self.g.subjects(RDF.type,V.ContigHeaderLine)))
+        self.g.add((self.asmRecord,V.chromosome,contig))
+        self.assert_shape('AssemblyContigAgreementShape')
+
+    def test_bracketed_chrom_requires_a_parsed_contig(self):
+        self.g.remove((self.asmRecord,V.chromAssemblyContig,None))
+        self.assert_shape('AssemblyContigAgreementShape')
+
+    # --- REF padding interpretation (inventory entry 59) ---
+    def test_padding_interpretations_are_accepted(self):
+        self.assert_shape('PaddingInterpretationAgreementShape',True)
+
+    def test_padding_anchor_must_follow_from_pos_and_side(self):
+        pad=self.g.value(self.byPos[50],V.hasPaddingInterpretation)
+        self.g.set((pad,V.paddingAnchorPosition,Literal(51)))
+        self.assert_shape('PaddingInterpretationAgreementShape')
+
+    def test_undetermined_padding_may_not_claim_a_side(self):
+        pad=self.g.value(self.byPos[90],V.hasPaddingInterpretation)
+        self.assertEqual(self.g.value(pad,V.paddingRule),V.PaddingNotDetermined)
+        self.g.add((pad,V.paddingSide,V.PaddingBefore))
+        self.assert_shape('PaddingInterpretationAgreementShape')
+
+    def test_position_one_rule_requires_trailing_padding_at_position_one(self):
+        pad=self.g.value(self.byPos[1],V.hasPaddingInterpretation)
+        self.assertEqual(self.g.value(pad,V.paddingRule),V.PositionOnePadding)
+        self.g.set((pad,V.paddingSide,V.PaddingBefore))
+        self.assert_shape('PaddingInterpretationAgreementShape')
+
+    def test_all_five_padding_rules_occur_in_the_fixture(self):
+        seen={self.g.value(p,V.paddingRule) for p in self.g.subjects(RDF.type,V.PaddingInterpretation)}
+        self.assertEqual(seen,{V.SimpleIndelPadding,V.SymbolicAllelePadding,V.PositionOnePadding,
+                               V.UnspecifiedAlleleNoPadding,V.PaddingNotDetermined})
+
+    # --- whole-field versus itemwise missingness (inventory entry 90) ---
+    def test_three_missingness_shapes_are_distinguishable(self):
+        shapes={}
+        for value in self.g.subjects(RDF.type,V.InfoFieldValue):
+            if str(self.g.value(self.g.value(value,V.declaredBy),V.fieldId))!='AF':continue
+            record=next(iter(self.g.subjects(V.hasInfoValue,value)),None)
+            record=next(iter(self.g.subjects(V.hasCall,record)),None) if record is None else record
+            items=[self.g.value(i,V.itemValue) for i in self.g.objects(value,V.hasValueItem)]
+            missing=[i for i in items if i is not None and i.datatype==V.Null]
+            present=[i for i in items if i is not None and i.datatype!=V.Null]
+            raw=self.g.value(value,V.fieldValue)
+            if raw is not None and raw.datatype==V.Null:shapes['whole-field']=True
+            elif missing and not present:shapes['all-items']=True
+            elif missing and present:shapes['partial']=True
+        self.assertEqual(set(shapes),{'whole-field','all-items','partial'})
+
+    # --- percent encoding (inventory entry 48) ---
+    def test_percent_encoded_value_keeps_both_forms(self):
+        item=next(iter(self.g.subjects(V.rawValue,None)))
+        self.assertEqual(str(self.g.value(item,V.rawValue)),'left%3Bright%3Aend%25')
+        self.assertEqual(str(self.g.value(item,V.decodedValue)),'left;right:end%')
+
+    def test_percent_decoded_disagreement_is_detected(self):
+        item=next(iter(self.g.subjects(V.rawValue,None)))
+        self.g.set((item,V.decodedValue,Literal('wrong')))
+        errors=module.validate_semantics(self.g,self.ontology)
+        self.assertTrue(any('percent-decoded-disagreement' in e for e in errors),errors)

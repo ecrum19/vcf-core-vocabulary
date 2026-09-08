@@ -60,6 +60,12 @@
     "passed": true
   },
   {
+    "fixture": "examples/vcf-versions/vcf-4.5/example-vcf45-boundaries.ttl",
+    "violations": 0,
+    "warnings": 0,
+    "passed": true
+  },
+  {
     "fixture": "examples/vcf-versions/vcf-4.5/example-vcf45-breakends.ttl",
     "violations": 0,
     "warnings": 0,
@@ -90,13 +96,13 @@
     "passed": true
   },
   {
-    "fixture": "SWAT4HCLS_2027/evidence/condensed.ttl",
+    "fixture": "coverage/paper/condensed.ttl",
     "violations": 0,
     "warnings": 0,
     "passed": true
   },
   {
-    "fixture": "SWAT4HCLS_2027/evidence/expanded.ttl",
+    "fixture": "coverage/paper/expanded.ttl",
     "violations": 0,
     "warnings": 0,
     "passed": true

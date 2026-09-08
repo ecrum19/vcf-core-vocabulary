@@ -19,10 +19,15 @@
     vcfc:filter "PASS" ;
     vcfc:filterStatus vcfc:FiltersPassed ;
     vcfc:formatRaw "GT" ;
+    vcfc:hasFormatKey <file://example-vcf45-breakends.vcf#call/1/formatKey/1> ;
     vcfc:hasInfoValue <file://example-vcf45-breakends.vcf#call/1/info/MATEID> ;
     vcfc:hasSampleCall <file://example-vcf45-breakends.vcf#sample/1/S1> ;
     vcfc:infoRaw "MATEID=bnd2" ;
     vcfc:qual "60"^^vcfc:VCFFloat .
+
+<file://example-vcf45-breakends.vcf#call/1/formatKey/1> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-breakends.vcf#header/line/7> ;
+    vcfc:fieldIndex 1 .
 
 <file://example-vcf45-breakends.vcf#call/1/info/MATEID> a vcfc:InfoFieldValue ;
     vcfc:declaredBy <file://example-vcf45-breakends.vcf#header/line/6> ;
@@ -39,10 +44,15 @@
     vcfc:filter "PASS" ;
     vcfc:filterStatus vcfc:FiltersPassed ;
     vcfc:formatRaw "GT" ;
+    vcfc:hasFormatKey <file://example-vcf45-breakends.vcf#call/2/formatKey/1> ;
     vcfc:hasInfoValue <file://example-vcf45-breakends.vcf#call/2/info/MATEID> ;
     vcfc:hasSampleCall <file://example-vcf45-breakends.vcf#sample/2/S1> ;
     vcfc:infoRaw "MATEID=bnd1" ;
     vcfc:qual "60"^^vcfc:VCFFloat .
+
+<file://example-vcf45-breakends.vcf#call/2/formatKey/1> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-breakends.vcf#header/line/7> ;
+    vcfc:fieldIndex 1 .
 
 <file://example-vcf45-breakends.vcf#call/2/info/MATEID> a vcfc:InfoFieldValue ;
     vcfc:declaredBy <file://example-vcf45-breakends.vcf#header/line/6> ;
@@ -59,9 +69,14 @@
     vcfc:filter "PASS" ;
     vcfc:filterStatus vcfc:FiltersPassed ;
     vcfc:formatRaw "GT" ;
+    vcfc:hasFormatKey <file://example-vcf45-breakends.vcf#call/3/formatKey/1> ;
     vcfc:hasSampleCall <file://example-vcf45-breakends.vcf#sample/3/S1> ;
     vcfc:infoRaw "." ;
     vcfc:qual "60"^^vcfc:VCFFloat .
+
+<file://example-vcf45-breakends.vcf#call/3/formatKey/1> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-breakends.vcf#header/line/7> ;
+    vcfc:fieldIndex 1 .
 
 ex:header a vcfc:VCFHeader ;
     vcfc:hasColumnHeader <file://example-vcf45-breakends.vcf#header/columns> ;
@@ -168,6 +183,7 @@ ex:header a vcfc:VCFHeader ;
     vcfc:hasAltAllele <file://example-vcf45-breakends.vcf#record/1/allele/1> ;
     vcfc:hasCall <file://example-vcf45-breakends.vcf#call/1> ;
     vcfc:hasIdentifier <file://example-vcf45-breakends.vcf#record/1/id/1> ;
+    vcfc:hasPaddingInterpretation <file://example-vcf45-breakends.vcf#record/1/padding> ;
     vcfc:hasReferenceAllele <file://example-vcf45-breakends.vcf#record/1/allele/0> ;
     vcfc:pos 400 ;
     vcfc:recordId "bnd1" ;
@@ -182,6 +198,10 @@ ex:header a vcfc:VCFHeader ;
     vcfc:componentIndex 1 ;
     vcfc:identifierValue "bnd1" .
 
+<file://example-vcf45-breakends.vcf#record/1/padding> a vcfc:PaddingInterpretation ;
+    vcfc:paddingBaseCount 0 ;
+    vcfc:paddingRule vcfc:PaddingNotDetermined .
+
 <file://example-vcf45-breakends.vcf#record/2> a vcfc:VCFRecord ;
     vcfc:alt "]chr1:400]T" ;
     vcfc:chrom "chr2" ;
@@ -189,6 +209,7 @@ ex:header a vcfc:VCFHeader ;
     vcfc:hasAltAllele <file://example-vcf45-breakends.vcf#record/2/allele/1> ;
     vcfc:hasCall <file://example-vcf45-breakends.vcf#call/2> ;
     vcfc:hasIdentifier <file://example-vcf45-breakends.vcf#record/2/id/1> ;
+    vcfc:hasPaddingInterpretation <file://example-vcf45-breakends.vcf#record/2/padding> ;
     vcfc:hasReferenceAllele <file://example-vcf45-breakends.vcf#record/2/allele/0> ;
     vcfc:pos 500 ;
     vcfc:recordId "bnd2" ;
@@ -203,6 +224,10 @@ ex:header a vcfc:VCFHeader ;
     vcfc:componentIndex 1 ;
     vcfc:identifierValue "bnd2" .
 
+<file://example-vcf45-breakends.vcf#record/2/padding> a vcfc:PaddingInterpretation ;
+    vcfc:paddingBaseCount 0 ;
+    vcfc:paddingRule vcfc:PaddingNotDetermined .
+
 <file://example-vcf45-breakends.vcf#record/3> a vcfc:VCFRecord ;
     vcfc:alt ".C" ;
     vcfc:chrom "chr2" ;
@@ -210,6 +235,7 @@ ex:header a vcfc:VCFHeader ;
     vcfc:hasAltAllele <file://example-vcf45-breakends.vcf#record/3/allele/1> ;
     vcfc:hasCall <file://example-vcf45-breakends.vcf#call/3> ;
     vcfc:hasIdentifier <file://example-vcf45-breakends.vcf#record/3/id/1> ;
+    vcfc:hasPaddingInterpretation <file://example-vcf45-breakends.vcf#record/3/padding> ;
     vcfc:hasReferenceAllele <file://example-vcf45-breakends.vcf#record/3/allele/0> ;
     vcfc:pos 600 ;
     vcfc:recordId "single" ;
@@ -219,6 +245,10 @@ ex:header a vcfc:VCFHeader ;
 <file://example-vcf45-breakends.vcf#record/3/id/1> a vcfc:RecordIdentifier ;
     vcfc:componentIndex 1 ;
     vcfc:identifierValue "single" .
+
+<file://example-vcf45-breakends.vcf#record/3/padding> a vcfc:PaddingInterpretation ;
+    vcfc:paddingBaseCount 0 ;
+    vcfc:paddingRule vcfc:PaddingNotDetermined .
 
 <file://example-vcf45-breakends.vcf#sample/1/S1> a vcfc:SampleCall ;
     vcfc:forSample <file://example-vcf45-breakends.vcf#samples/S1> ;
@@ -390,20 +420,6 @@ ex:samples a vcfc:SampleSet ;
     vcfc:headerValue "<ID=chr2,length=1000>" ;
     vcfc:lineIndex 5 .
 
-<file://example-vcf45-breakends.vcf#header/line/7> a vcfc:FORMATHeaderLine ;
-    vcfc:fieldDescription "Example GT" ;
-    vcfc:fieldId "GT" ;
-    vcfc:fieldNumber "1" ;
-    vcfc:fieldNumberInteger 1 ;
-    vcfc:fieldType vcfc:StringType ;
-    vcfc:hasAttribute <file://example-vcf45-breakends.vcf#header/line/7/attribute/1>,
-        <file://example-vcf45-breakends.vcf#header/line/7/attribute/2>,
-        <file://example-vcf45-breakends.vcf#header/line/7/attribute/3>,
-        <file://example-vcf45-breakends.vcf#header/line/7/attribute/4> ;
-    vcfc:headerKey "FORMAT" ;
-    vcfc:headerValue "<ID=GT,Number=1,Type=String,Description=\"Example GT\">" ;
-    vcfc:lineIndex 7 .
-
 <file://example-vcf45-breakends.vcf#record/1/allele/1> a vcfc:AltAllele,
         vcfc:Breakend ;
     faldo:location <file://example-vcf45-breakends.vcf#record/1/allele/1/remote> ;
@@ -429,3 +445,17 @@ ex:samples a vcfc:SampleSet ;
 <file://example-vcf45-breakends.vcf#samples/S1> a vcfc:VCFSample ;
     vcfc:sampleIndex 1 ;
     vcfc:sampleName "S1" .
+
+<file://example-vcf45-breakends.vcf#header/line/7> a vcfc:FORMATHeaderLine ;
+    vcfc:fieldDescription "Example GT" ;
+    vcfc:fieldId "GT" ;
+    vcfc:fieldNumber "1" ;
+    vcfc:fieldNumberInteger 1 ;
+    vcfc:fieldType vcfc:StringType ;
+    vcfc:hasAttribute <file://example-vcf45-breakends.vcf#header/line/7/attribute/1>,
+        <file://example-vcf45-breakends.vcf#header/line/7/attribute/2>,
+        <file://example-vcf45-breakends.vcf#header/line/7/attribute/3>,
+        <file://example-vcf45-breakends.vcf#header/line/7/attribute/4> ;
+    vcfc:headerKey "FORMAT" ;
+    vcfc:headerValue "<ID=GT,Number=1,Type=String,Description=\"Example GT\">" ;
+    vcfc:lineIndex 7 .

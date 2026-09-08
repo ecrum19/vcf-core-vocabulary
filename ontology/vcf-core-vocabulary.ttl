@@ -27,10 +27,10 @@ vcfc: a owl:Ontology ;
   dct:description "Vocabulary for representing the logical VCF 4.5 model in RDF: files, headers, records, alleles, values, genotype data, and VCF-specific structural-variant syntax. It supports both expanded per-sample and condensed, sample-ordered representations, and delegates broader variation semantics through FALDO, VRS, SO, GENO, and ChEBI alignments. BCF 2.2 byte layout is out of scope."@en ;
   dct:license <https://creativecommons.org/licenses/by/4.0/> ;
   dct:creator "Elias Crum" ;
-  owl:versionIRI <https://w3id.org/vcf-core/vocab/2.0.0> ;
-  owl:versionInfo "2.0.0" ;
-  dct:modified "2026-09-07"^^xsd:date ;
-  owl:priorVersion <https://w3id.org/vcf-rdfizer/vocab> ;
+  owl:versionIRI <https://w3id.org/vcf-core/vocab/2.1.0> ;
+  owl:versionInfo "2.1.0" ;
+  dct:modified "2026-09-08"^^xsd:date ;
+  owl:priorVersion <https://w3id.org/vcf-core/vocab/2.0.0> ;
   dct:replaces <https://w3id.org/vcf-rdfizer/vocab> ;
   owl:imports <https://w3id.org/vcf-core/alleles>,
               <https://w3id.org/vcf-core/genotypes>,
@@ -53,10 +53,6 @@ vcfc:VCFFile a owl:Class ;
   skos:exactMatch hero:VCFFile ;
   rdfs:seeAlso hero:VCFFile ;
   rdfs:subClassOf dcat:Distribution, prov:Entity .
-
-vcfc:VCF45File a owl:Class ; rdfs:subClassOf vcfc:VCFFile ;
-  rdfs:label "VCF 4.5 file"@en ;
-  rdfs:comment "A VCF file explicitly declared for VCF 4.5 conformance. Use this optional subclass when the VCF 4.5-specific SHACL version gate is desired; VCFFile itself remains version-neutral."@en .
 
 vcfc:VCFHeader a owl:Class ;
   rdfs:label "VCF header"@en ;
@@ -543,6 +539,16 @@ vcfc:infoRaw a owl:DatatypeProperty ;
   rdfs:domain vcfc:VariantCall ;
   rdfs:range rdfs:Literal .
 
+vcfc:FormatKey a owl:Class ;
+  rdfs:label "declared FORMAT key"@en ;
+  rdfs:comment "One key of one record's FORMAT column, in column order. VCF 4.5 lets a sample drop trailing fields, so the keys a record declares and the values a sample supplies are different sets. Without this resource the declared list exists only inside the vcfc:formatRaw string, and a consumer could not tell an omitted field from an undeclared one without parsing it."@en ;
+  vcfc:iriTemplate "file://{vcfFilePath}#call/{recordKey}/formatKey/{fieldIndex}" .
+
+vcfc:hasFormatKey a owl:ObjectProperty ;
+  rdfs:label "has declared FORMAT key"@en ;
+  rdfs:comment "Associates a record-level call with one key declared in its FORMAT column. The key's position comes from vcfc:fieldIndex and its meaning from vcfc:declaredBy, so the declared order is queryable without reading vcfc:formatRaw."@en ;
+  rdfs:domain vcfc:VariantCall ; rdfs:range vcfc:FormatKey .
+
 vcfc:formatRaw a owl:DatatypeProperty ;
   rdfs:label "FORMAT raw"@en ;
   rdfs:comment "An optional lossless copy of the FORMAT column: the colon-separated, ordered list of keys that determines the meaning of every sample data block in the record. If GT is included, it is the first key; the same field order applies to all samples in the record. Since version 1.1.0, this order also determines how a condensed CohortCallMatrix's FORMAT value vectors are combined for a sample."@en ;
@@ -743,6 +749,26 @@ vcfc:attributeIndex a owl:DatatypeProperty ;
   rdfs:label "attribute index"@en ; rdfs:domain vcfc:HeaderAttribute ; rdfs:range xsd:positiveInteger .
 vcfc:assemblyUrl a owl:DatatypeProperty ;
   rdfs:label "assembly URL"@en ; rdfs:domain vcfc:AssemblyHeaderLine ; rdfs:range xsd:anyURI .
+
+vcfc:AssemblyContig a owl:Class ;
+  rdfs:label "breakpoint-assembly contig"@en ;
+  rdfs:comment "A contig held in the external breakpoint-assembly file named by a '##assembly' line, referenced from CHROM as an angle-bracketed ID such as '<asm1>'. VCF 4.5 fixed field 1 admits this form as an alternative to a reference-sequence name. It is deliberately not a vcfc:ContigHeaderLine: no '##contig' declaration exists for it, and modelling it as one would assert a reference-sequence declaration the file does not make."@en ;
+  vcfc:iriTemplate "file://{vcfFilePath}#assembly/contig/{assemblyContigId}" .
+
+vcfc:assemblyContigId a owl:DatatypeProperty ;
+  rdfs:label "assembly contig ID"@en ;
+  rdfs:comment "The identifier of a breakpoint-assembly contig with the angle brackets removed, so that '<asm1>' in CHROM yields 'asm1'. The bracketed source token stays available on vcfc:chrom."@en ;
+  rdfs:domain vcfc:AssemblyContig ; rdfs:range xsd:string .
+
+vcfc:chromAssemblyContig a owl:ObjectProperty ;
+  rdfs:label "CHROM assembly contig"@en ;
+  rdfs:comment "Associates a record whose CHROM is an angle-bracketed assembly-contig ID with that contig. It is the structured counterpart of vcfc:chromosome, which links a record to a declared reference contig; a record uses one or the other, never both."@en ;
+  rdfs:domain vcfc:VCFRecord ; rdfs:range vcfc:AssemblyContig .
+
+vcfc:declaredInAssembly a owl:ObjectProperty ;
+  rdfs:label "declared in assembly file"@en ;
+  rdfs:comment "Links a breakpoint-assembly contig to the '##assembly' header line whose URL names the file that holds its sequence. This is the contig's sequence source; the vocabulary does not fetch or model the sequence itself."@en ;
+  rdfs:domain vcfc:AssemblyContig ; rdfs:range vcfc:AssemblyHeaderLine .
 vcfc:pedigreeDbUrl a owl:DatatypeProperty ;
   rdfs:label "pedigree database URL"@en ; rdfs:domain vcfc:PedigreeDBHeaderLine ; rdfs:range xsd:anyURI .
 vcfc:metaAllowedValue a owl:DatatypeProperty ;
@@ -788,10 +814,19 @@ vcfc:sampleFieldsRaw a owl:DatatypeProperty ; rdfs:label "raw sample fields"@en 
   rdfs:comment "One expanded sample's original colon-separated fields, retaining omitted trailing fields and empty list tokens."@en ;
   rdfs:domain vcfc:SampleCall ; rdfs:range xsd:string .
 
-vcfc:VCF41File a owl:Class ; rdfs:subClassOf vcfc:VCFFile ; rdfs:label "VCF 4.1 file"@en ; rdfs:comment "An optional explicit VCF 4.1 file type. The matching SHACL overlay also scopes its rules by fileFormat."@en .
+#################################################################
+# Version-scoped file classes, derived from ontology/versions/registry.json
+# by scripts/build-shacl-profiles.py. Edit the registry, not this block.
+#################################################################
 
-vcfc:VCF42File a owl:Class ; rdfs:subClassOf vcfc:VCFFile ; rdfs:label "VCF 4.2 file"@en ; rdfs:comment "An optional explicit VCF 4.2 file type. The matching SHACL overlay also scopes its rules by fileFormat."@en .
+# BEGIN GENERATED VERSION CLASSES
+vcfc:VCF41File a owl:Class ; rdfs:subClassOf vcfc:VCFFile ; rdfs:label "VCF 4.1 file"@en ; rdfs:comment "An optional explicit VCF 4.1 file type. Use it when the VCF 4.1 SHACL version gate is wanted; VCFFile itself remains version-neutral, and the matching overlay also scopes its rules by fileFormat."@en .
 
-vcfc:VCF43File a owl:Class ; rdfs:subClassOf vcfc:VCFFile ; rdfs:label "VCF 4.3 file"@en ; rdfs:comment "An optional explicit VCF 4.3 file type. The matching SHACL overlay also scopes its rules by fileFormat."@en .
+vcfc:VCF42File a owl:Class ; rdfs:subClassOf vcfc:VCFFile ; rdfs:label "VCF 4.2 file"@en ; rdfs:comment "An optional explicit VCF 4.2 file type. Use it when the VCF 4.2 SHACL version gate is wanted; VCFFile itself remains version-neutral, and the matching overlay also scopes its rules by fileFormat."@en .
 
-vcfc:VCF44File a owl:Class ; rdfs:subClassOf vcfc:VCFFile ; rdfs:label "VCF 4.4 file"@en ; rdfs:comment "An optional explicit VCF 4.4 file type. The matching SHACL overlay also scopes its rules by fileFormat."@en .
+vcfc:VCF43File a owl:Class ; rdfs:subClassOf vcfc:VCFFile ; rdfs:label "VCF 4.3 file"@en ; rdfs:comment "An optional explicit VCF 4.3 file type. Use it when the VCF 4.3 SHACL version gate is wanted; VCFFile itself remains version-neutral, and the matching overlay also scopes its rules by fileFormat."@en .
+
+vcfc:VCF44File a owl:Class ; rdfs:subClassOf vcfc:VCFFile ; rdfs:label "VCF 4.4 file"@en ; rdfs:comment "An optional explicit VCF 4.4 file type. Use it when the VCF 4.4 SHACL version gate is wanted; VCFFile itself remains version-neutral, and the matching overlay also scopes its rules by fileFormat."@en .
+
+vcfc:VCF45File a owl:Class ; rdfs:subClassOf vcfc:VCFFile ; rdfs:label "VCF 4.5 file"@en ; rdfs:comment "An optional explicit VCF 4.5 file type. Use it when the VCF 4.5 SHACL version gate is wanted; VCFFile itself remains version-neutral, and the matching overlay also scopes its rules by fileFormat."@en .
+# END GENERATED VERSION CLASSES

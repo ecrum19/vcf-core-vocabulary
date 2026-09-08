@@ -1,6 +1,6 @@
 // Bounded fixture checks; this is neither a general VCF converter nor a SHACL validator.
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { readFileSync, mkdirSync, writeFileSync } from 'node:fs';
 import { Parser, Store, DataFactory } from 'n3';
 
 const { namedNode } = DataFactory;
@@ -150,5 +150,13 @@ for (const profile of ['expanded', 'condensed']) {
   };
   assert.deepEqual(results[profile].applicationDepthAtLeast20, ['SAMPLE1']);
 }
-console.log(JSON.stringify({ status: 'passed', samples: sampleNames, ...results,
-  scope: 'N3 parsing and fixture assertions; SPARQL and SHACL not executed' }, null, 2));
+const output = JSON.stringify({ status: 'passed', samples: sampleNames, ...results,
+  scope: 'N3 parsing and fixture assertions; SPARQL and SHACL not executed' }, null, 2) + '\n';
+const destination = new URL('generated/verification.json', import.meta.url);
+if (process.argv.includes('--check')) {
+  assert.equal(readFileSync(destination, 'utf8'), output, 'Recorded paper verification is stale; run npm run coverage:paper');
+} else {
+  mkdirSync(new URL('generated/', import.meta.url), { recursive: true });
+  writeFileSync(destination, output);
+}
+console.log(output.trimEnd());

@@ -16,6 +16,8 @@
     vcfc:filter "PASS" ;
     vcfc:filterStatus vcfc:FiltersPassed ;
     vcfc:formatRaw "GT:CN" ;
+    vcfc:hasFormatKey <file://example-vcf45-repeats.vcf#call/1/formatKey/1>,
+        <file://example-vcf45-repeats.vcf#call/1/formatKey/2> ;
     vcfc:hasInfoValue <file://example-vcf45-repeats.vcf#call/1/info/CN>,
         <file://example-vcf45-repeats.vcf#call/1/info/RB>,
         <file://example-vcf45-repeats.vcf#call/1/info/RN>,
@@ -27,6 +29,14 @@
     vcfc:hasSampleCall <file://example-vcf45-repeats.vcf#sample/1/S1> ;
     vcfc:infoRaw "SVLEN=30;SVCLAIM=D;RN=1;RUS=CAG;RUL=3;RUC=10;RB=30;CN=2" ;
     vcfc:qual "60"^^vcfc:VCFFloat .
+
+<file://example-vcf45-repeats.vcf#call/1/formatKey/1> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-repeats.vcf#header/line/15> ;
+    vcfc:fieldIndex 1 .
+
+<file://example-vcf45-repeats.vcf#call/1/formatKey/2> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-repeats.vcf#header/line/16> ;
+    vcfc:fieldIndex 2 .
 
 <file://example-vcf45-repeats.vcf#call/1/info/CN> a vcfc:InfoFieldValue ;
     vcfc:declaredBy <file://example-vcf45-repeats.vcf#header/line/14> ;
@@ -481,6 +491,7 @@ ex:header a vcfc:VCFHeader ;
     vcfc:hasAltAllele <file://example-vcf45-repeats.vcf#record/1/allele/1> ;
     vcfc:hasCall <file://example-vcf45-repeats.vcf#call/1> ;
     vcfc:hasIdentifier <file://example-vcf45-repeats.vcf#record/1/id/1> ;
+    vcfc:hasPaddingInterpretation <file://example-vcf45-repeats.vcf#record/1/padding> ;
     vcfc:hasReferenceAllele <file://example-vcf45-repeats.vcf#record/1/allele/0> ;
     vcfc:pos 600 ;
     vcfc:recordId "repeat1" ;
@@ -497,6 +508,12 @@ ex:header a vcfc:VCFHeader ;
 <file://example-vcf45-repeats.vcf#record/1/id/1> a vcfc:RecordIdentifier ;
     vcfc:componentIndex 1 ;
     vcfc:identifierValue "repeat1" .
+
+<file://example-vcf45-repeats.vcf#record/1/padding> a vcfc:PaddingInterpretation ;
+    vcfc:paddingAnchorPosition 600 ;
+    vcfc:paddingBaseCount 1 ;
+    vcfc:paddingRule vcfc:SymbolicAllelePadding ;
+    vcfc:paddingSide vcfc:PaddingBefore .
 
 <file://example-vcf45-repeats.vcf#sample/1/S1> a vcfc:SampleCall ;
     vcfc:forSample <file://example-vcf45-repeats.vcf#samples/S1> ;
@@ -639,34 +656,6 @@ ex:samples a vcfc:SampleSet ;
     vcfc:headerValue "<ID=CN,Number=A,Type=Float,Description=\"Example CN\",Source=\"VCF-Core-examples\",Version=\"1.0\">" ;
     vcfc:lineIndex 14 .
 
-<file://example-vcf45-repeats.vcf#header/line/15> a vcfc:FORMATHeaderLine ;
-    vcfc:fieldDescription "Example GT" ;
-    vcfc:fieldId "GT" ;
-    vcfc:fieldNumber "1" ;
-    vcfc:fieldNumberInteger 1 ;
-    vcfc:fieldType vcfc:StringType ;
-    vcfc:hasAttribute <file://example-vcf45-repeats.vcf#header/line/15/attribute/1>,
-        <file://example-vcf45-repeats.vcf#header/line/15/attribute/2>,
-        <file://example-vcf45-repeats.vcf#header/line/15/attribute/3>,
-        <file://example-vcf45-repeats.vcf#header/line/15/attribute/4> ;
-    vcfc:headerKey "FORMAT" ;
-    vcfc:headerValue "<ID=GT,Number=1,Type=String,Description=\"Example GT\">" ;
-    vcfc:lineIndex 15 .
-
-<file://example-vcf45-repeats.vcf#header/line/16> a vcfc:FORMATHeaderLine ;
-    vcfc:fieldDescription "Example CN" ;
-    vcfc:fieldId "CN" ;
-    vcfc:fieldNumber "1" ;
-    vcfc:fieldNumberInteger 1 ;
-    vcfc:fieldType vcfc:FloatType ;
-    vcfc:hasAttribute <file://example-vcf45-repeats.vcf#header/line/16/attribute/1>,
-        <file://example-vcf45-repeats.vcf#header/line/16/attribute/2>,
-        <file://example-vcf45-repeats.vcf#header/line/16/attribute/3>,
-        <file://example-vcf45-repeats.vcf#header/line/16/attribute/4> ;
-    vcfc:headerKey "FORMAT" ;
-    vcfc:headerValue "<ID=CN,Number=1,Type=Float,Description=\"Example CN\">" ;
-    vcfc:lineIndex 16 .
-
 <file://example-vcf45-repeats.vcf#header/line/4> a vcfc:ContigHeaderLine ;
     vcfc:contigId "chr1" ;
     vcfc:contigLength 1000 ;
@@ -743,6 +732,34 @@ ex:samples a vcfc:SampleSet ;
     vcfc:alleleIndex 0 ;
     vcfc:alleleKind vcfc:BaseSequenceAllele ;
     vcfc:alleleValue "A" .
+
+<file://example-vcf45-repeats.vcf#header/line/15> a vcfc:FORMATHeaderLine ;
+    vcfc:fieldDescription "Example GT" ;
+    vcfc:fieldId "GT" ;
+    vcfc:fieldNumber "1" ;
+    vcfc:fieldNumberInteger 1 ;
+    vcfc:fieldType vcfc:StringType ;
+    vcfc:hasAttribute <file://example-vcf45-repeats.vcf#header/line/15/attribute/1>,
+        <file://example-vcf45-repeats.vcf#header/line/15/attribute/2>,
+        <file://example-vcf45-repeats.vcf#header/line/15/attribute/3>,
+        <file://example-vcf45-repeats.vcf#header/line/15/attribute/4> ;
+    vcfc:headerKey "FORMAT" ;
+    vcfc:headerValue "<ID=GT,Number=1,Type=String,Description=\"Example GT\">" ;
+    vcfc:lineIndex 15 .
+
+<file://example-vcf45-repeats.vcf#header/line/16> a vcfc:FORMATHeaderLine ;
+    vcfc:fieldDescription "Example CN" ;
+    vcfc:fieldId "CN" ;
+    vcfc:fieldNumber "1" ;
+    vcfc:fieldNumberInteger 1 ;
+    vcfc:fieldType vcfc:FloatType ;
+    vcfc:hasAttribute <file://example-vcf45-repeats.vcf#header/line/16/attribute/1>,
+        <file://example-vcf45-repeats.vcf#header/line/16/attribute/2>,
+        <file://example-vcf45-repeats.vcf#header/line/16/attribute/3>,
+        <file://example-vcf45-repeats.vcf#header/line/16/attribute/4> ;
+    vcfc:headerKey "FORMAT" ;
+    vcfc:headerValue "<ID=CN,Number=1,Type=Float,Description=\"Example CN\">" ;
+    vcfc:lineIndex 16 .
 
 <file://example-vcf45-repeats.vcf#samples/S1> a vcfc:VCFSample ;
     vcfc:sampleIndex 1 ;

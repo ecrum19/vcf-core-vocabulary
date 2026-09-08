@@ -1,0 +1,26 @@
+##fileformat=VCFv4.5
+##source=VCF-Core-synthetic-examples
+##reference=https://example.org/reference.fa
+##contig=<ID=chr1,length=100>
+##assembly=https://example.org/assembly.fa
+##ALT=<ID=DEL,Description="Synthetic DEL allele">
+##INFO=<ID=AF,Number=A,Type=Float,Description="Allele frequency",Source="VCF-Core-examples",Version="1.0">
+##INFO=<ID=SVLEN,Number=A,Type=Integer,Description="Structural variant length",Source="VCF-Core-examples",Version="1.0">
+##INFO=<ID=SVCLAIM,Number=A,Type=String,Description="Structural variant claim",Source="VCF-Core-examples",Version="1.0">
+##INFO=<ID=NOTE,Number=1,Type=String,Description="Free text with percent-encoded delimiters",Source="VCF-Core-examples",Version="1.0">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=AD,Number=R,Type=Integer,Description="Allelic depths">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	S1
+chr1	0	.	N	A	.	PASS	AF=0.1	GT:AD	0/1:5,5
+chr1	1	.	AT	T	.	PASS	AF=0.3	GT:AD	0/1:3,7
+chr1	50	.	AT	A	.	PASS	AF=0.4	GT:AD	0/1:3,7
+chr1	55	.	A	T	.	PASS	AF=0.9	GT:AD	0/1
+chr1	60	.	A	AT	.	PASS	AF=0.5	GT:AD	0/1:3,7
+chr1	70	.	A	<DEL>	.	PASS	AF=0.6;SVLEN=10;SVCLAIM=D	GT:AD	0/1:3,7
+chr1	80	.	A	<*>	.	PASS	AF=0.7	GT:AD	0/0:8,0
+chr1	90	.	AT	GC	.	PASS	AF=0.8;NOTE=left%3Bright%3Aend%25	GT:AD	0/1:3,7
+chr1	95	.	A	T,C	.	PASS	AF=.	GT:AD	0/1:3,4,0
+chr1	96	.	A	T,C	.	PASS	AF=.,.	GT:AD	0/1:3,4,0
+chr1	97	.	A	T,C	.	PASS	AF=0.5,.	GT:AD	0/1:3,4,0
+chr1	101	.	N	A	.	PASS	AF=0.1	GT:AD	0/1:5,5
+<asm1>	10	.	A	T	.	PASS	AF=0.2	GT:AD	0/1:4,6

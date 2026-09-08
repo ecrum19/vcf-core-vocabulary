@@ -37,10 +37,21 @@ PATTERNS = [
     "mappings/*",
     "tests/*.py",
     "tests/*.mjs",
-    "tests/vcf45-coverage-inventory.json",
+    "coverage/curated/inventory.json",
+    "coverage/curated/*.py",
+    "coverage/paper/*.py",
+    "coverage/paper/*.mjs",
+    "coverage/paper/*.ttl",
+    "coverage/paper/*.vcf",
+    "coverage/paper/*.rq",
     "tests/shacl/**/*",
     "scripts/*.py",
     "scripts/*.mjs",
+    "coverage/methodological/*.py",
+    "coverage/methodological/*.json",
+    "coverage/methodological/probes/*.json",
+    "coverage/methodological/requirements.txt",
+    "coverage/methodological/sources/*.tex",
     "requirements-dev.txt",
     "package.json",
 ]
@@ -53,7 +64,8 @@ def inputs() -> list[pathlib.Path]:
     for pattern in PATTERNS:
         for path in ROOT.glob(pattern):
             rel = path.relative_to(ROOT).as_posix()
-            if path.is_file() and rel not in EXCLUDE:
+            if (path.is_file() and rel not in EXCLUDE and path.name != '.DS_Store'
+                    and '__pycache__' not in path.parts):
                 seen.add(path)
     return sorted(seen)
 

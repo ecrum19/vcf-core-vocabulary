@@ -1,5 +1,5 @@
 {
- "$comment": "Auditable inventory of VCF 4.5 logical-model constructs used to compute the coverage figures reported in the SWAT4HCLS 2027 paper. Verdicts are curated editorial judgements; scripts/coverage-report.py verifies that every term named here exists in the ontology and recomputes all totals. BCF 2.2 byte layout is out of scope by an explicit design decision and is not part of the denominator.",
+ "$comment": "Auditable inventory of VCF 4.5 logical-model constructs behind the published coverage figures. Verdicts are curated editorial judgements applied under the rubric below; coverage/curated/report.py verifies that every term and evidence file named here exists and recomputes all totals. Source-byte requirements are assessed on a separate axis (see 'serialization') because they constrain the octet stream rather than the logical model.",
  "spec": {
   "name": "VCFv4.5",
   "url": "https://samtools.github.io/hts-specs/VCFv4.5.pdf"
@@ -19,9 +19,16 @@
      "spec": "1.4",
      "construct": "VCF file artifact",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": false
+     },
+     "evidenceTier": "fixture",
      "terms": [
       "VCFFile"
      ],
+     "queries": [],
      "evidence": "examples/core/example.ttl"
     },
     {
@@ -29,10 +36,17 @@
      "spec": "1.4",
      "construct": "Meta-information block",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": false
+     },
+     "evidenceTier": "fixture",
      "terms": [
       "VCFHeader",
       "hasHeaderLine"
      ],
+     "queries": [],
      "evidence": "examples/core/example-headers.ttl"
     },
     {
@@ -40,11 +54,18 @@
      "spec": "1.4",
      "construct": "Unstructured meta-information line",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "UnstructuredHeaderLine",
       "headerKey",
       "headerValue"
      ],
+     "queries": [],
      "evidence": "UnstructuredHeaderLineShape"
     },
     {
@@ -52,6 +73,12 @@
      "spec": "1.4",
      "construct": "Structured line key-value attributes",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "StructuredHeaderLine",
       "HeaderAttribute",
@@ -59,6 +86,7 @@
       "attributeValue",
       "attributeIndex"
      ],
+     "queries": [],
      "evidence": "HeaderAttributeShape"
     },
     {
@@ -66,10 +94,17 @@
      "spec": "1.4",
      "construct": "Arbitrary/extension structured lines",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "HeaderAttribute",
       "hasAttribute"
      ],
+     "queries": [],
      "evidence": "HeaderDeclarationAgreementShape"
     },
     {
@@ -77,9 +112,16 @@
      "spec": "1.4",
      "construct": "Header line order",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "lineIndex"
      ],
+     "queries": [],
      "evidence": "HeaderOrderingSparqlShape"
     },
     {
@@ -87,10 +129,17 @@
      "spec": "1.5",
      "construct": "#CHROM column-header line",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "ColumnHeaderLine",
       "hasColumnHeader"
      ],
+     "queries": [],
      "evidence": "ColumnHeaderLineShape"
     },
     {
@@ -98,9 +147,16 @@
      "spec": "1.5",
      "construct": "Genotype columns present",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "hasGenotypeColumns"
      ],
+     "queries": [],
      "evidence": "ColumnHeaderLineShape"
     },
     {
@@ -108,12 +164,19 @@
      "spec": "1.5",
      "construct": "Sample column identity and order",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "VCFSample",
       "SampleSet",
       "sampleName",
       "sampleIndex"
      ],
+     "queries": [],
      "evidence": "VCFSampleShape"
     },
     {
@@ -121,10 +184,17 @@
      "spec": "1.4.1",
      "construct": "##fileformat",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "FileFormatHeaderLine",
       "fileFormat"
      ],
+     "queries": [],
      "evidence": "HeaderVersionAgreementShape"
     },
     {
@@ -132,10 +202,17 @@
      "spec": "1.4.2",
      "construct": "##INFO",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "INFOHeaderLine",
       "InfoFieldDefinition"
      ],
+     "queries": [],
      "evidence": "InfoFieldDefinitionShape"
     },
     {
@@ -143,10 +220,17 @@
      "spec": "1.4.3",
      "construct": "##FILTER",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "FILTERHeaderLine",
       "FilterDefinition"
      ],
+     "queries": [],
      "evidence": "FilterDefinitionShape"
     },
     {
@@ -154,10 +238,17 @@
      "spec": "1.4.4",
      "construct": "##FORMAT",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "FORMATHeaderLine",
       "FormatFieldDefinition"
      ],
+     "queries": [],
      "evidence": "FormatFieldDefinitionShape"
     },
     {
@@ -165,10 +256,17 @@
      "spec": "1.4.5",
      "construct": "##ALT",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "ALTHeaderLine",
       "AltDefinition"
      ],
+     "queries": [],
      "evidence": "AltDefinitionShape"
     },
     {
@@ -176,10 +274,17 @@
      "spec": "1.4.7",
      "construct": "##contig ID",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "ContigHeaderLine",
       "contigId"
      ],
+     "queries": [],
      "evidence": "ContigHeaderLineShape"
     },
     {
@@ -187,11 +292,18 @@
      "spec": "1.4.7",
      "construct": "##contig length/md5/URL",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "contigLength",
       "contigMd5",
       "contigUrl"
      ],
+     "queries": [],
      "evidence": "ContigHeaderLineShape"
     },
     {
@@ -199,10 +311,17 @@
      "spec": "1.4.6",
      "construct": "##assembly",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": false
+     },
+     "evidenceTier": "fixture",
      "terms": [
       "AssemblyHeaderLine",
       "assemblyUrl"
      ],
+     "queries": [],
      "evidence": "examples/features"
     },
     {
@@ -210,11 +329,18 @@
      "spec": "1.4.8",
      "construct": "##META",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "MetaHeaderLine",
       "MetaDefinition",
       "metaAllowedValue"
      ],
+     "queries": [],
      "evidence": "MetaDefinitionShape"
     },
     {
@@ -222,11 +348,18 @@
      "spec": "1.4.8",
      "construct": "##SAMPLE",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "SampleHeaderLine",
       "SampleDeclaration",
       "declaresSample"
      ],
+     "queries": [],
      "evidence": "SampleHeaderLineShape"
     },
     {
@@ -234,6 +367,12 @@
      "spec": "1.4.9",
      "construct": "##PEDIGREE and ##pedigreeDB",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "PedigreeHeaderLine",
       "PedigreeRelation",
@@ -245,6 +384,7 @@
       "PedigreeDBHeaderLine",
       "pedigreeDbUrl"
      ],
+     "queries": [],
      "evidence": "PedigreeHeaderLineShape"
     }
    ]
@@ -258,9 +398,16 @@
      "spec": "1.4.2",
      "construct": "Declaration ID",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "fieldId"
      ],
+     "queries": [],
      "evidence": "InfoFieldDefinitionShape"
     },
     {
@@ -268,9 +415,16 @@
      "spec": "1.4.2",
      "construct": "Number, lexical form",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "probe",
      "terms": [
       "fieldNumber"
      ],
+     "queries": [],
      "evidence": "InfoFieldDefinitionShape"
     },
     {
@@ -278,9 +432,16 @@
      "spec": "1.4.2",
      "construct": "Number, symbolic arity",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "probe",
      "terms": [
       "fieldArity"
      ],
+     "queries": [],
      "evidence": "FieldAritySparqlShape"
     },
     {
@@ -288,9 +449,16 @@
      "spec": "1.4.2",
      "construct": "Number, fixed count",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "fieldNumberInteger"
      ],
+     "queries": [],
      "evidence": "FieldAritySparqlShape"
     },
     {
@@ -298,9 +466,16 @@
      "spec": "1.4.2",
      "construct": "Type",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "fieldType"
      ],
+     "queries": [],
      "evidence": "InfoFieldDefinitionShape"
     },
     {
@@ -308,9 +483,16 @@
      "spec": "1.4.2",
      "construct": "Description",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "fieldDescription"
      ],
+     "queries": [],
      "evidence": "InfoFieldDefinitionShape"
     },
     {
@@ -318,9 +500,16 @@
      "spec": "1.4.2",
      "construct": "Source (recommended)",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "fieldSource"
      ],
+     "queries": [],
      "evidence": "InfoFieldDefinitionShape warning"
     },
     {
@@ -328,9 +517,16 @@
      "spec": "1.4.2",
      "construct": "Version (recommended)",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "fieldVersion"
      ],
+     "queries": [],
      "evidence": "InfoFieldDefinitionShape warning"
     }
    ]
@@ -344,9 +540,16 @@
      "spec": "1.3",
      "construct": "Type Integer",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "IntegerType"
      ],
+     "queries": [],
      "evidence": "sh:in enumeration"
     },
     {
@@ -354,9 +557,16 @@
      "spec": "1.3",
      "construct": "Type Float",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "FloatType"
      ],
+     "queries": [],
      "evidence": "sh:in enumeration"
     },
     {
@@ -364,9 +574,16 @@
      "spec": "1.3",
      "construct": "Type Flag",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "FlagType"
      ],
+     "queries": [],
      "evidence": "sh:in enumeration"
     },
     {
@@ -374,9 +591,16 @@
      "spec": "1.3",
      "construct": "Type Character",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "CharacterType"
      ],
+     "queries": [],
      "evidence": "sh:in enumeration"
     },
     {
@@ -384,9 +608,16 @@
      "spec": "1.3",
      "construct": "Type String",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "StringType"
      ],
+     "queries": [],
      "evidence": "sh:in enumeration"
     },
     {
@@ -394,9 +625,16 @@
      "spec": "1.4.2",
      "construct": "Number=A",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "ArityPerAlt"
      ],
+     "queries": [],
      "evidence": "FieldAritySparqlShape"
     },
     {
@@ -404,9 +642,16 @@
      "spec": "1.4.2",
      "construct": "Number=R",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "ArityPerAllele"
      ],
+     "queries": [],
      "evidence": "FieldAritySparqlShape"
     },
     {
@@ -414,9 +659,16 @@
      "spec": "1.4.2",
      "construct": "Number=G",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "ArityPerGenotype"
      ],
+     "queries": [],
      "evidence": "FieldAritySparqlShape"
     },
     {
@@ -424,9 +676,16 @@
      "spec": "1.4.2",
      "construct": "Number=.",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "ArityVariable"
      ],
+     "queries": [],
      "evidence": "FieldAritySparqlShape"
     },
     {
@@ -434,9 +693,16 @@
      "spec": "1.4.4",
      "construct": "Number=LA",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "ArityPerLocalAlt"
      ],
+     "queries": [],
      "evidence": "local cardinality checks"
     },
     {
@@ -444,9 +710,16 @@
      "spec": "1.4.4",
      "construct": "Number=LR",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "ArityPerLocalAllele"
      ],
+     "queries": [],
      "evidence": "local cardinality checks"
     },
     {
@@ -454,9 +727,16 @@
      "spec": "1.4.4",
      "construct": "Number=LG",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "ArityPerLocalGenotype"
      ],
+     "queries": [],
      "evidence": "local cardinality checks"
     },
     {
@@ -464,9 +744,16 @@
      "spec": "1.4.4",
      "construct": "Number=P",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "ArityPerGTAllele"
      ],
+     "queries": [],
      "evidence": "phase set list checks"
     },
     {
@@ -474,10 +761,17 @@
      "spec": "1.4.4",
      "construct": "Number=M",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "ArityPerBaseModification"
      ],
-     "evidence": "base modification site counts"
+     "queries": [],
+     "evidence": "tests/semantic_validation.py raises modification-cardinality when the value count does not match the eligible base-modification sites for the sample's GT; a probe supplies an extra value"
     }
    ]
   },
@@ -490,9 +784,16 @@
      "spec": "1.3",
      "construct": "Float lexical space incl. INF/NAN",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "probe",
      "terms": [
       "VCFFloat"
      ],
+     "queries": [],
      "evidence": "lexical pattern check"
     },
     {
@@ -500,9 +801,16 @@
      "spec": "1.3",
      "construct": "Integer 32-bit excluded range",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "probe",
      "terms": [
       "VCFInteger"
      ],
+     "queries": [],
      "evidence": "decoded range check"
     },
     {
@@ -510,9 +818,16 @@
      "spec": "1.3",
      "construct": "Character single value per item",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "probe",
      "terms": [
       "CharacterType"
      ],
+     "queries": [],
      "evidence": "vcf-core-consistency.shacl.ttl"
     },
     {
@@ -520,9 +835,16 @@
      "spec": "1.6.2",
      "construct": "GT lexical space",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "probe",
      "terms": [
       "GenotypeString"
      ],
+     "queries": [],
      "evidence": "lexical pattern check"
     },
     {
@@ -530,9 +852,16 @@
      "spec": "5.4",
      "construct": "Breakend ALT lexical space",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": false
+     },
+     "evidenceTier": "fixture",
      "terms": [
       "BreakendString"
      ],
+     "queries": [],
      "evidence": "breakend fixtures"
     },
     {
@@ -540,39 +869,39 @@
      "spec": "1.2",
      "construct": "Percent encoding of reserved characters",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "probe",
      "terms": [
       "percentEncodingPolicy",
       "rawValue",
       "decodedValue"
      ],
-     "evidence": "raw/decoded agreement"
+     "queries": [
+      "examples/queries/percent-encoding.rq"
+     ],
+     "evidence": "examples/queries/percent-encoding.rq returns the source token and its decoded form; a decoded check rejects a disagreeing pair, and a probe rejects an invalid escape. SHACL cannot percent-decode, so this check lives in the decoded layer"
     },
     {
      "id": 49,
      "spec": "1.6",
      "construct": "Missing value token",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "Null",
       "missingValuePolicy"
      ],
+     "queries": [],
      "evidence": "missing token checks"
-    },
-    {
-     "id": 50,
-     "spec": "1.2",
-     "construct": "UTF-8 encoding and byte order mark state",
-     "verdict": "absent",
-     "terms": [],
-     "evidence": "no carrier; file-level byte state"
-    },
-    {
-     "id": 51,
-     "spec": "1.2",
-     "construct": "Line separator (LF vs CR+LF) state",
-     "verdict": "absent",
-     "terms": [],
-     "evidence": "no carrier; file-level byte state"
     }
    ]
   },
@@ -585,50 +914,96 @@
      "spec": "1.6.1",
      "construct": "CHROM",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "chrom",
       "chromosome"
      ],
+     "queries": [],
      "evidence": "VCFRecordShape"
     },
     {
      "id": 53,
      "spec": "1.6.1",
      "construct": "CHROM angle-bracketed assembly contig form",
-     "verdict": "partial",
+     "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "probe",
      "terms": [
+      "chrom",
+      "chromAssemblyContig",
+      "AssemblyContig",
+      "assemblyContigId",
+      "declaredInAssembly",
       "assemblyUrl"
      ],
-     "evidence": "assembly link only; no distinguishing marker"
+     "queries": [
+      "examples/queries/assembly-contigs.rq"
+     ],
+     "evidence": "examples/queries/assembly-contigs.rq returns the source token, the parsed identifier and the assembly URL; AssemblyContigAgreementShape and four BoundaryRegression probes reject a mismatched, missing or doubly-declared contig"
     },
     {
      "id": 54,
      "spec": "1.6.1",
      "construct": "POS",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "pos"
      ],
+     "queries": [],
      "evidence": "VCFRecordShape, contig bound check"
     },
     {
      "id": 55,
      "spec": "1.6.1",
      "construct": "POS telomere 0 or N+1",
-     "verdict": "partial",
+     "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "probe",
      "terms": [
-      "pos"
+      "pos",
+      "chromosome",
+      "contigLength"
      ],
-     "evidence": "documented in term comment only"
+     "queries": [
+      "examples/queries/telomeric-positions.rq"
+     ],
+     "evidence": "examples/queries/telomeric-positions.rq returns POS 0 and N+1 for a length-100 contig; RecordContigBoundSparqlShape accepts both and a probe rejects N+2. No dedicated flag is needed"
     },
     {
      "id": 56,
      "spec": "1.6.1",
      "construct": "ID raw column",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "recordId"
      ],
+     "queries": [],
      "evidence": "VCFRecordShape"
     },
     {
@@ -636,11 +1011,20 @@
      "spec": "1.6.1",
      "construct": "ID individual identifiers",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "query",
      "terms": [
       "RecordIdentifier",
       "hasIdentifier",
       "identifierValue",
       "componentIndex"
+     ],
+     "queries": [
+      "examples/queries/identifiers.rq"
      ],
      "evidence": "duplicate ID probe"
     },
@@ -649,29 +1033,66 @@
      "spec": "1.6.1",
      "construct": "REF",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "ref"
      ],
+     "queries": [],
      "evidence": "REF pattern check"
     },
     {
      "id": 59,
      "spec": "1.6.1",
      "construct": "REF padding base convention",
-     "verdict": "partial",
+     "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "probe",
      "terms": [
-      "ref"
+      "ref",
+      "PaddingInterpretation",
+      "hasPaddingInterpretation",
+      "paddingRule",
+      "paddingSide",
+      "paddingBaseCount",
+      "paddingAnchorPosition",
+      "SimpleIndelPadding",
+      "SymbolicAllelePadding",
+      "PositionOnePadding",
+      "UnspecifiedAlleleNoPadding",
+      "PaddingNotDetermined",
+      "PaddingSide",
+      "PaddingBefore",
+      "PaddingAfter"
      ],
-     "evidence": "documented in term comment only"
+     "queries": [
+      "examples/queries/padding-rules.rq"
+     ],
+     "evidence": "examples/queries/padding-rules.rq returns the four determined rules; all five rules occur in example-vcf45-boundaries; PaddingInterpretationAgreementShape and five probes reject an incoherent anchor, side or undetermined claim. REF and allele strings are never trimmed"
     },
     {
      "id": 60,
      "spec": "1.6.1",
      "construct": "ALT raw column",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "alt"
      ],
+     "queries": [],
      "evidence": "VCFRecordShape"
     },
     {
@@ -679,6 +1100,12 @@
      "spec": "1.6.1",
      "construct": "ALT per-allele resource and order",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "probe",
      "terms": [
       "AltAllele",
       "hasAltAllele",
@@ -687,6 +1114,7 @@
       "ReferenceAllele",
       "hasReferenceAllele"
      ],
+     "queries": [],
      "evidence": "allele count/order rules"
     },
     {
@@ -694,6 +1122,12 @@
      "spec": "1.6.1",
      "construct": "ALT six lexical kinds",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "AlleleKind",
       "BaseSequenceAllele",
@@ -704,6 +1138,7 @@
       "BreakendAllele",
       "alleleKind"
      ],
+     "queries": [],
      "evidence": "sh:in enumeration"
     },
     {
@@ -711,9 +1146,16 @@
      "spec": "1.6.1",
      "construct": "QUAL",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "qual"
      ],
+     "queries": [],
      "evidence": "VariantCallShape"
     },
     {
@@ -721,9 +1163,16 @@
      "spec": "1.6.1",
      "construct": "FILTER raw column",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "probe",
      "terms": [
       "filter"
      ],
+     "queries": [],
      "evidence": "VariantCallShape"
     },
     {
@@ -731,6 +1180,12 @@
      "spec": "1.6.1",
      "construct": "FILTER codes and PASS/not-applied status",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "probe",
      "terms": [
       "FilterCode",
       "FilterStatus",
@@ -742,6 +1197,7 @@
       "filterCodeValue",
       "declaredByFilter"
      ],
+     "queries": [],
      "evidence": "raw-code agreement"
     },
     {
@@ -749,9 +1205,16 @@
      "spec": "1.6.1",
      "construct": "INFO raw column",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "infoRaw"
      ],
+     "queries": [],
      "evidence": "VariantCallShape"
     },
     {
@@ -759,11 +1222,18 @@
      "spec": "1.6.1",
      "construct": "INFO structured entries",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "InfoFieldValue",
       "hasInfoValue",
       "declaredBy"
      ],
+     "queries": [],
      "evidence": "IndexedInfoValueSparqlShape"
     },
     {
@@ -771,6 +1241,12 @@
      "spec": "1.6.1",
      "construct": "INFO per-allele/genotype value binding",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "FieldValueItem",
       "hasValueItem",
@@ -781,17 +1257,25 @@
       "forGTAlleleIndex",
       "tupleArity"
      ],
-     "evidence": "materialized item agreement"
+     "queries": [],
+     "evidence": "vcfc:ValueItemRawAgreementShape and vcfc:ValueItemCountShape check that materialized items reproduce the raw token sequence and its length; forAllele/forGenotypeIndex bind each item to what it describes"
     },
     {
      "id": 69,
      "spec": "1.6.1",
      "construct": "INFO entry order",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "fieldIndex"
      ],
-     "evidence": "raw token sequence agreement"
+     "queries": [],
+     "evidence": "vcfc:ValueItemRawAgreementShape checks item order against the raw token sequence; vcfc:fieldIndex carries the INFO entry position"
     }
    ]
   },
@@ -804,6 +1288,12 @@
      "spec": "1.6.2",
      "construct": "Expanded per-sample profile",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": false
+     },
+     "evidenceTier": "fixture",
      "terms": [
       "SampleCall",
       "FormatFieldValue",
@@ -812,6 +1302,7 @@
       "ExpandedRepresentation",
       "forSample"
      ],
+     "queries": [],
      "evidence": "examples/core"
     },
     {
@@ -819,6 +1310,12 @@
      "spec": "1.6.2",
      "construct": "Condensed cohort profile",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": false
+     },
+     "evidenceTier": "query",
      "terms": [
       "CohortCallMatrix",
       "FormatValueVector",
@@ -830,6 +1327,9 @@
       "VCFTextVector",
       "CondensedRepresentation"
      ],
+     "queries": [
+      "examples/queries/cohort-genotypes.rq"
+     ],
      "evidence": "examples/profiles"
     },
     {
@@ -837,9 +1337,16 @@
      "spec": "1.6.2",
      "construct": "FORMAT column raw order",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "formatRaw"
      ],
+     "queries": [],
      "evidence": "VariantCallShape"
     },
     {
@@ -847,19 +1354,37 @@
      "spec": "1.6.2",
      "construct": "FORMAT key order as resources",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "probe",
      "terms": [
-      "fieldIndex"
+      "FormatKey",
+      "hasFormatKey",
+      "fieldIndex",
+      "declaredBy",
+      "formatRaw"
      ],
-     "evidence": "raw token sequence agreement"
+     "queries": [],
+     "evidence": "the declared key list is a resource sequence, not only the formatRaw string; FormatKeyRawAgreementShape checks it reproduces the FORMAT column exactly"
     },
     {
      "id": 74,
      "spec": "1.6.2",
      "construct": "GT raw value",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "genotypeString"
      ],
+     "queries": [],
      "evidence": "GenotypeShape"
     },
     {
@@ -867,6 +1392,12 @@
      "spec": "1.6.2",
      "construct": "GT parsed allele calls",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "probe",
      "terms": [
       "Genotype",
       "GenotypeAlleleCall",
@@ -875,6 +1406,7 @@
       "callIndex",
       "calledAllele"
      ],
+     "queries": [],
      "evidence": "ploidy/allele agreement"
     },
     {
@@ -882,6 +1414,12 @@
      "spec": "1.6.2",
      "construct": "GT phasing per allele",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "probe",
      "terms": [
       "PhasingStatus",
       "Phased",
@@ -889,6 +1427,7 @@
       "phasingStatus",
       "phaseIndicator"
      ],
+     "queries": [],
      "evidence": "phase indicator probe"
     },
     {
@@ -896,8 +1435,17 @@
      "spec": "1.6.2",
      "construct": "GT leading indicator and mixed phasing",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": false
+     },
+     "evidenceTier": "query",
      "terms": [
       "MixedPhasing"
+     ],
+     "queries": [
+      "examples/queries/mixed-phasing.rq"
      ],
      "evidence": "mixed triploid fixture"
     },
@@ -906,9 +1454,16 @@
      "spec": "1.6.2",
      "construct": "Ploidy",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "probe",
      "terms": [
       "ploidy"
      ],
+     "queries": [],
      "evidence": "ploidy agreement probe"
     },
     {
@@ -916,9 +1471,16 @@
      "spec": "1.6.2",
      "construct": "No-call allele",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "isNoCall"
      ],
+     "queries": [],
      "evidence": "GenotypeAlleleCallShape"
     },
     {
@@ -926,9 +1488,16 @@
      "spec": "1.6.2",
      "construct": "Genotype ordering index",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "genotypeIndex"
      ],
+     "queries": [],
      "evidence": "G/LG cardinality checks"
     },
     {
@@ -936,11 +1505,18 @@
      "spec": "1.6.2",
      "construct": "PS phase set",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "PhaseSet",
       "phaseSetId",
       "inPhaseSet"
      ],
+     "queries": [],
      "evidence": "PhaseSetShape"
     },
     {
@@ -948,10 +1524,17 @@
      "spec": "1.6.2",
      "construct": "PSL phase set list",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "probe",
      "terms": [
       "phaseSetName",
       "allelePhaseSet"
      ],
+     "queries": [],
      "evidence": "missing PS with populated PSL probe"
     },
     {
@@ -959,9 +1542,16 @@
      "spec": "1.6.2",
      "construct": "PSO phase set ordinal",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "phaseSetOrdinal"
      ],
+     "queries": [],
      "evidence": "PhaseSetShape"
     },
     {
@@ -969,9 +1559,16 @@
      "spec": "1.6.2",
      "construct": "PSQ phase set quality",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "phaseSetQuality"
      ],
+     "queries": [],
      "evidence": "PhaseSetShape"
     },
     {
@@ -979,6 +1576,12 @@
      "spec": "1.6.2",
      "construct": "LAA and local alleles",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "probe",
      "terms": [
       "LocalAlleleSet",
       "LocalAlleleMembership",
@@ -989,6 +1592,9 @@
       "localIndex",
       "localAllele"
      ],
+     "queries": [
+      "examples/queries/local-alleles.rq"
+     ],
      "evidence": "LAA order and membership checks"
     },
     {
@@ -996,9 +1602,16 @@
      "spec": "1.6.2",
      "construct": "FT per-sample filter",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "sampleFilter"
      ],
+     "queries": [],
      "evidence": "decoded code syntax check"
     },
     {
@@ -1006,6 +1619,12 @@
      "spec": "5.5",
      "construct": "LEN and reference blocks",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": false
+     },
+     "evidenceTier": "query",
      "terms": [
       "ReferenceBlock",
       "referenceBlockLength",
@@ -1014,6 +1633,9 @@
       "hasReferenceBlock",
       "endPosition"
      ],
+     "queries": [
+      "examples/queries/reference-blocks.rq"
+     ],
      "evidence": "LEN/POS/end agreement"
     },
     {
@@ -1021,6 +1643,12 @@
      "spec": "1.4.4",
      "construct": "Base modifications M/DPM/ADM",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": false
+     },
+     "evidenceTier": "query",
      "terms": [
       "BaseModification",
       "modifiedResidue",
@@ -1030,6 +1658,9 @@
       "modificationAlleleDepth",
       "forBaseModification"
      ],
+     "queries": [
+      "examples/queries/modifications.rq"
+     ],
      "evidence": "decoded site counts"
     },
     {
@@ -1037,21 +1668,45 @@
      "spec": "1.6.2",
      "construct": "Dropped trailing fields and empty list tokens",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "probe",
      "terms": [
-      "sampleFieldsRaw"
+      "sampleFieldsRaw",
+      "FormatKey",
+      "hasFormatKey",
+      "fieldIndex"
      ],
-     "evidence": "retained raw sample fields"
+     "queries": [
+      "examples/queries/dropped-trailing-fields.rq"
+     ],
+     "evidence": "examples/queries/dropped-trailing-fields.rq identifies the omitted declared key structurally (POS 55 omits AD at index 2), distinguishing it from an undeclared key; previously credited from the raw field alone"
     },
     {
      "id": 90,
      "spec": "1.6.2",
      "construct": "Single missing token vs per-item missing list",
-     "verdict": "partial",
+     "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "probe",
      "terms": [
-      "sampleFieldsRaw",
-      "Null"
+      "fieldValue",
+      "Null",
+      "hasValueItem",
+      "itemValue",
+      "valueIndex"
      ],
-     "evidence": "retained raw only; not distinguished structurally"
+     "queries": [
+      "examples/queries/missingness.rq"
+     ],
+     "evidence": "examples/queries/missingness.rq separates whole-field, all-items and partially missing values; a probe asserts all three shapes occur and stay distinguishable"
     }
    ]
   },
@@ -1064,6 +1719,12 @@
      "spec": "1.4.5",
      "construct": "Symbolic ALT type taxonomy",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "SymbolicAlleleType",
       "SymbolicDeletion",
@@ -1078,6 +1739,7 @@
       "svType",
       "svTypeCode"
      ],
+     "queries": [],
      "evidence": "SymbolicAlleleTypeShape"
     },
     {
@@ -1085,9 +1747,16 @@
      "spec": "1.4.5",
      "construct": "Symbolic type:subtype decomposition",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "svSubtypeOf"
      ],
+     "queries": [],
      "evidence": "SymbolicAlleleTypeShape"
     },
     {
@@ -1095,10 +1764,17 @@
      "spec": "1.4.5",
      "construct": "IUPAC ambiguity symbolic alleles",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "SymbolicAllele",
       "AltDefinition"
      ],
+     "queries": [],
      "evidence": "AltDefinitionShape"
     },
     {
@@ -1106,6 +1782,12 @@
      "spec": "3",
      "construct": "SVCLAIM D/J/DJ",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "SVClaim",
       "AbundanceClaim",
@@ -1114,6 +1796,7 @@
       "svClaim",
       "svClaimCode"
      ],
+     "queries": [],
      "evidence": "version-scoped claim rules"
     },
     {
@@ -1121,20 +1804,34 @@
      "spec": "3",
      "construct": "SVLEN",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "shape",
      "terms": [
       "svLength"
      ],
-     "evidence": "version overlays"
+     "queries": [],
+     "evidence": "all five version overlays (shacl/vcf-4.1..4.5.shacl.ttl) check the SVLEN aggregate width for the version that owns the file"
     },
     {
      "id": 96,
      "spec": "3",
      "construct": "IMPRECISE and NOVEL",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": false
+     },
+     "evidenceTier": "fixture",
      "terms": [
       "isImprecise",
       "isNovel"
      ],
+     "queries": [],
      "evidence": "feature fixture"
     },
     {
@@ -1142,6 +1839,12 @@
      "spec": "3",
      "construct": "Confidence interval families",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "probe",
      "terms": [
       "ConfidenceInterval",
       "ciLower",
@@ -1153,6 +1856,7 @@
       "rucConfidenceInterval",
       "rbConfidenceInterval"
      ],
+     "queries": [],
      "evidence": "tuple width and interval ordering rules"
     },
     {
@@ -1160,6 +1864,12 @@
      "spec": "5.4",
      "construct": "Breakend bracket orientations",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": false
+     },
+     "evidenceTier": "fixture",
      "terms": [
       "BreakendOrientation",
       "SequenceBeforeLeftBracket",
@@ -1168,6 +1878,7 @@
       "SequenceAfterRightBracket",
       "breakendOrientation"
      ],
+     "queries": [],
      "evidence": "reciprocal pair fixture"
     },
     {
@@ -1175,9 +1886,18 @@
      "spec": "5.4",
      "construct": "Breakend mate and partner links",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": false
+     },
+     "evidenceTier": "query",
      "terms": [
       "mateBreakend",
       "partnerBreakend"
+     ],
+     "queries": [
+      "examples/queries/breakend-mates.rq"
      ],
      "evidence": "mate query"
     },
@@ -1186,10 +1906,17 @@
      "spec": "5.4",
      "construct": "Single and telomere breakends",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": false
+     },
+     "evidenceTier": "fixture",
      "terms": [
       "isSingleBreakend",
       "isTelomereBreakend"
      ],
+     "queries": [],
      "evidence": "single breakend fixture"
     },
     {
@@ -1197,10 +1924,17 @@
      "spec": "5.4",
      "construct": "Inserted sequence and replacement string",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": false
+     },
+     "evidenceTier": "fixture",
      "terms": [
       "insertedSequence",
       "breakendReplacementString"
      ],
+     "queries": [],
      "evidence": "breakend fixtures"
     },
     {
@@ -1208,6 +1942,12 @@
      "spec": "3",
      "construct": "EVENT grouping and EVENTTYPE",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": false
+     },
+     "evidenceTier": "fixture",
      "terms": [
       "VariantEvent",
       "inEvent",
@@ -1215,6 +1955,7 @@
       "eventType",
       "eventTypeCode"
      ],
+     "queries": [],
      "evidence": "event fixtures"
     },
     {
@@ -1222,12 +1963,19 @@
      "spec": "5.7",
      "construct": "Copy number",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "probe",
      "terms": [
       "copyNumber",
       "copyNumberQuality",
       "copyNumberLikelihood",
       "copyNumberPosterior"
      ],
+     "queries": [],
      "evidence": "versioned CN declarations"
     },
     {
@@ -1235,6 +1983,12 @@
      "spec": "5.6",
      "construct": "Tandem repeats",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": true
+     },
+     "evidenceTier": "query",
      "terms": [
       "TandemRepeatAllele",
       "RepeatSequence",
@@ -1249,6 +2003,9 @@
       "hasRepeatSequence",
       "hasRepeatUnit"
      ],
+     "queries": [
+      "examples/queries/repeat-units.rq"
+     ],
      "evidence": "sum(RN) decoded check"
     },
     {
@@ -1256,10 +2013,17 @@
      "spec": "5.3",
      "construct": "Haplotype identifiers HAP/AHAP",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": false
+     },
+     "evidenceTier": "fixture",
      "terms": [
       "haplotypeId",
       "ancestralHaplotypeId"
      ],
+     "queries": [],
      "evidence": "feature fixture"
     },
     {
@@ -1267,9 +2031,16 @@
      "spec": "5.5",
      "construct": "Unspecified allele <*> and <NON_REF> alias",
      "verdict": "full",
+     "axes": {
+      "preserved": true,
+      "structured": true,
+      "enforced": false
+     },
+     "evidenceTier": "fixture",
      "terms": [
       "UnspecifiedAllele"
      ],
+     "queries": [],
      "evidence": "reference block fixtures"
     }
    ]
@@ -1288,5 +2059,51 @@
    "item": "VCF 4.0 conformance overlay",
    "reason": "no overlay published; validator reports 4.0 as unsupported"
   }
- ]
+ ],
+ "rubric": {
+  "$comment": "Three independent axes, so that preservation is never silently credited as structure. The verdict follows mechanically from the first two; 'enforced' records whether a validation rule checks the construct and never changes the verdict.",
+  "axes": {
+   "preserved": "the source information survives in the graph, in raw or structured form",
+   "structured": "the construct is reachable by a graph pattern, without parsing a literal",
+   "enforced": "a SHACL rule or decoded check tests a stated requirement of the construct"
+  },
+  "verdict": {
+   "full": "preserved AND structured",
+   "partial": "preserved but NOT structured (raw literal only)",
+   "absent": "NOT preserved"
+  },
+  "evidenceTiers": {
+   "$comment": "The strongest evidence available for the entry, in descending order.",
+   "query": "an executed query in examples/manifest.json returns the construct with a fixed expected answer",
+   "probe": "a regression probe in tests/ shows the governing rule rejects a violating graph",
+   "shape": "a SHACL shape or decoded check targets the construct",
+   "fixture": "a materialized example graph contains the construct",
+   "term": "vocabulary terms exist; no executed evidence is recorded"
+  }
+ },
+ "serialization": {
+  "$comment": "VCF 4.5 sections 1-1.2 constrain the source bytes. The vocabulary deliberately mints no term for these: an RDF property would record a claim about the source without demonstrating that the source was read. They are therefore excluded from the logical-model denominator and checked directly on the bytes instead. This is a narrower claim than representing them, and is reported as such.",
+  "rationale": "Consistent with the standing decisions that BCF 2.2 byte layout and byte-for-byte reconstruction are out of scope because the vocabulary targets the logical model.",
+  "checker": "coverage/curated/check_serialization.py",
+  "report": "coverage/curated/generated/serialization.json",
+  "tests": "tests/test_serialization.py",
+  "requirements": [
+   {
+    "id": 50,
+    "spec": "1.2",
+    "requirement": "UTF-8 encoding and no byte order mark",
+    "status": "checked on the bytes",
+    "represented": false,
+    "evidence": "tests/test_serialization.py: every fixture decodes as UTF-8 and carries no BOM; a BOM-prefixed probe is rejected"
+   },
+   {
+    "id": 51,
+    "spec": "1.2",
+    "requirement": "LF or CR+LF line separators",
+    "status": "checked on the bytes",
+    "represented": false,
+    "evidence": "examples/serialization/{lf,crlf}-line-endings.vcf materialize to isomorphic graphs; a mixed-terminator probe is rejected"
+   }
+  ]
+ }
 }

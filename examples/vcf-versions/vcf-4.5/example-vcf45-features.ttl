@@ -20,10 +20,45 @@
     vcfc:filter "PASS" ;
     vcfc:filterStatus vcfc:FiltersPassed ;
     vcfc:formatRaw "GT:DP:AD:PL:M5mC:DPM5mC:ADM5mC" ;
+    vcfc:hasFormatKey <file://example-vcf45-features.vcf#call/1/formatKey/1>,
+        <file://example-vcf45-features.vcf#call/1/formatKey/2>,
+        <file://example-vcf45-features.vcf#call/1/formatKey/3>,
+        <file://example-vcf45-features.vcf#call/1/formatKey/4>,
+        <file://example-vcf45-features.vcf#call/1/formatKey/5>,
+        <file://example-vcf45-features.vcf#call/1/formatKey/6>,
+        <file://example-vcf45-features.vcf#call/1/formatKey/7> ;
     vcfc:hasInfoValue <file://example-vcf45-features.vcf#call/1/info/AF> ;
     vcfc:hasSampleCall <file://example-vcf45-features.vcf#sample/1/S1> ;
     vcfc:infoRaw "AF=0.25" ;
     vcfc:qual "60"^^vcfc:VCFFloat .
+
+<file://example-vcf45-features.vcf#call/1/formatKey/1> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-features.vcf#header/line/18> ;
+    vcfc:fieldIndex 1 .
+
+<file://example-vcf45-features.vcf#call/1/formatKey/2> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-features.vcf#header/line/19> ;
+    vcfc:fieldIndex 2 .
+
+<file://example-vcf45-features.vcf#call/1/formatKey/3> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-features.vcf#header/line/20> ;
+    vcfc:fieldIndex 3 .
+
+<file://example-vcf45-features.vcf#call/1/formatKey/4> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-features.vcf#header/line/21> ;
+    vcfc:fieldIndex 4 .
+
+<file://example-vcf45-features.vcf#call/1/formatKey/5> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-features.vcf#header/line/22> ;
+    vcfc:fieldIndex 5 .
+
+<file://example-vcf45-features.vcf#call/1/formatKey/6> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-features.vcf#header/line/23> ;
+    vcfc:fieldIndex 6 .
+
+<file://example-vcf45-features.vcf#call/1/formatKey/7> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-features.vcf#header/line/24> ;
+    vcfc:fieldIndex 7 .
 
 <file://example-vcf45-features.vcf#call/1/info/AF> a vcfc:InfoFieldValue ;
     vcfc:declaredBy <file://example-vcf45-features.vcf#header/line/14> ;
@@ -42,6 +77,12 @@
     vcfc:filterStatus vcfc:FiltersFailed ;
     vcfc:formatRaw "GT:LAA:LAD:LPL:PSL:FT" ;
     vcfc:hasFilterCode <file://example-vcf45-features.vcf#call/2/filter/1> ;
+    vcfc:hasFormatKey <file://example-vcf45-features.vcf#call/2/formatKey/1>,
+        <file://example-vcf45-features.vcf#call/2/formatKey/2>,
+        <file://example-vcf45-features.vcf#call/2/formatKey/3>,
+        <file://example-vcf45-features.vcf#call/2/formatKey/4>,
+        <file://example-vcf45-features.vcf#call/2/formatKey/5>,
+        <file://example-vcf45-features.vcf#call/2/formatKey/6> ;
     vcfc:hasInfoValue <file://example-vcf45-features.vcf#call/2/info/AF> ;
     vcfc:hasSampleCall <file://example-vcf45-features.vcf#sample/2/S1> ;
     vcfc:infoRaw "AF=0.2,0.3" ;
@@ -51,6 +92,30 @@
     vcfc:componentIndex 1 ;
     vcfc:declaredByFilter <file://example-vcf45-features.vcf#header/line/6> ;
     vcfc:filterCodeValue "q10" .
+
+<file://example-vcf45-features.vcf#call/2/formatKey/1> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-features.vcf#header/line/18> ;
+    vcfc:fieldIndex 1 .
+
+<file://example-vcf45-features.vcf#call/2/formatKey/2> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-features.vcf#header/line/25> ;
+    vcfc:fieldIndex 2 .
+
+<file://example-vcf45-features.vcf#call/2/formatKey/3> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-features.vcf#header/line/26> ;
+    vcfc:fieldIndex 3 .
+
+<file://example-vcf45-features.vcf#call/2/formatKey/4> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-features.vcf#header/line/27> ;
+    vcfc:fieldIndex 4 .
+
+<file://example-vcf45-features.vcf#call/2/formatKey/5> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-features.vcf#header/line/28> ;
+    vcfc:fieldIndex 5 .
+
+<file://example-vcf45-features.vcf#call/2/formatKey/6> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-features.vcf#header/line/29> ;
+    vcfc:fieldIndex 6 .
 
 <file://example-vcf45-features.vcf#call/2/info/AF> a vcfc:InfoFieldValue ;
     vcfc:declaredBy <file://example-vcf45-features.vcf#header/line/14> ;
@@ -73,12 +138,17 @@
     vcfc:filter "PASS" ;
     vcfc:filterStatus vcfc:FiltersPassed ;
     vcfc:formatRaw "GT" ;
+    vcfc:hasFormatKey <file://example-vcf45-features.vcf#call/3/formatKey/1> ;
     vcfc:hasInfoValue <file://example-vcf45-features.vcf#call/3/info/CILEN>,
         <file://example-vcf45-features.vcf#call/3/info/SVCLAIM>,
         <file://example-vcf45-features.vcf#call/3/info/SVLEN> ;
     vcfc:hasSampleCall <file://example-vcf45-features.vcf#sample/3/S1> ;
     vcfc:infoRaw "SVLEN=20;SVCLAIM=DJ;CILEN=15,25" ;
     vcfc:qual "45"^^vcfc:VCFFloat .
+
+<file://example-vcf45-features.vcf#call/3/formatKey/1> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-features.vcf#header/line/18> ;
+    vcfc:fieldIndex 1 .
 
 <file://example-vcf45-features.vcf#call/3/info/CILEN> a vcfc:InfoFieldValue ;
     vcfc:declaredBy <file://example-vcf45-features.vcf#header/line/17> ;
@@ -698,6 +768,7 @@ ex:header a vcfc:VCFHeader ;
     vcfc:hasCall <file://example-vcf45-features.vcf#call/1> ;
     vcfc:hasIdentifier <file://example-vcf45-features.vcf#record/1/id/1>,
         <file://example-vcf45-features.vcf#record/1/id/2> ;
+    vcfc:hasPaddingInterpretation <file://example-vcf45-features.vcf#record/1/padding> ;
     vcfc:hasReferenceAllele <file://example-vcf45-features.vcf#record/1/allele/0> ;
     vcfc:pos 100 ;
     vcfc:recordId "rsExample;aliasExample" ;
@@ -712,6 +783,10 @@ ex:header a vcfc:VCFHeader ;
     vcfc:componentIndex 2 ;
     vcfc:identifierValue "aliasExample" .
 
+<file://example-vcf45-features.vcf#record/1/padding> a vcfc:PaddingInterpretation ;
+    vcfc:paddingBaseCount 0 ;
+    vcfc:paddingRule vcfc:PaddingNotDetermined .
+
 <file://example-vcf45-features.vcf#record/2> a vcfc:VCFRecord ;
     vcfc:alt "C,G" ;
     vcfc:chrom "chr1" ;
@@ -719,11 +794,16 @@ ex:header a vcfc:VCFHeader ;
     vcfc:hasAltAllele <file://example-vcf45-features.vcf#record/2/allele/1>,
         <file://example-vcf45-features.vcf#record/2/allele/2> ;
     vcfc:hasCall <file://example-vcf45-features.vcf#call/2> ;
+    vcfc:hasPaddingInterpretation <file://example-vcf45-features.vcf#record/2/padding> ;
     vcfc:hasReferenceAllele <file://example-vcf45-features.vcf#record/2/allele/0> ;
     vcfc:pos 200 ;
     vcfc:recordId "."^^vcfc:Null ;
     vcfc:recordIndex 2 ;
     vcfc:ref "A" .
+
+<file://example-vcf45-features.vcf#record/2/padding> a vcfc:PaddingInterpretation ;
+    vcfc:paddingBaseCount 0 ;
+    vcfc:paddingRule vcfc:PaddingNotDetermined .
 
 <file://example-vcf45-features.vcf#record/3> a vcfc:VCFRecord ;
     vcfc:alt "<DEL>" ;
@@ -732,6 +812,7 @@ ex:header a vcfc:VCFHeader ;
     vcfc:hasAltAllele <file://example-vcf45-features.vcf#record/3/allele/1> ;
     vcfc:hasCall <file://example-vcf45-features.vcf#call/3> ;
     vcfc:hasIdentifier <file://example-vcf45-features.vcf#record/3/id/1> ;
+    vcfc:hasPaddingInterpretation <file://example-vcf45-features.vcf#record/3/padding> ;
     vcfc:hasReferenceAllele <file://example-vcf45-features.vcf#record/3/allele/0> ;
     vcfc:pos 300 ;
     vcfc:recordId "del1" ;
@@ -745,6 +826,12 @@ ex:header a vcfc:VCFHeader ;
 <file://example-vcf45-features.vcf#record/3/id/1> a vcfc:RecordIdentifier ;
     vcfc:componentIndex 1 ;
     vcfc:identifierValue "del1" .
+
+<file://example-vcf45-features.vcf#record/3/padding> a vcfc:PaddingInterpretation ;
+    vcfc:paddingAnchorPosition 300 ;
+    vcfc:paddingBaseCount 1 ;
+    vcfc:paddingRule vcfc:SymbolicAllelePadding ;
+    vcfc:paddingSide vcfc:PaddingBefore .
 
 <file://example-vcf45-features.vcf#sample/1/S1> a vcfc:SampleCall ;
     vcfc:forSample <file://example-vcf45-features.vcf#samples/S1> ;
@@ -1191,6 +1278,29 @@ ex:samples a vcfc:SampleSet ;
     vcfc:headerValue "<ID=CILEN,Number=.,Type=Integer,Description=\"Example CILEN\",Source=\"VCF-Core-examples\",Version=\"1.0\">" ;
     vcfc:lineIndex 17 .
 
+<file://example-vcf45-features.vcf#record/3/allele/0> a vcfc:ReferenceAllele ;
+    vcfc:alleleIndex 0 ;
+    vcfc:alleleKind vcfc:BaseSequenceAllele ;
+    vcfc:alleleValue "T" .
+
+<file://example-vcf45-features.vcf#header/line/14> a vcfc:INFOHeaderLine ;
+    vcfc:fieldArity vcfc:ArityPerAlt ;
+    vcfc:fieldDescription "Example AF" ;
+    vcfc:fieldId "AF" ;
+    vcfc:fieldNumber "A" ;
+    vcfc:fieldSource "VCF-Core-examples" ;
+    vcfc:fieldType vcfc:FloatType ;
+    vcfc:fieldVersion "1.0" ;
+    vcfc:hasAttribute <file://example-vcf45-features.vcf#header/line/14/attribute/1>,
+        <file://example-vcf45-features.vcf#header/line/14/attribute/2>,
+        <file://example-vcf45-features.vcf#header/line/14/attribute/3>,
+        <file://example-vcf45-features.vcf#header/line/14/attribute/4>,
+        <file://example-vcf45-features.vcf#header/line/14/attribute/5>,
+        <file://example-vcf45-features.vcf#header/line/14/attribute/6> ;
+    vcfc:headerKey "INFO" ;
+    vcfc:headerValue "<ID=AF,Number=A,Type=Float,Description=\"Example AF\",Source=\"VCF-Core-examples\",Version=\"1.0\">" ;
+    vcfc:lineIndex 14 .
+
 <file://example-vcf45-features.vcf#header/line/19> a vcfc:FORMATHeaderLine ;
     vcfc:fieldDescription "Example DP" ;
     vcfc:fieldId "DP" ;
@@ -1345,29 +1455,6 @@ ex:samples a vcfc:SampleSet ;
     vcfc:headerValue "<ID=FT,Number=1,Type=String,Description=\"Example FT\">" ;
     vcfc:lineIndex 29 .
 
-<file://example-vcf45-features.vcf#record/3/allele/0> a vcfc:ReferenceAllele ;
-    vcfc:alleleIndex 0 ;
-    vcfc:alleleKind vcfc:BaseSequenceAllele ;
-    vcfc:alleleValue "T" .
-
-<file://example-vcf45-features.vcf#header/line/14> a vcfc:INFOHeaderLine ;
-    vcfc:fieldArity vcfc:ArityPerAlt ;
-    vcfc:fieldDescription "Example AF" ;
-    vcfc:fieldId "AF" ;
-    vcfc:fieldNumber "A" ;
-    vcfc:fieldSource "VCF-Core-examples" ;
-    vcfc:fieldType vcfc:FloatType ;
-    vcfc:fieldVersion "1.0" ;
-    vcfc:hasAttribute <file://example-vcf45-features.vcf#header/line/14/attribute/1>,
-        <file://example-vcf45-features.vcf#header/line/14/attribute/2>,
-        <file://example-vcf45-features.vcf#header/line/14/attribute/3>,
-        <file://example-vcf45-features.vcf#header/line/14/attribute/4>,
-        <file://example-vcf45-features.vcf#header/line/14/attribute/5>,
-        <file://example-vcf45-features.vcf#header/line/14/attribute/6> ;
-    vcfc:headerKey "INFO" ;
-    vcfc:headerValue "<ID=AF,Number=A,Type=Float,Description=\"Example AF\",Source=\"VCF-Core-examples\",Version=\"1.0\">" ;
-    vcfc:lineIndex 14 .
-
 <file://example-vcf45-features.vcf#header/line/6> a vcfc:FILTERHeaderLine ;
     vcfc:fieldDescription "Example quality filter" ;
     vcfc:filterId "q10" ;
@@ -1394,20 +1481,6 @@ ex:samples a vcfc:SampleSet ;
     vcfc:modificationFraction "0.9"^^vcfc:VCFFloat ;
     vcfc:modifiedBaseOffset 0 ;
     vcfc:modifiedResidue chebi:27551 .
-
-<file://example-vcf45-features.vcf#header/line/18> a vcfc:FORMATHeaderLine ;
-    vcfc:fieldDescription "Example GT" ;
-    vcfc:fieldId "GT" ;
-    vcfc:fieldNumber "1" ;
-    vcfc:fieldNumberInteger 1 ;
-    vcfc:fieldType vcfc:StringType ;
-    vcfc:hasAttribute <file://example-vcf45-features.vcf#header/line/18/attribute/1>,
-        <file://example-vcf45-features.vcf#header/line/18/attribute/2>,
-        <file://example-vcf45-features.vcf#header/line/18/attribute/3>,
-        <file://example-vcf45-features.vcf#header/line/18/attribute/4> ;
-    vcfc:headerKey "FORMAT" ;
-    vcfc:headerValue "<ID=GT,Number=1,Type=String,Description=\"Example GT\">" ;
-    vcfc:lineIndex 18 .
 
 <file://example-vcf45-features.vcf#header/line/4> a vcfc:ContigHeaderLine ;
     vcfc:contigId "chr1" ;
@@ -1446,3 +1519,17 @@ ex:samples a vcfc:SampleSet ;
     vcfc:svClaim vcfc:AbundanceAndAdjacencyClaim ;
     vcfc:svLength 20 ;
     vcfc:svType vcfc:SymbolicDeletion .
+
+<file://example-vcf45-features.vcf#header/line/18> a vcfc:FORMATHeaderLine ;
+    vcfc:fieldDescription "Example GT" ;
+    vcfc:fieldId "GT" ;
+    vcfc:fieldNumber "1" ;
+    vcfc:fieldNumberInteger 1 ;
+    vcfc:fieldType vcfc:StringType ;
+    vcfc:hasAttribute <file://example-vcf45-features.vcf#header/line/18/attribute/1>,
+        <file://example-vcf45-features.vcf#header/line/18/attribute/2>,
+        <file://example-vcf45-features.vcf#header/line/18/attribute/3>,
+        <file://example-vcf45-features.vcf#header/line/18/attribute/4> ;
+    vcfc:headerKey "FORMAT" ;
+    vcfc:headerValue "<ID=GT,Number=1,Type=String,Description=\"Example GT\">" ;
+    vcfc:lineIndex 18 .

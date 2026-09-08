@@ -1,0 +1,1905 @@
+@prefix ex: <file://example-vcf45-boundaries.vcf#> .
+@prefix vcfc: <https://w3id.org/vcf-core/vocab#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<file://example-vcf45-boundaries.vcf> a vcfc:VCF45File,
+        vcfc:VCFFile ;
+    vcfc:fileFormat "VCFv4.5" ;
+    vcfc:hasHeader ex:header ;
+    vcfc:hasRecord <file://example-vcf45-boundaries.vcf#record/1>,
+        <file://example-vcf45-boundaries.vcf#record/10>,
+        <file://example-vcf45-boundaries.vcf#record/11>,
+        <file://example-vcf45-boundaries.vcf#record/12>,
+        <file://example-vcf45-boundaries.vcf#record/13>,
+        <file://example-vcf45-boundaries.vcf#record/2>,
+        <file://example-vcf45-boundaries.vcf#record/3>,
+        <file://example-vcf45-boundaries.vcf#record/4>,
+        <file://example-vcf45-boundaries.vcf#record/5>,
+        <file://example-vcf45-boundaries.vcf#record/6>,
+        <file://example-vcf45-boundaries.vcf#record/7>,
+        <file://example-vcf45-boundaries.vcf#record/8>,
+        <file://example-vcf45-boundaries.vcf#record/9> ;
+    vcfc:hasSampleSet ex:samples ;
+    vcfc:referenceGenome "https://example.org/reference.fa" ;
+    vcfc:representationProfile vcfc:ExpandedRepresentation ;
+    vcfc:sourceSoftware "VCF-Core-synthetic-examples" .
+
+<file://example-vcf45-boundaries.vcf#assembly/contig/asm1> a vcfc:AssemblyContig ;
+    vcfc:assemblyContigId "asm1" ;
+    vcfc:declaredInAssembly <file://example-vcf45-boundaries.vcf#header/line/5> .
+
+<file://example-vcf45-boundaries.vcf#call/1> a vcfc:VariantCall ;
+    vcfc:filter "PASS" ;
+    vcfc:filterStatus vcfc:FiltersPassed ;
+    vcfc:formatRaw "GT:AD" ;
+    vcfc:hasFormatKey <file://example-vcf45-boundaries.vcf#call/1/formatKey/1>,
+        <file://example-vcf45-boundaries.vcf#call/1/formatKey/2> ;
+    vcfc:hasInfoValue <file://example-vcf45-boundaries.vcf#call/1/info/AF> ;
+    vcfc:hasSampleCall <file://example-vcf45-boundaries.vcf#sample/1/S1> ;
+    vcfc:infoRaw "AF=0.1" ;
+    vcfc:qual "."^^vcfc:Null .
+
+<file://example-vcf45-boundaries.vcf#call/1/formatKey/1> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/11> ;
+    vcfc:fieldIndex 1 .
+
+<file://example-vcf45-boundaries.vcf#call/1/formatKey/2> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/12> ;
+    vcfc:fieldIndex 2 .
+
+<file://example-vcf45-boundaries.vcf#call/1/info/AF> a vcfc:InfoFieldValue ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/7> ;
+    vcfc:fieldIndex 1 ;
+    vcfc:fieldValue "0.1" ;
+    vcfc:fieldValueDecimal 0.1 ;
+    vcfc:hasValueItem <file://example-vcf45-boundaries.vcf#call/1/info/AF/item/0> .
+
+<file://example-vcf45-boundaries.vcf#call/1/info/AF/item/0> a vcfc:FieldValueItem ;
+    vcfc:forAllele <file://example-vcf45-boundaries.vcf#record/1/allele/1> ;
+    vcfc:itemValue "0.1"^^vcfc:VCFFloat ;
+    vcfc:valueIndex 0 .
+
+<file://example-vcf45-boundaries.vcf#call/10> a vcfc:VariantCall ;
+    vcfc:filter "PASS" ;
+    vcfc:filterStatus vcfc:FiltersPassed ;
+    vcfc:formatRaw "GT:AD" ;
+    vcfc:hasFormatKey <file://example-vcf45-boundaries.vcf#call/10/formatKey/1>,
+        <file://example-vcf45-boundaries.vcf#call/10/formatKey/2> ;
+    vcfc:hasInfoValue <file://example-vcf45-boundaries.vcf#call/10/info/AF> ;
+    vcfc:hasSampleCall <file://example-vcf45-boundaries.vcf#sample/10/S1> ;
+    vcfc:infoRaw "AF=.,." ;
+    vcfc:qual "."^^vcfc:Null .
+
+<file://example-vcf45-boundaries.vcf#call/10/formatKey/1> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/11> ;
+    vcfc:fieldIndex 1 .
+
+<file://example-vcf45-boundaries.vcf#call/10/formatKey/2> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/12> ;
+    vcfc:fieldIndex 2 .
+
+<file://example-vcf45-boundaries.vcf#call/10/info/AF> a vcfc:InfoFieldValue ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/7> ;
+    vcfc:fieldIndex 1 ;
+    vcfc:fieldValue ".,." ;
+    vcfc:hasValueItem <file://example-vcf45-boundaries.vcf#call/10/info/AF/item/0>,
+        <file://example-vcf45-boundaries.vcf#call/10/info/AF/item/1> .
+
+<file://example-vcf45-boundaries.vcf#call/10/info/AF/item/0> a vcfc:FieldValueItem ;
+    vcfc:forAllele <file://example-vcf45-boundaries.vcf#record/10/allele/1> ;
+    vcfc:itemValue "."^^vcfc:Null ;
+    vcfc:valueIndex 0 .
+
+<file://example-vcf45-boundaries.vcf#call/10/info/AF/item/1> a vcfc:FieldValueItem ;
+    vcfc:forAllele <file://example-vcf45-boundaries.vcf#record/10/allele/2> ;
+    vcfc:itemValue "."^^vcfc:Null ;
+    vcfc:valueIndex 1 .
+
+<file://example-vcf45-boundaries.vcf#call/11> a vcfc:VariantCall ;
+    vcfc:filter "PASS" ;
+    vcfc:filterStatus vcfc:FiltersPassed ;
+    vcfc:formatRaw "GT:AD" ;
+    vcfc:hasFormatKey <file://example-vcf45-boundaries.vcf#call/11/formatKey/1>,
+        <file://example-vcf45-boundaries.vcf#call/11/formatKey/2> ;
+    vcfc:hasInfoValue <file://example-vcf45-boundaries.vcf#call/11/info/AF> ;
+    vcfc:hasSampleCall <file://example-vcf45-boundaries.vcf#sample/11/S1> ;
+    vcfc:infoRaw "AF=0.5,." ;
+    vcfc:qual "."^^vcfc:Null .
+
+<file://example-vcf45-boundaries.vcf#call/11/formatKey/1> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/11> ;
+    vcfc:fieldIndex 1 .
+
+<file://example-vcf45-boundaries.vcf#call/11/formatKey/2> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/12> ;
+    vcfc:fieldIndex 2 .
+
+<file://example-vcf45-boundaries.vcf#call/11/info/AF> a vcfc:InfoFieldValue ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/7> ;
+    vcfc:fieldIndex 1 ;
+    vcfc:fieldValue "0.5,." ;
+    vcfc:hasValueItem <file://example-vcf45-boundaries.vcf#call/11/info/AF/item/0>,
+        <file://example-vcf45-boundaries.vcf#call/11/info/AF/item/1> .
+
+<file://example-vcf45-boundaries.vcf#call/11/info/AF/item/0> a vcfc:FieldValueItem ;
+    vcfc:forAllele <file://example-vcf45-boundaries.vcf#record/11/allele/1> ;
+    vcfc:itemValue "0.5"^^vcfc:VCFFloat ;
+    vcfc:valueIndex 0 .
+
+<file://example-vcf45-boundaries.vcf#call/11/info/AF/item/1> a vcfc:FieldValueItem ;
+    vcfc:forAllele <file://example-vcf45-boundaries.vcf#record/11/allele/2> ;
+    vcfc:itemValue "."^^vcfc:Null ;
+    vcfc:valueIndex 1 .
+
+<file://example-vcf45-boundaries.vcf#call/12> a vcfc:VariantCall ;
+    vcfc:filter "PASS" ;
+    vcfc:filterStatus vcfc:FiltersPassed ;
+    vcfc:formatRaw "GT:AD" ;
+    vcfc:hasFormatKey <file://example-vcf45-boundaries.vcf#call/12/formatKey/1>,
+        <file://example-vcf45-boundaries.vcf#call/12/formatKey/2> ;
+    vcfc:hasInfoValue <file://example-vcf45-boundaries.vcf#call/12/info/AF> ;
+    vcfc:hasSampleCall <file://example-vcf45-boundaries.vcf#sample/12/S1> ;
+    vcfc:infoRaw "AF=0.1" ;
+    vcfc:qual "."^^vcfc:Null .
+
+<file://example-vcf45-boundaries.vcf#call/12/formatKey/1> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/11> ;
+    vcfc:fieldIndex 1 .
+
+<file://example-vcf45-boundaries.vcf#call/12/formatKey/2> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/12> ;
+    vcfc:fieldIndex 2 .
+
+<file://example-vcf45-boundaries.vcf#call/12/info/AF> a vcfc:InfoFieldValue ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/7> ;
+    vcfc:fieldIndex 1 ;
+    vcfc:fieldValue "0.1" ;
+    vcfc:fieldValueDecimal 0.1 ;
+    vcfc:hasValueItem <file://example-vcf45-boundaries.vcf#call/12/info/AF/item/0> .
+
+<file://example-vcf45-boundaries.vcf#call/12/info/AF/item/0> a vcfc:FieldValueItem ;
+    vcfc:forAllele <file://example-vcf45-boundaries.vcf#record/12/allele/1> ;
+    vcfc:itemValue "0.1"^^vcfc:VCFFloat ;
+    vcfc:valueIndex 0 .
+
+<file://example-vcf45-boundaries.vcf#call/13> a vcfc:VariantCall ;
+    vcfc:filter "PASS" ;
+    vcfc:filterStatus vcfc:FiltersPassed ;
+    vcfc:formatRaw "GT:AD" ;
+    vcfc:hasFormatKey <file://example-vcf45-boundaries.vcf#call/13/formatKey/1>,
+        <file://example-vcf45-boundaries.vcf#call/13/formatKey/2> ;
+    vcfc:hasInfoValue <file://example-vcf45-boundaries.vcf#call/13/info/AF> ;
+    vcfc:hasSampleCall <file://example-vcf45-boundaries.vcf#sample/13/S1> ;
+    vcfc:infoRaw "AF=0.2" ;
+    vcfc:qual "."^^vcfc:Null .
+
+<file://example-vcf45-boundaries.vcf#call/13/formatKey/1> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/11> ;
+    vcfc:fieldIndex 1 .
+
+<file://example-vcf45-boundaries.vcf#call/13/formatKey/2> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/12> ;
+    vcfc:fieldIndex 2 .
+
+<file://example-vcf45-boundaries.vcf#call/13/info/AF> a vcfc:InfoFieldValue ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/7> ;
+    vcfc:fieldIndex 1 ;
+    vcfc:fieldValue "0.2" ;
+    vcfc:fieldValueDecimal 0.2 ;
+    vcfc:hasValueItem <file://example-vcf45-boundaries.vcf#call/13/info/AF/item/0> .
+
+<file://example-vcf45-boundaries.vcf#call/13/info/AF/item/0> a vcfc:FieldValueItem ;
+    vcfc:forAllele <file://example-vcf45-boundaries.vcf#record/13/allele/1> ;
+    vcfc:itemValue "0.2"^^vcfc:VCFFloat ;
+    vcfc:valueIndex 0 .
+
+<file://example-vcf45-boundaries.vcf#call/2> a vcfc:VariantCall ;
+    vcfc:filter "PASS" ;
+    vcfc:filterStatus vcfc:FiltersPassed ;
+    vcfc:formatRaw "GT:AD" ;
+    vcfc:hasFormatKey <file://example-vcf45-boundaries.vcf#call/2/formatKey/1>,
+        <file://example-vcf45-boundaries.vcf#call/2/formatKey/2> ;
+    vcfc:hasInfoValue <file://example-vcf45-boundaries.vcf#call/2/info/AF> ;
+    vcfc:hasSampleCall <file://example-vcf45-boundaries.vcf#sample/2/S1> ;
+    vcfc:infoRaw "AF=0.3" ;
+    vcfc:qual "."^^vcfc:Null .
+
+<file://example-vcf45-boundaries.vcf#call/2/formatKey/1> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/11> ;
+    vcfc:fieldIndex 1 .
+
+<file://example-vcf45-boundaries.vcf#call/2/formatKey/2> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/12> ;
+    vcfc:fieldIndex 2 .
+
+<file://example-vcf45-boundaries.vcf#call/2/info/AF> a vcfc:InfoFieldValue ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/7> ;
+    vcfc:fieldIndex 1 ;
+    vcfc:fieldValue "0.3" ;
+    vcfc:fieldValueDecimal 0.3 ;
+    vcfc:hasValueItem <file://example-vcf45-boundaries.vcf#call/2/info/AF/item/0> .
+
+<file://example-vcf45-boundaries.vcf#call/2/info/AF/item/0> a vcfc:FieldValueItem ;
+    vcfc:forAllele <file://example-vcf45-boundaries.vcf#record/2/allele/1> ;
+    vcfc:itemValue "0.3"^^vcfc:VCFFloat ;
+    vcfc:valueIndex 0 .
+
+<file://example-vcf45-boundaries.vcf#call/3> a vcfc:VariantCall ;
+    vcfc:filter "PASS" ;
+    vcfc:filterStatus vcfc:FiltersPassed ;
+    vcfc:formatRaw "GT:AD" ;
+    vcfc:hasFormatKey <file://example-vcf45-boundaries.vcf#call/3/formatKey/1>,
+        <file://example-vcf45-boundaries.vcf#call/3/formatKey/2> ;
+    vcfc:hasInfoValue <file://example-vcf45-boundaries.vcf#call/3/info/AF> ;
+    vcfc:hasSampleCall <file://example-vcf45-boundaries.vcf#sample/3/S1> ;
+    vcfc:infoRaw "AF=0.4" ;
+    vcfc:qual "."^^vcfc:Null .
+
+<file://example-vcf45-boundaries.vcf#call/3/formatKey/1> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/11> ;
+    vcfc:fieldIndex 1 .
+
+<file://example-vcf45-boundaries.vcf#call/3/formatKey/2> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/12> ;
+    vcfc:fieldIndex 2 .
+
+<file://example-vcf45-boundaries.vcf#call/3/info/AF> a vcfc:InfoFieldValue ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/7> ;
+    vcfc:fieldIndex 1 ;
+    vcfc:fieldValue "0.4" ;
+    vcfc:fieldValueDecimal 0.4 ;
+    vcfc:hasValueItem <file://example-vcf45-boundaries.vcf#call/3/info/AF/item/0> .
+
+<file://example-vcf45-boundaries.vcf#call/3/info/AF/item/0> a vcfc:FieldValueItem ;
+    vcfc:forAllele <file://example-vcf45-boundaries.vcf#record/3/allele/1> ;
+    vcfc:itemValue "0.4"^^vcfc:VCFFloat ;
+    vcfc:valueIndex 0 .
+
+<file://example-vcf45-boundaries.vcf#call/4> a vcfc:VariantCall ;
+    vcfc:filter "PASS" ;
+    vcfc:filterStatus vcfc:FiltersPassed ;
+    vcfc:formatRaw "GT:AD" ;
+    vcfc:hasFormatKey <file://example-vcf45-boundaries.vcf#call/4/formatKey/1>,
+        <file://example-vcf45-boundaries.vcf#call/4/formatKey/2> ;
+    vcfc:hasInfoValue <file://example-vcf45-boundaries.vcf#call/4/info/AF> ;
+    vcfc:hasSampleCall <file://example-vcf45-boundaries.vcf#sample/4/S1> ;
+    vcfc:infoRaw "AF=0.9" ;
+    vcfc:qual "."^^vcfc:Null .
+
+<file://example-vcf45-boundaries.vcf#call/4/formatKey/1> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/11> ;
+    vcfc:fieldIndex 1 .
+
+<file://example-vcf45-boundaries.vcf#call/4/formatKey/2> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/12> ;
+    vcfc:fieldIndex 2 .
+
+<file://example-vcf45-boundaries.vcf#call/4/info/AF> a vcfc:InfoFieldValue ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/7> ;
+    vcfc:fieldIndex 1 ;
+    vcfc:fieldValue "0.9" ;
+    vcfc:fieldValueDecimal 0.9 ;
+    vcfc:hasValueItem <file://example-vcf45-boundaries.vcf#call/4/info/AF/item/0> .
+
+<file://example-vcf45-boundaries.vcf#call/4/info/AF/item/0> a vcfc:FieldValueItem ;
+    vcfc:forAllele <file://example-vcf45-boundaries.vcf#record/4/allele/1> ;
+    vcfc:itemValue "0.9"^^vcfc:VCFFloat ;
+    vcfc:valueIndex 0 .
+
+<file://example-vcf45-boundaries.vcf#call/5> a vcfc:VariantCall ;
+    vcfc:filter "PASS" ;
+    vcfc:filterStatus vcfc:FiltersPassed ;
+    vcfc:formatRaw "GT:AD" ;
+    vcfc:hasFormatKey <file://example-vcf45-boundaries.vcf#call/5/formatKey/1>,
+        <file://example-vcf45-boundaries.vcf#call/5/formatKey/2> ;
+    vcfc:hasInfoValue <file://example-vcf45-boundaries.vcf#call/5/info/AF> ;
+    vcfc:hasSampleCall <file://example-vcf45-boundaries.vcf#sample/5/S1> ;
+    vcfc:infoRaw "AF=0.5" ;
+    vcfc:qual "."^^vcfc:Null .
+
+<file://example-vcf45-boundaries.vcf#call/5/formatKey/1> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/11> ;
+    vcfc:fieldIndex 1 .
+
+<file://example-vcf45-boundaries.vcf#call/5/formatKey/2> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/12> ;
+    vcfc:fieldIndex 2 .
+
+<file://example-vcf45-boundaries.vcf#call/5/info/AF> a vcfc:InfoFieldValue ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/7> ;
+    vcfc:fieldIndex 1 ;
+    vcfc:fieldValue "0.5" ;
+    vcfc:fieldValueDecimal 0.5 ;
+    vcfc:hasValueItem <file://example-vcf45-boundaries.vcf#call/5/info/AF/item/0> .
+
+<file://example-vcf45-boundaries.vcf#call/5/info/AF/item/0> a vcfc:FieldValueItem ;
+    vcfc:forAllele <file://example-vcf45-boundaries.vcf#record/5/allele/1> ;
+    vcfc:itemValue "0.5"^^vcfc:VCFFloat ;
+    vcfc:valueIndex 0 .
+
+<file://example-vcf45-boundaries.vcf#call/6> a vcfc:VariantCall ;
+    vcfc:filter "PASS" ;
+    vcfc:filterStatus vcfc:FiltersPassed ;
+    vcfc:formatRaw "GT:AD" ;
+    vcfc:hasFormatKey <file://example-vcf45-boundaries.vcf#call/6/formatKey/1>,
+        <file://example-vcf45-boundaries.vcf#call/6/formatKey/2> ;
+    vcfc:hasInfoValue <file://example-vcf45-boundaries.vcf#call/6/info/AF>,
+        <file://example-vcf45-boundaries.vcf#call/6/info/SVCLAIM>,
+        <file://example-vcf45-boundaries.vcf#call/6/info/SVLEN> ;
+    vcfc:hasSampleCall <file://example-vcf45-boundaries.vcf#sample/6/S1> ;
+    vcfc:infoRaw "AF=0.6;SVLEN=10;SVCLAIM=D" ;
+    vcfc:qual "."^^vcfc:Null .
+
+<file://example-vcf45-boundaries.vcf#call/6/formatKey/1> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/11> ;
+    vcfc:fieldIndex 1 .
+
+<file://example-vcf45-boundaries.vcf#call/6/formatKey/2> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/12> ;
+    vcfc:fieldIndex 2 .
+
+<file://example-vcf45-boundaries.vcf#call/6/info/AF> a vcfc:InfoFieldValue ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/7> ;
+    vcfc:fieldIndex 1 ;
+    vcfc:fieldValue "0.6" ;
+    vcfc:fieldValueDecimal 0.6 ;
+    vcfc:hasValueItem <file://example-vcf45-boundaries.vcf#call/6/info/AF/item/0> .
+
+<file://example-vcf45-boundaries.vcf#call/6/info/AF/item/0> a vcfc:FieldValueItem ;
+    vcfc:forAllele <file://example-vcf45-boundaries.vcf#record/6/allele/1> ;
+    vcfc:itemValue "0.6"^^vcfc:VCFFloat ;
+    vcfc:valueIndex 0 .
+
+<file://example-vcf45-boundaries.vcf#call/6/info/SVCLAIM> a vcfc:InfoFieldValue ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/9> ;
+    vcfc:fieldIndex 3 ;
+    vcfc:fieldValue "D" ;
+    vcfc:hasValueItem <file://example-vcf45-boundaries.vcf#call/6/info/SVCLAIM/item/0> .
+
+<file://example-vcf45-boundaries.vcf#call/6/info/SVCLAIM/item/0> a vcfc:FieldValueItem ;
+    vcfc:forAllele <file://example-vcf45-boundaries.vcf#record/6/allele/1> ;
+    vcfc:itemValue "D" ;
+    vcfc:valueIndex 0 .
+
+<file://example-vcf45-boundaries.vcf#call/6/info/SVLEN> a vcfc:InfoFieldValue ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/8> ;
+    vcfc:fieldIndex 2 ;
+    vcfc:fieldValue "10" ;
+    vcfc:fieldValueInteger 10 ;
+    vcfc:hasValueItem <file://example-vcf45-boundaries.vcf#call/6/info/SVLEN/item/0> .
+
+<file://example-vcf45-boundaries.vcf#call/6/info/SVLEN/item/0> a vcfc:FieldValueItem ;
+    vcfc:forAllele <file://example-vcf45-boundaries.vcf#record/6/allele/1> ;
+    vcfc:itemValue 10 ;
+    vcfc:valueIndex 0 .
+
+<file://example-vcf45-boundaries.vcf#call/7> a vcfc:VariantCall ;
+    vcfc:filter "PASS" ;
+    vcfc:filterStatus vcfc:FiltersPassed ;
+    vcfc:formatRaw "GT:AD" ;
+    vcfc:hasFormatKey <file://example-vcf45-boundaries.vcf#call/7/formatKey/1>,
+        <file://example-vcf45-boundaries.vcf#call/7/formatKey/2> ;
+    vcfc:hasInfoValue <file://example-vcf45-boundaries.vcf#call/7/info/AF> ;
+    vcfc:hasSampleCall <file://example-vcf45-boundaries.vcf#sample/7/S1> ;
+    vcfc:infoRaw "AF=0.7" ;
+    vcfc:qual "."^^vcfc:Null .
+
+<file://example-vcf45-boundaries.vcf#call/7/formatKey/1> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/11> ;
+    vcfc:fieldIndex 1 .
+
+<file://example-vcf45-boundaries.vcf#call/7/formatKey/2> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/12> ;
+    vcfc:fieldIndex 2 .
+
+<file://example-vcf45-boundaries.vcf#call/7/info/AF> a vcfc:InfoFieldValue ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/7> ;
+    vcfc:fieldIndex 1 ;
+    vcfc:fieldValue "0.7" ;
+    vcfc:fieldValueDecimal 0.7 ;
+    vcfc:hasValueItem <file://example-vcf45-boundaries.vcf#call/7/info/AF/item/0> .
+
+<file://example-vcf45-boundaries.vcf#call/7/info/AF/item/0> a vcfc:FieldValueItem ;
+    vcfc:forAllele <file://example-vcf45-boundaries.vcf#record/7/allele/1> ;
+    vcfc:itemValue "0.7"^^vcfc:VCFFloat ;
+    vcfc:valueIndex 0 .
+
+<file://example-vcf45-boundaries.vcf#call/8> a vcfc:VariantCall ;
+    vcfc:filter "PASS" ;
+    vcfc:filterStatus vcfc:FiltersPassed ;
+    vcfc:formatRaw "GT:AD" ;
+    vcfc:hasFormatKey <file://example-vcf45-boundaries.vcf#call/8/formatKey/1>,
+        <file://example-vcf45-boundaries.vcf#call/8/formatKey/2> ;
+    vcfc:hasInfoValue <file://example-vcf45-boundaries.vcf#call/8/info/AF>,
+        <file://example-vcf45-boundaries.vcf#call/8/info/NOTE> ;
+    vcfc:hasSampleCall <file://example-vcf45-boundaries.vcf#sample/8/S1> ;
+    vcfc:infoRaw "AF=0.8;NOTE=left%3Bright%3Aend%25" ;
+    vcfc:qual "."^^vcfc:Null .
+
+<file://example-vcf45-boundaries.vcf#call/8/formatKey/1> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/11> ;
+    vcfc:fieldIndex 1 .
+
+<file://example-vcf45-boundaries.vcf#call/8/formatKey/2> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/12> ;
+    vcfc:fieldIndex 2 .
+
+<file://example-vcf45-boundaries.vcf#call/8/info/AF> a vcfc:InfoFieldValue ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/7> ;
+    vcfc:fieldIndex 1 ;
+    vcfc:fieldValue "0.8" ;
+    vcfc:fieldValueDecimal 0.8 ;
+    vcfc:hasValueItem <file://example-vcf45-boundaries.vcf#call/8/info/AF/item/0> .
+
+<file://example-vcf45-boundaries.vcf#call/8/info/AF/item/0> a vcfc:FieldValueItem ;
+    vcfc:forAllele <file://example-vcf45-boundaries.vcf#record/8/allele/1> ;
+    vcfc:itemValue "0.8"^^vcfc:VCFFloat ;
+    vcfc:valueIndex 0 .
+
+<file://example-vcf45-boundaries.vcf#call/8/info/NOTE> a vcfc:InfoFieldValue ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/10> ;
+    vcfc:fieldIndex 2 ;
+    vcfc:fieldValue "left%3Bright%3Aend%25" ;
+    vcfc:hasValueItem <file://example-vcf45-boundaries.vcf#call/8/info/NOTE/item/0> .
+
+<file://example-vcf45-boundaries.vcf#call/8/info/NOTE/item/0> a vcfc:FieldValueItem ;
+    vcfc:decodedValue "left;right:end%" ;
+    vcfc:itemValue "left%3Bright%3Aend%25" ;
+    vcfc:rawValue "left%3Bright%3Aend%25" ;
+    vcfc:valueIndex 0 .
+
+<file://example-vcf45-boundaries.vcf#call/9> a vcfc:VariantCall ;
+    vcfc:filter "PASS" ;
+    vcfc:filterStatus vcfc:FiltersPassed ;
+    vcfc:formatRaw "GT:AD" ;
+    vcfc:hasFormatKey <file://example-vcf45-boundaries.vcf#call/9/formatKey/1>,
+        <file://example-vcf45-boundaries.vcf#call/9/formatKey/2> ;
+    vcfc:hasInfoValue <file://example-vcf45-boundaries.vcf#call/9/info/AF> ;
+    vcfc:hasSampleCall <file://example-vcf45-boundaries.vcf#sample/9/S1> ;
+    vcfc:infoRaw "AF=." ;
+    vcfc:qual "."^^vcfc:Null .
+
+<file://example-vcf45-boundaries.vcf#call/9/formatKey/1> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/11> ;
+    vcfc:fieldIndex 1 .
+
+<file://example-vcf45-boundaries.vcf#call/9/formatKey/2> a vcfc:FormatKey ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/12> ;
+    vcfc:fieldIndex 2 .
+
+<file://example-vcf45-boundaries.vcf#call/9/info/AF> a vcfc:InfoFieldValue ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/7> ;
+    vcfc:fieldIndex 1 ;
+    vcfc:fieldValue "."^^vcfc:Null ;
+    vcfc:hasValueItem <file://example-vcf45-boundaries.vcf#call/9/info/AF/item/0> .
+
+<file://example-vcf45-boundaries.vcf#call/9/info/AF/item/0> a vcfc:FieldValueItem ;
+    vcfc:itemValue "."^^vcfc:Null ;
+    vcfc:valueIndex 0 .
+
+ex:header a vcfc:VCFHeader ;
+    vcfc:hasColumnHeader <file://example-vcf45-boundaries.vcf#header/columns> ;
+    vcfc:hasHeaderLine <file://example-vcf45-boundaries.vcf#header/line/1>,
+        <file://example-vcf45-boundaries.vcf#header/line/10>,
+        <file://example-vcf45-boundaries.vcf#header/line/11>,
+        <file://example-vcf45-boundaries.vcf#header/line/12>,
+        <file://example-vcf45-boundaries.vcf#header/line/2>,
+        <file://example-vcf45-boundaries.vcf#header/line/3>,
+        <file://example-vcf45-boundaries.vcf#header/line/4>,
+        <file://example-vcf45-boundaries.vcf#header/line/5>,
+        <file://example-vcf45-boundaries.vcf#header/line/6>,
+        <file://example-vcf45-boundaries.vcf#header/line/7>,
+        <file://example-vcf45-boundaries.vcf#header/line/8>,
+        <file://example-vcf45-boundaries.vcf#header/line/9> .
+
+<file://example-vcf45-boundaries.vcf#header/columns> a vcfc:ColumnHeaderLine ;
+    vcfc:hasGenotypeColumns <file://example-vcf45-boundaries.vcf#samples/S1> .
+
+<file://example-vcf45-boundaries.vcf#header/line/1> a vcfc:FileFormatHeaderLine ;
+    vcfc:headerKey "fileformat" ;
+    vcfc:headerValue "VCFv4.5" ;
+    vcfc:lineIndex 1 .
+
+<file://example-vcf45-boundaries.vcf#header/line/10/attribute/1> a vcfc:HeaderAttribute ;
+    vcfc:attributeIndex 1 ;
+    vcfc:attributeKey "ID" ;
+    vcfc:attributeValue "NOTE" .
+
+<file://example-vcf45-boundaries.vcf#header/line/10/attribute/2> a vcfc:HeaderAttribute ;
+    vcfc:attributeIndex 2 ;
+    vcfc:attributeKey "Number" ;
+    vcfc:attributeValue "1" .
+
+<file://example-vcf45-boundaries.vcf#header/line/10/attribute/3> a vcfc:HeaderAttribute ;
+    vcfc:attributeIndex 3 ;
+    vcfc:attributeKey "Type" ;
+    vcfc:attributeValue "String" .
+
+<file://example-vcf45-boundaries.vcf#header/line/10/attribute/4> a vcfc:HeaderAttribute ;
+    vcfc:attributeIndex 4 ;
+    vcfc:attributeKey "Description" ;
+    vcfc:attributeValue "Free text with percent-encoded delimiters" .
+
+<file://example-vcf45-boundaries.vcf#header/line/10/attribute/5> a vcfc:HeaderAttribute ;
+    vcfc:attributeIndex 5 ;
+    vcfc:attributeKey "Source" ;
+    vcfc:attributeValue "VCF-Core-examples" .
+
+<file://example-vcf45-boundaries.vcf#header/line/10/attribute/6> a vcfc:HeaderAttribute ;
+    vcfc:attributeIndex 6 ;
+    vcfc:attributeKey "Version" ;
+    vcfc:attributeValue "1.0" .
+
+<file://example-vcf45-boundaries.vcf#header/line/11/attribute/1> a vcfc:HeaderAttribute ;
+    vcfc:attributeIndex 1 ;
+    vcfc:attributeKey "ID" ;
+    vcfc:attributeValue "GT" .
+
+<file://example-vcf45-boundaries.vcf#header/line/11/attribute/2> a vcfc:HeaderAttribute ;
+    vcfc:attributeIndex 2 ;
+    vcfc:attributeKey "Number" ;
+    vcfc:attributeValue "1" .
+
+<file://example-vcf45-boundaries.vcf#header/line/11/attribute/3> a vcfc:HeaderAttribute ;
+    vcfc:attributeIndex 3 ;
+    vcfc:attributeKey "Type" ;
+    vcfc:attributeValue "String" .
+
+<file://example-vcf45-boundaries.vcf#header/line/11/attribute/4> a vcfc:HeaderAttribute ;
+    vcfc:attributeIndex 4 ;
+    vcfc:attributeKey "Description" ;
+    vcfc:attributeValue "Genotype" .
+
+<file://example-vcf45-boundaries.vcf#header/line/12/attribute/1> a vcfc:HeaderAttribute ;
+    vcfc:attributeIndex 1 ;
+    vcfc:attributeKey "ID" ;
+    vcfc:attributeValue "AD" .
+
+<file://example-vcf45-boundaries.vcf#header/line/12/attribute/2> a vcfc:HeaderAttribute ;
+    vcfc:attributeIndex 2 ;
+    vcfc:attributeKey "Number" ;
+    vcfc:attributeValue "R" .
+
+<file://example-vcf45-boundaries.vcf#header/line/12/attribute/3> a vcfc:HeaderAttribute ;
+    vcfc:attributeIndex 3 ;
+    vcfc:attributeKey "Type" ;
+    vcfc:attributeValue "Integer" .
+
+<file://example-vcf45-boundaries.vcf#header/line/12/attribute/4> a vcfc:HeaderAttribute ;
+    vcfc:attributeIndex 4 ;
+    vcfc:attributeKey "Description" ;
+    vcfc:attributeValue "Allelic depths" .
+
+<file://example-vcf45-boundaries.vcf#header/line/2> a vcfc:SourceHeaderLine ;
+    vcfc:headerKey "source" ;
+    vcfc:headerValue "VCF-Core-synthetic-examples" ;
+    vcfc:lineIndex 2 .
+
+<file://example-vcf45-boundaries.vcf#header/line/3> a vcfc:ReferenceHeaderLine ;
+    vcfc:headerKey "reference" ;
+    vcfc:headerValue "https://example.org/reference.fa" ;
+    vcfc:lineIndex 3 .
+
+<file://example-vcf45-boundaries.vcf#header/line/4/attribute/1> a vcfc:HeaderAttribute ;
+    vcfc:attributeIndex 1 ;
+    vcfc:attributeKey "ID" ;
+    vcfc:attributeValue "chr1" .
+
+<file://example-vcf45-boundaries.vcf#header/line/4/attribute/2> a vcfc:HeaderAttribute ;
+    vcfc:attributeIndex 2 ;
+    vcfc:attributeKey "length" ;
+    vcfc:attributeValue "100" .
+
+<file://example-vcf45-boundaries.vcf#header/line/6/attribute/1> a vcfc:HeaderAttribute ;
+    vcfc:attributeIndex 1 ;
+    vcfc:attributeKey "ID" ;
+    vcfc:attributeValue "DEL" .
+
+<file://example-vcf45-boundaries.vcf#header/line/6/attribute/2> a vcfc:HeaderAttribute ;
+    vcfc:attributeIndex 2 ;
+    vcfc:attributeKey "Description" ;
+    vcfc:attributeValue "Synthetic DEL allele" .
+
+<file://example-vcf45-boundaries.vcf#header/line/7/attribute/1> a vcfc:HeaderAttribute ;
+    vcfc:attributeIndex 1 ;
+    vcfc:attributeKey "ID" ;
+    vcfc:attributeValue "AF" .
+
+<file://example-vcf45-boundaries.vcf#header/line/7/attribute/2> a vcfc:HeaderAttribute ;
+    vcfc:attributeIndex 2 ;
+    vcfc:attributeKey "Number" ;
+    vcfc:attributeValue "A" .
+
+<file://example-vcf45-boundaries.vcf#header/line/7/attribute/3> a vcfc:HeaderAttribute ;
+    vcfc:attributeIndex 3 ;
+    vcfc:attributeKey "Type" ;
+    vcfc:attributeValue "Float" .
+
+<file://example-vcf45-boundaries.vcf#header/line/7/attribute/4> a vcfc:HeaderAttribute ;
+    vcfc:attributeIndex 4 ;
+    vcfc:attributeKey "Description" ;
+    vcfc:attributeValue "Allele frequency" .
+
+<file://example-vcf45-boundaries.vcf#header/line/7/attribute/5> a vcfc:HeaderAttribute ;
+    vcfc:attributeIndex 5 ;
+    vcfc:attributeKey "Source" ;
+    vcfc:attributeValue "VCF-Core-examples" .
+
+<file://example-vcf45-boundaries.vcf#header/line/7/attribute/6> a vcfc:HeaderAttribute ;
+    vcfc:attributeIndex 6 ;
+    vcfc:attributeKey "Version" ;
+    vcfc:attributeValue "1.0" .
+
+<file://example-vcf45-boundaries.vcf#header/line/8/attribute/1> a vcfc:HeaderAttribute ;
+    vcfc:attributeIndex 1 ;
+    vcfc:attributeKey "ID" ;
+    vcfc:attributeValue "SVLEN" .
+
+<file://example-vcf45-boundaries.vcf#header/line/8/attribute/2> a vcfc:HeaderAttribute ;
+    vcfc:attributeIndex 2 ;
+    vcfc:attributeKey "Number" ;
+    vcfc:attributeValue "A" .
+
+<file://example-vcf45-boundaries.vcf#header/line/8/attribute/3> a vcfc:HeaderAttribute ;
+    vcfc:attributeIndex 3 ;
+    vcfc:attributeKey "Type" ;
+    vcfc:attributeValue "Integer" .
+
+<file://example-vcf45-boundaries.vcf#header/line/8/attribute/4> a vcfc:HeaderAttribute ;
+    vcfc:attributeIndex 4 ;
+    vcfc:attributeKey "Description" ;
+    vcfc:attributeValue "Structural variant length" .
+
+<file://example-vcf45-boundaries.vcf#header/line/8/attribute/5> a vcfc:HeaderAttribute ;
+    vcfc:attributeIndex 5 ;
+    vcfc:attributeKey "Source" ;
+    vcfc:attributeValue "VCF-Core-examples" .
+
+<file://example-vcf45-boundaries.vcf#header/line/8/attribute/6> a vcfc:HeaderAttribute ;
+    vcfc:attributeIndex 6 ;
+    vcfc:attributeKey "Version" ;
+    vcfc:attributeValue "1.0" .
+
+<file://example-vcf45-boundaries.vcf#header/line/9/attribute/1> a vcfc:HeaderAttribute ;
+    vcfc:attributeIndex 1 ;
+    vcfc:attributeKey "ID" ;
+    vcfc:attributeValue "SVCLAIM" .
+
+<file://example-vcf45-boundaries.vcf#header/line/9/attribute/2> a vcfc:HeaderAttribute ;
+    vcfc:attributeIndex 2 ;
+    vcfc:attributeKey "Number" ;
+    vcfc:attributeValue "A" .
+
+<file://example-vcf45-boundaries.vcf#header/line/9/attribute/3> a vcfc:HeaderAttribute ;
+    vcfc:attributeIndex 3 ;
+    vcfc:attributeKey "Type" ;
+    vcfc:attributeValue "String" .
+
+<file://example-vcf45-boundaries.vcf#header/line/9/attribute/4> a vcfc:HeaderAttribute ;
+    vcfc:attributeIndex 4 ;
+    vcfc:attributeKey "Description" ;
+    vcfc:attributeValue "Structural variant claim" .
+
+<file://example-vcf45-boundaries.vcf#header/line/9/attribute/5> a vcfc:HeaderAttribute ;
+    vcfc:attributeIndex 5 ;
+    vcfc:attributeKey "Source" ;
+    vcfc:attributeValue "VCF-Core-examples" .
+
+<file://example-vcf45-boundaries.vcf#header/line/9/attribute/6> a vcfc:HeaderAttribute ;
+    vcfc:attributeIndex 6 ;
+    vcfc:attributeKey "Version" ;
+    vcfc:attributeValue "1.0" .
+
+<file://example-vcf45-boundaries.vcf#record/1> a vcfc:VCFRecord ;
+    vcfc:alt "A" ;
+    vcfc:chrom "chr1" ;
+    vcfc:chromosome <file://example-vcf45-boundaries.vcf#header/line/4> ;
+    vcfc:hasAltAllele <file://example-vcf45-boundaries.vcf#record/1/allele/1> ;
+    vcfc:hasCall <file://example-vcf45-boundaries.vcf#call/1> ;
+    vcfc:hasPaddingInterpretation <file://example-vcf45-boundaries.vcf#record/1/padding> ;
+    vcfc:hasReferenceAllele <file://example-vcf45-boundaries.vcf#record/1/allele/0> ;
+    vcfc:pos 0 ;
+    vcfc:recordId "."^^vcfc:Null ;
+    vcfc:recordIndex 1 ;
+    vcfc:ref "N" .
+
+<file://example-vcf45-boundaries.vcf#record/1/padding> a vcfc:PaddingInterpretation ;
+    vcfc:paddingBaseCount 0 ;
+    vcfc:paddingRule vcfc:PaddingNotDetermined .
+
+<file://example-vcf45-boundaries.vcf#record/10> a vcfc:VCFRecord ;
+    vcfc:alt "T,C" ;
+    vcfc:chrom "chr1" ;
+    vcfc:chromosome <file://example-vcf45-boundaries.vcf#header/line/4> ;
+    vcfc:hasAltAllele <file://example-vcf45-boundaries.vcf#record/10/allele/1>,
+        <file://example-vcf45-boundaries.vcf#record/10/allele/2> ;
+    vcfc:hasCall <file://example-vcf45-boundaries.vcf#call/10> ;
+    vcfc:hasPaddingInterpretation <file://example-vcf45-boundaries.vcf#record/10/padding> ;
+    vcfc:hasReferenceAllele <file://example-vcf45-boundaries.vcf#record/10/allele/0> ;
+    vcfc:pos 96 ;
+    vcfc:recordId "."^^vcfc:Null ;
+    vcfc:recordIndex 10 ;
+    vcfc:ref "A" .
+
+<file://example-vcf45-boundaries.vcf#record/10/padding> a vcfc:PaddingInterpretation ;
+    vcfc:paddingBaseCount 0 ;
+    vcfc:paddingRule vcfc:PaddingNotDetermined .
+
+<file://example-vcf45-boundaries.vcf#record/11> a vcfc:VCFRecord ;
+    vcfc:alt "T,C" ;
+    vcfc:chrom "chr1" ;
+    vcfc:chromosome <file://example-vcf45-boundaries.vcf#header/line/4> ;
+    vcfc:hasAltAllele <file://example-vcf45-boundaries.vcf#record/11/allele/1>,
+        <file://example-vcf45-boundaries.vcf#record/11/allele/2> ;
+    vcfc:hasCall <file://example-vcf45-boundaries.vcf#call/11> ;
+    vcfc:hasPaddingInterpretation <file://example-vcf45-boundaries.vcf#record/11/padding> ;
+    vcfc:hasReferenceAllele <file://example-vcf45-boundaries.vcf#record/11/allele/0> ;
+    vcfc:pos 97 ;
+    vcfc:recordId "."^^vcfc:Null ;
+    vcfc:recordIndex 11 ;
+    vcfc:ref "A" .
+
+<file://example-vcf45-boundaries.vcf#record/11/padding> a vcfc:PaddingInterpretation ;
+    vcfc:paddingBaseCount 0 ;
+    vcfc:paddingRule vcfc:PaddingNotDetermined .
+
+<file://example-vcf45-boundaries.vcf#record/12> a vcfc:VCFRecord ;
+    vcfc:alt "A" ;
+    vcfc:chrom "chr1" ;
+    vcfc:chromosome <file://example-vcf45-boundaries.vcf#header/line/4> ;
+    vcfc:hasAltAllele <file://example-vcf45-boundaries.vcf#record/12/allele/1> ;
+    vcfc:hasCall <file://example-vcf45-boundaries.vcf#call/12> ;
+    vcfc:hasPaddingInterpretation <file://example-vcf45-boundaries.vcf#record/12/padding> ;
+    vcfc:hasReferenceAllele <file://example-vcf45-boundaries.vcf#record/12/allele/0> ;
+    vcfc:pos 101 ;
+    vcfc:recordId "."^^vcfc:Null ;
+    vcfc:recordIndex 12 ;
+    vcfc:ref "N" .
+
+<file://example-vcf45-boundaries.vcf#record/12/padding> a vcfc:PaddingInterpretation ;
+    vcfc:paddingBaseCount 0 ;
+    vcfc:paddingRule vcfc:PaddingNotDetermined .
+
+<file://example-vcf45-boundaries.vcf#record/13> a vcfc:VCFRecord ;
+    vcfc:alt "T" ;
+    vcfc:chrom "<asm1>" ;
+    vcfc:chromAssemblyContig <file://example-vcf45-boundaries.vcf#assembly/contig/asm1> ;
+    vcfc:hasAltAllele <file://example-vcf45-boundaries.vcf#record/13/allele/1> ;
+    vcfc:hasCall <file://example-vcf45-boundaries.vcf#call/13> ;
+    vcfc:hasPaddingInterpretation <file://example-vcf45-boundaries.vcf#record/13/padding> ;
+    vcfc:hasReferenceAllele <file://example-vcf45-boundaries.vcf#record/13/allele/0> ;
+    vcfc:pos 10 ;
+    vcfc:recordId "."^^vcfc:Null ;
+    vcfc:recordIndex 13 ;
+    vcfc:ref "A" .
+
+<file://example-vcf45-boundaries.vcf#record/13/padding> a vcfc:PaddingInterpretation ;
+    vcfc:paddingBaseCount 0 ;
+    vcfc:paddingRule vcfc:PaddingNotDetermined .
+
+<file://example-vcf45-boundaries.vcf#record/2> a vcfc:VCFRecord ;
+    vcfc:alt "T" ;
+    vcfc:chrom "chr1" ;
+    vcfc:chromosome <file://example-vcf45-boundaries.vcf#header/line/4> ;
+    vcfc:hasAltAllele <file://example-vcf45-boundaries.vcf#record/2/allele/1> ;
+    vcfc:hasCall <file://example-vcf45-boundaries.vcf#call/2> ;
+    vcfc:hasPaddingInterpretation <file://example-vcf45-boundaries.vcf#record/2/padding> ;
+    vcfc:hasReferenceAllele <file://example-vcf45-boundaries.vcf#record/2/allele/0> ;
+    vcfc:pos 1 ;
+    vcfc:recordId "."^^vcfc:Null ;
+    vcfc:recordIndex 2 ;
+    vcfc:ref "AT" .
+
+<file://example-vcf45-boundaries.vcf#record/2/padding> a vcfc:PaddingInterpretation ;
+    vcfc:paddingAnchorPosition 2 ;
+    vcfc:paddingBaseCount 1 ;
+    vcfc:paddingRule vcfc:PositionOnePadding ;
+    vcfc:paddingSide vcfc:PaddingAfter .
+
+<file://example-vcf45-boundaries.vcf#record/3> a vcfc:VCFRecord ;
+    vcfc:alt "A" ;
+    vcfc:chrom "chr1" ;
+    vcfc:chromosome <file://example-vcf45-boundaries.vcf#header/line/4> ;
+    vcfc:hasAltAllele <file://example-vcf45-boundaries.vcf#record/3/allele/1> ;
+    vcfc:hasCall <file://example-vcf45-boundaries.vcf#call/3> ;
+    vcfc:hasPaddingInterpretation <file://example-vcf45-boundaries.vcf#record/3/padding> ;
+    vcfc:hasReferenceAllele <file://example-vcf45-boundaries.vcf#record/3/allele/0> ;
+    vcfc:pos 50 ;
+    vcfc:recordId "."^^vcfc:Null ;
+    vcfc:recordIndex 3 ;
+    vcfc:ref "AT" .
+
+<file://example-vcf45-boundaries.vcf#record/3/padding> a vcfc:PaddingInterpretation ;
+    vcfc:paddingAnchorPosition 50 ;
+    vcfc:paddingBaseCount 1 ;
+    vcfc:paddingRule vcfc:SimpleIndelPadding ;
+    vcfc:paddingSide vcfc:PaddingBefore .
+
+<file://example-vcf45-boundaries.vcf#record/4> a vcfc:VCFRecord ;
+    vcfc:alt "T" ;
+    vcfc:chrom "chr1" ;
+    vcfc:chromosome <file://example-vcf45-boundaries.vcf#header/line/4> ;
+    vcfc:hasAltAllele <file://example-vcf45-boundaries.vcf#record/4/allele/1> ;
+    vcfc:hasCall <file://example-vcf45-boundaries.vcf#call/4> ;
+    vcfc:hasPaddingInterpretation <file://example-vcf45-boundaries.vcf#record/4/padding> ;
+    vcfc:hasReferenceAllele <file://example-vcf45-boundaries.vcf#record/4/allele/0> ;
+    vcfc:pos 55 ;
+    vcfc:recordId "."^^vcfc:Null ;
+    vcfc:recordIndex 4 ;
+    vcfc:ref "A" .
+
+<file://example-vcf45-boundaries.vcf#record/4/padding> a vcfc:PaddingInterpretation ;
+    vcfc:paddingBaseCount 0 ;
+    vcfc:paddingRule vcfc:PaddingNotDetermined .
+
+<file://example-vcf45-boundaries.vcf#record/5> a vcfc:VCFRecord ;
+    vcfc:alt "AT" ;
+    vcfc:chrom "chr1" ;
+    vcfc:chromosome <file://example-vcf45-boundaries.vcf#header/line/4> ;
+    vcfc:hasAltAllele <file://example-vcf45-boundaries.vcf#record/5/allele/1> ;
+    vcfc:hasCall <file://example-vcf45-boundaries.vcf#call/5> ;
+    vcfc:hasPaddingInterpretation <file://example-vcf45-boundaries.vcf#record/5/padding> ;
+    vcfc:hasReferenceAllele <file://example-vcf45-boundaries.vcf#record/5/allele/0> ;
+    vcfc:pos 60 ;
+    vcfc:recordId "."^^vcfc:Null ;
+    vcfc:recordIndex 5 ;
+    vcfc:ref "A" .
+
+<file://example-vcf45-boundaries.vcf#record/5/padding> a vcfc:PaddingInterpretation ;
+    vcfc:paddingAnchorPosition 60 ;
+    vcfc:paddingBaseCount 1 ;
+    vcfc:paddingRule vcfc:SimpleIndelPadding ;
+    vcfc:paddingSide vcfc:PaddingBefore .
+
+<file://example-vcf45-boundaries.vcf#record/6> a vcfc:VCFRecord ;
+    vcfc:alt "<DEL>" ;
+    vcfc:chrom "chr1" ;
+    vcfc:chromosome <file://example-vcf45-boundaries.vcf#header/line/4> ;
+    vcfc:hasAltAllele <file://example-vcf45-boundaries.vcf#record/6/allele/1> ;
+    vcfc:hasCall <file://example-vcf45-boundaries.vcf#call/6> ;
+    vcfc:hasPaddingInterpretation <file://example-vcf45-boundaries.vcf#record/6/padding> ;
+    vcfc:hasReferenceAllele <file://example-vcf45-boundaries.vcf#record/6/allele/0> ;
+    vcfc:pos 70 ;
+    vcfc:recordId "."^^vcfc:Null ;
+    vcfc:recordIndex 6 ;
+    vcfc:ref "A" .
+
+<file://example-vcf45-boundaries.vcf#record/6/padding> a vcfc:PaddingInterpretation ;
+    vcfc:paddingAnchorPosition 70 ;
+    vcfc:paddingBaseCount 1 ;
+    vcfc:paddingRule vcfc:SymbolicAllelePadding ;
+    vcfc:paddingSide vcfc:PaddingBefore .
+
+<file://example-vcf45-boundaries.vcf#record/7> a vcfc:VCFRecord ;
+    vcfc:alt "<*>" ;
+    vcfc:chrom "chr1" ;
+    vcfc:chromosome <file://example-vcf45-boundaries.vcf#header/line/4> ;
+    vcfc:hasAltAllele <file://example-vcf45-boundaries.vcf#record/7/allele/1> ;
+    vcfc:hasCall <file://example-vcf45-boundaries.vcf#call/7> ;
+    vcfc:hasPaddingInterpretation <file://example-vcf45-boundaries.vcf#record/7/padding> ;
+    vcfc:hasReferenceAllele <file://example-vcf45-boundaries.vcf#record/7/allele/0> ;
+    vcfc:pos 80 ;
+    vcfc:recordId "."^^vcfc:Null ;
+    vcfc:recordIndex 7 ;
+    vcfc:ref "A" .
+
+<file://example-vcf45-boundaries.vcf#record/7/padding> a vcfc:PaddingInterpretation ;
+    vcfc:paddingBaseCount 0 ;
+    vcfc:paddingRule vcfc:UnspecifiedAlleleNoPadding .
+
+<file://example-vcf45-boundaries.vcf#record/8> a vcfc:VCFRecord ;
+    vcfc:alt "GC" ;
+    vcfc:chrom "chr1" ;
+    vcfc:chromosome <file://example-vcf45-boundaries.vcf#header/line/4> ;
+    vcfc:hasAltAllele <file://example-vcf45-boundaries.vcf#record/8/allele/1> ;
+    vcfc:hasCall <file://example-vcf45-boundaries.vcf#call/8> ;
+    vcfc:hasPaddingInterpretation <file://example-vcf45-boundaries.vcf#record/8/padding> ;
+    vcfc:hasReferenceAllele <file://example-vcf45-boundaries.vcf#record/8/allele/0> ;
+    vcfc:pos 90 ;
+    vcfc:recordId "."^^vcfc:Null ;
+    vcfc:recordIndex 8 ;
+    vcfc:ref "AT" .
+
+<file://example-vcf45-boundaries.vcf#record/8/padding> a vcfc:PaddingInterpretation ;
+    vcfc:paddingBaseCount 0 ;
+    vcfc:paddingRule vcfc:PaddingNotDetermined .
+
+<file://example-vcf45-boundaries.vcf#record/9> a vcfc:VCFRecord ;
+    vcfc:alt "T,C" ;
+    vcfc:chrom "chr1" ;
+    vcfc:chromosome <file://example-vcf45-boundaries.vcf#header/line/4> ;
+    vcfc:hasAltAllele <file://example-vcf45-boundaries.vcf#record/9/allele/1>,
+        <file://example-vcf45-boundaries.vcf#record/9/allele/2> ;
+    vcfc:hasCall <file://example-vcf45-boundaries.vcf#call/9> ;
+    vcfc:hasPaddingInterpretation <file://example-vcf45-boundaries.vcf#record/9/padding> ;
+    vcfc:hasReferenceAllele <file://example-vcf45-boundaries.vcf#record/9/allele/0> ;
+    vcfc:pos 95 ;
+    vcfc:recordId "."^^vcfc:Null ;
+    vcfc:recordIndex 9 ;
+    vcfc:ref "A" .
+
+<file://example-vcf45-boundaries.vcf#record/9/padding> a vcfc:PaddingInterpretation ;
+    vcfc:paddingBaseCount 0 ;
+    vcfc:paddingRule vcfc:PaddingNotDetermined .
+
+<file://example-vcf45-boundaries.vcf#sample/1/S1> a vcfc:SampleCall ;
+    vcfc:forSample <file://example-vcf45-boundaries.vcf#samples/S1> ;
+    vcfc:hasFormatValue <file://example-vcf45-boundaries.vcf#sample/1/S1/fmt/AD>,
+        <file://example-vcf45-boundaries.vcf#sample/1/S1/fmt/GT> ;
+    vcfc:hasGenotype <file://example-vcf45-boundaries.vcf#sample/1/S1/genotype> ;
+    vcfc:sampleFieldsRaw "0/1:5,5" ;
+    vcfc:sampleId "S1" .
+
+<file://example-vcf45-boundaries.vcf#sample/1/S1/fmt/AD> a vcfc:FormatFieldValue ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/12> ;
+    vcfc:fieldIndex 2 ;
+    vcfc:fieldValue "5,5" ;
+    vcfc:hasValueItem <file://example-vcf45-boundaries.vcf#sample/1/S1/fmt/AD/item/0>,
+        <file://example-vcf45-boundaries.vcf#sample/1/S1/fmt/AD/item/1> .
+
+<file://example-vcf45-boundaries.vcf#sample/1/S1/fmt/AD/item/0> a vcfc:FieldValueItem ;
+    vcfc:forAllele <file://example-vcf45-boundaries.vcf#record/1/allele/0> ;
+    vcfc:itemValue 5 ;
+    vcfc:valueIndex 0 .
+
+<file://example-vcf45-boundaries.vcf#sample/1/S1/fmt/AD/item/1> a vcfc:FieldValueItem ;
+    vcfc:forAllele <file://example-vcf45-boundaries.vcf#record/1/allele/1> ;
+    vcfc:itemValue 5 ;
+    vcfc:valueIndex 1 .
+
+<file://example-vcf45-boundaries.vcf#sample/1/S1/fmt/GT> a vcfc:FormatFieldValue ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/11> ;
+    vcfc:fieldIndex 1 ;
+    vcfc:fieldValue "0/1" ;
+    vcfc:hasValueItem <file://example-vcf45-boundaries.vcf#sample/1/S1/fmt/GT/item/0> .
+
+<file://example-vcf45-boundaries.vcf#sample/1/S1/fmt/GT/item/0> a vcfc:FieldValueItem ;
+    vcfc:itemValue "0/1" ;
+    vcfc:valueIndex 0 .
+
+<file://example-vcf45-boundaries.vcf#sample/1/S1/genotype> a vcfc:Genotype ;
+    vcfc:genotypeString "0/1"^^vcfc:GenotypeString ;
+    vcfc:hasAlleleCall <file://example-vcf45-boundaries.vcf#sample/1/S1/genotype/0>,
+        <file://example-vcf45-boundaries.vcf#sample/1/S1/genotype/1> ;
+    vcfc:phasingStatus vcfc:Unphased ;
+    vcfc:ploidy 2 .
+
+<file://example-vcf45-boundaries.vcf#sample/1/S1/genotype/0> a vcfc:GenotypeAlleleCall ;
+    vcfc:callIndex 0 ;
+    vcfc:calledAllele <file://example-vcf45-boundaries.vcf#record/1/allele/0> ;
+    vcfc:isNoCall false ;
+    vcfc:phaseIndicator "/" .
+
+<file://example-vcf45-boundaries.vcf#sample/1/S1/genotype/1> a vcfc:GenotypeAlleleCall ;
+    vcfc:callIndex 1 ;
+    vcfc:calledAllele <file://example-vcf45-boundaries.vcf#record/1/allele/1> ;
+    vcfc:isNoCall false ;
+    vcfc:phaseIndicator "/" .
+
+<file://example-vcf45-boundaries.vcf#sample/10/S1> a vcfc:SampleCall ;
+    vcfc:forSample <file://example-vcf45-boundaries.vcf#samples/S1> ;
+    vcfc:hasFormatValue <file://example-vcf45-boundaries.vcf#sample/10/S1/fmt/AD>,
+        <file://example-vcf45-boundaries.vcf#sample/10/S1/fmt/GT> ;
+    vcfc:hasGenotype <file://example-vcf45-boundaries.vcf#sample/10/S1/genotype> ;
+    vcfc:sampleFieldsRaw "0/1:3,4,0" ;
+    vcfc:sampleId "S1" .
+
+<file://example-vcf45-boundaries.vcf#sample/10/S1/fmt/AD> a vcfc:FormatFieldValue ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/12> ;
+    vcfc:fieldIndex 2 ;
+    vcfc:fieldValue "3,4,0" ;
+    vcfc:hasValueItem <file://example-vcf45-boundaries.vcf#sample/10/S1/fmt/AD/item/0>,
+        <file://example-vcf45-boundaries.vcf#sample/10/S1/fmt/AD/item/1>,
+        <file://example-vcf45-boundaries.vcf#sample/10/S1/fmt/AD/item/2> .
+
+<file://example-vcf45-boundaries.vcf#sample/10/S1/fmt/AD/item/0> a vcfc:FieldValueItem ;
+    vcfc:forAllele <file://example-vcf45-boundaries.vcf#record/10/allele/0> ;
+    vcfc:itemValue 3 ;
+    vcfc:valueIndex 0 .
+
+<file://example-vcf45-boundaries.vcf#sample/10/S1/fmt/AD/item/1> a vcfc:FieldValueItem ;
+    vcfc:forAllele <file://example-vcf45-boundaries.vcf#record/10/allele/1> ;
+    vcfc:itemValue 4 ;
+    vcfc:valueIndex 1 .
+
+<file://example-vcf45-boundaries.vcf#sample/10/S1/fmt/AD/item/2> a vcfc:FieldValueItem ;
+    vcfc:forAllele <file://example-vcf45-boundaries.vcf#record/10/allele/2> ;
+    vcfc:itemValue 0 ;
+    vcfc:valueIndex 2 .
+
+<file://example-vcf45-boundaries.vcf#sample/10/S1/fmt/GT> a vcfc:FormatFieldValue ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/11> ;
+    vcfc:fieldIndex 1 ;
+    vcfc:fieldValue "0/1" ;
+    vcfc:hasValueItem <file://example-vcf45-boundaries.vcf#sample/10/S1/fmt/GT/item/0> .
+
+<file://example-vcf45-boundaries.vcf#sample/10/S1/fmt/GT/item/0> a vcfc:FieldValueItem ;
+    vcfc:itemValue "0/1" ;
+    vcfc:valueIndex 0 .
+
+<file://example-vcf45-boundaries.vcf#sample/10/S1/genotype> a vcfc:Genotype ;
+    vcfc:genotypeString "0/1"^^vcfc:GenotypeString ;
+    vcfc:hasAlleleCall <file://example-vcf45-boundaries.vcf#sample/10/S1/genotype/0>,
+        <file://example-vcf45-boundaries.vcf#sample/10/S1/genotype/1> ;
+    vcfc:phasingStatus vcfc:Unphased ;
+    vcfc:ploidy 2 .
+
+<file://example-vcf45-boundaries.vcf#sample/10/S1/genotype/0> a vcfc:GenotypeAlleleCall ;
+    vcfc:callIndex 0 ;
+    vcfc:calledAllele <file://example-vcf45-boundaries.vcf#record/10/allele/0> ;
+    vcfc:isNoCall false ;
+    vcfc:phaseIndicator "/" .
+
+<file://example-vcf45-boundaries.vcf#sample/10/S1/genotype/1> a vcfc:GenotypeAlleleCall ;
+    vcfc:callIndex 1 ;
+    vcfc:calledAllele <file://example-vcf45-boundaries.vcf#record/10/allele/1> ;
+    vcfc:isNoCall false ;
+    vcfc:phaseIndicator "/" .
+
+<file://example-vcf45-boundaries.vcf#sample/11/S1> a vcfc:SampleCall ;
+    vcfc:forSample <file://example-vcf45-boundaries.vcf#samples/S1> ;
+    vcfc:hasFormatValue <file://example-vcf45-boundaries.vcf#sample/11/S1/fmt/AD>,
+        <file://example-vcf45-boundaries.vcf#sample/11/S1/fmt/GT> ;
+    vcfc:hasGenotype <file://example-vcf45-boundaries.vcf#sample/11/S1/genotype> ;
+    vcfc:sampleFieldsRaw "0/1:3,4,0" ;
+    vcfc:sampleId "S1" .
+
+<file://example-vcf45-boundaries.vcf#sample/11/S1/fmt/AD> a vcfc:FormatFieldValue ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/12> ;
+    vcfc:fieldIndex 2 ;
+    vcfc:fieldValue "3,4,0" ;
+    vcfc:hasValueItem <file://example-vcf45-boundaries.vcf#sample/11/S1/fmt/AD/item/0>,
+        <file://example-vcf45-boundaries.vcf#sample/11/S1/fmt/AD/item/1>,
+        <file://example-vcf45-boundaries.vcf#sample/11/S1/fmt/AD/item/2> .
+
+<file://example-vcf45-boundaries.vcf#sample/11/S1/fmt/AD/item/0> a vcfc:FieldValueItem ;
+    vcfc:forAllele <file://example-vcf45-boundaries.vcf#record/11/allele/0> ;
+    vcfc:itemValue 3 ;
+    vcfc:valueIndex 0 .
+
+<file://example-vcf45-boundaries.vcf#sample/11/S1/fmt/AD/item/1> a vcfc:FieldValueItem ;
+    vcfc:forAllele <file://example-vcf45-boundaries.vcf#record/11/allele/1> ;
+    vcfc:itemValue 4 ;
+    vcfc:valueIndex 1 .
+
+<file://example-vcf45-boundaries.vcf#sample/11/S1/fmt/AD/item/2> a vcfc:FieldValueItem ;
+    vcfc:forAllele <file://example-vcf45-boundaries.vcf#record/11/allele/2> ;
+    vcfc:itemValue 0 ;
+    vcfc:valueIndex 2 .
+
+<file://example-vcf45-boundaries.vcf#sample/11/S1/fmt/GT> a vcfc:FormatFieldValue ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/11> ;
+    vcfc:fieldIndex 1 ;
+    vcfc:fieldValue "0/1" ;
+    vcfc:hasValueItem <file://example-vcf45-boundaries.vcf#sample/11/S1/fmt/GT/item/0> .
+
+<file://example-vcf45-boundaries.vcf#sample/11/S1/fmt/GT/item/0> a vcfc:FieldValueItem ;
+    vcfc:itemValue "0/1" ;
+    vcfc:valueIndex 0 .
+
+<file://example-vcf45-boundaries.vcf#sample/11/S1/genotype> a vcfc:Genotype ;
+    vcfc:genotypeString "0/1"^^vcfc:GenotypeString ;
+    vcfc:hasAlleleCall <file://example-vcf45-boundaries.vcf#sample/11/S1/genotype/0>,
+        <file://example-vcf45-boundaries.vcf#sample/11/S1/genotype/1> ;
+    vcfc:phasingStatus vcfc:Unphased ;
+    vcfc:ploidy 2 .
+
+<file://example-vcf45-boundaries.vcf#sample/11/S1/genotype/0> a vcfc:GenotypeAlleleCall ;
+    vcfc:callIndex 0 ;
+    vcfc:calledAllele <file://example-vcf45-boundaries.vcf#record/11/allele/0> ;
+    vcfc:isNoCall false ;
+    vcfc:phaseIndicator "/" .
+
+<file://example-vcf45-boundaries.vcf#sample/11/S1/genotype/1> a vcfc:GenotypeAlleleCall ;
+    vcfc:callIndex 1 ;
+    vcfc:calledAllele <file://example-vcf45-boundaries.vcf#record/11/allele/1> ;
+    vcfc:isNoCall false ;
+    vcfc:phaseIndicator "/" .
+
+<file://example-vcf45-boundaries.vcf#sample/12/S1> a vcfc:SampleCall ;
+    vcfc:forSample <file://example-vcf45-boundaries.vcf#samples/S1> ;
+    vcfc:hasFormatValue <file://example-vcf45-boundaries.vcf#sample/12/S1/fmt/AD>,
+        <file://example-vcf45-boundaries.vcf#sample/12/S1/fmt/GT> ;
+    vcfc:hasGenotype <file://example-vcf45-boundaries.vcf#sample/12/S1/genotype> ;
+    vcfc:sampleFieldsRaw "0/1:5,5" ;
+    vcfc:sampleId "S1" .
+
+<file://example-vcf45-boundaries.vcf#sample/12/S1/fmt/AD> a vcfc:FormatFieldValue ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/12> ;
+    vcfc:fieldIndex 2 ;
+    vcfc:fieldValue "5,5" ;
+    vcfc:hasValueItem <file://example-vcf45-boundaries.vcf#sample/12/S1/fmt/AD/item/0>,
+        <file://example-vcf45-boundaries.vcf#sample/12/S1/fmt/AD/item/1> .
+
+<file://example-vcf45-boundaries.vcf#sample/12/S1/fmt/AD/item/0> a vcfc:FieldValueItem ;
+    vcfc:forAllele <file://example-vcf45-boundaries.vcf#record/12/allele/0> ;
+    vcfc:itemValue 5 ;
+    vcfc:valueIndex 0 .
+
+<file://example-vcf45-boundaries.vcf#sample/12/S1/fmt/AD/item/1> a vcfc:FieldValueItem ;
+    vcfc:forAllele <file://example-vcf45-boundaries.vcf#record/12/allele/1> ;
+    vcfc:itemValue 5 ;
+    vcfc:valueIndex 1 .
+
+<file://example-vcf45-boundaries.vcf#sample/12/S1/fmt/GT> a vcfc:FormatFieldValue ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/11> ;
+    vcfc:fieldIndex 1 ;
+    vcfc:fieldValue "0/1" ;
+    vcfc:hasValueItem <file://example-vcf45-boundaries.vcf#sample/12/S1/fmt/GT/item/0> .
+
+<file://example-vcf45-boundaries.vcf#sample/12/S1/fmt/GT/item/0> a vcfc:FieldValueItem ;
+    vcfc:itemValue "0/1" ;
+    vcfc:valueIndex 0 .
+
+<file://example-vcf45-boundaries.vcf#sample/12/S1/genotype> a vcfc:Genotype ;
+    vcfc:genotypeString "0/1"^^vcfc:GenotypeString ;
+    vcfc:hasAlleleCall <file://example-vcf45-boundaries.vcf#sample/12/S1/genotype/0>,
+        <file://example-vcf45-boundaries.vcf#sample/12/S1/genotype/1> ;
+    vcfc:phasingStatus vcfc:Unphased ;
+    vcfc:ploidy 2 .
+
+<file://example-vcf45-boundaries.vcf#sample/12/S1/genotype/0> a vcfc:GenotypeAlleleCall ;
+    vcfc:callIndex 0 ;
+    vcfc:calledAllele <file://example-vcf45-boundaries.vcf#record/12/allele/0> ;
+    vcfc:isNoCall false ;
+    vcfc:phaseIndicator "/" .
+
+<file://example-vcf45-boundaries.vcf#sample/12/S1/genotype/1> a vcfc:GenotypeAlleleCall ;
+    vcfc:callIndex 1 ;
+    vcfc:calledAllele <file://example-vcf45-boundaries.vcf#record/12/allele/1> ;
+    vcfc:isNoCall false ;
+    vcfc:phaseIndicator "/" .
+
+<file://example-vcf45-boundaries.vcf#sample/13/S1> a vcfc:SampleCall ;
+    vcfc:forSample <file://example-vcf45-boundaries.vcf#samples/S1> ;
+    vcfc:hasFormatValue <file://example-vcf45-boundaries.vcf#sample/13/S1/fmt/AD>,
+        <file://example-vcf45-boundaries.vcf#sample/13/S1/fmt/GT> ;
+    vcfc:hasGenotype <file://example-vcf45-boundaries.vcf#sample/13/S1/genotype> ;
+    vcfc:sampleFieldsRaw "0/1:4,6" ;
+    vcfc:sampleId "S1" .
+
+<file://example-vcf45-boundaries.vcf#sample/13/S1/fmt/AD> a vcfc:FormatFieldValue ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/12> ;
+    vcfc:fieldIndex 2 ;
+    vcfc:fieldValue "4,6" ;
+    vcfc:hasValueItem <file://example-vcf45-boundaries.vcf#sample/13/S1/fmt/AD/item/0>,
+        <file://example-vcf45-boundaries.vcf#sample/13/S1/fmt/AD/item/1> .
+
+<file://example-vcf45-boundaries.vcf#sample/13/S1/fmt/AD/item/0> a vcfc:FieldValueItem ;
+    vcfc:forAllele <file://example-vcf45-boundaries.vcf#record/13/allele/0> ;
+    vcfc:itemValue 4 ;
+    vcfc:valueIndex 0 .
+
+<file://example-vcf45-boundaries.vcf#sample/13/S1/fmt/AD/item/1> a vcfc:FieldValueItem ;
+    vcfc:forAllele <file://example-vcf45-boundaries.vcf#record/13/allele/1> ;
+    vcfc:itemValue 6 ;
+    vcfc:valueIndex 1 .
+
+<file://example-vcf45-boundaries.vcf#sample/13/S1/fmt/GT> a vcfc:FormatFieldValue ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/11> ;
+    vcfc:fieldIndex 1 ;
+    vcfc:fieldValue "0/1" ;
+    vcfc:hasValueItem <file://example-vcf45-boundaries.vcf#sample/13/S1/fmt/GT/item/0> .
+
+<file://example-vcf45-boundaries.vcf#sample/13/S1/fmt/GT/item/0> a vcfc:FieldValueItem ;
+    vcfc:itemValue "0/1" ;
+    vcfc:valueIndex 0 .
+
+<file://example-vcf45-boundaries.vcf#sample/13/S1/genotype> a vcfc:Genotype ;
+    vcfc:genotypeString "0/1"^^vcfc:GenotypeString ;
+    vcfc:hasAlleleCall <file://example-vcf45-boundaries.vcf#sample/13/S1/genotype/0>,
+        <file://example-vcf45-boundaries.vcf#sample/13/S1/genotype/1> ;
+    vcfc:phasingStatus vcfc:Unphased ;
+    vcfc:ploidy 2 .
+
+<file://example-vcf45-boundaries.vcf#sample/13/S1/genotype/0> a vcfc:GenotypeAlleleCall ;
+    vcfc:callIndex 0 ;
+    vcfc:calledAllele <file://example-vcf45-boundaries.vcf#record/13/allele/0> ;
+    vcfc:isNoCall false ;
+    vcfc:phaseIndicator "/" .
+
+<file://example-vcf45-boundaries.vcf#sample/13/S1/genotype/1> a vcfc:GenotypeAlleleCall ;
+    vcfc:callIndex 1 ;
+    vcfc:calledAllele <file://example-vcf45-boundaries.vcf#record/13/allele/1> ;
+    vcfc:isNoCall false ;
+    vcfc:phaseIndicator "/" .
+
+<file://example-vcf45-boundaries.vcf#sample/2/S1> a vcfc:SampleCall ;
+    vcfc:forSample <file://example-vcf45-boundaries.vcf#samples/S1> ;
+    vcfc:hasFormatValue <file://example-vcf45-boundaries.vcf#sample/2/S1/fmt/AD>,
+        <file://example-vcf45-boundaries.vcf#sample/2/S1/fmt/GT> ;
+    vcfc:hasGenotype <file://example-vcf45-boundaries.vcf#sample/2/S1/genotype> ;
+    vcfc:sampleFieldsRaw "0/1:3,7" ;
+    vcfc:sampleId "S1" .
+
+<file://example-vcf45-boundaries.vcf#sample/2/S1/fmt/AD> a vcfc:FormatFieldValue ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/12> ;
+    vcfc:fieldIndex 2 ;
+    vcfc:fieldValue "3,7" ;
+    vcfc:hasValueItem <file://example-vcf45-boundaries.vcf#sample/2/S1/fmt/AD/item/0>,
+        <file://example-vcf45-boundaries.vcf#sample/2/S1/fmt/AD/item/1> .
+
+<file://example-vcf45-boundaries.vcf#sample/2/S1/fmt/AD/item/0> a vcfc:FieldValueItem ;
+    vcfc:forAllele <file://example-vcf45-boundaries.vcf#record/2/allele/0> ;
+    vcfc:itemValue 3 ;
+    vcfc:valueIndex 0 .
+
+<file://example-vcf45-boundaries.vcf#sample/2/S1/fmt/AD/item/1> a vcfc:FieldValueItem ;
+    vcfc:forAllele <file://example-vcf45-boundaries.vcf#record/2/allele/1> ;
+    vcfc:itemValue 7 ;
+    vcfc:valueIndex 1 .
+
+<file://example-vcf45-boundaries.vcf#sample/2/S1/fmt/GT> a vcfc:FormatFieldValue ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/11> ;
+    vcfc:fieldIndex 1 ;
+    vcfc:fieldValue "0/1" ;
+    vcfc:hasValueItem <file://example-vcf45-boundaries.vcf#sample/2/S1/fmt/GT/item/0> .
+
+<file://example-vcf45-boundaries.vcf#sample/2/S1/fmt/GT/item/0> a vcfc:FieldValueItem ;
+    vcfc:itemValue "0/1" ;
+    vcfc:valueIndex 0 .
+
+<file://example-vcf45-boundaries.vcf#sample/2/S1/genotype> a vcfc:Genotype ;
+    vcfc:genotypeString "0/1"^^vcfc:GenotypeString ;
+    vcfc:hasAlleleCall <file://example-vcf45-boundaries.vcf#sample/2/S1/genotype/0>,
+        <file://example-vcf45-boundaries.vcf#sample/2/S1/genotype/1> ;
+    vcfc:phasingStatus vcfc:Unphased ;
+    vcfc:ploidy 2 .
+
+<file://example-vcf45-boundaries.vcf#sample/2/S1/genotype/0> a vcfc:GenotypeAlleleCall ;
+    vcfc:callIndex 0 ;
+    vcfc:calledAllele <file://example-vcf45-boundaries.vcf#record/2/allele/0> ;
+    vcfc:isNoCall false ;
+    vcfc:phaseIndicator "/" .
+
+<file://example-vcf45-boundaries.vcf#sample/2/S1/genotype/1> a vcfc:GenotypeAlleleCall ;
+    vcfc:callIndex 1 ;
+    vcfc:calledAllele <file://example-vcf45-boundaries.vcf#record/2/allele/1> ;
+    vcfc:isNoCall false ;
+    vcfc:phaseIndicator "/" .
+
+<file://example-vcf45-boundaries.vcf#sample/3/S1> a vcfc:SampleCall ;
+    vcfc:forSample <file://example-vcf45-boundaries.vcf#samples/S1> ;
+    vcfc:hasFormatValue <file://example-vcf45-boundaries.vcf#sample/3/S1/fmt/AD>,
+        <file://example-vcf45-boundaries.vcf#sample/3/S1/fmt/GT> ;
+    vcfc:hasGenotype <file://example-vcf45-boundaries.vcf#sample/3/S1/genotype> ;
+    vcfc:sampleFieldsRaw "0/1:3,7" ;
+    vcfc:sampleId "S1" .
+
+<file://example-vcf45-boundaries.vcf#sample/3/S1/fmt/AD> a vcfc:FormatFieldValue ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/12> ;
+    vcfc:fieldIndex 2 ;
+    vcfc:fieldValue "3,7" ;
+    vcfc:hasValueItem <file://example-vcf45-boundaries.vcf#sample/3/S1/fmt/AD/item/0>,
+        <file://example-vcf45-boundaries.vcf#sample/3/S1/fmt/AD/item/1> .
+
+<file://example-vcf45-boundaries.vcf#sample/3/S1/fmt/AD/item/0> a vcfc:FieldValueItem ;
+    vcfc:forAllele <file://example-vcf45-boundaries.vcf#record/3/allele/0> ;
+    vcfc:itemValue 3 ;
+    vcfc:valueIndex 0 .
+
+<file://example-vcf45-boundaries.vcf#sample/3/S1/fmt/AD/item/1> a vcfc:FieldValueItem ;
+    vcfc:forAllele <file://example-vcf45-boundaries.vcf#record/3/allele/1> ;
+    vcfc:itemValue 7 ;
+    vcfc:valueIndex 1 .
+
+<file://example-vcf45-boundaries.vcf#sample/3/S1/fmt/GT> a vcfc:FormatFieldValue ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/11> ;
+    vcfc:fieldIndex 1 ;
+    vcfc:fieldValue "0/1" ;
+    vcfc:hasValueItem <file://example-vcf45-boundaries.vcf#sample/3/S1/fmt/GT/item/0> .
+
+<file://example-vcf45-boundaries.vcf#sample/3/S1/fmt/GT/item/0> a vcfc:FieldValueItem ;
+    vcfc:itemValue "0/1" ;
+    vcfc:valueIndex 0 .
+
+<file://example-vcf45-boundaries.vcf#sample/3/S1/genotype> a vcfc:Genotype ;
+    vcfc:genotypeString "0/1"^^vcfc:GenotypeString ;
+    vcfc:hasAlleleCall <file://example-vcf45-boundaries.vcf#sample/3/S1/genotype/0>,
+        <file://example-vcf45-boundaries.vcf#sample/3/S1/genotype/1> ;
+    vcfc:phasingStatus vcfc:Unphased ;
+    vcfc:ploidy 2 .
+
+<file://example-vcf45-boundaries.vcf#sample/3/S1/genotype/0> a vcfc:GenotypeAlleleCall ;
+    vcfc:callIndex 0 ;
+    vcfc:calledAllele <file://example-vcf45-boundaries.vcf#record/3/allele/0> ;
+    vcfc:isNoCall false ;
+    vcfc:phaseIndicator "/" .
+
+<file://example-vcf45-boundaries.vcf#sample/3/S1/genotype/1> a vcfc:GenotypeAlleleCall ;
+    vcfc:callIndex 1 ;
+    vcfc:calledAllele <file://example-vcf45-boundaries.vcf#record/3/allele/1> ;
+    vcfc:isNoCall false ;
+    vcfc:phaseIndicator "/" .
+
+<file://example-vcf45-boundaries.vcf#sample/4/S1> a vcfc:SampleCall ;
+    vcfc:forSample <file://example-vcf45-boundaries.vcf#samples/S1> ;
+    vcfc:hasFormatValue <file://example-vcf45-boundaries.vcf#sample/4/S1/fmt/GT> ;
+    vcfc:hasGenotype <file://example-vcf45-boundaries.vcf#sample/4/S1/genotype> ;
+    vcfc:sampleFieldsRaw "0/1" ;
+    vcfc:sampleId "S1" .
+
+<file://example-vcf45-boundaries.vcf#sample/4/S1/fmt/GT> a vcfc:FormatFieldValue ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/11> ;
+    vcfc:fieldIndex 1 ;
+    vcfc:fieldValue "0/1" ;
+    vcfc:hasValueItem <file://example-vcf45-boundaries.vcf#sample/4/S1/fmt/GT/item/0> .
+
+<file://example-vcf45-boundaries.vcf#sample/4/S1/fmt/GT/item/0> a vcfc:FieldValueItem ;
+    vcfc:itemValue "0/1" ;
+    vcfc:valueIndex 0 .
+
+<file://example-vcf45-boundaries.vcf#sample/4/S1/genotype> a vcfc:Genotype ;
+    vcfc:genotypeString "0/1"^^vcfc:GenotypeString ;
+    vcfc:hasAlleleCall <file://example-vcf45-boundaries.vcf#sample/4/S1/genotype/0>,
+        <file://example-vcf45-boundaries.vcf#sample/4/S1/genotype/1> ;
+    vcfc:phasingStatus vcfc:Unphased ;
+    vcfc:ploidy 2 .
+
+<file://example-vcf45-boundaries.vcf#sample/4/S1/genotype/0> a vcfc:GenotypeAlleleCall ;
+    vcfc:callIndex 0 ;
+    vcfc:calledAllele <file://example-vcf45-boundaries.vcf#record/4/allele/0> ;
+    vcfc:isNoCall false ;
+    vcfc:phaseIndicator "/" .
+
+<file://example-vcf45-boundaries.vcf#sample/4/S1/genotype/1> a vcfc:GenotypeAlleleCall ;
+    vcfc:callIndex 1 ;
+    vcfc:calledAllele <file://example-vcf45-boundaries.vcf#record/4/allele/1> ;
+    vcfc:isNoCall false ;
+    vcfc:phaseIndicator "/" .
+
+<file://example-vcf45-boundaries.vcf#sample/5/S1> a vcfc:SampleCall ;
+    vcfc:forSample <file://example-vcf45-boundaries.vcf#samples/S1> ;
+    vcfc:hasFormatValue <file://example-vcf45-boundaries.vcf#sample/5/S1/fmt/AD>,
+        <file://example-vcf45-boundaries.vcf#sample/5/S1/fmt/GT> ;
+    vcfc:hasGenotype <file://example-vcf45-boundaries.vcf#sample/5/S1/genotype> ;
+    vcfc:sampleFieldsRaw "0/1:3,7" ;
+    vcfc:sampleId "S1" .
+
+<file://example-vcf45-boundaries.vcf#sample/5/S1/fmt/AD> a vcfc:FormatFieldValue ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/12> ;
+    vcfc:fieldIndex 2 ;
+    vcfc:fieldValue "3,7" ;
+    vcfc:hasValueItem <file://example-vcf45-boundaries.vcf#sample/5/S1/fmt/AD/item/0>,
+        <file://example-vcf45-boundaries.vcf#sample/5/S1/fmt/AD/item/1> .
+
+<file://example-vcf45-boundaries.vcf#sample/5/S1/fmt/AD/item/0> a vcfc:FieldValueItem ;
+    vcfc:forAllele <file://example-vcf45-boundaries.vcf#record/5/allele/0> ;
+    vcfc:itemValue 3 ;
+    vcfc:valueIndex 0 .
+
+<file://example-vcf45-boundaries.vcf#sample/5/S1/fmt/AD/item/1> a vcfc:FieldValueItem ;
+    vcfc:forAllele <file://example-vcf45-boundaries.vcf#record/5/allele/1> ;
+    vcfc:itemValue 7 ;
+    vcfc:valueIndex 1 .
+
+<file://example-vcf45-boundaries.vcf#sample/5/S1/fmt/GT> a vcfc:FormatFieldValue ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/11> ;
+    vcfc:fieldIndex 1 ;
+    vcfc:fieldValue "0/1" ;
+    vcfc:hasValueItem <file://example-vcf45-boundaries.vcf#sample/5/S1/fmt/GT/item/0> .
+
+<file://example-vcf45-boundaries.vcf#sample/5/S1/fmt/GT/item/0> a vcfc:FieldValueItem ;
+    vcfc:itemValue "0/1" ;
+    vcfc:valueIndex 0 .
+
+<file://example-vcf45-boundaries.vcf#sample/5/S1/genotype> a vcfc:Genotype ;
+    vcfc:genotypeString "0/1"^^vcfc:GenotypeString ;
+    vcfc:hasAlleleCall <file://example-vcf45-boundaries.vcf#sample/5/S1/genotype/0>,
+        <file://example-vcf45-boundaries.vcf#sample/5/S1/genotype/1> ;
+    vcfc:phasingStatus vcfc:Unphased ;
+    vcfc:ploidy 2 .
+
+<file://example-vcf45-boundaries.vcf#sample/5/S1/genotype/0> a vcfc:GenotypeAlleleCall ;
+    vcfc:callIndex 0 ;
+    vcfc:calledAllele <file://example-vcf45-boundaries.vcf#record/5/allele/0> ;
+    vcfc:isNoCall false ;
+    vcfc:phaseIndicator "/" .
+
+<file://example-vcf45-boundaries.vcf#sample/5/S1/genotype/1> a vcfc:GenotypeAlleleCall ;
+    vcfc:callIndex 1 ;
+    vcfc:calledAllele <file://example-vcf45-boundaries.vcf#record/5/allele/1> ;
+    vcfc:isNoCall false ;
+    vcfc:phaseIndicator "/" .
+
+<file://example-vcf45-boundaries.vcf#sample/6/S1> a vcfc:SampleCall ;
+    vcfc:forSample <file://example-vcf45-boundaries.vcf#samples/S1> ;
+    vcfc:hasFormatValue <file://example-vcf45-boundaries.vcf#sample/6/S1/fmt/AD>,
+        <file://example-vcf45-boundaries.vcf#sample/6/S1/fmt/GT> ;
+    vcfc:hasGenotype <file://example-vcf45-boundaries.vcf#sample/6/S1/genotype> ;
+    vcfc:sampleFieldsRaw "0/1:3,7" ;
+    vcfc:sampleId "S1" .
+
+<file://example-vcf45-boundaries.vcf#sample/6/S1/fmt/AD> a vcfc:FormatFieldValue ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/12> ;
+    vcfc:fieldIndex 2 ;
+    vcfc:fieldValue "3,7" ;
+    vcfc:hasValueItem <file://example-vcf45-boundaries.vcf#sample/6/S1/fmt/AD/item/0>,
+        <file://example-vcf45-boundaries.vcf#sample/6/S1/fmt/AD/item/1> .
+
+<file://example-vcf45-boundaries.vcf#sample/6/S1/fmt/AD/item/0> a vcfc:FieldValueItem ;
+    vcfc:forAllele <file://example-vcf45-boundaries.vcf#record/6/allele/0> ;
+    vcfc:itemValue 3 ;
+    vcfc:valueIndex 0 .
+
+<file://example-vcf45-boundaries.vcf#sample/6/S1/fmt/AD/item/1> a vcfc:FieldValueItem ;
+    vcfc:forAllele <file://example-vcf45-boundaries.vcf#record/6/allele/1> ;
+    vcfc:itemValue 7 ;
+    vcfc:valueIndex 1 .
+
+<file://example-vcf45-boundaries.vcf#sample/6/S1/fmt/GT> a vcfc:FormatFieldValue ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/11> ;
+    vcfc:fieldIndex 1 ;
+    vcfc:fieldValue "0/1" ;
+    vcfc:hasValueItem <file://example-vcf45-boundaries.vcf#sample/6/S1/fmt/GT/item/0> .
+
+<file://example-vcf45-boundaries.vcf#sample/6/S1/fmt/GT/item/0> a vcfc:FieldValueItem ;
+    vcfc:itemValue "0/1" ;
+    vcfc:valueIndex 0 .
+
+<file://example-vcf45-boundaries.vcf#sample/6/S1/genotype> a vcfc:Genotype ;
+    vcfc:genotypeString "0/1"^^vcfc:GenotypeString ;
+    vcfc:hasAlleleCall <file://example-vcf45-boundaries.vcf#sample/6/S1/genotype/0>,
+        <file://example-vcf45-boundaries.vcf#sample/6/S1/genotype/1> ;
+    vcfc:phasingStatus vcfc:Unphased ;
+    vcfc:ploidy 2 .
+
+<file://example-vcf45-boundaries.vcf#sample/6/S1/genotype/0> a vcfc:GenotypeAlleleCall ;
+    vcfc:callIndex 0 ;
+    vcfc:calledAllele <file://example-vcf45-boundaries.vcf#record/6/allele/0> ;
+    vcfc:isNoCall false ;
+    vcfc:phaseIndicator "/" .
+
+<file://example-vcf45-boundaries.vcf#sample/6/S1/genotype/1> a vcfc:GenotypeAlleleCall ;
+    vcfc:callIndex 1 ;
+    vcfc:calledAllele <file://example-vcf45-boundaries.vcf#record/6/allele/1> ;
+    vcfc:isNoCall false ;
+    vcfc:phaseIndicator "/" .
+
+<file://example-vcf45-boundaries.vcf#sample/7/S1> a vcfc:SampleCall ;
+    vcfc:forSample <file://example-vcf45-boundaries.vcf#samples/S1> ;
+    vcfc:hasFormatValue <file://example-vcf45-boundaries.vcf#sample/7/S1/fmt/AD>,
+        <file://example-vcf45-boundaries.vcf#sample/7/S1/fmt/GT> ;
+    vcfc:hasGenotype <file://example-vcf45-boundaries.vcf#sample/7/S1/genotype> ;
+    vcfc:sampleFieldsRaw "0/0:8,0" ;
+    vcfc:sampleId "S1" .
+
+<file://example-vcf45-boundaries.vcf#sample/7/S1/fmt/AD> a vcfc:FormatFieldValue ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/12> ;
+    vcfc:fieldIndex 2 ;
+    vcfc:fieldValue "8,0" ;
+    vcfc:hasValueItem <file://example-vcf45-boundaries.vcf#sample/7/S1/fmt/AD/item/0>,
+        <file://example-vcf45-boundaries.vcf#sample/7/S1/fmt/AD/item/1> .
+
+<file://example-vcf45-boundaries.vcf#sample/7/S1/fmt/AD/item/0> a vcfc:FieldValueItem ;
+    vcfc:forAllele <file://example-vcf45-boundaries.vcf#record/7/allele/0> ;
+    vcfc:itemValue 8 ;
+    vcfc:valueIndex 0 .
+
+<file://example-vcf45-boundaries.vcf#sample/7/S1/fmt/AD/item/1> a vcfc:FieldValueItem ;
+    vcfc:forAllele <file://example-vcf45-boundaries.vcf#record/7/allele/1> ;
+    vcfc:itemValue 0 ;
+    vcfc:valueIndex 1 .
+
+<file://example-vcf45-boundaries.vcf#sample/7/S1/fmt/GT> a vcfc:FormatFieldValue ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/11> ;
+    vcfc:fieldIndex 1 ;
+    vcfc:fieldValue "0/0" ;
+    vcfc:hasValueItem <file://example-vcf45-boundaries.vcf#sample/7/S1/fmt/GT/item/0> .
+
+<file://example-vcf45-boundaries.vcf#sample/7/S1/fmt/GT/item/0> a vcfc:FieldValueItem ;
+    vcfc:itemValue "0/0" ;
+    vcfc:valueIndex 0 .
+
+<file://example-vcf45-boundaries.vcf#sample/7/S1/genotype> a vcfc:Genotype ;
+    vcfc:genotypeString "0/0"^^vcfc:GenotypeString ;
+    vcfc:hasAlleleCall <file://example-vcf45-boundaries.vcf#sample/7/S1/genotype/0>,
+        <file://example-vcf45-boundaries.vcf#sample/7/S1/genotype/1> ;
+    vcfc:phasingStatus vcfc:Unphased ;
+    vcfc:ploidy 2 .
+
+<file://example-vcf45-boundaries.vcf#sample/7/S1/genotype/0> a vcfc:GenotypeAlleleCall ;
+    vcfc:callIndex 0 ;
+    vcfc:calledAllele <file://example-vcf45-boundaries.vcf#record/7/allele/0> ;
+    vcfc:isNoCall false ;
+    vcfc:phaseIndicator "/" .
+
+<file://example-vcf45-boundaries.vcf#sample/7/S1/genotype/1> a vcfc:GenotypeAlleleCall ;
+    vcfc:callIndex 1 ;
+    vcfc:calledAllele <file://example-vcf45-boundaries.vcf#record/7/allele/0> ;
+    vcfc:isNoCall false ;
+    vcfc:phaseIndicator "/" .
+
+<file://example-vcf45-boundaries.vcf#sample/8/S1> a vcfc:SampleCall ;
+    vcfc:forSample <file://example-vcf45-boundaries.vcf#samples/S1> ;
+    vcfc:hasFormatValue <file://example-vcf45-boundaries.vcf#sample/8/S1/fmt/AD>,
+        <file://example-vcf45-boundaries.vcf#sample/8/S1/fmt/GT> ;
+    vcfc:hasGenotype <file://example-vcf45-boundaries.vcf#sample/8/S1/genotype> ;
+    vcfc:sampleFieldsRaw "0/1:3,7" ;
+    vcfc:sampleId "S1" .
+
+<file://example-vcf45-boundaries.vcf#sample/8/S1/fmt/AD> a vcfc:FormatFieldValue ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/12> ;
+    vcfc:fieldIndex 2 ;
+    vcfc:fieldValue "3,7" ;
+    vcfc:hasValueItem <file://example-vcf45-boundaries.vcf#sample/8/S1/fmt/AD/item/0>,
+        <file://example-vcf45-boundaries.vcf#sample/8/S1/fmt/AD/item/1> .
+
+<file://example-vcf45-boundaries.vcf#sample/8/S1/fmt/AD/item/0> a vcfc:FieldValueItem ;
+    vcfc:forAllele <file://example-vcf45-boundaries.vcf#record/8/allele/0> ;
+    vcfc:itemValue 3 ;
+    vcfc:valueIndex 0 .
+
+<file://example-vcf45-boundaries.vcf#sample/8/S1/fmt/AD/item/1> a vcfc:FieldValueItem ;
+    vcfc:forAllele <file://example-vcf45-boundaries.vcf#record/8/allele/1> ;
+    vcfc:itemValue 7 ;
+    vcfc:valueIndex 1 .
+
+<file://example-vcf45-boundaries.vcf#sample/8/S1/fmt/GT> a vcfc:FormatFieldValue ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/11> ;
+    vcfc:fieldIndex 1 ;
+    vcfc:fieldValue "0/1" ;
+    vcfc:hasValueItem <file://example-vcf45-boundaries.vcf#sample/8/S1/fmt/GT/item/0> .
+
+<file://example-vcf45-boundaries.vcf#sample/8/S1/fmt/GT/item/0> a vcfc:FieldValueItem ;
+    vcfc:itemValue "0/1" ;
+    vcfc:valueIndex 0 .
+
+<file://example-vcf45-boundaries.vcf#sample/8/S1/genotype> a vcfc:Genotype ;
+    vcfc:genotypeString "0/1"^^vcfc:GenotypeString ;
+    vcfc:hasAlleleCall <file://example-vcf45-boundaries.vcf#sample/8/S1/genotype/0>,
+        <file://example-vcf45-boundaries.vcf#sample/8/S1/genotype/1> ;
+    vcfc:phasingStatus vcfc:Unphased ;
+    vcfc:ploidy 2 .
+
+<file://example-vcf45-boundaries.vcf#sample/8/S1/genotype/0> a vcfc:GenotypeAlleleCall ;
+    vcfc:callIndex 0 ;
+    vcfc:calledAllele <file://example-vcf45-boundaries.vcf#record/8/allele/0> ;
+    vcfc:isNoCall false ;
+    vcfc:phaseIndicator "/" .
+
+<file://example-vcf45-boundaries.vcf#sample/8/S1/genotype/1> a vcfc:GenotypeAlleleCall ;
+    vcfc:callIndex 1 ;
+    vcfc:calledAllele <file://example-vcf45-boundaries.vcf#record/8/allele/1> ;
+    vcfc:isNoCall false ;
+    vcfc:phaseIndicator "/" .
+
+<file://example-vcf45-boundaries.vcf#sample/9/S1> a vcfc:SampleCall ;
+    vcfc:forSample <file://example-vcf45-boundaries.vcf#samples/S1> ;
+    vcfc:hasFormatValue <file://example-vcf45-boundaries.vcf#sample/9/S1/fmt/AD>,
+        <file://example-vcf45-boundaries.vcf#sample/9/S1/fmt/GT> ;
+    vcfc:hasGenotype <file://example-vcf45-boundaries.vcf#sample/9/S1/genotype> ;
+    vcfc:sampleFieldsRaw "0/1:3,4,0" ;
+    vcfc:sampleId "S1" .
+
+<file://example-vcf45-boundaries.vcf#sample/9/S1/fmt/AD> a vcfc:FormatFieldValue ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/12> ;
+    vcfc:fieldIndex 2 ;
+    vcfc:fieldValue "3,4,0" ;
+    vcfc:hasValueItem <file://example-vcf45-boundaries.vcf#sample/9/S1/fmt/AD/item/0>,
+        <file://example-vcf45-boundaries.vcf#sample/9/S1/fmt/AD/item/1>,
+        <file://example-vcf45-boundaries.vcf#sample/9/S1/fmt/AD/item/2> .
+
+<file://example-vcf45-boundaries.vcf#sample/9/S1/fmt/AD/item/0> a vcfc:FieldValueItem ;
+    vcfc:forAllele <file://example-vcf45-boundaries.vcf#record/9/allele/0> ;
+    vcfc:itemValue 3 ;
+    vcfc:valueIndex 0 .
+
+<file://example-vcf45-boundaries.vcf#sample/9/S1/fmt/AD/item/1> a vcfc:FieldValueItem ;
+    vcfc:forAllele <file://example-vcf45-boundaries.vcf#record/9/allele/1> ;
+    vcfc:itemValue 4 ;
+    vcfc:valueIndex 1 .
+
+<file://example-vcf45-boundaries.vcf#sample/9/S1/fmt/AD/item/2> a vcfc:FieldValueItem ;
+    vcfc:forAllele <file://example-vcf45-boundaries.vcf#record/9/allele/2> ;
+    vcfc:itemValue 0 ;
+    vcfc:valueIndex 2 .
+
+<file://example-vcf45-boundaries.vcf#sample/9/S1/fmt/GT> a vcfc:FormatFieldValue ;
+    vcfc:declaredBy <file://example-vcf45-boundaries.vcf#header/line/11> ;
+    vcfc:fieldIndex 1 ;
+    vcfc:fieldValue "0/1" ;
+    vcfc:hasValueItem <file://example-vcf45-boundaries.vcf#sample/9/S1/fmt/GT/item/0> .
+
+<file://example-vcf45-boundaries.vcf#sample/9/S1/fmt/GT/item/0> a vcfc:FieldValueItem ;
+    vcfc:itemValue "0/1" ;
+    vcfc:valueIndex 0 .
+
+<file://example-vcf45-boundaries.vcf#sample/9/S1/genotype> a vcfc:Genotype ;
+    vcfc:genotypeString "0/1"^^vcfc:GenotypeString ;
+    vcfc:hasAlleleCall <file://example-vcf45-boundaries.vcf#sample/9/S1/genotype/0>,
+        <file://example-vcf45-boundaries.vcf#sample/9/S1/genotype/1> ;
+    vcfc:phasingStatus vcfc:Unphased ;
+    vcfc:ploidy 2 .
+
+<file://example-vcf45-boundaries.vcf#sample/9/S1/genotype/0> a vcfc:GenotypeAlleleCall ;
+    vcfc:callIndex 0 ;
+    vcfc:calledAllele <file://example-vcf45-boundaries.vcf#record/9/allele/0> ;
+    vcfc:isNoCall false ;
+    vcfc:phaseIndicator "/" .
+
+<file://example-vcf45-boundaries.vcf#sample/9/S1/genotype/1> a vcfc:GenotypeAlleleCall ;
+    vcfc:callIndex 1 ;
+    vcfc:calledAllele <file://example-vcf45-boundaries.vcf#record/9/allele/1> ;
+    vcfc:isNoCall false ;
+    vcfc:phaseIndicator "/" .
+
+ex:samples a vcfc:SampleSet ;
+    vcfc:hasSample <file://example-vcf45-boundaries.vcf#samples/S1> .
+
+<file://example-vcf45-boundaries.vcf#header/line/10> a vcfc:INFOHeaderLine ;
+    vcfc:fieldDescription "Free text with percent-encoded delimiters" ;
+    vcfc:fieldId "NOTE" ;
+    vcfc:fieldNumber "1" ;
+    vcfc:fieldNumberInteger 1 ;
+    vcfc:fieldSource "VCF-Core-examples" ;
+    vcfc:fieldType vcfc:StringType ;
+    vcfc:fieldVersion "1.0" ;
+    vcfc:hasAttribute <file://example-vcf45-boundaries.vcf#header/line/10/attribute/1>,
+        <file://example-vcf45-boundaries.vcf#header/line/10/attribute/2>,
+        <file://example-vcf45-boundaries.vcf#header/line/10/attribute/3>,
+        <file://example-vcf45-boundaries.vcf#header/line/10/attribute/4>,
+        <file://example-vcf45-boundaries.vcf#header/line/10/attribute/5>,
+        <file://example-vcf45-boundaries.vcf#header/line/10/attribute/6> ;
+    vcfc:headerKey "INFO" ;
+    vcfc:headerValue "<ID=NOTE,Number=1,Type=String,Description=\"Free text with percent-encoded delimiters\",Source=\"VCF-Core-examples\",Version=\"1.0\">" ;
+    vcfc:lineIndex 10 .
+
+<file://example-vcf45-boundaries.vcf#header/line/5> a vcfc:AssemblyHeaderLine ;
+    vcfc:assemblyUrl "https://example.org/assembly.fa"^^xsd:anyURI ;
+    vcfc:headerKey "assembly" ;
+    vcfc:headerValue "https://example.org/assembly.fa" ;
+    vcfc:lineIndex 5 .
+
+<file://example-vcf45-boundaries.vcf#header/line/6> a vcfc:ALTHeaderLine ;
+    vcfc:altId "DEL" ;
+    vcfc:fieldDescription "Synthetic DEL allele" ;
+    vcfc:hasAttribute <file://example-vcf45-boundaries.vcf#header/line/6/attribute/1>,
+        <file://example-vcf45-boundaries.vcf#header/line/6/attribute/2> ;
+    vcfc:headerKey "ALT" ;
+    vcfc:headerValue "<ID=DEL,Description=\"Synthetic DEL allele\">" ;
+    vcfc:lineIndex 6 .
+
+<file://example-vcf45-boundaries.vcf#header/line/8> a vcfc:INFOHeaderLine ;
+    vcfc:fieldArity vcfc:ArityPerAlt ;
+    vcfc:fieldDescription "Structural variant length" ;
+    vcfc:fieldId "SVLEN" ;
+    vcfc:fieldNumber "A" ;
+    vcfc:fieldSource "VCF-Core-examples" ;
+    vcfc:fieldType vcfc:IntegerType ;
+    vcfc:fieldVersion "1.0" ;
+    vcfc:hasAttribute <file://example-vcf45-boundaries.vcf#header/line/8/attribute/1>,
+        <file://example-vcf45-boundaries.vcf#header/line/8/attribute/2>,
+        <file://example-vcf45-boundaries.vcf#header/line/8/attribute/3>,
+        <file://example-vcf45-boundaries.vcf#header/line/8/attribute/4>,
+        <file://example-vcf45-boundaries.vcf#header/line/8/attribute/5>,
+        <file://example-vcf45-boundaries.vcf#header/line/8/attribute/6> ;
+    vcfc:headerKey "INFO" ;
+    vcfc:headerValue "<ID=SVLEN,Number=A,Type=Integer,Description=\"Structural variant length\",Source=\"VCF-Core-examples\",Version=\"1.0\">" ;
+    vcfc:lineIndex 8 .
+
+<file://example-vcf45-boundaries.vcf#header/line/9> a vcfc:INFOHeaderLine ;
+    vcfc:fieldArity vcfc:ArityPerAlt ;
+    vcfc:fieldDescription "Structural variant claim" ;
+    vcfc:fieldId "SVCLAIM" ;
+    vcfc:fieldNumber "A" ;
+    vcfc:fieldSource "VCF-Core-examples" ;
+    vcfc:fieldType vcfc:StringType ;
+    vcfc:fieldVersion "1.0" ;
+    vcfc:hasAttribute <file://example-vcf45-boundaries.vcf#header/line/9/attribute/1>,
+        <file://example-vcf45-boundaries.vcf#header/line/9/attribute/2>,
+        <file://example-vcf45-boundaries.vcf#header/line/9/attribute/3>,
+        <file://example-vcf45-boundaries.vcf#header/line/9/attribute/4>,
+        <file://example-vcf45-boundaries.vcf#header/line/9/attribute/5>,
+        <file://example-vcf45-boundaries.vcf#header/line/9/attribute/6> ;
+    vcfc:headerKey "INFO" ;
+    vcfc:headerValue "<ID=SVCLAIM,Number=A,Type=String,Description=\"Structural variant claim\",Source=\"VCF-Core-examples\",Version=\"1.0\">" ;
+    vcfc:lineIndex 9 .
+
+<file://example-vcf45-boundaries.vcf#record/4/allele/0> a vcfc:ReferenceAllele ;
+    vcfc:alleleIndex 0 ;
+    vcfc:alleleKind vcfc:BaseSequenceAllele ;
+    vcfc:alleleValue "A" .
+
+<file://example-vcf45-boundaries.vcf#record/9/allele/2> a vcfc:AltAllele ;
+    vcfc:alleleIndex 2 ;
+    vcfc:alleleKind vcfc:BaseSequenceAllele ;
+    vcfc:alleleValue "C" .
+
+<file://example-vcf45-boundaries.vcf#record/1/allele/0> a vcfc:ReferenceAllele ;
+    vcfc:alleleIndex 0 ;
+    vcfc:alleleKind vcfc:BaseSequenceAllele ;
+    vcfc:alleleValue "N" .
+
+<file://example-vcf45-boundaries.vcf#record/10/allele/0> a vcfc:ReferenceAllele ;
+    vcfc:alleleIndex 0 ;
+    vcfc:alleleKind vcfc:BaseSequenceAllele ;
+    vcfc:alleleValue "A" .
+
+<file://example-vcf45-boundaries.vcf#record/10/allele/2> a vcfc:AltAllele ;
+    vcfc:alleleIndex 2 ;
+    vcfc:alleleKind vcfc:BaseSequenceAllele ;
+    vcfc:alleleValue "C" .
+
+<file://example-vcf45-boundaries.vcf#record/11/allele/0> a vcfc:ReferenceAllele ;
+    vcfc:alleleIndex 0 ;
+    vcfc:alleleKind vcfc:BaseSequenceAllele ;
+    vcfc:alleleValue "A" .
+
+<file://example-vcf45-boundaries.vcf#record/11/allele/2> a vcfc:AltAllele ;
+    vcfc:alleleIndex 2 ;
+    vcfc:alleleKind vcfc:BaseSequenceAllele ;
+    vcfc:alleleValue "C" .
+
+<file://example-vcf45-boundaries.vcf#record/12/allele/0> a vcfc:ReferenceAllele ;
+    vcfc:alleleIndex 0 ;
+    vcfc:alleleKind vcfc:BaseSequenceAllele ;
+    vcfc:alleleValue "N" .
+
+<file://example-vcf45-boundaries.vcf#record/13/allele/0> a vcfc:ReferenceAllele ;
+    vcfc:alleleIndex 0 ;
+    vcfc:alleleKind vcfc:BaseSequenceAllele ;
+    vcfc:alleleValue "A" .
+
+<file://example-vcf45-boundaries.vcf#record/2/allele/0> a vcfc:ReferenceAllele ;
+    vcfc:alleleIndex 0 ;
+    vcfc:alleleKind vcfc:BaseSequenceAllele ;
+    vcfc:alleleValue "AT" .
+
+<file://example-vcf45-boundaries.vcf#record/3/allele/0> a vcfc:ReferenceAllele ;
+    vcfc:alleleIndex 0 ;
+    vcfc:alleleKind vcfc:BaseSequenceAllele ;
+    vcfc:alleleValue "AT" .
+
+<file://example-vcf45-boundaries.vcf#record/4/allele/1> a vcfc:AltAllele ;
+    vcfc:alleleIndex 1 ;
+    vcfc:alleleKind vcfc:BaseSequenceAllele ;
+    vcfc:alleleValue "T" .
+
+<file://example-vcf45-boundaries.vcf#record/5/allele/0> a vcfc:ReferenceAllele ;
+    vcfc:alleleIndex 0 ;
+    vcfc:alleleKind vcfc:BaseSequenceAllele ;
+    vcfc:alleleValue "A" .
+
+<file://example-vcf45-boundaries.vcf#record/6/allele/0> a vcfc:ReferenceAllele ;
+    vcfc:alleleIndex 0 ;
+    vcfc:alleleKind vcfc:BaseSequenceAllele ;
+    vcfc:alleleValue "A" .
+
+<file://example-vcf45-boundaries.vcf#record/7/allele/1> a vcfc:AltAllele ;
+    vcfc:alleleIndex 1 ;
+    vcfc:alleleKind vcfc:UnspecifiedAllele ;
+    vcfc:alleleValue "<*>" .
+
+<file://example-vcf45-boundaries.vcf#record/8/allele/0> a vcfc:ReferenceAllele ;
+    vcfc:alleleIndex 0 ;
+    vcfc:alleleKind vcfc:BaseSequenceAllele ;
+    vcfc:alleleValue "AT" .
+
+<file://example-vcf45-boundaries.vcf#record/9/allele/0> a vcfc:ReferenceAllele ;
+    vcfc:alleleIndex 0 ;
+    vcfc:alleleKind vcfc:BaseSequenceAllele ;
+    vcfc:alleleValue "A" .
+
+<file://example-vcf45-boundaries.vcf#record/9/allele/1> a vcfc:AltAllele ;
+    vcfc:alleleIndex 1 ;
+    vcfc:alleleKind vcfc:BaseSequenceAllele ;
+    vcfc:alleleValue "T" .
+
+<file://example-vcf45-boundaries.vcf#record/1/allele/1> a vcfc:AltAllele ;
+    vcfc:alleleIndex 1 ;
+    vcfc:alleleKind vcfc:BaseSequenceAllele ;
+    vcfc:alleleValue "A" .
+
+<file://example-vcf45-boundaries.vcf#record/10/allele/1> a vcfc:AltAllele ;
+    vcfc:alleleIndex 1 ;
+    vcfc:alleleKind vcfc:BaseSequenceAllele ;
+    vcfc:alleleValue "T" .
+
+<file://example-vcf45-boundaries.vcf#record/11/allele/1> a vcfc:AltAllele ;
+    vcfc:alleleIndex 1 ;
+    vcfc:alleleKind vcfc:BaseSequenceAllele ;
+    vcfc:alleleValue "T" .
+
+<file://example-vcf45-boundaries.vcf#record/12/allele/1> a vcfc:AltAllele ;
+    vcfc:alleleIndex 1 ;
+    vcfc:alleleKind vcfc:BaseSequenceAllele ;
+    vcfc:alleleValue "A" .
+
+<file://example-vcf45-boundaries.vcf#record/13/allele/1> a vcfc:AltAllele ;
+    vcfc:alleleIndex 1 ;
+    vcfc:alleleKind vcfc:BaseSequenceAllele ;
+    vcfc:alleleValue "T" .
+
+<file://example-vcf45-boundaries.vcf#record/2/allele/1> a vcfc:AltAllele ;
+    vcfc:alleleIndex 1 ;
+    vcfc:alleleKind vcfc:BaseSequenceAllele ;
+    vcfc:alleleValue "T" .
+
+<file://example-vcf45-boundaries.vcf#record/3/allele/1> a vcfc:AltAllele ;
+    vcfc:alleleIndex 1 ;
+    vcfc:alleleKind vcfc:BaseSequenceAllele ;
+    vcfc:alleleValue "A" .
+
+<file://example-vcf45-boundaries.vcf#record/5/allele/1> a vcfc:AltAllele ;
+    vcfc:alleleIndex 1 ;
+    vcfc:alleleKind vcfc:BaseSequenceAllele ;
+    vcfc:alleleValue "AT" .
+
+<file://example-vcf45-boundaries.vcf#record/7/allele/0> a vcfc:ReferenceAllele ;
+    vcfc:alleleIndex 0 ;
+    vcfc:alleleKind vcfc:BaseSequenceAllele ;
+    vcfc:alleleValue "A" .
+
+<file://example-vcf45-boundaries.vcf#record/8/allele/1> a vcfc:AltAllele ;
+    vcfc:alleleIndex 1 ;
+    vcfc:alleleKind vcfc:BaseSequenceAllele ;
+    vcfc:alleleValue "GC" .
+
+<file://example-vcf45-boundaries.vcf#record/6/allele/1> a vcfc:AltAllele ;
+    vcfc:alleleIndex 1 ;
+    vcfc:alleleKind vcfc:SymbolicAllele ;
+    vcfc:alleleValue "<DEL>" ;
+    vcfc:declaredByAlt <file://example-vcf45-boundaries.vcf#header/line/6> ;
+    vcfc:svClaim vcfc:AbundanceClaim ;
+    vcfc:svLength 10 ;
+    vcfc:svType vcfc:SymbolicDeletion .
+
+<file://example-vcf45-boundaries.vcf#header/line/4> a vcfc:ContigHeaderLine ;
+    vcfc:contigId "chr1" ;
+    vcfc:contigLength 100 ;
+    vcfc:hasAttribute <file://example-vcf45-boundaries.vcf#header/line/4/attribute/1>,
+        <file://example-vcf45-boundaries.vcf#header/line/4/attribute/2> ;
+    vcfc:headerKey "contig" ;
+    vcfc:headerValue "<ID=chr1,length=100>" ;
+    vcfc:lineIndex 4 .
+
+<file://example-vcf45-boundaries.vcf#header/line/7> a vcfc:INFOHeaderLine ;
+    vcfc:fieldArity vcfc:ArityPerAlt ;
+    vcfc:fieldDescription "Allele frequency" ;
+    vcfc:fieldId "AF" ;
+    vcfc:fieldNumber "A" ;
+    vcfc:fieldSource "VCF-Core-examples" ;
+    vcfc:fieldType vcfc:FloatType ;
+    vcfc:fieldVersion "1.0" ;
+    vcfc:hasAttribute <file://example-vcf45-boundaries.vcf#header/line/7/attribute/1>,
+        <file://example-vcf45-boundaries.vcf#header/line/7/attribute/2>,
+        <file://example-vcf45-boundaries.vcf#header/line/7/attribute/3>,
+        <file://example-vcf45-boundaries.vcf#header/line/7/attribute/4>,
+        <file://example-vcf45-boundaries.vcf#header/line/7/attribute/5>,
+        <file://example-vcf45-boundaries.vcf#header/line/7/attribute/6> ;
+    vcfc:headerKey "INFO" ;
+    vcfc:headerValue "<ID=AF,Number=A,Type=Float,Description=\"Allele frequency\",Source=\"VCF-Core-examples\",Version=\"1.0\">" ;
+    vcfc:lineIndex 7 .
+
+<file://example-vcf45-boundaries.vcf#samples/S1> a vcfc:VCFSample ;
+    vcfc:sampleIndex 1 ;
+    vcfc:sampleName "S1" .
+
+<file://example-vcf45-boundaries.vcf#header/line/12> a vcfc:FORMATHeaderLine ;
+    vcfc:fieldArity vcfc:ArityPerAllele ;
+    vcfc:fieldDescription "Allelic depths" ;
+    vcfc:fieldId "AD" ;
+    vcfc:fieldNumber "R" ;
+    vcfc:fieldType vcfc:IntegerType ;
+    vcfc:hasAttribute <file://example-vcf45-boundaries.vcf#header/line/12/attribute/1>,
+        <file://example-vcf45-boundaries.vcf#header/line/12/attribute/2>,
+        <file://example-vcf45-boundaries.vcf#header/line/12/attribute/3>,
+        <file://example-vcf45-boundaries.vcf#header/line/12/attribute/4> ;
+    vcfc:headerKey "FORMAT" ;
+    vcfc:headerValue "<ID=AD,Number=R,Type=Integer,Description=\"Allelic depths\">" ;
+    vcfc:lineIndex 12 .
+
+<file://example-vcf45-boundaries.vcf#header/line/11> a vcfc:FORMATHeaderLine ;
+    vcfc:fieldDescription "Genotype" ;
+    vcfc:fieldId "GT" ;
+    vcfc:fieldNumber "1" ;
+    vcfc:fieldNumberInteger 1 ;
+    vcfc:fieldType vcfc:StringType ;
+    vcfc:hasAttribute <file://example-vcf45-boundaries.vcf#header/line/11/attribute/1>,
+        <file://example-vcf45-boundaries.vcf#header/line/11/attribute/2>,
+        <file://example-vcf45-boundaries.vcf#header/line/11/attribute/3>,
+        <file://example-vcf45-boundaries.vcf#header/line/11/attribute/4> ;
+    vcfc:headerKey "FORMAT" ;
+    vcfc:headerValue "<ID=GT,Number=1,Type=String,Description=\"Genotype\">" ;
+    vcfc:lineIndex 11 .

@@ -1,0 +1,3711 @@
+{
+  "reviewer": "Codex (first reviewer)",
+  "scope": "Isolated SELECT-body, decoded-check and source-byte probes, not complete-file conformance tests. Both missed invalid controls and flagged valid controls are findings. Mixed LF/CRLF expected acceptance is a continued-review interpretation, not an owner-approved decision.",
+  "inputs": {
+    "coverage/curated/check_serialization.py": "d4befc1b12ce8a3f9b27d4917db37b6fca240c27aab164a65f27609d62556ec3",
+    "shacl/vcf-4.1.shacl.ttl": "5eafc441f2bae5c3b19d80dfc34eff0c2c6cefd61b569eadd38900f4343721f9",
+    "shacl/vcf-4.2.shacl.ttl": "186131c85a483eaec457b545a9e1d310b6eccc2c9fadc95aaa37b34946d7e226",
+    "shacl/vcf-4.3.shacl.ttl": "026105bb56660348239e3ada633e5d00a82f74df28b98798e0db2d1906b63470",
+    "shacl/vcf-4.4.shacl.ttl": "98574513333d95993a401e927bd16ff4dad95b1f52bcf5f039c9e3f57227cafb",
+    "shacl/vcf-4.5.shacl.ttl": "230b21c61a089dd109a05971de80dcde8915400114e3f1591f12ce30a195c448",
+    "shacl/vcf-core-consistency.shacl.ttl": "6513ff0aba6b788afe28d558dc9e7062bfdf937ac3e08380e51e12c72d55276f",
+    "shacl/vcf-core-vocabulary-sparql.shacl.ttl": "c032e1e6bc252cd518dc454373e4b4e20b3ed60b8a843c705b3519149ecb2168",
+    "shacl/vcf-core-vocabulary.shacl.ttl": "acfa8b0ba5ad7314eccea3efd6312eb7b841df45809dabbcc872e82244eeb7df",
+    "tests/semantic_validation.py": "e95b076ffbbf08bb2266a3559f65294da0e778ba5b460df82fafa5f0d0b06ed7"
+  },
+  "seedProbes": [
+    {
+      "id": "chrom-block",
+      "ruleFile": "shacl/vcf-core-vocabulary-sparql.shacl.ttl",
+      "ruleMessage": "Records for one CHROM must form a contiguous record-index block.",
+      "validControlFlagged": false,
+      "invalidControlFlagged": true
+    },
+    {
+      "id": "positions-equal-boundary",
+      "ruleFile": "shacl/vcf-core-vocabulary-sparql.shacl.ttl",
+      "ruleMessage": "Record positions must be nondecreasing within a CHROM block.",
+      "validControlFlagged": false,
+      "invalidControlFlagged": true
+    },
+    {
+      "id": "component-identifiers",
+      "ruleFile": "shacl/vcf-core-consistency.shacl.ttl",
+      "ruleMessage": "Individual record identifiers must be unique across records.",
+      "validControlFlagged": false,
+      "invalidControlFlagged": true
+    },
+    {
+      "id": "header-id-INFOHeaderLine",
+      "ruleFile": "shacl/vcf-core-vocabulary-sparql.shacl.ttl",
+      "ruleMessage": "Structured header-line ID attributes must be unique within their header type.",
+      "validControlFlagged": false,
+      "invalidControlFlagged": true
+    },
+    {
+      "id": "header-id-StructuredHeaderLine",
+      "ruleFile": "shacl/vcf-core-vocabulary-sparql.shacl.ttl",
+      "ruleMessage": "Structured header-line ID attributes must be unique within their header type.",
+      "validControlFlagged": false,
+      "invalidControlFlagged": false
+    },
+    {
+      "id": "sample-names",
+      "ruleFile": "shacl/vcf-core-vocabulary-sparql.shacl.ttl",
+      "ruleMessage": "Sample names and sample indices must be unique within a VCF file's SampleSet.",
+      "validControlFlagged": false,
+      "invalidControlFlagged": true
+    },
+    {
+      "id": "gt-first",
+      "ruleFile": "shacl/vcf-core-vocabulary-sparql.shacl.ttl",
+      "ruleMessage": "GT must be the first FORMAT key when it is present.",
+      "validControlFlagged": false,
+      "invalidControlFlagged": true
+    },
+    {
+      "id": "phase-set-exclusion",
+      "ruleFile": "shacl/vcf-core-vocabulary-sparql.shacl.ttl",
+      "ruleMessage": "PS and PSL must not both be populated for the same sample call.",
+      "validControlFlagged": false,
+      "invalidControlFlagged": true
+    },
+    {
+      "id": "phase-set-missing-list",
+      "ruleFile": "shacl/vcf-core-vocabulary-sparql.shacl.ttl",
+      "ruleMessage": "PS and PSL must not both be populated for the same sample call.",
+      "validControlFlagged": true,
+      "invalidControlFlagged": true
+    }
+  ],
+  "decodedProbes": [
+    {
+      "id": "raw-individual-identifiers",
+      "version": "4.1",
+      "validControlErrors": [],
+      "invalidControlErrors": [
+        "record-IDs"
+      ]
+    },
+    {
+      "id": "raw-individual-identifiers",
+      "version": "4.2",
+      "validControlErrors": [],
+      "invalidControlErrors": [
+        "record-IDs"
+      ]
+    },
+    {
+      "id": "raw-individual-identifiers",
+      "version": "4.3",
+      "validControlErrors": [],
+      "invalidControlErrors": [
+        "record-IDs"
+      ]
+    },
+    {
+      "id": "raw-individual-identifiers",
+      "version": "4.4",
+      "validControlErrors": [],
+      "invalidControlErrors": [
+        "record-IDs"
+      ]
+    },
+    {
+      "id": "raw-individual-identifiers",
+      "version": "4.5",
+      "validControlErrors": [],
+      "invalidControlErrors": [
+        "record-IDs"
+      ]
+    },
+    {
+      "id": "phase-set-exclusion",
+      "version": "4.4",
+      "profile": "Expanded",
+      "validControlErrors": [],
+      "invalidControlErrors": [
+        "phase-sets"
+      ],
+      "allMissingListErrors": [
+        "phase-sets"
+      ]
+    },
+    {
+      "id": "phase-set-exclusion",
+      "version": "4.4",
+      "profile": "Condensed",
+      "validControlErrors": [],
+      "invalidControlErrors": [
+        "phase-sets"
+      ],
+      "allMissingListErrors": [
+        "phase-sets"
+      ]
+    },
+    {
+      "id": "phase-set-exclusion",
+      "version": "4.5",
+      "profile": "Expanded",
+      "validControlErrors": [],
+      "invalidControlErrors": [
+        "phase-sets"
+      ],
+      "allMissingListErrors": [
+        "phase-sets"
+      ]
+    },
+    {
+      "id": "phase-set-exclusion",
+      "version": "4.5",
+      "profile": "Condensed",
+      "validControlErrors": [],
+      "invalidControlErrors": [
+        "phase-sets"
+      ],
+      "allMissingListErrors": [
+        "phase-sets"
+      ]
+    }
+  ],
+  "serializationProbes": [
+    {
+      "id": "valid-LF",
+      "version": "4.3",
+      "expectedValid": true,
+      "accepted": true,
+      "problems": []
+    },
+    {
+      "id": "valid-CRLF",
+      "version": "4.3",
+      "expectedValid": true,
+      "accepted": true,
+      "problems": []
+    },
+    {
+      "id": "invalid-UTF8",
+      "version": "4.3",
+      "expectedValid": false,
+      "accepted": false,
+      "problems": [
+        "is not valid UTF-8 (invalid start byte at byte 72)"
+      ]
+    },
+    {
+      "id": "BOM",
+      "version": "4.3",
+      "expectedValid": false,
+      "accepted": false,
+      "problems": [
+        "starts with a byte order mark, which VCF 4.5 forbids"
+      ]
+    },
+    {
+      "id": "missing-final-newline",
+      "version": "4.3",
+      "expectedValid": false,
+      "accepted": false,
+      "problems": [
+        "last data line is not terminated, which VCF 4.5 requires"
+      ]
+    },
+    {
+      "id": "NUL",
+      "version": "4.3",
+      "expectedValid": false,
+      "accepted": false,
+      "problems": [
+        "contains disallowed non-printable characters U+0000"
+      ]
+    },
+    {
+      "id": "stray-CR",
+      "version": "4.3",
+      "expectedValid": false,
+      "accepted": false,
+      "problems": [
+        "contains 1 CR byte(s) outside a CR+LF terminator"
+      ]
+    },
+    {
+      "id": "mixed-line-endings",
+      "version": "4.3",
+      "expectedValid": true,
+      "accepted": false,
+      "problems": [
+        "mixes CR+LF (1) and bare LF (2) terminators"
+      ]
+    },
+    {
+      "id": "valid-LF",
+      "version": "4.4",
+      "expectedValid": true,
+      "accepted": true,
+      "problems": []
+    },
+    {
+      "id": "valid-CRLF",
+      "version": "4.4",
+      "expectedValid": true,
+      "accepted": true,
+      "problems": []
+    },
+    {
+      "id": "invalid-UTF8",
+      "version": "4.4",
+      "expectedValid": false,
+      "accepted": false,
+      "problems": [
+        "is not valid UTF-8 (invalid start byte at byte 72)"
+      ]
+    },
+    {
+      "id": "BOM",
+      "version": "4.4",
+      "expectedValid": false,
+      "accepted": false,
+      "problems": [
+        "starts with a byte order mark, which VCF 4.5 forbids"
+      ]
+    },
+    {
+      "id": "missing-final-newline",
+      "version": "4.4",
+      "expectedValid": false,
+      "accepted": false,
+      "problems": [
+        "last data line is not terminated, which VCF 4.5 requires"
+      ]
+    },
+    {
+      "id": "NUL",
+      "version": "4.4",
+      "expectedValid": false,
+      "accepted": false,
+      "problems": [
+        "contains disallowed non-printable characters U+0000"
+      ]
+    },
+    {
+      "id": "stray-CR",
+      "version": "4.4",
+      "expectedValid": false,
+      "accepted": false,
+      "problems": [
+        "contains 1 CR byte(s) outside a CR+LF terminator"
+      ]
+    },
+    {
+      "id": "mixed-line-endings",
+      "version": "4.4",
+      "expectedValid": true,
+      "accepted": false,
+      "problems": [
+        "mixes CR+LF (1) and bare LF (2) terminators"
+      ]
+    },
+    {
+      "id": "valid-LF",
+      "version": "4.5",
+      "expectedValid": true,
+      "accepted": true,
+      "problems": []
+    },
+    {
+      "id": "valid-CRLF",
+      "version": "4.5",
+      "expectedValid": true,
+      "accepted": true,
+      "problems": []
+    },
+    {
+      "id": "invalid-UTF8",
+      "version": "4.5",
+      "expectedValid": false,
+      "accepted": false,
+      "problems": [
+        "is not valid UTF-8 (invalid start byte at byte 72)"
+      ]
+    },
+    {
+      "id": "BOM",
+      "version": "4.5",
+      "expectedValid": false,
+      "accepted": false,
+      "problems": [
+        "starts with a byte order mark, which VCF 4.5 forbids"
+      ]
+    },
+    {
+      "id": "missing-final-newline",
+      "version": "4.5",
+      "expectedValid": false,
+      "accepted": false,
+      "problems": [
+        "last data line is not terminated, which VCF 4.5 requires"
+      ]
+    },
+    {
+      "id": "NUL",
+      "version": "4.5",
+      "expectedValid": false,
+      "accepted": false,
+      "problems": [
+        "contains disallowed non-printable characters U+0000"
+      ]
+    },
+    {
+      "id": "stray-CR",
+      "version": "4.5",
+      "expectedValid": false,
+      "accepted": false,
+      "problems": [
+        "contains 1 CR byte(s) outside a CR+LF terminator"
+      ]
+    },
+    {
+      "id": "mixed-line-endings",
+      "version": "4.5",
+      "expectedValid": true,
+      "accepted": false,
+      "problems": [
+        "mixes CR+LF (1) and bare LF (2) terminators"
+      ]
+    }
+  ],
+  "reservedDeclarationProbes": [
+    {
+      "candidate": "4.1:REQ-80e38c5f43e259a3c103:1",
+      "version": "4.1",
+      "kind": "INFO",
+      "key": "IMPRECISE",
+      "ruleFile": "shacl/vcf-4.1.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.1:REQ-766712c146480093e46e:1",
+      "version": "4.1",
+      "kind": "INFO",
+      "key": "NOVEL",
+      "ruleFile": "shacl/vcf-4.1.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.1:REQ-48859ef7219e7b902903:1",
+      "version": "4.1",
+      "kind": "INFO",
+      "key": "END",
+      "ruleFile": "shacl/vcf-4.1.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.1:REQ-ecf62641e6cdff0da62f:1",
+      "version": "4.1",
+      "kind": "INFO",
+      "key": "SVTYPE",
+      "ruleFile": "shacl/vcf-4.1.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.1:REQ-e0be7b0d0d11909aa1e2:1",
+      "version": "4.1",
+      "kind": "INFO",
+      "key": "SVLEN",
+      "ruleFile": "shacl/vcf-4.1.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.1:REQ-c6021dc5868644ab3270:1",
+      "version": "4.1",
+      "kind": "INFO",
+      "key": "CIPOS",
+      "ruleFile": "shacl/vcf-4.1.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.1:REQ-785060226765ce004f35:1",
+      "version": "4.1",
+      "kind": "INFO",
+      "key": "CIEND",
+      "ruleFile": "shacl/vcf-4.1.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.1:REQ-b15cc80c2a6917582d99:1",
+      "version": "4.1",
+      "kind": "INFO",
+      "key": "HOMLEN",
+      "ruleFile": "shacl/vcf-4.1.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.1:REQ-28c26e2703d9a7853d43:1",
+      "version": "4.1",
+      "kind": "INFO",
+      "key": "HOMSEQ",
+      "ruleFile": "shacl/vcf-4.1.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.1:REQ-976075411a85b5abc32b:1",
+      "version": "4.1",
+      "kind": "INFO",
+      "key": "BKPTID",
+      "ruleFile": "shacl/vcf-4.1.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.1:REQ-82f91accf12f99bc71cd:1",
+      "version": "4.1",
+      "kind": "INFO",
+      "key": "MEINFO",
+      "ruleFile": "shacl/vcf-4.1.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.1:REQ-a1cef27e05573ca68630:1",
+      "version": "4.1",
+      "kind": "INFO",
+      "key": "METRANS",
+      "ruleFile": "shacl/vcf-4.1.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.1:REQ-d8d1a3aa9bb8c0a942d9:1",
+      "version": "4.1",
+      "kind": "INFO",
+      "key": "DGVID",
+      "ruleFile": "shacl/vcf-4.1.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.1:REQ-35647a7d97d60207e757:1",
+      "version": "4.1",
+      "kind": "INFO",
+      "key": "DBVARID",
+      "ruleFile": "shacl/vcf-4.1.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.1:REQ-c206d238d6a2dd736152:1",
+      "version": "4.1",
+      "kind": "INFO",
+      "key": "DBRIPID",
+      "ruleFile": "shacl/vcf-4.1.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.1:REQ-f94b20c5d3ae6eba197a:1",
+      "version": "4.1",
+      "kind": "INFO",
+      "key": "MATEID",
+      "ruleFile": "shacl/vcf-4.1.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.1:REQ-d11154053d3502dceda2:1",
+      "version": "4.1",
+      "kind": "INFO",
+      "key": "PARID",
+      "ruleFile": "shacl/vcf-4.1.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.1:REQ-2f16b211ba5414e02ba2:1",
+      "version": "4.1",
+      "kind": "INFO",
+      "key": "EVENT",
+      "ruleFile": "shacl/vcf-4.1.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.1:REQ-bfa488888e6bba505f7d:1",
+      "version": "4.1",
+      "kind": "INFO",
+      "key": "CILEN",
+      "ruleFile": "shacl/vcf-4.1.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.1:REQ-231ee4d78428f4ba866d:1",
+      "version": "4.1",
+      "kind": "INFO",
+      "key": "DP",
+      "ruleFile": "shacl/vcf-4.1.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.1:REQ-3f3e61a4e4e9558877b8:1",
+      "version": "4.1",
+      "kind": "INFO",
+      "key": "DPADJ",
+      "ruleFile": "shacl/vcf-4.1.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.1:REQ-23d91a02812900476393:1",
+      "version": "4.1",
+      "kind": "INFO",
+      "key": "CN",
+      "ruleFile": "shacl/vcf-4.1.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.1:REQ-f9134e4b69db28f2116d:1",
+      "version": "4.1",
+      "kind": "INFO",
+      "key": "CNADJ",
+      "ruleFile": "shacl/vcf-4.1.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.1:REQ-e6daefa47740bc47900f:1",
+      "version": "4.1",
+      "kind": "INFO",
+      "key": "CICN",
+      "ruleFile": "shacl/vcf-4.1.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.1:REQ-54f6e6779018c9cbffb8:1",
+      "version": "4.1",
+      "kind": "INFO",
+      "key": "CICNADJ",
+      "ruleFile": "shacl/vcf-4.1.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.1:REQ-2bf62b5bc08f598ab3a4:1",
+      "version": "4.1",
+      "kind": "FORMAT",
+      "key": "CN",
+      "ruleFile": "shacl/vcf-4.1.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.1:REQ-9398057debce078c96e8:1",
+      "version": "4.1",
+      "kind": "FORMAT",
+      "key": "CNQ",
+      "ruleFile": "shacl/vcf-4.1.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.1:REQ-a8b56c2f9c97b63d6860:1",
+      "version": "4.1",
+      "kind": "FORMAT",
+      "key": "CNL",
+      "ruleFile": "shacl/vcf-4.1.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.1:REQ-9c3e4a564b8825c84039:1",
+      "version": "4.1",
+      "kind": "FORMAT",
+      "key": "NQ",
+      "ruleFile": "shacl/vcf-4.1.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.1:REQ-0a2cf45c6bb9139550ee:1",
+      "version": "4.1",
+      "kind": "FORMAT",
+      "key": "HAP",
+      "ruleFile": "shacl/vcf-4.1.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.1:REQ-51077f75c8ed3acdb984:1",
+      "version": "4.1",
+      "kind": "FORMAT",
+      "key": "AHAP",
+      "ruleFile": "shacl/vcf-4.1.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.2:REQ-80e38c5f43e259a3c103:1",
+      "version": "4.2",
+      "kind": "INFO",
+      "key": "IMPRECISE",
+      "ruleFile": "shacl/vcf-4.2.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.2:REQ-766712c146480093e46e:1",
+      "version": "4.2",
+      "kind": "INFO",
+      "key": "NOVEL",
+      "ruleFile": "shacl/vcf-4.2.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.2:REQ-48859ef7219e7b902903:1",
+      "version": "4.2",
+      "kind": "INFO",
+      "key": "END",
+      "ruleFile": "shacl/vcf-4.2.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.2:REQ-ecf62641e6cdff0da62f:1",
+      "version": "4.2",
+      "kind": "INFO",
+      "key": "SVTYPE",
+      "ruleFile": "shacl/vcf-4.2.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.2:REQ-e0be7b0d0d11909aa1e2:1",
+      "version": "4.2",
+      "kind": "INFO",
+      "key": "SVLEN",
+      "ruleFile": "shacl/vcf-4.2.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.2:REQ-c6021dc5868644ab3270:1",
+      "version": "4.2",
+      "kind": "INFO",
+      "key": "CIPOS",
+      "ruleFile": "shacl/vcf-4.2.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.2:REQ-785060226765ce004f35:1",
+      "version": "4.2",
+      "kind": "INFO",
+      "key": "CIEND",
+      "ruleFile": "shacl/vcf-4.2.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.2:REQ-b15cc80c2a6917582d99:1",
+      "version": "4.2",
+      "kind": "INFO",
+      "key": "HOMLEN",
+      "ruleFile": "shacl/vcf-4.2.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.2:REQ-28c26e2703d9a7853d43:1",
+      "version": "4.2",
+      "kind": "INFO",
+      "key": "HOMSEQ",
+      "ruleFile": "shacl/vcf-4.2.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.2:REQ-976075411a85b5abc32b:1",
+      "version": "4.2",
+      "kind": "INFO",
+      "key": "BKPTID",
+      "ruleFile": "shacl/vcf-4.2.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.2:REQ-82f91accf12f99bc71cd:1",
+      "version": "4.2",
+      "kind": "INFO",
+      "key": "MEINFO",
+      "ruleFile": "shacl/vcf-4.2.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.2:REQ-a1cef27e05573ca68630:1",
+      "version": "4.2",
+      "kind": "INFO",
+      "key": "METRANS",
+      "ruleFile": "shacl/vcf-4.2.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.2:REQ-d8d1a3aa9bb8c0a942d9:1",
+      "version": "4.2",
+      "kind": "INFO",
+      "key": "DGVID",
+      "ruleFile": "shacl/vcf-4.2.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.2:REQ-35647a7d97d60207e757:1",
+      "version": "4.2",
+      "kind": "INFO",
+      "key": "DBVARID",
+      "ruleFile": "shacl/vcf-4.2.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.2:REQ-c206d238d6a2dd736152:1",
+      "version": "4.2",
+      "kind": "INFO",
+      "key": "DBRIPID",
+      "ruleFile": "shacl/vcf-4.2.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.2:REQ-f94b20c5d3ae6eba197a:1",
+      "version": "4.2",
+      "kind": "INFO",
+      "key": "MATEID",
+      "ruleFile": "shacl/vcf-4.2.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.2:REQ-d11154053d3502dceda2:1",
+      "version": "4.2",
+      "kind": "INFO",
+      "key": "PARID",
+      "ruleFile": "shacl/vcf-4.2.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.2:REQ-2f16b211ba5414e02ba2:1",
+      "version": "4.2",
+      "kind": "INFO",
+      "key": "EVENT",
+      "ruleFile": "shacl/vcf-4.2.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.2:REQ-bfa488888e6bba505f7d:1",
+      "version": "4.2",
+      "kind": "INFO",
+      "key": "CILEN",
+      "ruleFile": "shacl/vcf-4.2.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.2:REQ-231ee4d78428f4ba866d:1",
+      "version": "4.2",
+      "kind": "INFO",
+      "key": "DP",
+      "ruleFile": "shacl/vcf-4.2.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.2:REQ-3f3e61a4e4e9558877b8:1",
+      "version": "4.2",
+      "kind": "INFO",
+      "key": "DPADJ",
+      "ruleFile": "shacl/vcf-4.2.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.2:REQ-23d91a02812900476393:1",
+      "version": "4.2",
+      "kind": "INFO",
+      "key": "CN",
+      "ruleFile": "shacl/vcf-4.2.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.2:REQ-f9134e4b69db28f2116d:1",
+      "version": "4.2",
+      "kind": "INFO",
+      "key": "CNADJ",
+      "ruleFile": "shacl/vcf-4.2.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.2:REQ-e6daefa47740bc47900f:1",
+      "version": "4.2",
+      "kind": "INFO",
+      "key": "CICN",
+      "ruleFile": "shacl/vcf-4.2.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.2:REQ-54f6e6779018c9cbffb8:1",
+      "version": "4.2",
+      "kind": "INFO",
+      "key": "CICNADJ",
+      "ruleFile": "shacl/vcf-4.2.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.2:REQ-2bf62b5bc08f598ab3a4:1",
+      "version": "4.2",
+      "kind": "FORMAT",
+      "key": "CN",
+      "ruleFile": "shacl/vcf-4.2.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.2:REQ-9398057debce078c96e8:1",
+      "version": "4.2",
+      "kind": "FORMAT",
+      "key": "CNQ",
+      "ruleFile": "shacl/vcf-4.2.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.2:REQ-a8b56c2f9c97b63d6860:1",
+      "version": "4.2",
+      "kind": "FORMAT",
+      "key": "CNL",
+      "ruleFile": "shacl/vcf-4.2.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.2:REQ-9c3e4a564b8825c84039:1",
+      "version": "4.2",
+      "kind": "FORMAT",
+      "key": "NQ",
+      "ruleFile": "shacl/vcf-4.2.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.2:REQ-0a2cf45c6bb9139550ee:1",
+      "version": "4.2",
+      "kind": "FORMAT",
+      "key": "HAP",
+      "ruleFile": "shacl/vcf-4.2.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.2:REQ-51077f75c8ed3acdb984:1",
+      "version": "4.2",
+      "kind": "FORMAT",
+      "key": "AHAP",
+      "ruleFile": "shacl/vcf-4.2.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-29a6f965d618381cb700:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "AA",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-e1d4b70c21a4a0b4e05e:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "AC",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-eb9d8ea03ac754e6b1ac:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "AD",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-6ed139c9844626e4c9a3:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "ADF",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-12ab42d260714579f83f:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "ADR",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-b1e5efa821ad78ef8f45:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "AF",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-08e5779cba755bbe1bce:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "AN",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-1607cf4b588773441485:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "BQ",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-280489a74ba574e762e2:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "CIGAR",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-3d324e22af23178d899f:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "DB",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-924b159d0a3efac24311:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "DP",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-e32d00c7c67761967e1e:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "END",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-a4dc2e3b663e749eba7e:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "H2",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-f8a9bdbe87d467683f6a:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "H3",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-a8802fa790d1a81129c5:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "MQ",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-f5a1db63078feb26a4da:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "MQ0",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-01f5828ef7ce89c60a95:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "NS",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-23fbecfec9dcb060155a:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "SB",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-bd493bbfa72a1ad23d1f:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "SOMATIC",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-09d4b960d7f46bb612e0:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "VALIDATED",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-47af6f91c56784da1c69:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "1000G",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-80e38c5f43e259a3c103:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "IMPRECISE",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-766712c146480093e46e:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "NOVEL",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-48859ef7219e7b902903:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "END",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-ecf62641e6cdff0da62f:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "SVTYPE",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-e0be7b0d0d11909aa1e2:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "SVLEN",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-c6021dc5868644ab3270:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "CIPOS",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-785060226765ce004f35:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "CIEND",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-b15cc80c2a6917582d99:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "HOMLEN",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-28c26e2703d9a7853d43:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "HOMSEQ",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-976075411a85b5abc32b:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "BKPTID",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-82f91accf12f99bc71cd:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "MEINFO",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-a1cef27e05573ca68630:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "METRANS",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-d8d1a3aa9bb8c0a942d9:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "DGVID",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-35647a7d97d60207e757:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "DBVARID",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-c206d238d6a2dd736152:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "DBRIPID",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-f94b20c5d3ae6eba197a:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "MATEID",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-d11154053d3502dceda2:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "PARID",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-2f16b211ba5414e02ba2:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "EVENT",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-bfa488888e6bba505f7d:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "CILEN",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-231ee4d78428f4ba866d:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "DP",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-3f3e61a4e4e9558877b8:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "DPADJ",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-23d91a02812900476393:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "CN",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-f9134e4b69db28f2116d:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "CNADJ",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-e6daefa47740bc47900f:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "CICN",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-54f6e6779018c9cbffb8:1",
+      "version": "4.3",
+      "kind": "INFO",
+      "key": "CICNADJ",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-14e73c5f9680d8ab6ce7:1",
+      "version": "4.3",
+      "kind": "FORMAT",
+      "key": "AD",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-62a07cd846cd44a9e679:1",
+      "version": "4.3",
+      "kind": "FORMAT",
+      "key": "ADF",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-fea575809dea7ad056d4:1",
+      "version": "4.3",
+      "kind": "FORMAT",
+      "key": "ADR",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-7c46973f0efee72ccd55:1",
+      "version": "4.3",
+      "kind": "FORMAT",
+      "key": "DP",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-c2c32cb340e7ad1ab02d:1",
+      "version": "4.3",
+      "kind": "FORMAT",
+      "key": "EC",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-7a3db131b2b88af39c28:1",
+      "version": "4.3",
+      "kind": "FORMAT",
+      "key": "FT",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-28cdfb24e5d881cd1cc9:1",
+      "version": "4.3",
+      "kind": "FORMAT",
+      "key": "GL",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-9b167d48c4e1bbf5530e:1",
+      "version": "4.3",
+      "kind": "FORMAT",
+      "key": "GP",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-c7be19679edc3af5172f:1",
+      "version": "4.3",
+      "kind": "FORMAT",
+      "key": "GQ",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-08541dcd6e43af6d0bd2:1",
+      "version": "4.3",
+      "kind": "FORMAT",
+      "key": "GT",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-ef5b6fec5ed5c04a97f0:1",
+      "version": "4.3",
+      "kind": "FORMAT",
+      "key": "HQ",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-78539e56a689ac47212a:1",
+      "version": "4.3",
+      "kind": "FORMAT",
+      "key": "MQ",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-c1b969449ddb33b81de4:1",
+      "version": "4.3",
+      "kind": "FORMAT",
+      "key": "PL",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-117774920b491e46edec:1",
+      "version": "4.3",
+      "kind": "FORMAT",
+      "key": "PP",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-2bcf422f8b71e64fbe08:1",
+      "version": "4.3",
+      "kind": "FORMAT",
+      "key": "PQ",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-6bc32b529c4518735da7:1",
+      "version": "4.3",
+      "kind": "FORMAT",
+      "key": "PS",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-2bf62b5bc08f598ab3a4:1",
+      "version": "4.3",
+      "kind": "FORMAT",
+      "key": "CN",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-9398057debce078c96e8:1",
+      "version": "4.3",
+      "kind": "FORMAT",
+      "key": "CNQ",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-d9d9044b79982948d5ee:1",
+      "version": "4.3",
+      "kind": "FORMAT",
+      "key": "CNL",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-c3f67af468db0370dfc0:1",
+      "version": "4.3",
+      "kind": "FORMAT",
+      "key": "CNP",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-9c3e4a564b8825c84039:1",
+      "version": "4.3",
+      "kind": "FORMAT",
+      "key": "NQ",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-0a2cf45c6bb9139550ee:1",
+      "version": "4.3",
+      "kind": "FORMAT",
+      "key": "HAP",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.3:REQ-51077f75c8ed3acdb984:1",
+      "version": "4.3",
+      "kind": "FORMAT",
+      "key": "AHAP",
+      "ruleFile": "shacl/vcf-4.3.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-29a6f965d618381cb700:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "AA",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-e1d4b70c21a4a0b4e05e:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "AC",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-eb9d8ea03ac754e6b1ac:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "AD",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-6ed139c9844626e4c9a3:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "ADF",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-12ab42d260714579f83f:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "ADR",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-b1e5efa821ad78ef8f45:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "AF",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-08e5779cba755bbe1bce:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "AN",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-1607cf4b588773441485:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "BQ",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-280489a74ba574e762e2:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "CIGAR",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-3d324e22af23178d899f:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "DB",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-924b159d0a3efac24311:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "DP",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-e32d00c7c67761967e1e:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "END",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-a4dc2e3b663e749eba7e:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "H2",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-f8a9bdbe87d467683f6a:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "H3",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-a8802fa790d1a81129c5:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "MQ",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-f5a1db63078feb26a4da:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "MQ0",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-01f5828ef7ce89c60a95:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "NS",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-23fbecfec9dcb060155a:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "SB",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-bd493bbfa72a1ad23d1f:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "SOMATIC",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-09d4b960d7f46bb612e0:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "VALIDATED",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-47af6f91c56784da1c69:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "1000G",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-80e38c5f43e259a3c103:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "IMPRECISE",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-766712c146480093e46e:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "NOVEL",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-f93ee5c2039215ae1cbf:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "END",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-ecf62641e6cdff0da62f:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "SVTYPE",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-6f4c16791a5ac8be2bf2:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "SVLEN",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-07935785efc9eb55b558:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "CIPOS",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-451800b4dc65934cc1bb:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "CIEND",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-7671bccf26d29618f114:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "HOMLEN",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-f4e4f6006edbb8e476ee:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "HOMSEQ",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-bc5c3ec5bbe933e042ee:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "BKPTID",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-3843d441972533dd4063:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "MEINFO",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-65ac1468694eb5daaea0:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "METRANS",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-004eef383f5a332597e0:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "DGVID",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-004f60d5cdbd5742a1fa:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "DBVARID",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-70b32b2c456c51e5028f:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "DBRIPID",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-57f8e4ad811f0eb968f2:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "MATEID",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-f1489fc3343e01620c95:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "PARID",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-7a40afca5430c1828ef1:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "EVENT",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-4aaf73881bf7e009942d:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "EVENTTYPE",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-16dc48412fd2f594f5dc:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "CILEN",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-92516db231959eca2ddf:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "CN",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-6df2adb7fee314323f0c:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "CICN",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-cc1433f40968a5dc37e7:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "SVCLAIM",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-ec0334b9982da96a2a67:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "RN",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-70df6e1888e5ce9b3581:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "RUS",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-bcd2e70aaf27c136c0b1:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "RUL",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-6340c325bbe791ac13c9:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "RUC",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-b27e4353b62e0f09d2b1:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "RB",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-e9ad3b68191e49319710:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "CIRUC",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-6013ba1d9454cb2293dc:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "CIRB",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-d8f2078a0563ae37e9be:1",
+      "version": "4.4",
+      "kind": "INFO",
+      "key": "RUB",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-14e73c5f9680d8ab6ce7:1",
+      "version": "4.4",
+      "kind": "FORMAT",
+      "key": "AD",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-62a07cd846cd44a9e679:1",
+      "version": "4.4",
+      "kind": "FORMAT",
+      "key": "ADF",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-fea575809dea7ad056d4:1",
+      "version": "4.4",
+      "kind": "FORMAT",
+      "key": "ADR",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-7c46973f0efee72ccd55:1",
+      "version": "4.4",
+      "kind": "FORMAT",
+      "key": "DP",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-c2c32cb340e7ad1ab02d:1",
+      "version": "4.4",
+      "kind": "FORMAT",
+      "key": "EC",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-7a3db131b2b88af39c28:1",
+      "version": "4.4",
+      "kind": "FORMAT",
+      "key": "FT",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-28cdfb24e5d881cd1cc9:1",
+      "version": "4.4",
+      "kind": "FORMAT",
+      "key": "GL",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-9b167d48c4e1bbf5530e:1",
+      "version": "4.4",
+      "kind": "FORMAT",
+      "key": "GP",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-c7be19679edc3af5172f:1",
+      "version": "4.4",
+      "kind": "FORMAT",
+      "key": "GQ",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-08541dcd6e43af6d0bd2:1",
+      "version": "4.4",
+      "kind": "FORMAT",
+      "key": "GT",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-ef5b6fec5ed5c04a97f0:1",
+      "version": "4.4",
+      "kind": "FORMAT",
+      "key": "HQ",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-78539e56a689ac47212a:1",
+      "version": "4.4",
+      "kind": "FORMAT",
+      "key": "MQ",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-c1b969449ddb33b81de4:1",
+      "version": "4.4",
+      "kind": "FORMAT",
+      "key": "PL",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-117774920b491e46edec:1",
+      "version": "4.4",
+      "kind": "FORMAT",
+      "key": "PP",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-2bcf422f8b71e64fbe08:1",
+      "version": "4.4",
+      "kind": "FORMAT",
+      "key": "PQ",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-6bc32b529c4518735da7:1",
+      "version": "4.4",
+      "kind": "FORMAT",
+      "key": "PS",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-6fde6a54fea517660dbb:1",
+      "version": "4.4",
+      "kind": "FORMAT",
+      "key": "PSL",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-49fc58e945533f8c70aa:1",
+      "version": "4.4",
+      "kind": "FORMAT",
+      "key": "PSO",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-0787db6276e3520f8308:1",
+      "version": "4.4",
+      "kind": "FORMAT",
+      "key": "PSQ",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-587b7ba3fad53b784b9e:1",
+      "version": "4.4",
+      "kind": "FORMAT",
+      "key": "CN",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-04b25f365c38e86d7eb8:1",
+      "version": "4.4",
+      "kind": "FORMAT",
+      "key": "CICN",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-1a5006b7a7d30405ed63:1",
+      "version": "4.4",
+      "kind": "FORMAT",
+      "key": "CNQ",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-8ac691e4b7665cb29f9a:1",
+      "version": "4.4",
+      "kind": "FORMAT",
+      "key": "CNL",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-c3f67af468db0370dfc0:1",
+      "version": "4.4",
+      "kind": "FORMAT",
+      "key": "CNP",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-9c3e4a564b8825c84039:1",
+      "version": "4.4",
+      "kind": "FORMAT",
+      "key": "NQ",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-0a2cf45c6bb9139550ee:1",
+      "version": "4.4",
+      "kind": "FORMAT",
+      "key": "HAP",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.4:REQ-51077f75c8ed3acdb984:1",
+      "version": "4.4",
+      "kind": "FORMAT",
+      "key": "AHAP",
+      "ruleFile": "shacl/vcf-4.4.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-29a6f965d618381cb700:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "AA",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-e1d4b70c21a4a0b4e05e:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "AC",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-eb9d8ea03ac754e6b1ac:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "AD",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-6ed139c9844626e4c9a3:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "ADF",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-12ab42d260714579f83f:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "ADR",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-b1e5efa821ad78ef8f45:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "AF",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-08e5779cba755bbe1bce:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "AN",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-1607cf4b588773441485:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "BQ",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-280489a74ba574e762e2:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "CIGAR",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-3d324e22af23178d899f:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "DB",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-924b159d0a3efac24311:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "DP",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-7c1e0e3ae8a8c848ecb0:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "END",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-a4dc2e3b663e749eba7e:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "H2",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-f8a9bdbe87d467683f6a:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "H3",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-a8802fa790d1a81129c5:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "MQ",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-f5a1db63078feb26a4da:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "MQ0",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-01f5828ef7ce89c60a95:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "NS",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-23fbecfec9dcb060155a:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "SB",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-bd493bbfa72a1ad23d1f:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "SOMATIC",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-09d4b960d7f46bb612e0:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "VALIDATED",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-47af6f91c56784da1c69:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "1000G",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-80e38c5f43e259a3c103:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "IMPRECISE",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-766712c146480093e46e:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "NOVEL",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-24c9cc8e571715134c23:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "END",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-ecf62641e6cdff0da62f:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "SVTYPE",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-6f4c16791a5ac8be2bf2:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "SVLEN",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-07935785efc9eb55b558:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "CIPOS",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-bfd4a2610be1a675fffa:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "CIEND",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-7671bccf26d29618f114:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "HOMLEN",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-f4e4f6006edbb8e476ee:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "HOMSEQ",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-bc5c3ec5bbe933e042ee:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "BKPTID",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-3843d441972533dd4063:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "MEINFO",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-65ac1468694eb5daaea0:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "METRANS",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-004eef383f5a332597e0:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "DGVID",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-004f60d5cdbd5742a1fa:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "DBVARID",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-70b32b2c456c51e5028f:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "DBRIPID",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-57f8e4ad811f0eb968f2:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "MATEID",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-f1489fc3343e01620c95:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "PARID",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-7a40afca5430c1828ef1:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "EVENT",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-4aaf73881bf7e009942d:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "EVENTTYPE",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-16dc48412fd2f594f5dc:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "CILEN",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-92516db231959eca2ddf:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "CN",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-6df2adb7fee314323f0c:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "CICN",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-cc1433f40968a5dc37e7:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "SVCLAIM",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-ec0334b9982da96a2a67:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "RN",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-70df6e1888e5ce9b3581:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "RUS",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-bcd2e70aaf27c136c0b1:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "RUL",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-6340c325bbe791ac13c9:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "RUC",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-b27e4353b62e0f09d2b1:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "RB",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-e9ad3b68191e49319710:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "CIRUC",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-6013ba1d9454cb2293dc:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "CIRB",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-d8f2078a0563ae37e9be:1",
+      "version": "4.5",
+      "kind": "INFO",
+      "key": "RUB",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-14e73c5f9680d8ab6ce7:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "AD",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-62a07cd846cd44a9e679:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "ADF",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-fea575809dea7ad056d4:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "ADR",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-7c46973f0efee72ccd55:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "DP",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-c2c32cb340e7ad1ab02d:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "EC",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-80077cef948dfdbf41bf:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "LEN",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-7a3db131b2b88af39c28:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "FT",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-28cdfb24e5d881cd1cc9:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "GL",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-9b167d48c4e1bbf5530e:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "GP",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-c7be19679edc3af5172f:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "GQ",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-08541dcd6e43af6d0bd2:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "GT",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-ef5b6fec5ed5c04a97f0:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "HQ",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-82d05473f74212605a68:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "LA",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-4ad94097cba1791ebff5:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "LAA",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-8f3c3967903c095b420f:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "LAD",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-ff4a8928c21bae681a0c:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "LADF",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-5218d2cee665de3ba28f:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "LADR",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-603b85300b405a299224:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "LEC",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-fb37c211fd96281f89d9:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "LGL",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-3428bb6f76a71f2e8fa4:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "LGP",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-930da3dc806229d44cfc:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "LPL",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-5428349c99d3c64bd2fc:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "LPP",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-f59e65d500e5d46fdfcf:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "M[0-9]+[ACGTUN]",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": false,
+      "wrongTypeFlagged": false
+    },
+    {
+      "candidate": "4.5:REQ-96547aab2a58c55317fe:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "DPM[0-9]+[ACGTUN]",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": false,
+      "wrongTypeFlagged": false
+    },
+    {
+      "candidate": "4.5:REQ-b56b2c3ffc2b9f264694:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "ADM[0-9]+[ACGTUN]",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": false,
+      "wrongTypeFlagged": false
+    },
+    {
+      "candidate": "4.5:REQ-84fa9c760fd1ecb29279:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "M5mC",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-68d7444daa5b5bf4080b:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "DPM5mC",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-7910d3e6f8a72f69de3d:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "ADM5mC",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-f96710a078c7dc748946:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "M5hmC",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-4a2826b0d335fb99016f:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "DPM5hmC",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-f589008f815f49f8eb31:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "ADM5hmC",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-18ae0b814dcd1b66faa6:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "M5fC",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-e11c60334466f646a3e8:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "DPM5fC",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-780de610ef2f09c54c96:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "ADM5fC",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-8ce7f5da0aaaa11f453e:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "M5caC",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-8cf2c7a3ce731198bbaa:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "DPM5caC",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-aca654cc38c7e5147555:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "ADM5caC",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-32860163f947cf775e0d:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "M5hmU",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-313d3fc7b22a373367ef:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "DPM5hmU",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-eddfc9239704bfe363cd:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "ADM5hmU",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-21efe354ada28428fa18:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "M5fU",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-9b0ff12ec73612457e8e:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "DPM5fU",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-9c7070ec1f16b8f18181:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "ADM5fU",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-5e158539dc2861126f24:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "M5caU",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-46cef18779dbbde4d4e0:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "DPM5caU",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-32f5e38aecbccc710025:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "ADM5caU",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-ecf0efd7c87531dd7304:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "M6mA",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-e107b91361e77a9e798e:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "DPM6mA",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-c6a0a156b19de829f3e6:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "ADM6mA",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-c424d9e146f9ef1b8474:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "M8oxoG",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-e93d33a23c38367b858c:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "DPM8oxoG",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-1b07932e24920a6b8285:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "ADM8oxoG",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-eb0ee0772ad99793d629:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "MXaoN",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-5c733ba6af83759aa089:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "DPMXaoN",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-ce48012837f6ac99aa9c:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "ADMXaoN",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-78539e56a689ac47212a:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "MQ",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-c1b969449ddb33b81de4:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "PL",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-117774920b491e46edec:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "PP",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-2bcf422f8b71e64fbe08:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "PQ",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-6bc32b529c4518735da7:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "PS",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-6fde6a54fea517660dbb:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "PSL",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-49fc58e945533f8c70aa:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "PSO",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-0787db6276e3520f8308:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "PSQ",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-587b7ba3fad53b784b9e:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "CN",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-04b25f365c38e86d7eb8:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "CICN",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-1a5006b7a7d30405ed63:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "CNQ",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-8ac691e4b7665cb29f9a:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "CNL",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-c3f67af468db0370dfc0:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "CNP",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-9c3e4a564b8825c84039:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "NQ",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-0a2cf45c6bb9139550ee:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "HAP",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    },
+    {
+      "candidate": "4.5:REQ-51077f75c8ed3acdb984:1",
+      "version": "4.5",
+      "kind": "FORMAT",
+      "key": "AHAP",
+      "ruleFile": "shacl/vcf-4.5.shacl.ttl",
+      "validFlagged": false,
+      "wrongNumberFlagged": true,
+      "wrongTypeFlagged": true
+    }
+  ],
+  "reservedRows": 333,
+  "reservedRowsRejectingBothMutations": 330
+}

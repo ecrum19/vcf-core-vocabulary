@@ -31,6 +31,13 @@ def validate_semantics(g,ontology=None):
     def components(raw):return [] if raw=='' else raw.split(',')
     def definition(n):
         d=obj(n,'declaredBy');return text(d,'fieldId'),text(d,'fieldNumber'),text(d,'fieldType').split('#')[-1].removesuffix('Type')
+    def check_percent_encoding():
+        # SHACL cannot percent-decode, so raw/decoded agreement is checked here.
+        for item in g.subjects(V.rawValue,None):
+            raw_form=text(item,'rawValue');decoded=text(item,'decodedValue')
+            if not decoded:err('percent-decoded-missing',item,'rawValue without decodedValue')
+            elif unquote(raw_form)!=decoded:
+                err('percent-decoded-disagreement',item,f'{raw_form!r} decodes to {unquote(raw_form)!r}, not {decoded!r}')
     def check_values(node,key,num,typ,raw,alts,values,version):
         if raw=='.':return
         vals=components(raw)
@@ -165,4 +172,5 @@ def validate_semantics(g,ontology=None):
                             if length<1 or not any(a in ('<*>','<NON_REF>') for a in alts):err('reference-block',sample,'LEN requires an unspecified allele and positive length')
                             block_ends[block_key]=pos+length-1
                         except ValueError:err('reference-block',sample,'non-integer LEN')
+    check_percent_encoding()
     return errors
