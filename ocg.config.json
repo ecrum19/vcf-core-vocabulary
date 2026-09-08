@@ -502,8 +502,8 @@
   "site": {
     "basePath": "/",
     "branding": {
-      "headerImage": "assets/branding/vcf-rdfizer-mark.png",
-      "favicon": "assets/branding/vcf-rdfizer-favicon.png"
+      "headerImage": "assets/branding/vcf-core-mark.png",
+      "favicon": "assets/branding/vcf-core-favicon.png"
     },
     "hero": {
       "kicker": "VCF 4.5 to RDF",

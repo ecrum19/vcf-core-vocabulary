@@ -19,7 +19,7 @@
     "versions:build": "npm run validation:build && npm run examples:build && npm run ontology:bundle",
     "examples:build": "if [ -x .venv/bin/python ]; then .venv/bin/python scripts/vcf_examples.py --write; else python3 scripts/vcf_examples.py --write; fi",
     "validate:examples": "if [ -x .venv/bin/python ]; then .venv/bin/python tests/check_examples.py; else python3 tests/check_examples.py; fi",
-    "validate:regressions": "if [ -x .venv/bin/python ]; then .venv/bin/python -m unittest discover -s tests -p 'test_*.py'; else python3 -m unittest discover -s tests -p 'test_*.py'; fi",
+    "validate:regressions": "if [ -x .venv/bin/python ]; then .venv/bin/python -W \"ignore:'count' is passed as positional argument:DeprecationWarning:rdflib.plugins.sparql.operators\" -m unittest discover -s tests -p 'test_*.py'; else python3 -W \"ignore:'count' is passed as positional argument:DeprecationWarning:rdflib.plugins.sparql.operators\" -m unittest discover -s tests -p 'test_*.py'; fi",
     "validate:gate": "if [ -x .venv/bin/python ]; then .venv/bin/python scripts/validation-gate.py --check; else python3 scripts/validation-gate.py --check; fi",
     "validate:gate:status": "if [ -x .venv/bin/python ]; then .venv/bin/python scripts/validation-gate.py --status; else python3 scripts/validation-gate.py --status; fi",
     "validate:stamp": "if [ -x .venv/bin/python ]; then .venv/bin/python scripts/validation-gate.py --update; else python3 scripts/validation-gate.py --update; fi",

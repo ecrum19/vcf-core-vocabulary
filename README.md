@@ -1,4 +1,14 @@
+<img src="assets/branding/vcf-core-mark.png" align="right" width="112" height="112" alt="VCF Core Vocabulary logo">
+
 # VCF Core Vocabulary
+
+[![Vocabulary version: 2.1.0](https://img.shields.io/badge/vocabulary-v2.1.0-006875)](docs/RELEASE-NOTES-v2.1.0.md)
+[![VCF validation profiles: 4.1–4.5](https://img.shields.io/badge/VCF_profiles-4.1%E2%80%934.5-006875)](shacl/README.md)
+[![License: CC BY 4.0](https://img.shields.io/badge/license-CC_BY_4.0-006875)](LICENSE)
+
+[![Vocabulary and example validation](https://github.com/ecrum19/vcf-core-vocabulary/actions/workflows/validate.yml/badge.svg?event=pull_request)](https://github.com/ecrum19/vcf-core-vocabulary/actions/workflows/validate.yml)
+[![Documentation publication](https://github.com/ecrum19/vcf-core-vocabulary/actions/workflows/publish-pages.yml/badge.svg?branch=main)](https://github.com/ecrum19/vcf-core-vocabulary/actions/workflows/publish-pages.yml)
+[![Coverage review: ongoing](https://img.shields.io/badge/coverage_review-ongoing-d89a4a)](coverage/methodological/README.md#current-findings-and-review-status)
 
 **An RDF vocabulary for Variant Call Format (VCF) data, with validation profiles
 for VCF 4.1–4.5.**

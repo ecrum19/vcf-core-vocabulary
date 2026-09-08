@@ -43,6 +43,15 @@ npm run validate:regressions
 npm run validate:examples
 ```
 
+The regression command filters the specific `DeprecationWarning: 'count' is
+passed as positional argument` emitted by the pinned RDFLib 7.6.0 SPARQL
+`REPLACE` implementation on newer Python versions. The filter matches that
+message, category and module only; other warnings and test failures remain
+visible. It does not patch RDFLib or change validation results. Remove it when
+the pinned dependency uses a keyword argument for this call. To inspect the
+unfiltered warnings, run `python -m unittest discover -s tests -p 'test_*.py'`
+inside the activated environment.
+
 ## Why `npm run validate` is usually fast
 
 The complete suite takes several minutes, but
