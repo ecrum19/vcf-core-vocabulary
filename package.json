@@ -16,6 +16,8 @@
     "ocg:dev": "ocg dev",
     "examples:ttl": "node scripts/convert-example-nt-to-ttl.mjs",
     "validation:build": "if [ -x .venv/bin/python ]; then .venv/bin/python scripts/build-shacl-profiles.py; else python3 scripts/build-shacl-profiles.py; fi",
+    "mappings:build": "if [ -x .venv/bin/python ]; then .venv/bin/python scripts/build-mapping-sets.py; else python3 scripts/build-mapping-sets.py; fi",
+    "mappings:check": "if [ -x .venv/bin/python ]; then .venv/bin/python scripts/build-mapping-sets.py --check; else python3 scripts/build-mapping-sets.py --check; fi",
     "versions:build": "npm run validation:build && npm run examples:build && npm run ontology:bundle",
     "examples:build": "if [ -x .venv/bin/python ]; then .venv/bin/python scripts/vcf_examples.py --write; else python3 scripts/vcf_examples.py --write; fi",
     "validate:examples": "if [ -x .venv/bin/python ]; then .venv/bin/python tests/check_examples.py; else python3 tests/check_examples.py; fi",

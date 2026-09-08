@@ -1,0 +1,149 @@
+# curie_map:
+#   chebi: http://purl.obolibrary.org/obo/CHEBI_
+#   faldo: http://biohackathon.org/resource/faldo#
+#   geno: http://purl.obolibrary.org/obo/GENO_
+#   gfvo: https://github.com/BioInterchange/Ontologies/gfvo#
+#   gvo: http://genome-variation.org/resource/gvo#
+#   hero: https://w3id.org/hereditary/ontology/genomics/schema/
+#   med2rdf: http://med2rdf.org/ontology/med2rdf#
+#   orcid: https://orcid.org/
+#   semapv: https://w3id.org/semapv/vocab/
+#   sio: http://semanticscience.org/resource/SIO_
+#   skos: http://www.w3.org/2004/02/skos/core#
+#   so: http://purl.obolibrary.org/obo/SO_
+#   sssom: https://w3id.org/sssom/
+#   vcfc: https://w3id.org/vcf-core/vocab#
+#   vrs: https://w3id.org/ga4gh/schema/vrs/2.0/json/
+#   vrs1: https://w3id.org/ga4gh/schema/vrs/1.3/json/
+# mapping_set_id: https://w3id.org/vcf-core/alignments
+# mapping_set_title: VCF Core Vocabulary: external alignments
+# mapping_set_description: The single curated record of every alignment vcf-core asserts against an external vocabulary. This file is the source of truth: vcf-core-alignments.ttl is generated from it by scripts/build-mapping-sets.py. Rows commented 'Also asserted inline in the vcf-core ontology modules' are additionally present in ontology/*.ttl and reach anyone loading the bundle; the rest reach only those who load the alignment module.
+# license: https://creativecommons.org/licenses/by/4.0/
+# mapping_tool: manual curation
+# subject_source: https://w3id.org/vcf-core/vocab
+# subject_source_version: 2.1.0
+# comment: vrs: is GA4GH VRS 2.0, the version this vocabulary targets. vrs1: is VRS 1.3 and appears only in the bh25/ sets, whose curators worked against VRS 1.2/1.3; several terms they mapped to (Genotype, Haplotype, SequenceInterval, ChromosomeLocation, Text, Gene, Feature, UtilityVariation) were removed in 2.0.
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	confidence	comment	mapping_date	author_id
+vcfc:Allele	VCF allele	skos:closeMatch	vrs:Allele		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:Breakend	breakend	skos:relatedMatch	so:0001021		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:ContigHeaderLine	contig header line	skos:relatedMatch	vrs:SequenceReference		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:EventBalancedTranslocation	TRA:BALANCED event type	skos:exactMatch	so:1000048		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:EventChromothripsis	CHROMOTHRIPSIS event type	skos:closeMatch	so:0002062		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:EventDeletion	DEL event type	skos:exactMatch	so:0000159		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:EventDuplication	DUP event type	skos:exactMatch	so:1000035		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:EventInsertion	INS event type	skos:exactMatch	so:0000667		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:EventInversion	INV event type	skos:exactMatch	so:1000036		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:EventMobileElementDeletion	DEL:ME event type	skos:exactMatch	so:0002066		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:EventMobileElementInsertion	INS:ME event type	skos:exactMatch	so:0001837		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:EventTandemDuplication	DUP:TANDEM event type	skos:exactMatch	so:1000173		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:EventTranslocation	TRA event type	skos:exactMatch	so:0000199		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:FormatFieldValue	FORMAT field value	skos:relatedMatch	hero:Genotype		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:Genotype	VCF genotype	skos:closeMatch	geno:0000536		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:InfoFieldValue	INFO field value	skos:relatedMatch	hero:VariantLevelData		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:PhaseSet	phase set	skos:closeMatch	geno:0000886		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:PhaseSet	phase set	skos:closeMatch	vrs:CisPhasedBlock		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:ReservedFormat_M5caC	Format M5caC reserved field definition	skos:exactMatch	chebi:76793		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:ReservedFormat_M5caU	Format M5caU reserved field definition	skos:exactMatch	chebi:17477		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:ReservedFormat_M5fC	Format M5fC reserved field definition	skos:exactMatch	chebi:76794		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:ReservedFormat_M5fU	Format M5fU reserved field definition	skos:exactMatch	chebi:80961		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:ReservedFormat_M5hmC	Format M5hmC reserved field definition	skos:exactMatch	chebi:76792		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:ReservedFormat_M5hmU	Format M5hmU reserved field definition	skos:exactMatch	chebi:16964		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:ReservedFormat_M5mC	Format M5mC reserved field definition	skos:exactMatch	chebi:27551		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:ReservedFormat_M6mA	Format M6mA reserved field definition	skos:exactMatch	chebi:28871		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:ReservedFormat_M8oxoG	Format M8oxoG reserved field definition	skos:exactMatch	chebi:44605		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:ReservedFormat_MXaoN	Format MXaoN reserved field definition	skos:exactMatch	chebi:18107		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:SampleCall	sample call	skos:closeMatch	hero:Genotype		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:SampleCall	sample call	skos:relatedMatch	hero:Zygosity		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:SymbolicCopyNumberVariation	CNV symbolic allele type	skos:exactMatch	so:0001019		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:SymbolicDeletion	DEL symbolic allele type	skos:exactMatch	so:0000159		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:SymbolicDuplication	DUP symbolic allele type	skos:exactMatch	so:1000035		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:SymbolicInsertion	INS symbolic allele type	skos:exactMatch	so:0000667		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:SymbolicInversion	INV symbolic allele type	skos:exactMatch	so:1000036		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:SymbolicMobileElementDeletion	DEL:ME symbolic allele subtype	skos:exactMatch	so:0002066		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:SymbolicMobileElementInsertion	INS:ME symbolic allele subtype	skos:exactMatch	so:0001837		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:SymbolicTandemDuplication	DUP:TANDEM symbolic allele subtype	skos:exactMatch	so:1000173		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:SymbolicTandemRepeat	CNV:TR symbolic allele subtype	skos:closeMatch	so:0000705		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:SymbolicTandemRepeat	CNV:TR symbolic allele subtype	skos:relatedMatch	so:0002096		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:VCFFile	VCF file	skos:exactMatch	hero:VCFFile		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:VCFRecord	VCF record	skos:exactMatch	hero:VCFRecord		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:VCFRecord	VCF record	skos:relatedMatch	faldo:Region		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:VCFRecord	VCF record	skos:relatedMatch	vrs:Allele		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:VCFRecord	VCF record	skos:relatedMatch	vrs:SequenceLocation		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:VariantCall	variant call	skos:closeMatch	hero:GenomicVariation		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:VariantCall	variant call	skos:closeMatch	so:0001060		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:VariantCall	variant call	skos:closeMatch	vrs:Allele		semapv:ManualMappingCuration		Also asserted inline in the vcf-core ontology modules.		
+vcfc:ReferenceAllele	reference allele	skos:closeMatch	vrs:LiteralSequenceExpression		semapv:ManualMappingCuration	0.7	REF is a literal sequence; VRS wraps it in a sequence expression. VRS 2.0 is the hub every SWAT4HCLS 2025 BioHackathon set was mapped against; this spoke is what makes those sets composable with vcf-core.	2026-09-08	
+vcfc:AltAllele	alternate allele	skos:closeMatch	vrs:LiteralSequenceExpression		semapv:ManualMappingCuration	0.7	Holds only for explicit base-sequence ALTs, not symbolic or breakend ALTs. VRS 2.0 is the hub every SWAT4HCLS 2025 BioHackathon set was mapped against; this spoke is what makes those sets composable with vcf-core.	2026-09-08	
+vcfc:Breakend	breakend	skos:relatedMatch	vrs:Adjacency		semapv:ManualMappingCuration	0.7	VRS models a join between two sequences; VCF models one side of it per record.	2026-09-08	
+vcfc:Breakend	breakend	skos:relatedMatch	vrs:Terminus		semapv:ManualMappingCuration	0.6	Corresponds to the single-breakend and telomeric cases.	2026-09-08	
+vcfc:SymbolicCopyNumberVariation	CNV symbolic allele type	skos:closeMatch	vrs:CopyNumberChange		semapv:ManualMappingCuration	0.8		2026-09-08	
+vcfc:copyNumber	copy number	skos:relatedMatch	vrs:CopyNumberCount		semapv:ManualMappingCuration	0.7	CN carries the count that VRS reifies as a class.	2026-09-08	
+vcfc:ConfidenceInterval	confidence interval	skos:closeMatch	vrs:Range		semapv:ManualMappingCuration	0.7	CIPOS/CIEND bounds correspond to a VRS Range.	2026-09-08	
+vcfc:TandemRepeatAllele	tandem-repeat allele	skos:closeMatch	vrs:ReferenceLengthExpression		semapv:ManualMappingCuration	0.7		2026-09-08	
+vcfc:referenceGenome	reference genome	skos:relatedMatch	vrs:SequenceReference		semapv:ManualMappingCuration	0.7		2026-09-08	
+vcfc:chrom	CHROM	skos:exactMatch	hero:vcfChrom		semapv:ManualMappingCuration	0.95	HERO is the only surveyed model with first-class VCF column terms, so these are near one-to-one.	2026-09-08	
+vcfc:pos	POS	skos:exactMatch	hero:vcfPos		semapv:ManualMappingCuration	0.95	Both are the 1-based VCF POS value.	2026-09-08	
+vcfc:ref	REF	skos:exactMatch	hero:vcfRef		semapv:ManualMappingCuration	0.9	Both are the REF column as written, including VCF padding bases.	2026-09-08	
+vcfc:alt	ALT	skos:exactMatch	hero:vcfAlt		semapv:ManualMappingCuration	0.9	Both are the ALT column as written.	2026-09-08	
+vcfc:qual	QUAL	skos:exactMatch	hero:vcfQual		semapv:ManualMappingCuration	0.95	Phred-scaled QUAL. HERO mapped this to sssom:NoTermFound against VRS.	2026-09-08	
+vcfc:filter	FILTER	skos:closeMatch	hero:vcfFilter		semapv:ManualMappingCuration	0.8	vcf-core reifies FILTER codes as resources; HERO keeps the raw token. HERO mapped this to sssom:NoTermFound against VRS.	2026-09-08	
+vcfc:infoRaw	INFO raw	skos:exactMatch	hero:vcfInfo		semapv:ManualMappingCuration	0.9	Both are the undecoded INFO string. HERO mapped this to sssom:NoTermFound against VRS.	2026-09-08	
+vcfc:referenceGenome	reference genome	skos:closeMatch	hero:genomeAssembly		semapv:ManualMappingCuration	0.8		2026-09-08	
+vcfc:qual	QUAL	skos:closeMatch	hero:variantQuality		semapv:ManualMappingCuration	0.7	HERO's property form of the same quantity.	2026-09-08	
+vcfc:FilterStatus	filter status	skos:relatedMatch	hero:VariantQuality		semapv:ManualMappingCuration	0.5	HERO groups quality and filtering; vcf-core separates them.	2026-09-08	
+vcfc:chrom	CHROM	skos:exactMatch	gvo:chrom		semapv:ManualMappingCuration	0.9	GVO separates the normalised value from the VCF-as-written value with a _vcf suffix, which is the same distinction vcf-core draws.	2026-09-08	
+vcfc:pos	POS	skos:exactMatch	gvo:pos_vcf		semapv:ManualMappingCuration	0.9	GVO separates the normalised value from the VCF-as-written value with a _vcf suffix, which is the same distinction vcf-core draws.	2026-09-08	
+vcfc:ref	REF	skos:exactMatch	gvo:ref_vcf		semapv:ManualMappingCuration	0.9	GVO separates the normalised value from the VCF-as-written value with a _vcf suffix, which is the same distinction vcf-core draws.	2026-09-08	
+vcfc:alt	ALT	skos:exactMatch	gvo:alt_vcf		semapv:ManualMappingCuration	0.9	GVO separates the normalised value from the VCF-as-written value with a _vcf suffix, which is the same distinction vcf-core draws.	2026-09-08	
+vcfc:qual	QUAL	skos:exactMatch	gvo:qual		semapv:ManualMappingCuration	0.9		2026-09-08	
+vcfc:filter	FILTER	skos:closeMatch	gvo:filter		semapv:ManualMappingCuration	0.8	GVO keeps the raw token; vcf-core reifies FILTER codes.	2026-09-08	
+vcfc:infoRaw	INFO raw	skos:closeMatch	gvo:info		semapv:ManualMappingCuration	0.8		2026-09-08	
+vcfc:pos	POS	skos:closeMatch	gvo:pos		semapv:ManualMappingCuration	0.6	GVO's normalised position, not the VCF-padded one; see gvo:pos_vcf for the exact match.	2026-09-08	
+vcfc:ref	REF	skos:closeMatch	gvo:ref		semapv:ManualMappingCuration	0.6	GVO's normalised allele; see gvo:ref_vcf for the exact match.	2026-09-08	
+vcfc:alt	ALT	skos:closeMatch	gvo:alt		semapv:ManualMappingCuration	0.6	GVO's normalised allele; see gvo:alt_vcf for the exact match.	2026-09-08	
+vcfc:SymbolicDeletion	DEL symbolic allele type	skos:exactMatch	gvo:Del		semapv:ManualMappingCuration	0.9	GVO's class hierarchy is the VCF symbolic-ALT vocabulary.	2026-09-08	
+vcfc:SymbolicInsertion	INS symbolic allele type	skos:exactMatch	gvo:Ins		semapv:ManualMappingCuration	0.9	GVO's class hierarchy is the VCF symbolic-ALT vocabulary.	2026-09-08	
+vcfc:SymbolicDuplication	DUP symbolic allele type	skos:exactMatch	gvo:Dup		semapv:ManualMappingCuration	0.9	GVO's class hierarchy is the VCF symbolic-ALT vocabulary.	2026-09-08	
+vcfc:SymbolicInversion	INV symbolic allele type	skos:exactMatch	gvo:Inv		semapv:ManualMappingCuration	0.9	GVO's class hierarchy is the VCF symbolic-ALT vocabulary.	2026-09-08	
+vcfc:SymbolicCopyNumberVariation	CNV symbolic allele type	skos:exactMatch	gvo:CNV		semapv:ManualMappingCuration	0.9	GVO's class hierarchy is the VCF symbolic-ALT vocabulary.	2026-09-08	
+vcfc:SymbolicTandemDuplication	DUP:TANDEM symbolic allele subtype	skos:exactMatch	gvo:TDup		semapv:ManualMappingCuration	0.9	GVO's class hierarchy is the VCF symbolic-ALT vocabulary.	2026-09-08	
+vcfc:SymbolicMobileElementDeletion	DEL:ME symbolic allele subtype	skos:exactMatch	gvo:DelME		semapv:ManualMappingCuration	0.9	GVO's class hierarchy is the VCF symbolic-ALT vocabulary.	2026-09-08	
+vcfc:SymbolicMobileElementInsertion	INS:ME symbolic allele subtype	skos:exactMatch	gvo:InsME		semapv:ManualMappingCuration	0.9	GVO's class hierarchy is the VCF symbolic-ALT vocabulary.	2026-09-08	
+vcfc:EventDeletion	DEL event type	skos:exactMatch	gvo:Del		semapv:ManualMappingCuration	0.85	SVTYPE event counterpart of the symbolic allele type.	2026-09-08	
+vcfc:EventInsertion	INS event type	skos:exactMatch	gvo:Ins		semapv:ManualMappingCuration	0.85	SVTYPE event counterpart of the symbolic allele type.	2026-09-08	
+vcfc:EventDuplication	DUP event type	skos:exactMatch	gvo:Dup		semapv:ManualMappingCuration	0.85	SVTYPE event counterpart of the symbolic allele type.	2026-09-08	
+vcfc:EventInversion	INV event type	skos:exactMatch	gvo:Inv		semapv:ManualMappingCuration	0.85	SVTYPE event counterpart of the symbolic allele type.	2026-09-08	
+vcfc:EventTandemDuplication	DUP:TANDEM event type	skos:exactMatch	gvo:TDup		semapv:ManualMappingCuration	0.85	SVTYPE event counterpart of the symbolic allele type.	2026-09-08	
+vcfc:EventMobileElementDeletion	DEL:ME event type	skos:exactMatch	gvo:DelME		semapv:ManualMappingCuration	0.85	SVTYPE event counterpart of the symbolic allele type.	2026-09-08	
+vcfc:EventMobileElementInsertion	INS:ME event type	skos:exactMatch	gvo:InsME		semapv:ManualMappingCuration	0.85	SVTYPE event counterpart of the symbolic allele type.	2026-09-08	
+vcfc:SymbolicTandemRepeat	CNV:TR symbolic allele subtype	skos:closeMatch	gvo:TR		semapv:ManualMappingCuration	0.8		2026-09-08	
+vcfc:SymbolicTandemRepeat	CNV:TR symbolic allele subtype	skos:closeMatch	gvo:STRV		semapv:ManualMappingCuration	0.7	GVO's short-tandem-repeat variation.	2026-09-08	
+vcfc:Breakend	breakend	skos:closeMatch	gvo:Bnd		semapv:ManualMappingCuration	0.8		2026-09-08	
+vcfc:EventTranslocation	TRA event type	skos:closeMatch	gvo:Ctx		semapv:ManualMappingCuration	0.8		2026-09-08	
+vcfc:EventTranslocation	TRA event type	skos:narrowMatch	gvo:InterCtx		semapv:ManualMappingCuration	0.8	GVO distinguishes inter- from intrachromosomal; VCF 4.5 does not.	2026-09-08	
+vcfc:EventTranslocation	TRA event type	skos:narrowMatch	gvo:IntraCtx		semapv:ManualMappingCuration	0.8	GVO distinguishes inter- from intrachromosomal; VCF 4.5 does not.	2026-09-08	
+vcfc:SymbolicMobileElementInsertion	INS:ME symbolic allele subtype	skos:narrowMatch	gvo:InsAlu		semapv:ManualMappingCuration	0.8	GVO names the mobile element; VCF 4.5 INS:ME does not.	2026-09-08	
+vcfc:SymbolicMobileElementInsertion	INS:ME symbolic allele subtype	skos:narrowMatch	gvo:InsLINE1		semapv:ManualMappingCuration	0.8	GVO names the mobile element; VCF 4.5 INS:ME does not.	2026-09-08	
+vcfc:SymbolicMobileElementInsertion	INS:ME symbolic allele subtype	skos:narrowMatch	gvo:InsSVA		semapv:ManualMappingCuration	0.8	GVO names the mobile element; VCF 4.5 INS:ME does not.	2026-09-08	
+vcfc:SymbolicMobileElementInsertion	INS:ME symbolic allele subtype	skos:narrowMatch	gvo:InsHERV		semapv:ManualMappingCuration	0.8	GVO names the mobile element; VCF 4.5 INS:ME does not.	2026-09-08	
+vcfc:SymbolicMobileElementDeletion	DEL:ME symbolic allele subtype	skos:narrowMatch	gvo:DelAlu		semapv:ManualMappingCuration	0.8	GVO names the mobile element; VCF 4.5 DEL:ME does not.	2026-09-08	
+vcfc:SymbolicMobileElementDeletion	DEL:ME symbolic allele subtype	skos:narrowMatch	gvo:DelLINE1		semapv:ManualMappingCuration	0.8	GVO names the mobile element; VCF 4.5 DEL:ME does not.	2026-09-08	
+vcfc:SymbolicMobileElementDeletion	DEL:ME symbolic allele subtype	skos:narrowMatch	gvo:DelSVA		semapv:ManualMappingCuration	0.8	GVO names the mobile element; VCF 4.5 DEL:ME does not.	2026-09-08	
+vcfc:SymbolicMobileElementDeletion	DEL:ME symbolic allele subtype	skos:narrowMatch	gvo:DelHERV		semapv:ManualMappingCuration	0.8	GVO names the mobile element; VCF 4.5 DEL:ME does not.	2026-09-08	
+vcfc:ReservedInfo_AC	Info AC reserved field definition	skos:closeMatch	gfvo:AlleleCount		semapv:ManualMappingCuration	0.8	GFVO was designed to cover VCF, so it is the best available match for the reserved-key registry.	2026-09-08	
+vcfc:ReservedInfo_AF	Info AF reserved field definition	skos:closeMatch	gfvo:AlleleFrequency		semapv:ManualMappingCuration	0.8	GFVO was designed to cover VCF, so it is the best available match for the reserved-key registry.	2026-09-08	
+vcfc:ReservedInfo_AN	Info AN reserved field definition	skos:closeMatch	gfvo:TotalNumberOfAlleles		semapv:ManualMappingCuration	0.8	GFVO was designed to cover VCF, so it is the best available match for the reserved-key registry.	2026-09-08	
+vcfc:ReservedInfo_NS	Info NS reserved field definition	skos:closeMatch	gfvo:SampleCount		semapv:ManualMappingCuration	0.8	GFVO was designed to cover VCF, so it is the best available match for the reserved-key registry.	2026-09-08	
+vcfc:ReservedInfo_MQ	Info MQ reserved field definition	skos:closeMatch	gfvo:MappingQuality		semapv:ManualMappingCuration	0.8	GFVO was designed to cover VCF, so it is the best available match for the reserved-key registry.	2026-09-08	
+vcfc:ReservedInfo_BQ	Info BQ reserved field definition	skos:closeMatch	gfvo:BaseQuality		semapv:ManualMappingCuration	0.8	GFVO was designed to cover VCF, so it is the best available match for the reserved-key registry.	2026-09-08	
+vcfc:ReservedInfo_DP	Info DP reserved field definition	skos:closeMatch	gfvo:Coverage		semapv:ManualMappingCuration	0.8	GFVO was designed to cover VCF, so it is the best available match for the reserved-key registry.	2026-09-08	
+vcfc:ReservedFormat_DP	Format DP reserved field definition	skos:closeMatch	gfvo:Coverage		semapv:ManualMappingCuration	0.8	Per-sample read depth.	2026-09-08	
+vcfc:ReservedFormat_GQ	Format GQ reserved field definition	skos:closeMatch	gfvo:ConditionalGenotypeQuality		semapv:ManualMappingCuration	0.85	GFVO was designed to cover VCF, so it is the best available match for the reserved-key registry.	2026-09-08	
+vcfc:Genotype	VCF genotype	skos:closeMatch	gfvo:Genotype		semapv:ManualMappingCuration	0.8		2026-09-08	
+vcfc:VCFSample	VCF sample	skos:closeMatch	gfvo:Sample		semapv:ManualMappingCuration	0.8		2026-09-08	
+vcfc:PhasingStatus	phasing status	skos:closeMatch	gfvo:GameticPhase		semapv:ManualMappingCuration	0.8		2026-09-08	
+vcfc:qual	QUAL	skos:relatedMatch	gfvo:PhredScore		semapv:ManualMappingCuration	0.7	GFVO reifies the score; vcf-core keeps QUAL as a value.	2026-09-08	
+vcfc:VariantCall	variant call	skos:relatedMatch	gfvo:VariantCalling		semapv:ManualMappingCuration	0.6	GFVO's term is the calling process; vcf-core's is its result.	2026-09-08	
+vcfc:ref	REF	skos:exactMatch	med2rdf:reference_allele_vcf		semapv:ManualMappingCuration	0.9	med2rdf defines this property as the reference allele under the VCF specification. It was mapped to sssom:NoTermFound against VRS.	2026-09-08	
+vcfc:alt	ALT	skos:exactMatch	med2rdf:alternative_allele_vcf		semapv:ManualMappingCuration	0.9	med2rdf defines this property as the alternative allele under the VCF specification. It was mapped to sssom:NoTermFound against VRS.	2026-09-08	
+vcfc:VariantCall	variant call	skos:closeMatch	med2rdf:Variation		semapv:ManualMappingCuration	0.7		2026-09-08	

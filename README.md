@@ -66,7 +66,11 @@ with the complete model; the core module alone does not contain every term.
 [Historical reserved-key definitions](ontology/versions/) accompany the earlier
 VCF profiles. The model retains VCF syntax and can link to FALDO, SO, GENO, VRS
 and ChEBI where appropriate. These links do not establish biological equivalence
-on their own.
+on their own. Alignments to GA4GH VRS, HERO, GVO, GFVO and Med2RDF ship as a
+separate [alignment module](mappings/vcf-core-alignments.ttl) that imports the
+core rather than being imported by it, so loading the vocabulary commits you to
+no external model. See [mappings/](mappings/README.md), which also records the
+SWAT4HCLS 2025 BioHackathon declarations for HERO, med2rdf, GIGWA and SemBeacon.
 
 Use a stable project-specific HTTP(S) base for instance identifiers you intend
 to share. The examples' `file://…` identifiers illustrate local resources;

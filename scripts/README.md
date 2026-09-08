@@ -7,6 +7,7 @@ Use `npm run clean` to remove optional audits, generated site output and build c
 
 - `build-ontology-bundle.mjs` combines the normative ontology modules for OCG.
 - `build-shacl-profiles.py` generates the consistency rules and every version-scoped artifact.
+- `build-mapping-sets.py` renders the alignment module from the curated SSSOM set and validates every mapping set under [mappings/](../mappings/README.md).
 - `validation-gate.py` fingerprints the normative inputs so the slow suite only reruns when they change.
 - `convert-example-nt-to-ttl.mjs` formats the canonical N-Triples example as Turtle.
 - `generate-reserved-keys.mjs` creates the full reserved-key registry for one VCF version.

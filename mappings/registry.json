@@ -1,0 +1,228 @@
+{
+  "$comment": "Index of the mapping sets in this directory and of the variation models surveyed alongside them. Authored input: edit by hand.",
+  "mappingSets": [
+    {
+      "id": "https://w3id.org/vcf-core/alignments",
+      "file": "vcf-core-alignments.sssom.tsv",
+      "module": "vcf-core-alignments.ttl",
+      "status": "authored",
+      "role": "The single curated record of every alignment vcf-core asserts. Source of truth for the generated Turtle module.",
+      "subjectSource": "https://w3id.org/vcf-core/vocab",
+      "objectSources": [
+        "GA4GH VRS 2.0",
+        "HERO",
+        "GVO",
+        "GFVO",
+        "Med2RDF",
+        "SO",
+        "GENO",
+        "CHEBI",
+        "FALDO"
+      ],
+      "generates": "vcf-core-alignments.ttl"
+    },
+    {
+      "id": "https://w3id.org/vcf-core/mappings/bh25/hero",
+      "file": "bh25/hero-to-vrs.sssom.tsv",
+      "status": "third-party",
+      "subjectSource": "https://w3id.org/hereditary/ontology/genomics/schema/",
+      "objectSources": [
+        "GA4GH VRS 1.3"
+      ],
+      "description": "HERO to GA4GH VRS, as declared at the SWAT4HCLS 2025 BioHackathon.",
+      "role": "Third-party assertions recorded verbatim; not folded into the alignment module."
+    },
+    {
+      "id": "https://w3id.org/vcf-core/mappings/bh25/med2rdf",
+      "file": "bh25/med2rdf-to-vrs.sssom.tsv",
+      "status": "third-party",
+      "subjectSource": "http://med2rdf.org/",
+      "objectSources": [
+        "GA4GH VRS 1.3"
+      ],
+      "description": "Med2RDF, with the FALDO, SIO and HCO terms it reuses, to GA4GH VRS.",
+      "role": "Third-party assertions recorded verbatim; not folded into the alignment module."
+    },
+    {
+      "id": "https://w3id.org/vcf-core/mappings/bh25/gigwa",
+      "file": "bh25/gigwa-to-vrs.sssom.tsv",
+      "status": "third-party",
+      "subjectSource": "https://gigwa.southgreen.fr/gigwa/",
+      "objectSources": [
+        "GA4GH VRS 1.3"
+      ],
+      "description": "The Gigwa variant-annotation model, with the SO, GENO and SIO terms it reuses, to GA4GH VRS.",
+      "role": "Third-party assertions recorded verbatim; not folded into the alignment module."
+    },
+    {
+      "id": "https://w3id.org/vcf-core/mappings/bh25/sembeacon",
+      "file": "bh25/sembeacon-to-vrs.sssom.tsv",
+      "status": "third-party",
+      "subjectSource": "https://gitlab.univ-nantes.fr/bodrug-a/genomic-variants-schema",
+      "objectSources": [
+        "GA4GH VRS 1.3"
+      ],
+      "description": "The SemBeacon genomic-variants schema to GA4GH VRS.",
+      "role": "Third-party assertions recorded verbatim; not folded into the alignment module."
+    }
+  ],
+  "provenance": {
+    "event": "SWAT4HCLS 2025 BioHackathon, genomic variation RDF representations",
+    "paper": "https://github.com/NuriaQueralt/SWAT4HCLS-BH25-variant-rdf-representations/blob/main/paper/paper.md",
+    "repository": "https://github.com/NuriaQueralt/SWAT4HCLS-BH25-variant-rdf-representations",
+    "site": "https://swat4hcls-2025-genomic-variation.github.io/genomic-variant-schema/",
+    "sourceFormat": "Google Sheets workbook, one sheet per model plus a summary sheet",
+    "transcribed": "2026-09-08",
+    "vrsVersionNote": "The BioHackathon sheets were curated against GA4GH VRS 1.2/1.3 and use the vrs1: prefix. vcf-core itself targets VRS 2.0 (vrs:); Genotype, Haplotype, SequenceInterval, ChromosomeLocation, Text, Residue, Feature, Gene and UtilityVariation were removed in 2.0.",
+    "sourceWorkbook": "https://docs.google.com/spreadsheets/d/1JCVV3GB7t4cp4GrKcfn0OG4dJjJHI9dp5BEHEl-3xN8/edit",
+    "sourceSheets": {
+      "Summary": "https://docs.google.com/spreadsheets/d/1JCVV3GB7t4cp4GrKcfn0OG4dJjJHI9dp5BEHEl-3xN8/edit#gid=1467645977",
+      "HERO SSSOM": "https://docs.google.com/spreadsheets/d/1JCVV3GB7t4cp4GrKcfn0OG4dJjJHI9dp5BEHEl-3xN8/edit#gid=1689232425",
+      "Med2RDF SSSOM": "https://docs.google.com/spreadsheets/d/1JCVV3GB7t4cp4GrKcfn0OG4dJjJHI9dp5BEHEl-3xN8/edit#gid=1360905090",
+      "Gigwa SSSOM": "https://docs.google.com/spreadsheets/d/1JCVV3GB7t4cp4GrKcfn0OG4dJjJHI9dp5BEHEl-3xN8/edit#gid=1611409294",
+      "SemBeacon SSSOM": "https://docs.google.com/spreadsheets/d/1JCVV3GB7t4cp4GrKcfn0OG4dJjJHI9dp5BEHEl-3xN8/edit#gid=2139040152"
+    },
+    "verified": "2026-09-08",
+    "verificationNote": "Every transcribed row was diffed against the live workbook on 2026-09-08: 116 mappings (HERO 25, Med2RDF 50, Gigwa 30, SemBeacon 11), no discrepancies beyond the documented CURIE and formatting normalisations.",
+    "whyMirrored": "The workbook is the authoritative source but is not a citable, versioned or content-addressable artifact: it can be edited or unshared without notice and has no pinnable revision. The upstream paper repository publishes no mapping data, and the SSSOM conversion its text refers to was never released. This transcription is therefore kept in-repo, with the source URLs above recorded per set."
+  },
+  "surveyedModels": [
+    {
+      "name": "GA4GH VRS",
+      "role": "mapping target",
+      "url": "https://vrs.ga4gh.org/en/stable/schema.html",
+      "rdfSchema": "https://github.com/NuriaQueralt/ga4gh-vrs-rdf-schema",
+      "reuses": [
+        "SIO",
+        "GVO",
+        "OBO",
+        "NCIT"
+      ],
+      "syntax": "ShEx with inheritance",
+      "contact": "Nuria Queralt Rosinach"
+    },
+    {
+      "name": "SemBeacon",
+      "role": "mapping subject",
+      "url": "https://gitlab.univ-nantes.fr/bodrug-a/genomic-variants-schema",
+      "reuses": [
+        "SO",
+        "GENO",
+        "SIO",
+        "FALDO"
+      ],
+      "syntax": "LinkML (OWL)",
+      "contact": "Alexandrina Bodrug, Alban Gaignard",
+      "notes": "Describes SNPs in the context of intracranial aneurysms, linked to a reference genome."
+    },
+    {
+      "name": "GIGWA",
+      "role": "mapping subject",
+      "url": "https://gigwa.southgreen.fr/gigwa/",
+      "reuses": [
+        "SIO",
+        "SO",
+        "GENO"
+      ],
+      "contact": "Pierre Larmande",
+      "notes": "MongoDB-backed, API with access control, plants and animals; SnpEff-derived annotation model."
+    },
+    {
+      "name": "HERO",
+      "role": "mapping subject",
+      "url": "https://hereditary.dei.unipd.it/ontology/genomics/",
+      "schema": "https://w3id.org/hereditary/ontology/genomics/schema/",
+      "contact": "University of Padova",
+      "notes": "The only surveyed model with first-class VCF file and VCF column terms."
+    },
+    {
+      "name": "med2rdf",
+      "role": "mapping subject",
+      "url": "http://med2rdf.org/",
+      "ontology": "https://github.com/med2rdf/med2rdf-ontology/blob/master/med2rdf.ttl",
+      "reuses": [
+        "med2rdf",
+        "HCO",
+        "VISC",
+        "GVO",
+        "SIO"
+      ],
+      "syntax": "RDF (OWL)",
+      "contact": "Shuichi Kawashima"
+    },
+    {
+      "name": "VCF2RDF",
+      "role": "participant",
+      "reuses": [],
+      "contact": "Elias Crum",
+      "notes": "This repository's predecessor; conceptual model linking variants to healthcare data while keeping the link to the file."
+    },
+    {
+      "name": "SPHN",
+      "role": "participant",
+      "url": "https://www.biomedit.ch/rdf/sphn-schema/sphn",
+      "reuses": [
+        "GENO",
+        "SO",
+        "SIO"
+      ],
+      "syntax": "RDF (OWL)",
+      "publication": "https://www.preprints.org/manuscript/202312.0373/v1"
+    },
+    {
+      "name": "VIP",
+      "role": "participant",
+      "url": "https://github.com/molgenis/vip2rdf",
+      "reuses": [
+        "SIO",
+        "HP",
+        "NCIT",
+        "Ensembl Glossary"
+      ],
+      "contact": "Sander van der Hoek, Alexander Kellmann",
+      "publication": "https://zenodo.org/records/12207112"
+    },
+    {
+      "name": "TogoVar",
+      "role": "participant",
+      "url": "https://grch38.togovar.org/",
+      "repository": "https://github.com/togovar/",
+      "reuses": [
+        "med2rdf",
+        "HCO",
+        "VISC",
+        "GVO",
+        "SIO"
+      ],
+      "syntax": "RDF (OWL)",
+      "contact": "Toshiaki Katayama"
+    },
+    {
+      "name": "Wikidata",
+      "role": "participant",
+      "url": "https://w.wiki/DDzd",
+      "syntax": "RDF (OWL)",
+      "contact": "Andra Waagmeester"
+    },
+    {
+      "name": "UniProt RDF",
+      "role": "participant",
+      "url": "https://sparql.uniprot.org/",
+      "reuses": [
+        "FALDO"
+      ],
+      "syntax": "RDF (OWL)",
+      "contact": "Jerven Bolleman",
+      "notes": "Natural variant annotations use a substitution string; causal relations and functional consequence are out of scope."
+    },
+    {
+      "name": "GCO",
+      "role": "participant",
+      "url": "https://bioportal.bioontology.org/ontologies/GCO",
+      "syntax": "RDF (OWL)",
+      "publication": "https://pubmed.ncbi.nlm.nih.gov/25093075/",
+      "notes": "Neither used nor maintained at the time of the BioHackathon."
+    }
+  ],
+  "futureWork": "FUTURE-MAPPINGS.md"
+}
