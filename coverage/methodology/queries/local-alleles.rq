@@ -1,0 +1,2 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+SELECT ?local ?global WHERE { ?s vcfc:hasGenotype/vcfc:hasLocalAlleleSet/vcfc:hasLocalAlleleMembership ?m . ?m vcfc:localIndex ?local ; vcfc:localAllele/vcfc:alleleIndex ?global } ORDER BY ?local

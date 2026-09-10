@@ -461,7 +461,7 @@
     "webvowl": {
       "enabled": true,
       "serviceUrl": "https://service.tib.eu/webvowl/",
-      "ontologyUrl": "https://raw.githubusercontent.com/ecrum19/vcf-core-vocabulary/main/ontology/vcf-core-vocabulary.bundle.ttl",
+      "ontologyUrl": "https://w3id.org/vcf-core/vocab.ttl",
       "height": 760
     },
     "colors": {

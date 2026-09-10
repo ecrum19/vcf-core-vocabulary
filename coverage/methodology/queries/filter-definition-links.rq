@@ -1,0 +1,8 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+# The file must contain both the record and the definition; source codes are ordered.
+SELECT ?pos ?index ?code ?description WHERE {
+ ?file vcfc:hasRecord ?r ; vcfc:hasHeader/vcfc:hasHeaderLine ?d .
+ ?r vcfc:pos ?pos ; vcfc:hasCall/vcfc:hasFilterCode ?f .
+ ?f vcfc:componentIndex ?index ; vcfc:filterCodeValue ?code ; vcfc:declaredByFilter ?d .
+ ?d a vcfc:FILTERHeaderLine ; vcfc:filterId ?code ; vcfc:fieldDescription ?description .
+}

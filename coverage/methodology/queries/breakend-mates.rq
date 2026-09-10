@@ -1,0 +1,2 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+SELECT ?id ?mateId WHERE { ?r vcfc:recordId ?id ; vcfc:hasAltAllele/vcfc:mateBreakend ?mate . ?other vcfc:hasAltAllele ?mate ; vcfc:recordId ?mateId } ORDER BY ?id

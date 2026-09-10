@@ -1,0 +1,8 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+# Source-audit case: expected answers are authored from the VCF fixture, not execution.
+SELECT ?id ?key ?value WHERE {
+ ?file vcfc:hasHeader/vcfc:hasHeaderLine ?d .
+ ?d a vcfc:ContigHeaderLine ; vcfc:contigId ?id ; vcfc:hasAttribute ?a .
+ ?a vcfc:attributeKey ?key ; vcfc:attributeValue ?value .
+ FILTER(?key IN ("URL", "md5", "assembly", "species"))
+}

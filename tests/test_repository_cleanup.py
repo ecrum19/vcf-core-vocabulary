@@ -34,16 +34,15 @@ class RepositoryCleanupTests(unittest.TestCase):
 
     def test_cleanup_preserves_sources_reports_exports_and_dependencies(self):
         retained = [
-            'coverage/methodological/decisions.json', 'coverage/methodological/sources/VCFv4.5.tex',
-            'coverage/methodological/probes/rules.json', 'coverage/methodological/generated/report.md',
-            'coverage/curated/inventory.json', 'coverage/curated/generated/report.json',
-            'tests/generated/validation.json', 'SWAT4HCLS_2027/main.tex',
-            'SWAT4HCLS_2027/template/ceurart.cls', 'SWAT4HCLS_2027/paper-draft.pdf',
+            'coverage/methodology/inputs/requirements.json', 'coverage/methodology/sources/VCFv4.5.tex',
+            'coverage/methodology/inputs/cases.json', 'coverage/methodology/generated/results.json',
+            'coverage/vcf45-inventory/inventory.json', 'coverage/vcf45-inventory/generated/report.json',
+            'tests/generated/validation.json', 'tests/generated/profile-comparison.json',
+            'examples/profile-comparison/synthetic.vcf', 'examples/profile-comparison/expanded.ttl',
             '.venv/lib/__pycache__/keep.pyc', 'node_modules/.DS_Store', '.git/config',
         ]
-        disposable = ['site/index.html', 'SWAT4HCLS_2027/.build/main.log',
-                      'SWAT4HCLS_2027/main.aux', 'coverage/methodological/generated/audit/extracted.json',
-                      'coverage/methodological/__pycache__/workflow.pyc', '.DS_Store']
+        disposable = ['site/index.html',
+                      'coverage/methodology/scripts/__pycache__/assess.pyc', '.DS_Store']
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
             for name in retained + disposable:

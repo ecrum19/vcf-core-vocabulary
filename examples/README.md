@@ -17,6 +17,7 @@ header declarations, a record and expanded sample calls fit together.
 | [`core/example-minimal-record`](core/example-minimal-record.ttl) | One source record and its real sample call, with GT, allele depths and read depth |
 | [`core/example`](core/example.ttl) | Three real HaplotypeCaller records with GT:AD:DP:GQ:PL, INFO annotations and one sample |
 | [`profiles/example-condensed-cohort`](profiles/example-condensed-cohort.ttl) | Eight 1000 Genomes samples across three SNPs, represented by ordered phased-GT vectors |
+| [`profile-comparison/`](profile-comparison/README.md) | One synthetic record represented **twice**, once per sample profile, side by side |
 
 ## Real sample calls, small files
 
@@ -29,8 +30,9 @@ The original VCF 4.1 / b37 reference context and all 24 GT calls are preserved.
 AC, AF and AN are recalculated for these eight samples. The source provides GT
 only; no DP, GQ or likelihood values have been invented.
 
-The [expanded VCF](core/example.vcf) retains three records from the supplied
-`test-larger.vcf.gz`, including the actual sample `NG131FQA1I` and its
+The [expanded VCF](core/example.vcf) retains three records from
+[`test-larger.vcf.gz`](https://github.com/ecrum19/VCF-RDFizer/blob/main/test/test_vcf_files/test-larger.vcf.gz)
+in the VCF-RDFizer test fixtures, including the actual sample `NG131FQA1I` and its
 GT:AD:DP:GQ:PL values. It keeps VCF 4.2 and GRCh38 coordinates; INFO is reduced
 to AC/AF/AN/DP. The minimal example keeps one of these records with GT:AD:DP,
 and the header example contains the same metadata with zero records.
@@ -92,7 +94,8 @@ npm run validate:regressions
 ```
 
 `npm run examples:build` refreshes the generated rich examples from their checked-in
-VCF sources. The quickstart and compact paper examples are authored separately.
+VCF sources. The quickstart and the [profile comparison](profile-comparison/README.md)
+are authored separately; `npm run validate:profiles` checks the latter.
 `npm run examples:ttl` regenerates [`core/example.ttl`](core/example.ttl) from
 [`core/example.nt`](core/example.nt). The validation suite checks logical VCF line
 reconstruction, vocabulary declarations, property kinds, SHACL conformance and

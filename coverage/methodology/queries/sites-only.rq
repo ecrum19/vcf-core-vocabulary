@@ -1,0 +1,8 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+# Source-audit case: expected answers are authored from the VCF fixture, not execution.
+SELECT ?pos ?samples ?calls WHERE {
+ ?file vcfc:hasHeader/vcfc:hasColumnHeader ?columns ; vcfc:hasRecord ?record .
+ ?record vcfc:pos ?pos .
+ BIND(EXISTS { ?file vcfc:hasSampleSet ?s } AS ?samples)
+ BIND(EXISTS { ?record vcfc:hasCall/vcfc:hasSampleCall ?c } AS ?calls)
+}

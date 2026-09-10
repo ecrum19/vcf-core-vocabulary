@@ -1,0 +1,13 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+# Preservation only: explicitly decode the documented VCF text encoding.
+SELECT ?sample ?length ?end WHERE {
+?file vcfc:hasRecord ?record ; vcfc:hasSampleSet/vcfc:hasSample ?s .
+  ?record vcfc:pos 700 ; vcfc:hasCall/vcfc:hasCallMatrix ?matrix .
+  ?s vcfc:sampleIndex ?sampleIndex ; vcfc:sampleName ?sample .
+?matrix vcfc:hasFormatValueVector ?vectorlength . ?vectorlength vcfc:declaredBy/vcfc:fieldId "LEN" ; vcfc:encodedValues ?packedlength .
+
+  BIND(CONCAT("^(?:[^\\t]*\\t){", STR(?sampleIndex - 1), "}([^\\t]*).*$") AS ?patternlength)
+  BIND(REPLACE(?packedlength, ?patternlength, "$1") AS ?length)
+  ?record vcfc:pos ?pos . BIND(?pos + xsd:integer(?length) - 1 AS ?end)
+}

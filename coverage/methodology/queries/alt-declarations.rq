@@ -1,0 +1,7 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+# Source-audit case: expected answers are authored from the VCF fixture, not execution.
+SELECT ?index ?id ?description WHERE {
+ ?file vcfc:hasRecord/vcfc:hasAltAllele ?a ; vcfc:hasHeader/vcfc:hasHeaderLine ?d .
+ ?a vcfc:alleleIndex ?index ; vcfc:declaredByAlt ?d .
+ ?d a vcfc:ALTHeaderLine ; vcfc:altId ?id ; vcfc:fieldDescription ?description .
+}

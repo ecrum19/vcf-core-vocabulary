@@ -4,8 +4,8 @@ VCF 4.5 sections 1–1.2 constrain a file's bytes: UTF-8, no byte order mark, an
 LF or CR+LF line separators. Those are requirements on the source stream rather
 than on the logical model, so the vocabulary mints **no** term for them — an RDF
 property would record a claim about the source without showing the source was
-read. `coverage/curated/check_serialization.py` reads the actual bytes instead, and
-`coverage/curated/report.py` reports the outcome as an axis separate from
+read. `coverage/vcf45-inventory/check_serialization.py` reads the actual bytes instead, and
+`coverage/vcf45-inventory/report.py` reports the outcome as an axis separate from
 logical-model coverage.
 
 These two files hold identical logical content under the two permitted line

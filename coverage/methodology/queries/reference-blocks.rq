@@ -1,0 +1,2 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+SELECT ?sample ?length ?end WHERE { ?s vcfc:sampleId ?sample ; vcfc:hasReferenceBlock ?b . ?b vcfc:referenceBlockLength ?length ; vcfc:endPosition ?end } ORDER BY ?sample

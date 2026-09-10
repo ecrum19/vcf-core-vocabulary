@@ -1,0 +1,8 @@
+##fileformat=VCFv4.4
+##contig=<ID=chr1,length=100>
+##FILTER=<ID=q10,Description="Quality below ten">
+##FILTER=<ID=s50,Description="Sample threshold">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=FT,Number=1,Type=String,Description="Sample filter">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	S1	S2	S3
+chr1	10	.	A	C	.	PASS	.	GT:FT	0/0:PASS	0/1:.	1/1:q10;s50

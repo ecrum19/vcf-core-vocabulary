@@ -1,0 +1,5663 @@
+[
+  {
+    "actual": [
+      {
+        "number": "0",
+        "type": "Flag"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.1-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "IMPRECISE",
+    "kind": "INFO",
+    "line": 239,
+    "number": "0",
+    "status": "exact",
+    "type": "Flag",
+    "version": "4.1"
+  },
+  {
+    "actual": [
+      {
+        "number": "0",
+        "type": "Flag"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.1-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "NOVEL",
+    "kind": "INFO",
+    "line": 240,
+    "number": "0",
+    "status": "exact",
+    "type": "Flag",
+    "version": "4.1"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.1-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "END",
+    "kind": "INFO",
+    "line": 241,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.1"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.1-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "SVTYPE",
+    "kind": "INFO",
+    "line": 247,
+    "number": "1",
+    "status": "exact",
+    "type": "String",
+    "version": "4.1"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.1-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "SVLEN",
+    "kind": "INFO",
+    "line": 253,
+    "number": ".",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.1"
+  },
+  {
+    "actual": [
+      {
+        "number": "2",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.1-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CIPOS",
+    "kind": "INFO",
+    "line": 259,
+    "number": "2",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.1"
+  },
+  {
+    "actual": [
+      {
+        "number": "2",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.1-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CIEND",
+    "kind": "INFO",
+    "line": 260,
+    "number": "2",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.1"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.1-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "HOMLEN",
+    "kind": "INFO",
+    "line": 261,
+    "number": ".",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.1"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.1-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "HOMSEQ",
+    "kind": "INFO",
+    "line": 262,
+    "number": ".",
+    "status": "exact",
+    "type": "String",
+    "version": "4.1"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.1-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "BKPTID",
+    "kind": "INFO",
+    "line": 263,
+    "number": ".",
+    "status": "exact",
+    "type": "String",
+    "version": "4.1"
+  },
+  {
+    "actual": [
+      {
+        "number": "4",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.1-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "MEINFO",
+    "kind": "INFO",
+    "line": 269,
+    "number": "4",
+    "status": "exact",
+    "type": "String",
+    "version": "4.1"
+  },
+  {
+    "actual": [
+      {
+        "number": "4",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.1-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "METRANS",
+    "kind": "INFO",
+    "line": 270,
+    "number": "4",
+    "status": "exact",
+    "type": "String",
+    "version": "4.1"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.1-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "DGVID",
+    "kind": "INFO",
+    "line": 271,
+    "number": "1",
+    "status": "exact",
+    "type": "String",
+    "version": "4.1"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.1-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "DBVARID",
+    "kind": "INFO",
+    "line": 272,
+    "number": "1",
+    "status": "exact",
+    "type": "String",
+    "version": "4.1"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.1-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "DBRIPID",
+    "kind": "INFO",
+    "line": 273,
+    "number": "1",
+    "status": "exact",
+    "type": "String",
+    "version": "4.1"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.1-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "MATEID",
+    "kind": "INFO",
+    "line": 274,
+    "number": ".",
+    "status": "exact",
+    "type": "String",
+    "version": "4.1"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.1-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "PARID",
+    "kind": "INFO",
+    "line": 275,
+    "number": "1",
+    "status": "exact",
+    "type": "String",
+    "version": "4.1"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.1-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "EVENT",
+    "kind": "INFO",
+    "line": 276,
+    "number": "1",
+    "status": "exact",
+    "type": "String",
+    "version": "4.1"
+  },
+  {
+    "actual": [
+      {
+        "number": "2",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.1-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CILEN",
+    "kind": "INFO",
+    "line": 277,
+    "number": "2",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.1"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.1-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "DP",
+    "kind": "INFO",
+    "line": 278,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.1"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.1-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "DPADJ",
+    "kind": "INFO",
+    "line": 279,
+    "number": ".",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.1"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.1-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CN",
+    "kind": "INFO",
+    "line": 280,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.1"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.1-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CNADJ",
+    "kind": "INFO",
+    "line": 281,
+    "number": ".",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.1"
+  },
+  {
+    "actual": [
+      {
+        "number": "2",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.1-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CICN",
+    "kind": "INFO",
+    "line": 282,
+    "number": "2",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.1"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.1-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CICNADJ",
+    "kind": "INFO",
+    "line": 283,
+    "number": ".",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.1"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.1-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CN",
+    "kind": "FORMAT",
+    "line": 289,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.1"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.1-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CNQ",
+    "kind": "FORMAT",
+    "line": 290,
+    "number": "1",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.1"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.1-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CNL",
+    "kind": "FORMAT",
+    "line": 291,
+    "number": ".",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.1"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.1-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "NQ",
+    "kind": "FORMAT",
+    "line": 292,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.1"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.1-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "HAP",
+    "kind": "FORMAT",
+    "line": 293,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.1"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.1-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "AHAP",
+    "kind": "FORMAT",
+    "line": 294,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.1"
+  },
+  {
+    "actual": [
+      {
+        "number": "0",
+        "type": "Flag"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.2-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "IMPRECISE",
+    "kind": "INFO",
+    "line": 256,
+    "number": "0",
+    "status": "exact",
+    "type": "Flag",
+    "version": "4.2"
+  },
+  {
+    "actual": [
+      {
+        "number": "0",
+        "type": "Flag"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.2-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "NOVEL",
+    "kind": "INFO",
+    "line": 257,
+    "number": "0",
+    "status": "exact",
+    "type": "Flag",
+    "version": "4.2"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.2-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "END",
+    "kind": "INFO",
+    "line": 258,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.2"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.2-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "SVTYPE",
+    "kind": "INFO",
+    "line": 264,
+    "number": "1",
+    "status": "exact",
+    "type": "String",
+    "version": "4.2"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.2-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "SVLEN",
+    "kind": "INFO",
+    "line": 270,
+    "number": ".",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.2"
+  },
+  {
+    "actual": [
+      {
+        "number": "2",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.2-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CIPOS",
+    "kind": "INFO",
+    "line": 276,
+    "number": "2",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.2"
+  },
+  {
+    "actual": [
+      {
+        "number": "2",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.2-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CIEND",
+    "kind": "INFO",
+    "line": 277,
+    "number": "2",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.2"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.2-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "HOMLEN",
+    "kind": "INFO",
+    "line": 278,
+    "number": ".",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.2"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.2-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "HOMSEQ",
+    "kind": "INFO",
+    "line": 279,
+    "number": ".",
+    "status": "exact",
+    "type": "String",
+    "version": "4.2"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.2-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "BKPTID",
+    "kind": "INFO",
+    "line": 280,
+    "number": ".",
+    "status": "exact",
+    "type": "String",
+    "version": "4.2"
+  },
+  {
+    "actual": [
+      {
+        "number": "4",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.2-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "MEINFO",
+    "kind": "INFO",
+    "line": 286,
+    "number": "4",
+    "status": "exact",
+    "type": "String",
+    "version": "4.2"
+  },
+  {
+    "actual": [
+      {
+        "number": "4",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.2-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "METRANS",
+    "kind": "INFO",
+    "line": 287,
+    "number": "4",
+    "status": "exact",
+    "type": "String",
+    "version": "4.2"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.2-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "DGVID",
+    "kind": "INFO",
+    "line": 288,
+    "number": "1",
+    "status": "exact",
+    "type": "String",
+    "version": "4.2"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.2-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "DBVARID",
+    "kind": "INFO",
+    "line": 289,
+    "number": "1",
+    "status": "exact",
+    "type": "String",
+    "version": "4.2"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.2-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "DBRIPID",
+    "kind": "INFO",
+    "line": 290,
+    "number": "1",
+    "status": "exact",
+    "type": "String",
+    "version": "4.2"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.2-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "MATEID",
+    "kind": "INFO",
+    "line": 291,
+    "number": ".",
+    "status": "exact",
+    "type": "String",
+    "version": "4.2"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.2-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "PARID",
+    "kind": "INFO",
+    "line": 292,
+    "number": "1",
+    "status": "exact",
+    "type": "String",
+    "version": "4.2"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.2-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "EVENT",
+    "kind": "INFO",
+    "line": 293,
+    "number": "1",
+    "status": "exact",
+    "type": "String",
+    "version": "4.2"
+  },
+  {
+    "actual": [
+      {
+        "number": "2",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.2-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CILEN",
+    "kind": "INFO",
+    "line": 294,
+    "number": "2",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.2"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.2-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "DP",
+    "kind": "INFO",
+    "line": 295,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.2"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.2-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "DPADJ",
+    "kind": "INFO",
+    "line": 296,
+    "number": ".",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.2"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.2-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CN",
+    "kind": "INFO",
+    "line": 297,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.2"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.2-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CNADJ",
+    "kind": "INFO",
+    "line": 298,
+    "number": ".",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.2"
+  },
+  {
+    "actual": [
+      {
+        "number": "2",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.2-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CICN",
+    "kind": "INFO",
+    "line": 299,
+    "number": "2",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.2"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.2-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CICNADJ",
+    "kind": "INFO",
+    "line": 300,
+    "number": ".",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.2"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.2-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CN",
+    "kind": "FORMAT",
+    "line": 306,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.2"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.2-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CNQ",
+    "kind": "FORMAT",
+    "line": 307,
+    "number": "1",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.2"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.2-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CNL",
+    "kind": "FORMAT",
+    "line": 308,
+    "number": ".",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.2"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.2-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "NQ",
+    "kind": "FORMAT",
+    "line": 309,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.2"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.2-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "HAP",
+    "kind": "FORMAT",
+    "line": 310,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.2"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.2-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "AHAP",
+    "kind": "FORMAT",
+    "line": 311,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.2"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "AA",
+    "kind": "INFO",
+    "line": 395,
+    "number": "1",
+    "status": "exact",
+    "type": "String",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "A",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "AC",
+    "kind": "INFO",
+    "line": 396,
+    "number": "A",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "R",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "AD",
+    "kind": "INFO",
+    "line": 397,
+    "number": "R",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "R",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "ADF",
+    "kind": "INFO",
+    "line": 398,
+    "number": "R",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "R",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "ADR",
+    "kind": "INFO",
+    "line": 399,
+    "number": "R",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "A",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "AF",
+    "kind": "INFO",
+    "line": 400,
+    "number": "A",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "AN",
+    "kind": "INFO",
+    "line": 401,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "BQ",
+    "kind": "INFO",
+    "line": 402,
+    "number": "1",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "A",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CIGAR",
+    "kind": "INFO",
+    "line": 403,
+    "number": "A",
+    "status": "exact",
+    "type": "String",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "0",
+        "type": "Flag"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "DB",
+    "kind": "INFO",
+    "line": 404,
+    "number": "0",
+    "status": "exact",
+    "type": "Flag",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "DP",
+    "kind": "INFO",
+    "line": 405,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "END",
+    "kind": "INFO",
+    "line": 406,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "0",
+        "type": "Flag"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "H2",
+    "kind": "INFO",
+    "line": 407,
+    "number": "0",
+    "status": "exact",
+    "type": "Flag",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "0",
+        "type": "Flag"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "H3",
+    "kind": "INFO",
+    "line": 408,
+    "number": "0",
+    "status": "exact",
+    "type": "Flag",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "MQ",
+    "kind": "INFO",
+    "line": 409,
+    "number": "1",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "MQ0",
+    "kind": "INFO",
+    "line": 410,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "NS",
+    "kind": "INFO",
+    "line": 411,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "4",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "SB",
+    "kind": "INFO",
+    "line": 412,
+    "number": "4",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "0",
+        "type": "Flag"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "SOMATIC",
+    "kind": "INFO",
+    "line": 413,
+    "number": "0",
+    "status": "exact",
+    "type": "Flag",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "0",
+        "type": "Flag"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "VALIDATED",
+    "kind": "INFO",
+    "line": 414,
+    "number": "0",
+    "status": "exact",
+    "type": "Flag",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "0",
+        "type": "Flag"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "1000G",
+    "kind": "INFO",
+    "line": 415,
+    "number": "0",
+    "status": "exact",
+    "type": "Flag",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "R",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "AD",
+    "kind": "FORMAT",
+    "line": 462,
+    "number": "R",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "R",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "ADF",
+    "kind": "FORMAT",
+    "line": 463,
+    "number": "R",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "R",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "ADR",
+    "kind": "FORMAT",
+    "line": 464,
+    "number": "R",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "DP",
+    "kind": "FORMAT",
+    "line": 465,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "A",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "EC",
+    "kind": "FORMAT",
+    "line": 466,
+    "number": "A",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "FT",
+    "kind": "FORMAT",
+    "line": 467,
+    "number": "1",
+    "status": "exact",
+    "type": "String",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "G",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "GL",
+    "kind": "FORMAT",
+    "line": 468,
+    "number": "G",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "G",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "GP",
+    "kind": "FORMAT",
+    "line": 469,
+    "number": "G",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "GQ",
+    "kind": "FORMAT",
+    "line": 470,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "GT",
+    "kind": "FORMAT",
+    "line": 471,
+    "number": "1",
+    "status": "exact",
+    "type": "String",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "2",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "HQ",
+    "kind": "FORMAT",
+    "line": 472,
+    "number": "2",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "MQ",
+    "kind": "FORMAT",
+    "line": 473,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "G",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "PL",
+    "kind": "FORMAT",
+    "line": 474,
+    "number": "G",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "G",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "PP",
+    "kind": "FORMAT",
+    "line": 475,
+    "number": "G",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "PQ",
+    "kind": "FORMAT",
+    "line": 476,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "PS",
+    "kind": "FORMAT",
+    "line": 477,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "0",
+        "type": "Flag"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "IMPRECISE",
+    "kind": "INFO",
+    "line": 609,
+    "number": "0",
+    "status": "exact",
+    "type": "Flag",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "0",
+        "type": "Flag"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "NOVEL",
+    "kind": "INFO",
+    "line": 610,
+    "number": "0",
+    "status": "exact",
+    "type": "Flag",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "END",
+    "kind": "INFO",
+    "line": 611,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "SVTYPE",
+    "kind": "INFO",
+    "line": 618,
+    "number": "1",
+    "status": "exact",
+    "type": "String",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "SVLEN",
+    "kind": "INFO",
+    "line": 635,
+    "number": ".",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "2",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CIPOS",
+    "kind": "INFO",
+    "line": 642,
+    "number": "2",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "2",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CIEND",
+    "kind": "INFO",
+    "line": 643,
+    "number": "2",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "HOMLEN",
+    "kind": "INFO",
+    "line": 644,
+    "number": ".",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "HOMSEQ",
+    "kind": "INFO",
+    "line": 645,
+    "number": ".",
+    "status": "exact",
+    "type": "String",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "BKPTID",
+    "kind": "INFO",
+    "line": 646,
+    "number": ".",
+    "status": "exact",
+    "type": "String",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "4",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "MEINFO",
+    "kind": "INFO",
+    "line": 654,
+    "number": "4",
+    "status": "exact",
+    "type": "String",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "4",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "METRANS",
+    "kind": "INFO",
+    "line": 655,
+    "number": "4",
+    "status": "exact",
+    "type": "String",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "DGVID",
+    "kind": "INFO",
+    "line": 656,
+    "number": "1",
+    "status": "exact",
+    "type": "String",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "DBVARID",
+    "kind": "INFO",
+    "line": 657,
+    "number": "1",
+    "status": "exact",
+    "type": "String",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "DBRIPID",
+    "kind": "INFO",
+    "line": 658,
+    "number": "1",
+    "status": "exact",
+    "type": "String",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "MATEID",
+    "kind": "INFO",
+    "line": 659,
+    "number": ".",
+    "status": "exact",
+    "type": "String",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "PARID",
+    "kind": "INFO",
+    "line": 660,
+    "number": "1",
+    "status": "exact",
+    "type": "String",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "EVENT",
+    "kind": "INFO",
+    "line": 661,
+    "number": "1",
+    "status": "exact",
+    "type": "String",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "2",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CILEN",
+    "kind": "INFO",
+    "line": 662,
+    "number": "2",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "DP",
+    "kind": "INFO",
+    "line": 663,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "DPADJ",
+    "kind": "INFO",
+    "line": 664,
+    "number": ".",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CN",
+    "kind": "INFO",
+    "line": 665,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CNADJ",
+    "kind": "INFO",
+    "line": 666,
+    "number": ".",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "2",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CICN",
+    "kind": "INFO",
+    "line": 667,
+    "number": "2",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CICNADJ",
+    "kind": "INFO",
+    "line": 668,
+    "number": ".",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CN",
+    "kind": "FORMAT",
+    "line": 676,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CNQ",
+    "kind": "FORMAT",
+    "line": 677,
+    "number": "1",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "G",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CNL",
+    "kind": "FORMAT",
+    "line": 678,
+    "number": "G",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "G",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CNP",
+    "kind": "FORMAT",
+    "line": 679,
+    "number": "G",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "NQ",
+    "kind": "FORMAT",
+    "line": 680,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "HAP",
+    "kind": "FORMAT",
+    "line": 681,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.3-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "AHAP",
+    "kind": "FORMAT",
+    "line": 682,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.3"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "AA",
+    "kind": "INFO",
+    "line": 411,
+    "number": "1",
+    "status": "exact",
+    "type": "String",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "A",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "AC",
+    "kind": "INFO",
+    "line": 412,
+    "number": "A",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "R",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "AD",
+    "kind": "INFO",
+    "line": 413,
+    "number": "R",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "R",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "ADF",
+    "kind": "INFO",
+    "line": 414,
+    "number": "R",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "R",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "ADR",
+    "kind": "INFO",
+    "line": 415,
+    "number": "R",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "A",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "AF",
+    "kind": "INFO",
+    "line": 416,
+    "number": "A",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "AN",
+    "kind": "INFO",
+    "line": 417,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "BQ",
+    "kind": "INFO",
+    "line": 418,
+    "number": "1",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "A",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CIGAR",
+    "kind": "INFO",
+    "line": 419,
+    "number": "A",
+    "status": "exact",
+    "type": "String",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "0",
+        "type": "Flag"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "DB",
+    "kind": "INFO",
+    "line": 420,
+    "number": "0",
+    "status": "exact",
+    "type": "Flag",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "DP",
+    "kind": "INFO",
+    "line": 421,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "END",
+    "kind": "INFO",
+    "line": 422,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "0",
+        "type": "Flag"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "H2",
+    "kind": "INFO",
+    "line": 423,
+    "number": "0",
+    "status": "exact",
+    "type": "Flag",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "0",
+        "type": "Flag"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "H3",
+    "kind": "INFO",
+    "line": 424,
+    "number": "0",
+    "status": "exact",
+    "type": "Flag",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "MQ",
+    "kind": "INFO",
+    "line": 425,
+    "number": "1",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "MQ0",
+    "kind": "INFO",
+    "line": 426,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "NS",
+    "kind": "INFO",
+    "line": 427,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "4",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "SB",
+    "kind": "INFO",
+    "line": 428,
+    "number": "4",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "0",
+        "type": "Flag"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "SOMATIC",
+    "kind": "INFO",
+    "line": 429,
+    "number": "0",
+    "status": "exact",
+    "type": "Flag",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "0",
+        "type": "Flag"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "VALIDATED",
+    "kind": "INFO",
+    "line": 430,
+    "number": "0",
+    "status": "exact",
+    "type": "Flag",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "0",
+        "type": "Flag"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "1000G",
+    "kind": "INFO",
+    "line": 431,
+    "number": "0",
+    "status": "exact",
+    "type": "Flag",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "R",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "AD",
+    "kind": "FORMAT",
+    "line": 480,
+    "number": "R",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "R",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "ADF",
+    "kind": "FORMAT",
+    "line": 481,
+    "number": "R",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "R",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "ADR",
+    "kind": "FORMAT",
+    "line": 482,
+    "number": "R",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "DP",
+    "kind": "FORMAT",
+    "line": 483,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "A",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "EC",
+    "kind": "FORMAT",
+    "line": 484,
+    "number": "A",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "FT",
+    "kind": "FORMAT",
+    "line": 485,
+    "number": "1",
+    "status": "exact",
+    "type": "String",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "G",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "GL",
+    "kind": "FORMAT",
+    "line": 486,
+    "number": "G",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "G",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "GP",
+    "kind": "FORMAT",
+    "line": 487,
+    "number": "G",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "GQ",
+    "kind": "FORMAT",
+    "line": 488,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "GT",
+    "kind": "FORMAT",
+    "line": 489,
+    "number": "1",
+    "status": "exact",
+    "type": "String",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "2",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "HQ",
+    "kind": "FORMAT",
+    "line": 490,
+    "number": "2",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "MQ",
+    "kind": "FORMAT",
+    "line": 491,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "G",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "PL",
+    "kind": "FORMAT",
+    "line": 492,
+    "number": "G",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "G",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "PP",
+    "kind": "FORMAT",
+    "line": 493,
+    "number": "G",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "PQ",
+    "kind": "FORMAT",
+    "line": 494,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "PS",
+    "kind": "FORMAT",
+    "line": 495,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "P",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "PSL",
+    "kind": "FORMAT",
+    "line": 496,
+    "number": "P",
+    "status": "exact",
+    "type": "String",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "P",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "PSO",
+    "kind": "FORMAT",
+    "line": 497,
+    "number": "P",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "P",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "PSQ",
+    "kind": "FORMAT",
+    "line": 498,
+    "number": "P",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "0",
+        "type": "Flag"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "IMPRECISE",
+    "kind": "INFO",
+    "line": 677,
+    "number": "0",
+    "status": "exact",
+    "type": "Flag",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "0",
+        "type": "Flag"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "NOVEL",
+    "kind": "INFO",
+    "line": 687,
+    "number": "0",
+    "status": "exact",
+    "type": "Flag",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "END",
+    "kind": "INFO",
+    "line": 688,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "SVTYPE",
+    "kind": "INFO",
+    "line": 710,
+    "number": "1",
+    "status": "exact",
+    "type": "String",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "A",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "SVLEN",
+    "kind": "INFO",
+    "line": 720,
+    "number": "A",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CIPOS",
+    "kind": "INFO",
+    "line": 739,
+    "number": ".",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CIEND",
+    "kind": "INFO",
+    "line": 755,
+    "number": ".",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "A",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "HOMLEN",
+    "kind": "INFO",
+    "line": 769,
+    "number": "A",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "A",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "HOMSEQ",
+    "kind": "INFO",
+    "line": 774,
+    "number": "A",
+    "status": "exact",
+    "type": "String",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "A",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "BKPTID",
+    "kind": "INFO",
+    "line": 779,
+    "number": "A",
+    "status": "exact",
+    "type": "String",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "MEINFO",
+    "kind": "INFO",
+    "line": 787,
+    "number": ".",
+    "status": "exact",
+    "type": "String",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "METRANS",
+    "kind": "INFO",
+    "line": 796,
+    "number": ".",
+    "status": "exact",
+    "type": "String",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "A",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "DGVID",
+    "kind": "INFO",
+    "line": 805,
+    "number": "A",
+    "status": "exact",
+    "type": "String",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "A",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "DBVARID",
+    "kind": "INFO",
+    "line": 806,
+    "number": "A",
+    "status": "exact",
+    "type": "String",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "A",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "DBRIPID",
+    "kind": "INFO",
+    "line": 807,
+    "number": "A",
+    "status": "exact",
+    "type": "String",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "A",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "MATEID",
+    "kind": "INFO",
+    "line": 808,
+    "number": "A",
+    "status": "exact",
+    "type": "String",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "A",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "PARID",
+    "kind": "INFO",
+    "line": 809,
+    "number": "A",
+    "status": "exact",
+    "type": "String",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "A",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "EVENT",
+    "kind": "INFO",
+    "line": 810,
+    "number": "A",
+    "status": "exact",
+    "type": "String",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "A",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "EVENTTYPE",
+    "kind": "INFO",
+    "line": 811,
+    "number": "A",
+    "status": "exact",
+    "type": "String",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CILEN",
+    "kind": "INFO",
+    "line": 844,
+    "number": ".",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "A",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CN",
+    "kind": "INFO",
+    "line": 853,
+    "number": "A",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CICN",
+    "kind": "INFO",
+    "line": 854,
+    "number": ".",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "A",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "SVCLAIM",
+    "kind": "INFO",
+    "line": 863,
+    "number": "A",
+    "status": "exact",
+    "type": "String",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "A",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "RN",
+    "kind": "INFO",
+    "line": 909,
+    "number": "A",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "RUS",
+    "kind": "INFO",
+    "line": 923,
+    "number": ".",
+    "status": "exact",
+    "type": "String",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "RUL",
+    "kind": "INFO",
+    "line": 924,
+    "number": ".",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "RUC",
+    "kind": "INFO",
+    "line": 925,
+    "number": ".",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "RB",
+    "kind": "INFO",
+    "line": 926,
+    "number": ".",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CIRUC",
+    "kind": "INFO",
+    "line": 948,
+    "number": ".",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CIRB",
+    "kind": "INFO",
+    "line": 949,
+    "number": ".",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "RUB",
+    "kind": "INFO",
+    "line": 967,
+    "number": ".",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CN",
+    "kind": "FORMAT",
+    "line": 985,
+    "number": "1",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "2",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CICN",
+    "kind": "FORMAT",
+    "line": 986,
+    "number": "2",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CNQ",
+    "kind": "FORMAT",
+    "line": 987,
+    "number": "1",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "G",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CNL",
+    "kind": "FORMAT",
+    "line": 988,
+    "number": "G",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "G",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CNP",
+    "kind": "FORMAT",
+    "line": 989,
+    "number": "G",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "NQ",
+    "kind": "FORMAT",
+    "line": 990,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "HAP",
+    "kind": "FORMAT",
+    "line": 991,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/versions/vcf-4.4-reserved.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "AHAP",
+    "kind": "FORMAT",
+    "line": 992,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.4"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "AA",
+    "kind": "INFO",
+    "line": 460,
+    "number": "1",
+    "status": "exact",
+    "type": "String",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "A",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "AC",
+    "kind": "INFO",
+    "line": 461,
+    "number": "A",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "R",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "AD",
+    "kind": "INFO",
+    "line": 462,
+    "number": "R",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "R",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "ADF",
+    "kind": "INFO",
+    "line": 463,
+    "number": "R",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "R",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "ADR",
+    "kind": "INFO",
+    "line": 464,
+    "number": "R",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "A",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "AF",
+    "kind": "INFO",
+    "line": 465,
+    "number": "A",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "AN",
+    "kind": "INFO",
+    "line": 466,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "BQ",
+    "kind": "INFO",
+    "line": 467,
+    "number": "1",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "A",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CIGAR",
+    "kind": "INFO",
+    "line": 468,
+    "number": "A",
+    "status": "exact",
+    "type": "String",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "0",
+        "type": "Flag"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "DB",
+    "kind": "INFO",
+    "line": 469,
+    "number": "0",
+    "status": "exact",
+    "type": "Flag",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "DP",
+    "kind": "INFO",
+    "line": 470,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "END",
+    "kind": "INFO",
+    "line": 471,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "0",
+        "type": "Flag"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "H2",
+    "kind": "INFO",
+    "line": 472,
+    "number": "0",
+    "status": "exact",
+    "type": "Flag",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "0",
+        "type": "Flag"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "H3",
+    "kind": "INFO",
+    "line": 473,
+    "number": "0",
+    "status": "exact",
+    "type": "Flag",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "MQ",
+    "kind": "INFO",
+    "line": 474,
+    "number": "1",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "MQ0",
+    "kind": "INFO",
+    "line": 475,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "NS",
+    "kind": "INFO",
+    "line": 476,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "4",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "SB",
+    "kind": "INFO",
+    "line": 477,
+    "number": "4",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "0",
+        "type": "Flag"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "SOMATIC",
+    "kind": "INFO",
+    "line": 478,
+    "number": "0",
+    "status": "exact",
+    "type": "Flag",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "0",
+        "type": "Flag"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "VALIDATED",
+    "kind": "INFO",
+    "line": 479,
+    "number": "0",
+    "status": "exact",
+    "type": "Flag",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "0",
+        "type": "Flag"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "1000G",
+    "kind": "INFO",
+    "line": 480,
+    "number": "0",
+    "status": "exact",
+    "type": "Flag",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "R",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "AD",
+    "kind": "FORMAT",
+    "line": 534,
+    "number": "R",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "R",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "ADF",
+    "kind": "FORMAT",
+    "line": 535,
+    "number": "R",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "R",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "ADR",
+    "kind": "FORMAT",
+    "line": 536,
+    "number": "R",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "DP",
+    "kind": "FORMAT",
+    "line": 537,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "A",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "EC",
+    "kind": "FORMAT",
+    "line": 538,
+    "number": "A",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "LEN",
+    "kind": "FORMAT",
+    "line": 539,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "FT",
+    "kind": "FORMAT",
+    "line": 540,
+    "number": "1",
+    "status": "exact",
+    "type": "String",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "G",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "GL",
+    "kind": "FORMAT",
+    "line": 541,
+    "number": "G",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "G",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "GP",
+    "kind": "FORMAT",
+    "line": 542,
+    "number": "G",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "GQ",
+    "kind": "FORMAT",
+    "line": 543,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "GT",
+    "kind": "FORMAT",
+    "line": 544,
+    "number": "1",
+    "status": "exact",
+    "type": "String",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "2",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "HQ",
+    "kind": "FORMAT",
+    "line": 545,
+    "number": "2",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "LA",
+    "kind": "FORMAT",
+    "line": 546,
+    "number": ".",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "LAA",
+    "kind": "FORMAT",
+    "line": 547,
+    "number": ".",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "LR",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "LAD",
+    "kind": "FORMAT",
+    "line": 548,
+    "number": "LR",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "LR",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "LADF",
+    "kind": "FORMAT",
+    "line": 549,
+    "number": "LR",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "LR",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "LADR",
+    "kind": "FORMAT",
+    "line": 550,
+    "number": "LR",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "LA",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "LEC",
+    "kind": "FORMAT",
+    "line": 551,
+    "number": "LA",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "LG",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "LGL",
+    "kind": "FORMAT",
+    "line": 552,
+    "number": "LG",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "LG",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "LGP",
+    "kind": "FORMAT",
+    "line": 553,
+    "number": "LG",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "LG",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "LPL",
+    "kind": "FORMAT",
+    "line": 554,
+    "number": "LG",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "LG",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "LPP",
+    "kind": "FORMAT",
+    "line": 555,
+    "number": "LG",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "M",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#keyPattern",
+    "key": "M[0-9]+[ACGTUN]",
+    "kind": "FORMAT",
+    "line": 556,
+    "number": "M",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "M",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#keyPattern",
+    "key": "DPM[0-9]+[ACGTUN]",
+    "kind": "FORMAT",
+    "line": 557,
+    "number": "M",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "M",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#keyPattern",
+    "key": "ADM[0-9]+[ACGTUN]",
+    "kind": "FORMAT",
+    "line": 558,
+    "number": "M",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "M",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "M5mC",
+    "kind": "FORMAT",
+    "line": 559,
+    "number": "M",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "M",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "DPM5mC",
+    "kind": "FORMAT",
+    "line": 560,
+    "number": "M",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "M",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "ADM5mC",
+    "kind": "FORMAT",
+    "line": 561,
+    "number": "M",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "M",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "M5hmC",
+    "kind": "FORMAT",
+    "line": 562,
+    "number": "M",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "M",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "DPM5hmC",
+    "kind": "FORMAT",
+    "line": 563,
+    "number": "M",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "M",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "ADM5hmC",
+    "kind": "FORMAT",
+    "line": 564,
+    "number": "M",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "M",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "M5fC",
+    "kind": "FORMAT",
+    "line": 565,
+    "number": "M",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "M",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "DPM5fC",
+    "kind": "FORMAT",
+    "line": 566,
+    "number": "M",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "M",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "ADM5fC",
+    "kind": "FORMAT",
+    "line": 567,
+    "number": "M",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "M",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "M5caC",
+    "kind": "FORMAT",
+    "line": 568,
+    "number": "M",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "M",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "DPM5caC",
+    "kind": "FORMAT",
+    "line": 569,
+    "number": "M",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "M",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "ADM5caC",
+    "kind": "FORMAT",
+    "line": 570,
+    "number": "M",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "M",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "M5hmU",
+    "kind": "FORMAT",
+    "line": 571,
+    "number": "M",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "M",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "DPM5hmU",
+    "kind": "FORMAT",
+    "line": 572,
+    "number": "M",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "M",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "ADM5hmU",
+    "kind": "FORMAT",
+    "line": 573,
+    "number": "M",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "M",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "M5fU",
+    "kind": "FORMAT",
+    "line": 574,
+    "number": "M",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "M",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "DPM5fU",
+    "kind": "FORMAT",
+    "line": 575,
+    "number": "M",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "M",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "ADM5fU",
+    "kind": "FORMAT",
+    "line": 576,
+    "number": "M",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "M",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "M5caU",
+    "kind": "FORMAT",
+    "line": 577,
+    "number": "M",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "M",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "DPM5caU",
+    "kind": "FORMAT",
+    "line": 578,
+    "number": "M",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "M",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "ADM5caU",
+    "kind": "FORMAT",
+    "line": 579,
+    "number": "M",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "M",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "M6mA",
+    "kind": "FORMAT",
+    "line": 580,
+    "number": "M",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "M",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "DPM6mA",
+    "kind": "FORMAT",
+    "line": 581,
+    "number": "M",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "M",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "ADM6mA",
+    "kind": "FORMAT",
+    "line": 582,
+    "number": "M",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "M",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "M8oxoG",
+    "kind": "FORMAT",
+    "line": 583,
+    "number": "M",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "M",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "DPM8oxoG",
+    "kind": "FORMAT",
+    "line": 584,
+    "number": "M",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "M",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "ADM8oxoG",
+    "kind": "FORMAT",
+    "line": 585,
+    "number": "M",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "M",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "MXaoN",
+    "kind": "FORMAT",
+    "line": 586,
+    "number": "M",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "M",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "DPMXaoN",
+    "kind": "FORMAT",
+    "line": 587,
+    "number": "M",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "M",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "ADMXaoN",
+    "kind": "FORMAT",
+    "line": 588,
+    "number": "M",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "MQ",
+    "kind": "FORMAT",
+    "line": 589,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "G",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "PL",
+    "kind": "FORMAT",
+    "line": 590,
+    "number": "G",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "G",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "PP",
+    "kind": "FORMAT",
+    "line": 591,
+    "number": "G",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "PQ",
+    "kind": "FORMAT",
+    "line": 592,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "PS",
+    "kind": "FORMAT",
+    "line": 593,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "P",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "PSL",
+    "kind": "FORMAT",
+    "line": 594,
+    "number": "P",
+    "status": "exact",
+    "type": "String",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "P",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "PSO",
+    "kind": "FORMAT",
+    "line": 595,
+    "number": "P",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "P",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "PSQ",
+    "kind": "FORMAT",
+    "line": 596,
+    "number": "P",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "0",
+        "type": "Flag"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "IMPRECISE",
+    "kind": "INFO",
+    "line": 852,
+    "number": "0",
+    "status": "exact",
+    "type": "Flag",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "0",
+        "type": "Flag"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "NOVEL",
+    "kind": "INFO",
+    "line": 862,
+    "number": "0",
+    "status": "exact",
+    "type": "Flag",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "END",
+    "kind": "INFO",
+    "line": 863,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "SVTYPE",
+    "kind": "INFO",
+    "line": 871,
+    "number": "1",
+    "status": "exact",
+    "type": "String",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "A",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "SVLEN",
+    "kind": "INFO",
+    "line": 881,
+    "number": "A",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CIPOS",
+    "kind": "INFO",
+    "line": 900,
+    "number": ".",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CIEND",
+    "kind": "INFO",
+    "line": 916,
+    "number": ".",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "A",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "HOMLEN",
+    "kind": "INFO",
+    "line": 930,
+    "number": "A",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "A",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "HOMSEQ",
+    "kind": "INFO",
+    "line": 935,
+    "number": "A",
+    "status": "exact",
+    "type": "String",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "A",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "BKPTID",
+    "kind": "INFO",
+    "line": 940,
+    "number": "A",
+    "status": "exact",
+    "type": "String",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "MEINFO",
+    "kind": "INFO",
+    "line": 948,
+    "number": ".",
+    "status": "exact",
+    "type": "String",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "METRANS",
+    "kind": "INFO",
+    "line": 957,
+    "number": ".",
+    "status": "exact",
+    "type": "String",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "A",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "DGVID",
+    "kind": "INFO",
+    "line": 966,
+    "number": "A",
+    "status": "exact",
+    "type": "String",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "A",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "DBVARID",
+    "kind": "INFO",
+    "line": 967,
+    "number": "A",
+    "status": "exact",
+    "type": "String",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "A",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "DBRIPID",
+    "kind": "INFO",
+    "line": 968,
+    "number": "A",
+    "status": "exact",
+    "type": "String",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "A",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "MATEID",
+    "kind": "INFO",
+    "line": 969,
+    "number": "A",
+    "status": "exact",
+    "type": "String",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "A",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "PARID",
+    "kind": "INFO",
+    "line": 970,
+    "number": "A",
+    "status": "exact",
+    "type": "String",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "A",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "EVENT",
+    "kind": "INFO",
+    "line": 971,
+    "number": "A",
+    "status": "exact",
+    "type": "String",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "A",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "EVENTTYPE",
+    "kind": "INFO",
+    "line": 972,
+    "number": "A",
+    "status": "exact",
+    "type": "String",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CILEN",
+    "kind": "INFO",
+    "line": 1005,
+    "number": ".",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "A",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CN",
+    "kind": "INFO",
+    "line": 1014,
+    "number": "A",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CICN",
+    "kind": "INFO",
+    "line": 1015,
+    "number": ".",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "A",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "SVCLAIM",
+    "kind": "INFO",
+    "line": 1024,
+    "number": "A",
+    "status": "exact",
+    "type": "String",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "A",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "RN",
+    "kind": "INFO",
+    "line": 1070,
+    "number": "A",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "String"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "RUS",
+    "kind": "INFO",
+    "line": 1084,
+    "number": ".",
+    "status": "exact",
+    "type": "String",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "RUL",
+    "kind": "INFO",
+    "line": 1085,
+    "number": ".",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "RUC",
+    "kind": "INFO",
+    "line": 1086,
+    "number": ".",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "RB",
+    "kind": "INFO",
+    "line": 1087,
+    "number": ".",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CIRUC",
+    "kind": "INFO",
+    "line": 1109,
+    "number": ".",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CIRB",
+    "kind": "INFO",
+    "line": 1110,
+    "number": ".",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": ".",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "RUB",
+    "kind": "INFO",
+    "line": 1128,
+    "number": ".",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CN",
+    "kind": "FORMAT",
+    "line": 1146,
+    "number": "1",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "2",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CICN",
+    "kind": "FORMAT",
+    "line": 1147,
+    "number": "2",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CNQ",
+    "kind": "FORMAT",
+    "line": 1148,
+    "number": "1",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "G",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CNL",
+    "kind": "FORMAT",
+    "line": 1149,
+    "number": "G",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "G",
+        "type": "Float"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "CNP",
+    "kind": "FORMAT",
+    "line": 1150,
+    "number": "G",
+    "status": "exact",
+    "type": "Float",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "NQ",
+    "kind": "FORMAT",
+    "line": 1151,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "HAP",
+    "kind": "FORMAT",
+    "line": 1152,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  },
+  {
+    "actual": [
+      {
+        "number": "1",
+        "type": "Integer"
+      }
+    ],
+    "artifact": "ontology/vcf-core-reserved-keys.ttl",
+    "identifierProperty": "https://w3id.org/vcf-core/vocab#fieldId",
+    "key": "AHAP",
+    "kind": "FORMAT",
+    "line": 1153,
+    "number": "1",
+    "status": "exact",
+    "type": "Integer",
+    "version": "4.5"
+  }
+]

@@ -1,0 +1,16 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+# Preservation only: explicitly decode the documented VCF text encoding.
+SELECT ?sample ?fraction ?depth WHERE {
+?file vcfc:hasRecord ?record ; vcfc:hasSampleSet/vcfc:hasSample ?s .
+  ?record vcfc:pos 100 ; vcfc:hasCall/vcfc:hasCallMatrix ?matrix .
+  ?s vcfc:sampleIndex ?sampleIndex ; vcfc:sampleName ?sample .
+?matrix vcfc:hasFormatValueVector ?vectorfraction . ?vectorfraction vcfc:declaredBy/vcfc:fieldId "M5mC" ; vcfc:encodedValues ?packedfraction .
+
+  BIND(CONCAT("^(?:[^\\t]*\\t){", STR(?sampleIndex - 1), "}([^\\t]*).*$") AS ?patternfraction)
+  BIND(REPLACE(?packedfraction, ?patternfraction, "$1") AS ?fraction)
+?matrix vcfc:hasFormatValueVector ?vectordepth . ?vectordepth vcfc:declaredBy/vcfc:fieldId "DPM5mC" ; vcfc:encodedValues ?packeddepth .
+
+  BIND(CONCAT("^(?:[^\\t]*\\t){", STR(?sampleIndex - 1), "}([^\\t]*).*$") AS ?patterndepth)
+  BIND(REPLACE(?packeddepth, ?patterndepth, "$1") AS ?depth)
+}

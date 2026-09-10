@@ -1,0 +1,10 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+# VCF 4.5 fixed field 1: an angle-bracketed CHROM names a contig in the
+# ##assembly file. The source token, the parsed identifier and the sequence
+# source are all reachable, and no reference-contig declaration is invented.
+SELECT ?chrom ?contigId ?assemblyUrl WHERE {
+  ?record vcfc:chrom ?chrom ; vcfc:chromAssemblyContig ?contig .
+  ?contig vcfc:assemblyContigId ?contigId ; vcfc:declaredInAssembly ?line .
+  ?line vcfc:assemblyUrl ?assemblyUrl .
+  FILTER NOT EXISTS { ?record vcfc:chromosome ?declared }
+} ORDER BY ?contigId

@@ -1,0 +1,3 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+# Expected answers are authored in inputs/cases.json from the source VCF.
+SELECT ?pos ?status WHERE { ?r vcfc:pos ?pos ; vcfc:hasCall/vcfc:filterStatus ?status }

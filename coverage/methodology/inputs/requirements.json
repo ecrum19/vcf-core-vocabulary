@@ -1,0 +1,3337 @@
+[
+ {
+  "id": "R01",
+  "area": "File",
+  "question": "Which VCF version applies to this file?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 58,
+    "end": 64,
+    "sha256": "9a2184d0fa4393ac7876400e99409f82bda1c7d7b05b1be46ec5185b72250c73"
+   },
+   "4.2": {
+    "start": 58,
+    "end": 64,
+    "sha256": "e28a6f4784e11408defe5c88b28fe3cae44bb9e3f1b098a4899dd1aba18ba952"
+   },
+   "4.3": {
+    "start": 140,
+    "end": 148,
+    "sha256": "49852a2e286b869e4549a627fc55902bc82987d019e9fdf110221525ad26db1e"
+   },
+   "4.4": {
+    "start": 143,
+    "end": 151,
+    "sha256": "3f7a0043677fdb7fe51d031ab3b2c4a7634dc3b6337c64b1389f251e1c15423c"
+   },
+   "4.5": {
+    "start": 141,
+    "end": 149,
+    "sha256": "fd58ebb5c383f6f1df3869ddc5b1a80658f291ea07d15118eee6f2e30fc42964"
+   }
+  },
+  "interpretation": "Demonstrate this information capability using the listed finite examples; review its source interpretation and test adequacy."
+ },
+ {
+  "id": "R02",
+  "area": "Header",
+  "question": "Can metadata keys, values and source order be retrieved?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 56,
+    "end": 57,
+    "sha256": "e3b0d94248f190a239d006287ead1b0aa1cb896aa7e2cbd1b07c68c649dbb7c3"
+   },
+   "4.2": {
+    "start": 56,
+    "end": 57,
+    "sha256": "e3b0d94248f190a239d006287ead1b0aa1cb896aa7e2cbd1b07c68c649dbb7c3"
+   },
+   "4.3": {
+    "start": 105,
+    "end": 139,
+    "sha256": "e68c87bed2b358d5e7d645e7b910f49124bf9d82be4f06e584eb607234aa437f"
+   },
+   "4.4": {
+    "start": 105,
+    "end": 142,
+    "sha256": "6ff24bc35d0e6358a8509fde5b50732e34cb1f8e2f02507c42451add9520dc3a"
+   },
+   "4.5": {
+    "start": 103,
+    "end": 140,
+    "sha256": "6ff24bc35d0e6358a8509fde5b50732e34cb1f8e2f02507c42451add9520dc3a"
+   }
+  },
+  "interpretation": "Demonstrate this information capability using the listed finite examples; review its source interpretation and test adequacy."
+ },
+ {
+  "id": "R03",
+  "area": "Header",
+  "question": "Can INFO declarations expose ID, Number, Type and Description?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 65,
+    "end": 73,
+    "sha256": "af251d9ab5e7eb23390f28d7ea724853e3239489bfb6aa5f4a3f2de209416fe5"
+   },
+   "4.2": {
+    "start": 65,
+    "end": 82,
+    "sha256": "95538557f5126de049d904956adeb9d02b2ca16d2ef82fe13b2930af52031acb"
+   },
+   "4.3": {
+    "start": 149,
+    "end": 175,
+    "sha256": "1570df46450cb20c7dff8f823f8b0b1c18a403fb4aa48b691ee397e5caff863f"
+   },
+   "4.4": {
+    "start": 152,
+    "end": 178,
+    "sha256": "4739d8cabd359a4d04b83404c01382f126cc0ba100c065981cedad049aba9e72"
+   },
+   "4.5": {
+    "start": 150,
+    "end": 176,
+    "sha256": "4739d8cabd359a4d04b83404c01382f126cc0ba100c065981cedad049aba9e72"
+   }
+  },
+  "interpretation": "Retrieve the four required declaration attributes. Optional Source/Version are assessed separately by R65 from VCF 4.2; the existing 4.1 fixture extras do not establish a 4.1 specification requirement."
+ },
+ {
+  "id": "R04",
+  "area": "Header",
+  "question": "Can FORMAT declarations be distinguished from INFO declarations?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 81,
+    "end": 89,
+    "sha256": "05121b14b187fa8981aaebc22b9567d724f1a2f57e1cf93b3aff353b926c4616"
+   },
+   "4.2": {
+    "start": 90,
+    "end": 98,
+    "sha256": "05121b14b187fa8981aaebc22b9567d724f1a2f57e1cf93b3aff353b926c4616"
+   },
+   "4.3": {
+    "start": 183,
+    "end": 191,
+    "sha256": "9d7e1e5eda98f303736c489da388b58f69113a15d3efc0e236febc574a385faf"
+   },
+   "4.4": {
+    "start": 186,
+    "end": 199,
+    "sha256": "03de7b943136a85a00f3df6d202afb2e5311ace0ea37ba45ac9212e9cedfc595"
+   },
+   "4.5": {
+    "start": 184,
+    "end": 248,
+    "sha256": "a53e7a50b1443ac16c3d546dd2309ffab4d919ba6d17509092df0acccdc5d279"
+   }
+  },
+  "interpretation": "Demonstrate this information capability using the listed finite examples; review its source interpretation and test adequacy."
+ },
+ {
+  "id": "R05",
+  "area": "Header",
+  "question": "Can contig IDs and lengths be retrieved?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 120,
+    "end": 124,
+    "sha256": "9d8a7bc6d93d008fffd3c364ae3368a790ebdc37a6df93e83e7aa898e43e4cdb"
+   },
+   "4.2": {
+    "start": 137,
+    "end": 141,
+    "sha256": "9d8a7bc6d93d008fffd3c364ae3368a790ebdc37a6df93e83e7aa898e43e4cdb"
+   },
+   "4.3": {
+    "start": 236,
+    "end": 268,
+    "sha256": "939079d8ec0579e9f7f9b726b961284c788bfd04a865dc222a448fda8e727220"
+   },
+   "4.4": {
+    "start": 250,
+    "end": 282,
+    "sha256": "62ba21eeb695fb73426636c579cecd51fc64c870119194f0157de32f0ba7c0d3"
+   },
+   "4.5": {
+    "start": 299,
+    "end": 331,
+    "sha256": "62ba21eeb695fb73426636c579cecd51fc64c870119194f0157de32f0ba7c0d3"
+   }
+  },
+  "interpretation": "Demonstrate this information capability using the listed finite examples; review its source interpretation and test adequacy."
+ },
+ {
+  "id": "R06",
+  "area": "Header",
+  "question": "Can sample names and their column order be recovered?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 141,
+    "end": 156,
+    "sha256": "5dd0717bbd186301cf12f500efd0158e9c9b0adc25596df139d65e8514ed53a7"
+   },
+   "4.2": {
+    "start": 158,
+    "end": 173,
+    "sha256": "5dd0717bbd186301cf12f500efd0158e9c9b0adc25596df139d65e8514ed53a7"
+   },
+   "4.3": {
+    "start": 297,
+    "end": 314,
+    "sha256": "0449f4836efe195befd34ea8ab83bbeda87a0ad7f1e1872b192eeb31c03e771a"
+   },
+   "4.4": {
+    "start": 311,
+    "end": 328,
+    "sha256": "0449f4836efe195befd34ea8ab83bbeda87a0ad7f1e1872b192eeb31c03e771a"
+   },
+   "4.5": {
+    "start": 360,
+    "end": 377,
+    "sha256": "f0e6f5770d27d623d587e0dc55f760794eae944c86825bbacda0a5469cb3a6f2"
+   }
+  },
+  "interpretation": "Demonstrate this information capability using the listed finite examples; review its source interpretation and test adequacy."
+ },
+ {
+  "id": "R07",
+  "area": "Record",
+  "question": "Can records be retrieved in source order?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 158,
+    "end": 192,
+    "sha256": "9f9298d81006c657bfa848f8bfa7ed200ceee13eeb9d75fda4bdb3c5d211c359"
+   },
+   "4.2": {
+    "start": 175,
+    "end": 209,
+    "sha256": "c0dd057fbeb73d360ade30c50a7f56b9b19f9adf6e456065ee5100afc77b461e"
+   },
+   "4.3": {
+    "start": 321,
+    "end": 426,
+    "sha256": "4ec59301129e7294ac5135f3303c0bb747680289a1bf34049bd9c1672129f2b3"
+   },
+   "4.4": {
+    "start": 335,
+    "end": 444,
+    "sha256": "c9044fe17740cce421055cbb2911a09854e3c02789b528c7f64b6256bd76c9f1"
+   },
+   "4.5": {
+    "start": 384,
+    "end": 496,
+    "sha256": "6ab876c761891fc5a5dd1fab5b4207a4aa99592159f7936987edf5a43011ceb8"
+   }
+  },
+  "interpretation": "Demonstrate this information capability using the listed finite examples; review its source interpretation and test adequacy."
+ },
+ {
+  "id": "R08",
+  "area": "Record",
+  "question": "Can a record position be related to its declared reference contig?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 158,
+    "end": 192,
+    "sha256": "9f9298d81006c657bfa848f8bfa7ed200ceee13eeb9d75fda4bdb3c5d211c359"
+   },
+   "4.2": {
+    "start": 175,
+    "end": 209,
+    "sha256": "c0dd057fbeb73d360ade30c50a7f56b9b19f9adf6e456065ee5100afc77b461e"
+   },
+   "4.3": {
+    "start": 321,
+    "end": 426,
+    "sha256": "4ec59301129e7294ac5135f3303c0bb747680289a1bf34049bd9c1672129f2b3"
+   },
+   "4.4": {
+    "start": 335,
+    "end": 444,
+    "sha256": "c9044fe17740cce421055cbb2911a09854e3c02789b528c7f64b6256bd76c9f1"
+   },
+   "4.5": {
+    "start": 384,
+    "end": 496,
+    "sha256": "6ab876c761891fc5a5dd1fab5b4207a4aa99592159f7936987edf5a43011ceb8"
+   }
+  },
+  "interpretation": "Demonstrate this information capability using the listed finite examples; review its source interpretation and test adequacy."
+ },
+ {
+  "id": "R09",
+  "area": "Record",
+  "question": "Can each record identifier and its order be retrieved?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 158,
+    "end": 192,
+    "sha256": "9f9298d81006c657bfa848f8bfa7ed200ceee13eeb9d75fda4bdb3c5d211c359"
+   },
+   "4.2": {
+    "start": 175,
+    "end": 209,
+    "sha256": "c0dd057fbeb73d360ade30c50a7f56b9b19f9adf6e456065ee5100afc77b461e"
+   },
+   "4.3": {
+    "start": 321,
+    "end": 426,
+    "sha256": "4ec59301129e7294ac5135f3303c0bb747680289a1bf34049bd9c1672129f2b3"
+   },
+   "4.4": {
+    "start": 335,
+    "end": 444,
+    "sha256": "c9044fe17740cce421055cbb2911a09854e3c02789b528c7f64b6256bd76c9f1"
+   },
+   "4.5": {
+    "start": 384,
+    "end": 496,
+    "sha256": "6ab876c761891fc5a5dd1fab5b4207a4aa99592159f7936987edf5a43011ceb8"
+   }
+  },
+  "interpretation": "Demonstrate this information capability using the listed finite examples; review its source interpretation and test adequacy."
+ },
+ {
+  "id": "R10",
+  "area": "Allele",
+  "question": "Can reference and alternate alleles be retrieved with VCF allele indices?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 158,
+    "end": 192,
+    "sha256": "9f9298d81006c657bfa848f8bfa7ed200ceee13eeb9d75fda4bdb3c5d211c359"
+   },
+   "4.2": {
+    "start": 175,
+    "end": 209,
+    "sha256": "c0dd057fbeb73d360ade30c50a7f56b9b19f9adf6e456065ee5100afc77b461e"
+   },
+   "4.3": {
+    "start": 321,
+    "end": 426,
+    "sha256": "4ec59301129e7294ac5135f3303c0bb747680289a1bf34049bd9c1672129f2b3"
+   },
+   "4.4": {
+    "start": 335,
+    "end": 444,
+    "sha256": "c9044fe17740cce421055cbb2911a09854e3c02789b528c7f64b6256bd76c9f1"
+   },
+   "4.5": {
+    "start": 384,
+    "end": 496,
+    "sha256": "6ab876c761891fc5a5dd1fab5b4207a4aa99592159f7936987edf5a43011ceb8"
+   }
+  },
+  "interpretation": "Demonstrate this information capability using the listed finite examples; review its source interpretation and test adequacy."
+ },
+ {
+  "id": "R11",
+  "area": "Record",
+  "question": "Can numeric quality and an explicitly missing quality be distinguished?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 158,
+    "end": 192,
+    "sha256": "9f9298d81006c657bfa848f8bfa7ed200ceee13eeb9d75fda4bdb3c5d211c359"
+   },
+   "4.2": {
+    "start": 175,
+    "end": 209,
+    "sha256": "c0dd057fbeb73d360ade30c50a7f56b9b19f9adf6e456065ee5100afc77b461e"
+   },
+   "4.3": {
+    "start": 321,
+    "end": 426,
+    "sha256": "4ec59301129e7294ac5135f3303c0bb747680289a1bf34049bd9c1672129f2b3"
+   },
+   "4.4": {
+    "start": 335,
+    "end": 444,
+    "sha256": "c9044fe17740cce421055cbb2911a09854e3c02789b528c7f64b6256bd76c9f1"
+   },
+   "4.5": {
+    "start": 384,
+    "end": 496,
+    "sha256": "6ab876c761891fc5a5dd1fab5b4207a4aa99592159f7936987edf5a43011ceb8"
+   }
+  },
+  "interpretation": "Demonstrate this information capability using the listed finite examples; review its source interpretation and test adequacy."
+ },
+ {
+  "id": "R12",
+  "area": "Record",
+  "question": "Can passed, unapplied and failed filter states be distinguished?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 158,
+    "end": 192,
+    "sha256": "9f9298d81006c657bfa848f8bfa7ed200ceee13eeb9d75fda4bdb3c5d211c359"
+   },
+   "4.2": {
+    "start": 175,
+    "end": 209,
+    "sha256": "c0dd057fbeb73d360ade30c50a7f56b9b19f9adf6e456065ee5100afc77b461e"
+   },
+   "4.3": {
+    "start": 321,
+    "end": 426,
+    "sha256": "4ec59301129e7294ac5135f3303c0bb747680289a1bf34049bd9c1672129f2b3"
+   },
+   "4.4": {
+    "start": 335,
+    "end": 444,
+    "sha256": "c9044fe17740cce421055cbb2911a09854e3c02789b528c7f64b6256bd76c9f1"
+   },
+   "4.5": {
+    "start": 384,
+    "end": 496,
+    "sha256": "6ab876c761891fc5a5dd1fab5b4207a4aa99592159f7936987edf5a43011ceb8"
+   }
+  },
+  "interpretation": "Demonstrate this information capability using the listed finite examples; review its source interpretation and test adequacy."
+ },
+ {
+  "id": "R13",
+  "area": "Record",
+  "question": "Can individual failed-filter codes be retrieved in order?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 158,
+    "end": 192,
+    "sha256": "9f9298d81006c657bfa848f8bfa7ed200ceee13eeb9d75fda4bdb3c5d211c359"
+   },
+   "4.2": {
+    "start": 175,
+    "end": 209,
+    "sha256": "c0dd057fbeb73d360ade30c50a7f56b9b19f9adf6e456065ee5100afc77b461e"
+   },
+   "4.3": {
+    "start": 321,
+    "end": 426,
+    "sha256": "4ec59301129e7294ac5135f3303c0bb747680289a1bf34049bd9c1672129f2b3"
+   },
+   "4.4": {
+    "start": 335,
+    "end": 444,
+    "sha256": "c9044fe17740cce421055cbb2911a09854e3c02789b528c7f64b6256bd76c9f1"
+   },
+   "4.5": {
+    "start": 384,
+    "end": 496,
+    "sha256": "6ab876c761891fc5a5dd1fab5b4207a4aa99592159f7936987edf5a43011ceb8"
+   }
+  },
+  "interpretation": "Demonstrate this information capability using the listed finite examples; review its source interpretation and test adequacy."
+ },
+ {
+  "id": "R14",
+  "area": "Annotation",
+  "question": "Can INFO values be linked to their declarations and source field order?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 158,
+    "end": 192,
+    "sha256": "9f9298d81006c657bfa848f8bfa7ed200ceee13eeb9d75fda4bdb3c5d211c359"
+   },
+   "4.2": {
+    "start": 175,
+    "end": 209,
+    "sha256": "c0dd057fbeb73d360ade30c50a7f56b9b19f9adf6e456065ee5100afc77b461e"
+   },
+   "4.3": {
+    "start": 321,
+    "end": 426,
+    "sha256": "4ec59301129e7294ac5135f3303c0bb747680289a1bf34049bd9c1672129f2b3"
+   },
+   "4.4": {
+    "start": 335,
+    "end": 444,
+    "sha256": "c9044fe17740cce421055cbb2911a09854e3c02789b528c7f64b6256bd76c9f1"
+   },
+   "4.5": {
+    "start": 384,
+    "end": 496,
+    "sha256": "6ab876c761891fc5a5dd1fab5b4207a4aa99592159f7936987edf5a43011ceb8"
+   }
+  },
+  "interpretation": "Demonstrate this information capability using the listed finite examples; review its source interpretation and test adequacy."
+ },
+ {
+  "id": "R15",
+  "area": "Annotation",
+  "question": "Can an INFO flag express membership without inventing a scalar value?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 65,
+    "end": 73,
+    "sha256": "af251d9ab5e7eb23390f28d7ea724853e3239489bfb6aa5f4a3f2de209416fe5"
+   },
+   "4.2": {
+    "start": 65,
+    "end": 82,
+    "sha256": "95538557f5126de049d904956adeb9d02b2ca16d2ef82fe13b2930af52031acb"
+   },
+   "4.3": {
+    "start": 149,
+    "end": 175,
+    "sha256": "1570df46450cb20c7dff8f823f8b0b1c18a403fb4aa48b691ee397e5caff863f"
+   },
+   "4.4": {
+    "start": 152,
+    "end": 178,
+    "sha256": "4739d8cabd359a4d04b83404c01382f126cc0ba100c065981cedad049aba9e72"
+   },
+   "4.5": {
+    "start": 150,
+    "end": 176,
+    "sha256": "4739d8cabd359a4d04b83404c01382f126cc0ba100c065981cedad049aba9e72"
+   }
+  },
+  "interpretation": "Demonstrate this information capability using the listed finite examples; review its source interpretation and test adequacy."
+ },
+ {
+  "id": "R16",
+  "area": "Annotation",
+  "question": "Can Number=A values be associated with the correct ALT allele?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 65,
+    "end": 73,
+    "sha256": "af251d9ab5e7eb23390f28d7ea724853e3239489bfb6aa5f4a3f2de209416fe5"
+   },
+   "4.2": {
+    "start": 65,
+    "end": 82,
+    "sha256": "95538557f5126de049d904956adeb9d02b2ca16d2ef82fe13b2930af52031acb"
+   },
+   "4.3": {
+    "start": 149,
+    "end": 175,
+    "sha256": "1570df46450cb20c7dff8f823f8b0b1c18a403fb4aa48b691ee397e5caff863f"
+   },
+   "4.4": {
+    "start": 152,
+    "end": 178,
+    "sha256": "4739d8cabd359a4d04b83404c01382f126cc0ba100c065981cedad049aba9e72"
+   },
+   "4.5": {
+    "start": 150,
+    "end": 176,
+    "sha256": "4739d8cabd359a4d04b83404c01382f126cc0ba100c065981cedad049aba9e72"
+   }
+  },
+  "interpretation": "Demonstrate this information capability using the listed finite examples; review its source interpretation and test adequacy."
+ },
+ {
+  "id": "R17",
+  "area": "Sample",
+  "question": "Can FORMAT keys be retrieved in their declared column order?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 193,
+    "end": 222,
+    "sha256": "5c27330f1892b27a6e9a81fdf08e5fb114ef32f56c0040198d18b2c7db1295b6"
+   },
+   "4.2": {
+    "start": 210,
+    "end": 239,
+    "sha256": "5c27330f1892b27a6e9a81fdf08e5fb114ef32f56c0040198d18b2c7db1295b6"
+   },
+   "4.3": {
+    "start": 427,
+    "end": 574,
+    "sha256": "73008bb44a20c9e10b72041c30e7a4b3d1ec1ffa060e95d8a55b6d5d0333544c"
+   },
+   "4.4": {
+    "start": 445,
+    "end": 639,
+    "sha256": "0de45e8b69c3f8d0b517e23a78b1a5deb041666464870eccd8dc9a5dc3c0d69a"
+   },
+   "4.5": {
+    "start": 497,
+    "end": 812,
+    "sha256": "f8d67de6110f37b377642005d1d4ff33c8c4e93a705e0f8e73bc9dac6f7dc6ad"
+   }
+  },
+  "interpretation": "Demonstrate this information capability using the listed finite examples; review its source interpretation and test adequacy."
+ },
+ {
+  "id": "R18",
+  "area": "Sample",
+  "question": "Can sample identity, field identity and scalar depth be recovered together?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 193,
+    "end": 222,
+    "sha256": "5c27330f1892b27a6e9a81fdf08e5fb114ef32f56c0040198d18b2c7db1295b6"
+   },
+   "4.2": {
+    "start": 210,
+    "end": 239,
+    "sha256": "5c27330f1892b27a6e9a81fdf08e5fb114ef32f56c0040198d18b2c7db1295b6"
+   },
+   "4.3": {
+    "start": 427,
+    "end": 574,
+    "sha256": "73008bb44a20c9e10b72041c30e7a4b3d1ec1ffa060e95d8a55b6d5d0333544c"
+   },
+   "4.4": {
+    "start": 445,
+    "end": 639,
+    "sha256": "0de45e8b69c3f8d0b517e23a78b1a5deb041666464870eccd8dc9a5dc3c0d69a"
+   },
+   "4.5": {
+    "start": 497,
+    "end": 812,
+    "sha256": "f8d67de6110f37b377642005d1d4ff33c8c4e93a705e0f8e73bc9dac6f7dc6ad"
+   }
+  },
+  "interpretation": "Demonstrate this information capability using the listed finite examples; review its source interpretation and test adequacy."
+ },
+ {
+  "id": "R19",
+  "area": "Genotype",
+  "question": "Can ordered genotype calls distinguish called alleles from missing alleles?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 193,
+    "end": 222,
+    "sha256": "5c27330f1892b27a6e9a81fdf08e5fb114ef32f56c0040198d18b2c7db1295b6"
+   },
+   "4.2": {
+    "start": 210,
+    "end": 239,
+    "sha256": "5c27330f1892b27a6e9a81fdf08e5fb114ef32f56c0040198d18b2c7db1295b6"
+   },
+   "4.3": {
+    "start": 427,
+    "end": 574,
+    "sha256": "73008bb44a20c9e10b72041c30e7a4b3d1ec1ffa060e95d8a55b6d5d0333544c"
+   },
+   "4.4": {
+    "start": 445,
+    "end": 639,
+    "sha256": "0de45e8b69c3f8d0b517e23a78b1a5deb041666464870eccd8dc9a5dc3c0d69a"
+   },
+   "4.5": {
+    "start": 497,
+    "end": 812,
+    "sha256": "f8d67de6110f37b377642005d1d4ff33c8c4e93a705e0f8e73bc9dac6f7dc6ad"
+   }
+  },
+  "interpretation": "Demonstrate this information capability using the listed finite examples; review its source interpretation and test adequacy."
+ },
+ {
+  "id": "R20",
+  "area": "Genotype",
+  "question": "Can phased and unphased genotype separators be distinguished?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 193,
+    "end": 222,
+    "sha256": "5c27330f1892b27a6e9a81fdf08e5fb114ef32f56c0040198d18b2c7db1295b6"
+   },
+   "4.2": {
+    "start": 210,
+    "end": 239,
+    "sha256": "5c27330f1892b27a6e9a81fdf08e5fb114ef32f56c0040198d18b2c7db1295b6"
+   },
+   "4.3": {
+    "start": 427,
+    "end": 574,
+    "sha256": "73008bb44a20c9e10b72041c30e7a4b3d1ec1ffa060e95d8a55b6d5d0333544c"
+   },
+   "4.4": {
+    "start": 445,
+    "end": 639,
+    "sha256": "0de45e8b69c3f8d0b517e23a78b1a5deb041666464870eccd8dc9a5dc3c0d69a"
+   },
+   "4.5": {
+    "start": 497,
+    "end": 812,
+    "sha256": "f8d67de6110f37b377642005d1d4ff33c8c4e93a705e0f8e73bc9dac6f7dc6ad"
+   }
+  },
+  "interpretation": "Demonstrate this information capability using the listed finite examples; review its source interpretation and test adequacy."
+ },
+ {
+  "id": "R21",
+  "area": "Sample",
+  "question": "Can an omitted trailing FORMAT field be distinguished from an explicit dot?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 193,
+    "end": 222,
+    "sha256": "5c27330f1892b27a6e9a81fdf08e5fb114ef32f56c0040198d18b2c7db1295b6"
+   },
+   "4.2": {
+    "start": 210,
+    "end": 239,
+    "sha256": "5c27330f1892b27a6e9a81fdf08e5fb114ef32f56c0040198d18b2c7db1295b6"
+   },
+   "4.3": {
+    "start": 427,
+    "end": 574,
+    "sha256": "73008bb44a20c9e10b72041c30e7a4b3d1ec1ffa060e95d8a55b6d5d0333544c"
+   },
+   "4.4": {
+    "start": 445,
+    "end": 639,
+    "sha256": "0de45e8b69c3f8d0b517e23a78b1a5deb041666464870eccd8dc9a5dc3c0d69a"
+   },
+   "4.5": {
+    "start": 497,
+    "end": 812,
+    "sha256": "f8d67de6110f37b377642005d1d4ff33c8c4e93a705e0f8e73bc9dac6f7dc6ad"
+   }
+  },
+  "interpretation": "Demonstrate this information capability using the listed finite examples; review its source interpretation and test adequacy."
+ },
+ {
+  "id": "R22",
+  "area": "Lexical",
+  "question": "Can percent-encoded tokens and decoded delimiters be recovered?",
+  "versions": [
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.3": {
+    "start": 75,
+    "end": 98,
+    "sha256": "e21340cf18b41f3ee87e71108d50f9b041ab05753446e74cd2929ff53e4d62b1"
+   },
+   "4.4": {
+    "start": 75,
+    "end": 98,
+    "sha256": "e21340cf18b41f3ee87e71108d50f9b041ab05753446e74cd2929ff53e4d62b1"
+   },
+   "4.5": {
+    "start": 73,
+    "end": 96,
+    "sha256": "e21340cf18b41f3ee87e71108d50f9b041ab05753446e74cd2929ff53e4d62b1"
+   }
+  },
+  "interpretation": "Demonstrate this information capability using the listed finite examples; review its source interpretation and test adequacy."
+ },
+ {
+  "id": "R23",
+  "area": "Allele",
+  "question": "Can position 0 and contig-length-plus-one be recognized as telomeric positions?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 158,
+    "end": 192,
+    "sha256": "9f9298d81006c657bfa848f8bfa7ed200ceee13eeb9d75fda4bdb3c5d211c359"
+   },
+   "4.2": {
+    "start": 175,
+    "end": 209,
+    "sha256": "c0dd057fbeb73d360ade30c50a7f56b9b19f9adf6e456065ee5100afc77b461e"
+   },
+   "4.3": {
+    "start": 321,
+    "end": 426,
+    "sha256": "4ec59301129e7294ac5135f3303c0bb747680289a1bf34049bd9c1672129f2b3"
+   },
+   "4.4": {
+    "start": 335,
+    "end": 444,
+    "sha256": "c9044fe17740cce421055cbb2911a09854e3c02789b528c7f64b6256bd76c9f1"
+   },
+   "4.5": {
+    "start": 384,
+    "end": 496,
+    "sha256": "6ab876c761891fc5a5dd1fab5b4207a4aa99592159f7936987edf5a43011ceb8"
+   }
+  },
+  "interpretation": "Demonstrate this information capability using the listed finite examples; review its source interpretation and test adequacy."
+ },
+ {
+  "id": "R24",
+  "area": "Allele",
+  "question": "Can bracketed CHROM reference an assembly contig and its assembly source?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 158,
+    "end": 192,
+    "sha256": "9f9298d81006c657bfa848f8bfa7ed200ceee13eeb9d75fda4bdb3c5d211c359"
+   },
+   "4.2": {
+    "start": 175,
+    "end": 209,
+    "sha256": "c0dd057fbeb73d360ade30c50a7f56b9b19f9adf6e456065ee5100afc77b461e"
+   },
+   "4.3": {
+    "start": 321,
+    "end": 426,
+    "sha256": "4ec59301129e7294ac5135f3303c0bb747680289a1bf34049bd9c1672129f2b3"
+   },
+   "4.4": {
+    "start": 335,
+    "end": 444,
+    "sha256": "c9044fe17740cce421055cbb2911a09854e3c02789b528c7f64b6256bd76c9f1"
+   },
+   "4.5": {
+    "start": 384,
+    "end": 496,
+    "sha256": "6ab876c761891fc5a5dd1fab5b4207a4aa99592159f7936987edf5a43011ceb8"
+   }
+  },
+  "interpretation": "Demonstrate this information capability using the listed finite examples; review its source interpretation and test adequacy."
+ },
+ {
+  "id": "R25",
+  "area": "Allele",
+  "question": "Can padding interpretation and base count be attached to a record?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 158,
+    "end": 192,
+    "sha256": "9f9298d81006c657bfa848f8bfa7ed200ceee13eeb9d75fda4bdb3c5d211c359"
+   },
+   "4.2": {
+    "start": 175,
+    "end": 209,
+    "sha256": "c0dd057fbeb73d360ade30c50a7f56b9b19f9adf6e456065ee5100afc77b461e"
+   },
+   "4.3": {
+    "start": 321,
+    "end": 426,
+    "sha256": "4ec59301129e7294ac5135f3303c0bb747680289a1bf34049bd9c1672129f2b3"
+   },
+   "4.4": {
+    "start": 335,
+    "end": 444,
+    "sha256": "c9044fe17740cce421055cbb2911a09854e3c02789b528c7f64b6256bd76c9f1"
+   },
+   "4.5": {
+    "start": 384,
+    "end": 496,
+    "sha256": "6ab876c761891fc5a5dd1fab5b4207a4aa99592159f7936987edf5a43011ceb8"
+   }
+  },
+  "interpretation": "Demonstrate this information capability using the listed finite examples; review its source interpretation and test adequacy."
+ },
+ {
+  "id": "R26",
+  "area": "Annotation",
+  "question": "Can whole-field, all-item and partial missing INFO lists be distinguished?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 158,
+    "end": 192,
+    "sha256": "9f9298d81006c657bfa848f8bfa7ed200ceee13eeb9d75fda4bdb3c5d211c359"
+   },
+   "4.2": {
+    "start": 175,
+    "end": 209,
+    "sha256": "c0dd057fbeb73d360ade30c50a7f56b9b19f9adf6e456065ee5100afc77b461e"
+   },
+   "4.3": {
+    "start": 321,
+    "end": 426,
+    "sha256": "4ec59301129e7294ac5135f3303c0bb747680289a1bf34049bd9c1672129f2b3"
+   },
+   "4.4": {
+    "start": 335,
+    "end": 444,
+    "sha256": "c9044fe17740cce421055cbb2911a09854e3c02789b528c7f64b6256bd76c9f1"
+   },
+   "4.5": {
+    "start": 384,
+    "end": 496,
+    "sha256": "6ab876c761891fc5a5dd1fab5b4207a4aa99592159f7936987edf5a43011ceb8"
+   }
+  },
+  "interpretation": "Demonstrate this information capability using the listed finite examples; review its source interpretation and test adequacy."
+ },
+ {
+  "id": "R27",
+  "area": "Genotype",
+  "question": "Can local allele indices map to global record alleles?",
+  "versions": [
+   "4.5"
+  ],
+  "anchors": {
+   "4.5": {
+    "start": 184,
+    "end": 248,
+    "sha256": "a53e7a50b1443ac16c3d546dd2309ffab4d919ba6d17509092df0acccdc5d279"
+   }
+  },
+  "interpretation": "Demonstrate this information capability using the listed finite examples; review its source interpretation and test adequacy."
+ },
+ {
+  "id": "R28",
+  "area": "Genotype",
+  "question": "Can mixed and leading per-allele phasing indicators be retrieved?",
+  "versions": [
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.4": {
+    "start": 445,
+    "end": 639,
+    "sha256": "0de45e8b69c3f8d0b517e23a78b1a5deb041666464870eccd8dc9a5dc3c0d69a"
+   },
+   "4.5": {
+    "start": 497,
+    "end": 812,
+    "sha256": "f8d67de6110f37b377642005d1d4ff33c8c4e93a705e0f8e73bc9dac6f7dc6ad"
+   }
+  },
+  "interpretation": "Demonstrate this information capability using the listed finite examples; review its source interpretation and test adequacy."
+ },
+ {
+  "id": "R29",
+  "area": "Modification",
+  "question": "Can base-modification fractions and depths be associated with a sample?",
+  "versions": [
+   "4.5"
+  ],
+  "anchors": {
+   "4.5": {
+    "start": 497,
+    "end": 812,
+    "sha256": "f8d67de6110f37b377642005d1d4ff33c8c4e93a705e0f8e73bc9dac6f7dc6ad"
+   }
+  },
+  "interpretation": "Demonstrate this information capability using the listed finite examples; review its source interpretation and test adequacy."
+ },
+ {
+  "id": "R30",
+  "area": "gVCF",
+  "question": "Can sample-specific reference-block lengths and end coordinates be retrieved?",
+  "versions": [
+   "4.5"
+  ],
+  "anchors": {
+   "4.5": {
+    "start": 1846,
+    "end": 1880,
+    "sha256": "6c2293ff6f25734a1dd89106f58050cf336699bd114feb4f5132086235699165"
+   }
+  },
+  "interpretation": "Demonstrate this information capability using the listed finite examples; review its source interpretation and test adequacy."
+ },
+ {
+  "id": "R31",
+  "area": "Repeat",
+  "question": "Can a tandem-repeat unit and its copy count be associated?",
+  "versions": [
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.4": {
+    "start": 1748,
+    "end": 1879,
+    "sha256": "13b246ac893a92c81a808e1937e6ecb05e2dd1c220a150760c490adc25659933"
+   },
+   "4.5": {
+    "start": 1917,
+    "end": 2047,
+    "sha256": "38be1f923ebe643e903926ab3fd8ee2cb1daae057c5d6a683565b7c601838af4"
+   }
+  },
+  "interpretation": "Demonstrate this information capability using the listed finite examples; review its source interpretation and test adequacy."
+ },
+ {
+  "id": "R32",
+  "area": "Breakend",
+  "question": "Can two records be related through reciprocal breakend mate IDs?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 524,
+    "end": 565,
+    "sha256": "1f47c84b5d5eb74dbaa8114e2028d9919207a47c76d41bbcc33169a2bab7d8d5"
+   },
+   "4.2": {
+    "start": 541,
+    "end": 582,
+    "sha256": "1f47c84b5d5eb74dbaa8114e2028d9919207a47c76d41bbcc33169a2bab7d8d5"
+   },
+   "4.3": {
+    "start": 925,
+    "end": 979,
+    "sha256": "58fd7f5c0024a6ed066982c74df5fbe5793e564d07aabb7e5ba3a8ca50d0e433"
+   },
+   "4.4": {
+    "start": 1234,
+    "end": 1287,
+    "sha256": "a0fe8407cfd7d45db92a5020c9c3f090b5ee0eb67de6ebc8740c2e5bd2141bf9"
+   },
+   "4.5": {
+    "start": 1394,
+    "end": 1447,
+    "sha256": "a0fe8407cfd7d45db92a5020c9c3f090b5ee0eb67de6ebc8740c2e5bd2141bf9"
+   }
+  },
+  "interpretation": "Demonstrate this information capability using the listed finite examples; review its source interpretation and test adequacy."
+ },
+ {
+  "id": "R33",
+  "area": "Structural variant",
+  "question": "Can confidence-interval item order and version-dependent allele scope be retrieved?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 233,
+    "end": 285,
+    "sha256": "4060b79daef36f2ab76548d4920ce62bba34e736ac7af40f8aa85629226288ed"
+   },
+   "4.2": {
+    "start": 250,
+    "end": 302,
+    "sha256": "4060b79daef36f2ab76548d4920ce62bba34e736ac7af40f8aa85629226288ed"
+   },
+   "4.3": {
+    "start": 601,
+    "end": 671,
+    "sha256": "dce79637831bbc44bbda6e185a2714170d1e7940af893593ab806fe1e28141a9"
+   },
+   "4.4": {
+    "start": 666,
+    "end": 980,
+    "sha256": "e0cb540bc84d17012c45963f6dc7be9bfaf879b74c4f1821503f7ffc57d161e5"
+   },
+   "4.5": {
+    "start": 841,
+    "end": 1141,
+    "sha256": "0b3f8d838a20f7a12ed43cfdef98520e048ef66b614ebf923cca1f64134cc6a8"
+   }
+  },
+  "interpretation": "Demonstrate this information capability using the listed finite examples; review its source interpretation and test adequacy."
+ },
+ {
+  "id": "R34",
+  "area": "Header",
+  "question": "Can arbitrary structured header attributes retain identity and escaping?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 56,
+    "end": 57,
+    "sha256": "e3b0d94248f190a239d006287ead1b0aa1cb896aa7e2cbd1b07c68c649dbb7c3"
+   },
+   "4.2": {
+    "start": 56,
+    "end": 57,
+    "sha256": "e3b0d94248f190a239d006287ead1b0aa1cb896aa7e2cbd1b07c68c649dbb7c3"
+   },
+   "4.3": {
+    "start": 105,
+    "end": 139,
+    "sha256": "e68c87bed2b358d5e7d645e7b910f49124bf9d82be4f06e584eb607234aa437f"
+   },
+   "4.4": {
+    "start": 105,
+    "end": 142,
+    "sha256": "6ff24bc35d0e6358a8509fde5b50732e34cb1f8e2f02507c42451add9520dc3a"
+   },
+   "4.5": {
+    "start": 103,
+    "end": 140,
+    "sha256": "6ff24bc35d0e6358a8509fde5b50732e34cb1f8e2f02507c42451add9520dc3a"
+   }
+  },
+  "interpretation": "Reviewed 2026-09-10: scored scope is attribute identity, decoded value and escaping, in every version. Attribute order within a structured meta-information line is NOT scored: VCF 4.4/4.5 state that implementations must not rely on it and are not required to preserve it, and 4.1-4.3 nowhere give it meaning. Order preservation is recorded as an optional round-trip fidelity extension only. This is distinct from R02, which covers the order of meta-information lines themselves.",
+  "testPlan": "Use quoted commas/quotes/backslashes, repeated unstructured lines, a custom structured kind, and the same ID in INFO and FORMAT. Query attributes within their file and kind. Do not score attribute order; report it separately if a fidelity claim is made."
+ },
+ {
+  "id": "R35",
+  "area": "Header",
+  "question": "Can sample mixture composition and proportions be related to sample declarations?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 819,
+    "end": 859,
+    "sha256": "348e1df276c74d342b32b54c16211b58bc7bae9470ee3f2217aadb2b0fd8b91b"
+   },
+   "4.2": {
+    "start": 836,
+    "end": 876,
+    "sha256": "348e1df276c74d342b32b54c16211b58bc7bae9470ee3f2217aadb2b0fd8b91b"
+   },
+   "4.3": {
+    "start": 1262,
+    "end": 1306,
+    "sha256": "0d2393524e6f596bf818b0c16697a4ccf3df44955b5e5d0e77c128dc47d48d71"
+   },
+   "4.4": {
+    "start": 1571,
+    "end": 1615,
+    "sha256": "437def0aa3c3d5311fad01589405a6550f41eb0a2996e7716503d8eba79621bf"
+   },
+   "4.5": {
+    "start": 1731,
+    "end": 1775,
+    "sha256": "437def0aa3c3d5311fad01589405a6550f41eb0a2996e7716503d8eba79621bf"
+   }
+  },
+  "interpretation": "Reviewed 2026-09-10. In 4.1/4.2 the Genomes/Mixture/Description grammar is normative, so the scored capability is the positional alignment of the semicolon-separated Genomes and Mixture lists with their sample declaration. In 4.3-4.5 the normative SAMPLE definition is the META-driven form and the Genomes/Mixture example is a retained non-normative extension, assessed there as generic structured-attribute retention (R34/R59) rather than as a version-specific capability. The version list is deliberately left unchanged so that this narrowing cannot raise any coverage percentage. Accepted limitation: Description entries cannot be paired positionally by grammar, because Genomes and Mixture use unquoted ';' separators while the parallel Description list is a single quoted string containing ';'. Still unassessed: add a witness and independent expected answers.",
+  "testPlan": "Use Blood=Germline at proportion 1 and Tissue=Germline;Tumour at .3;.7. Expected tuples retain sample, genome, proportion and matching Description; do not infer the mixture from genotype counts."
+ },
+ {
+  "id": "R36",
+  "area": "Header",
+  "question": "Can clonal pedigree derivations identify each child and its original sample?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 860,
+    "end": 910,
+    "sha256": "704fc099717ef8b078de72b062d7c2d5460914e1cfe211ba075d77bf7beb8656"
+   },
+   "4.2": {
+    "start": 877,
+    "end": 927,
+    "sha256": "704fc099717ef8b078de72b062d7c2d5460914e1cfe211ba075d77bf7beb8656"
+   },
+   "4.3": {
+    "start": 1307,
+    "end": 1375,
+    "sha256": "f10db00556f8168677d533e5ce8cfb4ee18a493ec0876f584c5635205dcf274c"
+   },
+   "4.4": {
+    "start": 1616,
+    "end": 1685,
+    "sha256": "bd5bec326437eb4c2c0a7d8febce1f0f0891bc7595a3b701aa764af4efe2461d"
+   },
+   "4.5": {
+    "start": 1776,
+    "end": 1845,
+    "sha256": "bd5bec326437eb4c2c0a7d8febce1f0f0891bc7595a3b701aa764af4efe2461d"
+   }
+  },
+  "interpretation": "Unassessed: add a source-reviewed RDF witness and independent expected-answer tests. No conclusion of vocabulary incapability follows.",
+  "testPlan": "Use Germline -> Primary -> Secondary1/Secondary2. Retrieve each declared child/original pair with Derived syntax before 4.3 and ID syntax from 4.3; do not infer additional edges from name similarity."
+ },
+ {
+  "id": "R37",
+  "area": "Genotype",
+  "question": "Can genotype likelihood indices be decoded into the prescribed arbitrary-ploidy genotype ordering?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 193,
+    "end": 222,
+    "sha256": "5c27330f1892b27a6e9a81fdf08e5fb114ef32f56c0040198d18b2c7db1295b6"
+   },
+   "4.2": {
+    "start": 210,
+    "end": 239,
+    "sha256": "5c27330f1892b27a6e9a81fdf08e5fb114ef32f56c0040198d18b2c7db1295b6"
+   },
+   "4.3": {
+    "start": 427,
+    "end": 574,
+    "sha256": "73008bb44a20c9e10b72041c30e7a4b3d1ec1ffa060e95d8a55b6d5d0333544c"
+   },
+   "4.4": {
+    "start": 445,
+    "end": 639,
+    "sha256": "0de45e8b69c3f8d0b517e23a78b1a5deb041666464870eccd8dc9a5dc3c0d69a"
+   },
+   "4.5": {
+    "start": 497,
+    "end": 812,
+    "sha256": "f8d67de6110f37b377642005d1d4ff33c8c4e93a705e0f8e73bc9dac6f7dc6ad"
+   }
+  },
+  "interpretation": "Before 4.3 the prose explicitly supplies the diploid ordering formula; 4.3+ supplies arbitrary-ploidy ordering. A diploid case alone must not establish arbitrary-ploidy coverage.",
+  "testPlan": "Use a triallelic diploid vector with expected 00,01,11,02,12,22; from 4.3 add triploid 000,001,011,111,002,012,112,022,122,222. Test missing GT defaulting to diploid separately."
+ },
+ {
+  "id": "R38",
+  "area": "Annotation",
+  "question": "Can Number=R vectors associate each item with REF followed by ALT alleles?",
+  "versions": [
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.2": {
+    "start": 65,
+    "end": 82,
+    "sha256": "95538557f5126de049d904956adeb9d02b2ca16d2ef82fe13b2930af52031acb"
+   },
+   "4.3": {
+    "start": 149,
+    "end": 175,
+    "sha256": "1570df46450cb20c7dff8f823f8b0b1c18a403fb4aa48b691ee397e5caff863f"
+   },
+   "4.4": {
+    "start": 152,
+    "end": 178,
+    "sha256": "4739d8cabd359a4d04b83404c01382f126cc0ba100c065981cedad049aba9e72"
+   },
+   "4.5": {
+    "start": 150,
+    "end": 176,
+    "sha256": "4739d8cabd359a4d04b83404c01382f126cc0ba100c065981cedad049aba9e72"
+   }
+  },
+  "interpretation": "Unassessed: add a source-reviewed RDF witness and independent expected-answer tests. No conclusion of vocabulary incapability follows.",
+  "testPlan": "Use REF=A, ALT=C,G and AD=8,3,2. Expected associations are REF->8, C->3, G->2 in both INFO and FORMAT sample contexts; a Number=R declaration alone is insufficient."
+ },
+ {
+  "id": "R39",
+  "area": "Breakend",
+  "question": "Can all four paired-breakend orientations and inserted sequences be distinguished?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 524,
+    "end": 565,
+    "sha256": "1f47c84b5d5eb74dbaa8114e2028d9919207a47c76d41bbcc33169a2bab7d8d5"
+   },
+   "4.2": {
+    "start": 541,
+    "end": 582,
+    "sha256": "1f47c84b5d5eb74dbaa8114e2028d9919207a47c76d41bbcc33169a2bab7d8d5"
+   },
+   "4.3": {
+    "start": 925,
+    "end": 979,
+    "sha256": "58fd7f5c0024a6ed066982c74df5fbe5793e564d07aabb7e5ba3a8ca50d0e433"
+   },
+   "4.4": {
+    "start": 1234,
+    "end": 1287,
+    "sha256": "a0fe8407cfd7d45db92a5020c9c3f090b5ee0eb67de6ebc8740c2e5bd2141bf9"
+   },
+   "4.5": {
+    "start": 1394,
+    "end": 1447,
+    "sha256": "a0fe8407cfd7d45db92a5020c9c3f090b5ee0eb67de6ebc8740c2e5bd2141bf9"
+   }
+  },
+  "interpretation": "Unassessed: add a source-reviewed RDF witness and independent expected-answer tests. No conclusion of vocabulary incapability follows.",
+  "testPlan": "Use all four t[p[, t]p], ]p]t and [p[t forms, a remote contig containing a colon, and an inserted sequence. Independently specify remote position, joined direction and replacement bases."
+ },
+ {
+  "id": "R40",
+  "area": "Breakend",
+  "question": "Can a single breakend express an unknown partner without inventing a mate?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 777,
+    "end": 818,
+    "sha256": "27e8977c549b12043a9f88704f6ed7f872863fe3cb8dc3681ad9d27d9af7fdd6"
+   },
+   "4.2": {
+    "start": 794,
+    "end": 835,
+    "sha256": "27e8977c549b12043a9f88704f6ed7f872863fe3cb8dc3681ad9d27d9af7fdd6"
+   },
+   "4.3": {
+    "start": 1213,
+    "end": 1261,
+    "sha256": "c99a86635651f9661cf8621266a26d4fdfe63f4b45e4a01d62d124eae9e86657"
+   },
+   "4.4": {
+    "start": 1522,
+    "end": 1570,
+    "sha256": "335ff9a74d29bd8d3b67b728c726bb06b17e7fc36b0957cec2cdb7c825825418"
+   },
+   "4.5": {
+    "start": 1682,
+    "end": 1730,
+    "sha256": "be35898f8f1f72d0db3d0d699ebfca366997cf875b1e11ed4ef05aba46138f42"
+   }
+  },
+  "interpretation": "Unassessed: add a source-reviewed RDF witness and independent expected-answer tests. No conclusion of vocabulary incapability follows.",
+  "testPlan": "Use G. and .A with no MATEID plus inserted TCC.; retrieve orientation/inserted bases and explicitly absent remote mate, without inventing a reference coordinate."
+ },
+ {
+  "id": "R41",
+  "area": "Breakend",
+  "question": "Can alternative multiple mates be distinguished from simultaneous adjacencies?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 639,
+    "end": 656,
+    "sha256": "897e6c5c9d74733b7fa776b79bc05e02164115f859760a14b983677604117198"
+   },
+   "4.2": {
+    "start": 656,
+    "end": 673,
+    "sha256": "897e6c5c9d74733b7fa776b79bc05e02164115f859760a14b983677604117198"
+   },
+   "4.3": {
+    "start": 1053,
+    "end": 1070,
+    "sha256": "897e6c5c9d74733b7fa776b79bc05e02164115f859760a14b983677604117198"
+   },
+   "4.4": {
+    "start": 1361,
+    "end": 1378,
+    "sha256": "1aa56addd2caa64df9a55c050e92d33be784b4aaed19102183aa2ddf0a101460"
+   },
+   "4.5": {
+    "start": 1521,
+    "end": 1538,
+    "sha256": "1aa56addd2caa64df9a55c050e92d33be784b4aaed19102183aa2ddf0a101460"
+   }
+  },
+  "interpretation": "Unassessed: add a source-reviewed RDF witness and independent expected-answer tests. No conclusion of vocabulary incapability follows.",
+  "testPlan": "Use one record with two breakend ALT alleles and two MATEIDs. Expected associations preserve each ALT alternative, not simultaneous connectivity between all mates."
+ },
+ {
+  "id": "R42",
+  "area": "Breakend",
+  "question": "Can explicit PARID partners and event identifiers group breakends?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 657,
+    "end": 675,
+    "sha256": "be7363fe977befc3526fcfb241f8a63b09c65fa308a9d3e40e813b2ae8b6c7c5"
+   },
+   "4.2": {
+    "start": 674,
+    "end": 692,
+    "sha256": "be7363fe977befc3526fcfb241f8a63b09c65fa308a9d3e40e813b2ae8b6c7c5"
+   },
+   "4.3": {
+    "start": 1071,
+    "end": 1093,
+    "sha256": "b25845f4ed461fdee3c44951ac4be689438feaefae6ce3ac39241820d43beca1"
+   },
+   "4.4": {
+    "start": 1379,
+    "end": 1402,
+    "sha256": "d40c9040da2a5335520e8b44d126daaa5c0ab0eb5b406ceb5a22d22e68ca9e20"
+   },
+   "4.5": {
+    "start": 1539,
+    "end": 1562,
+    "sha256": "d40c9040da2a5335520e8b44d126daaa5c0ab0eb5b406ceb5a22d22e68ca9e20"
+   }
+  },
+  "interpretation": "Unassessed: add a source-reviewed RDF witness and independent expected-answer tests. No conclusion of vocabulary incapability follows.",
+  "testPlan": "Use a four-breakend event with distinct PARID and MATEID and a shared EVENT. Retrieve partner, mate and event independently, including nonadjacent partner positions."
+ },
+ {
+  "id": "R43",
+  "area": "Breakend",
+  "question": "Can imprecise breakpoint intervals and homology offsets retain their coordinate interpretation?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 752,
+    "end": 776,
+    "sha256": "44a6e7ee0a8ca2343dcfb96a0aa430f9e3f3ab9cea0d7a308bdf1334b6df3e0d"
+   },
+   "4.2": {
+    "start": 769,
+    "end": 793,
+    "sha256": "44a6e7ee0a8ca2343dcfb96a0aa430f9e3f3ab9cea0d7a308bdf1334b6df3e0d"
+   },
+   "4.3": {
+    "start": 1179,
+    "end": 1212,
+    "sha256": "09f5c261a2d14b9d8883e3f7fbba1f0b9720a4e3c49da87169ab7d466e8a220e"
+   },
+   "4.4": {
+    "start": 1488,
+    "end": 1521,
+    "sha256": "2f84b355441fd370423963993dd0b2156e2711aafed42c0301bb0de94157b5ca"
+   },
+   "4.5": {
+    "start": 1648,
+    "end": 1681,
+    "sha256": "2f84b355441fd370423963993dd0b2156e2711aafed42c0301bb0de94157b5ca"
+   }
+  },
+  "interpretation": "Unassessed: add a source-reviewed RDF witness and independent expected-answer tests. No conclusion of vocabulary incapability follows.",
+  "testPlan": "Use two uncertain mate records whose remote ALT coordinate differs from the mate POS. Review correlated interval and homology interpretation before authoring expected bounds."
+ },
+ {
+  "id": "R44",
+  "area": "Structural variant",
+  "question": "Can copy-number values distinguish sample-level and per-ALT scope?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 286,
+    "end": 298,
+    "sha256": "ec4a3c22b4472f325554dc4af89da4104dc0bbcc57f58b4903ac81a659c48958"
+   },
+   "4.2": {
+    "start": 303,
+    "end": 315,
+    "sha256": "ec4a3c22b4472f325554dc4af89da4104dc0bbcc57f58b4903ac81a659c48958"
+   },
+   "4.3": {
+    "start": 672,
+    "end": 691,
+    "sha256": "fea4b9d6badd41e3fa3ee8e080034a069842140d8e7421978bf9cf7b982e5c2a"
+   },
+   "4.4": {
+    "start": 981,
+    "end": 1002,
+    "sha256": "d7ef97f5893ab6f5857925e24d06b1425f471d6f9cc7d9be5227289e48bbe3f4"
+   },
+   "4.5": {
+    "start": 1142,
+    "end": 1163,
+    "sha256": "d7ef97f5893ab6f5857925e24d06b1425f471d6f9cc7d9be5227289e48bbe3f4"
+   }
+  },
+  "interpretation": "Keep each version distinct: before 4.4 INFO CN describes a segment and FORMAT CN an integer copy-number genotype; from 4.4 INFO CN is allele-specific and FORMAT CN is total sample copy number, both permitting Float.",
+  "testPlan": "Before 4.4 use segment INFO CN and integer sample FORMAT CN. From 4.4 use INFO CN=1,2 with GT=1/2 and total FORMAT CN=3; test fractional values and unknown allele-specific CN separately."
+ },
+ {
+  "id": "R45",
+  "area": "gVCF",
+  "question": "Can unspecified alleles and END-based reference blocks preserve interval meaning?",
+  "versions": [
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.3": {
+    "start": 1428,
+    "end": 1451,
+    "sha256": "1d3b65e61ff9d52e57d7722bfd79c9496c638fdb819954186e4e6b66333ee344"
+   },
+   "4.4": {
+    "start": 1686,
+    "end": 1711,
+    "sha256": "7f98faca46a63bb88293d6c9b410c046ff15bf4dfd6bd47c5a4b9ee472bdef93"
+   },
+   "4.5": {
+    "start": 1846,
+    "end": 1880,
+    "sha256": "6c2293ff6f25734a1dd89106f58050cf336699bd114feb4f5132086235699165"
+   }
+  },
+  "interpretation": "Use a <*> reference block with END and a variant record alongside it. Resolved 2026-09-10: FORMAT LEN is the inclusive block length, so END = POS + LEN - 1; the 4.5 example table introduces LEN with ';' instead of ':' and three of its LEN values are off by one, so use the corrected values recorded in the source audit. In 4.3/4.4 the example's FORMAT 'P' is a typo for 'PL'. NON_REF alias equivalence and the LEN-from-END fallback remain untested and are an acknowledged gap.",
+  "testPlan": "Use a <*> reference block with END and a variant record alongside it. Test NON_REF alias and 4.5 LEN fallback only under the relevant version rules; resolve source example length/separator conflicts first."
+ },
+ {
+  "id": "R46",
+  "area": "Repeat",
+  "question": "Can multiple repeat units and their flattened lists be assigned to the correct ALT alleles?",
+  "versions": [
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.4": {
+    "start": 1748,
+    "end": 1879,
+    "sha256": "13b246ac893a92c81a808e1937e6ecb05e2dd1c220a150760c490adc25659933"
+   },
+   "4.5": {
+    "start": 1917,
+    "end": 2047,
+    "sha256": "38be1f923ebe643e903926ab3fd8ee2cb1daae057c5d6a683565b7c601838af4"
+   }
+  },
+  "interpretation": "Unassessed: add a source-reviewed RDF witness and independent expected-answer tests. No conclusion of vocabulary incapability follows.",
+  "testPlan": "Use RN=2,1, RUS=CAG,TG,CA and RUC=10,7,3. Expect ALT1 groups (CAG,10),(TG,7), ALT2 (CA,3); test missing/default RN and RUL independently."
+ },
+ {
+  "id": "R47",
+  "area": "Lexical",
+  "question": "Can numeric special values and lexical precision survive encoding?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 65,
+    "end": 73,
+    "sha256": "af251d9ab5e7eb23390f28d7ea724853e3239489bfb6aa5f4a3f2de209416fe5"
+   },
+   "4.2": {
+    "start": 65,
+    "end": 82,
+    "sha256": "95538557f5126de049d904956adeb9d02b2ca16d2ef82fe13b2930af52031acb"
+   },
+   "4.3": {
+    "start": 99,
+    "end": 104,
+    "sha256": "01a085c7a0a6fd661a0a34ab722ee144d99b37f194352da9b11261df3818acee"
+   },
+   "4.4": {
+    "start": 99,
+    "end": 104,
+    "sha256": "01a085c7a0a6fd661a0a34ab722ee144d99b37f194352da9b11261df3818acee"
+   },
+   "4.5": {
+    "start": 97,
+    "end": 102,
+    "sha256": "01a085c7a0a6fd661a0a34ab722ee144d99b37f194352da9b11261df3818acee"
+   }
+  },
+  "interpretation": "Numeric precision applies throughout; explicit NaN/Inf and 32-bit bounds are specified from 4.3. Do not project those additions back onto 4.1/4.2.",
+  "testPlan": "Use decimal/scientific lexical forms and numeric bounds. From 4.3 add INF/-INF/NaN spellings. Retrieve original lexical value and interpreted numeric class without coercing missing dot into NaN."
+ },
+ {
+  "id": "R48",
+  "area": "Annotation",
+  "question": "Can a generic custom INFO and FORMAT field preserve declared meaning and value identity?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 158,
+    "end": 192,
+    "sha256": "9f9298d81006c657bfa848f8bfa7ed200ceee13eeb9d75fda4bdb3c5d211c359"
+   },
+   "4.2": {
+    "start": 175,
+    "end": 209,
+    "sha256": "c0dd057fbeb73d360ade30c50a7f56b9b19f9adf6e456065ee5100afc77b461e"
+   },
+   "4.3": {
+    "start": 321,
+    "end": 426,
+    "sha256": "4ec59301129e7294ac5135f3303c0bb747680289a1bf34049bd9c1672129f2b3"
+   },
+   "4.4": {
+    "start": 335,
+    "end": 444,
+    "sha256": "c9044fe17740cce421055cbb2911a09854e3c02789b528c7f64b6256bd76c9f1"
+   },
+   "4.5": {
+    "start": 384,
+    "end": 496,
+    "sha256": "6ab876c761891fc5a5dd1fab5b4207a4aa99592159f7936987edf5a43011ceb8"
+   }
+  },
+  "interpretation": "Unassessed: add a source-reviewed RDF witness and independent expected-answer tests. No conclusion of vocabulary incapability follows.",
+  "testPlan": "Declare the same custom key in INFO and FORMAT with different descriptions/types. Populate two samples and compare record versus sample values through their actual declarations."
+ },
+ {
+  "id": "R49",
+  "area": "Genotype",
+  "question": "Can nonmissing PS, per-allele phase-set lists, and their precedence be interpreted together?",
+  "versions": [
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.4": {
+    "start": 445,
+    "end": 639,
+    "sha256": "0de45e8b69c3f8d0b517e23a78b1a5deb041666464870eccd8dc9a5dc3c0d69a"
+   },
+   "4.5": {
+    "start": 497,
+    "end": 812,
+    "sha256": "f8d67de6110f37b377642005d1d4ff33c8c4e93a705e0f8e73bc9dac6f7dc6ad"
+   }
+  },
+  "interpretation": "Use PS sets scoped to sample/chromosome and PSL names crossing chromosomes, missing phase entries and unphased alleles. Resolved 2026-09-10: the specification's PSL table must not be used as an oracle (allele indices exceed the ALT lists, the implicit leading phasing indicator contradicts the PSL missing value, and ploidy is inconsistent between rows); use the corrected reviewer-authored equivalent recorded in the source audit for section 4.5:497-812 and label it as such. Still unassessed: add a witness and independent answers.",
+  "testPlan": "Use PS sets scoped to sample/chromosome and PSL names crossing chromosomes, missing phase entries and unphased alleles. Do not use inconsistent source GT indices as an oracle."
+ },
+ {
+  "id": "R50",
+  "area": "Modification",
+  "question": "Can numeric modification identifiers, strand and modified-base position be associated?",
+  "versions": [
+   "4.5"
+  ],
+  "anchors": {
+   "4.5": {
+    "start": 497,
+    "end": 812,
+    "sha256": "f8d67de6110f37b377642005d1d4ff33c8c4e93a705e0f8e73bc9dac6f7dc6ad"
+   }
+  },
+  "interpretation": "Unassessed: add a source-reviewed RDF witness and independent expected-answer tests. No conclusion of vocabulary incapability follows.",
+  "testPlan": "Use a numeric ChEBI key with forward/reverse relevant bases and expected GT/base/strand positions; include an unrecognised numeric key without requiring a biological ChEBI lookup."
+ },
+ {
+  "id": "R51",
+  "area": "Header",
+  "question": "Can each FILTER declaration expose its ID and Description within its file?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 74,
+    "end": 80,
+    "sha256": "f24fa5bfae9afbb5231416028427d912498193da40c42ad00e2dfe4e067dcc3c"
+   },
+   "4.2": {
+    "start": 83,
+    "end": 89,
+    "sha256": "f24fa5bfae9afbb5231416028427d912498193da40c42ad00e2dfe4e067dcc3c"
+   },
+   "4.3": {
+    "start": 176,
+    "end": 182,
+    "sha256": "1b77063ae3b6994e9c7b8da884a5d24c5c0a74fbc19aba26b256d404ebcd536a"
+   },
+   "4.4": {
+    "start": 179,
+    "end": 185,
+    "sha256": "af81c5122a46eca07eb1c0b46d02992f2baa3aa54db24ee137d4d14e8912f4a4"
+   },
+   "4.5": {
+    "start": 177,
+    "end": 183,
+    "sha256": "af81c5122a46eca07eb1c0b46d02992f2baa3aa54db24ee137d4d14e8912f4a4"
+   }
+  },
+  "interpretation": "Use q10 and s50 declarations; retrieve their two distinct descriptions and FILTER declaration kind.",
+  "testPlan": "Use q10 and s50 declarations; retrieve their two distinct descriptions and FILTER declaration kind."
+ },
+ {
+  "id": "R52",
+  "area": "Header",
+  "question": "Can each FORMAT declaration expose ID, Number, Type and Description within its file?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 81,
+    "end": 89,
+    "sha256": "05121b14b187fa8981aaebc22b9567d724f1a2f57e1cf93b3aff353b926c4616"
+   },
+   "4.2": {
+    "start": 90,
+    "end": 98,
+    "sha256": "05121b14b187fa8981aaebc22b9567d724f1a2f57e1cf93b3aff353b926c4616"
+   },
+   "4.3": {
+    "start": 183,
+    "end": 191,
+    "sha256": "9d7e1e5eda98f303736c489da388b58f69113a15d3efc0e236febc574a385faf"
+   },
+   "4.4": {
+    "start": 186,
+    "end": 199,
+    "sha256": "03de7b943136a85a00f3df6d202afb2e5311ace0ea37ba45ac9212e9cedfc595"
+   },
+   "4.5": {
+    "start": 184,
+    "end": 248,
+    "sha256": "a53e7a50b1443ac16c3d546dd2309ffab4d919ba6d17509092df0acccdc5d279"
+   }
+  },
+  "interpretation": "Retrieve GT and DP declaration attributes; distinguish them from an INFO DP declaration.",
+  "testPlan": "Retrieve GT and DP declaration attributes; distinguish them from an INFO DP declaration."
+ },
+ {
+  "id": "R53",
+  "area": "Header",
+  "question": "Can a symbolic ALT declaration expose its ID and Description and be linked to the allele that uses it?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 90,
+    "end": 112,
+    "sha256": "f0c65b4febf00ae263cfa271d3cb8997194f42045d21eb705dcd81a9d9bfa413"
+   },
+   "4.2": {
+    "start": 99,
+    "end": 129,
+    "sha256": "d581cc9f0944f975ad3bbeb47cd8c8304ff3c7c475c02b79562e7a1a6d2bfe3e"
+   },
+   "4.3": {
+    "start": 192,
+    "end": 227,
+    "sha256": "6c3379c2dac4746deebc0d29b87723bc65706522aac75d1efa17c233b15d174e"
+   },
+   "4.4": {
+    "start": 200,
+    "end": 241,
+    "sha256": "eb497aa881a5fcd213995387ba99ffc4459e716cb4fdab919e14ed36013f9deb"
+   },
+   "4.5": {
+    "start": 249,
+    "end": 290,
+    "sha256": "eb497aa881a5fcd213995387ba99ffc4459e716cb4fdab919e14ed36013f9deb"
+   }
+  },
+  "interpretation": "Declare DEL:ME and use <DEL:ME>; retrieve declaration kind, exact ID, description and allele index.",
+  "testPlan": "Declare DEL:ME and use <DEL:ME>; retrieve declaration kind, exact ID, description and allele index."
+ },
+ {
+  "id": "R54",
+  "area": "Alleles",
+  "question": "Can symbolic allele type, subtype and case-sensitive identifier be retained with their version-specific meaning?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 90,
+    "end": 112,
+    "sha256": "f0c65b4febf00ae263cfa271d3cb8997194f42045d21eb705dcd81a9d9bfa413"
+   },
+   "4.2": {
+    "start": 99,
+    "end": 129,
+    "sha256": "d581cc9f0944f975ad3bbeb47cd8c8304ff3c7c475c02b79562e7a1a6d2bfe3e"
+   },
+   "4.3": {
+    "start": 192,
+    "end": 227,
+    "sha256": "6c3379c2dac4746deebc0d29b87723bc65706522aac75d1efa17c233b15d174e"
+   },
+   "4.4": {
+    "start": 200,
+    "end": 241,
+    "sha256": "eb497aa881a5fcd213995387ba99ffc4459e716cb4fdab919e14ed36013f9deb"
+   },
+   "4.5": {
+    "start": 249,
+    "end": 290,
+    "sha256": "eb497aa881a5fcd213995387ba99ffc4459e716cb4fdab919e14ed36013f9deb"
+   }
+  },
+  "interpretation": "Compare DEL, DUP:TANDEM and INS:ME, plus IUPAC symbolic R in 4.3+; do not equate differently cased IDs or apply current CNV meaning to older versions.",
+  "testPlan": "Compare DEL, DUP:TANDEM and INS:ME, plus IUPAC symbolic R in 4.3+; do not equate differently cased IDs or apply current CNV meaning to older versions."
+ },
+ {
+  "id": "R55",
+  "area": "Header",
+  "question": "Can BKPTID values be associated with the file-level breakpoint assembly URL?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 113,
+    "end": 119,
+    "sha256": "75a615a510cd86c74835cec35b844bf84979c276dedf0f87051107b7779ef6c3"
+   },
+   "4.2": {
+    "start": 130,
+    "end": 136,
+    "sha256": "75a615a510cd86c74835cec35b844bf84979c276dedf0f87051107b7779ef6c3"
+   },
+   "4.3": {
+    "start": 228,
+    "end": 235,
+    "sha256": "84cbbb9ac26885bf7e4e463df033dbe956b2831e65587b1a9cfd747cbc0027e9"
+   },
+   "4.4": {
+    "start": 242,
+    "end": 249,
+    "sha256": "84cbbb9ac26885bf7e4e463df033dbe956b2831e65587b1a9cfd747cbc0027e9"
+   },
+   "4.5": {
+    "start": 291,
+    "end": 298,
+    "sha256": "84cbbb9ac26885bf7e4e463df033dbe956b2831e65587b1a9cfd747cbc0027e9"
+   }
+  },
+  "interpretation": "Use two BKPTID values and one assembly URL; retrieve each identity and its assembly source without fetching sequence.",
+  "testPlan": "Use two BKPTID values and one assembly URL; retrieve each identity and its assembly source without fetching sequence."
+ },
+ {
+  "id": "R56",
+  "area": "Header",
+  "question": "Can contig URL and optional descriptive attributes remain associated with the correct contig ID?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 120,
+    "end": 124,
+    "sha256": "9d8a7bc6d93d008fffd3c364ae3368a790ebdc37a6df93e83e7aa898e43e4cdb"
+   },
+   "4.2": {
+    "start": 137,
+    "end": 141,
+    "sha256": "9d8a7bc6d93d008fffd3c364ae3368a790ebdc37a6df93e83e7aa898e43e4cdb"
+   },
+   "4.3": {
+    "start": 236,
+    "end": 268,
+    "sha256": "939079d8ec0579e9f7f9b726b961284c788bfd04a865dc222a448fda8e727220"
+   },
+   "4.4": {
+    "start": 250,
+    "end": 282,
+    "sha256": "62ba21eeb695fb73426636c579cecd51fc64c870119194f0157de32f0ba7c0d3"
+   },
+   "4.5": {
+    "start": 299,
+    "end": 331,
+    "sha256": "62ba21eeb695fb73426636c579cecd51fc64c870119194f0157de32f0ba7c0d3"
+   }
+  },
+  "interpretation": "Use two contigs with distinct URL, md5, assembly and species attributes; retrieve IDs and attribute key/value pairs. Checking the checksum algorithm is outside scope.",
+  "testPlan": "Use two contigs with distinct URL, md5, assembly and species attributes; retrieve IDs and attribute key/value pairs. Checking the checksum algorithm is outside scope."
+ },
+ {
+  "id": "R57",
+  "area": "Header",
+  "question": "Can pedigree child, parents and arbitrary ancestor roles retain identity and direction?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 132,
+    "end": 140,
+    "sha256": "456413b66f32c3b072a369280ac79c292396c6af30c212e0e33f888eff008d5e"
+   },
+   "4.2": {
+    "start": 149,
+    "end": 157,
+    "sha256": "456413b66f32c3b072a369280ac79c292396c6af30c212e0e33f888eff008d5e"
+   },
+   "4.3": {
+    "start": 281,
+    "end": 296,
+    "sha256": "53f697ea668d55a0b7febe97a1e2bc1d6d8148673deb9a26af688cdb707f8063"
+   },
+   "4.4": {
+    "start": 295,
+    "end": 310,
+    "sha256": "53f697ea668d55a0b7febe97a1e2bc1d6d8148673deb9a26af688cdb707f8063"
+   },
+   "4.5": {
+    "start": 344,
+    "end": 359,
+    "sha256": "53f697ea668d55a0b7febe97a1e2bc1d6d8148673deb9a26af688cdb707f8063"
+   }
+  },
+  "interpretation": "Use Mother/Father and an additional ancestor role; retrieve child-to-role-to-ancestor edges, with Child/Name_0 before 4.3 and ID from 4.3.",
+  "testPlan": "Use Mother/Father and an additional ancestor role; retrieve child-to-role-to-ancestor edges, with Child/Name_0 before 4.3 and ID from 4.3."
+ },
+ {
+  "id": "R58",
+  "area": "Header",
+  "question": "Can a pedigree database URL be retrieved as pedigree metadata for its file?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 132,
+    "end": 140,
+    "sha256": "456413b66f32c3b072a369280ac79c292396c6af30c212e0e33f888eff008d5e"
+   },
+   "4.2": {
+    "start": 149,
+    "end": 157,
+    "sha256": "456413b66f32c3b072a369280ac79c292396c6af30c212e0e33f888eff008d5e"
+   },
+   "4.3": {
+    "start": 281,
+    "end": 296,
+    "sha256": "53f697ea668d55a0b7febe97a1e2bc1d6d8148673deb9a26af688cdb707f8063"
+   },
+   "4.4": {
+    "start": 295,
+    "end": 310,
+    "sha256": "53f697ea668d55a0b7febe97a1e2bc1d6d8148673deb9a26af688cdb707f8063"
+   },
+   "4.5": {
+    "start": 344,
+    "end": 359,
+    "sha256": "53f697ea668d55a0b7febe97a1e2bc1d6d8148673deb9a26af688cdb707f8063"
+   }
+  },
+  "interpretation": "Provide ##pedigreeDB=https://example.org/pedigree; retrieve the URL through the pedigree header line, not an unrelated URI.",
+  "testPlan": "Provide ##pedigreeDB=https://example.org/pedigree; retrieve the URL through the pedigree header line, not an unrelated URI."
+ },
+ {
+  "id": "R59",
+  "area": "Header",
+  "question": "Can META allowed values and SAMPLE attributes, descriptions and DOI be associated by key and sample identity?",
+  "versions": [
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.3": {
+    "start": 269,
+    "end": 280,
+    "sha256": "42d449f9fbfe5f4eb254dd6f372c9a42da77b895ea076274b418aa1f0e10dfc6"
+   },
+   "4.4": {
+    "start": 283,
+    "end": 294,
+    "sha256": "42d449f9fbfe5f4eb254dd6f372c9a42da77b895ea076274b418aa1f0e10dfc6"
+   },
+   "4.5": {
+    "start": 332,
+    "end": 343,
+    "sha256": "42d449f9fbfe5f4eb254dd6f372c9a42da77b895ea076274b418aa1f0e10dfc6"
+   }
+  },
+  "interpretation": "Declare a Disease META list and two SAMPLE entries; retrieve allowed values plus each sample Disease, Description and optional DOI.",
+  "testPlan": "Declare a Disease META list and two SAMPLE entries; retrieve allowed values plus each sample Disease, Description and optional DOI."
+ },
+ {
+  "id": "R60",
+  "area": "Genotype",
+  "question": "Can sample FT distinguish passed, unapplied and failed filters and connect failure codes to FILTER declarations?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 193,
+    "end": 222,
+    "sha256": "5c27330f1892b27a6e9a81fdf08e5fb114ef32f56c0040198d18b2c7db1295b6"
+   },
+   "4.2": {
+    "start": 210,
+    "end": 239,
+    "sha256": "5c27330f1892b27a6e9a81fdf08e5fb114ef32f56c0040198d18b2c7db1295b6"
+   },
+   "4.3": {
+    "start": 427,
+    "end": 574,
+    "sha256": "73008bb44a20c9e10b72041c30e7a4b3d1ec1ffa060e95d8a55b6d5d0333544c"
+   },
+   "4.4": {
+    "start": 445,
+    "end": 639,
+    "sha256": "0de45e8b69c3f8d0b517e23a78b1a5deb041666464870eccd8dc9a5dc3c0d69a"
+   },
+   "4.5": {
+    "start": 497,
+    "end": 812,
+    "sha256": "f8d67de6110f37b377642005d1d4ff33c8c4e93a705e0f8e73bc9dac6f7dc6ad"
+   }
+  },
+  "interpretation": "Use three samples with FT=PASS, FT=., and FT=q10;s50; retrieve sample identity, state, ordered codes and descriptions.",
+  "testPlan": "Use three samples with FT=PASS, FT=., and FT=q10;s50; retrieve sample identity, state, ordered codes and descriptions."
+ },
+ {
+  "id": "R61",
+  "area": "Header",
+  "question": "Can fixed and variable Number declarations and VCF data types be retrieved without conflating cardinality with type?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 65,
+    "end": 73,
+    "sha256": "af251d9ab5e7eb23390f28d7ea724853e3239489bfb6aa5f4a3f2de209416fe5"
+   },
+   "4.2": {
+    "start": 65,
+    "end": 82,
+    "sha256": "95538557f5126de049d904956adeb9d02b2ca16d2ef82fe13b2930af52031acb"
+   },
+   "4.3": {
+    "start": 149,
+    "end": 175,
+    "sha256": "1570df46450cb20c7dff8f823f8b0b1c18a403fb4aa48b691ee397e5caff863f"
+   },
+   "4.4": {
+    "start": 152,
+    "end": 178,
+    "sha256": "4739d8cabd359a4d04b83404c01382f126cc0ba100c065981cedad049aba9e72"
+   },
+   "4.5": {
+    "start": 150,
+    "end": 176,
+    "sha256": "4739d8cabd359a4d04b83404c01382f126cc0ba100c065981cedad049aba9e72"
+   }
+  },
+  "interpretation": "Declare Number=0/1/2/. with Flag/Integer/Float/Character/String; retrieve declaration attributes and actual list positions. A/R/G semantics have separate requirements.",
+  "testPlan": "Declare Number=0/1/2/. with Flag/Integer/Float/Character/String; retrieve declaration attributes and actual list positions. A/R/G semantics have separate requirements."
+ },
+ {
+  "id": "R62",
+  "area": "File",
+  "question": "Can a sites-only VCF retain its header and records without inventing genotype columns or samples?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 141,
+    "end": 156,
+    "sha256": "5dd0717bbd186301cf12f500efd0158e9c9b0adc25596df139d65e8514ed53a7"
+   },
+   "4.2": {
+    "start": 158,
+    "end": 173,
+    "sha256": "5dd0717bbd186301cf12f500efd0158e9c9b0adc25596df139d65e8514ed53a7"
+   },
+   "4.3": {
+    "start": 297,
+    "end": 314,
+    "sha256": "0449f4836efe195befd34ea8ab83bbeda87a0ad7f1e1872b192eeb31c03e771a"
+   },
+   "4.4": {
+    "start": 311,
+    "end": 328,
+    "sha256": "0449f4836efe195befd34ea8ab83bbeda87a0ad7f1e1872b192eeb31c03e771a"
+   },
+   "4.5": {
+    "start": 360,
+    "end": 377,
+    "sha256": "f0e6f5770d27d623d587e0dc55f760794eae944c86825bbacda0a5469cb3a6f2"
+   }
+  },
+  "interpretation": "Use an eight-column VCF with no FORMAT; retrieve its record and column-header resource and verify no sample set or sample calls.",
+  "testPlan": "Use an eight-column VCF with no FORMAT; retrieve its record and column-header resource and verify no sample set or sample calls."
+ },
+ {
+  "id": "R63",
+  "area": "Record",
+  "question": "Can QUAL be associated with its ALT-dependent assertion and Phred scale?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 158,
+    "end": 192,
+    "sha256": "9f9298d81006c657bfa848f8bfa7ed200ceee13eeb9d75fda4bdb3c5d211c359"
+   },
+   "4.2": {
+    "start": 175,
+    "end": 209,
+    "sha256": "c0dd057fbeb73d360ade30c50a7f56b9b19f9adf6e456065ee5100afc77b461e"
+   },
+   "4.3": {
+    "start": 321,
+    "end": 426,
+    "sha256": "4ec59301129e7294ac5135f3303c0bb747680289a1bf34049bd9c1672129f2b3"
+   },
+   "4.4": {
+    "start": 335,
+    "end": 444,
+    "sha256": "c9044fe17740cce421055cbb2911a09854e3c02789b528c7f64b6256bd76c9f1"
+   },
+   "4.5": {
+    "start": 384,
+    "end": 496,
+    "sha256": "6ab876c761891fc5a5dd1fab5b4207a4aa99592159f7936987edf5a43011ceb8"
+   }
+  },
+  "interpretation": "Use equal QUAL for ALT=. and ALT=C; retrieve both assertions and the documented interpretation (variant versus no-variant error probability). Numeric retrieval alone is insufficient.",
+  "testPlan": "Use equal QUAL for ALT=. and ALT=C; retrieve both assertions and the documented interpretation (variant versus no-variant error probability). Numeric retrieval alone is insufficient."
+ },
+ {
+  "id": "R64",
+  "area": "Alleles",
+  "question": "Can the spanning-deletion star allele be distinguished from no ALT, symbolic alleles and literal sequence alleles?",
+  "versions": [
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.2": {
+    "start": 175,
+    "end": 209,
+    "sha256": "c0dd057fbeb73d360ade30c50a7f56b9b19f9adf6e456065ee5100afc77b461e"
+   },
+   "4.3": {
+    "start": 321,
+    "end": 426,
+    "sha256": "4ec59301129e7294ac5135f3303c0bb747680289a1bf34049bd9c1672129f2b3"
+   },
+   "4.4": {
+    "start": 335,
+    "end": 444,
+    "sha256": "c9044fe17740cce421055cbb2911a09854e3c02789b528c7f64b6256bd76c9f1"
+   },
+   "4.5": {
+    "start": 384,
+    "end": 496,
+    "sha256": "6ab876c761891fc5a5dd1fab5b4207a4aa99592159f7936987edf5a43011ceb8"
+   }
+  },
+  "interpretation": "Use ALT=* and ALT=. in separate records and retrieve their distinct allele categories; include <*> from 4.3 onward.",
+  "testPlan": "Use ALT=* and ALT=. in separate records and retrieve their distinct allele categories; include <*> from 4.3 onward."
+ },
+ {
+  "id": "R65",
+  "area": "Header",
+  "question": "Can optional INFO Source and Version remain distinct strings with their declared interpretation?",
+  "versions": [
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.2": {
+    "start": 65,
+    "end": 82,
+    "sha256": "95538557f5126de049d904956adeb9d02b2ca16d2ef82fe13b2930af52031acb"
+   },
+   "4.3": {
+    "start": 149,
+    "end": 175,
+    "sha256": "1570df46450cb20c7dff8f823f8b0b1c18a403fb4aa48b691ee397e5caff863f"
+   },
+   "4.4": {
+    "start": 152,
+    "end": 178,
+    "sha256": "4739d8cabd359a4d04b83404c01382f126cc0ba100c065981cedad049aba9e72"
+   },
+   "4.5": {
+    "start": 150,
+    "end": 176,
+    "sha256": "4739d8cabd359a4d04b83404c01382f126cc0ba100c065981cedad049aba9e72"
+   }
+  },
+  "interpretation": "Use Source=\"dbSNP\", Version=\"00138\"; retrieve both strings without numeric coercion. Source comparison is case-insensitive, Version identifies the exact release.",
+  "testPlan": "Use Source=\"dbSNP\", Version=\"00138\"; retrieve both strings without numeric coercion. Source comparison is case-insensitive, Version identifies the exact release."
+ },
+ {
+  "id": "R66",
+  "area": "Record",
+  "question": "Can missing record ID, ALT and INFO be distinguished from present identifiers, alleles and annotations?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 158,
+    "end": 192,
+    "sha256": "9f9298d81006c657bfa848f8bfa7ed200ceee13eeb9d75fda4bdb3c5d211c359"
+   },
+   "4.2": {
+    "start": 175,
+    "end": 209,
+    "sha256": "c0dd057fbeb73d360ade30c50a7f56b9b19f9adf6e456065ee5100afc77b461e"
+   },
+   "4.3": {
+    "start": 321,
+    "end": 426,
+    "sha256": "4ec59301129e7294ac5135f3303c0bb747680289a1bf34049bd9c1672129f2b3"
+   },
+   "4.4": {
+    "start": 335,
+    "end": 444,
+    "sha256": "c9044fe17740cce421055cbb2911a09854e3c02789b528c7f64b6256bd76c9f1"
+   },
+   "4.5": {
+    "start": 384,
+    "end": 496,
+    "sha256": "6ab876c761891fc5a5dd1fab5b4207a4aa99592159f7936987edf5a43011ceb8"
+   }
+  },
+  "interpretation": "Use a monomorphic record with ID/ALT/INFO=.; retrieve explicit missingness and distinguish it from a record containing values.",
+  "testPlan": "Use a monomorphic record with ID/ALT/INFO=.; retrieve explicit missingness and distinguish it from a record containing values."
+ },
+ {
+  "id": "R67",
+  "area": "Record",
+  "question": "Can each reserved INFO key retain its stated meaning, value and record or allele scope?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 158,
+    "end": 192,
+    "sha256": "9f9298d81006c657bfa848f8bfa7ed200ceee13eeb9d75fda4bdb3c5d211c359"
+   },
+   "4.2": {
+    "start": 175,
+    "end": 209,
+    "sha256": "c0dd057fbeb73d360ade30c50a7f56b9b19f9adf6e456065ee5100afc77b461e"
+   },
+   "4.3": {
+    "start": 321,
+    "end": 426,
+    "sha256": "4ec59301129e7294ac5135f3303c0bb747680289a1bf34049bd9c1672129f2b3"
+   },
+   "4.4": {
+    "start": 335,
+    "end": 444,
+    "sha256": "c9044fe17740cce421055cbb2911a09854e3c02789b528c7f64b6256bd76c9f1"
+   },
+   "4.5": {
+    "start": 384,
+    "end": 496,
+    "sha256": "6ab876c761891fc5a5dd1fab5b4207a4aa99592159f7936987edf5a43011ceb8"
+   }
+  },
+  "interpretation": "Test each key listed in source assertions separately: source-defined identity/meaning plus independently chosen value and applicable allele index. Number/Type metadata equality is not a value test.",
+  "testPlan": "Test each key listed in source assertions separately: source-defined identity/meaning plus independently chosen value and applicable allele index. Number/Type metadata equality is not a value test."
+ },
+ {
+  "id": "R68",
+  "area": "Genotype",
+  "question": "Can each reserved FORMAT key retain its stated meaning, value and sample or allele scope?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 193,
+    "end": 222,
+    "sha256": "5c27330f1892b27a6e9a81fdf08e5fb114ef32f56c0040198d18b2c7db1295b6"
+   },
+   "4.2": {
+    "start": 210,
+    "end": 239,
+    "sha256": "5c27330f1892b27a6e9a81fdf08e5fb114ef32f56c0040198d18b2c7db1295b6"
+   },
+   "4.3": {
+    "start": 427,
+    "end": 574,
+    "sha256": "73008bb44a20c9e10b72041c30e7a4b3d1ec1ffa060e95d8a55b6d5d0333544c"
+   },
+   "4.4": {
+    "start": 445,
+    "end": 639,
+    "sha256": "0de45e8b69c3f8d0b517e23a78b1a5deb041666464870eccd8dc9a5dc3c0d69a"
+   },
+   "4.5": {
+    "start": 497,
+    "end": 812,
+    "sha256": "f8d67de6110f37b377642005d1d4ff33c8c4e93a705e0f8e73bc9dac6f7dc6ad"
+   }
+  },
+  "interpretation": "Test each key listed in source assertions separately with two samples; preserve units and distinguish sample DP from record INFO DP. A passing DP example does not cover other keys.",
+  "testPlan": "Test each key listed in source assertions separately with two samples; preserve units and distinguish sample DP from record INFO DP. A passing DP example does not cover other keys."
+ },
+ {
+  "id": "R69",
+  "area": "Genotype",
+  "question": "Can likelihood, posterior-probability and quality scales be distinguished according to the VCF version?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 193,
+    "end": 222,
+    "sha256": "5c27330f1892b27a6e9a81fdf08e5fb114ef32f56c0040198d18b2c7db1295b6"
+   },
+   "4.2": {
+    "start": 210,
+    "end": 239,
+    "sha256": "5c27330f1892b27a6e9a81fdf08e5fb114ef32f56c0040198d18b2c7db1295b6"
+   },
+   "4.3": {
+    "start": 427,
+    "end": 574,
+    "sha256": "73008bb44a20c9e10b72041c30e7a4b3d1ec1ffa060e95d8a55b6d5d0333544c"
+   },
+   "4.4": {
+    "start": 445,
+    "end": 639,
+    "sha256": "0de45e8b69c3f8d0b517e23a78b1a5deb041666464870eccd8dc9a5dc3c0d69a"
+   },
+   "4.5": {
+    "start": 497,
+    "end": 812,
+    "sha256": "f8d67de6110f37b377642005d1d4ff33c8c4e93a705e0f8e73bc9dac6f7dc6ad"
+   }
+  },
+  "interpretation": "Use GL, PL, GP, GQ and HQ; retain log10 versus Phred versus linear probability and vector scope. GP changes to linear in 4.3; PP is Phred in 4.3+. PQ quantitative meaning needs review.",
+  "testPlan": "Use GL, PL, GP, GQ and HQ; retain log10 versus Phred versus linear probability and vector scope. GP changes to linear in 4.3; PP is Phred in 4.3+. PQ quantitative meaning needs review."
+ },
+ {
+  "id": "R70",
+  "area": "Genotype",
+  "question": "Can haploid, diploid and polyploid GT retain ploidy, ordered allele identities and missing calls?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 193,
+    "end": 222,
+    "sha256": "5c27330f1892b27a6e9a81fdf08e5fb114ef32f56c0040198d18b2c7db1295b6"
+   },
+   "4.2": {
+    "start": 210,
+    "end": 239,
+    "sha256": "5c27330f1892b27a6e9a81fdf08e5fb114ef32f56c0040198d18b2c7db1295b6"
+   },
+   "4.3": {
+    "start": 427,
+    "end": 574,
+    "sha256": "73008bb44a20c9e10b72041c30e7a4b3d1ec1ffa060e95d8a55b6d5d0333544c"
+   },
+   "4.4": {
+    "start": 445,
+    "end": 639,
+    "sha256": "0de45e8b69c3f8d0b517e23a78b1a5deb041666464870eccd8dc9a5dc3c0d69a"
+   },
+   "4.5": {
+    "start": 497,
+    "end": 812,
+    "sha256": "f8d67de6110f37b377642005d1d4ff33c8c4e93a705e0f8e73bc9dac6f7dc6ad"
+   }
+  },
+  "interpretation": "Use GT=1, 0/1 and 0/./2; retrieve one, two and three allele slots with their REF/ALT or missing associations.",
+  "testPlan": "Use GT=1, 0/1 and 0/./2; retrieve one, two and three allele slots with their REF/ALT or missing associations."
+ },
+ {
+  "id": "R71",
+  "area": "Structural variant",
+  "question": "Can SVTYPE and its deprecation be interpreted in the appropriate VCF version?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 233,
+    "end": 285,
+    "sha256": "4060b79daef36f2ab76548d4920ce62bba34e736ac7af40f8aa85629226288ed"
+   },
+   "4.2": {
+    "start": 250,
+    "end": 302,
+    "sha256": "4060b79daef36f2ab76548d4920ce62bba34e736ac7af40f8aa85629226288ed"
+   },
+   "4.3": {
+    "start": 601,
+    "end": 671,
+    "sha256": "dce79637831bbc44bbda6e185a2714170d1e7940af893593ab806fe1e28141a9"
+   },
+   "4.4": {
+    "start": 666,
+    "end": 980,
+    "sha256": "e0cb540bc84d17012c45963f6dc7be9bfaf879b74c4f1821503f7ffc57d161e5"
+   },
+   "4.5": {
+    "start": 841,
+    "end": 1141,
+    "sha256": "0b3f8d838a20f7a12ed43cfdef98520e048ef66b614ebf923cca1f64134cc6a8"
+   }
+  },
+  "interpretation": "Use DEL/INS/DUP/INV/CNV/BND values in older versions and symbolic ALT in 4.4+; preserve the stated type without requiring a deprecated tag.",
+  "testPlan": "Use DEL/INS/DUP/INV/CNV/BND values in older versions and symbolic ALT in 4.4+; preserve the stated type without requiring a deprecated tag."
+ },
+ {
+  "id": "R72",
+  "area": "Structural variant",
+  "question": "Can SVLEN and END retain their version-specific length, sign, interval and fallback semantics?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 233,
+    "end": 285,
+    "sha256": "4060b79daef36f2ab76548d4920ce62bba34e736ac7af40f8aa85629226288ed"
+   },
+   "4.2": {
+    "start": 250,
+    "end": 302,
+    "sha256": "4060b79daef36f2ab76548d4920ce62bba34e736ac7af40f8aa85629226288ed"
+   },
+   "4.3": {
+    "start": 601,
+    "end": 671,
+    "sha256": "dce79637831bbc44bbda6e185a2714170d1e7940af893593ab806fe1e28141a9"
+   },
+   "4.4": {
+    "start": 666,
+    "end": 980,
+    "sha256": "e0cb540bc84d17012c45963f6dc7be9bfaf879b74c4f1821503f7ffc57d161e5"
+   },
+   "4.5": {
+    "start": 841,
+    "end": 1141,
+    "sha256": "0b3f8d838a20f7a12ed43cfdef98520e048ef66b614ebf923cca1f64134cc6a8"
+   }
+  },
+  "interpretation": "Contrast negative deletion SVLEN before 4.4 with absolute symbolic length from 4.4; distinguish INS length from reference span, infer missing END/SVLEN where prescribed, and test 4.5 maximum END over REF/SV/LEN.",
+  "testPlan": "Contrast negative deletion SVLEN before 4.4 with absolute symbolic length from 4.4; distinguish INS length from reference span, infer missing END/SVLEN where prescribed, and test 4.5 maximum END over REF/SV/LEN."
+ },
+ {
+  "id": "R73",
+  "area": "Structural variant",
+  "question": "Can MEINFO and METRANS components retain their tuple roles and applicable ALT allele?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 233,
+    "end": 285,
+    "sha256": "4060b79daef36f2ab76548d4920ce62bba34e736ac7af40f8aa85629226288ed"
+   },
+   "4.2": {
+    "start": 250,
+    "end": 302,
+    "sha256": "4060b79daef36f2ab76548d4920ce62bba34e736ac7af40f8aa85629226288ed"
+   },
+   "4.3": {
+    "start": 601,
+    "end": 671,
+    "sha256": "dce79637831bbc44bbda6e185a2714170d1e7940af893593ab806fe1e28141a9"
+   },
+   "4.4": {
+    "start": 666,
+    "end": 980,
+    "sha256": "e0cb540bc84d17012c45963f6dc7be9bfaf879b74c4f1821503f7ffc57d161e5"
+   },
+   "4.5": {
+    "start": 841,
+    "end": 1141,
+    "sha256": "0b3f8d838a20f7a12ed43cfdef98520e048ef66b614ebf923cca1f64134cc6a8"
+   }
+  },
+  "interpretation": "Retrieve NAME or CHR, START, END and POLARITY from each quadruplet; use two ALT alleles in 4.4+ and preserve older declared cardinality.",
+  "testPlan": "Retrieve NAME or CHR, START, END and POLARITY from each quadruplet; use two ALT alleles in 4.4+ and preserve older declared cardinality."
+ },
+ {
+  "id": "R74",
+  "area": "Structural variant",
+  "question": "Can external variant identifiers DGVID, DBVARID and DBRIPID retain database identity and version-specific allele scope?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 233,
+    "end": 285,
+    "sha256": "4060b79daef36f2ab76548d4920ce62bba34e736ac7af40f8aa85629226288ed"
+   },
+   "4.2": {
+    "start": 250,
+    "end": 302,
+    "sha256": "4060b79daef36f2ab76548d4920ce62bba34e736ac7af40f8aa85629226288ed"
+   },
+   "4.3": {
+    "start": 601,
+    "end": 671,
+    "sha256": "dce79637831bbc44bbda6e185a2714170d1e7940af893593ab806fe1e28141a9"
+   },
+   "4.4": {
+    "start": 666,
+    "end": 980,
+    "sha256": "e0cb540bc84d17012c45963f6dc7be9bfaf879b74c4f1821503f7ffc57d161e5"
+   },
+   "4.5": {
+    "start": 841,
+    "end": 1141,
+    "sha256": "0b3f8d838a20f7a12ed43cfdef98520e048ef66b614ebf923cca1f64134cc6a8"
+   }
+  },
+  "interpretation": "Use distinct database IDs, and two ALT-specific values in 4.4+; retrieve the database/key and associated allele without fetching records.",
+  "testPlan": "Use distinct database IDs, and two ALT-specific values in 4.4+; retrieve the database/key and associated allele without fetching records."
+ },
+ {
+  "id": "R75",
+  "area": "Structural variant",
+  "question": "Can SVCLAIM distinguish abundance, adjacency and joint claims, including allele-specific defaults?",
+  "versions": [
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.4": {
+    "start": 666,
+    "end": 980,
+    "sha256": "e0cb540bc84d17012c45963f6dc7be9bfaf879b74c4f1821503f7ffc57d161e5"
+   },
+   "4.5": {
+    "start": 841,
+    "end": 1141,
+    "sha256": "0b3f8d838a20f7a12ed43cfdef98520e048ef66b614ebf923cca1f64134cc6a8"
+   }
+  },
+  "interpretation": "Use DEL/DUP with D/J/DJ, CNV with missing claim -> D, INS/INV/BND with missing claim -> J, and non-SV missing; do not infer abundance from adjacency alone.",
+  "testPlan": "Use DEL/DUP with D/J/DJ, CNV with missing claim -> D, INS/INV/BND with missing claim -> J, and non-SV missing; do not infer abundance from adjacency alone."
+ },
+ {
+  "id": "R76",
+  "area": "Structural variant",
+  "question": "Can EVENT and EVENTTYPE group and classify related ALT alleles across records?",
+  "versions": [
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.4": {
+    "start": 666,
+    "end": 980,
+    "sha256": "e0cb540bc84d17012c45963f6dc7be9bfaf879b74c4f1821503f7ffc57d161e5"
+   },
+   "4.5": {
+    "start": 841,
+    "end": 1141,
+    "sha256": "0b3f8d838a20f7a12ed43cfdef98520e048ef66b614ebf923cca1f64134cc6a8"
+   }
+  },
+  "interpretation": "Use two shared-event records and a separate event; retrieve EVENTTYPE including an implementation-defined value and preserve per-allele scope.",
+  "testPlan": "Use two shared-event records and a separate event; retrieve EVENTTYPE including an implementation-defined value and preserve per-allele scope."
+ },
+ {
+  "id": "R77",
+  "area": "Genotype",
+  "question": "Can copy-number likelihoods, posterior probabilities and qualities retain copy-number index and numerical scale?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 286,
+    "end": 298,
+    "sha256": "ec4a3c22b4472f325554dc4af89da4104dc0bbcc57f58b4903ac81a659c48958"
+   },
+   "4.2": {
+    "start": 303,
+    "end": 315,
+    "sha256": "ec4a3c22b4472f325554dc4af89da4104dc0bbcc57f58b4903ac81a659c48958"
+   },
+   "4.3": {
+    "start": 672,
+    "end": 691,
+    "sha256": "fea4b9d6badd41e3fa3ee8e080034a069842140d8e7421978bf9cf7b982e5c2a"
+   },
+   "4.4": {
+    "start": 981,
+    "end": 1002,
+    "sha256": "d7ef97f5893ab6f5857925e24d06b1425f471d6f9cc7d9be5227289e48bbe3f4"
+   },
+   "4.5": {
+    "start": 1142,
+    "end": 1163,
+    "sha256": "d7ef97f5893ab6f5857925e24d06b1425f471d6f9cc7d9be5227289e48bbe3f4"
+   }
+  },
+  "interpretation": "Retrieve CNL values indexed from copy number zero and distinguish CNQ Phred quality; include CNP linear probabilities from 4.3. Resolved 2026-09-10: the prose indexing governs, so the i-th 0-based value is the log10 likelihood (CNL) or posterior (CNP) for copy number i, and list length is taken from the values present. The declared Number=G contradicts that indexing and is recorded as a specification defect; reserved-declaration agreement still compares Number=G literally.",
+  "testPlan": "Retrieve CNL values indexed from copy number zero and distinguish CNQ Phred quality; include CNP linear probabilities from 4.3. Review the conflict between Number=G and copy-number indexing."
+ },
+ {
+  "id": "R78",
+  "area": "Genotype",
+  "question": "Can HAP, AHAP and NQ retain haplotype identity, ancestry and mutation-quality scope along a pedigree?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 860,
+    "end": 910,
+    "sha256": "704fc099717ef8b078de72b062d7c2d5460914e1cfe211ba075d77bf7beb8656"
+   },
+   "4.2": {
+    "start": 877,
+    "end": 927,
+    "sha256": "704fc099717ef8b078de72b062d7c2d5460914e1cfe211ba075d77bf7beb8656"
+   },
+   "4.3": {
+    "start": 1307,
+    "end": 1375,
+    "sha256": "f10db00556f8168677d533e5ce8cfb4ee18a493ec0876f584c5635205dcf274c"
+   },
+   "4.4": {
+    "start": 1616,
+    "end": 1685,
+    "sha256": "bd5bec326437eb4c2c0a7d8febce1f0f0891bc7595a3b701aa764af4efe2461d"
+   },
+   "4.5": {
+    "start": 1776,
+    "end": 1845,
+    "sha256": "bd5bec326437eb4c2c0a7d8febce1f0f0891bc7595a3b701aa764af4efe2461d"
+   }
+  },
+  "interpretation": "Use a parent haplotype and two derived copies; preserve original versus novel identifiers, ancestor links and per-sample NQ without inferring biological lineage from numbers alone.",
+  "testPlan": "Use a parent haplotype and two derived copies; preserve original versus novel identifiers, ancestor links and per-sample NQ without inferring biological lineage from numbers alone."
+ },
+ {
+  "id": "R79",
+  "area": "Structural variant",
+  "question": "Can legacy adjacency depth, copy number and confidence fields retain segment versus adjacency scope?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 233,
+    "end": 285,
+    "sha256": "4060b79daef36f2ab76548d4920ce62bba34e736ac7af40f8aa85629226288ed"
+   },
+   "4.2": {
+    "start": 250,
+    "end": 302,
+    "sha256": "4060b79daef36f2ab76548d4920ce62bba34e736ac7af40f8aa85629226288ed"
+   },
+   "4.3": {
+    "start": 601,
+    "end": 671,
+    "sha256": "dce79637831bbc44bbda6e185a2714170d1e7940af893593ab806fe1e28141a9"
+   }
+  },
+  "interpretation": "Use DPADJ, CNADJ and CICNADJ with multiple adjacencies in 4.1-4.3; the fields are removed from the 4.4 reserved definitions. Reviewed 2026-09-10: a test is requested, using the worked examples at 4.1:836-839 and 4.1:852-855 (and their 4.2/4.3 equivalents). Recorded specification defect: these three keys are declared as ##INFO lines yet used as FORMAT keys in those same examples, so the FORMAT usage the examples show is what should be assessed.",
+  "testPlan": "Use DPADJ, CNADJ and CICNADJ with multiple adjacencies in 4.1–4.3; fields are removed from 4.4 reserved definitions."
+ },
+ {
+  "id": "R80",
+  "area": "Genotype",
+  "question": "Can legacy GLE preserve genotype-to-likelihood associations across heterogeneous ploidies?",
+  "versions": [
+   "4.1",
+   "4.2"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 193,
+    "end": 222,
+    "sha256": "5c27330f1892b27a6e9a81fdf08e5fb114ef32f56c0040198d18b2c7db1295b6"
+   },
+   "4.2": {
+    "start": 210,
+    "end": 239,
+    "sha256": "5c27330f1892b27a6e9a81fdf08e5fb114ef32f56c0040198d18b2c7db1295b6"
+   }
+  },
+  "interpretation": "Reviewed 2026-09-10, accepted unassessed limitation. The 4.1/4.2 GLE example value uses ':' internally, which is the sample sub-field separator, and no escaping rule or complete sample-column example exists; VCF 4.3 removes GLE as unused and ill-defined. No valid fixture or expected-answer oracle can be derived from the specification, so this requirement stays unassessed by decision rather than by omission. GLE remains representable as an opaque declared String value; nothing here shows vocabulary incapability.",
+  "testPlan": "No test requested. Any future fixture would have to invent a serialization the specification does not define; record it as reviewer-authored and outside the source-derived oracle if that is ever done."
+ },
+ {
+  "id": "R81",
+  "area": "Genotype",
+  "question": "Can PS identify chromosome- and sample-scoped phase sets, including implicit sets and ignored PS for unphased GT?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 193,
+    "end": 222,
+    "sha256": "5c27330f1892b27a6e9a81fdf08e5fb114ef32f56c0040198d18b2c7db1295b6"
+   },
+   "4.2": {
+    "start": 210,
+    "end": 239,
+    "sha256": "5c27330f1892b27a6e9a81fdf08e5fb114ef32f56c0040198d18b2c7db1295b6"
+   },
+   "4.3": {
+    "start": 427,
+    "end": 574,
+    "sha256": "73008bb44a20c9e10b72041c30e7a4b3d1ec1ffa060e95d8a55b6d5d0333544c"
+   },
+   "4.4": {
+    "start": 445,
+    "end": 639,
+    "sha256": "0de45e8b69c3f8d0b517e23a78b1a5deb041666464870eccd8dc9a5dc3c0d69a"
+   },
+   "4.5": {
+    "start": 497,
+    "end": 812,
+    "sha256": "f8d67de6110f37b377642005d1d4ff33c8c4e93a705e0f8e73bc9dac6f7dc6ad"
+   }
+  },
+  "interpretation": "Use repeated PS across two chromosomes and two samples, phased calls without PS, and unphased GT with PS; distinguish membership and ignored values.",
+  "testPlan": "Use repeated PS across two chromosomes and two samples, phased calls without PS, and unphased GT with PS; distinguish membership and ignored values."
+ },
+ {
+  "id": "R82",
+  "area": "Genotype",
+  "question": "Can PSL, PSO and PSQ retain per-allele phase identity, derivative traversal order and quality?",
+  "versions": [
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.4": {
+    "start": 445,
+    "end": 639,
+    "sha256": "0de45e8b69c3f8d0b517e23a78b1a5deb041666464870eccd8dc9a5dc3c0d69a"
+   },
+   "4.5": {
+    "start": 497,
+    "end": 812,
+    "sha256": "f8d67de6110f37b377642005d1d4ff33c8c4e93a705e0f8e73bc9dac6f7dc6ad"
+   }
+  },
+  "interpretation": "Use phase names across chromosomes and repeated regions with PSO ordering and missing PSQ; verify matching mate phase/ordinal and separation from PS. Reviewed 2026-09-10: Number=P dates from VCF 4.4, not 4.5, despite the 4.5 changelog, and the 4.4 erratum's 'Type=P' means 'Number=P'. The PSO example is internally consistent and supplies the oracle - PSL/PSO pairs (chr1*10*3,3), (chr1*10*1,4), (chr1*10*3,1), (chr1*10*1,2), (chr1*10*3,5) giving one total traversal order 1..5 of the derivative chromosome. A test is requested on that basis; the PSL table is excluded as an oracle.",
+  "testPlan": "Use phase names across chromosomes and repeated regions with PSO ordering and missing PSQ; verify matching mate phase/ordinal and separation from PS."
+ },
+ {
+  "id": "R83",
+  "area": "Genotype",
+  "question": "Can local-allele value vectors be related to their global equivalents, including an empty LAA set?",
+  "versions": [
+   "4.5"
+  ],
+  "anchors": {
+   "4.5": {
+    "start": 497,
+    "end": 812,
+    "sha256": "f8d67de6110f37b377642005d1d4ff33c8c4e93a705e0f8e73bc9dac6f7dc6ad"
+   }
+  },
+  "interpretation": "Use LAA=2,4 with LAD/LPL, REF-only missing LAA with populated local fields, and corresponding global vectors; compare value/allele associations and missingness.",
+  "testPlan": "Use LAA=2,4 with LAD/LPL, REF-only missing LAA with populated local fields, and corresponding global vectors; compare value/allele associations and missingness."
+ },
+ {
+  "id": "R84",
+  "area": "Genotype",
+  "question": "Can Number=M values retain GT-dependent allele aggregation, base order and strand including missing and symbolic alleles?",
+  "versions": [
+   "4.5"
+  ],
+  "anchors": {
+   "4.5": {
+    "start": 184,
+    "end": 248,
+    "sha256": "a53e7a50b1443ac16c3d546dd2309ffab4d919ba6d17509092df0acccdc5d279"
+   }
+  },
+  "interpretation": "Use phased duplicate and unphased repeated alleles, U/T equivalence, N modifications on both strands, and missing/symbolic alleles; independently enumerate source-defined value slots.",
+  "testPlan": "Use phased duplicate and unphased repeated alleles, U/T equivalence, N modifications on both strands, and missing/symbolic alleles; independently enumerate source-defined value slots."
+ },
+ {
+  "id": "R85",
+  "area": "Genotype",
+  "question": "Can modification aliases and numeric ChEBI keys retain their correspondence and distinct fraction/depth meanings?",
+  "versions": [
+   "4.5"
+  ],
+  "anchors": {
+   "4.5": {
+    "start": 497,
+    "end": 812,
+    "sha256": "f8d67de6110f37b377642005d1d4ff33c8c4e93a705e0f8e73bc9dac6f7dc6ad"
+   }
+  },
+  "interpretation": "Compare M5mC/M27551C, DPM and ADM keys, including a numerically valid unrecognised identifier. Resolved 2026-09-10: the reserved genotype-key table governs the alias spelling, so the keys are MXaoN, DPMXaoN and ADMXaoN with a capital X; the four prose occurrences of MxaoN are typos, and FORMAT keys are case-sensitive. The full reserved patterns are M[0-9]+[ACGTUN], DPM[0-9]+[ACGTUN] and ADM[0-9]+[ACGTUN]; the 4.5 changelog's 'M[0-9]+' omits the required trailing base letter.",
+  "testPlan": "Compare M5mC/M27551C, DPM and ADM keys, including a numerically valid unrecognised identifier; resolve the MXaoN/MxaoN spelling conflict before choosing that oracle."
+ },
+ {
+  "id": "R86",
+  "area": "Genotype",
+  "question": "Can base-modification information on a reference block apply to all relevant bases of its sample interval?",
+  "versions": [
+   "4.5"
+  ],
+  "anchors": {
+   "4.5": {
+    "start": 1846,
+    "end": 1880,
+    "sha256": "6c2293ff6f25734a1dd89106f58050cf336699bd114feb4f5132086235699165"
+   }
+  },
+  "interpretation": "Use a LEN block spanning multiple relevant bases; distinguish a block-wide modification estimate from a measurement attached only to POS.",
+  "testPlan": "Use a LEN block spanning multiple relevant bases; distinguish a block-wide modification estimate from a measurement attached only to POS."
+ },
+ {
+  "id": "R87",
+  "area": "Structural variant",
+  "question": "Can tandem-repeat confidence intervals retain relative bounds and missing-bound defaults?",
+  "versions": [
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.4": {
+    "start": 666,
+    "end": 980,
+    "sha256": "e0cb540bc84d17012c45963f6dc7be9bfaf879b74c4f1821503f7ffc57d161e5"
+   },
+   "4.5": {
+    "start": 841,
+    "end": 1141,
+    "sha256": "0b3f8d838a20f7a12ed43cfdef98520e048ef66b614ebf923cca1f64134cc6a8"
+   }
+  },
+  "interpretation": "Use RUC=65 with CIRUC=-15,. -> lower 50 and unbounded upper; test missing lower -> 0 offset and associate each pair with its repeat sequence.",
+  "testPlan": "Use RUC=65 with CIRUC=-15,. -> lower 50 and unbounded upper; test missing lower -> 0 offset and associate each pair with its repeat sequence."
+ },
+ {
+  "id": "R88",
+  "area": "Structural variant",
+  "question": "Can RUB preserve variable individual-repeat lengths with the RUC-derived nested grouping and RUL fallback?",
+  "versions": [
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.4": {
+    "start": 666,
+    "end": 980,
+    "sha256": "e0cb540bc84d17012c45963f6dc7be9bfaf879b74c4f1821503f7ffc57d161e5"
+   },
+   "4.5": {
+    "start": 841,
+    "end": 1141,
+    "sha256": "0b3f8d838a20f7a12ed43cfdef98520e048ef66b614ebf923cca1f64134cc6a8"
+   }
+  },
+  "interpretation": "Use two repeat sequences with RUC=2,3 and five RUB values; retrieve individual lengths grouped by allele/sequence, then test omitted RUB falling back to RUL.",
+  "testPlan": "Use two repeat sequences with RUC=2,3 and five RUB values; retrieve individual lengths grouped by allele/sequence, then test omitted RUB falling back to RUL."
+ },
+ {
+  "id": "R89",
+  "area": "Structural variant",
+  "question": "Can repeat summaries retain their reference interval, allelic length ratio and relation to phased sequence records?",
+  "versions": [
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.4": {
+    "start": 1748,
+    "end": 1879,
+    "sha256": "13b246ac893a92c81a808e1937e6ecb05e2dd1c220a150760c490adc25659933"
+   },
+   "4.5": {
+    "start": 1917,
+    "end": 2047,
+    "sha256": "38be1f923ebe643e903926ab3fd8ee2cb1daae057c5d6a683565b7c601838af4"
+   }
+  },
+  "interpretation": "Use CNV:TR plus phased sequence alleles; retrieve reference SVLEN, total and allelic CN length ratios, and the relation without asserting exact sequence equivalence.",
+  "testPlan": "Use CNV:TR plus phased sequence alleles; retrieve reference SVLEN, total and allelic CN length ratios, and the relation without asserting exact sequence equivalence."
+ },
+ {
+  "id": "R90",
+  "area": "Alleles",
+  "question": "Can literal REF/ALT haplotype replacement be interpreted for SNPs, insertions, deletions and mixed records without inventing an alignment?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 223,
+    "end": 232,
+    "sha256": "5a8b150c2f711ade5029ff43001ad3d5d9e06d99291612edae8bbc7421624b6c"
+   },
+   "4.2": {
+    "start": 240,
+    "end": 249,
+    "sha256": "5a8b150c2f711ade5029ff43001ad3d5d9e06d99291612edae8bbc7421624b6c"
+   },
+   "4.3": {
+    "start": 575,
+    "end": 585,
+    "sha256": "25125906f732ee13cd402d00f20de84c4e7b5404e1c2ec17f39f4f6cb12c264d"
+   },
+   "4.4": {
+    "start": 640,
+    "end": 650,
+    "sha256": "25125906f732ee13cd402d00f20de84c4e7b5404e1c2ec17f39f4f6cb12c264d"
+   },
+   "4.5": {
+    "start": 813,
+    "end": 823,
+    "sha256": "25125906f732ee13cd402d00f20de84c4e7b5404e1c2ec17f39f4f6cb12c264d"
+   }
+  },
+  "interpretation": "Use source small-variant examples with explicit flanking reference; derive alternate sequence by replacing REF at POS, preserving multiple ALT identities. Do not infer a unique alignment discarded by VCF.",
+  "testPlan": "Use source small-variant examples with explicit flanking reference; derive alternate sequence by replacing REF at POS, preserving multiple ALT identities. Do not infer a unique alignment discarded by VCF."
+ },
+ {
+  "id": "R91",
+  "area": "Structural variant",
+  "question": "Can IMPRECISE, CIPOS and CIEND retain per-allele precision and specified missing-field defaults?",
+  "versions": [
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.4": {
+    "start": 666,
+    "end": 980,
+    "sha256": "e0cb540bc84d17012c45963f6dc7be9bfaf879b74c4f1821503f7ffc57d161e5"
+   },
+   "4.5": {
+    "start": 841,
+    "end": 1141,
+    "sha256": "0b3f8d838a20f7a12ed43cfdef98520e048ef66b614ebf923cca1f64134cc6a8"
+   }
+  },
+  "interpretation": "Use an imprecise record with a precise ALT CIPOS=0,0; omission of IMPRECISE/CIPOS -> exact, and missing CIEND -> CIPOS, with nonsymbolic allele missing placeholders.",
+  "testPlan": "Use an imprecise record with a precise ALT CIPOS=0,0; omission of IMPRECISE/CIPOS -> exact, and missing CIEND -> CIPOS, with nonsymbolic allele missing placeholders."
+ },
+ {
+  "id": "R92",
+  "area": "Structural variant",
+  "question": "Can complete, partial and circular assembly-contig insertions retain boundaries, direction and adjacency identity?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 586,
+    "end": 638,
+    "sha256": "b6b8cccb3abe06c60b924df6b6c10d6d7c3c52de5dbfbc60af2fb3866031bb76"
+   },
+   "4.2": {
+    "start": 603,
+    "end": 655,
+    "sha256": "b6b8cccb3abe06c60b924df6b6c10d6d7c3c52de5dbfbc60af2fb3866031bb76"
+   },
+   "4.3": {
+    "start": 1000,
+    "end": 1052,
+    "sha256": "891a97f8bb55579caaf12a9e2d3c17b96cd8b3c805d7597e4df314f0137000c6"
+   },
+   "4.4": {
+    "start": 1308,
+    "end": 1360,
+    "sha256": "45c2eaa02d57d20ddef822d15bd1e06c3877904f5ee3a05ae4d47560d17cfc26"
+   },
+   "4.5": {
+    "start": 1468,
+    "end": 1520,
+    "sha256": "45c2eaa02d57d20ddef822d15bd1e06c3877904f5ee3a05ae4d47560d17cfc26"
+   }
+  },
+  "interpretation": "Use contig endpoints 1/329, subset 7/214 and a circular 229..329..1..45 insertion. Resolved 2026-09-10: the MATEID values printed in the assembly-contig insertion tables are not usable as expected answers - two are self-references, one names the undefined bnd_C, and the rest name a record that is not the mate of the same adjacency, because the contig-side breakends have no records. Register expected links from the ALT bracket coordinates and EVENT grouping instead, and take the complete-insertion shorthand as '13 123456 INS0 C C<ctg1>' rather than the printed row.",
+  "testPlan": "Use contig endpoints 1/329, subset 7/214 and a circular 229..329..1..45 insertion; reconcile the inconsistent example mate IDs before registering expected graph links."
+ },
+ {
+  "id": "R93",
+  "area": "Structural variant",
+  "question": "Can a symbolic inversion and its constituent breakends retain the same affected interval and event relationships?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3",
+   "4.4",
+   "4.5"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 719,
+    "end": 751,
+    "sha256": "0470175a73a9ca0ffa3c280e7855d85237750a18f32315466504755b677fdf94"
+   },
+   "4.2": {
+    "start": 736,
+    "end": 768,
+    "sha256": "0470175a73a9ca0ffa3c280e7855d85237750a18f32315466504755b677fdf94"
+   },
+   "4.3": {
+    "start": 1142,
+    "end": 1178,
+    "sha256": "5d6d0df66e5f6c37d488612ef4bc26e37ed524b49bd7f9e60a77ff7a1c56e256"
+   },
+   "4.4": {
+    "start": 1451,
+    "end": 1487,
+    "sha256": "1aeebf57eb888510d690483358791766a88dcc6cf60624b77cd0ed5ccc28f46a"
+   },
+   "4.5": {
+    "start": 1611,
+    "end": 1647,
+    "sha256": "ae38c2e6c99f3891c1dfb2ae31d502a94bd10da243d8f3cb79a5ac6746230fff"
+   }
+  },
+  "interpretation": "Compare a symbolic INV with four breakend records using source interval conventions; query orientation and shared event, without assuming equal record counts.",
+  "testPlan": "Compare a symbolic INV with four breakend records using source interval conventions; query orientation and shared event, without assuming equal record counts."
+ },
+ {
+  "id": "R94",
+  "area": "Genotype",
+  "question": "Can legacy bundle descriptions distinguish definite from ambiguous haplotype-specific adjacencies and their measurements?",
+  "versions": [
+   "4.1",
+   "4.2",
+   "4.3"
+  ],
+  "anchors": {
+   "4.1": {
+    "start": 911,
+    "end": 954,
+    "sha256": "34c111c410c76fd0e025103f51fca3143de613c87a541aa5eba3cb8ee94f6798"
+   },
+   "4.2": {
+    "start": 928,
+    "end": 971,
+    "sha256": "34c111c410c76fd0e025103f51fca3143de613c87a541aa5eba3cb8ee94f6798"
+   },
+   "4.3": {
+    "start": 1376,
+    "end": 1427,
+    "sha256": "bdb1b34c6edd61989a2e0e8ca5b455a1c99208e5c0313dbeda4edd0d3bf46be4"
+   }
+  },
+  "interpretation": "Reviewed 2026-09-10, accepted unassessed limitation. BDP and BCN occur once each in 4.1-4.3, in prose only: no declaration, Number, Type or complete VCF record exists, the bundle table's haplotype cells have no VCF grammar, and 4.4 deprecates bundles in favour of PSL-based phasing. No fixture or oracle is derivable, so this requirement stays unassessed by decision. The quantities themselves are declared elsewhere as DP, CN, DPADJ, CNADJ, HQ and HAP/AHAP and are covered by R79 and R78.",
+  "testPlan": "No test requested for BDP/BCN. Test the declared equivalents instead under R79 (DPADJ/CNADJ/CICNADJ) and R78 (HAP/AHAP/NQ)."
+ }
+]

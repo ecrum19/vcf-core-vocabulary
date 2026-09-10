@@ -1,0 +1,9 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+# Source-audit case: expected answers are authored from the VCF fixture, not execution.
+SELECT ?sample ?key ?value WHERE {
+ ?file vcfc:hasHeader/vcfc:hasHeaderLine ?d .
+ ?d a vcfc:SampleHeaderLine ; vcfc:hasAttribute ?id, ?a .
+ ?id vcfc:attributeKey "ID" ; vcfc:attributeValue ?sample .
+ ?a vcfc:attributeKey ?key ; vcfc:attributeValue ?value .
+ FILTER(?key IN ("Disease", "Description", "DOI"))
+}

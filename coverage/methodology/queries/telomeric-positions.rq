@@ -1,0 +1,9 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+# VCF 4.5 fixed field 2: telomeres are indicated by POS 0 or N+1 for a contig of
+# length N. Both boundaries are reachable numerically, without a dedicated flag.
+SELECT ?pos ?boundary WHERE {
+  ?record vcfc:pos ?pos ; vcfc:chromosome ?contig .
+  ?contig vcfc:contigLength ?length .
+  BIND(IF(?pos = 0, "start", IF(?pos = ?length + 1, "end", "")) AS ?boundary)
+  FILTER(?boundary != "")
+} ORDER BY ?pos

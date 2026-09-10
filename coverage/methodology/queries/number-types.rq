@@ -1,0 +1,6 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+# Source-audit case: expected answers are authored from the VCF fixture, not execution.
+SELECT ?id ?number ?type WHERE {
+ ?d a vcfc:INFOHeaderLine ; vcfc:fieldId ?id ; vcfc:fieldNumber ?number ; vcfc:fieldType ?type .
+ FILTER(?id IN ("FLAG", "PAIR", "FRACTION", "BASE", "TEXT"))
+}

@@ -1,0 +1,14 @@
+##fileformat=VCFv4.3
+##source=assessment-fixture
+##reference=https://example.org/reference.fa
+##contig=<ID=chr1,length=100>
+##FILTER=<ID=q10,Description="Quality below ten">
+##FILTER=<ID=s50,Description="Sample threshold">
+##INFO=<ID=AF,Number=A,Type=Float,Description="Allele frequency",Source="manual",Version="1">
+##INFO=<ID=DB,Number=0,Type=Flag,Description="dbSNP membership",Source="manual",Version="1">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Read depth">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	S1	S2
+chr1	10	idA;idB	A	C,G	60	PASS	AF=0.25,0.5;DB	GT:DP	0/1:12	2|.:.
+chr1	20	.	G	.	.	.	.	GT:DP	./.:.	0
+chr1	30	.	T	C	5	q10;s50	AF=.	GT:DP	0/0:5	0/1:6

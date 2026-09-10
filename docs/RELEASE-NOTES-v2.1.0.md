@@ -34,7 +34,7 @@ continue to carry their **VCF specification** versions.
 - [Boundary examples](../examples/vcf-versions/vcf-4.5/example-vcf45-boundaries.ttl)
   and queries demonstrate assembly contigs, padding, missingness, telomeric
   positions, percent encoding and omitted trailing FORMAT fields.
-- A separate [source-byte checker](../coverage/curated/check_serialization.py)
+- A separate [source-byte checker](../coverage/vcf45-inventory/check_serialization.py)
   assesses encoding, BOM, control characters and line termination. Paired LF
   and CRLF fixtures have the same logical content. Byte checks do not contribute
   to the logical-model coverage denominator. The mixed-LF/CRLF interpretation
@@ -53,17 +53,17 @@ The [coverage directory](../coverage/README.md) separates three purposes:
 
 | Directory | Contents and recorded result |
 | --- | --- |
-| `coverage/curated/` | Original VCF 4.5 inventory, scripts and reports: **104/104** logical constructs represented under the preservation/structure rubric; **87** have enforcement evidence. |
-| `coverage/methodological/` | Specification-derived VCF 4.1–4.5 workflow, pinned sources, reviewer ledger and generated reports: **333/333** extracted Number/Type rows match; **133/491** retained requirements have full evidence across their applicable versions. |
-| `coverage/paper/` | Synthetic paper fixtures, queries and reproducible illustration checks. |
+| [`coverage/vcf45-inventory/`](../coverage/vcf45-inventory/README.md) | Curated VCF 4.5 inventory, scripts and reports: **104/104** logical constructs represented under the preservation/structure rubric; **87** have enforcement evidence. (Named `coverage/curated/` at release; renamed for clarity afterwards.) |
+| Retired specification-traceability assessment | Historical results below describe the former modal-word workflow. The replacement is documented only in [coverage/methodology/README.md](../coverage/methodology/README.md). |
+| [`examples/profile-comparison/`](../examples/profile-comparison/README.md) | Synthetic fixtures, query and reproducible illustration checks for the two sample profiles. (Named `coverage/paper/` at release; moved afterwards, since it illustrates rather than measures.) |
 
-The methodological workflow derives its register from hash-pinned specification
+The retired methodological workflow derived its register from hash-pinned specification
 sources and records evidence, scope, reviewer judgments and version differences.
 The six owner-approved assessment policies remain in the ledger with their
 qualifications. Complex semantic coverage requires judgment: matching field
 metadata or retaining a raw literal does not establish complete meaning.
 
-The first assessment still has **193 reverse source transitions** and an
+At the time of this release, the first assessment had **193 reverse source transitions** and an
 exhaustive source audit to complete. Known findings include missing/duplicate
 CUSTOM header IDs accepted by the validator, incorrect numeric modification
 declarations accepted, and all-missing PSL lists rejected alongside populated PS.
@@ -77,14 +77,7 @@ score have different denominators and must not be combined.
 
 ## Organization and reproducibility
 
-- `coverage/requirements/` is renamed to `coverage/methodological/`. Commands
-  now use `methodological:*`, including `methodological:build`,
-  `methodological:check`, `methodological:test` and `methodological:review-probes`.
-  Update local commands or integrations that used the previous paths.
-- Primary reports stay under each assessment's `generated/` directory.
-  `methodological:audit` produces optional, ignored review worksheets;
-  `npm run clean` removes them and build caches while retaining authored inputs,
-  primary reports, dependencies and the paper PDF.
+- The original assessment paths and commands described in this release were later retired. Use the [current methodology documentation](../coverage/methodology/README.md).
 - `ontology/versions/registry.json` centralizes specification-version rules used
   by generators, reserved snapshots, file classes and documentation entries.
   This removes duplicated configuration; it does not add another VCF version.

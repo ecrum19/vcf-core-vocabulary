@@ -30,6 +30,18 @@
     "passed": true
   },
   {
+    "fixture": "examples/profile-comparison/condensed.ttl",
+    "violations": 0,
+    "warnings": 0,
+    "passed": true
+  },
+  {
+    "fixture": "examples/profile-comparison/expanded.ttl",
+    "violations": 0,
+    "warnings": 0,
+    "passed": true
+  },
+  {
     "fixture": "examples/profiles/example-condensed-cohort.ttl",
     "violations": 0,
     "warnings": 0,
@@ -91,18 +103,6 @@
   },
   {
     "fixture": "examples/core/example.nt",
-    "violations": 0,
-    "warnings": 0,
-    "passed": true
-  },
-  {
-    "fixture": "coverage/paper/condensed.ttl",
-    "violations": 0,
-    "warnings": 0,
-    "passed": true
-  },
-  {
-    "fixture": "coverage/paper/expanded.ttl",
     "violations": 0,
     "warnings": 0,
     "passed": true

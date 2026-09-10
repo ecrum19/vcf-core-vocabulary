@@ -1,0 +1,9 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+# Source-audit case: expected answers are authored from the VCF fixture, not execution.
+# Present ordinal positions starting at one; vcfc:valueIndex is zero-based.
+SELECT ?id (?storedIndex + 1 AS ?index) ?value WHERE {
+ ?r vcfc:hasCall/vcfc:hasInfoValue ?f .
+ ?f vcfc:declaredBy/vcfc:fieldId ?id ; vcfc:hasValueItem ?item .
+ ?item vcfc:valueIndex ?storedIndex ; vcfc:itemValue ?value .
+ FILTER(?id IN ("PAIR", "FRACTION", "BASE", "TEXT"))
+}

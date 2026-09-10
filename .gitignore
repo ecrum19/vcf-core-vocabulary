@@ -11,15 +11,3 @@ __pycache__/
 target/
 .idea/
 .vscode/
-
-
-SWAT4HCLS_2027/*
-!SWAT4HCLS_2027/main.tex
-!SWAT4HCLS_2027/sources.bib
-!SWAT4HCLS_2027/README.md
-!SWAT4HCLS_2027/Makefile
-!SWAT4HCLS_2027/template/
-
-
-# Reproducible reviewer diagnostics are generated only on request.
-/coverage/methodological/generated/audit/

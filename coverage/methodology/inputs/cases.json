@@ -1,0 +1,8830 @@
+[
+  {
+    "id": "R01-4.1-r01",
+    "requirement": "R01",
+    "version": "4.1",
+    "fixture": "fixtures/basic-v4.1.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r01.rq",
+        "expected": [
+          [
+            "VCFv4.1"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r01.rq",
+        "expected": [
+          [
+            "VCFv4.1"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R01-4.2-r01",
+    "requirement": "R01",
+    "version": "4.2",
+    "fixture": "fixtures/basic-v4.2.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r01.rq",
+        "expected": [
+          [
+            "VCFv4.2"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r01.rq",
+        "expected": [
+          [
+            "VCFv4.2"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R01-4.3-r01",
+    "requirement": "R01",
+    "version": "4.3",
+    "fixture": "fixtures/basic-v4.3.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r01.rq",
+        "expected": [
+          [
+            "VCFv4.3"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r01.rq",
+        "expected": [
+          [
+            "VCFv4.3"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R01-4.4-r01",
+    "requirement": "R01",
+    "version": "4.4",
+    "fixture": "fixtures/basic-v4.4.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r01.rq",
+        "expected": [
+          [
+            "VCFv4.4"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r01.rq",
+        "expected": [
+          [
+            "VCFv4.4"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R01-4.5-r01",
+    "requirement": "R01",
+    "version": "4.5",
+    "fixture": "fixtures/basic-v4.5.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r01.rq",
+        "expected": [
+          [
+            "VCFv4.5"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r01.rq",
+        "expected": [
+          [
+            "VCFv4.5"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R02-4.1-r02",
+    "requirement": "R02",
+    "version": "4.1",
+    "fixture": "fixtures/basic-v4.1.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r02.rq",
+        "expected": [
+          [
+            "1",
+            "fileformat",
+            "VCFv4.1"
+          ],
+          [
+            "2",
+            "source",
+            "assessment-fixture"
+          ],
+          [
+            "3",
+            "reference",
+            "https://example.org/reference.fa"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r02.rq",
+        "expected": [
+          [
+            "1",
+            "fileformat",
+            "VCFv4.1"
+          ],
+          [
+            "2",
+            "source",
+            "assessment-fixture"
+          ],
+          [
+            "3",
+            "reference",
+            "https://example.org/reference.fa"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R02-4.2-r02",
+    "requirement": "R02",
+    "version": "4.2",
+    "fixture": "fixtures/basic-v4.2.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r02.rq",
+        "expected": [
+          [
+            "1",
+            "fileformat",
+            "VCFv4.2"
+          ],
+          [
+            "2",
+            "source",
+            "assessment-fixture"
+          ],
+          [
+            "3",
+            "reference",
+            "https://example.org/reference.fa"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r02.rq",
+        "expected": [
+          [
+            "1",
+            "fileformat",
+            "VCFv4.2"
+          ],
+          [
+            "2",
+            "source",
+            "assessment-fixture"
+          ],
+          [
+            "3",
+            "reference",
+            "https://example.org/reference.fa"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R02-4.3-r02",
+    "requirement": "R02",
+    "version": "4.3",
+    "fixture": "fixtures/basic-v4.3.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r02.rq",
+        "expected": [
+          [
+            "1",
+            "fileformat",
+            "VCFv4.3"
+          ],
+          [
+            "2",
+            "source",
+            "assessment-fixture"
+          ],
+          [
+            "3",
+            "reference",
+            "https://example.org/reference.fa"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r02.rq",
+        "expected": [
+          [
+            "1",
+            "fileformat",
+            "VCFv4.3"
+          ],
+          [
+            "2",
+            "source",
+            "assessment-fixture"
+          ],
+          [
+            "3",
+            "reference",
+            "https://example.org/reference.fa"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R02-4.4-r02",
+    "requirement": "R02",
+    "version": "4.4",
+    "fixture": "fixtures/basic-v4.4.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r02.rq",
+        "expected": [
+          [
+            "1",
+            "fileformat",
+            "VCFv4.4"
+          ],
+          [
+            "2",
+            "source",
+            "assessment-fixture"
+          ],
+          [
+            "3",
+            "reference",
+            "https://example.org/reference.fa"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r02.rq",
+        "expected": [
+          [
+            "1",
+            "fileformat",
+            "VCFv4.4"
+          ],
+          [
+            "2",
+            "source",
+            "assessment-fixture"
+          ],
+          [
+            "3",
+            "reference",
+            "https://example.org/reference.fa"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R02-4.5-r02",
+    "requirement": "R02",
+    "version": "4.5",
+    "fixture": "fixtures/basic-v4.5.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r02.rq",
+        "expected": [
+          [
+            "1",
+            "fileformat",
+            "VCFv4.5"
+          ],
+          [
+            "2",
+            "source",
+            "assessment-fixture"
+          ],
+          [
+            "3",
+            "reference",
+            "https://example.org/reference.fa"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r02.rq",
+        "expected": [
+          [
+            "1",
+            "fileformat",
+            "VCFv4.5"
+          ],
+          [
+            "2",
+            "source",
+            "assessment-fixture"
+          ],
+          [
+            "3",
+            "reference",
+            "https://example.org/reference.fa"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R03-4.1-r03",
+    "requirement": "R03",
+    "version": "4.1",
+    "fixture": "fixtures/basic-v4.1.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r03.rq",
+        "expected": [
+          [
+            "AF",
+            "A",
+            "https://w3id.org/vcf-core/vocab#FloatType",
+            "Allele frequency",
+            "manual",
+            "1"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r03.rq",
+        "expected": [
+          [
+            "AF",
+            "A",
+            "https://w3id.org/vcf-core/vocab#FloatType",
+            "Allele frequency",
+            "manual",
+            "1"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R03-4.2-r03",
+    "requirement": "R03",
+    "version": "4.2",
+    "fixture": "fixtures/basic-v4.2.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r03.rq",
+        "expected": [
+          [
+            "AF",
+            "A",
+            "https://w3id.org/vcf-core/vocab#FloatType",
+            "Allele frequency",
+            "manual",
+            "1"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r03.rq",
+        "expected": [
+          [
+            "AF",
+            "A",
+            "https://w3id.org/vcf-core/vocab#FloatType",
+            "Allele frequency",
+            "manual",
+            "1"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R03-4.3-r03",
+    "requirement": "R03",
+    "version": "4.3",
+    "fixture": "fixtures/basic-v4.3.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r03.rq",
+        "expected": [
+          [
+            "AF",
+            "A",
+            "https://w3id.org/vcf-core/vocab#FloatType",
+            "Allele frequency",
+            "manual",
+            "1"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r03.rq",
+        "expected": [
+          [
+            "AF",
+            "A",
+            "https://w3id.org/vcf-core/vocab#FloatType",
+            "Allele frequency",
+            "manual",
+            "1"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R03-4.4-r03",
+    "requirement": "R03",
+    "version": "4.4",
+    "fixture": "fixtures/basic-v4.4.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r03.rq",
+        "expected": [
+          [
+            "AF",
+            "A",
+            "https://w3id.org/vcf-core/vocab#FloatType",
+            "Allele frequency",
+            "manual",
+            "1"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r03.rq",
+        "expected": [
+          [
+            "AF",
+            "A",
+            "https://w3id.org/vcf-core/vocab#FloatType",
+            "Allele frequency",
+            "manual",
+            "1"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R03-4.5-r03",
+    "requirement": "R03",
+    "version": "4.5",
+    "fixture": "fixtures/basic-v4.5.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r03.rq",
+        "expected": [
+          [
+            "AF",
+            "A",
+            "https://w3id.org/vcf-core/vocab#FloatType",
+            "Allele frequency",
+            "manual",
+            "1"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r03.rq",
+        "expected": [
+          [
+            "AF",
+            "A",
+            "https://w3id.org/vcf-core/vocab#FloatType",
+            "Allele frequency",
+            "manual",
+            "1"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R04-4.1-r04",
+    "requirement": "R04",
+    "version": "4.1",
+    "fixture": "fixtures/basic-v4.1.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r04.rq",
+        "expected": [
+          [
+            "GT",
+            "1",
+            "https://w3id.org/vcf-core/vocab#StringType"
+          ],
+          [
+            "DP",
+            "1",
+            "https://w3id.org/vcf-core/vocab#IntegerType"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r04.rq",
+        "expected": [
+          [
+            "GT",
+            "1",
+            "https://w3id.org/vcf-core/vocab#StringType"
+          ],
+          [
+            "DP",
+            "1",
+            "https://w3id.org/vcf-core/vocab#IntegerType"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R04-4.2-r04",
+    "requirement": "R04",
+    "version": "4.2",
+    "fixture": "fixtures/basic-v4.2.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r04.rq",
+        "expected": [
+          [
+            "GT",
+            "1",
+            "https://w3id.org/vcf-core/vocab#StringType"
+          ],
+          [
+            "DP",
+            "1",
+            "https://w3id.org/vcf-core/vocab#IntegerType"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r04.rq",
+        "expected": [
+          [
+            "GT",
+            "1",
+            "https://w3id.org/vcf-core/vocab#StringType"
+          ],
+          [
+            "DP",
+            "1",
+            "https://w3id.org/vcf-core/vocab#IntegerType"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R04-4.3-r04",
+    "requirement": "R04",
+    "version": "4.3",
+    "fixture": "fixtures/basic-v4.3.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r04.rq",
+        "expected": [
+          [
+            "GT",
+            "1",
+            "https://w3id.org/vcf-core/vocab#StringType"
+          ],
+          [
+            "DP",
+            "1",
+            "https://w3id.org/vcf-core/vocab#IntegerType"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r04.rq",
+        "expected": [
+          [
+            "GT",
+            "1",
+            "https://w3id.org/vcf-core/vocab#StringType"
+          ],
+          [
+            "DP",
+            "1",
+            "https://w3id.org/vcf-core/vocab#IntegerType"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R04-4.4-r04",
+    "requirement": "R04",
+    "version": "4.4",
+    "fixture": "fixtures/basic-v4.4.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r04.rq",
+        "expected": [
+          [
+            "GT",
+            "1",
+            "https://w3id.org/vcf-core/vocab#StringType"
+          ],
+          [
+            "DP",
+            "1",
+            "https://w3id.org/vcf-core/vocab#IntegerType"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r04.rq",
+        "expected": [
+          [
+            "GT",
+            "1",
+            "https://w3id.org/vcf-core/vocab#StringType"
+          ],
+          [
+            "DP",
+            "1",
+            "https://w3id.org/vcf-core/vocab#IntegerType"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R04-4.5-r04",
+    "requirement": "R04",
+    "version": "4.5",
+    "fixture": "fixtures/basic-v4.5.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r04.rq",
+        "expected": [
+          [
+            "GT",
+            "1",
+            "https://w3id.org/vcf-core/vocab#StringType"
+          ],
+          [
+            "DP",
+            "1",
+            "https://w3id.org/vcf-core/vocab#IntegerType"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r04.rq",
+        "expected": [
+          [
+            "GT",
+            "1",
+            "https://w3id.org/vcf-core/vocab#StringType"
+          ],
+          [
+            "DP",
+            "1",
+            "https://w3id.org/vcf-core/vocab#IntegerType"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R05-4.1-r05",
+    "requirement": "R05",
+    "version": "4.1",
+    "fixture": "fixtures/basic-v4.1.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r05.rq",
+        "expected": [
+          [
+            "chr1",
+            "100"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r05.rq",
+        "expected": [
+          [
+            "chr1",
+            "100"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R05-4.2-r05",
+    "requirement": "R05",
+    "version": "4.2",
+    "fixture": "fixtures/basic-v4.2.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r05.rq",
+        "expected": [
+          [
+            "chr1",
+            "100"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r05.rq",
+        "expected": [
+          [
+            "chr1",
+            "100"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R05-4.3-r05",
+    "requirement": "R05",
+    "version": "4.3",
+    "fixture": "fixtures/basic-v4.3.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r05.rq",
+        "expected": [
+          [
+            "chr1",
+            "100"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r05.rq",
+        "expected": [
+          [
+            "chr1",
+            "100"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R05-4.4-r05",
+    "requirement": "R05",
+    "version": "4.4",
+    "fixture": "fixtures/basic-v4.4.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r05.rq",
+        "expected": [
+          [
+            "chr1",
+            "100"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r05.rq",
+        "expected": [
+          [
+            "chr1",
+            "100"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R05-4.5-r05",
+    "requirement": "R05",
+    "version": "4.5",
+    "fixture": "fixtures/basic-v4.5.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r05.rq",
+        "expected": [
+          [
+            "chr1",
+            "100"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r05.rq",
+        "expected": [
+          [
+            "chr1",
+            "100"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R06-4.1-r06",
+    "requirement": "R06",
+    "version": "4.1",
+    "fixture": "fixtures/basic-v4.1.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r06.rq",
+        "expected": [
+          [
+            "1",
+            "S1"
+          ],
+          [
+            "2",
+            "S2"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r06.rq",
+        "expected": [
+          [
+            "1",
+            "S1"
+          ],
+          [
+            "2",
+            "S2"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R06-4.2-r06",
+    "requirement": "R06",
+    "version": "4.2",
+    "fixture": "fixtures/basic-v4.2.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r06.rq",
+        "expected": [
+          [
+            "1",
+            "S1"
+          ],
+          [
+            "2",
+            "S2"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r06.rq",
+        "expected": [
+          [
+            "1",
+            "S1"
+          ],
+          [
+            "2",
+            "S2"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R06-4.3-r06",
+    "requirement": "R06",
+    "version": "4.3",
+    "fixture": "fixtures/basic-v4.3.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r06.rq",
+        "expected": [
+          [
+            "1",
+            "S1"
+          ],
+          [
+            "2",
+            "S2"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r06.rq",
+        "expected": [
+          [
+            "1",
+            "S1"
+          ],
+          [
+            "2",
+            "S2"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R06-4.4-r06",
+    "requirement": "R06",
+    "version": "4.4",
+    "fixture": "fixtures/basic-v4.4.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r06.rq",
+        "expected": [
+          [
+            "1",
+            "S1"
+          ],
+          [
+            "2",
+            "S2"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r06.rq",
+        "expected": [
+          [
+            "1",
+            "S1"
+          ],
+          [
+            "2",
+            "S2"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R06-4.5-r06",
+    "requirement": "R06",
+    "version": "4.5",
+    "fixture": "fixtures/basic-v4.5.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r06.rq",
+        "expected": [
+          [
+            "1",
+            "S1"
+          ],
+          [
+            "2",
+            "S2"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r06.rq",
+        "expected": [
+          [
+            "1",
+            "S1"
+          ],
+          [
+            "2",
+            "S2"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R07-4.1-r07",
+    "requirement": "R07",
+    "version": "4.1",
+    "fixture": "fixtures/basic-v4.1.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r07.rq",
+        "expected": [
+          [
+            "1",
+            "10"
+          ],
+          [
+            "2",
+            "20"
+          ],
+          [
+            "3",
+            "30"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r07.rq",
+        "expected": [
+          [
+            "1",
+            "10"
+          ],
+          [
+            "2",
+            "20"
+          ],
+          [
+            "3",
+            "30"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R07-4.2-r07",
+    "requirement": "R07",
+    "version": "4.2",
+    "fixture": "fixtures/basic-v4.2.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r07.rq",
+        "expected": [
+          [
+            "1",
+            "10"
+          ],
+          [
+            "2",
+            "20"
+          ],
+          [
+            "3",
+            "30"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r07.rq",
+        "expected": [
+          [
+            "1",
+            "10"
+          ],
+          [
+            "2",
+            "20"
+          ],
+          [
+            "3",
+            "30"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R07-4.3-r07",
+    "requirement": "R07",
+    "version": "4.3",
+    "fixture": "fixtures/basic-v4.3.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r07.rq",
+        "expected": [
+          [
+            "1",
+            "10"
+          ],
+          [
+            "2",
+            "20"
+          ],
+          [
+            "3",
+            "30"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r07.rq",
+        "expected": [
+          [
+            "1",
+            "10"
+          ],
+          [
+            "2",
+            "20"
+          ],
+          [
+            "3",
+            "30"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R07-4.4-r07",
+    "requirement": "R07",
+    "version": "4.4",
+    "fixture": "fixtures/basic-v4.4.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r07.rq",
+        "expected": [
+          [
+            "1",
+            "10"
+          ],
+          [
+            "2",
+            "20"
+          ],
+          [
+            "3",
+            "30"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r07.rq",
+        "expected": [
+          [
+            "1",
+            "10"
+          ],
+          [
+            "2",
+            "20"
+          ],
+          [
+            "3",
+            "30"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R07-4.5-r07",
+    "requirement": "R07",
+    "version": "4.5",
+    "fixture": "fixtures/basic-v4.5.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r07.rq",
+        "expected": [
+          [
+            "1",
+            "10"
+          ],
+          [
+            "2",
+            "20"
+          ],
+          [
+            "3",
+            "30"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r07.rq",
+        "expected": [
+          [
+            "1",
+            "10"
+          ],
+          [
+            "2",
+            "20"
+          ],
+          [
+            "3",
+            "30"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R08-4.1-r08",
+    "requirement": "R08",
+    "version": "4.1",
+    "fixture": "fixtures/basic-v4.1.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r08.rq",
+        "expected": [
+          [
+            "chr1",
+            "10",
+            "chr1"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r08.rq",
+        "expected": [
+          [
+            "chr1",
+            "10",
+            "chr1"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R08-4.2-r08",
+    "requirement": "R08",
+    "version": "4.2",
+    "fixture": "fixtures/basic-v4.2.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r08.rq",
+        "expected": [
+          [
+            "chr1",
+            "10",
+            "chr1"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r08.rq",
+        "expected": [
+          [
+            "chr1",
+            "10",
+            "chr1"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R08-4.3-r08",
+    "requirement": "R08",
+    "version": "4.3",
+    "fixture": "fixtures/basic-v4.3.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r08.rq",
+        "expected": [
+          [
+            "chr1",
+            "10",
+            "chr1"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r08.rq",
+        "expected": [
+          [
+            "chr1",
+            "10",
+            "chr1"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R08-4.4-r08",
+    "requirement": "R08",
+    "version": "4.4",
+    "fixture": "fixtures/basic-v4.4.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r08.rq",
+        "expected": [
+          [
+            "chr1",
+            "10",
+            "chr1"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r08.rq",
+        "expected": [
+          [
+            "chr1",
+            "10",
+            "chr1"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R08-4.5-r08",
+    "requirement": "R08",
+    "version": "4.5",
+    "fixture": "fixtures/basic-v4.5.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r08.rq",
+        "expected": [
+          [
+            "chr1",
+            "10",
+            "chr1"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r08.rq",
+        "expected": [
+          [
+            "chr1",
+            "10",
+            "chr1"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R09-4.1-r09",
+    "requirement": "R09",
+    "version": "4.1",
+    "fixture": "fixtures/basic-v4.1.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r09.rq",
+        "expected": [
+          [
+            "1",
+            "idA"
+          ],
+          [
+            "2",
+            "idB"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r09.rq",
+        "expected": [
+          [
+            "1",
+            "idA"
+          ],
+          [
+            "2",
+            "idB"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R09-4.2-r09",
+    "requirement": "R09",
+    "version": "4.2",
+    "fixture": "fixtures/basic-v4.2.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r09.rq",
+        "expected": [
+          [
+            "1",
+            "idA"
+          ],
+          [
+            "2",
+            "idB"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r09.rq",
+        "expected": [
+          [
+            "1",
+            "idA"
+          ],
+          [
+            "2",
+            "idB"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R09-4.3-r09",
+    "requirement": "R09",
+    "version": "4.3",
+    "fixture": "fixtures/basic-v4.3.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r09.rq",
+        "expected": [
+          [
+            "1",
+            "idA"
+          ],
+          [
+            "2",
+            "idB"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r09.rq",
+        "expected": [
+          [
+            "1",
+            "idA"
+          ],
+          [
+            "2",
+            "idB"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R09-4.4-r09",
+    "requirement": "R09",
+    "version": "4.4",
+    "fixture": "fixtures/basic-v4.4.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r09.rq",
+        "expected": [
+          [
+            "1",
+            "idA"
+          ],
+          [
+            "2",
+            "idB"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r09.rq",
+        "expected": [
+          [
+            "1",
+            "idA"
+          ],
+          [
+            "2",
+            "idB"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R09-4.5-r09",
+    "requirement": "R09",
+    "version": "4.5",
+    "fixture": "fixtures/basic-v4.5.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r09.rq",
+        "expected": [
+          [
+            "1",
+            "idA"
+          ],
+          [
+            "2",
+            "idB"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r09.rq",
+        "expected": [
+          [
+            "1",
+            "idA"
+          ],
+          [
+            "2",
+            "idB"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R10-4.1-r10",
+    "requirement": "R10",
+    "version": "4.1",
+    "fixture": "fixtures/basic-v4.1.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r10.rq",
+        "expected": [
+          [
+            "0",
+            "A"
+          ],
+          [
+            "1",
+            "C"
+          ],
+          [
+            "2",
+            "G"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r10.rq",
+        "expected": [
+          [
+            "0",
+            "A"
+          ],
+          [
+            "1",
+            "C"
+          ],
+          [
+            "2",
+            "G"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R10-4.2-r10",
+    "requirement": "R10",
+    "version": "4.2",
+    "fixture": "fixtures/basic-v4.2.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r10.rq",
+        "expected": [
+          [
+            "0",
+            "A"
+          ],
+          [
+            "1",
+            "C"
+          ],
+          [
+            "2",
+            "G"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r10.rq",
+        "expected": [
+          [
+            "0",
+            "A"
+          ],
+          [
+            "1",
+            "C"
+          ],
+          [
+            "2",
+            "G"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R10-4.3-r10",
+    "requirement": "R10",
+    "version": "4.3",
+    "fixture": "fixtures/basic-v4.3.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r10.rq",
+        "expected": [
+          [
+            "0",
+            "A"
+          ],
+          [
+            "1",
+            "C"
+          ],
+          [
+            "2",
+            "G"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r10.rq",
+        "expected": [
+          [
+            "0",
+            "A"
+          ],
+          [
+            "1",
+            "C"
+          ],
+          [
+            "2",
+            "G"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R10-4.4-r10",
+    "requirement": "R10",
+    "version": "4.4",
+    "fixture": "fixtures/basic-v4.4.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r10.rq",
+        "expected": [
+          [
+            "0",
+            "A"
+          ],
+          [
+            "1",
+            "C"
+          ],
+          [
+            "2",
+            "G"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r10.rq",
+        "expected": [
+          [
+            "0",
+            "A"
+          ],
+          [
+            "1",
+            "C"
+          ],
+          [
+            "2",
+            "G"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R10-4.5-r10",
+    "requirement": "R10",
+    "version": "4.5",
+    "fixture": "fixtures/basic-v4.5.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r10.rq",
+        "expected": [
+          [
+            "0",
+            "A"
+          ],
+          [
+            "1",
+            "C"
+          ],
+          [
+            "2",
+            "G"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r10.rq",
+        "expected": [
+          [
+            "0",
+            "A"
+          ],
+          [
+            "1",
+            "C"
+          ],
+          [
+            "2",
+            "G"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R11-4.1-r11",
+    "requirement": "R11",
+    "version": "4.1",
+    "fixture": "fixtures/basic-v4.1.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r11.rq",
+        "expected": [
+          [
+            "10",
+            "60",
+            "https://w3id.org/vcf-core/vocab#VCFFloat"
+          ],
+          [
+            "20",
+            ".",
+            "https://w3id.org/vcf-core/vocab#Null"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r11.rq",
+        "expected": [
+          [
+            "10",
+            "60",
+            "https://w3id.org/vcf-core/vocab#VCFFloat"
+          ],
+          [
+            "20",
+            ".",
+            "https://w3id.org/vcf-core/vocab#Null"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R11-4.2-r11",
+    "requirement": "R11",
+    "version": "4.2",
+    "fixture": "fixtures/basic-v4.2.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r11.rq",
+        "expected": [
+          [
+            "10",
+            "60",
+            "https://w3id.org/vcf-core/vocab#VCFFloat"
+          ],
+          [
+            "20",
+            ".",
+            "https://w3id.org/vcf-core/vocab#Null"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r11.rq",
+        "expected": [
+          [
+            "10",
+            "60",
+            "https://w3id.org/vcf-core/vocab#VCFFloat"
+          ],
+          [
+            "20",
+            ".",
+            "https://w3id.org/vcf-core/vocab#Null"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R11-4.3-r11",
+    "requirement": "R11",
+    "version": "4.3",
+    "fixture": "fixtures/basic-v4.3.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r11.rq",
+        "expected": [
+          [
+            "10",
+            "60",
+            "https://w3id.org/vcf-core/vocab#VCFFloat"
+          ],
+          [
+            "20",
+            ".",
+            "https://w3id.org/vcf-core/vocab#Null"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r11.rq",
+        "expected": [
+          [
+            "10",
+            "60",
+            "https://w3id.org/vcf-core/vocab#VCFFloat"
+          ],
+          [
+            "20",
+            ".",
+            "https://w3id.org/vcf-core/vocab#Null"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R11-4.4-r11",
+    "requirement": "R11",
+    "version": "4.4",
+    "fixture": "fixtures/basic-v4.4.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r11.rq",
+        "expected": [
+          [
+            "10",
+            "60",
+            "https://w3id.org/vcf-core/vocab#VCFFloat"
+          ],
+          [
+            "20",
+            ".",
+            "https://w3id.org/vcf-core/vocab#Null"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r11.rq",
+        "expected": [
+          [
+            "10",
+            "60",
+            "https://w3id.org/vcf-core/vocab#VCFFloat"
+          ],
+          [
+            "20",
+            ".",
+            "https://w3id.org/vcf-core/vocab#Null"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R11-4.5-r11",
+    "requirement": "R11",
+    "version": "4.5",
+    "fixture": "fixtures/basic-v4.5.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r11.rq",
+        "expected": [
+          [
+            "10",
+            "60",
+            "https://w3id.org/vcf-core/vocab#VCFFloat"
+          ],
+          [
+            "20",
+            ".",
+            "https://w3id.org/vcf-core/vocab#Null"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r11.rq",
+        "expected": [
+          [
+            "10",
+            "60",
+            "https://w3id.org/vcf-core/vocab#VCFFloat"
+          ],
+          [
+            "20",
+            ".",
+            "https://w3id.org/vcf-core/vocab#Null"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R12-4.1-r12",
+    "requirement": "R12",
+    "version": "4.1",
+    "fixture": "fixtures/basic-v4.1.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r12.rq",
+        "expected": [
+          [
+            "10",
+            "https://w3id.org/vcf-core/vocab#FiltersPassed"
+          ],
+          [
+            "20",
+            "https://w3id.org/vcf-core/vocab#FiltersNotApplied"
+          ],
+          [
+            "30",
+            "https://w3id.org/vcf-core/vocab#FiltersFailed"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r12.rq",
+        "expected": [
+          [
+            "10",
+            "https://w3id.org/vcf-core/vocab#FiltersPassed"
+          ],
+          [
+            "20",
+            "https://w3id.org/vcf-core/vocab#FiltersNotApplied"
+          ],
+          [
+            "30",
+            "https://w3id.org/vcf-core/vocab#FiltersFailed"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R12-4.2-r12",
+    "requirement": "R12",
+    "version": "4.2",
+    "fixture": "fixtures/basic-v4.2.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r12.rq",
+        "expected": [
+          [
+            "10",
+            "https://w3id.org/vcf-core/vocab#FiltersPassed"
+          ],
+          [
+            "20",
+            "https://w3id.org/vcf-core/vocab#FiltersNotApplied"
+          ],
+          [
+            "30",
+            "https://w3id.org/vcf-core/vocab#FiltersFailed"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r12.rq",
+        "expected": [
+          [
+            "10",
+            "https://w3id.org/vcf-core/vocab#FiltersPassed"
+          ],
+          [
+            "20",
+            "https://w3id.org/vcf-core/vocab#FiltersNotApplied"
+          ],
+          [
+            "30",
+            "https://w3id.org/vcf-core/vocab#FiltersFailed"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R12-4.3-r12",
+    "requirement": "R12",
+    "version": "4.3",
+    "fixture": "fixtures/basic-v4.3.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r12.rq",
+        "expected": [
+          [
+            "10",
+            "https://w3id.org/vcf-core/vocab#FiltersPassed"
+          ],
+          [
+            "20",
+            "https://w3id.org/vcf-core/vocab#FiltersNotApplied"
+          ],
+          [
+            "30",
+            "https://w3id.org/vcf-core/vocab#FiltersFailed"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r12.rq",
+        "expected": [
+          [
+            "10",
+            "https://w3id.org/vcf-core/vocab#FiltersPassed"
+          ],
+          [
+            "20",
+            "https://w3id.org/vcf-core/vocab#FiltersNotApplied"
+          ],
+          [
+            "30",
+            "https://w3id.org/vcf-core/vocab#FiltersFailed"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R12-4.4-r12",
+    "requirement": "R12",
+    "version": "4.4",
+    "fixture": "fixtures/basic-v4.4.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r12.rq",
+        "expected": [
+          [
+            "10",
+            "https://w3id.org/vcf-core/vocab#FiltersPassed"
+          ],
+          [
+            "20",
+            "https://w3id.org/vcf-core/vocab#FiltersNotApplied"
+          ],
+          [
+            "30",
+            "https://w3id.org/vcf-core/vocab#FiltersFailed"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r12.rq",
+        "expected": [
+          [
+            "10",
+            "https://w3id.org/vcf-core/vocab#FiltersPassed"
+          ],
+          [
+            "20",
+            "https://w3id.org/vcf-core/vocab#FiltersNotApplied"
+          ],
+          [
+            "30",
+            "https://w3id.org/vcf-core/vocab#FiltersFailed"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R12-4.5-r12",
+    "requirement": "R12",
+    "version": "4.5",
+    "fixture": "fixtures/basic-v4.5.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r12.rq",
+        "expected": [
+          [
+            "10",
+            "https://w3id.org/vcf-core/vocab#FiltersPassed"
+          ],
+          [
+            "20",
+            "https://w3id.org/vcf-core/vocab#FiltersNotApplied"
+          ],
+          [
+            "30",
+            "https://w3id.org/vcf-core/vocab#FiltersFailed"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r12.rq",
+        "expected": [
+          [
+            "10",
+            "https://w3id.org/vcf-core/vocab#FiltersPassed"
+          ],
+          [
+            "20",
+            "https://w3id.org/vcf-core/vocab#FiltersNotApplied"
+          ],
+          [
+            "30",
+            "https://w3id.org/vcf-core/vocab#FiltersFailed"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R13-4.1-r13",
+    "requirement": "R13",
+    "version": "4.1",
+    "fixture": "fixtures/basic-v4.1.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r13.rq",
+        "expected": [
+          [
+            "1",
+            "q10"
+          ],
+          [
+            "2",
+            "s50"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r13.rq",
+        "expected": [
+          [
+            "1",
+            "q10"
+          ],
+          [
+            "2",
+            "s50"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R13-4.2-r13",
+    "requirement": "R13",
+    "version": "4.2",
+    "fixture": "fixtures/basic-v4.2.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r13.rq",
+        "expected": [
+          [
+            "1",
+            "q10"
+          ],
+          [
+            "2",
+            "s50"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r13.rq",
+        "expected": [
+          [
+            "1",
+            "q10"
+          ],
+          [
+            "2",
+            "s50"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R13-4.3-r13",
+    "requirement": "R13",
+    "version": "4.3",
+    "fixture": "fixtures/basic-v4.3.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r13.rq",
+        "expected": [
+          [
+            "1",
+            "q10"
+          ],
+          [
+            "2",
+            "s50"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r13.rq",
+        "expected": [
+          [
+            "1",
+            "q10"
+          ],
+          [
+            "2",
+            "s50"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R13-4.4-r13",
+    "requirement": "R13",
+    "version": "4.4",
+    "fixture": "fixtures/basic-v4.4.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r13.rq",
+        "expected": [
+          [
+            "1",
+            "q10"
+          ],
+          [
+            "2",
+            "s50"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r13.rq",
+        "expected": [
+          [
+            "1",
+            "q10"
+          ],
+          [
+            "2",
+            "s50"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R13-4.5-r13",
+    "requirement": "R13",
+    "version": "4.5",
+    "fixture": "fixtures/basic-v4.5.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r13.rq",
+        "expected": [
+          [
+            "1",
+            "q10"
+          ],
+          [
+            "2",
+            "s50"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r13.rq",
+        "expected": [
+          [
+            "1",
+            "q10"
+          ],
+          [
+            "2",
+            "s50"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R14-4.1-r14",
+    "requirement": "R14",
+    "version": "4.1",
+    "fixture": "fixtures/basic-v4.1.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r14.rq",
+        "expected": [
+          [
+            "1",
+            "AF"
+          ],
+          [
+            "2",
+            "DB"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r14.rq",
+        "expected": [
+          [
+            "1",
+            "AF"
+          ],
+          [
+            "2",
+            "DB"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R14-4.2-r14",
+    "requirement": "R14",
+    "version": "4.2",
+    "fixture": "fixtures/basic-v4.2.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r14.rq",
+        "expected": [
+          [
+            "1",
+            "AF"
+          ],
+          [
+            "2",
+            "DB"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r14.rq",
+        "expected": [
+          [
+            "1",
+            "AF"
+          ],
+          [
+            "2",
+            "DB"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R14-4.3-r14",
+    "requirement": "R14",
+    "version": "4.3",
+    "fixture": "fixtures/basic-v4.3.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r14.rq",
+        "expected": [
+          [
+            "1",
+            "AF"
+          ],
+          [
+            "2",
+            "DB"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r14.rq",
+        "expected": [
+          [
+            "1",
+            "AF"
+          ],
+          [
+            "2",
+            "DB"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R14-4.4-r14",
+    "requirement": "R14",
+    "version": "4.4",
+    "fixture": "fixtures/basic-v4.4.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r14.rq",
+        "expected": [
+          [
+            "1",
+            "AF"
+          ],
+          [
+            "2",
+            "DB"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r14.rq",
+        "expected": [
+          [
+            "1",
+            "AF"
+          ],
+          [
+            "2",
+            "DB"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R14-4.5-r14",
+    "requirement": "R14",
+    "version": "4.5",
+    "fixture": "fixtures/basic-v4.5.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r14.rq",
+        "expected": [
+          [
+            "1",
+            "AF"
+          ],
+          [
+            "2",
+            "DB"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r14.rq",
+        "expected": [
+          [
+            "1",
+            "AF"
+          ],
+          [
+            "2",
+            "DB"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R15-4.1-r15",
+    "requirement": "R15",
+    "version": "4.1",
+    "fixture": "fixtures/basic-v4.1.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r15.rq",
+        "expected": [
+          [
+            "true"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r15.rq",
+        "expected": [
+          [
+            "true"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R15-4.2-r15",
+    "requirement": "R15",
+    "version": "4.2",
+    "fixture": "fixtures/basic-v4.2.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r15.rq",
+        "expected": [
+          [
+            "true"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r15.rq",
+        "expected": [
+          [
+            "true"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R15-4.3-r15",
+    "requirement": "R15",
+    "version": "4.3",
+    "fixture": "fixtures/basic-v4.3.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r15.rq",
+        "expected": [
+          [
+            "true"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r15.rq",
+        "expected": [
+          [
+            "true"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R15-4.4-r15",
+    "requirement": "R15",
+    "version": "4.4",
+    "fixture": "fixtures/basic-v4.4.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r15.rq",
+        "expected": [
+          [
+            "true"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r15.rq",
+        "expected": [
+          [
+            "true"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R15-4.5-r15",
+    "requirement": "R15",
+    "version": "4.5",
+    "fixture": "fixtures/basic-v4.5.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r15.rq",
+        "expected": [
+          [
+            "true"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r15.rq",
+        "expected": [
+          [
+            "true"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R16-4.1-r16",
+    "requirement": "R16",
+    "version": "4.1",
+    "fixture": "fixtures/basic-v4.1.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r16.rq",
+        "expected": [
+          [
+            "0",
+            "0.25",
+            "C"
+          ],
+          [
+            "1",
+            "0.5",
+            "G"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r16.rq",
+        "expected": [
+          [
+            "0",
+            "0.25",
+            "C"
+          ],
+          [
+            "1",
+            "0.5",
+            "G"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R16-4.2-r16",
+    "requirement": "R16",
+    "version": "4.2",
+    "fixture": "fixtures/basic-v4.2.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r16.rq",
+        "expected": [
+          [
+            "0",
+            "0.25",
+            "C"
+          ],
+          [
+            "1",
+            "0.5",
+            "G"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r16.rq",
+        "expected": [
+          [
+            "0",
+            "0.25",
+            "C"
+          ],
+          [
+            "1",
+            "0.5",
+            "G"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R16-4.3-r16",
+    "requirement": "R16",
+    "version": "4.3",
+    "fixture": "fixtures/basic-v4.3.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r16.rq",
+        "expected": [
+          [
+            "0",
+            "0.25",
+            "C"
+          ],
+          [
+            "1",
+            "0.5",
+            "G"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r16.rq",
+        "expected": [
+          [
+            "0",
+            "0.25",
+            "C"
+          ],
+          [
+            "1",
+            "0.5",
+            "G"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R16-4.4-r16",
+    "requirement": "R16",
+    "version": "4.4",
+    "fixture": "fixtures/basic-v4.4.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r16.rq",
+        "expected": [
+          [
+            "0",
+            "0.25",
+            "C"
+          ],
+          [
+            "1",
+            "0.5",
+            "G"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r16.rq",
+        "expected": [
+          [
+            "0",
+            "0.25",
+            "C"
+          ],
+          [
+            "1",
+            "0.5",
+            "G"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R16-4.5-r16",
+    "requirement": "R16",
+    "version": "4.5",
+    "fixture": "fixtures/basic-v4.5.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r16.rq",
+        "expected": [
+          [
+            "0",
+            "0.25",
+            "C"
+          ],
+          [
+            "1",
+            "0.5",
+            "G"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r16.rq",
+        "expected": [
+          [
+            "0",
+            "0.25",
+            "C"
+          ],
+          [
+            "1",
+            "0.5",
+            "G"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R17-4.1-r17",
+    "requirement": "R17",
+    "version": "4.1",
+    "fixture": "fixtures/basic-v4.1.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r17.rq",
+        "expected": [
+          [
+            "1",
+            "GT"
+          ],
+          [
+            "2",
+            "DP"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r17.rq",
+        "expected": [
+          [
+            "1",
+            "GT"
+          ],
+          [
+            "2",
+            "DP"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R17-4.2-r17",
+    "requirement": "R17",
+    "version": "4.2",
+    "fixture": "fixtures/basic-v4.2.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r17.rq",
+        "expected": [
+          [
+            "1",
+            "GT"
+          ],
+          [
+            "2",
+            "DP"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r17.rq",
+        "expected": [
+          [
+            "1",
+            "GT"
+          ],
+          [
+            "2",
+            "DP"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R17-4.3-r17",
+    "requirement": "R17",
+    "version": "4.3",
+    "fixture": "fixtures/basic-v4.3.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r17.rq",
+        "expected": [
+          [
+            "1",
+            "GT"
+          ],
+          [
+            "2",
+            "DP"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r17.rq",
+        "expected": [
+          [
+            "1",
+            "GT"
+          ],
+          [
+            "2",
+            "DP"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R17-4.4-r17",
+    "requirement": "R17",
+    "version": "4.4",
+    "fixture": "fixtures/basic-v4.4.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r17.rq",
+        "expected": [
+          [
+            "1",
+            "GT"
+          ],
+          [
+            "2",
+            "DP"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r17.rq",
+        "expected": [
+          [
+            "1",
+            "GT"
+          ],
+          [
+            "2",
+            "DP"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R17-4.5-r17",
+    "requirement": "R17",
+    "version": "4.5",
+    "fixture": "fixtures/basic-v4.5.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/r17.rq",
+        "expected": [
+          [
+            "1",
+            "GT"
+          ],
+          [
+            "2",
+            "DP"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r17.rq",
+        "expected": [
+          [
+            "1",
+            "GT"
+          ],
+          [
+            "2",
+            "DP"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R18-4.1-r18",
+    "requirement": "R18",
+    "version": "4.1",
+    "fixture": "fixtures/basic-v4.1.vcf",
+    "preservation": {
+      "condensed": {
+        "query": "queries/r18-decode.rq",
+        "expected": [
+          [
+            "S1",
+            "12"
+          ],
+          [
+            "S2",
+            "."
+          ]
+        ]
+      },
+      "expanded": {
+        "query": "queries/r18.rq",
+        "expected": [
+          [
+            "S1",
+            "12"
+          ],
+          [
+            "S2",
+            "."
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r18.rq",
+        "expected": [
+          [
+            "S1",
+            "12"
+          ],
+          [
+            "S2",
+            "."
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R18-4.2-r18",
+    "requirement": "R18",
+    "version": "4.2",
+    "fixture": "fixtures/basic-v4.2.vcf",
+    "preservation": {
+      "condensed": {
+        "query": "queries/r18-decode.rq",
+        "expected": [
+          [
+            "S1",
+            "12"
+          ],
+          [
+            "S2",
+            "."
+          ]
+        ]
+      },
+      "expanded": {
+        "query": "queries/r18.rq",
+        "expected": [
+          [
+            "S1",
+            "12"
+          ],
+          [
+            "S2",
+            "."
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r18.rq",
+        "expected": [
+          [
+            "S1",
+            "12"
+          ],
+          [
+            "S2",
+            "."
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R18-4.3-r18",
+    "requirement": "R18",
+    "version": "4.3",
+    "fixture": "fixtures/basic-v4.3.vcf",
+    "preservation": {
+      "condensed": {
+        "query": "queries/r18-decode.rq",
+        "expected": [
+          [
+            "S1",
+            "12"
+          ],
+          [
+            "S2",
+            "."
+          ]
+        ]
+      },
+      "expanded": {
+        "query": "queries/r18.rq",
+        "expected": [
+          [
+            "S1",
+            "12"
+          ],
+          [
+            "S2",
+            "."
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r18.rq",
+        "expected": [
+          [
+            "S1",
+            "12"
+          ],
+          [
+            "S2",
+            "."
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R18-4.4-r18",
+    "requirement": "R18",
+    "version": "4.4",
+    "fixture": "fixtures/basic-v4.4.vcf",
+    "preservation": {
+      "condensed": {
+        "query": "queries/r18-decode.rq",
+        "expected": [
+          [
+            "S1",
+            "12"
+          ],
+          [
+            "S2",
+            "."
+          ]
+        ]
+      },
+      "expanded": {
+        "query": "queries/r18.rq",
+        "expected": [
+          [
+            "S1",
+            "12"
+          ],
+          [
+            "S2",
+            "."
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r18.rq",
+        "expected": [
+          [
+            "S1",
+            "12"
+          ],
+          [
+            "S2",
+            "."
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R18-4.5-r18",
+    "requirement": "R18",
+    "version": "4.5",
+    "fixture": "fixtures/basic-v4.5.vcf",
+    "preservation": {
+      "condensed": {
+        "query": "queries/r18-decode.rq",
+        "expected": [
+          [
+            "S1",
+            "12"
+          ],
+          [
+            "S2",
+            "."
+          ]
+        ]
+      },
+      "expanded": {
+        "query": "queries/r18.rq",
+        "expected": [
+          [
+            "S1",
+            "12"
+          ],
+          [
+            "S2",
+            "."
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r18.rq",
+        "expected": [
+          [
+            "S1",
+            "12"
+          ],
+          [
+            "S2",
+            "."
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R19-4.1-r19",
+    "requirement": "R19",
+    "version": "4.1",
+    "fixture": "fixtures/basic-v4.1.vcf",
+    "preservation": {
+      "condensed": {
+        "query": "queries/r19-decode.rq",
+        "expected": [
+          [
+            "S1",
+            "0",
+            "false",
+            "0"
+          ],
+          [
+            "S1",
+            "1",
+            "false",
+            "1"
+          ],
+          [
+            "S2",
+            "0",
+            "false",
+            "2"
+          ],
+          [
+            "S2",
+            "1",
+            "true",
+            null
+          ]
+        ]
+      },
+      "expanded": {
+        "query": "queries/r19.rq",
+        "expected": [
+          [
+            "S1",
+            "0",
+            "false",
+            "0"
+          ],
+          [
+            "S1",
+            "1",
+            "false",
+            "1"
+          ],
+          [
+            "S2",
+            "0",
+            "false",
+            "2"
+          ],
+          [
+            "S2",
+            "1",
+            "true",
+            null
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r19.rq",
+        "expected": [
+          [
+            "S1",
+            "0",
+            "false",
+            "0"
+          ],
+          [
+            "S1",
+            "1",
+            "false",
+            "1"
+          ],
+          [
+            "S2",
+            "0",
+            "false",
+            "2"
+          ],
+          [
+            "S2",
+            "1",
+            "true",
+            null
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R19-4.2-r19",
+    "requirement": "R19",
+    "version": "4.2",
+    "fixture": "fixtures/basic-v4.2.vcf",
+    "preservation": {
+      "condensed": {
+        "query": "queries/r19-decode.rq",
+        "expected": [
+          [
+            "S1",
+            "0",
+            "false",
+            "0"
+          ],
+          [
+            "S1",
+            "1",
+            "false",
+            "1"
+          ],
+          [
+            "S2",
+            "0",
+            "false",
+            "2"
+          ],
+          [
+            "S2",
+            "1",
+            "true",
+            null
+          ]
+        ]
+      },
+      "expanded": {
+        "query": "queries/r19.rq",
+        "expected": [
+          [
+            "S1",
+            "0",
+            "false",
+            "0"
+          ],
+          [
+            "S1",
+            "1",
+            "false",
+            "1"
+          ],
+          [
+            "S2",
+            "0",
+            "false",
+            "2"
+          ],
+          [
+            "S2",
+            "1",
+            "true",
+            null
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r19.rq",
+        "expected": [
+          [
+            "S1",
+            "0",
+            "false",
+            "0"
+          ],
+          [
+            "S1",
+            "1",
+            "false",
+            "1"
+          ],
+          [
+            "S2",
+            "0",
+            "false",
+            "2"
+          ],
+          [
+            "S2",
+            "1",
+            "true",
+            null
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R19-4.3-r19",
+    "requirement": "R19",
+    "version": "4.3",
+    "fixture": "fixtures/basic-v4.3.vcf",
+    "preservation": {
+      "condensed": {
+        "query": "queries/r19-decode.rq",
+        "expected": [
+          [
+            "S1",
+            "0",
+            "false",
+            "0"
+          ],
+          [
+            "S1",
+            "1",
+            "false",
+            "1"
+          ],
+          [
+            "S2",
+            "0",
+            "false",
+            "2"
+          ],
+          [
+            "S2",
+            "1",
+            "true",
+            null
+          ]
+        ]
+      },
+      "expanded": {
+        "query": "queries/r19.rq",
+        "expected": [
+          [
+            "S1",
+            "0",
+            "false",
+            "0"
+          ],
+          [
+            "S1",
+            "1",
+            "false",
+            "1"
+          ],
+          [
+            "S2",
+            "0",
+            "false",
+            "2"
+          ],
+          [
+            "S2",
+            "1",
+            "true",
+            null
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r19.rq",
+        "expected": [
+          [
+            "S1",
+            "0",
+            "false",
+            "0"
+          ],
+          [
+            "S1",
+            "1",
+            "false",
+            "1"
+          ],
+          [
+            "S2",
+            "0",
+            "false",
+            "2"
+          ],
+          [
+            "S2",
+            "1",
+            "true",
+            null
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R19-4.4-r19",
+    "requirement": "R19",
+    "version": "4.4",
+    "fixture": "fixtures/basic-v4.4.vcf",
+    "preservation": {
+      "condensed": {
+        "query": "queries/r19-decode.rq",
+        "expected": [
+          [
+            "S1",
+            "0",
+            "false",
+            "0"
+          ],
+          [
+            "S1",
+            "1",
+            "false",
+            "1"
+          ],
+          [
+            "S2",
+            "0",
+            "false",
+            "2"
+          ],
+          [
+            "S2",
+            "1",
+            "true",
+            null
+          ]
+        ]
+      },
+      "expanded": {
+        "query": "queries/r19.rq",
+        "expected": [
+          [
+            "S1",
+            "0",
+            "false",
+            "0"
+          ],
+          [
+            "S1",
+            "1",
+            "false",
+            "1"
+          ],
+          [
+            "S2",
+            "0",
+            "false",
+            "2"
+          ],
+          [
+            "S2",
+            "1",
+            "true",
+            null
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r19.rq",
+        "expected": [
+          [
+            "S1",
+            "0",
+            "false",
+            "0"
+          ],
+          [
+            "S1",
+            "1",
+            "false",
+            "1"
+          ],
+          [
+            "S2",
+            "0",
+            "false",
+            "2"
+          ],
+          [
+            "S2",
+            "1",
+            "true",
+            null
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R19-4.5-r19",
+    "requirement": "R19",
+    "version": "4.5",
+    "fixture": "fixtures/basic-v4.5.vcf",
+    "preservation": {
+      "condensed": {
+        "query": "queries/r19-decode.rq",
+        "expected": [
+          [
+            "S1",
+            "0",
+            "false",
+            "0"
+          ],
+          [
+            "S1",
+            "1",
+            "false",
+            "1"
+          ],
+          [
+            "S2",
+            "0",
+            "false",
+            "2"
+          ],
+          [
+            "S2",
+            "1",
+            "true",
+            null
+          ]
+        ]
+      },
+      "expanded": {
+        "query": "queries/r19.rq",
+        "expected": [
+          [
+            "S1",
+            "0",
+            "false",
+            "0"
+          ],
+          [
+            "S1",
+            "1",
+            "false",
+            "1"
+          ],
+          [
+            "S2",
+            "0",
+            "false",
+            "2"
+          ],
+          [
+            "S2",
+            "1",
+            "true",
+            null
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r19.rq",
+        "expected": [
+          [
+            "S1",
+            "0",
+            "false",
+            "0"
+          ],
+          [
+            "S1",
+            "1",
+            "false",
+            "1"
+          ],
+          [
+            "S2",
+            "0",
+            "false",
+            "2"
+          ],
+          [
+            "S2",
+            "1",
+            "true",
+            null
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R20-4.1-r20",
+    "requirement": "R20",
+    "version": "4.1",
+    "fixture": "fixtures/basic-v4.1.vcf",
+    "preservation": {
+      "condensed": {
+        "query": "queries/r20-decode.rq",
+        "expected": [
+          [
+            "S1",
+            "1",
+            "/"
+          ],
+          [
+            "S2",
+            "1",
+            "|"
+          ]
+        ]
+      },
+      "expanded": {
+        "query": "queries/r20.rq",
+        "expected": [
+          [
+            "S1",
+            "1",
+            "/"
+          ],
+          [
+            "S2",
+            "1",
+            "|"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r20.rq",
+        "expected": [
+          [
+            "S1",
+            "1",
+            "/"
+          ],
+          [
+            "S2",
+            "1",
+            "|"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R20-4.2-r20",
+    "requirement": "R20",
+    "version": "4.2",
+    "fixture": "fixtures/basic-v4.2.vcf",
+    "preservation": {
+      "condensed": {
+        "query": "queries/r20-decode.rq",
+        "expected": [
+          [
+            "S1",
+            "1",
+            "/"
+          ],
+          [
+            "S2",
+            "1",
+            "|"
+          ]
+        ]
+      },
+      "expanded": {
+        "query": "queries/r20.rq",
+        "expected": [
+          [
+            "S1",
+            "1",
+            "/"
+          ],
+          [
+            "S2",
+            "1",
+            "|"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r20.rq",
+        "expected": [
+          [
+            "S1",
+            "1",
+            "/"
+          ],
+          [
+            "S2",
+            "1",
+            "|"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R20-4.3-r20",
+    "requirement": "R20",
+    "version": "4.3",
+    "fixture": "fixtures/basic-v4.3.vcf",
+    "preservation": {
+      "condensed": {
+        "query": "queries/r20-decode.rq",
+        "expected": [
+          [
+            "S1",
+            "1",
+            "/"
+          ],
+          [
+            "S2",
+            "1",
+            "|"
+          ]
+        ]
+      },
+      "expanded": {
+        "query": "queries/r20.rq",
+        "expected": [
+          [
+            "S1",
+            "1",
+            "/"
+          ],
+          [
+            "S2",
+            "1",
+            "|"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r20.rq",
+        "expected": [
+          [
+            "S1",
+            "1",
+            "/"
+          ],
+          [
+            "S2",
+            "1",
+            "|"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R20-4.4-r20",
+    "requirement": "R20",
+    "version": "4.4",
+    "fixture": "fixtures/basic-v4.4.vcf",
+    "preservation": {
+      "condensed": {
+        "query": "queries/r20-decode.rq",
+        "expected": [
+          [
+            "S1",
+            "1",
+            "/"
+          ],
+          [
+            "S2",
+            "1",
+            "|"
+          ]
+        ]
+      },
+      "expanded": {
+        "query": "queries/r20.rq",
+        "expected": [
+          [
+            "S1",
+            "1",
+            "/"
+          ],
+          [
+            "S2",
+            "1",
+            "|"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r20.rq",
+        "expected": [
+          [
+            "S1",
+            "1",
+            "/"
+          ],
+          [
+            "S2",
+            "1",
+            "|"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R20-4.5-r20",
+    "requirement": "R20",
+    "version": "4.5",
+    "fixture": "fixtures/basic-v4.5.vcf",
+    "preservation": {
+      "condensed": {
+        "query": "queries/r20-decode.rq",
+        "expected": [
+          [
+            "S1",
+            "1",
+            "/"
+          ],
+          [
+            "S2",
+            "1",
+            "|"
+          ]
+        ]
+      },
+      "expanded": {
+        "query": "queries/r20.rq",
+        "expected": [
+          [
+            "S1",
+            "1",
+            "/"
+          ],
+          [
+            "S2",
+            "1",
+            "|"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r20.rq",
+        "expected": [
+          [
+            "S1",
+            "1",
+            "/"
+          ],
+          [
+            "S2",
+            "1",
+            "|"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R21-4.1-r21",
+    "requirement": "R21",
+    "version": "4.1",
+    "fixture": "fixtures/basic-v4.1.vcf",
+    "preservation": {
+      "expanded": {
+        "query": "queries/r21.rq",
+        "expected": [
+          [
+            "S1",
+            "."
+          ],
+          [
+            "S2",
+            null
+          ]
+        ]
+      },
+      "condensed": {
+        "query": "queries/r21-decode.rq",
+        "expected": [
+          [
+            "S1",
+            "."
+          ],
+          [
+            "S2",
+            null
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r21.rq",
+        "expected": [
+          [
+            "S1",
+            "."
+          ],
+          [
+            "S2",
+            null
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R21-4.2-r21",
+    "requirement": "R21",
+    "version": "4.2",
+    "fixture": "fixtures/basic-v4.2.vcf",
+    "preservation": {
+      "expanded": {
+        "query": "queries/r21.rq",
+        "expected": [
+          [
+            "S1",
+            "."
+          ],
+          [
+            "S2",
+            null
+          ]
+        ]
+      },
+      "condensed": {
+        "query": "queries/r21-decode.rq",
+        "expected": [
+          [
+            "S1",
+            "."
+          ],
+          [
+            "S2",
+            null
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r21.rq",
+        "expected": [
+          [
+            "S1",
+            "."
+          ],
+          [
+            "S2",
+            null
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R21-4.3-r21",
+    "requirement": "R21",
+    "version": "4.3",
+    "fixture": "fixtures/basic-v4.3.vcf",
+    "preservation": {
+      "expanded": {
+        "query": "queries/r21.rq",
+        "expected": [
+          [
+            "S1",
+            "."
+          ],
+          [
+            "S2",
+            null
+          ]
+        ]
+      },
+      "condensed": {
+        "query": "queries/r21-decode.rq",
+        "expected": [
+          [
+            "S1",
+            "."
+          ],
+          [
+            "S2",
+            null
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r21.rq",
+        "expected": [
+          [
+            "S1",
+            "."
+          ],
+          [
+            "S2",
+            null
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R21-4.4-r21",
+    "requirement": "R21",
+    "version": "4.4",
+    "fixture": "fixtures/basic-v4.4.vcf",
+    "preservation": {
+      "expanded": {
+        "query": "queries/r21.rq",
+        "expected": [
+          [
+            "S1",
+            "."
+          ],
+          [
+            "S2",
+            null
+          ]
+        ]
+      },
+      "condensed": {
+        "query": "queries/r21-decode.rq",
+        "expected": [
+          [
+            "S1",
+            "."
+          ],
+          [
+            "S2",
+            null
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r21.rq",
+        "expected": [
+          [
+            "S1",
+            "."
+          ],
+          [
+            "S2",
+            null
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R21-4.5-r21",
+    "requirement": "R21",
+    "version": "4.5",
+    "fixture": "fixtures/basic-v4.5.vcf",
+    "preservation": {
+      "expanded": {
+        "query": "queries/r21.rq",
+        "expected": [
+          [
+            "S1",
+            "."
+          ],
+          [
+            "S2",
+            null
+          ]
+        ]
+      },
+      "condensed": {
+        "query": "queries/r21-decode.rq",
+        "expected": [
+          [
+            "S1",
+            "."
+          ],
+          [
+            "S2",
+            null
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/r21.rq",
+        "expected": [
+          [
+            "S1",
+            "."
+          ],
+          [
+            "S2",
+            null
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R22-4.5-percent-encoding",
+    "requirement": "R22",
+    "version": "4.5",
+    "fixture": "fixtures/boundaries-v4.5.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/percent-encoding.rq",
+        "expected": [
+          [
+            "left%3Bright%3Aend%25",
+            "left;right:end%"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/percent-encoding.rq",
+        "expected": [
+          [
+            "left%3Bright%3Aend%25",
+            "left;right:end%"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R23-4.5-telomeric-positions",
+    "requirement": "R23",
+    "version": "4.5",
+    "fixture": "fixtures/boundaries-v4.5.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/telomeric-positions.rq",
+        "expected": [
+          [
+            "0",
+            "start"
+          ],
+          [
+            "101",
+            "end"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/telomeric-positions.rq",
+        "expected": [
+          [
+            "0",
+            "start"
+          ],
+          [
+            "101",
+            "end"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R24-4.5-assembly-contigs",
+    "requirement": "R24",
+    "version": "4.5",
+    "fixture": "fixtures/boundaries-v4.5.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/assembly-contigs.rq",
+        "expected": [
+          [
+            "<asm1>",
+            "asm1",
+            "https://example.org/assembly.fa"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/assembly-contigs.rq",
+        "expected": [
+          [
+            "<asm1>",
+            "asm1",
+            "https://example.org/assembly.fa"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R25-4.5-padding-rules",
+    "requirement": "R25",
+    "version": "4.5",
+    "fixture": "fixtures/boundaries-v4.5.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/padding-rules.rq",
+        "expected": [
+          [
+            "1",
+            "AT",
+            "https://w3id.org/vcf-core/vocab#PositionOnePadding",
+            "1"
+          ],
+          [
+            "50",
+            "AT",
+            "https://w3id.org/vcf-core/vocab#SimpleIndelPadding",
+            "1"
+          ],
+          [
+            "60",
+            "A",
+            "https://w3id.org/vcf-core/vocab#SimpleIndelPadding",
+            "1"
+          ],
+          [
+            "70",
+            "A",
+            "https://w3id.org/vcf-core/vocab#SymbolicAllelePadding",
+            "1"
+          ],
+          [
+            "80",
+            "A",
+            "https://w3id.org/vcf-core/vocab#UnspecifiedAlleleNoPadding",
+            "0"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/padding-rules.rq",
+        "expected": [
+          [
+            "1",
+            "AT",
+            "https://w3id.org/vcf-core/vocab#PositionOnePadding",
+            "1"
+          ],
+          [
+            "50",
+            "AT",
+            "https://w3id.org/vcf-core/vocab#SimpleIndelPadding",
+            "1"
+          ],
+          [
+            "60",
+            "A",
+            "https://w3id.org/vcf-core/vocab#SimpleIndelPadding",
+            "1"
+          ],
+          [
+            "70",
+            "A",
+            "https://w3id.org/vcf-core/vocab#SymbolicAllelePadding",
+            "1"
+          ],
+          [
+            "80",
+            "A",
+            "https://w3id.org/vcf-core/vocab#UnspecifiedAlleleNoPadding",
+            "0"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R26-4.5-missingness",
+    "requirement": "R26",
+    "version": "4.5",
+    "fixture": "fixtures/boundaries-v4.5.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/missingness.rq",
+        "expected": [
+          [
+            "95",
+            "whole-field"
+          ],
+          [
+            "96",
+            "all-items"
+          ],
+          [
+            "97",
+            "partial"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/missingness.rq",
+        "expected": [
+          [
+            "95",
+            "whole-field"
+          ],
+          [
+            "96",
+            "all-items"
+          ],
+          [
+            "97",
+            "partial"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R27-4.5-local-alleles",
+    "requirement": "R27",
+    "version": "4.5",
+    "fixture": "fixtures/features-v4.5.vcf",
+    "preservation": {
+      "condensed": {
+        "query": "queries/r27-decode.rq",
+        "expected": [
+          [
+            "1",
+            "1"
+          ],
+          [
+            "2",
+            "2"
+          ]
+        ]
+      },
+      "expanded": {
+        "query": "queries/local-alleles.rq",
+        "expected": [
+          [
+            "1",
+            "1"
+          ],
+          [
+            "2",
+            "2"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/local-alleles.rq",
+        "expected": [
+          [
+            "1",
+            "1"
+          ],
+          [
+            "2",
+            "2"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R28-4.5-mixed-phasing",
+    "requirement": "R28",
+    "version": "4.5",
+    "fixture": "fixtures/features-v4.5.vcf",
+    "preservation": {
+      "condensed": {
+        "query": "queries/r28-decode.rq",
+        "expected": [
+          [
+            "0",
+            "|"
+          ],
+          [
+            "1",
+            "/"
+          ],
+          [
+            "2",
+            "|"
+          ]
+        ]
+      },
+      "expanded": {
+        "query": "queries/mixed-phasing.rq",
+        "expected": [
+          [
+            "0",
+            "|"
+          ],
+          [
+            "1",
+            "/"
+          ],
+          [
+            "2",
+            "|"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/mixed-phasing.rq",
+        "expected": [
+          [
+            "0",
+            "|"
+          ],
+          [
+            "1",
+            "/"
+          ],
+          [
+            "2",
+            "|"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R29-4.5-modifications",
+    "requirement": "R29",
+    "version": "4.5",
+    "fixture": "fixtures/features-v4.5.vcf",
+    "preservation": {
+      "condensed": {
+        "query": "queries/r29-decode.rq",
+        "expected": [
+          [
+            "S1",
+            "0.9",
+            "20"
+          ]
+        ]
+      },
+      "expanded": {
+        "query": "queries/modifications.rq",
+        "expected": [
+          [
+            "S1",
+            "0.9",
+            "20"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/modifications.rq",
+        "expected": [
+          [
+            "S1",
+            "0.9",
+            "20"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R30-4.5-reference-blocks",
+    "requirement": "R30",
+    "version": "4.5",
+    "fixture": "fixtures/gvcf-v4.5.vcf",
+    "preservation": {
+      "condensed": {
+        "query": "queries/r30-decode.rq",
+        "expected": [
+          [
+            "S1",
+            "5",
+            "704"
+          ],
+          [
+            "S2",
+            "10",
+            "709"
+          ]
+        ]
+      },
+      "expanded": {
+        "query": "queries/reference-blocks.rq",
+        "expected": [
+          [
+            "S1",
+            "5",
+            "704"
+          ],
+          [
+            "S2",
+            "10",
+            "709"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/reference-blocks.rq",
+        "expected": [
+          [
+            "S1",
+            "5",
+            "704"
+          ],
+          [
+            "S2",
+            "10",
+            "709"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R31-4.5-repeat-units",
+    "requirement": "R31",
+    "version": "4.5",
+    "fixture": "fixtures/repeats-v4.5.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/repeat-units.rq",
+        "expected": [
+          [
+            "CAG",
+            "10"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/repeat-units.rq",
+        "expected": [
+          [
+            "CAG",
+            "10"
+          ]
+        ]
+      }
+    },
+    "note": "RUC=10 in the VCF: compare the materialized decimal lexical form 10. The earlier serialized example used 10.0; both denote the same decimal value."
+  },
+  {
+    "id": "R32-4.5-breakend-mates",
+    "requirement": "R32",
+    "version": "4.5",
+    "fixture": "fixtures/breakends-v4.5.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/breakend-mates.rq",
+        "expected": [
+          [
+            "bnd1",
+            "bnd2"
+          ],
+          [
+            "bnd2",
+            "bnd1"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/breakend-mates.rq",
+        "expected": [
+          [
+            "bnd1",
+            "bnd2"
+          ],
+          [
+            "bnd2",
+            "bnd1"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R33-4.1-confidence-tuples",
+    "requirement": "R33",
+    "version": "4.1",
+    "fixture": "fixtures/structural-v4.1.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/confidence-tuples.rq",
+        "expected": [
+          [
+            "0",
+            "-5",
+            null
+          ],
+          [
+            "1",
+            "5",
+            null
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/confidence-tuples.rq",
+        "expected": [
+          [
+            "0",
+            "-5",
+            null
+          ],
+          [
+            "1",
+            "5",
+            null
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R33-4.2-confidence-tuples",
+    "requirement": "R33",
+    "version": "4.2",
+    "fixture": "fixtures/structural-v4.2.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/confidence-tuples.rq",
+        "expected": [
+          [
+            "0",
+            "-5",
+            null
+          ],
+          [
+            "1",
+            "5",
+            null
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/confidence-tuples.rq",
+        "expected": [
+          [
+            "0",
+            "-5",
+            null
+          ],
+          [
+            "1",
+            "5",
+            null
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R33-4.3-confidence-tuples",
+    "requirement": "R33",
+    "version": "4.3",
+    "fixture": "fixtures/structural-v4.3.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/confidence-tuples.rq",
+        "expected": [
+          [
+            "0",
+            "-5",
+            null
+          ],
+          [
+            "1",
+            "5",
+            null
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/confidence-tuples.rq",
+        "expected": [
+          [
+            "0",
+            "-5",
+            null
+          ],
+          [
+            "1",
+            "5",
+            null
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R33-4.4-confidence-tuples",
+    "requirement": "R33",
+    "version": "4.4",
+    "fixture": "fixtures/structural-v4.4.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/confidence-tuples.rq",
+        "expected": [
+          [
+            "0",
+            "-5",
+            "1"
+          ],
+          [
+            "1",
+            "5",
+            "1"
+          ],
+          [
+            "2",
+            "-2",
+            "2"
+          ],
+          [
+            "3",
+            "2",
+            "2"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/confidence-tuples.rq",
+        "expected": [
+          [
+            "0",
+            "-5",
+            "1"
+          ],
+          [
+            "1",
+            "5",
+            "1"
+          ],
+          [
+            "2",
+            "-2",
+            "2"
+          ],
+          [
+            "3",
+            "2",
+            "2"
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "R51-4.1-filter-declarations",
+    "requirement": "R51",
+    "version": "4.1",
+    "fixture": "fixtures/basic-v4.1.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/filter-declarations.rq",
+        "expected": [
+          [
+            "q10",
+            "Quality below ten"
+          ],
+          [
+            "s50",
+            "Sample threshold"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/filter-declarations.rq",
+        "expected": [
+          [
+            "q10",
+            "Quality below ten"
+          ],
+          [
+            "s50",
+            "Sample threshold"
+          ]
+        ]
+      }
+    },
+    "note": "Checks both FILTER declarations through their containing file, independently of record filter-code tests."
+  },
+  {
+    "id": "R52-4.1-format-declarations",
+    "requirement": "R52",
+    "version": "4.1",
+    "fixture": "fixtures/basic-v4.1.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/format-declarations.rq",
+        "expected": [
+          [
+            "GT",
+            "1",
+            "https://w3id.org/vcf-core/vocab#StringType",
+            "Genotype"
+          ],
+          [
+            "DP",
+            "1",
+            "https://w3id.org/vcf-core/vocab#IntegerType",
+            "Read depth"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/format-declarations.rq",
+        "expected": [
+          [
+            "GT",
+            "1",
+            "https://w3id.org/vcf-core/vocab#StringType",
+            "Genotype"
+          ],
+          [
+            "DP",
+            "1",
+            "https://w3id.org/vcf-core/vocab#IntegerType",
+            "Read depth"
+          ]
+        ]
+      }
+    },
+    "note": "Checks all four FORMAT declaration attributes; the old R04 query omitted Description."
+  },
+  {
+    "id": "R53-4.1-alt-declarations",
+    "requirement": "R53",
+    "version": "4.1",
+    "fixture": "fixtures/header-audit-v4.1.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/alt-declarations.rq",
+        "expected": [
+          [
+            "1",
+            "DEL:ME",
+            "Mobile element deletion"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/alt-declarations.rq",
+        "expected": [
+          [
+            "1",
+            "DEL:ME",
+            "Mobile element deletion"
+          ]
+        ]
+      }
+    },
+    "note": "The ALT allele must reference its actual file-local declaration, not just share a string."
+  },
+  {
+    "id": "R56-4.1-contig-attributes",
+    "requirement": "R56",
+    "version": "4.1",
+    "fixture": "fixtures/header-audit-v4.1.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/contig-attributes.rq",
+        "expected": [
+          [
+            "chr1",
+            "URL",
+            "https://example.org/one.fa"
+          ],
+          [
+            "chr1",
+            "md5",
+            "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          ],
+          [
+            "chr1",
+            "assembly",
+            "build-one"
+          ],
+          [
+            "chr1",
+            "species",
+            "Species one"
+          ],
+          [
+            "chr2",
+            "URL",
+            "https://example.org/two.fa"
+          ],
+          [
+            "chr2",
+            "md5",
+            "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          ],
+          [
+            "chr2",
+            "assembly",
+            "build-two"
+          ],
+          [
+            "chr2",
+            "species",
+            "Species two"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/contig-attributes.rq",
+        "expected": [
+          [
+            "chr1",
+            "URL",
+            "https://example.org/one.fa"
+          ],
+          [
+            "chr1",
+            "md5",
+            "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          ],
+          [
+            "chr1",
+            "assembly",
+            "build-one"
+          ],
+          [
+            "chr1",
+            "species",
+            "Species one"
+          ],
+          [
+            "chr2",
+            "URL",
+            "https://example.org/two.fa"
+          ],
+          [
+            "chr2",
+            "md5",
+            "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          ],
+          [
+            "chr2",
+            "assembly",
+            "build-two"
+          ],
+          [
+            "chr2",
+            "species",
+            "Species two"
+          ]
+        ]
+      }
+    },
+    "note": "Two distinct contigs detect detached or swapped attributes. md5 is retained, not recomputed."
+  },
+  {
+    "id": "R57-4.1-pedigree-roles",
+    "requirement": "R57",
+    "version": "4.1",
+    "fixture": "fixtures/header-audit-v4.1.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/pedigree-roles.rq",
+        "expected": [
+          [
+            "Child1",
+            "Mother",
+            "Mother1"
+          ],
+          [
+            "Child1",
+            "Father",
+            "Father1"
+          ],
+          [
+            "Child1",
+            "Name_1",
+            "Ancestor1"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/pedigree-roles.rq",
+        "expected": [
+          [
+            "Child1",
+            "Mother",
+            "Mother1"
+          ],
+          [
+            "Child1",
+            "Father",
+            "Father1"
+          ],
+          [
+            "Child1",
+            "Name_1",
+            "Ancestor1"
+          ]
+        ]
+      }
+    },
+    "note": "Tests named role direction through structured attributes; clonal derivation is separately R36."
+  },
+  {
+    "id": "R58-4.1-pedigree-database",
+    "requirement": "R58",
+    "version": "4.1",
+    "fixture": "fixtures/header-audit-v4.1.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/pedigree-database.rq",
+        "expected": [
+          [
+            "https://example.org/pedigree"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/pedigree-database.rq",
+        "expected": [
+          [
+            "https://example.org/pedigree"
+          ]
+        ]
+      }
+    },
+    "note": "Retrieve the URI in its pedigree context, without external database access."
+  },
+  {
+    "id": "R62-4.1-sites-only",
+    "requirement": "R62",
+    "version": "4.1",
+    "fixture": "fixtures/header-audit-v4.1.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/sites-only.rq",
+        "expected": [
+          [
+            "10",
+            "false",
+            "false"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/sites-only.rq",
+        "expected": [
+          [
+            "10",
+            "false",
+            "false"
+          ]
+        ]
+      }
+    },
+    "note": "A positive record/header witness includes checks against invented genotype resources."
+  },
+  {
+    "id": "R61-4.1-number-types",
+    "requirement": "R61",
+    "version": "4.1",
+    "fixture": "fixtures/header-audit-v4.1.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/number-types.rq",
+        "expected": [
+          [
+            "FLAG",
+            "0",
+            "https://w3id.org/vcf-core/vocab#FlagType"
+          ],
+          [
+            "PAIR",
+            "2",
+            "https://w3id.org/vcf-core/vocab#IntegerType"
+          ],
+          [
+            "FRACTION",
+            "1",
+            "https://w3id.org/vcf-core/vocab#FloatType"
+          ],
+          [
+            "BASE",
+            "1",
+            "https://w3id.org/vcf-core/vocab#CharacterType"
+          ],
+          [
+            "TEXT",
+            ".",
+            "https://w3id.org/vcf-core/vocab#StringType"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/number-types.rq",
+        "expected": [
+          [
+            "FLAG",
+            "0",
+            "https://w3id.org/vcf-core/vocab#FlagType"
+          ],
+          [
+            "PAIR",
+            "2",
+            "https://w3id.org/vcf-core/vocab#IntegerType"
+          ],
+          [
+            "FRACTION",
+            "1",
+            "https://w3id.org/vcf-core/vocab#FloatType"
+          ],
+          [
+            "BASE",
+            "1",
+            "https://w3id.org/vcf-core/vocab#CharacterType"
+          ],
+          [
+            "TEXT",
+            ".",
+            "https://w3id.org/vcf-core/vocab#StringType"
+          ]
+        ]
+      }
+    },
+    "note": "Cardinality is a separate attribute from VCF Type; fixed and unknown-length declarations are included."
+  },
+  {
+    "id": "R61-4.1-number-values",
+    "requirement": "R61",
+    "version": "4.1",
+    "fixture": "fixtures/header-audit-v4.1.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/number-values.rq",
+        "expected": [
+          [
+            "PAIR",
+            "1",
+            "3"
+          ],
+          [
+            "PAIR",
+            "2",
+            "8"
+          ],
+          [
+            "FRACTION",
+            "1",
+            "0.25"
+          ],
+          [
+            "BASE",
+            "1",
+            "C"
+          ],
+          [
+            "TEXT",
+            "1",
+            "alpha"
+          ],
+          [
+            "TEXT",
+            "2",
+            "beta"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/number-values.rq",
+        "expected": [
+          [
+            "PAIR",
+            "1",
+            "3"
+          ],
+          [
+            "PAIR",
+            "2",
+            "8"
+          ],
+          [
+            "FRACTION",
+            "1",
+            "0.25"
+          ],
+          [
+            "BASE",
+            "1",
+            "C"
+          ],
+          [
+            "TEXT",
+            "1",
+            "alpha"
+          ],
+          [
+            "TEXT",
+            "2",
+            "beta"
+          ]
+        ]
+      }
+    },
+    "note": "Independent record values check ordering for fixed and variable vectors, including Float, Character and String."
+  },
+  {
+    "id": "R51-4.2-filter-declarations",
+    "requirement": "R51",
+    "version": "4.2",
+    "fixture": "fixtures/basic-v4.2.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/filter-declarations.rq",
+        "expected": [
+          [
+            "q10",
+            "Quality below ten"
+          ],
+          [
+            "s50",
+            "Sample threshold"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/filter-declarations.rq",
+        "expected": [
+          [
+            "q10",
+            "Quality below ten"
+          ],
+          [
+            "s50",
+            "Sample threshold"
+          ]
+        ]
+      }
+    },
+    "note": "Checks both FILTER declarations through their containing file, independently of record filter-code tests."
+  },
+  {
+    "id": "R52-4.2-format-declarations",
+    "requirement": "R52",
+    "version": "4.2",
+    "fixture": "fixtures/basic-v4.2.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/format-declarations.rq",
+        "expected": [
+          [
+            "GT",
+            "1",
+            "https://w3id.org/vcf-core/vocab#StringType",
+            "Genotype"
+          ],
+          [
+            "DP",
+            "1",
+            "https://w3id.org/vcf-core/vocab#IntegerType",
+            "Read depth"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/format-declarations.rq",
+        "expected": [
+          [
+            "GT",
+            "1",
+            "https://w3id.org/vcf-core/vocab#StringType",
+            "Genotype"
+          ],
+          [
+            "DP",
+            "1",
+            "https://w3id.org/vcf-core/vocab#IntegerType",
+            "Read depth"
+          ]
+        ]
+      }
+    },
+    "note": "Checks all four FORMAT declaration attributes; the old R04 query omitted Description."
+  },
+  {
+    "id": "R53-4.2-alt-declarations",
+    "requirement": "R53",
+    "version": "4.2",
+    "fixture": "fixtures/header-audit-v4.2.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/alt-declarations.rq",
+        "expected": [
+          [
+            "1",
+            "DEL:ME",
+            "Mobile element deletion"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/alt-declarations.rq",
+        "expected": [
+          [
+            "1",
+            "DEL:ME",
+            "Mobile element deletion"
+          ]
+        ]
+      }
+    },
+    "note": "The ALT allele must reference its actual file-local declaration, not just share a string."
+  },
+  {
+    "id": "R56-4.2-contig-attributes",
+    "requirement": "R56",
+    "version": "4.2",
+    "fixture": "fixtures/header-audit-v4.2.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/contig-attributes.rq",
+        "expected": [
+          [
+            "chr1",
+            "URL",
+            "https://example.org/one.fa"
+          ],
+          [
+            "chr1",
+            "md5",
+            "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          ],
+          [
+            "chr1",
+            "assembly",
+            "build-one"
+          ],
+          [
+            "chr1",
+            "species",
+            "Species one"
+          ],
+          [
+            "chr2",
+            "URL",
+            "https://example.org/two.fa"
+          ],
+          [
+            "chr2",
+            "md5",
+            "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          ],
+          [
+            "chr2",
+            "assembly",
+            "build-two"
+          ],
+          [
+            "chr2",
+            "species",
+            "Species two"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/contig-attributes.rq",
+        "expected": [
+          [
+            "chr1",
+            "URL",
+            "https://example.org/one.fa"
+          ],
+          [
+            "chr1",
+            "md5",
+            "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          ],
+          [
+            "chr1",
+            "assembly",
+            "build-one"
+          ],
+          [
+            "chr1",
+            "species",
+            "Species one"
+          ],
+          [
+            "chr2",
+            "URL",
+            "https://example.org/two.fa"
+          ],
+          [
+            "chr2",
+            "md5",
+            "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          ],
+          [
+            "chr2",
+            "assembly",
+            "build-two"
+          ],
+          [
+            "chr2",
+            "species",
+            "Species two"
+          ]
+        ]
+      }
+    },
+    "note": "Two distinct contigs detect detached or swapped attributes. md5 is retained, not recomputed."
+  },
+  {
+    "id": "R57-4.2-pedigree-roles",
+    "requirement": "R57",
+    "version": "4.2",
+    "fixture": "fixtures/header-audit-v4.2.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/pedigree-roles.rq",
+        "expected": [
+          [
+            "Child1",
+            "Mother",
+            "Mother1"
+          ],
+          [
+            "Child1",
+            "Father",
+            "Father1"
+          ],
+          [
+            "Child1",
+            "Name_1",
+            "Ancestor1"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/pedigree-roles.rq",
+        "expected": [
+          [
+            "Child1",
+            "Mother",
+            "Mother1"
+          ],
+          [
+            "Child1",
+            "Father",
+            "Father1"
+          ],
+          [
+            "Child1",
+            "Name_1",
+            "Ancestor1"
+          ]
+        ]
+      }
+    },
+    "note": "Tests named role direction through structured attributes; clonal derivation is separately R36."
+  },
+  {
+    "id": "R58-4.2-pedigree-database",
+    "requirement": "R58",
+    "version": "4.2",
+    "fixture": "fixtures/header-audit-v4.2.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/pedigree-database.rq",
+        "expected": [
+          [
+            "https://example.org/pedigree"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/pedigree-database.rq",
+        "expected": [
+          [
+            "https://example.org/pedigree"
+          ]
+        ]
+      }
+    },
+    "note": "Retrieve the URI in its pedigree context, without external database access."
+  },
+  {
+    "id": "R62-4.2-sites-only",
+    "requirement": "R62",
+    "version": "4.2",
+    "fixture": "fixtures/header-audit-v4.2.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/sites-only.rq",
+        "expected": [
+          [
+            "10",
+            "false",
+            "false"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/sites-only.rq",
+        "expected": [
+          [
+            "10",
+            "false",
+            "false"
+          ]
+        ]
+      }
+    },
+    "note": "A positive record/header witness includes checks against invented genotype resources."
+  },
+  {
+    "id": "R61-4.2-number-types",
+    "requirement": "R61",
+    "version": "4.2",
+    "fixture": "fixtures/header-audit-v4.2.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/number-types.rq",
+        "expected": [
+          [
+            "FLAG",
+            "0",
+            "https://w3id.org/vcf-core/vocab#FlagType"
+          ],
+          [
+            "PAIR",
+            "2",
+            "https://w3id.org/vcf-core/vocab#IntegerType"
+          ],
+          [
+            "FRACTION",
+            "1",
+            "https://w3id.org/vcf-core/vocab#FloatType"
+          ],
+          [
+            "BASE",
+            "1",
+            "https://w3id.org/vcf-core/vocab#CharacterType"
+          ],
+          [
+            "TEXT",
+            ".",
+            "https://w3id.org/vcf-core/vocab#StringType"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/number-types.rq",
+        "expected": [
+          [
+            "FLAG",
+            "0",
+            "https://w3id.org/vcf-core/vocab#FlagType"
+          ],
+          [
+            "PAIR",
+            "2",
+            "https://w3id.org/vcf-core/vocab#IntegerType"
+          ],
+          [
+            "FRACTION",
+            "1",
+            "https://w3id.org/vcf-core/vocab#FloatType"
+          ],
+          [
+            "BASE",
+            "1",
+            "https://w3id.org/vcf-core/vocab#CharacterType"
+          ],
+          [
+            "TEXT",
+            ".",
+            "https://w3id.org/vcf-core/vocab#StringType"
+          ]
+        ]
+      }
+    },
+    "note": "Cardinality is a separate attribute from VCF Type; fixed and unknown-length declarations are included."
+  },
+  {
+    "id": "R61-4.2-number-values",
+    "requirement": "R61",
+    "version": "4.2",
+    "fixture": "fixtures/header-audit-v4.2.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/number-values.rq",
+        "expected": [
+          [
+            "PAIR",
+            "1",
+            "3"
+          ],
+          [
+            "PAIR",
+            "2",
+            "8"
+          ],
+          [
+            "FRACTION",
+            "1",
+            "0.25"
+          ],
+          [
+            "BASE",
+            "1",
+            "C"
+          ],
+          [
+            "TEXT",
+            "1",
+            "alpha"
+          ],
+          [
+            "TEXT",
+            "2",
+            "beta"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/number-values.rq",
+        "expected": [
+          [
+            "PAIR",
+            "1",
+            "3"
+          ],
+          [
+            "PAIR",
+            "2",
+            "8"
+          ],
+          [
+            "FRACTION",
+            "1",
+            "0.25"
+          ],
+          [
+            "BASE",
+            "1",
+            "C"
+          ],
+          [
+            "TEXT",
+            "1",
+            "alpha"
+          ],
+          [
+            "TEXT",
+            "2",
+            "beta"
+          ]
+        ]
+      }
+    },
+    "note": "Independent record values check ordering for fixed and variable vectors, including Float, Character and String."
+  },
+  {
+    "id": "R34-4.2-structured-escaping",
+    "requirement": "R34",
+    "version": "4.2",
+    "fixture": "fixtures/header-audit-v4.2.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/structured-escaping.rq",
+        "expected": [
+          [
+            "Description",
+            "Quality \"low\" \\ threshold"
+          ],
+          [
+            "Extra",
+            "001"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/structured-escaping.rq",
+        "expected": [
+          [
+            "Description",
+            "Quality \"low\" \\ threshold"
+          ],
+          [
+            "Extra",
+            "001"
+          ]
+        ]
+      }
+    },
+    "note": "Tests quoted escapes and an additional string attribute. Attribute ordering and arbitrary structured kinds remain test gaps."
+  },
+  {
+    "id": "R65-4.2-info-origin",
+    "requirement": "R65",
+    "version": "4.2",
+    "fixture": "fixtures/header-audit-v4.2.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/info-origin.rq",
+        "expected": [
+          [
+            "ORIGIN",
+            "dbSNP",
+            "00138"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/info-origin.rq",
+        "expected": [
+          [
+            "ORIGIN",
+            "dbSNP",
+            "00138"
+          ]
+        ]
+      }
+    },
+    "note": "Leading zeros in Version must survive; source case-equivalence is not exercised by this case."
+  },
+  {
+    "id": "R51-4.3-filter-declarations",
+    "requirement": "R51",
+    "version": "4.3",
+    "fixture": "fixtures/basic-v4.3.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/filter-declarations.rq",
+        "expected": [
+          [
+            "q10",
+            "Quality below ten"
+          ],
+          [
+            "s50",
+            "Sample threshold"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/filter-declarations.rq",
+        "expected": [
+          [
+            "q10",
+            "Quality below ten"
+          ],
+          [
+            "s50",
+            "Sample threshold"
+          ]
+        ]
+      }
+    },
+    "note": "Checks both FILTER declarations through their containing file, independently of record filter-code tests."
+  },
+  {
+    "id": "R52-4.3-format-declarations",
+    "requirement": "R52",
+    "version": "4.3",
+    "fixture": "fixtures/basic-v4.3.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/format-declarations.rq",
+        "expected": [
+          [
+            "GT",
+            "1",
+            "https://w3id.org/vcf-core/vocab#StringType",
+            "Genotype"
+          ],
+          [
+            "DP",
+            "1",
+            "https://w3id.org/vcf-core/vocab#IntegerType",
+            "Read depth"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/format-declarations.rq",
+        "expected": [
+          [
+            "GT",
+            "1",
+            "https://w3id.org/vcf-core/vocab#StringType",
+            "Genotype"
+          ],
+          [
+            "DP",
+            "1",
+            "https://w3id.org/vcf-core/vocab#IntegerType",
+            "Read depth"
+          ]
+        ]
+      }
+    },
+    "note": "Checks all four FORMAT declaration attributes; the old R04 query omitted Description."
+  },
+  {
+    "id": "R53-4.3-alt-declarations",
+    "requirement": "R53",
+    "version": "4.3",
+    "fixture": "fixtures/header-audit-v4.3.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/alt-declarations.rq",
+        "expected": [
+          [
+            "1",
+            "DEL:ME",
+            "Mobile element deletion"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/alt-declarations.rq",
+        "expected": [
+          [
+            "1",
+            "DEL:ME",
+            "Mobile element deletion"
+          ]
+        ]
+      }
+    },
+    "note": "The ALT allele must reference its actual file-local declaration, not just share a string."
+  },
+  {
+    "id": "R56-4.3-contig-attributes",
+    "requirement": "R56",
+    "version": "4.3",
+    "fixture": "fixtures/header-audit-v4.3.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/contig-attributes.rq",
+        "expected": [
+          [
+            "chr1",
+            "URL",
+            "https://example.org/one.fa"
+          ],
+          [
+            "chr1",
+            "md5",
+            "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          ],
+          [
+            "chr1",
+            "assembly",
+            "build-one"
+          ],
+          [
+            "chr1",
+            "species",
+            "Species one"
+          ],
+          [
+            "chr2",
+            "URL",
+            "https://example.org/two.fa"
+          ],
+          [
+            "chr2",
+            "md5",
+            "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          ],
+          [
+            "chr2",
+            "assembly",
+            "build-two"
+          ],
+          [
+            "chr2",
+            "species",
+            "Species two"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/contig-attributes.rq",
+        "expected": [
+          [
+            "chr1",
+            "URL",
+            "https://example.org/one.fa"
+          ],
+          [
+            "chr1",
+            "md5",
+            "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          ],
+          [
+            "chr1",
+            "assembly",
+            "build-one"
+          ],
+          [
+            "chr1",
+            "species",
+            "Species one"
+          ],
+          [
+            "chr2",
+            "URL",
+            "https://example.org/two.fa"
+          ],
+          [
+            "chr2",
+            "md5",
+            "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          ],
+          [
+            "chr2",
+            "assembly",
+            "build-two"
+          ],
+          [
+            "chr2",
+            "species",
+            "Species two"
+          ]
+        ]
+      }
+    },
+    "note": "Two distinct contigs detect detached or swapped attributes. md5 is retained, not recomputed."
+  },
+  {
+    "id": "R57-4.3-pedigree-roles",
+    "requirement": "R57",
+    "version": "4.3",
+    "fixture": "fixtures/header-audit-v4.3.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/pedigree-roles.rq",
+        "expected": [
+          [
+            "Child1",
+            "Mother",
+            "Mother1"
+          ],
+          [
+            "Child1",
+            "Father",
+            "Father1"
+          ],
+          [
+            "Child1",
+            "Name_1",
+            "Ancestor1"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/pedigree-roles.rq",
+        "expected": [
+          [
+            "Child1",
+            "Mother",
+            "Mother1"
+          ],
+          [
+            "Child1",
+            "Father",
+            "Father1"
+          ],
+          [
+            "Child1",
+            "Name_1",
+            "Ancestor1"
+          ]
+        ]
+      }
+    },
+    "note": "Tests named role direction through structured attributes; clonal derivation is separately R36."
+  },
+  {
+    "id": "R58-4.3-pedigree-database",
+    "requirement": "R58",
+    "version": "4.3",
+    "fixture": "fixtures/header-audit-v4.3.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/pedigree-database.rq",
+        "expected": [
+          [
+            "https://example.org/pedigree"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/pedigree-database.rq",
+        "expected": [
+          [
+            "https://example.org/pedigree"
+          ]
+        ]
+      }
+    },
+    "note": "Retrieve the URI in its pedigree context, without external database access."
+  },
+  {
+    "id": "R62-4.3-sites-only",
+    "requirement": "R62",
+    "version": "4.3",
+    "fixture": "fixtures/header-audit-v4.3.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/sites-only.rq",
+        "expected": [
+          [
+            "10",
+            "false",
+            "false"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/sites-only.rq",
+        "expected": [
+          [
+            "10",
+            "false",
+            "false"
+          ]
+        ]
+      }
+    },
+    "note": "A positive record/header witness includes checks against invented genotype resources."
+  },
+  {
+    "id": "R61-4.3-number-types",
+    "requirement": "R61",
+    "version": "4.3",
+    "fixture": "fixtures/header-audit-v4.3.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/number-types.rq",
+        "expected": [
+          [
+            "FLAG",
+            "0",
+            "https://w3id.org/vcf-core/vocab#FlagType"
+          ],
+          [
+            "PAIR",
+            "2",
+            "https://w3id.org/vcf-core/vocab#IntegerType"
+          ],
+          [
+            "FRACTION",
+            "1",
+            "https://w3id.org/vcf-core/vocab#FloatType"
+          ],
+          [
+            "BASE",
+            "1",
+            "https://w3id.org/vcf-core/vocab#CharacterType"
+          ],
+          [
+            "TEXT",
+            ".",
+            "https://w3id.org/vcf-core/vocab#StringType"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/number-types.rq",
+        "expected": [
+          [
+            "FLAG",
+            "0",
+            "https://w3id.org/vcf-core/vocab#FlagType"
+          ],
+          [
+            "PAIR",
+            "2",
+            "https://w3id.org/vcf-core/vocab#IntegerType"
+          ],
+          [
+            "FRACTION",
+            "1",
+            "https://w3id.org/vcf-core/vocab#FloatType"
+          ],
+          [
+            "BASE",
+            "1",
+            "https://w3id.org/vcf-core/vocab#CharacterType"
+          ],
+          [
+            "TEXT",
+            ".",
+            "https://w3id.org/vcf-core/vocab#StringType"
+          ]
+        ]
+      }
+    },
+    "note": "Cardinality is a separate attribute from VCF Type; fixed and unknown-length declarations are included."
+  },
+  {
+    "id": "R61-4.3-number-values",
+    "requirement": "R61",
+    "version": "4.3",
+    "fixture": "fixtures/header-audit-v4.3.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/number-values.rq",
+        "expected": [
+          [
+            "PAIR",
+            "1",
+            "3"
+          ],
+          [
+            "PAIR",
+            "2",
+            "8"
+          ],
+          [
+            "FRACTION",
+            "1",
+            "0.25"
+          ],
+          [
+            "BASE",
+            "1",
+            "C"
+          ],
+          [
+            "TEXT",
+            "1",
+            "alpha"
+          ],
+          [
+            "TEXT",
+            "2",
+            "beta"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/number-values.rq",
+        "expected": [
+          [
+            "PAIR",
+            "1",
+            "3"
+          ],
+          [
+            "PAIR",
+            "2",
+            "8"
+          ],
+          [
+            "FRACTION",
+            "1",
+            "0.25"
+          ],
+          [
+            "BASE",
+            "1",
+            "C"
+          ],
+          [
+            "TEXT",
+            "1",
+            "alpha"
+          ],
+          [
+            "TEXT",
+            "2",
+            "beta"
+          ]
+        ]
+      }
+    },
+    "note": "Independent record values check ordering for fixed and variable vectors, including Float, Character and String."
+  },
+  {
+    "id": "R34-4.3-structured-escaping",
+    "requirement": "R34",
+    "version": "4.3",
+    "fixture": "fixtures/header-audit-v4.3.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/structured-escaping.rq",
+        "expected": [
+          [
+            "Description",
+            "Quality \"low\" \\ threshold"
+          ],
+          [
+            "Extra",
+            "001"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/structured-escaping.rq",
+        "expected": [
+          [
+            "Description",
+            "Quality \"low\" \\ threshold"
+          ],
+          [
+            "Extra",
+            "001"
+          ]
+        ]
+      }
+    },
+    "note": "Tests quoted escapes and an additional string attribute. Attribute ordering and arbitrary structured kinds remain test gaps."
+  },
+  {
+    "id": "R65-4.3-info-origin",
+    "requirement": "R65",
+    "version": "4.3",
+    "fixture": "fixtures/header-audit-v4.3.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/info-origin.rq",
+        "expected": [
+          [
+            "ORIGIN",
+            "dbSNP",
+            "00138"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/info-origin.rq",
+        "expected": [
+          [
+            "ORIGIN",
+            "dbSNP",
+            "00138"
+          ]
+        ]
+      }
+    },
+    "note": "Leading zeros in Version must survive; source case-equivalence is not exercised by this case."
+  },
+  {
+    "id": "R59-4.3-sample-metadata",
+    "requirement": "R59",
+    "version": "4.3",
+    "fixture": "fixtures/header-audit-v4.3.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/sample-metadata.rq",
+        "expected": [
+          [
+            "S1",
+            "Disease",
+            "None"
+          ],
+          [
+            "S1",
+            "Description",
+            "Control"
+          ],
+          [
+            "S1",
+            "DOI",
+            "https://example.org/control"
+          ],
+          [
+            "S2",
+            "Disease",
+            "Cancer"
+          ],
+          [
+            "S2",
+            "Description",
+            "Tumour"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/sample-metadata.rq",
+        "expected": [
+          [
+            "S1",
+            "Disease",
+            "None"
+          ],
+          [
+            "S1",
+            "Description",
+            "Control"
+          ],
+          [
+            "S1",
+            "DOI",
+            "https://example.org/control"
+          ],
+          [
+            "S2",
+            "Disease",
+            "Cancer"
+          ],
+          [
+            "S2",
+            "Description",
+            "Tumour"
+          ]
+        ]
+      }
+    },
+    "note": "Keep phenotype attributes attached to the correct SAMPLE ID."
+  },
+  {
+    "id": "R59-4.3-meta-values",
+    "requirement": "R59",
+    "version": "4.3",
+    "fixture": "fixtures/header-audit-v4.3.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/meta-values.rq",
+        "expected": [
+          [
+            "Disease",
+            ".",
+            "https://w3id.org/vcf-core/vocab#StringType",
+            "None"
+          ],
+          [
+            "Disease",
+            ".",
+            "https://w3id.org/vcf-core/vocab#StringType",
+            "Cancer"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/meta-values.rq",
+        "expected": [
+          [
+            "Disease",
+            ".",
+            "https://w3id.org/vcf-core/vocab#StringType",
+            "None"
+          ],
+          [
+            "Disease",
+            ".",
+            "https://w3id.org/vcf-core/vocab#StringType",
+            "Cancer"
+          ]
+        ]
+      }
+    },
+    "note": "META defines an allowed-value set and its declared Number and Type."
+  },
+  {
+    "id": "R51-4.4-filter-declarations",
+    "requirement": "R51",
+    "version": "4.4",
+    "fixture": "fixtures/basic-v4.4.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/filter-declarations.rq",
+        "expected": [
+          [
+            "q10",
+            "Quality below ten"
+          ],
+          [
+            "s50",
+            "Sample threshold"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/filter-declarations.rq",
+        "expected": [
+          [
+            "q10",
+            "Quality below ten"
+          ],
+          [
+            "s50",
+            "Sample threshold"
+          ]
+        ]
+      }
+    },
+    "note": "Checks both FILTER declarations through their containing file, independently of record filter-code tests."
+  },
+  {
+    "id": "R52-4.4-format-declarations",
+    "requirement": "R52",
+    "version": "4.4",
+    "fixture": "fixtures/basic-v4.4.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/format-declarations.rq",
+        "expected": [
+          [
+            "GT",
+            "1",
+            "https://w3id.org/vcf-core/vocab#StringType",
+            "Genotype"
+          ],
+          [
+            "DP",
+            "1",
+            "https://w3id.org/vcf-core/vocab#IntegerType",
+            "Read depth"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/format-declarations.rq",
+        "expected": [
+          [
+            "GT",
+            "1",
+            "https://w3id.org/vcf-core/vocab#StringType",
+            "Genotype"
+          ],
+          [
+            "DP",
+            "1",
+            "https://w3id.org/vcf-core/vocab#IntegerType",
+            "Read depth"
+          ]
+        ]
+      }
+    },
+    "note": "Checks all four FORMAT declaration attributes; the old R04 query omitted Description."
+  },
+  {
+    "id": "R53-4.4-alt-declarations",
+    "requirement": "R53",
+    "version": "4.4",
+    "fixture": "fixtures/header-audit-v4.4.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/alt-declarations.rq",
+        "expected": [
+          [
+            "1",
+            "DEL:ME",
+            "Mobile element deletion"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/alt-declarations.rq",
+        "expected": [
+          [
+            "1",
+            "DEL:ME",
+            "Mobile element deletion"
+          ]
+        ]
+      }
+    },
+    "note": "The ALT allele must reference its actual file-local declaration, not just share a string."
+  },
+  {
+    "id": "R56-4.4-contig-attributes",
+    "requirement": "R56",
+    "version": "4.4",
+    "fixture": "fixtures/header-audit-v4.4.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/contig-attributes.rq",
+        "expected": [
+          [
+            "chr1",
+            "URL",
+            "https://example.org/one.fa"
+          ],
+          [
+            "chr1",
+            "md5",
+            "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          ],
+          [
+            "chr1",
+            "assembly",
+            "build-one"
+          ],
+          [
+            "chr1",
+            "species",
+            "Species one"
+          ],
+          [
+            "chr2",
+            "URL",
+            "https://example.org/two.fa"
+          ],
+          [
+            "chr2",
+            "md5",
+            "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          ],
+          [
+            "chr2",
+            "assembly",
+            "build-two"
+          ],
+          [
+            "chr2",
+            "species",
+            "Species two"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/contig-attributes.rq",
+        "expected": [
+          [
+            "chr1",
+            "URL",
+            "https://example.org/one.fa"
+          ],
+          [
+            "chr1",
+            "md5",
+            "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          ],
+          [
+            "chr1",
+            "assembly",
+            "build-one"
+          ],
+          [
+            "chr1",
+            "species",
+            "Species one"
+          ],
+          [
+            "chr2",
+            "URL",
+            "https://example.org/two.fa"
+          ],
+          [
+            "chr2",
+            "md5",
+            "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          ],
+          [
+            "chr2",
+            "assembly",
+            "build-two"
+          ],
+          [
+            "chr2",
+            "species",
+            "Species two"
+          ]
+        ]
+      }
+    },
+    "note": "Two distinct contigs detect detached or swapped attributes. md5 is retained, not recomputed."
+  },
+  {
+    "id": "R57-4.4-pedigree-roles",
+    "requirement": "R57",
+    "version": "4.4",
+    "fixture": "fixtures/header-audit-v4.4.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/pedigree-roles.rq",
+        "expected": [
+          [
+            "Child1",
+            "Mother",
+            "Mother1"
+          ],
+          [
+            "Child1",
+            "Father",
+            "Father1"
+          ],
+          [
+            "Child1",
+            "Name_1",
+            "Ancestor1"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/pedigree-roles.rq",
+        "expected": [
+          [
+            "Child1",
+            "Mother",
+            "Mother1"
+          ],
+          [
+            "Child1",
+            "Father",
+            "Father1"
+          ],
+          [
+            "Child1",
+            "Name_1",
+            "Ancestor1"
+          ]
+        ]
+      }
+    },
+    "note": "Tests named role direction through structured attributes; clonal derivation is separately R36."
+  },
+  {
+    "id": "R58-4.4-pedigree-database",
+    "requirement": "R58",
+    "version": "4.4",
+    "fixture": "fixtures/header-audit-v4.4.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/pedigree-database.rq",
+        "expected": [
+          [
+            "https://example.org/pedigree"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/pedigree-database.rq",
+        "expected": [
+          [
+            "https://example.org/pedigree"
+          ]
+        ]
+      }
+    },
+    "note": "Retrieve the URI in its pedigree context, without external database access."
+  },
+  {
+    "id": "R62-4.4-sites-only",
+    "requirement": "R62",
+    "version": "4.4",
+    "fixture": "fixtures/header-audit-v4.4.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/sites-only.rq",
+        "expected": [
+          [
+            "10",
+            "false",
+            "false"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/sites-only.rq",
+        "expected": [
+          [
+            "10",
+            "false",
+            "false"
+          ]
+        ]
+      }
+    },
+    "note": "A positive record/header witness includes checks against invented genotype resources."
+  },
+  {
+    "id": "R61-4.4-number-types",
+    "requirement": "R61",
+    "version": "4.4",
+    "fixture": "fixtures/header-audit-v4.4.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/number-types.rq",
+        "expected": [
+          [
+            "FLAG",
+            "0",
+            "https://w3id.org/vcf-core/vocab#FlagType"
+          ],
+          [
+            "PAIR",
+            "2",
+            "https://w3id.org/vcf-core/vocab#IntegerType"
+          ],
+          [
+            "FRACTION",
+            "1",
+            "https://w3id.org/vcf-core/vocab#FloatType"
+          ],
+          [
+            "BASE",
+            "1",
+            "https://w3id.org/vcf-core/vocab#CharacterType"
+          ],
+          [
+            "TEXT",
+            ".",
+            "https://w3id.org/vcf-core/vocab#StringType"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/number-types.rq",
+        "expected": [
+          [
+            "FLAG",
+            "0",
+            "https://w3id.org/vcf-core/vocab#FlagType"
+          ],
+          [
+            "PAIR",
+            "2",
+            "https://w3id.org/vcf-core/vocab#IntegerType"
+          ],
+          [
+            "FRACTION",
+            "1",
+            "https://w3id.org/vcf-core/vocab#FloatType"
+          ],
+          [
+            "BASE",
+            "1",
+            "https://w3id.org/vcf-core/vocab#CharacterType"
+          ],
+          [
+            "TEXT",
+            ".",
+            "https://w3id.org/vcf-core/vocab#StringType"
+          ]
+        ]
+      }
+    },
+    "note": "Cardinality is a separate attribute from VCF Type; fixed and unknown-length declarations are included."
+  },
+  {
+    "id": "R61-4.4-number-values",
+    "requirement": "R61",
+    "version": "4.4",
+    "fixture": "fixtures/header-audit-v4.4.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/number-values.rq",
+        "expected": [
+          [
+            "PAIR",
+            "1",
+            "3"
+          ],
+          [
+            "PAIR",
+            "2",
+            "8"
+          ],
+          [
+            "FRACTION",
+            "1",
+            "0.25"
+          ],
+          [
+            "BASE",
+            "1",
+            "C"
+          ],
+          [
+            "TEXT",
+            "1",
+            "alpha"
+          ],
+          [
+            "TEXT",
+            "2",
+            "beta"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/number-values.rq",
+        "expected": [
+          [
+            "PAIR",
+            "1",
+            "3"
+          ],
+          [
+            "PAIR",
+            "2",
+            "8"
+          ],
+          [
+            "FRACTION",
+            "1",
+            "0.25"
+          ],
+          [
+            "BASE",
+            "1",
+            "C"
+          ],
+          [
+            "TEXT",
+            "1",
+            "alpha"
+          ],
+          [
+            "TEXT",
+            "2",
+            "beta"
+          ]
+        ]
+      }
+    },
+    "note": "Independent record values check ordering for fixed and variable vectors, including Float, Character and String."
+  },
+  {
+    "id": "R34-4.4-structured-escaping",
+    "requirement": "R34",
+    "version": "4.4",
+    "fixture": "fixtures/header-audit-v4.4.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/structured-escaping.rq",
+        "expected": [
+          [
+            "Description",
+            "Quality \"low\" \\ threshold"
+          ],
+          [
+            "Extra",
+            "001"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/structured-escaping.rq",
+        "expected": [
+          [
+            "Description",
+            "Quality \"low\" \\ threshold"
+          ],
+          [
+            "Extra",
+            "001"
+          ]
+        ]
+      }
+    },
+    "note": "Tests quoted escapes and an additional string attribute. Attribute ordering and arbitrary structured kinds remain test gaps."
+  },
+  {
+    "id": "R65-4.4-info-origin",
+    "requirement": "R65",
+    "version": "4.4",
+    "fixture": "fixtures/header-audit-v4.4.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/info-origin.rq",
+        "expected": [
+          [
+            "ORIGIN",
+            "dbSNP",
+            "00138"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/info-origin.rq",
+        "expected": [
+          [
+            "ORIGIN",
+            "dbSNP",
+            "00138"
+          ]
+        ]
+      }
+    },
+    "note": "Leading zeros in Version must survive; source case-equivalence is not exercised by this case."
+  },
+  {
+    "id": "R59-4.4-sample-metadata",
+    "requirement": "R59",
+    "version": "4.4",
+    "fixture": "fixtures/header-audit-v4.4.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/sample-metadata.rq",
+        "expected": [
+          [
+            "S1",
+            "Disease",
+            "None"
+          ],
+          [
+            "S1",
+            "Description",
+            "Control"
+          ],
+          [
+            "S1",
+            "DOI",
+            "https://example.org/control"
+          ],
+          [
+            "S2",
+            "Disease",
+            "Cancer"
+          ],
+          [
+            "S2",
+            "Description",
+            "Tumour"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/sample-metadata.rq",
+        "expected": [
+          [
+            "S1",
+            "Disease",
+            "None"
+          ],
+          [
+            "S1",
+            "Description",
+            "Control"
+          ],
+          [
+            "S1",
+            "DOI",
+            "https://example.org/control"
+          ],
+          [
+            "S2",
+            "Disease",
+            "Cancer"
+          ],
+          [
+            "S2",
+            "Description",
+            "Tumour"
+          ]
+        ]
+      }
+    },
+    "note": "Keep phenotype attributes attached to the correct SAMPLE ID."
+  },
+  {
+    "id": "R59-4.4-meta-values",
+    "requirement": "R59",
+    "version": "4.4",
+    "fixture": "fixtures/header-audit-v4.4.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/meta-values.rq",
+        "expected": [
+          [
+            "Disease",
+            ".",
+            "https://w3id.org/vcf-core/vocab#StringType",
+            "None"
+          ],
+          [
+            "Disease",
+            ".",
+            "https://w3id.org/vcf-core/vocab#StringType",
+            "Cancer"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/meta-values.rq",
+        "expected": [
+          [
+            "Disease",
+            ".",
+            "https://w3id.org/vcf-core/vocab#StringType",
+            "None"
+          ],
+          [
+            "Disease",
+            ".",
+            "https://w3id.org/vcf-core/vocab#StringType",
+            "Cancer"
+          ]
+        ]
+      }
+    },
+    "note": "META defines an allowed-value set and its declared Number and Type."
+  },
+  {
+    "id": "R51-4.5-filter-declarations",
+    "requirement": "R51",
+    "version": "4.5",
+    "fixture": "fixtures/basic-v4.5.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/filter-declarations.rq",
+        "expected": [
+          [
+            "q10",
+            "Quality below ten"
+          ],
+          [
+            "s50",
+            "Sample threshold"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/filter-declarations.rq",
+        "expected": [
+          [
+            "q10",
+            "Quality below ten"
+          ],
+          [
+            "s50",
+            "Sample threshold"
+          ]
+        ]
+      }
+    },
+    "note": "Checks both FILTER declarations through their containing file, independently of record filter-code tests."
+  },
+  {
+    "id": "R52-4.5-format-declarations",
+    "requirement": "R52",
+    "version": "4.5",
+    "fixture": "fixtures/basic-v4.5.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/format-declarations.rq",
+        "expected": [
+          [
+            "GT",
+            "1",
+            "https://w3id.org/vcf-core/vocab#StringType",
+            "Genotype"
+          ],
+          [
+            "DP",
+            "1",
+            "https://w3id.org/vcf-core/vocab#IntegerType",
+            "Read depth"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/format-declarations.rq",
+        "expected": [
+          [
+            "GT",
+            "1",
+            "https://w3id.org/vcf-core/vocab#StringType",
+            "Genotype"
+          ],
+          [
+            "DP",
+            "1",
+            "https://w3id.org/vcf-core/vocab#IntegerType",
+            "Read depth"
+          ]
+        ]
+      }
+    },
+    "note": "Checks all four FORMAT declaration attributes; the old R04 query omitted Description."
+  },
+  {
+    "id": "R53-4.5-alt-declarations",
+    "requirement": "R53",
+    "version": "4.5",
+    "fixture": "fixtures/header-audit-v4.5.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/alt-declarations.rq",
+        "expected": [
+          [
+            "1",
+            "DEL:ME",
+            "Mobile element deletion"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/alt-declarations.rq",
+        "expected": [
+          [
+            "1",
+            "DEL:ME",
+            "Mobile element deletion"
+          ]
+        ]
+      }
+    },
+    "note": "The ALT allele must reference its actual file-local declaration, not just share a string."
+  },
+  {
+    "id": "R56-4.5-contig-attributes",
+    "requirement": "R56",
+    "version": "4.5",
+    "fixture": "fixtures/header-audit-v4.5.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/contig-attributes.rq",
+        "expected": [
+          [
+            "chr1",
+            "URL",
+            "https://example.org/one.fa"
+          ],
+          [
+            "chr1",
+            "md5",
+            "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          ],
+          [
+            "chr1",
+            "assembly",
+            "build-one"
+          ],
+          [
+            "chr1",
+            "species",
+            "Species one"
+          ],
+          [
+            "chr2",
+            "URL",
+            "https://example.org/two.fa"
+          ],
+          [
+            "chr2",
+            "md5",
+            "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          ],
+          [
+            "chr2",
+            "assembly",
+            "build-two"
+          ],
+          [
+            "chr2",
+            "species",
+            "Species two"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/contig-attributes.rq",
+        "expected": [
+          [
+            "chr1",
+            "URL",
+            "https://example.org/one.fa"
+          ],
+          [
+            "chr1",
+            "md5",
+            "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          ],
+          [
+            "chr1",
+            "assembly",
+            "build-one"
+          ],
+          [
+            "chr1",
+            "species",
+            "Species one"
+          ],
+          [
+            "chr2",
+            "URL",
+            "https://example.org/two.fa"
+          ],
+          [
+            "chr2",
+            "md5",
+            "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          ],
+          [
+            "chr2",
+            "assembly",
+            "build-two"
+          ],
+          [
+            "chr2",
+            "species",
+            "Species two"
+          ]
+        ]
+      }
+    },
+    "note": "Two distinct contigs detect detached or swapped attributes. md5 is retained, not recomputed."
+  },
+  {
+    "id": "R57-4.5-pedigree-roles",
+    "requirement": "R57",
+    "version": "4.5",
+    "fixture": "fixtures/header-audit-v4.5.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/pedigree-roles.rq",
+        "expected": [
+          [
+            "Child1",
+            "Mother",
+            "Mother1"
+          ],
+          [
+            "Child1",
+            "Father",
+            "Father1"
+          ],
+          [
+            "Child1",
+            "Name_1",
+            "Ancestor1"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/pedigree-roles.rq",
+        "expected": [
+          [
+            "Child1",
+            "Mother",
+            "Mother1"
+          ],
+          [
+            "Child1",
+            "Father",
+            "Father1"
+          ],
+          [
+            "Child1",
+            "Name_1",
+            "Ancestor1"
+          ]
+        ]
+      }
+    },
+    "note": "Tests named role direction through structured attributes; clonal derivation is separately R36."
+  },
+  {
+    "id": "R58-4.5-pedigree-database",
+    "requirement": "R58",
+    "version": "4.5",
+    "fixture": "fixtures/header-audit-v4.5.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/pedigree-database.rq",
+        "expected": [
+          [
+            "https://example.org/pedigree"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/pedigree-database.rq",
+        "expected": [
+          [
+            "https://example.org/pedigree"
+          ]
+        ]
+      }
+    },
+    "note": "Retrieve the URI in its pedigree context, without external database access."
+  },
+  {
+    "id": "R62-4.5-sites-only",
+    "requirement": "R62",
+    "version": "4.5",
+    "fixture": "fixtures/header-audit-v4.5.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/sites-only.rq",
+        "expected": [
+          [
+            "10",
+            "false",
+            "false"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/sites-only.rq",
+        "expected": [
+          [
+            "10",
+            "false",
+            "false"
+          ]
+        ]
+      }
+    },
+    "note": "A positive record/header witness includes checks against invented genotype resources."
+  },
+  {
+    "id": "R61-4.5-number-types",
+    "requirement": "R61",
+    "version": "4.5",
+    "fixture": "fixtures/header-audit-v4.5.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/number-types.rq",
+        "expected": [
+          [
+            "FLAG",
+            "0",
+            "https://w3id.org/vcf-core/vocab#FlagType"
+          ],
+          [
+            "PAIR",
+            "2",
+            "https://w3id.org/vcf-core/vocab#IntegerType"
+          ],
+          [
+            "FRACTION",
+            "1",
+            "https://w3id.org/vcf-core/vocab#FloatType"
+          ],
+          [
+            "BASE",
+            "1",
+            "https://w3id.org/vcf-core/vocab#CharacterType"
+          ],
+          [
+            "TEXT",
+            ".",
+            "https://w3id.org/vcf-core/vocab#StringType"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/number-types.rq",
+        "expected": [
+          [
+            "FLAG",
+            "0",
+            "https://w3id.org/vcf-core/vocab#FlagType"
+          ],
+          [
+            "PAIR",
+            "2",
+            "https://w3id.org/vcf-core/vocab#IntegerType"
+          ],
+          [
+            "FRACTION",
+            "1",
+            "https://w3id.org/vcf-core/vocab#FloatType"
+          ],
+          [
+            "BASE",
+            "1",
+            "https://w3id.org/vcf-core/vocab#CharacterType"
+          ],
+          [
+            "TEXT",
+            ".",
+            "https://w3id.org/vcf-core/vocab#StringType"
+          ]
+        ]
+      }
+    },
+    "note": "Cardinality is a separate attribute from VCF Type; fixed and unknown-length declarations are included."
+  },
+  {
+    "id": "R61-4.5-number-values",
+    "requirement": "R61",
+    "version": "4.5",
+    "fixture": "fixtures/header-audit-v4.5.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/number-values.rq",
+        "expected": [
+          [
+            "PAIR",
+            "1",
+            "3"
+          ],
+          [
+            "PAIR",
+            "2",
+            "8"
+          ],
+          [
+            "FRACTION",
+            "1",
+            "0.25"
+          ],
+          [
+            "BASE",
+            "1",
+            "C"
+          ],
+          [
+            "TEXT",
+            "1",
+            "alpha"
+          ],
+          [
+            "TEXT",
+            "2",
+            "beta"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/number-values.rq",
+        "expected": [
+          [
+            "PAIR",
+            "1",
+            "3"
+          ],
+          [
+            "PAIR",
+            "2",
+            "8"
+          ],
+          [
+            "FRACTION",
+            "1",
+            "0.25"
+          ],
+          [
+            "BASE",
+            "1",
+            "C"
+          ],
+          [
+            "TEXT",
+            "1",
+            "alpha"
+          ],
+          [
+            "TEXT",
+            "2",
+            "beta"
+          ]
+        ]
+      }
+    },
+    "note": "Independent record values check ordering for fixed and variable vectors, including Float, Character and String."
+  },
+  {
+    "id": "R34-4.5-structured-escaping",
+    "requirement": "R34",
+    "version": "4.5",
+    "fixture": "fixtures/header-audit-v4.5.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/structured-escaping.rq",
+        "expected": [
+          [
+            "Description",
+            "Quality \"low\" \\ threshold"
+          ],
+          [
+            "Extra",
+            "001"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/structured-escaping.rq",
+        "expected": [
+          [
+            "Description",
+            "Quality \"low\" \\ threshold"
+          ],
+          [
+            "Extra",
+            "001"
+          ]
+        ]
+      }
+    },
+    "note": "Tests quoted escapes and an additional string attribute. Attribute ordering and arbitrary structured kinds remain test gaps."
+  },
+  {
+    "id": "R65-4.5-info-origin",
+    "requirement": "R65",
+    "version": "4.5",
+    "fixture": "fixtures/header-audit-v4.5.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/info-origin.rq",
+        "expected": [
+          [
+            "ORIGIN",
+            "dbSNP",
+            "00138"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/info-origin.rq",
+        "expected": [
+          [
+            "ORIGIN",
+            "dbSNP",
+            "00138"
+          ]
+        ]
+      }
+    },
+    "note": "Leading zeros in Version must survive; source case-equivalence is not exercised by this case."
+  },
+  {
+    "id": "R59-4.5-sample-metadata",
+    "requirement": "R59",
+    "version": "4.5",
+    "fixture": "fixtures/header-audit-v4.5.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/sample-metadata.rq",
+        "expected": [
+          [
+            "S1",
+            "Disease",
+            "None"
+          ],
+          [
+            "S1",
+            "Description",
+            "Control"
+          ],
+          [
+            "S1",
+            "DOI",
+            "https://example.org/control"
+          ],
+          [
+            "S2",
+            "Disease",
+            "Cancer"
+          ],
+          [
+            "S2",
+            "Description",
+            "Tumour"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/sample-metadata.rq",
+        "expected": [
+          [
+            "S1",
+            "Disease",
+            "None"
+          ],
+          [
+            "S1",
+            "Description",
+            "Control"
+          ],
+          [
+            "S1",
+            "DOI",
+            "https://example.org/control"
+          ],
+          [
+            "S2",
+            "Disease",
+            "Cancer"
+          ],
+          [
+            "S2",
+            "Description",
+            "Tumour"
+          ]
+        ]
+      }
+    },
+    "note": "Keep phenotype attributes attached to the correct SAMPLE ID."
+  },
+  {
+    "id": "R59-4.5-meta-values",
+    "requirement": "R59",
+    "version": "4.5",
+    "fixture": "fixtures/header-audit-v4.5.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/meta-values.rq",
+        "expected": [
+          [
+            "Disease",
+            ".",
+            "https://w3id.org/vcf-core/vocab#StringType",
+            "None"
+          ],
+          [
+            "Disease",
+            ".",
+            "https://w3id.org/vcf-core/vocab#StringType",
+            "Cancer"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/meta-values.rq",
+        "expected": [
+          [
+            "Disease",
+            ".",
+            "https://w3id.org/vcf-core/vocab#StringType",
+            "None"
+          ],
+          [
+            "Disease",
+            ".",
+            "https://w3id.org/vcf-core/vocab#StringType",
+            "Cancer"
+          ]
+        ]
+      }
+    },
+    "note": "META defines an allowed-value set and its declared Number and Type."
+  },
+  {
+    "id": "R51-4.1-filter-definition-links",
+    "requirement": "R51",
+    "version": "4.1",
+    "fixture": "fixtures/basic-v4.1.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/filter-definition-links.rq",
+        "expected": [
+          [
+            "30",
+            "1",
+            "q10",
+            "Quality below ten"
+          ],
+          [
+            "30",
+            "2",
+            "s50",
+            "Sample threshold"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/filter-definition-links.rq",
+        "expected": [
+          [
+            "30",
+            "1",
+            "q10",
+            "Quality below ten"
+          ],
+          [
+            "30",
+            "2",
+            "s50",
+            "Sample threshold"
+          ]
+        ]
+      }
+    },
+    "note": "Independent expected code/description pairs from the fixture check that failed record codes resolve to their file-local FILTER definitions."
+  },
+  {
+    "id": "R51-4.2-filter-definition-links",
+    "requirement": "R51",
+    "version": "4.2",
+    "fixture": "fixtures/basic-v4.2.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/filter-definition-links.rq",
+        "expected": [
+          [
+            "30",
+            "1",
+            "q10",
+            "Quality below ten"
+          ],
+          [
+            "30",
+            "2",
+            "s50",
+            "Sample threshold"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/filter-definition-links.rq",
+        "expected": [
+          [
+            "30",
+            "1",
+            "q10",
+            "Quality below ten"
+          ],
+          [
+            "30",
+            "2",
+            "s50",
+            "Sample threshold"
+          ]
+        ]
+      }
+    },
+    "note": "Independent expected code/description pairs from the fixture check that failed record codes resolve to their file-local FILTER definitions."
+  },
+  {
+    "id": "R51-4.3-filter-definition-links",
+    "requirement": "R51",
+    "version": "4.3",
+    "fixture": "fixtures/basic-v4.3.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/filter-definition-links.rq",
+        "expected": [
+          [
+            "30",
+            "1",
+            "q10",
+            "Quality below ten"
+          ],
+          [
+            "30",
+            "2",
+            "s50",
+            "Sample threshold"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/filter-definition-links.rq",
+        "expected": [
+          [
+            "30",
+            "1",
+            "q10",
+            "Quality below ten"
+          ],
+          [
+            "30",
+            "2",
+            "s50",
+            "Sample threshold"
+          ]
+        ]
+      }
+    },
+    "note": "Independent expected code/description pairs from the fixture check that failed record codes resolve to their file-local FILTER definitions."
+  },
+  {
+    "id": "R51-4.4-filter-definition-links",
+    "requirement": "R51",
+    "version": "4.4",
+    "fixture": "fixtures/basic-v4.4.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/filter-definition-links.rq",
+        "expected": [
+          [
+            "30",
+            "1",
+            "q10",
+            "Quality below ten"
+          ],
+          [
+            "30",
+            "2",
+            "s50",
+            "Sample threshold"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/filter-definition-links.rq",
+        "expected": [
+          [
+            "30",
+            "1",
+            "q10",
+            "Quality below ten"
+          ],
+          [
+            "30",
+            "2",
+            "s50",
+            "Sample threshold"
+          ]
+        ]
+      }
+    },
+    "note": "Independent expected code/description pairs from the fixture check that failed record codes resolve to their file-local FILTER definitions."
+  },
+  {
+    "id": "R51-4.5-filter-definition-links",
+    "requirement": "R51",
+    "version": "4.5",
+    "fixture": "fixtures/basic-v4.5.vcf",
+    "preservation": {
+      "both": {
+        "query": "queries/filter-definition-links.rq",
+        "expected": [
+          [
+            "30",
+            "1",
+            "q10",
+            "Quality below ten"
+          ],
+          [
+            "30",
+            "2",
+            "s50",
+            "Sample threshold"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/filter-definition-links.rq",
+        "expected": [
+          [
+            "30",
+            "1",
+            "q10",
+            "Quality below ten"
+          ],
+          [
+            "30",
+            "2",
+            "s50",
+            "Sample threshold"
+          ]
+        ]
+      }
+    },
+    "note": "Independent expected code/description pairs from the fixture check that failed record codes resolve to their file-local FILTER definitions."
+  },
+  {
+    "id": "R60-4.1-sample-filter-states",
+    "requirement": "R60",
+    "version": "4.1",
+    "fixture": "fixtures/filter-samples-v4.1.vcf",
+    "preservation": {
+      "expanded": {
+        "query": "queries/sample-filter-states.rq",
+        "expected": [
+          [
+            "S1",
+            "https://w3id.org/vcf-core/vocab#FiltersPassed",
+            null,
+            null,
+            null
+          ],
+          [
+            "S2",
+            "https://w3id.org/vcf-core/vocab#FiltersNotApplied",
+            null,
+            null,
+            null
+          ],
+          [
+            "S3",
+            "https://w3id.org/vcf-core/vocab#FiltersFailed",
+            "1",
+            "q10",
+            "Quality below ten"
+          ],
+          [
+            "S3",
+            "https://w3id.org/vcf-core/vocab#FiltersFailed",
+            "2",
+            "s50",
+            "Sample threshold"
+          ]
+        ]
+      },
+      "condensed": {
+        "query": "queries/sample-filter-decode.rq",
+        "expected": [
+          [
+            "S1",
+            "https://w3id.org/vcf-core/vocab#FiltersPassed",
+            null,
+            null,
+            null
+          ],
+          [
+            "S2",
+            "https://w3id.org/vcf-core/vocab#FiltersNotApplied",
+            null,
+            null,
+            null
+          ],
+          [
+            "S3",
+            "https://w3id.org/vcf-core/vocab#FiltersFailed",
+            "1",
+            "q10",
+            "Quality below ten"
+          ],
+          [
+            "S3",
+            "https://w3id.org/vcf-core/vocab#FiltersFailed",
+            "2",
+            "s50",
+            "Sample threshold"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/sample-filter-states.rq",
+        "expected": [
+          [
+            "S1",
+            "https://w3id.org/vcf-core/vocab#FiltersPassed",
+            null,
+            null,
+            null
+          ],
+          [
+            "S2",
+            "https://w3id.org/vcf-core/vocab#FiltersNotApplied",
+            null,
+            null,
+            null
+          ],
+          [
+            "S3",
+            "https://w3id.org/vcf-core/vocab#FiltersFailed",
+            "1",
+            "q10",
+            "Quality below ten"
+          ],
+          [
+            "S3",
+            "https://w3id.org/vcf-core/vocab#FiltersFailed",
+            "2",
+            "s50",
+            "Sample threshold"
+          ]
+        ]
+      }
+    },
+    "note": "Source-derived FT=PASS, dot and q10;s50 expected states/codes. A condensed preservation query decodes tab-separated sample values; the structural query requests direct sample resources."
+  },
+  {
+    "id": "R60-4.2-sample-filter-states",
+    "requirement": "R60",
+    "version": "4.2",
+    "fixture": "fixtures/filter-samples-v4.2.vcf",
+    "preservation": {
+      "expanded": {
+        "query": "queries/sample-filter-states.rq",
+        "expected": [
+          [
+            "S1",
+            "https://w3id.org/vcf-core/vocab#FiltersPassed",
+            null,
+            null,
+            null
+          ],
+          [
+            "S2",
+            "https://w3id.org/vcf-core/vocab#FiltersNotApplied",
+            null,
+            null,
+            null
+          ],
+          [
+            "S3",
+            "https://w3id.org/vcf-core/vocab#FiltersFailed",
+            "1",
+            "q10",
+            "Quality below ten"
+          ],
+          [
+            "S3",
+            "https://w3id.org/vcf-core/vocab#FiltersFailed",
+            "2",
+            "s50",
+            "Sample threshold"
+          ]
+        ]
+      },
+      "condensed": {
+        "query": "queries/sample-filter-decode.rq",
+        "expected": [
+          [
+            "S1",
+            "https://w3id.org/vcf-core/vocab#FiltersPassed",
+            null,
+            null,
+            null
+          ],
+          [
+            "S2",
+            "https://w3id.org/vcf-core/vocab#FiltersNotApplied",
+            null,
+            null,
+            null
+          ],
+          [
+            "S3",
+            "https://w3id.org/vcf-core/vocab#FiltersFailed",
+            "1",
+            "q10",
+            "Quality below ten"
+          ],
+          [
+            "S3",
+            "https://w3id.org/vcf-core/vocab#FiltersFailed",
+            "2",
+            "s50",
+            "Sample threshold"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/sample-filter-states.rq",
+        "expected": [
+          [
+            "S1",
+            "https://w3id.org/vcf-core/vocab#FiltersPassed",
+            null,
+            null,
+            null
+          ],
+          [
+            "S2",
+            "https://w3id.org/vcf-core/vocab#FiltersNotApplied",
+            null,
+            null,
+            null
+          ],
+          [
+            "S3",
+            "https://w3id.org/vcf-core/vocab#FiltersFailed",
+            "1",
+            "q10",
+            "Quality below ten"
+          ],
+          [
+            "S3",
+            "https://w3id.org/vcf-core/vocab#FiltersFailed",
+            "2",
+            "s50",
+            "Sample threshold"
+          ]
+        ]
+      }
+    },
+    "note": "Source-derived FT=PASS, dot and q10;s50 expected states/codes. A condensed preservation query decodes tab-separated sample values; the structural query requests direct sample resources."
+  },
+  {
+    "id": "R60-4.3-sample-filter-states",
+    "requirement": "R60",
+    "version": "4.3",
+    "fixture": "fixtures/filter-samples-v4.3.vcf",
+    "preservation": {
+      "expanded": {
+        "query": "queries/sample-filter-states.rq",
+        "expected": [
+          [
+            "S1",
+            "https://w3id.org/vcf-core/vocab#FiltersPassed",
+            null,
+            null,
+            null
+          ],
+          [
+            "S2",
+            "https://w3id.org/vcf-core/vocab#FiltersNotApplied",
+            null,
+            null,
+            null
+          ],
+          [
+            "S3",
+            "https://w3id.org/vcf-core/vocab#FiltersFailed",
+            "1",
+            "q10",
+            "Quality below ten"
+          ],
+          [
+            "S3",
+            "https://w3id.org/vcf-core/vocab#FiltersFailed",
+            "2",
+            "s50",
+            "Sample threshold"
+          ]
+        ]
+      },
+      "condensed": {
+        "query": "queries/sample-filter-decode.rq",
+        "expected": [
+          [
+            "S1",
+            "https://w3id.org/vcf-core/vocab#FiltersPassed",
+            null,
+            null,
+            null
+          ],
+          [
+            "S2",
+            "https://w3id.org/vcf-core/vocab#FiltersNotApplied",
+            null,
+            null,
+            null
+          ],
+          [
+            "S3",
+            "https://w3id.org/vcf-core/vocab#FiltersFailed",
+            "1",
+            "q10",
+            "Quality below ten"
+          ],
+          [
+            "S3",
+            "https://w3id.org/vcf-core/vocab#FiltersFailed",
+            "2",
+            "s50",
+            "Sample threshold"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/sample-filter-states.rq",
+        "expected": [
+          [
+            "S1",
+            "https://w3id.org/vcf-core/vocab#FiltersPassed",
+            null,
+            null,
+            null
+          ],
+          [
+            "S2",
+            "https://w3id.org/vcf-core/vocab#FiltersNotApplied",
+            null,
+            null,
+            null
+          ],
+          [
+            "S3",
+            "https://w3id.org/vcf-core/vocab#FiltersFailed",
+            "1",
+            "q10",
+            "Quality below ten"
+          ],
+          [
+            "S3",
+            "https://w3id.org/vcf-core/vocab#FiltersFailed",
+            "2",
+            "s50",
+            "Sample threshold"
+          ]
+        ]
+      }
+    },
+    "note": "Source-derived FT=PASS, dot and q10;s50 expected states/codes. A condensed preservation query decodes tab-separated sample values; the structural query requests direct sample resources."
+  },
+  {
+    "id": "R60-4.4-sample-filter-states",
+    "requirement": "R60",
+    "version": "4.4",
+    "fixture": "fixtures/filter-samples-v4.4.vcf",
+    "preservation": {
+      "expanded": {
+        "query": "queries/sample-filter-states.rq",
+        "expected": [
+          [
+            "S1",
+            "https://w3id.org/vcf-core/vocab#FiltersPassed",
+            null,
+            null,
+            null
+          ],
+          [
+            "S2",
+            "https://w3id.org/vcf-core/vocab#FiltersNotApplied",
+            null,
+            null,
+            null
+          ],
+          [
+            "S3",
+            "https://w3id.org/vcf-core/vocab#FiltersFailed",
+            "1",
+            "q10",
+            "Quality below ten"
+          ],
+          [
+            "S3",
+            "https://w3id.org/vcf-core/vocab#FiltersFailed",
+            "2",
+            "s50",
+            "Sample threshold"
+          ]
+        ]
+      },
+      "condensed": {
+        "query": "queries/sample-filter-decode.rq",
+        "expected": [
+          [
+            "S1",
+            "https://w3id.org/vcf-core/vocab#FiltersPassed",
+            null,
+            null,
+            null
+          ],
+          [
+            "S2",
+            "https://w3id.org/vcf-core/vocab#FiltersNotApplied",
+            null,
+            null,
+            null
+          ],
+          [
+            "S3",
+            "https://w3id.org/vcf-core/vocab#FiltersFailed",
+            "1",
+            "q10",
+            "Quality below ten"
+          ],
+          [
+            "S3",
+            "https://w3id.org/vcf-core/vocab#FiltersFailed",
+            "2",
+            "s50",
+            "Sample threshold"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/sample-filter-states.rq",
+        "expected": [
+          [
+            "S1",
+            "https://w3id.org/vcf-core/vocab#FiltersPassed",
+            null,
+            null,
+            null
+          ],
+          [
+            "S2",
+            "https://w3id.org/vcf-core/vocab#FiltersNotApplied",
+            null,
+            null,
+            null
+          ],
+          [
+            "S3",
+            "https://w3id.org/vcf-core/vocab#FiltersFailed",
+            "1",
+            "q10",
+            "Quality below ten"
+          ],
+          [
+            "S3",
+            "https://w3id.org/vcf-core/vocab#FiltersFailed",
+            "2",
+            "s50",
+            "Sample threshold"
+          ]
+        ]
+      }
+    },
+    "note": "Source-derived FT=PASS, dot and q10;s50 expected states/codes. A condensed preservation query decodes tab-separated sample values; the structural query requests direct sample resources."
+  },
+  {
+    "id": "R60-4.5-sample-filter-states",
+    "requirement": "R60",
+    "version": "4.5",
+    "fixture": "fixtures/filter-samples-v4.5.vcf",
+    "preservation": {
+      "expanded": {
+        "query": "queries/sample-filter-states.rq",
+        "expected": [
+          [
+            "S1",
+            "https://w3id.org/vcf-core/vocab#FiltersPassed",
+            null,
+            null,
+            null
+          ],
+          [
+            "S2",
+            "https://w3id.org/vcf-core/vocab#FiltersNotApplied",
+            null,
+            null,
+            null
+          ],
+          [
+            "S3",
+            "https://w3id.org/vcf-core/vocab#FiltersFailed",
+            "1",
+            "q10",
+            "Quality below ten"
+          ],
+          [
+            "S3",
+            "https://w3id.org/vcf-core/vocab#FiltersFailed",
+            "2",
+            "s50",
+            "Sample threshold"
+          ]
+        ]
+      },
+      "condensed": {
+        "query": "queries/sample-filter-decode.rq",
+        "expected": [
+          [
+            "S1",
+            "https://w3id.org/vcf-core/vocab#FiltersPassed",
+            null,
+            null,
+            null
+          ],
+          [
+            "S2",
+            "https://w3id.org/vcf-core/vocab#FiltersNotApplied",
+            null,
+            null,
+            null
+          ],
+          [
+            "S3",
+            "https://w3id.org/vcf-core/vocab#FiltersFailed",
+            "1",
+            "q10",
+            "Quality below ten"
+          ],
+          [
+            "S3",
+            "https://w3id.org/vcf-core/vocab#FiltersFailed",
+            "2",
+            "s50",
+            "Sample threshold"
+          ]
+        ]
+      }
+    },
+    "structure": {
+      "both": {
+        "query": "queries/sample-filter-states.rq",
+        "expected": [
+          [
+            "S1",
+            "https://w3id.org/vcf-core/vocab#FiltersPassed",
+            null,
+            null,
+            null
+          ],
+          [
+            "S2",
+            "https://w3id.org/vcf-core/vocab#FiltersNotApplied",
+            null,
+            null,
+            null
+          ],
+          [
+            "S3",
+            "https://w3id.org/vcf-core/vocab#FiltersFailed",
+            "1",
+            "q10",
+            "Quality below ten"
+          ],
+          [
+            "S3",
+            "https://w3id.org/vcf-core/vocab#FiltersFailed",
+            "2",
+            "s50",
+            "Sample threshold"
+          ]
+        ]
+      }
+    },
+    "note": "Source-derived FT=PASS, dot and q10;s50 expected states/codes. A condensed preservation query decodes tab-separated sample values; the structural query requests direct sample resources."
+  }
+]

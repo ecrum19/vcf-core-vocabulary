@@ -8,7 +8,7 @@
 
 [![Vocabulary and example validation](https://github.com/ecrum19/vcf-core-vocabulary/actions/workflows/validate.yml/badge.svg?event=pull_request)](https://github.com/ecrum19/vcf-core-vocabulary/actions/workflows/validate.yml)
 [![Documentation publication](https://github.com/ecrum19/vcf-core-vocabulary/actions/workflows/publish-pages.yml/badge.svg?branch=main)](https://github.com/ecrum19/vcf-core-vocabulary/actions/workflows/publish-pages.yml)
-[![Coverage review: ongoing](https://img.shields.io/badge/coverage_review-ongoing-d89a4a)](coverage/methodological/README.md#current-findings-and-review-status)
+[![Coverage review: ongoing](https://img.shields.io/badge/coverage_review-ongoing-d89a4a)](coverage/methodology/README.md#review-status)
 
 **An RDF vocabulary for Variant Call Format (VCF) data, with validation profiles
 for VCF 4.1–4.5.**
@@ -112,18 +112,39 @@ byte-for-byte reconstruction are outside the vocabulary's scope.
 
 ## What does the coverage evidence show?
 
-The repository provides two assessments with different denominators:
+Both assessments ask what survives a VCF-to-RDF conversion, and answer it by
+running queries against RDF built from real VCF files. They count **different
+things**, so their percentages can never be added or compared:
 
-| Assessment | Recorded result | Interpretation |
+| Assessment | Recorded result | What the number means |
 | --- | --- | --- |
-| [Curated VCF 4.5 inventory](coverage/curated/README.md) | **104/104** constructs represented; **87** with enforcement evidence | Coverage of the selected inventory under its preservation and structure rubric |
-| [Methodological VCF 4.1–4.5 assessment](coverage/methodological/README.md) | **333/333** extracted Number/Type rows match; **133/491** retained requirements have full evidence | Specification-derived traceability under reviewed criteria; complex semantic adequacy still requires judgment |
+| [Specification-derived requirements](coverage/methodology/README.md) | **94** requirements, **189** cases; **41–48%** demonstrated per VCF version; **333/333** reserved Number/Type rows agree | Requirements read out of the VCF 4.1–4.5 specification text. Untested requirements count against the score, so this is a floor, not a ceiling. |
+| [Curated VCF 4.5 inventory](coverage/vcf45-inventory/README.md) | **104/104** constructs represented; **87** with a validation rule | An authored list of VCF 4.5 constructs mapped to vocabulary terms. 100% of the list, which cannot reveal what the list omits. |
 
-Neither result establishes complete VCF conformance or an overall semantic
-coverage percentage. The methodological assessment records known validation gaps
-and unfinished source-review work. See the [current report](coverage/methodological/generated/report.md)
-for the results and [review decisions](coverage/methodological/DECISIONS.md) for
-their interpretation.
+The low percentages in the first row mean "not yet demonstrated by a test", not
+"not representable" — 47 of the 91 VCF 4.5 requirements have no test yet and each
+scores zero. [Why we keep both assessments](coverage/README.md#why-there-are-two-assessments)
+explains how they fail in opposite directions, and neither establishes complete
+VCF conformance.
+
+## What is in this repository
+
+| Directory | Contents |
+| --- | --- |
+| [`ontology/`](ontology/) | The vocabulary itself — five Turtle modules, plus per-version reserved-key definitions in `versions/`. |
+| [`shacl/`](shacl/README.md) | Validation profiles: shared rules and one overlay per VCF version. |
+| [`examples/`](examples/README.md) | Paired VCF and RDF fixtures, SPARQL queries, and a side-by-side [profile comparison](examples/profile-comparison/README.md). |
+| [`mappings/`](mappings/README.md) | Alignments to external models (VRS, HERO, GVO, GFVO, Med2RDF) as a separate importable module, plus third-party declarations. |
+| [`coverage/`](coverage/README.md) | Evidence for what survives a VCF-to-RDF conversion. Two assessments with different denominators — start with its README. |
+| [`tests/`](tests/README.md) | Executable validation: SHACL runner, regression tests and negative fixtures. |
+| [`scripts/`](scripts/README.md) | Generators and build steps. Nothing here is needed to *use* the vocabulary. |
+| [`docs/`](docs/) | Release notes, including the v2.0.0 migration guide. |
+| [`legacy/`](legacy/legacy-vcf-rdfizer.ttl) | Deprecation document keeping the retired `vcf-rdfizer` namespace resolvable. |
+| [`assets/`](assets/) | Branding used by the README and documentation site. |
+
+Generated output (`site/`, the ontology bundle, `__pycache__`) is ignored by Git;
+`npm run clean` removes it. Every `generated/` directory is regenerated from
+committed inputs — edit the inputs, not the output.
 
 ## Releases, citation and contributions
 
@@ -139,5 +160,7 @@ licensed under [CC BY 4.0](LICENSE); [acknowledgements](ACKNOWLEDGEMENTS.md)
 record attribution and development assistance.
 
 Report problems or propose changes through the repository's issues and pull
-requests. For maintenance work, see the [build tools](scripts/README.md),
-[test guide](tests/README.md) and [coverage reproduction instructions](coverage/README.md).
+requests; [CONTRIBUTING.md](CONTRIBUTING.md) covers setup, the checks to run and
+which files are generated. For maintenance work, see the
+[build tools](scripts/README.md), [test guide](tests/README.md) and
+[coverage assessments](coverage/README.md).

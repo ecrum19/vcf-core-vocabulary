@@ -1,0 +1,15 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+# Preservation only: explicitly decode the documented VCF text encoding.
+SELECT ?sample (1 AS ?i) ?phase WHERE {
+?file vcfc:hasRecord ?record ; vcfc:hasSampleSet/vcfc:hasSample ?s .
+  ?record vcfc:pos 10 ; vcfc:hasCall/vcfc:hasCallMatrix ?matrix .
+  ?s vcfc:sampleIndex ?sampleIndex ; vcfc:sampleName ?sample .
+?matrix vcfc:hasFormatValueVector ?vectorraw . ?vectorraw vcfc:declaredBy/vcfc:fieldId "GT" ; vcfc:encodedValues ?packedraw .
+
+  BIND(CONCAT("^(?:[^\\t]*\\t){", STR(?sampleIndex - 1), "}([^\\t]*).*$") AS ?patternraw)
+  BIND(REPLACE(?packedraw, ?patternraw, "$1") AS ?raw)
+
+  # Separator before the second allele in this diploid witness.
+  BIND(REPLACE(?raw, "^[0-9.]+([/|]).*$", "$1") AS ?phase)
+}

@@ -1,0 +1,33 @@
+##fileformat=VCFv4.5
+##source=VCF-Core-synthetic-examples
+##reference=https://example.org/reference.fa
+##contig=<ID=chr1,length=1000>
+##contig=<ID=chr2,length=1000>
+##FILTER=<ID=q10,Description="Example quality filter">
+##assembly=https://example.org/assembly.fa
+##META=<ID=Tissue,Type=String,Number=.,Values=[Blood,Tumor]>
+##SAMPLE=<ID=S1,Tissue=Tumor>
+##SAMPLE=<ID=Original,Tissue=Blood>
+##PEDIGREE=<ID=S1,Original=Original>
+##pedigreeDB=https://example.org/pedigree
+##ALT=<ID=DEL,Description="Synthetic DEL allele">
+##INFO=<ID=AF,Number=A,Type=Float,Description="Example AF",Source="VCF-Core-examples",Version="1.0">
+##INFO=<ID=SVLEN,Number=A,Type=Integer,Description="Example SVLEN",Source="VCF-Core-examples",Version="1.0">
+##INFO=<ID=SVCLAIM,Number=A,Type=String,Description="Example SVCLAIM",Source="VCF-Core-examples",Version="1.0">
+##INFO=<ID=CILEN,Number=.,Type=Integer,Description="Example CILEN",Source="VCF-Core-examples",Version="1.0">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Example GT">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Example DP">
+##FORMAT=<ID=AD,Number=R,Type=Integer,Description="Example AD">
+##FORMAT=<ID=PL,Number=G,Type=Integer,Description="Example PL">
+##FORMAT=<ID=M5mC,Number=M,Type=Float,Description="Example M5mC">
+##FORMAT=<ID=DPM5mC,Number=M,Type=Integer,Description="Example DPM5mC">
+##FORMAT=<ID=ADM5mC,Number=M,Type=Integer,Description="Example ADM5mC">
+##FORMAT=<ID=LAA,Number=.,Type=Integer,Description="Example LAA">
+##FORMAT=<ID=LAD,Number=LR,Type=Integer,Description="Example LAD">
+##FORMAT=<ID=LPL,Number=LG,Type=Integer,Description="Example LPL">
+##FORMAT=<ID=PSL,Number=P,Type=String,Description="Example PSL">
+##FORMAT=<ID=FT,Number=1,Type=String,Description="Example FT">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	S1
+chr1	100	rsExample;aliasExample	C	T	60	PASS	AF=0.25	GT:DP:AD:PL:M5mC:DPM5mC:ADM5mC	0|1:20:10,10:40,0,40:0.9:20:18
+chr1	200	.	A	C,G	50	q10	AF=0.2,0.3	GT:LAA:LAD:LPL:PSL:FT	|0/1|2:1,2:20,10,15:90,80,70,60,50,40,30,20,10,0:phaseA,.,phaseB:q10
+chr1	300	del1	T	<DEL>	45	PASS	SVLEN=20;SVCLAIM=DJ;CILEN=15,25	GT	0/1

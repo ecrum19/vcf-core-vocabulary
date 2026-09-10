@@ -28,7 +28,6 @@ superset of the core's own axioms, so the two can never silently disagree.
 from __future__ import annotations
 
 import argparse
-import datetime
 import pathlib
 import sys
 
@@ -139,6 +138,20 @@ def escape(text: str) -> str:
     return text.replace("\\", "\\\\").replace('"', '\\"')
 
 
+def curation_date(rows: list[dict[str, str]]) -> str:
+    """The newest curated mapping_date in the set.
+
+    dct:modified has to come from the curated data rather than the clock. Stamping
+    date.today() made the generated module differ from the committed one on every
+    day after it was built, so the staleness check in tests/test_mappings.py failed
+    for a reason that had nothing to do with the mappings.
+    """
+    dates = sorted(d for d in (r.get("mapping_date", "").strip() for r in rows) if d)
+    if not dates:
+        raise SystemExit("no mapping_date in the set; cannot stamp dct:modified")
+    return dates[-1]
+
+
 def render_module(prefixes: dict[str, str], metadata: dict[str, str],
                   rows: list[dict[str, str]]) -> str:
     version = metadata.get("subject_source_version", "0.0.0")
@@ -176,7 +189,7 @@ def render_module(prefixes: dict[str, str], metadata: dict[str, str],
         '  rdfs:label "VCF Core Vocabulary: external alignments"@en ;',
         f'  dct:description "{escape(metadata.get("mapping_set_description", ""))}"@en ;',
         "  dct:license <https://creativecommons.org/licenses/by/4.0/> ;",
-        f'  dct:modified "{datetime.date.today().isoformat()}"^^<http://www.w3.org/2001/XMLSchema#date> ;',
+        f'  dct:modified "{curation_date(rows)}"^^<http://www.w3.org/2001/XMLSchema#date> ;',
         f"  owl:versionIRI <https://w3id.org/vcf-core/alignments/{version}> ;",
         f'  owl:versionInfo "{version}" ;',
         "  owl:imports <https://w3id.org/vcf-core/vocab> ;",

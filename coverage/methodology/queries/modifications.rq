@@ -1,0 +1,2 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+SELECT ?sample ?fraction ?depth WHERE { ?call vcfc:sampleId ?sample ; vcfc:hasFormatValue/vcfc:hasValueItem/vcfc:forBaseModification ?m . ?m vcfc:modificationFraction ?fraction ; vcfc:modificationDepth ?depth } GROUP BY ?sample ?fraction ?depth ORDER BY ?sample

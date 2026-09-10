@@ -1,0 +1,3 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+# Keep both samples in the result, including the sample with omitted DP.
+SELECT ?sample ?raw WHERE { ?r vcfc:pos 20 ; vcfc:hasCall/vcfc:hasSampleCall ?s . ?s vcfc:sampleId ?sample . OPTIONAL { ?s vcfc:hasFormatValue ?v . ?v vcfc:declaredBy/vcfc:fieldId "DP" ; vcfc:fieldValue ?raw } }

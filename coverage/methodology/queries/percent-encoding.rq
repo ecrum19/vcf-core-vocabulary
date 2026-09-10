@@ -1,0 +1,8 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+# VCF 4.5 section 1.2: ':', ';', '=', '%', ',', CR, LF and TAB carry special
+# meaning and must be percent-encoded elsewhere. Both the source token and its
+# decoded form are retained, so a consumer never has to guess which it holds.
+SELECT ?raw ?decoded WHERE {
+  ?value vcfc:declaredBy/vcfc:fieldId "NOTE" ; vcfc:hasValueItem ?item .
+  ?item vcfc:rawValue ?raw ; vcfc:decodedValue ?decoded .
+} ORDER BY ?raw

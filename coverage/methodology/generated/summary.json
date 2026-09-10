@@ -1,0 +1,215 @@
+{
+  "byVersion": [
+    {
+      "denominator": 69,
+      "preservation": {
+        "demonstrated": 31,
+        "not-demonstrated": 0,
+        "partial": 0,
+        "percentDemonstrated": 44.9,
+        "unassessed": 38
+      },
+      "profile": "expanded",
+      "structure": {
+        "demonstrated": 31,
+        "not-demonstrated": 0,
+        "partial": 0,
+        "percentDemonstrated": 44.9,
+        "unassessed": 38
+      },
+      "version": "4.1"
+    },
+    {
+      "denominator": 69,
+      "preservation": {
+        "demonstrated": 31,
+        "not-demonstrated": 0,
+        "partial": 0,
+        "percentDemonstrated": 44.9,
+        "unassessed": 38
+      },
+      "profile": "condensed",
+      "structure": {
+        "demonstrated": 26,
+        "not-demonstrated": 5,
+        "partial": 0,
+        "percentDemonstrated": 37.7,
+        "unassessed": 38
+      },
+      "version": "4.1"
+    },
+    {
+      "denominator": 72,
+      "preservation": {
+        "demonstrated": 33,
+        "not-demonstrated": 0,
+        "partial": 0,
+        "percentDemonstrated": 45.8,
+        "unassessed": 39
+      },
+      "profile": "expanded",
+      "structure": {
+        "demonstrated": 33,
+        "not-demonstrated": 0,
+        "partial": 0,
+        "percentDemonstrated": 45.8,
+        "unassessed": 39
+      },
+      "version": "4.2"
+    },
+    {
+      "denominator": 72,
+      "preservation": {
+        "demonstrated": 33,
+        "not-demonstrated": 0,
+        "partial": 0,
+        "percentDemonstrated": 45.8,
+        "unassessed": 39
+      },
+      "profile": "condensed",
+      "structure": {
+        "demonstrated": 28,
+        "not-demonstrated": 5,
+        "partial": 0,
+        "percentDemonstrated": 38.9,
+        "unassessed": 39
+      },
+      "version": "4.2"
+    },
+    {
+      "denominator": 74,
+      "preservation": {
+        "demonstrated": 34,
+        "not-demonstrated": 0,
+        "partial": 0,
+        "percentDemonstrated": 45.9,
+        "unassessed": 40
+      },
+      "profile": "expanded",
+      "structure": {
+        "demonstrated": 34,
+        "not-demonstrated": 0,
+        "partial": 0,
+        "percentDemonstrated": 45.9,
+        "unassessed": 40
+      },
+      "version": "4.3"
+    },
+    {
+      "denominator": 74,
+      "preservation": {
+        "demonstrated": 34,
+        "not-demonstrated": 0,
+        "partial": 0,
+        "percentDemonstrated": 45.9,
+        "unassessed": 40
+      },
+      "profile": "condensed",
+      "structure": {
+        "demonstrated": 29,
+        "not-demonstrated": 5,
+        "partial": 0,
+        "percentDemonstrated": 39.2,
+        "unassessed": 40
+      },
+      "version": "4.3"
+    },
+    {
+      "denominator": 83,
+      "preservation": {
+        "demonstrated": 34,
+        "not-demonstrated": 0,
+        "partial": 0,
+        "percentDemonstrated": 41.0,
+        "unassessed": 49
+      },
+      "profile": "expanded",
+      "structure": {
+        "demonstrated": 34,
+        "not-demonstrated": 0,
+        "partial": 0,
+        "percentDemonstrated": 41.0,
+        "unassessed": 49
+      },
+      "version": "4.4"
+    },
+    {
+      "denominator": 83,
+      "preservation": {
+        "demonstrated": 34,
+        "not-demonstrated": 0,
+        "partial": 0,
+        "percentDemonstrated": 41.0,
+        "unassessed": 49
+      },
+      "profile": "condensed",
+      "structure": {
+        "demonstrated": 29,
+        "not-demonstrated": 5,
+        "partial": 0,
+        "percentDemonstrated": 34.9,
+        "unassessed": 49
+      },
+      "version": "4.4"
+    },
+    {
+      "denominator": 91,
+      "preservation": {
+        "demonstrated": 44,
+        "not-demonstrated": 0,
+        "partial": 0,
+        "percentDemonstrated": 48.4,
+        "unassessed": 47
+      },
+      "profile": "expanded",
+      "structure": {
+        "demonstrated": 44,
+        "not-demonstrated": 0,
+        "partial": 0,
+        "percentDemonstrated": 48.4,
+        "unassessed": 47
+      },
+      "version": "4.5"
+    },
+    {
+      "denominator": 91,
+      "preservation": {
+        "demonstrated": 44,
+        "not-demonstrated": 0,
+        "partial": 0,
+        "percentDemonstrated": 48.4,
+        "unassessed": 47
+      },
+      "profile": "condensed",
+      "structure": {
+        "demonstrated": 35,
+        "not-demonstrated": 9,
+        "partial": 0,
+        "percentDemonstrated": 38.5,
+        "unassessed": 47
+      },
+      "version": "4.5"
+    }
+  ],
+  "cases": 189,
+  "claim": "Coverage of registered information requirements; specification completeness not established",
+  "declarations": {
+    "exact": 333,
+    "rows": 333
+  },
+  "method": "LOT requirements + source-to-RDF mapping + SAMOD-style answer tests (retrospective adaptation)",
+  "pendingReviews": 0,
+  "queryExecutions": 756,
+  "requirements": 94,
+  "sourceAssertions": {
+    "assertions": 1134,
+    "needsReviewSections": 0,
+    "sections": 344,
+    "testStatus": {
+      "no-targeted-test": 853,
+      "partial-tests": 135,
+      "targeted-tests": 146
+    }
+  },
+  "sourceAuditAccepted": true
+}
