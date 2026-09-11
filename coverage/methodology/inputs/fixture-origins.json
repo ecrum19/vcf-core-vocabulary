@@ -1,0 +1,47 @@
+[
+  {
+    "file": "fixtures/features-v4.5.vcf",
+    "origin": "examples/vcf-versions/vcf-4.5/example-vcf45-features.vcf",
+    "sha256": "aa0a5a4a50a12d2478c95c4408bec81fc81824452b0f16a8e30e937146760fab"
+  },
+  {
+    "file": "fixtures/boundaries-v4.5.vcf",
+    "origin": "examples/vcf-versions/vcf-4.5/example-vcf45-boundaries.vcf",
+    "sha256": "33ad689311eb9e91441880091e91ed82a8f78ee559665efc59e3253adc1cbdb8"
+  },
+  {
+    "file": "fixtures/breakends-v4.5.vcf",
+    "origin": "examples/vcf-versions/vcf-4.5/example-vcf45-breakends.vcf",
+    "sha256": "6965049d5c234628ec8ba91377656ec6591cba86db394da7fdbf253f9347ce26"
+  },
+  {
+    "file": "fixtures/gvcf-v4.5.vcf",
+    "origin": "examples/vcf-versions/vcf-4.5/example-vcf45-gvcf.vcf",
+    "sha256": "e8bcd21c4bd2e71d2faf84fbf429fd86f2c0b6bbf8e957bdc52a2e8bd8041ba4"
+  },
+  {
+    "file": "fixtures/repeats-v4.5.vcf",
+    "origin": "examples/vcf-versions/vcf-4.5/example-vcf45-repeats.vcf",
+    "sha256": "a7a8221b7666f6782f98c6034474142b94e4f46fd695d737904c91931c9cd88c"
+  },
+  {
+    "file": "fixtures/structural-v4.1.vcf",
+    "origin": "examples/vcf-versions/vcf-4.1/example-vcf41.vcf",
+    "sha256": "8291951acddfc691d5e3d51857394894cf37ea43274996cc3c857df000b716a6"
+  },
+  {
+    "file": "fixtures/structural-v4.2.vcf",
+    "origin": "examples/vcf-versions/vcf-4.2/example-vcf42.vcf",
+    "sha256": "56ea375297529f333ac65a9028fc1b154f9366e9a3f1ffbf5a38d31857f642c1"
+  },
+  {
+    "file": "fixtures/structural-v4.3.vcf",
+    "origin": "examples/vcf-versions/vcf-4.3/example-vcf43.vcf",
+    "sha256": "4d21b6b73706a36490cb8de2bd6e076d73c88911a787fc63bd8d11987ac6c308"
+  },
+  {
+    "file": "fixtures/structural-v4.4.vcf",
+    "origin": "examples/vcf-versions/vcf-4.4/example-vcf44.vcf",
+    "sha256": "0839cd8a66dba5c19e4f7b789a7dd67e34387659a280e3ff0d9d9201331f8a98"
+  }
+]

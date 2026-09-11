@@ -1,2 +1,0 @@
-# Deterministic RDF parsing/canonicalization for the evidence catalogue.
-rdflib==7.6.0

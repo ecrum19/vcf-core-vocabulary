@@ -1,25 +1,36 @@
 # Repository Scripts
 
 Scripts in this directory generate repository artifacts or extend the OCG build.
-Validation and regression checks live in `tests/`. Assessment-specific scripts
-and results live in [coverage/](../coverage/README.md).
-Use `npm run clean` to remove optional audits, generated site output and build caches.
+Validation and regression checks live in [`tests/`](../tests/README.md);
+assessment-specific scripts and results live in
+[`coverage/`](../coverage/README.md).
+
+**Generators**
 
 - `build-ontology-bundle.mjs` combines the normative ontology modules for OCG.
 - `build-shacl-profiles.py` generates the consistency rules and every version-scoped artifact.
-- `validation-gate.py` fingerprints the normative inputs so the slow suite only reruns when they change.
-- `convert-example-nt-to-ttl.mjs` formats the canonical N-Triples example as Turtle.
+- `build-mapping-sets.py` renders the alignment module from the curated SSSOM set and validates every mapping set under [mappings/](../mappings/README.md).
 - `generate-reserved-keys.mjs` creates the full reserved-key registry for one VCF version.
-- `insert-class-hierarchy.mjs` adds the configured class-hierarchy extension after OCG builds the site.
-- `migrate-namespace.mjs` provides the one-shot 1.1.0 namespace migration utility.
 - `vcf_examples.py` materializes the generated example graphs from their VCF sources.
+- `convert-example-nt-to-ttl.mjs` formats the canonical N-Triples example as Turtle.
+- `insert-class-hierarchy.mjs` adds the configured class-hierarchy extension after OCG builds the site.
+
+**Support**
+
 - `version_registry.py` loads and validates `ontology/versions/registry.json` for the Python generators.
-- The independent [requirement-traceability workflow](../coverage/methodological/README.md)
-  lives under `coverage/methodological/`; `methodological:build` regenerates it and
-  `methodological:check` checks reproducibility without accepting pending decisions.
+- `validation-gate.py` hashes the normative inputs into one digest so the slow
+  suite only reruns when they change. The digest is a build cache, not a
+  provenance record — see [the coverage assessments](../coverage/README.md) for those.
+- `clean.py` (`npm run clean`) removes regenerable output: the generated site,
+  Python bytecode caches and desktop metadata. Authored inputs, generated
+  assessment reports and installed dependencies are kept.
+- `py.sh` selects the project virtualenv when one exists, otherwise `python3`.
+  Every npm script that runs Python goes through it, so that choice lives in one place.
 
 All commands are exposed through `package.json`; run them from the repository root
-so relative source and output paths remain stable.
+so relative source and output paths remain stable. The
+[coverage assessments](../coverage/README.md) have their own commands
+(`methodology:build`, `methodology:check`, `coverage:report`).
 
 ## The version registry
 

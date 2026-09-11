@@ -1,0 +1,22 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+# Preservation only: decode the sample-ordered FT vector, then its semicolon codes.
+# Header definitions identify the codes; their text occurrence supplies source order.
+SELECT ?sample ?status ?index ?code ?description WHERE {
+ ?file vcfc:hasSampleSet/vcfc:hasSample ?s ;
+       vcfc:hasRecord/vcfc:hasCall/vcfc:hasCallMatrix ?matrix .
+ ?s vcfc:sampleName ?sample ; vcfc:sampleIndex ?sampleIndex .
+ ?matrix vcfc:hasFormatValueVector ?vector .
+ ?vector vcfc:declaredBy/vcfc:fieldId "FT" ; vcfc:encodedValues ?packed .
+ BIND(CONCAT("^(?:[^\\t]*\\t){", STR(?sampleIndex - 1), "}([^\\t]*).*$") AS ?pattern)
+ BIND(REPLACE(?packed, ?pattern, "$1") AS ?raw)
+ BIND(IF(?raw="PASS",vcfc:FiltersPassed,IF(?raw=".",vcfc:FiltersNotApplied,vcfc:FiltersFailed)) AS ?status)
+ OPTIONAL {
+  ?file vcfc:hasHeader/vcfc:hasHeaderLine ?d .
+  ?d a vcfc:FILTERHeaderLine ; vcfc:filterId ?code ; vcfc:fieldDescription ?description .
+  FILTER(?raw!="PASS" && ?raw!="." && CONTAINS(CONCAT(";",?raw,";"),CONCAT(";",?code,";")))
+ }
+ # Evaluate after the optional join so both the outer FT value and code are bound.
+ # If no code was matched these expressions stay unbound, as required for PASS/dot.
+ BIND(STRBEFORE(CONCAT(";",?raw,";"),CONCAT(";",?code,";")) AS ?before)
+ BIND(1+STRLEN(?before)-STRLEN(REPLACE(?before,";","")) AS ?index)
+}

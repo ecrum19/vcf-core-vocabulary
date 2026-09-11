@@ -1,0 +1,23 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+# Preservation only: explicitly decode the documented VCF text encoding.
+SELECT ?pos ?slot ?phaseSet ?quality WHERE {
+  ?file vcfc:hasRecord ?record ; vcfc:hasSampleSet/vcfc:hasSample ?s .
+  ?record vcfc:pos ?pos ; vcfc:hasCall/vcfc:hasCallMatrix ?matrix .
+  ?s vcfc:sampleIndex ?sampleIndex .
+  BIND(CONCAT("^(?:[^\\t]*\\t){", STR(?sampleIndex - 1), "}([^\\t]*).*$") AS ?column)
+  ?matrix vcfc:hasFormatValueVector ?nameVector .
+  ?nameVector vcfc:declaredBy/vcfc:fieldId "PSL" ; vcfc:encodedValues ?packedNames .
+  BIND(REPLACE(?packedNames, ?column, "$1") AS ?names)
+  ?matrix vcfc:hasFormatValueVector ?qualityVector .
+  ?qualityVector vcfc:declaredBy/vcfc:fieldId "PSQ" ; vcfc:encodedValues ?packedQualities .
+  BIND(REPLACE(?packedQualities, ?column, "$1") AS ?qualities)
+  # Number=P lists carry one value per GT allele value; these records are
+  # diploid and triploid, so slots beyond a record's ploidy are dropped.
+  VALUES ?slot { 0 1 2 }
+  FILTER(?slot < 1 + STRLEN(?names) - STRLEN(REPLACE(?names, ",", "")))
+  BIND(CONCAT("^(?:[^,]*,){", STR(?slot), "}([^,]*).*$") AS ?item)
+  BIND(REPLACE(?qualities, ?item, "$1") AS ?quality)
+  # Preservation reports the tokens as written, so a missing name stays "." here
+  # rather than becoming an unbound value as it does in the structural answer.
+  BIND(REPLACE(?names, ?item, "$1") AS ?phaseSet)
+}

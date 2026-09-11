@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Remove disposable repository output; preserve inputs and primary reports."""
+"""Remove disposable repository output; preserve inputs and primary reports.
+
+Disposable means regenerable from committed inputs: the generated documentation
+site, Python bytecode caches and desktop metadata. Authored inputs, the coverage
+assessments' generated reports and installed dependencies are always kept.
+"""
 from pathlib import Path
 import os
 import shutil
@@ -7,17 +12,12 @@ import shutil
 ROOT = Path(__file__).resolve().parents[1]
 SKIP = {'.git', '.venv', 'node_modules'}
 
+# Regenerable output removed wholesale. Everything else is discovered by walking.
+DISPOSABLE_DIRS = ('site',)
+
 
 def clean(root=ROOT):
-    candidates = {root / name for name in (
-        'site', 'SWAT4HCLS_2027/.build', 'coverage/methodological/generated/audit',
-    )}
-    paper = root / 'SWAT4HCLS_2027'
-    candidates.update(paper / ('main.' + suffix) for suffix in (
-        'abs', 'aux', 'bbl', 'blg', 'fdb_latexmk', 'fls', 'log', 'out',
-        'synctex.gz', 'xmpdata', 'toc',
-    ))
-    candidates.add(paper / 'pdfa.xmpi')
+    candidates = {root / name for name in DISPOSABLE_DIRS}
     for directory, dirs, files in os.walk(root, followlinks=False):
         base = Path(directory)
         dirs[:] = [d for d in dirs if d not in SKIP and base / d not in candidates]

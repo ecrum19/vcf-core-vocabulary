@@ -1,0 +1,12 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+# Expected answers are authored in inputs/cases.json from the source VCF.
+# A Number=LR value list is indexed by the local alleles LAA names, so each depth
+# must reach the global ALT allele that its local position stands for. Where LAA
+# skips ALT alleles the two indexings differ, and only the mapping resolves them.
+SELECT ?pos ?index ?global ?allele ?depth WHERE {
+  ?record vcfc:pos ?pos ; vcfc:hasCall/vcfc:hasSampleCall ?call .
+  ?call vcfc:hasFormatValue ?field .
+  ?field vcfc:declaredBy/vcfc:fieldId "LAD" ; vcfc:hasValueItem ?item .
+  ?item vcfc:valueIndex ?index ; vcfc:itemValue ?depth ; vcfc:forAllele ?a .
+  ?a vcfc:alleleIndex ?global ; vcfc:alleleValue ?allele .
+} ORDER BY ?pos ?index

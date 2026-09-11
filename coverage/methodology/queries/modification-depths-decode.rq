@@ -1,0 +1,17 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+# Preservation only: explicitly decode the documented VCF text encoding.
+SELECT ?sample ?fraction ?depth ?alleleDepth WHERE {
+  ?file vcfc:hasRecord ?record ; vcfc:hasSampleSet/vcfc:hasSample ?s .
+  ?record vcfc:pos 100 ; vcfc:hasCall/vcfc:hasCallMatrix ?matrix .
+  ?s vcfc:sampleIndex ?sampleIndex ; vcfc:sampleName ?sample .
+  BIND(CONCAT("^(?:[^\\t]*\\t){", STR(?sampleIndex - 1), "}([^\\t]*).*$") AS ?column)
+  ?matrix vcfc:hasFormatValueVector ?fractionVector .
+  ?fractionVector vcfc:declaredBy/vcfc:fieldId "M5mC" ; vcfc:encodedValues ?packedFraction .
+  BIND(REPLACE(?packedFraction, ?column, "$1") AS ?fraction)
+  ?matrix vcfc:hasFormatValueVector ?depthVector .
+  ?depthVector vcfc:declaredBy/vcfc:fieldId "DPM5mC" ; vcfc:encodedValues ?packedDepth .
+  BIND(REPLACE(?packedDepth, ?column, "$1") AS ?depth)
+  ?matrix vcfc:hasFormatValueVector ?alleleVector .
+  ?alleleVector vcfc:declaredBy/vcfc:fieldId "ADM5mC" ; vcfc:encodedValues ?packedAlleleDepth .
+  BIND(REPLACE(?packedAlleleDepth, ?column, "$1") AS ?alleleDepth)
+}

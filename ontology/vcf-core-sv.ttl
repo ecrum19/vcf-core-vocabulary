@@ -18,7 +18,7 @@
   owl:imports <https://w3id.org/vcf-core/vocab>,
               <https://w3id.org/vcf-core/alleles>,
               <https://w3id.org/vcf-core/genotypes> ;
-  owl:versionInfo "2.1.0" .
+  owl:versionInfo "2.1.1" .
 
 vcfc:SymbolicAlleleType a owl:Class ;
   rdfs:label "symbolic allele type"@en ;

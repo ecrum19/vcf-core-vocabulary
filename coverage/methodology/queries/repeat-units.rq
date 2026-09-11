@@ -1,0 +1,2 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+SELECT ?sequence ?count WHERE { ?allele vcfc:hasRepeatSequence ?repeat . ?repeat vcfc:repeatUnitSequence ?sequence ; vcfc:repeatUnitCount ?count }

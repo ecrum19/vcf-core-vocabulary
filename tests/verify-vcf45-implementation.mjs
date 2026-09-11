@@ -15,7 +15,7 @@ const owlNamedIndividual = namedNode("http://www.w3.org/2002/07/owl#NamedIndivid
 const infoDefinition = namedNode(`${namespace}InfoFieldDefinition`);
 const formatDefinition = namedNode(`${namespace}FormatFieldDefinition`);
 
-const files = ["ontology", "shacl", "examples", "tests/shacl", "coverage/paper", "legacy"]
+const files = ["ontology", "shacl", "examples", "tests/shacl", "legacy"]
   .flatMap(directory => fs.readdirSync(path.join(repoRoot, directory), { recursive: true })
     .filter(file => file.endsWith(".ttl"))
     .map(file => path.join(directory, file)));

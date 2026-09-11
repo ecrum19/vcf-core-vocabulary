@@ -15,7 +15,7 @@
   rdfs:label "VCF Core genotype module"@en ;
   dct:description "Parsed GT, phasing, phase-set, local-allele, and sample-filter carriers for VCF 4.5."@en ;
   owl:imports <https://w3id.org/vcf-core/vocab>, <https://w3id.org/vcf-core/alleles> ;
-  owl:versionInfo "2.1.0" .
+  owl:versionInfo "2.1.1" .
 
 vcfc:Genotype a owl:Class ;
   rdfs:label "VCF genotype"@en ;

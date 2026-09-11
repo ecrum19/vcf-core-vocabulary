@@ -1,0 +1,970 @@
+{
+  "acceptanceMaintenance": {
+    "action": "Added the tests requested by the review pass, and then a PSL/PSQ case during the signing session itself. Every requirement fingerprint covers the whole evidence set, so each of those additions moved all 95 entries, including decisions already recorded by hand.",
+    "carriedForwardDuringSigning": "R29, R92, R31, R46 and R89 were recorded before the PSL/PSQ case was added. Their requirement text, cases, fixtures, queries and expected answers are untouched by that addition, so each keeps its reviewer, date and rationale verbatim and only its fingerprint moved.",
+    "date": "2026-09-11",
+    "fingerprintsRefreshed": 83,
+    "refreshRationale": "These requirements' text, cases, fixtures, queries and expected answers are byte-identical to the ones already accepted; only the shared evidence digest moved, because new fixtures and queries entered the hash set. The recorded acceptance is carried over unchanged.",
+    "versionBump": "Release stamps no longer re-open a review. assess.py blanks owl:versionInfo and owl:versionIRI values before hashing an ontology module, so bumping the release version leaves the evidence digest unchanged; every other byte of those files still counts. The 2.1.1 bump was the last one to move fingerprints, and it moved them only because the hashing change itself is in a hashed script.",
+    "withdrawn": [
+      "R27",
+      "R29",
+      "R31",
+      "R45",
+      "R46",
+      "R79",
+      "R82",
+      "R83",
+      "R84",
+      "R85",
+      "R89",
+      "R92",
+      "sourceAudit"
+    ],
+    "withdrawnRationale": "These gained new cases, fixtures or corrected interpretations, so the earlier acceptance no longer covers what they now assert. R83 was accepted on 10 September as unassessed and has since gained its first case, which is exactly the condition that acceptance was conditional on. They are listed in generated/review-queue.json and need a fresh decision; the acceptance they carried is kept verbatim under supersededAcceptance for comparison."
+  },
+  "requirements": {
+    "R01": {
+      "date": "2026-09-10",
+      "fingerprint": "5291bf7c16dbfb35edb5d009cbb8eaf7ea6bf1fcc4e3415a25c6cf0de04d9e72",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R02": {
+      "date": "2026-09-10",
+      "fingerprint": "8d2047de825adbe00419c78f70f30c05b22211fe730645d5950a5664115177a2",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R03": {
+      "date": "2026-09-10",
+      "fingerprint": "20f3cb93fa5c0aa028f1bcea73e2440b79aa3b0776a5d6b73ae961fc820c1088",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes. Verified against the corrected reading of the 4.4/4.5 changelog: ID, Number, Type and Description are required for INFO, and the changelog's 'only INFO' claim omits FORMAT. Cases pass in every version.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R04": {
+      "date": "2026-09-10",
+      "fingerprint": "90c4d3673e27a0040bae044e7e1ad1602c338b5438fc8b8467bc211daa27ecd7",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R05": {
+      "date": "2026-09-10",
+      "fingerprint": "f7d3af87cac2a9e806006417f276062b8a4e509eb9983399dc3d6a579b34c37c",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R06": {
+      "date": "2026-09-10",
+      "fingerprint": "60fbd03607db890313e6a511e5e8c3f7ec4151ba14ed727626044672b994b814",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R07": {
+      "date": "2026-09-10",
+      "fingerprint": "b6c7eb4a545d54f430b97a5bd0bf43f7769b5bf6e694785a683191e34f478e74",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R08": {
+      "date": "2026-09-10",
+      "fingerprint": "fa981a2b36fe5665621ca507adb4f3d0cfeca56992e2381a9509cf8a0eb547e9",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R09": {
+      "date": "2026-09-10",
+      "fingerprint": "78212b31a866d0a757fdae31dda16d66694d53a69be72a6471b8f71771b021ba",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R10": {
+      "date": "2026-09-10",
+      "fingerprint": "bafcd941a86961c728225bfaa46a4d5ebcc62a83f46759ab9503b296c6fbdcc9",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R11": {
+      "date": "2026-09-10",
+      "fingerprint": "e1d974c58251067e5e43a769d8328bbea281f290beef07bad04700100260384c",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R12": {
+      "date": "2026-09-10",
+      "fingerprint": "46536eb0a7c0a732087b6418211720fee9b3ca22359c654d41432be1b5e322d6",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R13": {
+      "date": "2026-09-10",
+      "fingerprint": "95154bef20dc4359d102b38898c6bc3d1a15354b0858a9aad3d350755d0e5e51",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R14": {
+      "date": "2026-09-10",
+      "fingerprint": "97b006c3e3dfce2da2a33d7f1c704859c64d2134433f3d88f3f83ced87a128c7",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R15": {
+      "date": "2026-09-10",
+      "fingerprint": "f062eabbf811dc704fc12592197a27b99f7d735a530cdcc83cdb0ace094a6e06",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R16": {
+      "date": "2026-09-10",
+      "fingerprint": "231fe4be32eabdd675db84592bc29edf271dec58637a1472c6f652200c36c2e2",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R17": {
+      "date": "2026-09-10",
+      "fingerprint": "0fef7293185972c03429e18530aa912363b42924f03d9ca66db56d754f00ea38",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R18": {
+      "date": "2026-09-10",
+      "fingerprint": "7fa678b044f621b94a7b3236ab783ee64cba30eb5c80d5bca7fce384907f5a24",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes. Failing witnesses accepted as a documented condensed-profile limitation, not vocabulary incapability: 4.1/condensed/structure, 4.2/condensed/structure, 4.3/condensed/structure, 4.4/condensed/structure, 4.5/condensed/structure; the same requirement passes on the structure axis in the expanded profile.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R19": {
+      "date": "2026-09-10",
+      "fingerprint": "0a32fc55b0699b647f95df1ed974c3b9435d56d346adfd589d4c4254c63af971",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes. Failing witnesses accepted as a documented condensed-profile limitation, not vocabulary incapability: 4.1/condensed/structure, 4.2/condensed/structure, 4.3/condensed/structure, 4.4/condensed/structure, 4.5/condensed/structure; the same requirement passes on the structure axis in the expanded profile.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R20": {
+      "date": "2026-09-10",
+      "fingerprint": "c05d4d9ca51a7ff7b39e7668185a8371357c320d082a50b36cd2b4af714c4e11",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes. Failing witnesses accepted as a documented condensed-profile limitation, not vocabulary incapability: 4.1/condensed/structure, 4.2/condensed/structure, 4.3/condensed/structure, 4.4/condensed/structure, 4.5/condensed/structure; the same requirement passes on the structure axis in the expanded profile.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R21": {
+      "date": "2026-09-10",
+      "fingerprint": "f1a824a75f1441fb2fafe3857989edd004de01b0b7601082c8e6f496d8df8878",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes. Failing witnesses accepted as a documented condensed-profile limitation, not vocabulary incapability: 4.1/condensed/structure, 4.2/condensed/structure, 4.3/condensed/structure, 4.4/condensed/structure, 4.5/condensed/structure; the same requirement passes on the structure axis in the expanded profile.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R22": {
+      "date": "2026-09-10",
+      "fingerprint": "7a28ec4030724050a5142dc85b7283a49740cfebf5ca45843bc9e6f452397ba1",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 1 registered case(s) for version(s) 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes. Untested version(s) accepted as unassessed: 4.3, 4.4.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R23": {
+      "date": "2026-09-10",
+      "fingerprint": "c550b6a870c6a8da8d152f1950e6d20141a980d4903711b3c740e824be5e0c56",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 1 registered case(s) for version(s) 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R24": {
+      "date": "2026-09-10",
+      "fingerprint": "873f38c497021816d18cf760c7d7444954839dc607fbcffec07769ecfedd86b3",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 1 registered case(s) for version(s) 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R25": {
+      "date": "2026-09-10",
+      "fingerprint": "9bd5d5e2e1cf1f3ee1a53f721396b1461255492c23a9ef6d5e3852d244930ee3",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 1 registered case(s) for version(s) 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R26": {
+      "date": "2026-09-10",
+      "fingerprint": "d7e08349f40fb3b884f0ee15c2b5d7cc1280f9a945a5d20ad8f54c151d61e363",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 1 registered case(s) for version(s) 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R27": {
+      "date": "2026-09-11",
+      "fingerprint": "42dd7ad9d4901833c6c5f0f1806f6346e3818763a0029981ae8abc93eba264d0",
+      "rationale": "Read the LAA definition at VCFv4.5.tex:686-694 and the equivalence table at 703-710. The eight expected rows follow each Number=LR value to the global allele its local position names; at POS 1 LAA=2,4 skips ALT alleles A and T, so the mapping is genuinely non-identity, unlike the pre-existing case whose LAA=1,2 makes it the identity. POS 4's empty LAA is the REF-only case. Corrected GT from the printed 2/4 to 2/2: GT is Number=1 and not a local-allele field, LPL is minimal at local C/C and the global PL at index 5 = 2/2, and row 2 prints 0/3 in both of its rows; reported as samtools/hts-specs#871. Full local-to-global equivalence is covered separately by R83. Condensed structure fails as the documented profile design choice.",
+      "reviewer": "Elias Crum"
+    },
+    "R28": {
+      "date": "2026-09-10",
+      "fingerprint": "4c5e2f47e0c5c7697ffd4500729bbc7d9a2ff5e22dbf9cdb7fc02577b7734ccf",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 1 registered case(s) for version(s) 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes. Untested version(s) accepted as unassessed: 4.4. Failing witnesses accepted as a documented condensed-profile limitation, not vocabulary incapability: 4.5/condensed/structure; the same requirement passes on the structure axis in the expanded profile.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R29": {
+      "date": "2026-09-11",
+      "fingerprint": "fafe55222ec574eddbbf626ec77a6f2e9e8ac31d79e5c7f0e66786076c1c3d57",
+      "rationale": "Checked the M/DPM/ADM definitions at VCFv4.5.tex:720-740 against the chr1:100 record and the single expected row; the fraction, detecting depth and modified-read depth are returned as three distinct quantities of one modification of one sample. The values are synthetic, as the specification prints no worked record for these keys together. Accepted the condensed structure failure as the documented profile design choice.",
+      "reviewer": "Elias Crum"
+    },
+    "R30": {
+      "date": "2026-09-10",
+      "fingerprint": "8e0725aba6e7151c275c9d5b680a6231e8d5009db8d0d56e3732e17700ab330c",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 1 registered case(s) for version(s) 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes. Failing witnesses accepted as a documented condensed-profile limitation, not vocabulary incapability: 4.5/condensed/structure; the same requirement passes on the structure axis in the expanded profile. Verified that FORMAT LEN is the inclusive block length, so END = POS + LEN - 1; the fixture and the decode query implement that correctly, while the specification's own 4.5 table uses ';' separators and three off-by-one LEN values. Condensed/structure failure accepted as a profile limitation.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R31": {
+      "date": "2026-09-11",
+      "fingerprint": "a13fb98f6b7fdf19d7909d42097d4a5860e3dc663057e20949877c47ad1beb4a",
+      "rationale": "Read the Figure 11 prose at VCFv4.5.tex:1932-1937 and counted the allele sequence: CAGCAGCAGTTGTTG is (CAG)3(TTG)2, fifteen bases, so the printed (CAG)4 exponent is a specification defect. Reported upstream as samtools/hts-specs#870 (https://github.com/samtools/hts-specs/issues/870). The fixture encodes the corrected reading, giving three unit/count pairs CAG 3, TTG 2 and CA 3; the worked example at chr1:100 declares no RUC and is correctly absent from the answer. Registered for 4.4 and 4.5, whose figure prose is identical, alongside the existing single-allele case on repeats-v4.5.vcf.",
+      "reviewer": "Elias Crum"
+    },
+    "R32": {
+      "date": "2026-09-10",
+      "fingerprint": "9ea06257410c5d79c885795b2d17e36a7a5d316fcf72b799fa7d0e4ad0ca7ef4",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 1 registered case(s) for version(s) 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4. Verified the reciprocal-mate fixture and expected answers. Recorded that the assembly-contig insertion tables and the sample-mixture breakend tables are excluded as mate oracles, the latter because their ALT coordinates name CHROM 2 while the named mates are on CHROM 13.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R33": {
+      "date": "2026-09-10",
+      "fingerprint": "beacb965876c67656444ea5e6797f169b905578599fc5d864f9b1546c6340c49",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 4 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes. Untested version(s) accepted as unassessed: 4.5. Verified the version-dependent CIPOS scope: record-scoped Number=2 in 4.1-4.3 with an unbound allele, and per-ALT pairs in 4.4, both matching the registered expected answers.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R34": {
+      "date": "2026-09-10",
+      "fingerprint": "6fa04ffe38c0f1cbf461db7ef5e592793cc802f660b993737db4016649cc8cff",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 4 registered case(s) for version(s) 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes. Untested version(s) accepted as unassessed: 4.1. Scope corrected during this review: attribute order is removed from the scored requirement because VCF 4.4/4.5 state that implementations must not rely on it and need not preserve it, and 4.1-4.3 nowhere give it meaning. Identity, decoded value and escaping remain scored and pass.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R35": {
+      "date": "2026-09-10",
+      "fingerprint": "e4584fbf3e4bacd5129ad835bd856382a00810e6b449943e53555087a41fe0e5",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5. Version scope clarified: normative Genomes/Mixture grammar in 4.1/4.2, retained non-normative extension in 4.3-4.5. The version list was deliberately left unchanged so the clarification cannot raise a coverage percentage. Accepted limitation: Description entries cannot be paired positionally by grammar because the parallel list is a single quoted string containing ';'.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R36": {
+      "date": "2026-09-10",
+      "fingerprint": "01fecbc8f21acc919eaaabccb308d6e2c24f5bb3cbb93a26c03ddc31d058e755",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R37": {
+      "date": "2026-09-10",
+      "fingerprint": "6eebe680cfd27306f2fe28d70e6d7c4912e88cf7695df4e0e48f3346b1555db4",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R38": {
+      "date": "2026-09-10",
+      "fingerprint": "a3883cd8fdaf6f85b125cb4a0827db7608f3722ef65cec626edffdd64107947c",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.2, 4.3, 4.4, 4.5.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R39": {
+      "date": "2026-09-10",
+      "fingerprint": "703223131864441056905e00d336d1fc75f83785d5d87bad89a761e924322b8a",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R40": {
+      "date": "2026-09-10",
+      "fingerprint": "169642ebf8413fb1ac4609467884f6c5bc00291f983d35eaff27a5813f1a98ac",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R41": {
+      "date": "2026-09-10",
+      "fingerprint": "ac058461a910cc1a5aec50d7a50c3f1cf879678abfb4e855abcfe4ca96b3bb30",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R42": {
+      "date": "2026-09-10",
+      "fingerprint": "0238b91e06a7a8231d01b6930b993e32db8e07386021b1543b0b406d369c4f47",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R43": {
+      "date": "2026-09-10",
+      "fingerprint": "9e5d7ef6c1586e99e5d4c851652b1a86772712d9bf17d5ce6c50e02061098106",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R44": {
+      "date": "2026-09-10",
+      "fingerprint": "db2bbf2596854866d622aa2a13163bf3aabd88ca2319d964d77f1b2da07a2809",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R45": {
+      "date": "2026-09-11",
+      "fingerprint": "f45f5a9201a87a06a445bb14b71db4fa31866383fdbcfa59fb8f1f1a4a62b9c3",
+      "rationale": "Accepted as unassessed for all three applicable versions. The gVCF tables at VCFv4.3.tex:1440-1446 and VCFv4.5.tex:1867-1873 need four corrections before they can serve as an oracle - FORMAT 'P' reading as 'PL', ';' before each LEN reading as ':', the inclusive LEN values 5, 5 and 20 where 4, 4 and 19 are printed, and the 4396 variant row dropping the MIN_DP and LEN keys it cannot use - and those corrections are disputed upstream in samtools/hts-specs#868 (https://github.com/samtools/hts-specs/issues/868). Tests were drafted on this reviewer's reading and deliberately withdrawn rather than baked in: if the specification resolves #868 differently the expected answers would be wrong. Register them once that issue closes. <NON_REF> aliasing and the LEN-from-END fallback are untested for the same reason.",
+      "reviewer": "Elias Crum"
+    },
+    "R46": {
+      "date": "2026-09-11",
+      "fingerprint": "9dc4a08e8d35d8f24779a2b052e575b293fc8b9eec9fb00311a610b5eb64a5a8",
+      "rationale": "Read the worked example at VCFv4.5.tex:1969-1971 and the Figure 11 prose at 1932-1937. The two loci partition their flattened RUS/RB lists differently, RN=1,3 and RN=2,1, so the seven expected rows cannot be produced by an implementation that ignores RN; checked each row against the flat lists. The specification's two non-symbolic rows omit the mandatory INFO column, so the fixture supplies '.'; that erratum is reported upstream in samtools/hts-specs#870 (https://github.com/samtools/hts-specs/issues/870) alongside the Figure 11 exponent. RUB's separate partitioning by RUC remains untested under R88.",
+      "reviewer": "Elias Crum"
+    },
+    "R47": {
+      "date": "2026-09-10",
+      "fingerprint": "f0234a389e6a3770cbcf8f85b5fa53c4477005898506f08ff1e5ca2a0057fe5a",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5. Anchor corrected during this review: it pointed at Fixed fields, while the type and precision definitions are in the Data types section from 4.3 and in the INFO field-format section in 4.1/4.2. Remains unassessed.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R48": {
+      "date": "2026-09-10",
+      "fingerprint": "7ff95949ff9b08f6b4425867726b038162659e1fea1dab8bb8ee12d8bdb5e02b",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5. Anchor corrected during this review: it pointed at the Information field format section, while the 'arbitrary keys are permitted' and 'additional FORMAT keys' statements that this requirement rests on are in Fixed fields and Genotype fields. Remains unassessed.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R49": {
+      "date": "2026-09-10",
+      "fingerprint": "282da8fee5b8d4b45c29da2eb6cf33f3a5191560660c3f79ccba61617d1bc435",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.4, 4.5. Resolved the blocking source conflict: the PSL worked example is excluded as an oracle because its allele indices exceed the ALT lists, its implicit leading phasing indicator contradicts the PSL missing value, and its ploidy is inconsistent between rows. A corrected reviewer-authored equivalent is recorded. Remains unassessed.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R50": {
+      "date": "2026-09-10",
+      "fingerprint": "5686835d280a0681f21e0f6d48f357ef111756a22626f5a51b448f0496675d20",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.5.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R51": {
+      "date": "2026-09-10",
+      "fingerprint": "c80e81eefe57d092247657edc88cb83b1cbb35fc8e0252863372d816f30c51e2",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 10 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R52": {
+      "date": "2026-09-10",
+      "fingerprint": "1b23a9a2dd3dea8b0ad089db06b4d297096a174f0e2ec8c868ae143901e62d65",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes. Verified against the corrected reading of the 4.4/4.5 changelog: the FORMAT section requires ID, Number, Type and Description just as the INFO section does, contrary to the changelog. Cases pass in every version.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R53": {
+      "date": "2026-09-10",
+      "fingerprint": "225bdd77fc47034e854c369e1d59c574622ae531b1a0068280c9a0c75492b642",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R54": {
+      "date": "2026-09-10",
+      "fingerprint": "b0a8738c45ea6c61a1902d29e53d61feeda10bd17ecc9f2f892862f23054db60",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R55": {
+      "date": "2026-09-10",
+      "fingerprint": "439319fe5ab06f2d6ad50ef934d8c7028d74cf48acc32377191c7da7fb7438de",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R56": {
+      "date": "2026-09-10",
+      "fingerprint": "ff9e8ea7ca33779bf57a48cbb9092db47fdc911f2abcd27b61612292ecda04a3",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R57": {
+      "date": "2026-09-10",
+      "fingerprint": "c31d06a8b297c40ce12c4f5324fe133231305822eb8b19aedf8e23aa732ba9b6",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R58": {
+      "date": "2026-09-10",
+      "fingerprint": "a8637cd1d96e4986606b529117c6c5ed2c6ab39f732d131121f526cf6b6bb8bc",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R59": {
+      "date": "2026-09-10",
+      "fingerprint": "23c337c64fab4181faf61c53d973905b0b1cc397ebd72a20aad1a931377645de",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 6 registered case(s) for version(s) 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R60": {
+      "date": "2026-09-10",
+      "fingerprint": "47682aa9782c233852ae058a1f2868354ce2f4b50ff7863296cfd9737582ab0b",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes. Failing witnesses accepted as a documented condensed-profile limitation, not vocabulary incapability: 4.1/condensed/structure, 4.2/condensed/structure, 4.3/condensed/structure, 4.4/condensed/structure, 4.5/condensed/structure; the same requirement passes on the structure axis in the expanded profile. Verified the FT states against the fixture and the specification: PASS, '.' for filters not applied, and semicolon-separated failure codes resolved to their FILTER declarations in order. Condensed/structure failure accepted as a profile limitation.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R61": {
+      "date": "2026-09-10",
+      "fingerprint": "d28371f4f9fe3cf86cb4c05211ac1088b23ff20656f5f2087a59eeb833c16dfc",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 10 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R62": {
+      "date": "2026-09-10",
+      "fingerprint": "6d737b513dcd164b6f91995e4c2dc36aa090586f2047f8090ea9231ea45bfec9",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R63": {
+      "date": "2026-09-10",
+      "fingerprint": "e7617c86f2fae5e82ab1d3294f576a325ecf6f032be1cd913226a02f6ea45a97",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R64": {
+      "date": "2026-09-10",
+      "fingerprint": "26f83c6d2eae1ef7e7c3dc5ae29d1fed769f61350f7c3e941db5675436442e32",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.2, 4.3, 4.4, 4.5.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R65": {
+      "date": "2026-09-10",
+      "fingerprint": "98a734d1a3ae2ce27535d20bf127bd880c4f2cba8943800a36e788758721b52f",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 4 registered case(s) for version(s) 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R66": {
+      "date": "2026-09-10",
+      "fingerprint": "c519962496705cbf961dc25f70e8207f149e2d36f7c60054e72e0e99eccfaffd",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R67": {
+      "date": "2026-09-10",
+      "fingerprint": "55088e3bcf7d57174b95279ce5fa86437cd9a9a23383df6d30128eba77dd7c10",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R68": {
+      "date": "2026-09-10",
+      "fingerprint": "801266b92b988898e2a0659296c149f6f0f7d2d4ddac1d5788ce1a94e580b913",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R69": {
+      "date": "2026-09-10",
+      "fingerprint": "09407793fc2f12ea40e881dc01eca47883259e16b3b9e5b161e1289a7e89fc49",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5. Resolved the flagged Q-suffix conflict: the error-probability reading governs, because the printed -10 log10 Pr(Data|Model) contradicts both the same sentence's 'log-complementary posterior' wording and the normative GQ/CNQ definitions. No expected answer depends on it. Remains unassessed.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R70": {
+      "date": "2026-09-10",
+      "fingerprint": "985810c620477d92acc65f68d274948833fd31fdacf1735cf211abe698c1b515",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R71": {
+      "date": "2026-09-10",
+      "fingerprint": "d9b0a6f08854a8e5030f4dbd4019a54636d806e12cfb966659a55c6751b4e8bb",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R72": {
+      "date": "2026-09-10",
+      "fingerprint": "f28ac95ed9ff18baa94649a56888b6cc46b153dd1b86d5effa2682181f07fc89",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5. Verified that the 4.1 prose '105 bp' is a typo corrected to 205 bp in the pinned 4.2 and 4.3 texts, and that POS, END and SVLEN agree on 205 deleted bases. Remains unassessed.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R73": {
+      "date": "2026-09-10",
+      "fingerprint": "1fb49426d66cad11548f0f1ffa144f5342df9d0bdaa903dab2ec486c3bdaa546",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R74": {
+      "date": "2026-09-10",
+      "fingerprint": "3679961b6c737087a05a6509bcb11afaeaaf3b2275765c8942e4809943f00b84",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R75": {
+      "date": "2026-09-10",
+      "fingerprint": "22bcc5373d704d38e456dc0067ffa261895cb673ae8ccd87a7d4c7855f99fde5",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.4, 4.5. Recorded that the specification's DUP example omits the mandatory SVCLAIM without determining its value, so that row is excluded as an oracle. Remains unassessed.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R76": {
+      "date": "2026-09-10",
+      "fingerprint": "8253845c9e3cee1650161820d64c101161f7b7202f12d5067d7ffee0a5337cd6",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.4, 4.5.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R77": {
+      "date": "2026-09-10",
+      "fingerprint": "ca583e342e8e56d08fea0b04ada72542f128965eb569a97edea8b77139fb7fd8",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5. Resolved the flagged conflict: the prose copy-number indexing from zero governs and list length is data-determined, because the declared Number=G is inconsistent with it. Recorded as a specification defect. Remains unassessed.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R78": {
+      "date": "2026-09-10",
+      "fingerprint": "94ae380e8f6fcccfe43303830a191617075b719aedf76c2347e785f7cffe4987",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R79": {
+      "date": "2026-09-11",
+      "fingerprint": "87e351b3012c3afec6dafc254cabc3e962e052d299f8081de7f29394e8d2594b",
+      "rationale": "Read the two worked tables at VCFv4.1.tex:836-839 and 852-855 and the key declarations at 279-283, and confirmed each sample column of the fixture carries exactly the values its table gives it, with Blood shared by both. Accepted declaring DPADJ and CNADJ as ##FORMAT although the specification declares them as ##INFO, since both examples use them as FORMAT keys and it is the examples being assessed. Accepted rewriting the bnd_W and bnd_V ALT coordinates to 13:421681 and 13:421682, their mates being on CHROM 13; the printed 2:... is an erratum present in all five versions and is recorded in REVIEW-REPORT.md section 2.13 as still to report upstream. CICNADJ has no worked example anywhere and stays untested, as does the segment-scoped DP/CN contrast. Registered for 4.1, 4.2 and 4.3, whose tables are identical. Condensed structure fails as the documented profile design choice.",
+      "reviewer": "Elias Crum"
+    },
+    "R80": {
+      "date": "2026-09-10",
+      "fingerprint": "cb4da1bbb71a01150255dd756386435e6e81030b61e2312bd698040aa146f2e8",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2. Accepted unassessed limitation: the 4.1/4.2 GLE example value contains the ':' sample sub-field separator, no escaping rule or complete sample-column example exists, and 4.3 removes the key as ill-defined, so no source-derived fixture or oracle is possible. No test is requested.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R81": {
+      "date": "2026-09-10",
+      "fingerprint": "ca79b17a0aee0ed88716760ee8da24c67c16198509bca7ad91616b92ef78cbe4",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R82": {
+      "date": "2026-09-11",
+      "fingerprint": "506d433ce73afafdb3f4732d1fe33ec5aa14657ca295d35180a2aa2bda76d537",
+      "rationale": "Checked all three oracles. PSO: the example at VCFv4.5.tex:800-802 against the definition at 788-792, ordinals 1-5 exactly once each giving one traversal of the derivative chromosome. PSL/PSQ: the printed PSL table is a specification defect - allele indices beyond the ALT list, an omitted leading indicator contradicting its own PSL, inconsistent ploidy - reported as samtools/hts-specs#871 (https://github.com/samtools/hts-specs/issues/871), so my corrected rows GT=|1/2|2 and GT=/0|1/0 are the oracle, with PSQ values I authored since 4.5:808-809 defines the field without an example; the case checks positional correspondence, the reuse of chr19*5*1 at chr20:10 resolving to the same phase set, and missing values on unphased alleles. PS versus PSL: the rule at 4.5:775-776 is normative but unillustrated, so I authored a two-sample record where SAMPLE1 uses PS and SAMPLE2 uses PSL to describe the same haplotype pair, A,T and G,C; the case checks that each sample exposes only its own mechanism. Condensed structure fails as the documented profile design choice.",
+      "reviewer": "Elias Crum"
+    },
+    "R83": {
+      "date": "2026-09-11",
+      "fingerprint": "d26785c3b10f01a1693ae8f7ff47daa7da640396cb249ca98f92194227a9f56a",
+      "rationale": "First evidence for this requirement, which was accepted as unassessed on 10 September. The fixture carries both rows of all four pairs from the equivalence table at VCFv4.5.tex:703-710, transcribed faithfully with the single correction GT=2/2 in the first local row (samtools/hts-specs#871). Accepted the demonstration: a Number=LR depth indexed by the local allele set and a Number=R depth indexed by the full ALT list are joined through the allele resource each one resolves to, so the eighteen rows agree only if LAA has been applied - a mis-resolved local index would land the value on the wrong allele and break the join. The vocabulary states no explicit local-to-global equivalence, and that is accepted. The empty-LAA REF-only site is included. The LPL-to-PL genotype correspondence is accepted as a recorded gap: both sides expose only a positional genotype index and nothing relates that index to the allele pair it denotes, so it is logged in the repository README as a vocabulary improvement rather than tested.",
+      "reviewer": "Elias Crum"
+    },
+    "R84": {
+      "date": "2026-09-11",
+      "fingerprint": "3b9f248cfa7dca85de38849fb5633cb9012f91892b2beaad17cd98c8ab0ef52c",
+      "rationale": "Read the Number=M rules at VCFv4.5.tex:199-215 and the four examples at 225-228 against the per-record prose at 231-248, and re-derived each value count independently: 1 at chr:10, 3 at chr:20, 2 per field at chr:30 and 5 at chr:40. Walked the octoploid row by hand and confirmed the thirteen expected rows place each value on the right GT slot, base offset and strand, with the unphased G and C aggregated at their first occurrence, the phased A and the later repeats contributing none, and the final missing value yielding a modification with no fraction. The converter did not implement the aggregation rule and rejected this legal record until it was fixed, so the fix was checked separately against nine genotype patterns rather than only the registered fixture, including three the specification never illustrates: |0/0/0 and /0|0 confirm that aggregation groups unphased occurrences only and that a phased copy still encodes, and ./0 and a symbolic ALT confirm that missing and symbolic alleles encode nothing. Every incorrect cardinality was rejected. U/T equivalence and the unstranded storage convention have no worked example and stay untested. Condensed structure fails as the documented profile design choice.",
+      "reviewer": "Elias Crum"
+    },
+    "R85": {
+      "date": "2026-09-11",
+      "fingerprint": "0f45d5c121c1c40d8a4428d2de06f94c41347e3b5ca29501636935881b3f49af",
+      "rationale": "Read the reserved key patterns at VCFv4.5.tex:556-558 and the alias sentence at 724. The specification prints no record using these keys, so both records are reviewer-authored and labelled as such. Accepted the construction: M5mC and its numeric form M27551C resolve to one modification resource, which is what the alias sentence means if it means anything; DPM and ADM attach the detecting and modified-read depths to that same resource; M999999C is carried with its identifier although unrecognised, as the reserved pattern requires; and MXaoN, whose base letter is N, emits a forward and a reverse value per base in the documented order. MXaoN with a capital X is the reserved-table spelling and the four prose occurrences of MxaoN are typos, not yet reported upstream. The remaining alias keys are untested. Condensed structure fails as the documented profile design choice.",
+      "reviewer": "Elias Crum"
+    },
+    "R86": {
+      "date": "2026-09-10",
+      "fingerprint": "5649736c0d13d1d24f952b33b28becdc196c2c2102d1b524bc2872a919350cb2",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.5.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R87": {
+      "date": "2026-09-10",
+      "fingerprint": "4158953b954d3f447ca5d9028b030b3730185568e175065228b4910576f845c4",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.4, 4.5.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R88": {
+      "date": "2026-09-10",
+      "fingerprint": "7d363ce4d36235ab528474e018230270250be4ddd96c47c443976a7e2eacb093",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.4, 4.5. Resolved the RUL/RUB nesting question: RUB is partitioned by RUC, one value per repeat unit, unlike RUS/RUL/RUC/RB which are partitioned by RN. The specification's RUB example is excluded as a copy-number oracle because its CN is inconsistent with both sum(RUB) and RUL*RUC. Remains unassessed.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R89": {
+      "date": "2026-09-11",
+      "fingerprint": "8dc42b1786f0c75cf64d1fa1a905359c05be5cd90014350cd6e25e3e8faa04d9",
+      "rationale": "Re-derived the arithmetic from VCFv4.5.tex:1977-1992: reference (CAG)10 = 30 bases, allele 1 (CAG)30 = 90 giving INFO CN 3, allele 2 = 29 bases giving 0.9666 truncated, and FORMAT CN (90+29)/30 = 3.9666. Accepted asserting the relation to the two non-symbolic records as the shared phase set 100, the strongest link the data carries, since the specification only says such records should be phased with the summary record; sequence-level equivalence between the two representations is not asserted. The Figure 11 locus is a separate phase set and correctly carries no ratios. Condensed structure fails as the documented profile design choice.",
+      "reviewer": "Elias Crum"
+    },
+    "R90": {
+      "date": "2026-09-10",
+      "fingerprint": "c375e7198892fc3d0f015714451fb753c44a23ce746fa8e88d9897249acfa734",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R91": {
+      "date": "2026-09-10",
+      "fingerprint": "c235962bd207d2e7ad35d425809457a0ac4c21dfb71297a56ee36580fa3b0561",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.4, 4.5.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R92": {
+      "date": "2026-09-11",
+      "fingerprint": "1a1010417e916216bfcf20f687efdaeee383f0cfae22e7a172ded8559f7b3dd2",
+      "rationale": "Read the three assembly-contig insertion tables at VCFv4.5.tex:1481, 1502 and 1514-1517. The printed MATEIDs are a specification defect, not a modelling choice: two are self-references, one names an undefined bnd_C, and for the chromosome-13 breakends the true mate is a contig-side breakend that has no record. Reported upstream as samtools/hts-specs#869 (https://github.com/samtools/hts-specs/issues/869). The fixture follows the spirit of the passage rather than its printed values: the inserted boundary and its direction come from the ALT bracket coordinates, the adjacencies are grouped by EVENT, and MATEID is registered only for the circular pair bnd_X/bnd_Y, whose mates do have records. Accepted relocating the partial and circular examples to distinct positions and IDs, since the specification reuses POS 123456/123457 and bnd_U/bnd_V for all three. The 4.1-4.4 equivalents remain untested.",
+      "reviewer": "Elias Crum"
+    },
+    "R93": {
+      "date": "2026-09-10",
+      "fingerprint": "f470f7ffc0d6423bdf9ef05e88ba6c7eb15719315075e62026348cf2c985cabe",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R94": {
+      "date": "2026-09-10",
+      "fingerprint": "b5a8444af4cba0f33f19076b2106e8e8726b1cc59e7e23fc2aba7801821e68d3",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3. Accepted unassessed limitation: BDP and BCN are undeclared prose-only names with no Number, Type or serialization in 4.1-4.3, the bundle table has no VCF grammar, and 4.4 deprecates bundles. No test is requested; the declared equivalents are covered by R78 and R79.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    }
+  },
+  "sourceAudit": {
+    "date": "2026-09-11",
+    "fingerprint": "d360843d5a04ec6c0eef031141a4a46d2b4c69d9c0953802dcdfdaea917e7095",
+    "rationale": "Re-accepted after this session's changes. Confirmed 0 sections flagged needs-review and 0 with an unresolved review issue, and that the five source pins verify. Checked the three changes since the 10 September acceptance: 26 assertions gained links to cases written in this session, 22 of them having had none before; 5 reference-block assertions kept their links but state that R45 is deliberately untested pending samtools/hts-specs#868; and the stored fingerprints of sections 4.4:200-241 and 4.5:249-290 moved because the heading extractor stopped folding a stray \\label into the title, with the passage text unchanged and the pinned sources untouched. Read the updated gaps and accepted that each describes both what its case checks and what it leaves out, which is the property that stops the assertion inventory overstating coverage. The 831 assertions with no targeted case remain an explicit workload measure, not a coverage claim.",
+    "reviewer": "Elias Crum"
+  },
+  "sourceSections": {
+    "4.1:193-222": {
+      "disposition": "mapped",
+      "note": "Reviewer decision (VCF expert): no valid 4.1/4.2 GLE sample serialization can be derived from this text, so no genotype/likelihood oracle is authorable. The reserved example value '0:-75.22,1:-223.42,0/0:-323.03,1/0:-99.29,1/1:-802.53' uses ':' as its internal separator, but ':' is the sample sub-field separator delimiting the FORMAT key list, and no escaping rule or complete sample-column example is given (the printed 'GLE=' prefix is INFO syntax, a further slip). VCF 4.3 removes GLE as 'unused and ill-defined', confirming the defect. Accepted as an unassessed limitation: GLE is in scope only as an opaque declared String value (preservation); no decomposition into genotype/likelihood pairs is asserted or tested, and R80 stays unassessed for 4.1/4.2. All other assertions in this section are unaffected and remain mapped.",
+      "relatedRequirements": [],
+      "sourceFingerprint": "fbd2b3106eaf80d05f7254d99bf29c291c024fddf1d25e8566c964aaf1ab500e"
+    },
+    "4.1:468-523": {
+      "disposition": "mapped",
+      "note": "Reviewer decision: the encoded fields govern; the deletion is 205 bp, and the prose '105 bp' is a typo. POS=321682, END=321887 and SVLEN=-205 agree: with REF=T at POS as the padding base the deleted bases are 321683-321887, i.e. 205 bases = END-POS. The pinned later versions correct the prose to '205 bp' (VCFv4.2.tex line 534, VCFv4.3.tex line 874), which settles it. The example is usable as a POS/END/SVLEN oracle with the corrected figure.",
+      "relatedRequirements": [],
+      "sourceFingerprint": "c43f87b924ac2d528df080a4bde210537233fa8b3e210809e6959865504244c3"
+    },
+    "4.1:586-638": {
+      "disposition": "mapped",
+      "note": "Reviewer decision: the printed complete-insertion shorthand row is inconsistent and must be corrected before use. '13 321682 INS0 T C<ctg1>' takes POS and REF from the unrelated chr2 breakend row ('2 321682 bnd_V T ...'); the flanking pair immediately above places the insertion between 13:123456 (REF=C) and 13:123457 (REF=A). The consistent record is '13 123456 INS0 C C<ctg1> 6 PASS SVTYPE=INS'. VCF 4.4 independently corrects the same row to POS=123456 with REF=C, corroborating the reading. Use the corrected record, marked as a reviewer correction rather than spec-verbatim, and justify any oracle from the flanking BND pair, not from the printed row.",
+      "relatedRequirements": [],
+      "sourceFingerprint": "bdb95ccc0e225862d4bac3f45101c4da6da7a6666302b39fc51ec3863b9dbda3"
+    },
+    "4.1:911-954": {
+      "disposition": "mapped",
+      "note": "Reviewer decision: BDP and BCN are not assessable from this specification; accepted as an unassessed limitation. Each occurs exactly once, in this one prose sentence: neither has an ##INFO/##FORMAT declaration, a Number, a Type, a reserved-key table entry, or any complete VCF record in 4.1-4.3. The bundle table is an abstract visualisation whose haplotype cells ('1>11', '2,3,4>12,13,14', '5>5') have no VCF grammar, and multiple bundles per breakend per sample have no defined sample-column encoding. VCF 4.4 deprecates bundles outright in favour of PSL-based phasing. R94 therefore stays registered and unassessed for 4.1-4.3. The quantities described here are, however, declared under other names - DP and CN (segment depth and copy number), DPADJ and CNADJ (the table's 'Bundle Depth' and 'Bundle Copy Number'), HQ, and HAP/AHAP - and those are testable: request a targeted R79 case using the declared keys and the worked example at 4.1:836-839 / 852-855 (and the equivalents in 4.2/4.3). Separate defect recorded: DPADJ, CNADJ and CICNADJ are declared as ##INFO lines in 4.1-4.3 yet used as FORMAT keys in those same examples ('GT:DPADJ', 'GT:CNADJ'); assess the FORMAT usage the examples actually show.",
+      "relatedRequirements": [],
+      "sourceFingerprint": "98e2398d1ed0aa20c6b75b20ce17d243767cb33162f545b045a6892268bb3454"
+    },
+    "4.2:210-239": {
+      "disposition": "mapped",
+      "note": "Reviewer decision (VCF expert): no valid 4.1/4.2 GLE sample serialization can be derived from this text, so no genotype/likelihood oracle is authorable. The reserved example value '0:-75.22,1:-223.42,0/0:-323.03,1/0:-99.29,1/1:-802.53' uses ':' as its internal separator, but ':' is the sample sub-field separator delimiting the FORMAT key list, and no escaping rule or complete sample-column example is given (the printed 'GLE=' prefix is INFO syntax, a further slip). VCF 4.3 removes GLE as 'unused and ill-defined', confirming the defect. Accepted as an unassessed limitation: GLE is in scope only as an opaque declared String value (preservation); no decomposition into genotype/likelihood pairs is asserted or tested, and R80 stays unassessed for 4.1/4.2. All other assertions in this section are unaffected and remain mapped.",
+      "relatedRequirements": [],
+      "sourceFingerprint": "45992a9e4a73cbc74e301a5988909ce6c96b851238154734199405bc584649b7"
+    },
+    "4.2:603-655": {
+      "disposition": "mapped",
+      "note": "Reviewer decision: the printed complete-insertion shorthand row is inconsistent and must be corrected before use. '13 321682 INS0 T C<ctg1>' takes POS and REF from the unrelated chr2 breakend row ('2 321682 bnd_V T ...'); the flanking pair immediately above places the insertion between 13:123456 (REF=C) and 13:123457 (REF=A). The consistent record is '13 123456 INS0 C C<ctg1> 6 PASS SVTYPE=INS'. VCF 4.4 independently corrects the same row to POS=123456 with REF=C, corroborating the reading. Use the corrected record, marked as a reviewer correction rather than spec-verbatim, and justify any oracle from the flanking BND pair, not from the printed row.",
+      "relatedRequirements": [],
+      "sourceFingerprint": "49b3d37a30a97ed3cbf24174534adf1ad176bc6ed834531e3fb4569f1358b291"
+    },
+    "4.2:928-971": {
+      "disposition": "mapped",
+      "note": "Reviewer decision: BDP and BCN are not assessable from this specification; accepted as an unassessed limitation. Each occurs exactly once, in this one prose sentence: neither has an ##INFO/##FORMAT declaration, a Number, a Type, a reserved-key table entry, or any complete VCF record in 4.1-4.3. The bundle table is an abstract visualisation whose haplotype cells ('1>11', '2,3,4>12,13,14', '5>5') have no VCF grammar, and multiple bundles per breakend per sample have no defined sample-column encoding. VCF 4.4 deprecates bundles outright in favour of PSL-based phasing. R94 therefore stays registered and unassessed for 4.1-4.3. The quantities described here are, however, declared under other names - DP and CN (segment depth and copy number), DPADJ and CNADJ (the table's 'Bundle Depth' and 'Bundle Copy Number'), HQ, and HAP/AHAP - and those are testable: request a targeted R79 case using the declared keys and the worked example at 4.1:836-839 / 852-855 (and the equivalents in 4.2/4.3). Separate defect recorded: DPADJ, CNADJ and CICNADJ are declared as ##INFO lines in 4.1-4.3 yet used as FORMAT keys in those same examples ('GT:DPADJ', 'GT:CNADJ'); assess the FORMAT usage the examples actually show.",
+      "relatedRequirements": [],
+      "sourceFingerprint": "ac9205e5ea11e84f6f86257e6179a9c2e079af12ece67015e1b8e171686953aa"
+    },
+    "4.3:1000-1052": {
+      "disposition": "mapped",
+      "note": "Reviewer decision: the printed complete-insertion shorthand row is inconsistent and must be corrected before use. '13 321682 INS0 T C<ctg1>' takes POS and REF from the unrelated chr2 breakend row ('2 321682 bnd_V T ...'); the flanking pair immediately above places the insertion between 13:123456 (REF=C) and 13:123457 (REF=A). The consistent record is '13 123456 INS0 C C<ctg1> 6 PASS SVTYPE=INS'. VCF 4.4 independently corrects the same row to POS=123456 with REF=C, corroborating the reading. Use the corrected record, marked as a reviewer correction rather than spec-verbatim, and justify any oracle from the flanking BND pair, not from the printed row.",
+      "relatedRequirements": [],
+      "sourceFingerprint": "e4d49855cc2c89a902fa42ab2c27cd7d29403c3be92c3b4cf6c21d948bf2a181"
+    },
+    "4.3:1376-1427": {
+      "disposition": "mapped",
+      "note": "Reviewer decision: BDP and BCN are not assessable from this specification; accepted as an unassessed limitation. Each occurs exactly once, in this one prose sentence: neither has an ##INFO/##FORMAT declaration, a Number, a Type, a reserved-key table entry, or any complete VCF record in 4.1-4.3. The bundle table is an abstract visualisation whose haplotype cells ('1>11', '2,3,4>12,13,14', '5>5') have no VCF grammar, and multiple bundles per breakend per sample have no defined sample-column encoding. VCF 4.4 deprecates bundles outright in favour of PSL-based phasing. R94 therefore stays registered and unassessed for 4.1-4.3. The quantities described here are, however, declared under other names - DP and CN (segment depth and copy number), DPADJ and CNADJ (the table's 'Bundle Depth' and 'Bundle Copy Number'), HQ, and HAP/AHAP - and those are testable: request a targeted R79 case using the declared keys and the worked example at 4.1:836-839 / 852-855 (and the equivalents in 4.2/4.3). Separate defect recorded: DPADJ, CNADJ and CICNADJ are declared as ##INFO lines in 4.1-4.3 yet used as FORMAT keys in those same examples ('GT:DPADJ', 'GT:CNADJ'); assess the FORMAT usage the examples actually show.",
+      "relatedRequirements": [],
+      "sourceFingerprint": "61550cc4567655e96ed8b78bcc2cd51c48762a37cb6b43000dfc1c7d0c197dde"
+    },
+    "4.3:1428-1451": {
+      "disposition": "mapped",
+      "note": "Reviewer decision: 'P' is a typo for 'PL'; the corrected FORMAT is GT:DP:GQ:PL. Four independent confirmations: (a) no reserved FORMAT key named 'P' exists in any VCF version; (b) the sample value carries six comma-separated items, which is exactly G for the three alleles G, C and <*> at ploidy two; (c) the items are integers, matching PL (Integer) rather than GL or GP (Float); and (d) GQ=52 equals the second-smallest value in 0,52,95,66,95,97, which is precisely how GQ relates to PL. Every sibling row in the same table uses PL. The row correctly omits MIN_DP, since it is a variant row and not a reference block. Usable as a fixture after this correction.",
+      "relatedRequirements": [],
+      "sourceFingerprint": "40e3da8bc94460be4ce88c7ad9b232517ef513697b578dd9e76a9ffd02625bdc"
+    },
+    "4.3:586-600": {
+      "disposition": "mapped",
+      "note": "Reviewer decision: adopt the error-probability interpretation. The Q-suffix sentence is internally inconsistent - it calls the quantity a 'log-complementary ... posterior probability' but prints -10 log10 Pr(Data|Model), which is neither complementary nor posterior. The normative per-key definitions in the same document govern: GQ is '-10log10 p(genotype call is wrong, conditioned on the site's being variant)' and CNQ is '-10log10 p(copy number genotype call is wrong)'. So a Q-suffixed value is -10 log10 (1 - Pr(Model|Data)), the phred-scaled probability that the reported call is wrong; the printed formula drops the complement and inverts the conditioning. Assessment impact: none. This settles the field's stated meaning, which the vocabulary carries through the reserved definition and the declaration Description; no expected answer in any registered case depends on the numeric semantics, and R69 keeps its scale-distinction scope unchanged.",
+      "relatedRequirements": [],
+      "sourceFingerprint": "30beb1a8fab37221b00295a7ee837e1fdfee6ca3601431d856fbe2020d0d768f"
+    },
+    "4.3:672-691": {
+      "disposition": "mapped",
+      "note": "Reviewer decision: the prose governs the meaning and the declared Number is a specification defect. CNL is a list of log10 likelihoods indexed by copy number starting at zero, so the value at 0-based index i is log10 L(CN = i). The declared Number=G is inconsistent with that: G is a function of allele count and ploidy, whereas a copy-number-indexed list has length max(CN)+1, which is not derivable from REF/ALT/GT. Number=G is carried over from GL and persists unchanged through 4.5. Expected cardinality is therefore data-determined - the number of comma-separated items actually present - and expected order is ascending copy number from zero; do not silently apply genotype-combination ordering. CNP inherits the same reading ('otherwise defined precisely as the CNL field'). The reserved-declaration check must keep comparing the declared Number=G literally, and the README must state that literal Number/Type agreement is not agreement with the prose semantics.",
+      "relatedRequirements": [],
+      "sourceFingerprint": "4fecbfd845f8fc553c6eb97e2cc84c0ccaff86cffc55a05ab05071797f8d286d"
+    },
+    "4.4:105-142": {
+      "disposition": "mapped",
+      "note": "Reviewer decision: remove attribute ordering from the assessed requirement; keep it as a documented, non-scored fidelity extension. This section states that implementations 'must not rely on the order of the fields within structured lines and are not required to preserve field ordering', and presents the recommended ID/Number/Type/Description sequence explicitly as a human-readability aid. Attribute order within a structured meta-information line is therefore presentation, not information, in 4.4/4.5; 4.1-4.3 nowhere assign it meaning either. Scoring a non-requirement would distort the denominator, so R34 is retained for attribute identity, value and escaping across all five versions - which its existing cases already demonstrate - and its interpretation has been corrected to say that ordering is recorded but not scored. R02's 'source order' is a different and legitimate property (the order of meta-information lines) and is unaffected.",
+      "relatedRequirements": [],
+      "sourceFingerprint": "6b718aa209bab92f37ac6b65080310ed5f9b88a5bee6f97edfc008338e4cd18d"
+    },
+    "4.4:1181-1233": {
+      "disposition": "mapped",
+      "note": "Reviewer decision: two rows of this example must not be used as oracles, and a third error is recorded. (1) delbp2. With chrA = ATGCGAAAAAAATGT, delbp1 at chrA:2 (REF=T, correct) has ALT 'T[chrA:5[', so its mate lies at chrA:5, where the reference base is G. The printed 'chrA 2 delbp2 A ]chrA:2]A' has the wrong POS (2, duplicating delbp1), the wrong REF (A; chrA:2 is T and chrA:5 is G) and a self-referential mate coordinate. The correct reciprocal is 'chrA 5 delbp2 G ]chrA:2]G . . MATEID=delbp1;EVENT=DEL_split_bp_cn GT 0/1', which matches the copy-number row 'chrA 2 . T <DEL> SVLEN=2;SVCLAIM=D'. (2) The DUP row 'chrA 5 . G <DUP> . . SVLEN=3;CIPOS=0,5;EVENT=homology_dup' omits SVCLAIM, which this specification makes mandatory for DEL/DUP alleles ('SVCLAIM must be specified and can be D, J, or DJ'). The example does not determine the value: presented as the duplication rendering of the sequence-resolved 'chrA 5 . G GAAA' it asserts both abundance and adjacency (DJ), but a pure abundance claim (D) is also readable. Excluded as an SVCLAIM oracle; if a fixture needs a value, supply SVCLAIM=DJ as a declared reviewer choice. (3) Additional erratum found during this review and not previously flagged: 'chrA 14 . T <INS> ...' gives REF=T at chrA:14, but the stated sequence has G at 14 (T is at 13 and 15), and the next row correctly uses 'chrA 14 . G .CCCCCCG'. Minimal correction: REF=G at POS=14. Present in both 4.4 and 4.5.",
+      "relatedRequirements": [],
+      "sourceFingerprint": "15d2a90e8d4a21d7214d18fdcc6645949e52254aa7cf2e8e40dc584095137be0"
+    },
+    "4.4:1308-1360": {
+      "disposition": "mapped",
+      "note": "Reviewer decision: MATEID in this subsection cannot serve as an oracle for reciprocal-mate reconstruction. The partial-insertion table gives bnd_U MATEID=bnd_U and bnd_V MATEID=bnd_V, both self-references; the circular table repeats those two self-references and gives bnd_Y MATEID=bnd_C, an identifier that appears nowhere in the specification. More fundamentally, a MATEID must name the breakend at the other end of the same novel adjacency: bnd_U's adjacency ends on <ctg1> (at 1, 7 or 229 depending on the table) and bnd_V's ends on <ctg1> (at 329, 214 or 45), and no records exist for those contig-side breakends - so no correct MATEID for bnd_U or bnd_V is available anywhere in the section, including the first table, whose printed MATEID=bnd_V / MATEID=bnd_U are wrong for the same reason. The correct grouping mechanism for these records is EVENT, which the circular table already uses (EVENT=INS0). The one determinable correction is bnd_Y's: at <ctg1>:329 with ALT 'T[<ctg1>:1[' its mate is the breakend at <ctg1>:1, i.e. MATEID=bnd_X (and bnd_X's printed MATEID=bnd_Y is already correct). Assess reciprocal-mate reconstruction (R32) on the six-breakend Figure 1 example instead; the existing breakends-v4.5.vcf fixture already does this correctly.",
+      "relatedRequirements": [],
+      "sourceFingerprint": "c117827e9121bf446d315f706b8e77b5207036872e9fba9ffc6b4551bc1c1bbb"
+    },
+    "4.4:1571-1615": {
+      "disposition": "mapped",
+      "note": "Reviewer decision: version-scoped. In 4.1/4.2 '##SAMPLE=<ID=S_ID,Genomes=...,Mixture=...,Description=...>' is the normative SAMPLE grammar (VCFv4.1.tex line 129, VCFv4.2.tex line 146), so it is in scope with the semicolon-separated Genomes/Mixture/Description lists positionally aligned (Germline<->.3, Tumor<->.7). In 4.3-4.5 the normative SAMPLE definition is replaced by the META-driven form (Assay/Ethnicity/Disease/Tissue/Description/DOI) while this Genomes/Mixture example is retained; it stays syntactically legal because those versions allow arbitrary additional attributes on structured lines, but it is no longer normatively defined. Treat it in 4.3-4.5 as a permitted, non-normative extension assessed under generic structured-attribute retention (R34/R59), not as a version-specific Genomes/Mixture capability; R35's interpretation has been corrected accordingly, and its version list deliberately left unchanged so that the correction cannot raise any coverage percentage. Ambiguity accepted as a limitation: Genomes and Mixture use unquoted ';' as a list separator while Description uses a quoted ';' for the same parallel list, and no rule makes the quoted Description a list, so the positional pairing of Description entries is not recoverable by grammar alone. Additional erratum found during this review and present in all five versions: in these breakend tables bnd_W at 2:321681 has ALT 'G]2:421681]' with MATEID=bnd_U and bnd_V at 2:321682 has ALT '[2:421682[T' with MATEID=bnd_X, but bnd_U and bnd_X are on CHROM 13 (13:421681 and 13:421682); the ALT coordinates should read 13:421681 and 13:421682. Do not use those two rows as an oracle for breakend mate coordinates.",
+      "relatedRequirements": [],
+      "sourceFingerprint": "8340ee2493fbffdda5aa2ab2a3975ea987a3f1d04e22d9232a8cd96e1b8af7b6"
+    },
+    "4.4:1686-1711": {
+      "disposition": "mapped",
+      "note": "Reviewer decision: 'P' is a typo for 'PL'; the corrected FORMAT is GT:DP:GQ:PL. Four independent confirmations: (a) no reserved FORMAT key named 'P' exists in any VCF version; (b) the sample value carries six comma-separated items, which is exactly G for the three alleles G, C and <*> at ploidy two; (c) the items are integers, matching PL (Integer) rather than GL or GP (Float); and (d) GQ=52 equals the second-smallest value in 0,52,95,66,95,97, which is precisely how GQ relates to PL. Every sibling row in the same table uses PL. The row correctly omits MIN_DP, since it is a variant row and not a reference block. Usable as a fixture after this correction.",
+      "relatedRequirements": [],
+      "sourceFingerprint": "e90ea677a1d337de35b3dae92a5fb4c3e12745abb43c273806f50a9ace8a12d6"
+    },
+    "4.4:1748-1879": {
+      "disposition": "mapped",
+      "note": "Reviewer decision. (1) Obsolete key names: RS, RL and RC are typos for RUS, RUL and RUC; the corrected overview list is 'RN, RUS, RUL, RUC, RB and RUB'. (2) The figure sequence CAGCAGCAGTTGTTG is (CAG)3(TTG)2, not (CAG)4(TTG)2 - it contains three CAG units and is fifteen bases. Corrected figure values: RN=2,1; RUS=CAG,TTG,CA; RUL=3,3,2; RUC=3,2,3; RB=9,6,6, with the second allele CACACA = (CA)3. (3) RUL/RUB nesting: RUB is partitioned by RUC (one value per repeat unit) while RUS, RUL, RUC and RB are partitioned by RN (one value per repeat sequence). (4) The main worked example is internally consistent and usable as an oracle - verified arithmetically: reference (CAG)10 at 101-130 (30 bases, SVLEN=30, POS=100 padding); allele 1 (CAG)30 = 90 bases with RN=1, RB=90 and INFO CN=90/30=3; allele 2 (CAG)5(CA)(CAG)4 = 29 bases with RN=3, RUS=CAG,CA,CAG, RB=15,2,12 and INFO CN=29/30; the flattened RUS is CAG,CAG,CA,CAG and RB is 90,15,2,12 exactly as printed; FORMAT CN=(90+29)/30. The phased non-symbolic rows also check out: 'chr1 117 AG A' deletes the G of the sixth CAG unit (116-118) on haplotype 2 (GT=0|1) and 'chr1 130 G G+20xCAG' adds twenty units on haplotype 1 (GT=1|0), matching GT=1|2 on the summary record. Printed CN values are truncated rather than rounded (0.9666 and 3.9666 for 0.96667 and 3.96667). The CIRUC example is likewise consistent (65x3/30 = 6.5). (5) Additional erratum found during this review: the RUB example 'chr1 1000000 . T <CNV:TR> . . SVLEN=20000;CN=1.25;RUL=10000;RUC=5;RUB=10000,10500,11000,11500,12000' is arithmetically inconsistent - CN must be sample allelic length divided by reference allelic length, and sum(RUB)=55000 gives 2.75 while RUL*RUC=50000 gives 2.5, neither of which is 1.25. Excluded as a CN oracle; still usable for RUB cardinality (five values = RUC) and the variable-unit-length capability. (6) Additional erratum, 4.4 only: the same record carries END=20000 at POS=1000000, i.e. END < POS; END should be POS+SVLEN = 1020000. Removed in 4.5 with the deprecation of INFO END.",
+      "relatedRequirements": [],
+      "sourceFingerprint": "ed327046a8ebbdc09adc1dcbfda9b4db318b70a05dfe3acd4518054d52bbf28a"
+    },
+    "4.4:2558-2563": {
+      "disposition": "mapped",
+      "note": "Reviewer decision: the main text governs - P is a Number, not a Type. The FORMAT section lists P among the additional Number possibilities ('P: The field has one value for each allele value defined in GT'), the reserved genotype table gives PSL, PSO and PSQ Number=P with Types String, Integer and Integer, and the enumerated FORMAT Types are only Integer, Float, Character and String, so Type=P is not well formed. The VCF 4.5 changelog independently writes 'Added Number=P support', corroborating the correction. The erratum should read 'Number=P added to the FORMAT Number list'. Mandatory-attribute and cardinality expectations are unaffected.",
+      "relatedRequirements": [],
+      "sourceFingerprint": "a5fd8888a6aedc4a0c816be65e944a450b69a8fd0e2b67ba8b46f7f094cadca6"
+    },
+    "4.4:2564-2591": {
+      "disposition": "mapped",
+      "note": "Reviewer decision: the main text governs. ID, Number, Type and Description are required for both ##INFO and ##FORMAT lines in 4.4 and 4.5 - 'FORMAT meta-information lines are structured lines with required fields ID, Number, Type, and Description' is as explicit as the INFO sentence. The changelog entry 'Number, Type and Description required only for INFO meta-information lines' omits FORMAT and is a drafting error. What actually changed relative to 4.3 is that Number, Type and Description are not required for the other spec-defined structured lines (FILTER, ALT, contig, META, SAMPLE, PEDIGREE) nor for undefined structured lines, where only ID is required. R03 (INFO declarations) and R52 (FORMAT declarations) are both correctly scoped and need no change.",
+      "relatedRequirements": [],
+      "sourceFingerprint": "b92c5c22ba749c3c102f6646ac9f1dc48c591426c7b28caf5b7005125a0acace"
+    },
+    "4.4:445-639": {
+      "disposition": "mapped",
+      "note": "Reviewer decision: the PSL illustration is not usable as an oracle; the PSO illustration is. PSL table defects: row 2 ('chr20 10 . A T,G ... GT=|1/2|3') uses allele index 3 although ALT lists only two alleles, and row 3 ('chr20 15 . G C ... GT=1|2') uses index 2 although ALT lists one; row 3 is additionally self-contradictory, because with the leading indicator omitted and no '/' present VCF 4.4/4.5 make the first indicator implicitly '|' (phased), yet PSL='.,chr20*10*1' marks that allele unphased; and ploidy is inconsistent between rows 2 (three alleles) and 3 (two) for the same sample on the same CHROM. A corrected, internally consistent equivalent preserving the illustrative content is: 'chr19 5 . T G . PASS DP=100 GT:PSL |0/1:chr19*5*1,.' (unchanged); 'chr20 10 . A T,G . PASS DP=100 GT:PSL |1/2|0:chr20*10*1,.,chr19*5*1'; 'chr20 15 . G C . PASS DP=100 GT:PSL /0/0|1:.,.,chr20*10*1'. Any test built on it must be labelled reviewer-authored, not spec-verbatim. PSO: the example is internally consistent and supplies a usable per-allele oracle - chr1:10 <DUP> GT allele 3 -> PSL chr1*10*3, PSO 3; chr1:20 allele 3 (REF A) -> chr1*10*1, PSO 4 and allele 4 (ALT G) -> chr1*10*3, PSO 1; chr1:30 allele 3 (REF G) -> chr1*10*1, PSO 2 and allele 4 (ALT T) -> chr1*10*3, PSO 5. Ordinals 1-5 occur exactly once each and give one total traversal order of the derivative chromosome: ALT G at chr1:20 (1), REF at chr1:30 (2), the duplication junction (3), REF at chr1:20 (4), ALT T at chr1:30 (5) - exactly the stated reading that the first SNV lies on the first copy of the duplicated region and the second on the second copy. The rise from three to four allele values inside the duplicated interval is intended, not an error. Request an R82 case on that basis: expose per sample-allele the PSL name and PSO ordinal and recover the total order.",
+      "relatedRequirements": [],
+      "sourceFingerprint": "350254f699736bb402bc22323d5b7d9ff024c4454e209c1db40ca753eb985566"
+    },
+    "4.4:651-665": {
+      "disposition": "mapped",
+      "note": "Reviewer decision: adopt the error-probability interpretation. The Q-suffix sentence is internally inconsistent - it calls the quantity a 'log-complementary ... posterior probability' but prints -10 log10 Pr(Data|Model), which is neither complementary nor posterior. The normative per-key definitions in the same document govern: GQ is '-10log10 p(genotype call is wrong, conditioned on the site's being variant)' and CNQ is '-10log10 p(copy number genotype call is wrong)'. So a Q-suffixed value is -10 log10 (1 - Pr(Model|Data)), the phred-scaled probability that the reported call is wrong; the printed formula drops the complement and inverts the conditioning. Assessment impact: none. This settles the field's stated meaning, which the vocabulary carries through the reserved definition and the declaration Description; no expected answer in any registered case depends on the numeric semantics, and R69 keeps its scale-distinction scope unchanged.",
+      "relatedRequirements": [],
+      "sourceFingerprint": "2e615ef14f54f8298f692133c774a8f5fc42cce8f98b03238e0f10609656a3cc"
+    },
+    "4.4:666-980": {
+      "disposition": "mapped",
+      "note": "Reviewer decision: RS, RL and RC are typos for RUS, RUL and RUC. No key named RC, RS or RL is declared anywhere in 4.4 or 4.5; the declared repeat keys are RN, RUS, RUL, RUC, RB, RUB, CIRUC and CIRB, and there are exactly three affected sentences per version (VCFv4.4.tex lines 973, 1759, 1827; VCFv4.5.tex lines 1134, 1928, 1995). The overview's field list 'RN, RS, RL, RB, RC and RUL' both mis-spells three names and repeats RUL; corrected it reads 'RN, RUS, RUL, RUC, RB and RUB'. With that substitution the examples are usable as an oracle. The same correction settles the RUB nesting question: the sentence 'a list for each RC entry, the length of which is determined by the corresponding integer RUC value' means RUB is partitioned by RUC (one value per repeat unit), whereas RUS, RUL, RUC and RB are partitioned by RN (one value per repeat sequence) - two different flattening rules in the same record.",
+      "relatedRequirements": [],
+      "sourceFingerprint": "957b0f44ce7e0b09e4f84e3e50018c070273be5e520f589ba5e3f923b6df77e3"
+    },
+    "4.4:981-1002": {
+      "disposition": "mapped",
+      "note": "Reviewer decision: the prose governs the meaning and the declared Number is a specification defect. CNL is a list of log10 likelihoods indexed by copy number starting at zero, so the value at 0-based index i is log10 L(CN = i). The declared Number=G is inconsistent with that: G is a function of allele count and ploidy, whereas a copy-number-indexed list has length max(CN)+1, which is not derivable from REF/ALT/GT. Number=G is carried over from GL and persists unchanged through 4.5. Expected cardinality is therefore data-determined - the number of comma-separated items actually present - and expected order is ascending copy number from zero; do not silently apply genotype-combination ordering. CNP inherits the same reading ('otherwise defined precisely as the CNL field'). The reserved-declaration check must keep comparing the declared Number=G literally, and the README must state that literal Number/Type agreement is not agreement with the prose semantics.",
+      "relatedRequirements": [],
+      "sourceFingerprint": "d487c70e60ce1a6a9ed14fa7eb4ed1ab919ee21dd5c6b0e3a1fd40a4eed8b866"
+    },
+    "4.5:103-140": {
+      "disposition": "mapped",
+      "note": "Reviewer decision: remove attribute ordering from the assessed requirement; keep it as a documented, non-scored fidelity extension. This section states that implementations 'must not rely on the order of the fields within structured lines and are not required to preserve field ordering', and presents the recommended ID/Number/Type/Description sequence explicitly as a human-readability aid. Attribute order within a structured meta-information line is therefore presentation, not information, in 4.4/4.5; 4.1-4.3 nowhere assign it meaning either. Scoring a non-requirement would distort the denominator, so R34 is retained for attribute identity, value and escaping across all five versions - which its existing cases already demonstrate - and its interpretation has been corrected to say that ordering is recorded but not scored. R02's 'source order' is a different and legitimate property (the order of meta-information lines) and is unaffected.",
+      "relatedRequirements": [],
+      "sourceFingerprint": "7c606f31732caa3dfe0bdd8345ff884c42a020093ad28f0a9d44494cfde68a3c"
+    },
+    "4.5:1142-1163": {
+      "disposition": "mapped",
+      "note": "Reviewer decision: the prose governs the meaning and the declared Number is a specification defect. CNL is a list of log10 likelihoods indexed by copy number starting at zero, so the value at 0-based index i is log10 L(CN = i). The declared Number=G is inconsistent with that: G is a function of allele count and ploidy, whereas a copy-number-indexed list has length max(CN)+1, which is not derivable from REF/ALT/GT. Number=G is carried over from GL and persists unchanged through 4.5. Expected cardinality is therefore data-determined - the number of comma-separated items actually present - and expected order is ascending copy number from zero; do not silently apply genotype-combination ordering. CNP inherits the same reading ('otherwise defined precisely as the CNL field'). The reserved-declaration check must keep comparing the declared Number=G literally, and the README must state that literal Number/Type agreement is not agreement with the prose semantics.",
+      "relatedRequirements": [],
+      "sourceFingerprint": "68432611375ff981711ad2d8185c4dcb1c8a3fcb4249b82fa5cca0869dd6ea7e"
+    },
+    "4.5:1342-1393": {
+      "disposition": "mapped",
+      "note": "Reviewer decision: two rows of this example must not be used as oracles, and a third error is recorded. (1) delbp2. With chrA = ATGCGAAAAAAATGT, delbp1 at chrA:2 (REF=T, correct) has ALT 'T[chrA:5[', so its mate lies at chrA:5, where the reference base is G. The printed 'chrA 2 delbp2 A ]chrA:2]A' has the wrong POS (2, duplicating delbp1), the wrong REF (A; chrA:2 is T and chrA:5 is G) and a self-referential mate coordinate. The correct reciprocal is 'chrA 5 delbp2 G ]chrA:2]G . . MATEID=delbp1;EVENT=DEL_split_bp_cn GT 0/1', which matches the copy-number row 'chrA 2 . T <DEL> SVLEN=2;SVCLAIM=D'. (2) The DUP row 'chrA 5 . G <DUP> . . SVLEN=3;CIPOS=0,5;EVENT=homology_dup' omits SVCLAIM, which this specification makes mandatory for DEL/DUP alleles ('SVCLAIM must be specified and can be D, J, or DJ'). The example does not determine the value: presented as the duplication rendering of the sequence-resolved 'chrA 5 . G GAAA' it asserts both abundance and adjacency (DJ), but a pure abundance claim (D) is also readable. Excluded as an SVCLAIM oracle; if a fixture needs a value, supply SVCLAIM=DJ as a declared reviewer choice. (3) Additional erratum found during this review and not previously flagged: 'chrA 14 . T <INS> ...' gives REF=T at chrA:14, but the stated sequence has G at 14 (T is at 13 and 15), and the next row correctly uses 'chrA 14 . G .CCCCCCG'. Minimal correction: REF=G at POS=14. Present in both 4.4 and 4.5.",
+      "relatedRequirements": [],
+      "sourceFingerprint": "003310adba9eba1124417c16fb86e264aff032dfe817f705c7ee61041b61333a"
+    },
+    "4.5:1468-1520": {
+      "disposition": "mapped",
+      "note": "Reviewer decision: MATEID in this subsection cannot serve as an oracle for reciprocal-mate reconstruction. The partial-insertion table gives bnd_U MATEID=bnd_U and bnd_V MATEID=bnd_V, both self-references; the circular table repeats those two self-references and gives bnd_Y MATEID=bnd_C, an identifier that appears nowhere in the specification. More fundamentally, a MATEID must name the breakend at the other end of the same novel adjacency: bnd_U's adjacency ends on <ctg1> (at 1, 7 or 229 depending on the table) and bnd_V's ends on <ctg1> (at 329, 214 or 45), and no records exist for those contig-side breakends - so no correct MATEID for bnd_U or bnd_V is available anywhere in the section, including the first table, whose printed MATEID=bnd_V / MATEID=bnd_U are wrong for the same reason. The correct grouping mechanism for these records is EVENT, which the circular table already uses (EVENT=INS0). The one determinable correction is bnd_Y's: at <ctg1>:329 with ALT 'T[<ctg1>:1[' its mate is the breakend at <ctg1>:1, i.e. MATEID=bnd_X (and bnd_X's printed MATEID=bnd_Y is already correct). Assess reciprocal-mate reconstruction (R32) on the six-breakend Figure 1 example instead; the existing breakends-v4.5.vcf fixture already does this correctly.",
+      "relatedRequirements": [],
+      "sourceFingerprint": "64cf65b7f1bf5738d476215ee0ac676bfabeacf27f6f8c5202033a250f7710e4"
+    },
+    "4.5:1731-1775": {
+      "disposition": "mapped",
+      "note": "Reviewer decision: version-scoped. In 4.1/4.2 '##SAMPLE=<ID=S_ID,Genomes=...,Mixture=...,Description=...>' is the normative SAMPLE grammar (VCFv4.1.tex line 129, VCFv4.2.tex line 146), so it is in scope with the semicolon-separated Genomes/Mixture/Description lists positionally aligned (Germline<->.3, Tumor<->.7). In 4.3-4.5 the normative SAMPLE definition is replaced by the META-driven form (Assay/Ethnicity/Disease/Tissue/Description/DOI) while this Genomes/Mixture example is retained; it stays syntactically legal because those versions allow arbitrary additional attributes on structured lines, but it is no longer normatively defined. Treat it in 4.3-4.5 as a permitted, non-normative extension assessed under generic structured-attribute retention (R34/R59), not as a version-specific Genomes/Mixture capability; R35's interpretation has been corrected accordingly, and its version list deliberately left unchanged so that the correction cannot raise any coverage percentage. Ambiguity accepted as a limitation: Genomes and Mixture use unquoted ';' as a list separator while Description uses a quoted ';' for the same parallel list, and no rule makes the quoted Description a list, so the positional pairing of Description entries is not recoverable by grammar alone. Additional erratum found during this review and present in all five versions: in these breakend tables bnd_W at 2:321681 has ALT 'G]2:421681]' with MATEID=bnd_U and bnd_V at 2:321682 has ALT '[2:421682[T' with MATEID=bnd_X, but bnd_U and bnd_X are on CHROM 13 (13:421681 and 13:421682); the ALT coordinates should read 13:421681 and 13:421682. Do not use those two rows as an oracle for breakend mate coordinates.",
+      "relatedRequirements": [],
+      "sourceFingerprint": "093d858258087875c4dc053844f007dcea9d9aa5713894096684f3f4fc66dd7b"
+    },
+    "4.5:184-248": {
+      "disposition": "mapped",
+      "note": "Reviewer decision. (1) Capitalisation: MXaoN, DPMXaoN and ADMXaoN with a capital X are normative. The reserved genotype-key table is the declaration table and uses the capital form; the alias pattern is M plus the modification abbreviation plus the base letter, and 'Xao' is the standard abbreviation for xanthosine (as used for the SAM/BAM MM tag modification codes), matching M5mC, M8oxoG and M6mA. The four prose occurrences of MxaoN, DPMxaoN and ADMxaoN (VCFv4.5.tex lines 218, 724, 734, 740) are typos. FORMAT keys are case-sensitive, so this is material; the extraction in declarations.json already uses the table form and that choice is confirmed. (2) The multi-allele, strand and partial-phasing examples are internally consistent and usable as an oracle - every value count was manually enumerated and matches the prose: 'chr 10 C A GT:M5mC 0/1:0.95' (C contributes one value, A none, since A is T on the reverse strand); 'chr 20 C CTAG GT:M5mC 0/1:0,0.5,0.7' (C -> 1; CTAG -> 2, the forward C at base 1 and the reverse-strand C opposite the G at base 4); 'chr 30 C . GT:M5mC:M5hmC 0|0:0.9,0:0,0.1' (two phased C copies, two values per field); and 'chr 40 C A,T,G,ACG GT:M5mC /3|1/0|4|0/0/3/1:0.25,0.1,0.5,0.6,.' where GT is octoploid with allele values 0, 1, 3 and 4, all within the four-allele ALT list, and per-allele contributions in GT order with unphased aggregation at first occurrence give G->1, A->0, C->1, ACG->2, phased C->1 and nothing for the three repeats, i.e. five values. No corrected fixture is needed beyond the key spelling; R29/R84 can use these directly.",
+      "relatedRequirements": [],
+      "sourceFingerprint": "172de81fef05172528c55d7e8dd8c85d0836d53aed29b245c3e43cfa77182bd4"
+    },
+    "4.5:1846-1880": {
+      "disposition": "mapped",
+      "note": "Reviewer decision. (1) Separators: the ';' before each LEN value must be ':'. Semicolon is the INFO separator, whereas sample sub-fields are colon-delimited against the FORMAT key list, so the first row reads '0/0:25:60:23:0,60,900:14'. (2) LEN is the inclusive block length, so END = POS + LEN - 1. The reserved definition is 'length of the <*> reference block for this sample' and END is defined as the end position calculated from FORMAT LEN. The row POS=4390, END=4390, LEN=1 is decisive, since END-POS would give a block length of zero, and POS=4370, END=4383, LEN=14 confirms it. Corrected LEN values: 4370->14 (as printed), 4384-4388->5 (printed 4), 4390->1 (as printed), 4391-4395->5 (printed 4), 4397-4416->20 (printed 19). (3) Additional erratum found during this review: the row '1 4396 . G C,<*> ... GT:DP:GQ:MIN_DP:PL:LEN 0/0:24:52:0,52,95,66,95,97' is a variant row with no reference block, so MIN_DP and LEN do not apply and the four supplied sub-fields make MIN_DP absorb the PL vector; the uniform FORMAT string was applied to every row of the table without adjusting this one. Its corrected FORMAT is GT:DP:GQ:PL. The existing gvcf-v4.5.vcf fixture and queries/r30-decode.rq already implement END = POS + LEN - 1 and are correct under this decision.",
+      "relatedRequirements": [],
+      "sourceFingerprint": "3dda6bc1384c751417e54ff6db5611a71702915573dc206212e71c212c295944"
+    },
+    "4.5:1917-2047": {
+      "disposition": "mapped",
+      "note": "Reviewer decision. (1) Obsolete key names: RS, RL and RC are typos for RUS, RUL and RUC; the corrected overview list is 'RN, RUS, RUL, RUC, RB and RUB'. (2) The figure sequence CAGCAGCAGTTGTTG is (CAG)3(TTG)2, not (CAG)4(TTG)2 - it contains three CAG units and is fifteen bases. Corrected figure values: RN=2,1; RUS=CAG,TTG,CA; RUL=3,3,2; RUC=3,2,3; RB=9,6,6, with the second allele CACACA = (CA)3. (3) RUL/RUB nesting: RUB is partitioned by RUC (one value per repeat unit) while RUS, RUL, RUC and RB are partitioned by RN (one value per repeat sequence). (4) The main worked example is internally consistent and usable as an oracle - verified arithmetically: reference (CAG)10 at 101-130 (30 bases, SVLEN=30, POS=100 padding); allele 1 (CAG)30 = 90 bases with RN=1, RB=90 and INFO CN=90/30=3; allele 2 (CAG)5(CA)(CAG)4 = 29 bases with RN=3, RUS=CAG,CA,CAG, RB=15,2,12 and INFO CN=29/30; the flattened RUS is CAG,CAG,CA,CAG and RB is 90,15,2,12 exactly as printed; FORMAT CN=(90+29)/30. The phased non-symbolic rows also check out: 'chr1 117 AG A' deletes the G of the sixth CAG unit (116-118) on haplotype 2 (GT=0|1) and 'chr1 130 G G+20xCAG' adds twenty units on haplotype 1 (GT=1|0), matching GT=1|2 on the summary record. Printed CN values are truncated rather than rounded (0.9666 and 3.9666 for 0.96667 and 3.96667). The CIRUC example is likewise consistent (65x3/30 = 6.5). (5) Additional erratum found during this review: the RUB example 'chr1 1000000 . T <CNV:TR> . . SVLEN=20000;CN=1.25;RUL=10000;RUC=5;RUB=10000,10500,11000,11500,12000' is arithmetically inconsistent - CN must be sample allelic length divided by reference allelic length, and sum(RUB)=55000 gives 2.75 while RUL*RUC=50000 gives 2.5, neither of which is 1.25. Excluded as a CN oracle; still usable for RUB cardinality (five values = RUC) and the variable-unit-length capability. (6) Additional erratum, 4.4 only: the same record carries END=20000 at POS=1000000, i.e. END < POS; END should be POS+SVLEN = 1020000. Removed in 4.5 with the deprecation of INFO END.",
+      "relatedRequirements": [],
+      "sourceFingerprint": "ddf71103c506e8ebc6e861b636024a181456a64c1b203eb32ae8005cb01b6788"
+    },
+    "4.5:2726-2739": {
+      "disposition": "mapped",
+      "note": "Reviewer decision. (1) Number=P was introduced in VCF 4.4, not 4.5. The pinned 4.4 text defines P in the FORMAT Number list, gives PSL and PSO Number=P in the reserved genotype table, and records it in the 4.4 errata; the 4.5 entry 'Added Number=P support ...' is inaccurate as a 4.4-to-4.5 delta, and what 4.5 actually adds is the new M Number and the local-allele Numbers alongside it. Number=P is therefore in scope for both 4.4 and 4.5, and R82 already lists both versions. (2) Modification key syntax: the changelog's 'FORMAT keys of the form M[0-9]+' is incomplete. The main text reserves M[0-9]+[ACGTUN], and equally DPM[0-9]+[ACGTUN] and ADM[0-9]+[ACGTUN]; the trailing base letter is required and defines the base the modification occurs on, with U synonymous with T. The full three-family form governs, and declarations.json already records all three patterns.",
+      "relatedRequirements": [],
+      "sourceFingerprint": "fb313cbf6a2316e033f86e15f9f70d15b18e397527fc541e9bec7b4806bec565"
+    },
+    "4.5:2740-2745": {
+      "disposition": "mapped",
+      "note": "Reviewer decision: the main text governs - P is a Number, not a Type. The FORMAT section lists P among the additional Number possibilities ('P: The field has one value for each allele value defined in GT'), the reserved genotype table gives PSL, PSO and PSQ Number=P with Types String, Integer and Integer, and the enumerated FORMAT Types are only Integer, Float, Character and String, so Type=P is not well formed. The VCF 4.5 changelog independently writes 'Added Number=P support', corroborating the correction. The erratum should read 'Number=P added to the FORMAT Number list'. Mandatory-attribute and cardinality expectations are unaffected.",
+      "relatedRequirements": [],
+      "sourceFingerprint": "c59f3a700d1506780b65dc1124debf23c6d81a0fc9b5bba8bbff0ab5de1d268e"
+    },
+    "4.5:2746-2773": {
+      "disposition": "mapped",
+      "note": "Reviewer decision: the main text governs. ID, Number, Type and Description are required for both ##INFO and ##FORMAT lines in 4.4 and 4.5 - 'FORMAT meta-information lines are structured lines with required fields ID, Number, Type, and Description' is as explicit as the INFO sentence. The changelog entry 'Number, Type and Description required only for INFO meta-information lines' omits FORMAT and is a drafting error. What actually changed relative to 4.3 is that Number, Type and Description are not required for the other spec-defined structured lines (FILTER, ALT, contig, META, SAMPLE, PEDIGREE) nor for undefined structured lines, where only ID is required. R03 (INFO declarations) and R52 (FORMAT declarations) are both correctly scoped and need no change.",
+      "relatedRequirements": [],
+      "sourceFingerprint": "3961b165f6217e7c7dfd744efc502f99d8f7f5b7c6305b7ae2c613ad5e1dee53"
+    },
+    "4.5:497-812": {
+      "disposition": "mapped",
+      "note": "Reviewer decision: the PSL illustration is not usable as an oracle; the PSO illustration is. PSL table defects: row 2 ('chr20 10 . A T,G ... GT=|1/2|3') uses allele index 3 although ALT lists only two alleles, and row 3 ('chr20 15 . G C ... GT=1|2') uses index 2 although ALT lists one; row 3 is additionally self-contradictory, because with the leading indicator omitted and no '/' present VCF 4.4/4.5 make the first indicator implicitly '|' (phased), yet PSL='.,chr20*10*1' marks that allele unphased; and ploidy is inconsistent between rows 2 (three alleles) and 3 (two) for the same sample on the same CHROM. A corrected, internally consistent equivalent preserving the illustrative content is: 'chr19 5 . T G . PASS DP=100 GT:PSL |0/1:chr19*5*1,.' (unchanged); 'chr20 10 . A T,G . PASS DP=100 GT:PSL |1/2|0:chr20*10*1,.,chr19*5*1'; 'chr20 15 . G C . PASS DP=100 GT:PSL /0/0|1:.,.,chr20*10*1'. Any test built on it must be labelled reviewer-authored, not spec-verbatim. PSO: the example is internally consistent and supplies a usable per-allele oracle - chr1:10 <DUP> GT allele 3 -> PSL chr1*10*3, PSO 3; chr1:20 allele 3 (REF A) -> chr1*10*1, PSO 4 and allele 4 (ALT G) -> chr1*10*3, PSO 1; chr1:30 allele 3 (REF G) -> chr1*10*1, PSO 2 and allele 4 (ALT T) -> chr1*10*3, PSO 5. Ordinals 1-5 occur exactly once each and give one total traversal order of the derivative chromosome: ALT G at chr1:20 (1), REF at chr1:30 (2), the duplication junction (3), REF at chr1:20 (4), ALT T at chr1:30 (5) - exactly the stated reading that the first SNV lies on the first copy of the duplicated region and the second on the second copy. The rise from three to four allele values inside the duplicated interval is intended, not an error. Request an R82 case on that basis: expose per sample-allele the PSL name and PSO ordinal and recover the total order.\n\nReviewer decision: GT=2/2 is correct and the local-allele row's GT=2/4 is the typo. GT is Number=1, Type=String and is not a local-allele field, so it carries global allele indices in both rows - confirmed by row 2 of the same table, where both rows print 0/3. With LAA=2,4 the local alleles are [G(REF), C, <*>] and LPL=90,80,0,100,110,120 is minimal (0) at local genotype 1/1 = C/C, while the global PL list is minimal (0) at index 5 = genotype 2/2 = C/C; every other value maps consistently (local 00/01/02/12/22 to global 00/02/04/24/44 = 90/80/100/110/120) and LAD=20,30,10 matches AD=20,.,30,.,10. Rows 2-4 were verified the same way and are correct as printed. The MXaoN/MxaoN capitalisation question is resolved in the base modification section: the reserved-key table form MXaoN governs. The PSL/PSO questions are resolved separately in this same section's note above.",
+      "relatedRequirements": [],
+      "sourceFingerprint": "c51c513ad96e7b1d8ff067564b4c00e42b3314960ed60e73d6c2233d9a62d7f4"
+    },
+    "4.5:824-840": {
+      "disposition": "mapped",
+      "note": "Reviewer decision: adopt the error-probability interpretation. The Q-suffix sentence is internally inconsistent - it calls the quantity a 'log-complementary ... posterior probability' but prints -10 log10 Pr(Data|Model), which is neither complementary nor posterior. The normative per-key definitions in the same document govern: GQ is '-10log10 p(genotype call is wrong, conditioned on the site's being variant)' and CNQ is '-10log10 p(copy number genotype call is wrong)'. So a Q-suffixed value is -10 log10 (1 - Pr(Model|Data)), the phred-scaled probability that the reported call is wrong; the printed formula drops the complement and inverts the conditioning. Assessment impact: none. This settles the field's stated meaning, which the vocabulary carries through the reserved definition and the declaration Description; no expected answer in any registered case depends on the numeric semantics, and R69 keeps its scale-distinction scope unchanged.",
+      "relatedRequirements": [],
+      "sourceFingerprint": "bba77fd6f9e8621f11be4b1d856fe4cf38cbd284f646019ffbaf1494ab32d392"
+    },
+    "4.5:841-1141": {
+      "disposition": "mapped",
+      "note": "Reviewer decision: RS, RL and RC are typos for RUS, RUL and RUC. No key named RC, RS or RL is declared anywhere in 4.4 or 4.5; the declared repeat keys are RN, RUS, RUL, RUC, RB, RUB, CIRUC and CIRB, and there are exactly three affected sentences per version (VCFv4.4.tex lines 973, 1759, 1827; VCFv4.5.tex lines 1134, 1928, 1995). The overview's field list 'RN, RS, RL, RB, RC and RUL' both mis-spells three names and repeats RUL; corrected it reads 'RN, RUS, RUL, RUC, RB and RUB'. With that substitution the examples are usable as an oracle. The same correction settles the RUB nesting question: the sentence 'a list for each RC entry, the length of which is determined by the corresponding integer RUC value' means RUB is partitioned by RUC (one value per repeat unit), whereas RUS, RUL, RUC and RB are partitioned by RN (one value per repeat sequence) - two different flattening rules in the same record.",
+      "relatedRequirements": [],
+      "sourceFingerprint": "4d89286b4b99bd3b0ee1d51ccb271169bad549e3f799bcbf277f84a6d4b7afca"
+    }
+  },
+  "sourceSectionsBeforeAssertionAudit": {
+    "4.1:113-119": {
+      "disposition": "needs-requirement",
+      "note": "",
+      "relatedRequirements": [],
+      "sourceFingerprint": "33791de32fc96bae29570a72c7a2c40eca116a4835ce907fe6d312d7f3250627"
+    },
+    "4.1:120-124": {
+      "disposition": "needs-requirement",
+      "note": "",
+      "relatedRequirements": [],
+      "sourceFingerprint": "5d48a700ca5935966cfabe492c4eb63bcff289783d0a55a19205e05d4eeb2511"
+    },
+    "4.1:23-25": {
+      "disposition": "context-only",
+      "note": "",
+      "relatedRequirements": [],
+      "sourceFingerprint": "3f0f33fa05be39d089e957fda827d237ae541dd1da2eb601ae5dafd894364a1e"
+    },
+    "4.1:26-55": {
+      "disposition": "context-only",
+      "note": "",
+      "relatedRequirements": [],
+      "sourceFingerprint": "eac5634617cd558083c4026bf9b9a568e634a566fbc27fc58951933f1e5350b1"
+    },
+    "4.1:56-57": {
+      "disposition": "mapped",
+      "note": "",
+      "relatedRequirements": [],
+      "sourceFingerprint": "901bb5eafc93d3ae254e3aee9210c96c2833a0248f889ff851fb43c5d0154d03"
+    },
+    "4.1:58-64": {
+      "disposition": "mapped",
+      "note": "",
+      "relatedRequirements": [],
+      "sourceFingerprint": "b68c6113ab35efdbe8c879a700f5490b1cc7fca50927bcc5e3b6d052b6540562"
+    },
+    "4.1:65-73": {
+      "disposition": "mapped",
+      "note": "",
+      "relatedRequirements": [],
+      "sourceFingerprint": "763cb2ea857c656fcffe9dbef7de96e3e05f8af2bb007843fb54780724054249"
+    },
+    "4.1:74-80": {
+      "disposition": "needs-requirement",
+      "note": "",
+      "relatedRequirements": [],
+      "sourceFingerprint": "ae669156c6d5682ee5a637ae446d921fa3589838aa7d162f05db8b3857ff3e8c"
+    },
+    "4.1:81-89": {
+      "disposition": "needs-clarification",
+      "note": "",
+      "relatedRequirements": [],
+      "sourceFingerprint": "479faf891568318a910fabdb4f477fa00565cf912d41c6bcc0956ad1f6144378"
+    },
+    "4.1:90-112": {
+      "disposition": "needs-requirement",
+      "note": "",
+      "relatedRequirements": [],
+      "sourceFingerprint": "a3f3475b18bc23f35f02e85afd792946e9b4d54ae206c72b38a9c7dd7663cdfd"
+    }
+  },
+  "supersededAcceptance": {
+    "R27": {
+      "date": "2026-09-10",
+      "fingerprint": "89ca320ee8450bcc1dcb7f8ca0489d0c43e95fa279875c0771ea0e6af859048f",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 1 registered case(s) for version(s) 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes. Failing witnesses accepted as a documented condensed-profile limitation, not vocabulary incapability: 4.5/condensed/structure; the same requirement passes on the structure axis in the expanded profile. The registered case's fixture uses LAA=1,2 on a two-ALT record, so the local-to-global mapping it demonstrates is the identity and is weak evidence; the test gap now records this and requests a non-identity local set. Condensed/structure failure accepted as a profile limitation.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R29": {
+      "date": "2026-09-10",
+      "fingerprint": "b01b9a6851491d00c0ad7c32af11719192c2a0237e3f654ece21683cc9742696",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 1 registered case(s) for version(s) 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes. Failing witnesses accepted as a documented condensed-profile limitation, not vocabulary incapability: 4.5/condensed/structure; the same requirement passes on the structure axis in the expanded profile. The registered case checks the modification fraction and the total detecting depth only; the modified-read depth ADM is untested and the gap now records that, so the assertion is partial rather than fully targeted. The specification's four Number=M examples were manually enumerated in this review and are internally consistent. Condensed/structure failure accepted as a profile limitation.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R31": {
+      "date": "2026-09-10",
+      "fingerprint": "18bae6e31eb2830c7ba8a6b531fd53a697d0668fe8a116d40f79260015c859b9",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 1 registered case(s) for version(s) 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes. Untested version(s) accepted as unassessed: 4.4. Verified the repeat fixture against the 4.5 tandem-repeat rules and corrected its INFO CN to 1 and FORMAT CN to 2, which the printed RUC=10, RB=30 and SVLEN=30 require; the expected answers are unaffected. The RN=1 fixture does not exercise multi-sequence partitioning, which stays with R46.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R45": {
+      "date": "2026-09-10",
+      "fingerprint": "2802286600d6f4e863b38d87298db737bb0b5320674be7bfccaf20dcc9ab4f32",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.3, 4.4, 4.5. Resolved the source conflicts this requirement depended on: FORMAT 'P' in the 4.3/4.4 gVCF tables is a typo for PL, and the 4.5 table's separators and LEN values are wrong against inclusive END. Remains unassessed; NON_REF alias equivalence and the LEN-from-END fallback are acknowledged gaps.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R46": {
+      "date": "2026-09-10",
+      "fingerprint": "5d496c5305536be0927e01f1aab47254c73cbbfd2cb642150f7a6eccdeb80ed4",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.4, 4.5. Resolved the obsolete key names: the prose RS, RL and RC are typos for RUS, RUL and RUC, and the figure sequence CAGCAGCAGTTGTTG is (CAG)3(TTG)2 rather than (CAG)4(TTG)2. Remains unassessed.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R79": {
+      "date": "2026-09-10",
+      "fingerprint": "44d0e2b60afc1f86e3b18faae1e002b823c9264b01f3d5ceb32676434b0c6d14",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3. A test is requested using the declared DPADJ/CNADJ/CICNADJ keys and the worked examples at 4.1:836-839 and 852-855. Recorded specification defect: those three keys are declared as ##INFO lines but used as FORMAT keys in the same examples. Remains unassessed.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R82": {
+      "date": "2026-09-10",
+      "fingerprint": "262c86921951c318c589ad0302587d18cb8daca2309078a2e81c7b18cc52cdc8",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.4, 4.5. Resolved two flagged questions: Number=P dates from VCF 4.4 despite the 4.5 changelog, and the 4.4 erratum's 'Type=P' means 'Number=P'. The PSO example is internally consistent and its per-allele PSL/PSO oracle is recorded; the PSL example is excluded. A test is requested. Remains unassessed.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R83": {
+      "date": "2026-09-10",
+      "fingerprint": "751ad6870ab4445853753dab9fdd8902554157dc2a1d72e7a6432f7604acbf30",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.5.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R84": {
+      "date": "2026-09-10",
+      "fingerprint": "fb8fca8175a1ee3f0bc5e9ee691717c7aab2f18ccf2bd52aa818f0392bb35c98",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.5. The specification's Number=M examples were manually enumerated in this review and every value count and its stated reading checks out, so they can serve directly as the oracle. Remains unassessed.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R85": {
+      "date": "2026-09-10",
+      "fingerprint": "fbea221546bf20bc72f29375781947ee14872cb2b1fc729ef016577dfc2d406b",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.5. Resolved the flagged spelling conflict: the reserved genotype-key table governs, so the aliases are MXaoN, DPMXaoN and ADMXaoN with a capital X, and the reserved patterns require the trailing base letter. Remains unassessed.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R89": {
+      "date": "2026-09-10",
+      "fingerprint": "e45524a02cfac67efd6f14327e13bd01f2ffec95c74c9dbeea4f113d84aeaa5d",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.4, 4.5. The tandem-repeat worked example was verified arithmetically in this review - allele lengths, INFO and FORMAT CN ratios and the phased non-symbolic records all agree - so it supplies a usable oracle. Remains unassessed.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "R92": {
+      "date": "2026-09-10",
+      "fingerprint": "0700a0a875ed24da42813b1224655deadcbd4f5c8e3f658a58a077ca52b93ed9",
+      "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5. Resolved the flagged inconsistencies: the printed complete-insertion shorthand row takes its POS and REF from an unrelated example and should read '13 123456 INS0 C C<ctg1>', and the MATEID values in the partial and circular tables are not usable as expected answers. Remains unassessed.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    },
+    "sourceAudit": {
+      "date": "2026-09-10",
+      "fingerprint": "696537fee9198521ce2fff359c1c46e85ea42a9d1771fc3ff443f71f34704d34",
+      "rationale": "Read all 38 sections previously flagged needs-review in the pinned sources and recorded a decision for each; read all 150 distinct authored VCF-zone assertion statements and confirmed all 119 changes-zone assertions are verbatim source bullets; verified mechanically that all 396 reserved-key assertion statements reproduce the Number, Type and Description of their source passage. Verified that the 344 sections partition every line of all five pinned sources without gaps or overlaps, that every assertion's bounds lie inside its section, that every assertion links at least one valid same-version requirement and every requirement is referenced by at least one assertion, and that all 98 out-of-scope sections are BCF, preamble or BCF changelog material with 17 further single-line headings marked context-only, so no VCF-zone content is excluded. Reserved-declaration extraction reviewed and accepted with one disclosed limitation: the 333 compared rows are the explicit ##INFO / ##FORMAT declarations and reserved-key tables only, so 29 reserved keys per version in VCF 4.1 and 4.2 (16 INFO and 13 FORMAT, 58 rows in total) are inventoried as assertions but cannot be Number/Type-compared, because those versions define them in prose without a Number. Four rows duplicate a key declared twice in the source (4.3 DP and END, 4.4/4.5 END) and the duplicates agree. Cosmetic defect left unfixed: section titles for 'Alternative allele field format' in 4.4/4.5 absorb a trailing \\label, because the title regex does not strip it.",
+      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+    }
+  }
+}

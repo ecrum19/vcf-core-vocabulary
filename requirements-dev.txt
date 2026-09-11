@@ -1,3 +1,3 @@
 # Validation dependencies for SHACL and decoded-value checks.
 pySHACL==0.30.1
--r coverage/methodological/requirements.txt
+-r coverage/methodology/requirements.txt

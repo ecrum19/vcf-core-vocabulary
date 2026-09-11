@@ -1,0 +1,11 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+# Expected answers are authored in inputs/cases.json from the source VCF.
+# The CNV:TR summary keeps the reference interval length and the allelic length
+# ratios, and the phase set relates it to the non-symbolic records of the same
+# locus. An absent ratio stays unbound rather than defaulting to a number.
+SELECT ?id ?allele ?svlen ?copies ?total ?phaseSet WHERE {
+  ?record vcfc:recordId ?id ; vcfc:hasCall/vcfc:hasSampleCall ?call .
+  ?call vcfc:hasGenotype/vcfc:inPhaseSet/vcfc:phaseSetId ?phaseSet .
+  OPTIONAL { ?record vcfc:hasAltAllele ?a . ?a vcfc:alleleIndex ?allele ; vcfc:svLength ?svlen ; vcfc:copyNumber ?copies }
+  OPTIONAL { ?call vcfc:hasFormatValue ?field . ?field vcfc:declaredBy/vcfc:fieldId "CN" ; vcfc:fieldValue ?total }
+} ORDER BY ?id ?allele

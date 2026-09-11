@@ -1,0 +1,12 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+# Expanded sample resources expose state and optional ordered declared failure codes.
+SELECT ?sample ?status ?index ?code ?description WHERE {
+ ?file vcfc:hasRecord/vcfc:hasCall/vcfc:hasSampleCall ?s .
+ ?s vcfc:sampleId ?sample ; vcfc:filterStatus ?status .
+ OPTIONAL {
+  ?s vcfc:hasFilterCode ?f .
+  ?f vcfc:componentIndex ?index ; vcfc:filterCodeValue ?code ; vcfc:declaredByFilter ?d .
+  ?file vcfc:hasHeader/vcfc:hasHeaderLine ?d .
+  ?d vcfc:filterId ?code ; vcfc:fieldDescription ?description .
+ }
+}

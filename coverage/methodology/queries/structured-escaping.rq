@@ -1,0 +1,7 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+# Source-audit case: expected answers are authored from the VCF fixture, not execution.
+SELECT ?key ?value WHERE {
+ ?d a vcfc:FILTERHeaderLine ; vcfc:filterId "q10" ; vcfc:hasAttribute ?a .
+ ?a vcfc:attributeKey ?key ; vcfc:attributeValue ?value .
+ FILTER(?key IN ("Description", "Extra"))
+}

@@ -7,7 +7,7 @@
     "description": "An RDF vocabulary for VCF files, headers, records and genotype data, with expanded and condensed sample representations, VCF 4.5 feature examples and SHACL profiles for VCF 4.1\u20134.5.",
     "namespace": "https://w3id.org/vcf-core/vocab#",
     "canonicalUri": "https://w3id.org/vcf-core/vocab",
-    "version": "2.1.0",
+    "version": "2.1.1",
     "maintainer": "Elias Crum"
   },
   "sources": {
@@ -461,7 +461,7 @@
     "webvowl": {
       "enabled": true,
       "serviceUrl": "https://service.tib.eu/webvowl/",
-      "ontologyUrl": "https://raw.githubusercontent.com/ecrum19/vcf-core-vocabulary/main/ontology/vcf-core-vocabulary.bundle.ttl",
+      "ontologyUrl": "https://w3id.org/vcf-core/vocab.ttl",
       "height": 760
     },
     "colors": {

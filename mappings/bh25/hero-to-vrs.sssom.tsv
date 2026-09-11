@@ -1,0 +1,44 @@
+# curie_map:
+#   hero: https://w3id.org/hereditary/ontology/genomics/schema/
+#   orcid: https://orcid.org/
+#   semapv: https://w3id.org/semapv/vocab/
+#   skos: http://www.w3.org/2004/02/skos/core#
+#   sssom: https://w3id.org/sssom/
+#   vrs1: https://w3id.org/ga4gh/schema/vrs/1.3/json/
+# mapping_set_id: https://w3id.org/vcf-core/mappings/bh25/hero
+# mapping_set_title: SWAT4HCLS BioHackathon 2025: HERO to GA4GH VRS
+# mapping_set_description: Mappings declared during the SWAT4HCLS 2025 BioHackathon between the HERO genomics ontology and the GA4GH Variation Representation Specification. Transcribed from the project's curation spreadsheet; see mappings/README.md for the normalisations applied.
+# license: https://creativecommons.org/licenses/by/4.0/
+# mapping_provider: https://github.com/NuriaQueralt/SWAT4HCLS-BH25-variant-rdf-representations
+# mapping_tool: manual curation
+# mapping_set_source:
+#   - https://docs.google.com/spreadsheets/d/1JCVV3GB7t4cp4GrKcfn0OG4dJjJHI9dp5BEHEl-3xN8/edit#gid=1689232425
+# subject_source: https://w3id.org/hereditary/ontology/genomics/schema/
+# object_source: https://github.com/ga4gh/vrs/blob/1.3/schema/vrs.yaml
+# comment: Object CURIEs in the source sheet alternated between ga4gh: and ga4ghvrs:; both are normalised to vrs1: here. The curators worked against GA4GH VRS 1.2/1.3, so objects use the vrs1: prefix (VRS 1.3). Several targets here -- Genotype, Haplotype, SequenceInterval, ChromosomeLocation, Text, Residue, Feature, Gene, UtilityVariation -- were removed in VRS 2.0, which is the version vcf-core itself targets. See mappings/vcf-core-alignments.sssom.tsv for the vcf-core to VRS 2.0 spoke. Transcription verified against the source sheet on 2026-09-08: subject, predicate and object of every row match after the normalisations noted above.
+subject_id	subject_label	predicate_id	object_id	object_label	mapping_justification	confidence	comment	mapping_date	author_id
+hero:GenomicVariation	Genomic Variation	skos:closeMatch	vrs1:Variation	Variation	semapv:ManualMappingCuration	0.8	Definition of class taken from the GA4GH Beacon v2 data model.	2025-02-27	orcid:0009-0005-3991-754X
+hero:VCFRecord	Genomic variant	skos:broadMatch	vrs1:Variation	Variation on a molecule	semapv:ManualMappingCuration	0.8	Instances represent a specific variation within a genome, i.e. VCF file rows.	2025-02-28	orcid:0009-0005-3991-754X
+hero:VCFFile	VCF File	skos:exactMatch	sssom:NoTermFound		semapv:ManualMappingCuration		Local VCF file; not covered by GA4GH VRS.	2025-03-02	orcid:0009-0005-3991-754X
+hero:SystemicVariation	Variation of multiple molecules	skos:exactMatch	vrs1:SystemicVariation	Variation of multiple molecules	semapv:ManualMappingCuration	1.0	Direct match to GA4GH VRS v1.2.		
+hero:MolecularVariation	Variation on a contiguous molecule	skos:exactMatch	vrs1:MolecularVariation	Variation on a contiguous molecule	semapv:ManualMappingCuration	1.0	Direct match to GA4GH VRS v1.2.		
+hero:LegacyVariation	Other genomic variations	skos:closeMatch	vrs1:UtilityVariation	Variations not constrained to a specific class of biological variation	semapv:ManualMappingCuration	0.8			
+hero:Haplotype	Alleles that co-occur on the same molecule	skos:exactMatch	vrs1:Haplotype	Alleles that co-occur on the same molecule	semapv:ManualMappingCuration	1.0	Direct match to GA4GH VRS v1.2.		
+hero:CopyNumberChange	Copy number relative to a baseline ploidy	skos:exactMatch	vrs1:CopyNumberChange	Copy number relative to a baseline ploidy	semapv:ManualMappingCuration	1.0	Direct match to GA4GH VRS v1.2.		
+hero:CopyNumberCount	Count of copies of a Location or Feature	skos:exactMatch	vrs1:CopyNumberCount	Count of copies of a Location or Feature	semapv:ManualMappingCuration	1.0	Direct match to GA4GH VRS v1.2.		
+hero:Genotype	Molecular Variation associated with a genomic locus	skos:exactMatch	vrs1:Genotype	Molecular Variation associated with a genomic locus	semapv:ManualMappingCuration	1.0	Direct match to GA4GH VRS v1.2.		
+hero:Allele	State of a molecule at a Location	skos:exactMatch	vrs1:Allele	State of a molecule at a Location	semapv:ManualMappingCuration	1.0	Direct match to GA4GH VRS v1.2.		
+hero:SequenceExpression	An expression describing a Sequence	skos:exactMatch	vrs1:SequenceExpression	An expression describing a Sequence	semapv:ManualMappingCuration	1.0	Direct match to GA4GH VRS v1.2.		
+hero:VariantQuality	Variant Quality	skos:exactMatch	sssom:NoTermFound		semapv:ManualMappingCuration	1.0	Not covered by GA4GH VRS.		
+hero:vcfRef	reference allele	skos:broadMatch	vrs1:Allele	Allele	semapv:ManualMappingCuration	0.8	VCF REF column.	2025-03-03	orcid:0009-0005-3991-754X
+hero:vcfAlt	variant allele	skos:broadMatch	vrs1:Allele	Allele	semapv:ManualMappingCuration	0.8	VCF ALT column.	2025-03-04	orcid:0009-0005-3991-754X
+hero:genomeAssembly	sequence assembly	skos:closeMatch	vrs1:SequenceLocation	Assembly for variant call	semapv:ManualMappingCuration	0.8	Targets the sequence_id field of SequenceLocation, which resolves to gks.core:iriReference.	2025-03-07	orcid:0009-0005-3991-754X
+hero:vcfChrom	Chromosome location	skos:exactMatch	vrs1:ChromosomeLocation	Chromosome	semapv:ManualMappingCuration	1.0	Targets the chr field of ChromosomeLocation. Direct match to GA4GH VRS v1.2.	2025-03-06	orcid:0009-0005-3991-754X
+hero:vcfPos	position	skos:broadMatch	vrs1:SequenceInterval	variant Location	semapv:ManualMappingCuration	0.6	Targets the start field of SequenceInterval. The reference position of a variation, first base having position 1.	2025-03-05	orcid:0009-0005-3991-754X
+hero:vcfQual	quality score	skos:exactMatch	sssom:NoTermFound		semapv:ManualMappingCuration	1.0	Phred-scaled quality score for the assertion made in ALT; not covered by GA4GH VRS.	2025-03-08	orcid:0009-0005-3991-754X
+hero:vcfFilter	filter	skos:exactMatch	sssom:NoTermFound		semapv:ManualMappingCuration	1.0	PASS if this position has passed all filters; not covered by GA4GH VRS.	2025-03-09	orcid:0009-0005-3991-754X
+hero:vcfInfo	additional info	skos:exactMatch	sssom:NoTermFound		semapv:ManualMappingCuration	1.0	Semicolon-separated series of additional information fields; not covered by GA4GH VRS.	2025-03-10	orcid:0009-0005-3991-754X
+hero:variantQuality	Quality score of the variation	skos:exactMatch	sssom:NoTermFound		semapv:ManualMappingCuration	1.0			
+hero:variationType	Type of variation	skos:broadMatch	vrs1:Allele	Allele	semapv:ManualMappingCuration	0.6	Examples include structural variants such as DUP, DEL, INV. From the GA4GH Beacon v2 data model.		
+hero:referenceBases	Reference bases	skos:broadMatch	vrs1:Allele	Allele	semapv:ManualMappingCuration	0.6	Base sequence from the reference sequence. From the GA4GH Beacon v2 data model.		
+hero:alternateBases	Alternate base(s)	skos:broadMatch	vrs1:Allele	Allele	semapv:ManualMappingCuration	0.6	Most common example is a SNP. From the GA4GH Beacon v2 data model.		

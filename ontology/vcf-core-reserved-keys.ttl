@@ -19,7 +19,12 @@
   rdfs:label "VCF Core reserved-key registry for VCF 4.5"@en ;
   dct:source <https://raw.githubusercontent.com/samtools/hts-specs/master/VCFv4.5.tex> ;
   owl:imports <https://w3id.org/vcf-core/vocab> ;
-  owl:versionInfo "VCFv4.5" .
+  owl:versionInfo "2.1.1" ;
+  vcfc:specificationVersion "VCFv4.5" .
+
+vcfc:specificationVersion a owl:AnnotationProperty ;
+  rdfs:label "specification version"@en ;
+  rdfs:comment "The VCF specification version a registry graph describes. It is distinct from owl:versionInfo, which records the release version of this vocabulary."@en .
 
 vcfc:reservedIn a owl:AnnotationProperty ;
   rdfs:label "reserved in"@en ;

@@ -1,0 +1,18 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+# Preservation only: explicitly decode the documented VCF text encoding.
+SELECT ?sample ?raw WHERE {
+?file vcfc:hasRecord ?record ; vcfc:hasSampleSet/vcfc:hasSample ?s .
+  ?record vcfc:pos 20 ; vcfc:hasCall/vcfc:hasCallMatrix ?matrix .
+  ?s vcfc:sampleIndex ?sampleIndex ; vcfc:sampleName ?sample .
+?matrix vcfc:sampleDataRaw ?packedsampleCell .
+
+  BIND(CONCAT("^(?:[^\\t]*\\t){", STR(?sampleIndex - 1), "}([^\\t]*).*$") AS ?patternsampleCell)
+  BIND(REPLACE(?packedsampleCell, ?patternsampleCell, "$1") AS ?sampleCell)
+
+  ?record vcfc:hasCall/vcfc:hasFormatKey ?key .
+  ?key vcfc:declaredBy/vcfc:fieldId "DP" ; vcfc:fieldIndex ?fieldIndex .
+  BIND(CONCAT("^(?:[^:]*:){", STR(?fieldIndex - 1), "}([^:]*).*$") AS ?fieldPattern)
+  # An absent component leaves ?raw unbound; it must not become an explicit dot.
+  BIND(IF(REGEX(?sampleCell, ?fieldPattern), REPLACE(?sampleCell, ?fieldPattern, "$1"), 1/0) AS ?raw)
+}

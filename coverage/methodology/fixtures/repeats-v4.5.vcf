@@ -1,0 +1,18 @@
+##fileformat=VCFv4.5
+##source=VCF-Core-synthetic-examples
+##reference=https://example.org/reference.fa
+##contig=<ID=chr1,length=1000>
+##contig=<ID=chr2,length=1000>
+##ALT=<ID=CNV:TR,Description="Synthetic CNV:TR allele">
+##INFO=<ID=SVLEN,Number=A,Type=Integer,Description="Example SVLEN",Source="VCF-Core-examples",Version="1.0">
+##INFO=<ID=SVCLAIM,Number=A,Type=String,Description="Example SVCLAIM",Source="VCF-Core-examples",Version="1.0">
+##INFO=<ID=RN,Number=A,Type=Integer,Description="Example RN",Source="VCF-Core-examples",Version="1.0">
+##INFO=<ID=RUS,Number=.,Type=String,Description="Example RUS",Source="VCF-Core-examples",Version="1.0">
+##INFO=<ID=RUL,Number=.,Type=Integer,Description="Example RUL",Source="VCF-Core-examples",Version="1.0">
+##INFO=<ID=RUC,Number=.,Type=Float,Description="Example RUC",Source="VCF-Core-examples",Version="1.0">
+##INFO=<ID=RB,Number=.,Type=Integer,Description="Example RB",Source="VCF-Core-examples",Version="1.0">
+##INFO=<ID=CN,Number=A,Type=Float,Description="Example CN",Source="VCF-Core-examples",Version="1.0">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Example GT">
+##FORMAT=<ID=CN,Number=1,Type=Float,Description="Example CN">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	S1
+chr1	600	repeat1	A	<CNV:TR>	60	PASS	SVLEN=30;SVCLAIM=D;RN=1;RUS=CAG;RUL=3;RUC=10;RB=30;CN=1	GT:CN	0/1:2

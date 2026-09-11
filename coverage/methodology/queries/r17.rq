@@ -1,0 +1,3 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+# Expected answers are authored in inputs/cases.json from the source VCF.
+SELECT ?index ?key WHERE { ?r vcfc:pos 10 ; vcfc:hasCall/vcfc:hasFormatKey ?f . ?f vcfc:fieldIndex ?index ; vcfc:declaredBy/vcfc:fieldId ?key }

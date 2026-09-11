@@ -1,0 +1,21 @@
+##fileformat=VCFv4.3
+##contig=<ID=chr1,length=100,URL=https://example.org/one.fa,md5=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,assembly="build-one",species="Species one">
+##contig=<ID=chr2,length=200,URL=https://example.org/two.fa,md5=bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb,assembly="build-two",species="Species two">
+##FILTER=<ID=q10,Description="Quality \"low\" \\ threshold",Extra="001">
+##ALT=<ID=DEL:ME,Description="Mobile element deletion">
+##pedigreeDB=https://example.org/pedigree
+##PEDIGREE=<ID=Child1,Mother=Mother1,Father=Father1,Name_1=Ancestor1>
+##INFO=<ID=FLAG,Number=0,Type=Flag,Description="Presence flag">
+##INFO=<ID=PAIR,Number=2,Type=Integer,Description="Ordered pair">
+##INFO=<ID=FRACTION,Number=1,Type=Float,Description="Fraction">
+##INFO=<ID=BASE,Number=1,Type=Character,Description="Single base">
+##INFO=<ID=TEXT,Number=.,Type=String,Description="Text values">
+##INFO=<ID=ORIGIN,Number=1,Type=String,Description="Annotation",Source="dbSNP",Version="00138">
+##META=<ID=Disease,Type=String,Number=.,Values=[None,Cancer]>
+##SAMPLE=<ID=S1,Disease=None,Description="Control",DOI="https://example.org/control">
+##SAMPLE=<ID=S2,Disease=Cancer,Description="Tumour">
+##INFO=<ID=END,Number=1,Type=Integer,Description="End position of the variant">
+##INFO=<ID=SVLEN,Number=.,Type=Integer,Description="Difference in length between REF and ALT alleles">
+##INFO=<ID=SVTYPE,Number=1,Type=String,Description="Type of structural variant">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
+chr1	10	.	A	<DEL:ME>	.	PASS	FLAG;PAIR=3,8;FRACTION=0.25;BASE=C;TEXT=alpha,beta;END=11;SVLEN=-1;SVTYPE=DEL

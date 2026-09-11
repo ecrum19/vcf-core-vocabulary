@@ -50,7 +50,7 @@ def main():
         for p in args.files:data+=load_turtle(p)
         return 0 if check('merged input',data,shapes,ontology,args.warnings_as_errors)[0] else 1
     failures=[];results=[]
-    files=sorted((ROOT/'examples').rglob('*.ttl'))+[ROOT/'examples/core/example.nt']+sorted((ROOT/'coverage/paper').glob('*.ttl'))+[ROOT/'tests/shacl/generic-vcf44.ttl']
+    files=sorted((ROOT/'examples').rglob('*.ttl'))+[ROOT/'examples/core/example.nt']+[ROOT/'tests/shacl/generic-vcf44.ttl']
     fixtures=[(str(p.relative_to(ROOT)),load_turtle(p)) for p in files]
     merged=load_turtle(ROOT/'examples/core/example-headers.ttl');merged+=load_turtle(ROOT/'examples/core/example-minimal-record.ttl');fixtures.append(('headers + minimal merged',merged))
     fixtures.append(('CONSTRUCT template',Graph().query((ROOT/'mappings/vcf-to-vcf-core-construct.sparql').read_text()).graph))

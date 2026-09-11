@@ -1,0 +1,10 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+# Source-audit case: expected answers are authored from the VCF fixture, not execution.
+SELECT ?child ?role ?ancestor WHERE {
+ ?file vcfc:hasHeader/vcfc:hasHeaderLine ?d .
+ ?d a vcfc:PedigreeHeaderLine ; vcfc:hasAttribute ?id, ?a .
+ ?id vcfc:attributeKey ?idKey ; vcfc:attributeValue ?child .
+ FILTER(?idKey IN ("ID", "Child"))
+ ?a vcfc:attributeKey ?role ; vcfc:attributeValue ?ancestor .
+ FILTER(?role IN ("Mother", "Father", "Name_1"))
+}

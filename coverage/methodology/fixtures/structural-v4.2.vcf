@@ -1,0 +1,14 @@
+##fileformat=VCFv4.2
+##source=VCF-Core-synthetic-examples
+##reference=https://example.org/reference.fa
+##contig=<ID=chr1,length=1000>
+##ALT=<ID=DEL,Description="Deletion">
+##ALT=<ID=DUP,Description="Duplication">
+##INFO=<ID=AF,Number=A,Type=Float,Description="Example AF",Source="Example",Version="1.0">
+##INFO=<ID=SVLEN,Number=.,Type=Integer,Description="Example SVLEN",Source="Example",Version="1.0">
+##INFO=<ID=CIPOS,Number=2,Type=Integer,Description="Example CIPOS",Source="Example",Version="1.0">
+##INFO=<ID=CN,Number=1,Type=Integer,Description="Example CN",Source="Example",Version="1.0">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Example GT">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Example DP">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	S1
+chr1	100	legacy2	A	<DEL>,<DUP>	60	PASS	AF=0.25,0.1;SVLEN=-20,30;CIPOS=-5,5;CN=2	GT:DP	0/1:20

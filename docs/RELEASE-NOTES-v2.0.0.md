@@ -189,7 +189,7 @@ The paper evidence preserves all six FORMAT cells in both profiles and returns
 **172 expanded / 149 condensed triples**. These tiny fixtures establish behaviour,
 not a storage or throughput benchmark. Author notes distinguish repaired working
 examples from earlier manuscript snapshots.
-The new [SWAT4HCLS 2027 manuscript draft](../SWAT4HCLS_2027/README.md) explains the
+The SWAT4HCLS 2027 manuscript draft (kept outside this repository since v2.1.0) explains the
 model and its implementation context; citation and acknowledgement files were
 updated alongside the rename. The manuscript remains a draft, not publication
 evidence for the release.
@@ -236,7 +236,7 @@ Current evidence is more usefully stated with explicit denominators:
 | Complete maintained RDF fixtures | 19/19 passed before the final real-call refresh | Historical full-suite result; the refresh received focused checks only. |
 | Independent tests and demonstrations | 35 regression tests; 16 source pairs; nine exact-answer queries | The 16 source pairs and all nine queries passed after the refresh; the vector regression was rerun separately. |
 
-The [coverage checklist](../coverage/curated/README.md) now maps specification areas to terms,
+The [coverage checklist](../coverage/vcf45-inventory/README.md) now maps specification areas to terms,
 rules and probes. A defensible future percentage requires a versioned atomic
 requirement inventory, explicit full/partial criteria and linked positive/negative
 tests for every item. **Full VCF 4.5 conformance remains unclaimed.**
@@ -268,7 +268,7 @@ npm run ocg:build
 The release-note review reran the check and local build using Node 24.16.0,
 Python 3.14.2, pySHACL 0.30.1 and RDFLib 7.6.0. **Both passed.** Fixture summaries are in
 [validation-results.json](../tests/generated/validation.json); the
-[paper verifier's JSON](../coverage/paper/generated/verification.json) records its
+[profile verifier's JSON](../tests/generated/profile-comparison.json) records its
 narrower Node assertions. A passing local run does not assert that hosted CI or
 publication has occurred.
 
@@ -293,9 +293,11 @@ fixture results with `npm run validate:force`.
    output, not just the supplied examples; the fixture materializer is not a
    substitute for converter integration tests.
 
-The [migration utility](../scripts/migrate-namespace.mjs) supplies mechanical rewrite
-and bridge-generation operations. Run it on a reviewable copy and inspect the
-result: string substitution alone cannot implement these modelling changes.
+The v2.0.0 migration utility (`scripts/migrate-namespace.mjs`, a one-shot tool
+removed after the migration window) supplied mechanical rewrite and
+bridge-generation operations. Recover it from this tag's history if you still
+need it, run it on a reviewable copy, and inspect the result: string substitution
+alone cannot implement these modelling changes.
 The [legacy document](../legacy/legacy-vcf-rdfizer.ttl) supplies deprecation/replacement
 links and equivalence or identity mappings, subject to the gap below. It does
 not make old graphs automatically satisfy the new constraints.

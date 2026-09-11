@@ -54,5 +54,5 @@ npm run validation:build  # regenerate checked-in SPARQL files offline
 .venv/bin/python scripts/build-shacl-profiles.py --spec-dir /path/to/hts-specs
 ```
 
-See [the coverage checklist](../coverage/curated/README.md) for tested requirements and
+See [the coverage checklist](../coverage/vcf45-inventory/README.md) for tested requirements and
 remaining limits. These profiles are not an exhaustive VCF certification.

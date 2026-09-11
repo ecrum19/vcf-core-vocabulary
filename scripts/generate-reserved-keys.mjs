@@ -25,6 +25,22 @@ import { fileURLToPath } from "node:url";
 
 const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const REGISTRY_PATH = path.join(REPO_ROOT, "ontology", "versions", "registry.json");
+const PACKAGE_PATH = path.join(REPO_ROOT, "package.json");
+
+/**
+ * The artifact version, for owl:versionInfo. The hand-authored modules carry the
+ * release version there, so this generated module has to as well: a bundle that
+ * mixes release versions with a VCF version leaves consumers of the merged graph
+ * -- WebVOWL among them -- reading whichever ontology header they happen to pick.
+ * The VCF version it describes goes on vcfc:specificationVersion instead.
+ */
+async function artifactVersion() {
+  const manifest = JSON.parse(await fs.readFile(PACKAGE_PATH, "utf8"));
+  if (!manifest.version) {
+    throw new Error("package.json declares no version; cannot stamp owl:versionInfo");
+  }
+  return manifest.version;
+}
 
 function option(name, fallback) {
   const index = process.argv.indexOf(name);
@@ -225,7 +241,7 @@ function sourceIri(source) {
   return /^https?:\/\//i.test(source) ? source : new URL(`file://${path.resolve(source)}`).href;
 }
 
-function render(text, source, sourceReference, entry) {
+function render(text, source, sourceReference, entry, release) {
   const { expectedCounts: EXPECTED_COUNTS } = entry.reservedKeys;
   const info = longtableRows(text, "table:reserved-info");
   const format = longtableRows(text, "table:reserved-genotypes");
@@ -282,7 +298,12 @@ function render(text, source, sourceReference, entry) {
   rdfs:label "VCF Core reserved-key registry for VCF ${entry.id}"@en ;
   dct:source <${sourceIri(sourceReference)}> ;
   owl:imports <https://w3id.org/vcf-core/vocab> ;
-  owl:versionInfo ${turtleString(entry.code)} .
+  owl:versionInfo ${turtleString(release)} ;
+  vcfc:specificationVersion ${turtleString(entry.code)} .
+
+vcfc:specificationVersion a owl:AnnotationProperty ;
+  rdfs:label "specification version"@en ;
+  rdfs:comment "The VCF specification version a registry graph describes. It is distinct from owl:versionInfo, which records the release version of this vocabulary."@en .
 
 vcfc:reservedIn a owl:AnnotationProperty ;
   rdfs:label "reserved in"@en ;
@@ -315,7 +336,7 @@ if (!source || !output) {
 }
 
 const sourceText = await readSource(source);
-const generated = render(sourceText, source, sourceReference, entry);
+const generated = render(sourceText, source, sourceReference, entry, await artifactVersion());
 await fs.writeFile(path.resolve(process.cwd(), output), generated, "utf8");
 console.log(
   `Generated ${path.relative(REPO_ROOT, path.resolve(process.cwd(), output))} for VCF ${entry.id} from ${source}.`,

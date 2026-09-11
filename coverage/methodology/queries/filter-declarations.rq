@@ -1,0 +1,6 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+# Source-audit case: expected answers are authored from the VCF fixture, not execution.
+SELECT ?id ?description WHERE {
+ ?file vcfc:hasHeader/vcfc:hasHeaderLine ?d .
+ ?d a vcfc:FILTERHeaderLine ; vcfc:filterId ?id ; vcfc:fieldDescription ?description .
+}

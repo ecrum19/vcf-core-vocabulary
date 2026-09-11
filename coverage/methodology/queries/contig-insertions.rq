@@ -1,0 +1,15 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+PREFIX faldo: <http://biohackathon.org/resource/faldo#>
+# Expected answers are authored in inputs/cases.json from the source VCF.
+# A large insertion is carried by breakends whose mate side lies on an assembly
+# contig rather than on a declared reference sequence. The inserted boundary and
+# its direction come from the ALT bracket notation, the insertion is grouped by
+# EVENT, and the circular adjacency is the only pair whose MATEID is determinable.
+SELECT ?id ?event ?chrom ?contig ?position ?orientation ?mate WHERE {
+  ?record vcfc:recordId ?id ; vcfc:chrom ?chrom ; vcfc:hasAltAllele ?a ;
+          vcfc:hasCall/vcfc:hasInfoValue ?info .
+  ?info vcfc:declaredBy/vcfc:fieldId "EVENT" ; vcfc:fieldValue ?event .
+  ?a vcfc:breakendOrientation ?orientation ; faldo:location ?location .
+  ?location faldo:position ?position ; faldo:reference/vcfc:assemblyContigId ?contig .
+  OPTIONAL { ?a vcfc:mateBreakend/^vcfc:hasAltAllele/vcfc:recordId ?mate }
+} ORDER BY ?id

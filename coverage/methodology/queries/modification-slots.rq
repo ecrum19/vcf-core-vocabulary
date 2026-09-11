@@ -1,0 +1,18 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+PREFIX faldo: <http://biohackathon.org/resource/faldo#>
+# Expected answers are authored in inputs/cases.json from the source VCF.
+# Number=M values are read in GT order, one per base of the allele that could
+# carry the modification, on either strand, with unphased repeats aggregated at
+# their first occurrence. Each value must reach the GT slot, the base offset
+# within that allele and the strand it belongs to; a missing value binds no rate.
+SELECT ?pos ?key ?slot ?offset ?strand ?fraction WHERE {
+  ?record vcfc:pos ?pos ; vcfc:hasCall/vcfc:hasSampleCall ?call .
+  ?call vcfc:hasFormatValue ?field .
+  ?field vcfc:declaredBy/vcfc:fieldId ?key ; vcfc:hasValueItem ?item .
+  ?item vcfc:forGTAlleleIndex ?slot ; vcfc:forBaseModification ?modification .
+  ?modification vcfc:modifiedBaseOffset ?offset ; a ?strand .
+  # The four specification examples; chr:50 and chr:60 belong to the key-family case.
+  FILTER(?pos < 50 && ?key IN ("M5mC", "M5hmC"))
+  FILTER(?strand != vcfc:BaseModification)
+  OPTIONAL { ?modification vcfc:modificationFraction ?fraction }
+} ORDER BY ?pos ?key ?slot ?offset

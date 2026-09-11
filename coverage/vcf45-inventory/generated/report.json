@@ -1,0 +1,657 @@
+{
+ "vocabulary": {
+  "declaredTerms": 467,
+  "byModule": {
+   "vocabulary": 174,
+   "alleles": 40,
+   "genotypes": 32,
+   "sv": 94,
+   "reserved-keys": 127
+  },
+  "byKind": {
+   "annotationProperty": 8,
+   "class": 78,
+   "datatype": 5,
+   "datatypeProperty": 111,
+   "namedIndividual": 189,
+   "objectProperty": 75,
+   "ontologyHeader": 1
+  }
+ },
+ "externalVocabularies": {
+  "structuralReuse": {
+   "distinctTerms": 5,
+   "byVocabulary": {
+    "dcat": [
+     "http://www.w3.org/ns/dcat#Distribution"
+    ],
+    "faldo": [
+     "http://biohackathon.org/resource/faldo#InRangePosition"
+    ],
+    "prov": [
+     "http://www.w3.org/ns/prov#Entity",
+     "http://www.w3.org/ns/prov#wasDerivedFrom"
+    ],
+    "so": [
+     "http://purl.obolibrary.org/obo/SO_0001059"
+    ]
+   },
+   "axioms": [
+    {
+     "subject": "vcfc:CohortCallMatrix",
+     "predicate": "subClassOf",
+     "object": "http://www.w3.org/ns/prov#Entity"
+    },
+    {
+     "subject": "vcfc:FormatValueVector",
+     "predicate": "subClassOf",
+     "object": "http://www.w3.org/ns/prov#Entity"
+    },
+    {
+     "subject": "vcfc:SampleCall",
+     "predicate": "subClassOf",
+     "object": "http://www.w3.org/ns/prov#Entity"
+    },
+    {
+     "subject": "vcfc:SampleDeclaration",
+     "predicate": "subClassOf",
+     "object": "http://www.w3.org/ns/prov#Entity"
+    },
+    {
+     "subject": "vcfc:SampleSet",
+     "predicate": "subClassOf",
+     "object": "http://www.w3.org/ns/prov#Entity"
+    },
+    {
+     "subject": "vcfc:VCFFile",
+     "predicate": "subClassOf",
+     "object": "http://www.w3.org/ns/dcat#Distribution"
+    },
+    {
+     "subject": "vcfc:VCFFile",
+     "predicate": "subClassOf",
+     "object": "http://www.w3.org/ns/prov#Entity"
+    },
+    {
+     "subject": "vcfc:VCFRecord",
+     "predicate": "subClassOf",
+     "object": "http://www.w3.org/ns/prov#Entity"
+    },
+    {
+     "subject": "vcfc:VCFSample",
+     "predicate": "subClassOf",
+     "object": "http://www.w3.org/ns/prov#Entity"
+    },
+    {
+     "subject": "vcfc:VariantCall",
+     "predicate": "subClassOf",
+     "object": "http://www.w3.org/ns/prov#Entity"
+    },
+    {
+     "subject": "vcfc:asSequenceAlteration",
+     "predicate": "range",
+     "object": "http://purl.obolibrary.org/obo/SO_0001059"
+    },
+    {
+     "subject": "vcfc:endConfidenceInterval",
+     "predicate": "range",
+     "object": "http://biohackathon.org/resource/faldo#InRangePosition"
+    },
+    {
+     "subject": "vcfc:pedigreeOriginal",
+     "predicate": "subPropertyOf",
+     "object": "http://www.w3.org/ns/prov#wasDerivedFrom"
+    },
+    {
+     "subject": "vcfc:posConfidenceInterval",
+     "predicate": "range",
+     "object": "http://biohackathon.org/resource/faldo#InRangePosition"
+    }
+   ]
+  },
+  "alignmentTargets": {
+   "distinctTerms": 45,
+   "byVocabulary": {
+    "chebi": 10,
+    "faldo": 3,
+    "geno": 3,
+    "hero": 6,
+    "so": 15,
+    "vrs": 8
+   }
+  }
+ },
+ "mappings": {
+  "asserted": {
+   "set": "mappings/vcf-core-alignments.sssom.tsv",
+   "module": "mappings/vcf-core-alignments.ttl",
+   "mappings": 123,
+   "distinctSubjects": 65,
+   "distinctObjects": 103,
+   "alsoInlineInOntology": 48,
+   "moduleOnly": 75,
+   "withConfidence": 75,
+   "byTarget": {
+    "gvo": 39,
+    "so": 22,
+    "hero": 17,
+    "vrs": 15,
+    "gfvo": 14,
+    "chebi": 10,
+    "med2rdf": 3,
+    "geno": 2,
+    "faldo": 1
+   },
+   "byPredicate": {
+    "skos:exactMatch": 57,
+    "skos:closeMatch": 40,
+    "skos:relatedMatch": 16,
+    "skos:narrowMatch": 10
+   }
+  },
+  "thirdParty": {
+   "event": "SWAT4HCLS 2025 BioHackathon, genomic variation RDF representations",
+   "sets": 4,
+   "mappings": 116,
+   "bySet": {
+    "gigwa": 30,
+    "hero": 25,
+    "med2rdf": 50,
+    "sembeacon": 11
+   },
+   "objectSource": "GA4GH VRS 1.3",
+   "verified": "2026-09-08"
+  }
+ },
+ "reservedKeys": {
+  "currentVersion": "VCFv4.5",
+  "current": {
+   "info": 51,
+   "format": 71,
+   "total": 122
+  },
+  "byVersion": {
+   "VCFv4.1": {
+    "entries": 40,
+    "byKind": {
+     "FORMAT": 10,
+     "INFO": 30
+    },
+    "scope": "Explicit reserved table rows and header declarations in the specification; earlier prose-only definitions remain producer-declared.",
+    "source": "https://raw.githubusercontent.com/samtools/hts-specs/master/VCFv4.1.tex",
+    "sha256": "7d29ef8f93745f246202da3e32107ea13b036bbefcb31f7971a3ce31f1045baa"
+   },
+   "VCFv4.2": {
+    "entries": 40,
+    "byKind": {
+     "FORMAT": 10,
+     "INFO": 30
+    },
+    "scope": "Explicit reserved table rows and header declarations in the specification; earlier prose-only definitions remain producer-declared.",
+    "source": "https://raw.githubusercontent.com/samtools/hts-specs/master/VCFv4.2.tex",
+    "sha256": "66dbd167e8fb309708e0956ffbb12808bd338a703fbf034d80d1ead56ae480cc"
+   },
+   "VCFv4.3": {
+    "entries": 67,
+    "byKind": {
+     "FORMAT": 23,
+     "INFO": 44
+    },
+    "scope": "Explicit reserved table rows and header declarations in the specification; earlier prose-only definitions remain producer-declared.",
+    "source": "https://raw.githubusercontent.com/samtools/hts-specs/master/VCFv4.3.tex",
+    "sha256": "332d8b910ac9952bfba04374118f8c4f318ea996d5017599e68f80379fd61cde"
+   },
+   "VCFv4.4": {
+    "entries": 78,
+    "byKind": {
+     "FORMAT": 27,
+     "INFO": 51
+    },
+    "scope": "Explicit reserved table rows and header declarations in the specification; earlier prose-only definitions remain producer-declared.",
+    "source": "https://raw.githubusercontent.com/samtools/hts-specs/master/VCFv4.4.tex",
+    "sha256": "4c88884cf6b016efcec691d5186432a2e0b679396204d14770e89839ef536e1a"
+   },
+   "VCFv4.5": {
+    "entries": 122,
+    "byKind": {
+     "format": 71,
+     "info": 51
+    },
+    "scope": "Reserved INFO/FORMAT tables and the structural-variant declaration sections",
+    "source": "generated by scripts/generate-reserved-keys.mjs from the VCF 4.5 LaTeX source"
+   }
+  }
+ },
+ "shaclProfiles": {
+  "vcf-4.1.shacl.ttl": {
+   "nodeShapes": 9,
+   "propertyShapes": 1,
+   "sparqlConstraints": 8,
+   "triples": 46
+  },
+  "vcf-4.2.shacl.ttl": {
+   "nodeShapes": 9,
+   "propertyShapes": 1,
+   "sparqlConstraints": 8,
+   "triples": 46
+  },
+  "vcf-4.3.shacl.ttl": {
+   "nodeShapes": 9,
+   "propertyShapes": 1,
+   "sparqlConstraints": 8,
+   "triples": 46
+  },
+  "vcf-4.4.shacl.ttl": {
+   "nodeShapes": 8,
+   "propertyShapes": 1,
+   "sparqlConstraints": 7,
+   "triples": 41
+  },
+  "vcf-4.5.shacl.ttl": {
+   "nodeShapes": 8,
+   "propertyShapes": 1,
+   "sparqlConstraints": 7,
+   "triples": 41
+  },
+  "vcf-core-consistency.shacl.ttl": {
+   "nodeShapes": 24,
+   "propertyShapes": 0,
+   "sparqlConstraints": 24,
+   "triples": 120
+  },
+  "vcf-core-vocabulary-sparql.shacl.ttl": {
+   "nodeShapes": 6,
+   "propertyShapes": 0,
+   "sparqlConstraints": 16,
+   "triples": 61
+  },
+  "vcf-core-vocabulary.shacl.ttl": {
+   "nodeShapes": 53,
+   "propertyShapes": 115,
+   "sparqlConstraints": 0,
+   "triples": 894
+  }
+ },
+ "coverage": {
+  "logicalModel": {
+   "inventory": "coverage/vcf45-inventory/inventory.json",
+   "constructs": 104,
+   "full": 104,
+   "partial": 0,
+   "absent": 0,
+   "fullPercent": 100.0,
+   "creditedPercent": 100.0,
+   "byArea": [
+    {
+     "area": "File and header structure",
+     "section": "1.4-1.5",
+     "constructs": 20,
+     "full": 20,
+     "partial": 0,
+     "absent": 0,
+     "evidenceTiers": {
+      "query": 0,
+      "probe": 0,
+      "shape": 17,
+      "fixture": 3
+     },
+     "enforced": 17
+    },
+    {
+     "area": "Field declaration attributes",
+     "section": "1.4.2-1.4.4",
+     "constructs": 8,
+     "full": 8,
+     "partial": 0,
+     "absent": 0,
+     "evidenceTiers": {
+      "query": 0,
+      "probe": 2,
+      "shape": 6,
+      "fixture": 0
+     },
+     "enforced": 8
+    },
+    {
+     "area": "Type and arity value sets",
+     "section": "1.3, 1.4.2, 1.4.4",
+     "constructs": 14,
+     "full": 14,
+     "partial": 0,
+     "absent": 0,
+     "evidenceTiers": {
+      "query": 0,
+      "probe": 0,
+      "shape": 14,
+      "fixture": 0
+     },
+     "enforced": 14
+    },
+    {
+     "area": "Lexical and encoding rules",
+     "section": "1.2-1.3",
+     "constructs": 7,
+     "full": 7,
+     "partial": 0,
+     "absent": 0,
+     "evidenceTiers": {
+      "query": 0,
+      "probe": 5,
+      "shape": 1,
+      "fixture": 1
+     },
+     "enforced": 6
+    },
+    {
+     "area": "Fixed fields and allele structure",
+     "section": "1.6.1",
+     "constructs": 18,
+     "full": 18,
+     "partial": 0,
+     "absent": 0,
+     "evidenceTiers": {
+      "query": 1,
+      "probe": 6,
+      "shape": 11,
+      "fixture": 0
+     },
+     "enforced": 18
+    },
+    {
+     "area": "FORMAT and genotype",
+     "section": "1.6.2",
+     "constructs": 21,
+     "full": 21,
+     "partial": 0,
+     "absent": 0,
+     "evidenceTiers": {
+      "query": 4,
+      "probe": 8,
+      "shape": 8,
+      "fixture": 1
+     },
+     "enforced": 16
+    },
+    {
+     "area": "Structural variation, repeats, gVCF",
+     "section": "3, 5.4-5.7",
+     "constructs": 16,
+     "full": 16,
+     "partial": 0,
+     "absent": 0,
+     "evidenceTiers": {
+      "query": 2,
+      "probe": 2,
+      "shape": 5,
+      "fixture": 7
+     },
+     "enforced": 8
+    }
+   ],
+   "evidenceTiers": {
+    "fixture": 12,
+    "probe": 23,
+    "query": 7,
+    "shape": 62
+   },
+   "queryBacked": 14,
+   "axesHeld": {
+    "enforced": 87,
+    "preserved": 104,
+    "structured": 104
+   },
+   "outOfScope": [
+    "BCF 2.2 byte layout",
+    "Byte-for-byte source reconstruction",
+    "VCF 4.0 conformance overlay"
+   ]
+  },
+  "serialization": {
+   "$comment": "VCF 4.5 sections 1-1.2 constrain the source bytes. The vocabulary deliberately mints no term for these: an RDF property would record a claim about the source without demonstrating that the source was read. They are therefore excluded from the logical-model denominator and checked directly on the bytes instead. This is a narrower claim than representing them, and is reported as such.",
+   "represented": false,
+   "requirements": [
+    {
+     "id": 50,
+     "spec": "1.2",
+     "requirement": "UTF-8 encoding and no byte order mark",
+     "status": "checked on the bytes"
+    },
+    {
+     "id": 51,
+     "spec": "1.2",
+     "requirement": "LF or CR+LF line separators",
+     "status": "checked on the bytes"
+    }
+   ],
+   "checker": "coverage/vcf45-inventory/check_serialization.py",
+   "fixturesChecked": 17,
+   "fixturesPassed": 17,
+   "terminatorsExercised": [
+    "CRLF",
+    "LF"
+   ]
+  },
+  "representation": {
+   "byVersion": [
+    {
+     "denominator": 69,
+     "preservation": {
+      "demonstrated": 32,
+      "not-demonstrated": 0,
+      "partial": 0,
+      "percentDemonstrated": 46.4,
+      "unassessed": 37
+     },
+     "profile": "expanded",
+     "structure": {
+      "demonstrated": 32,
+      "not-demonstrated": 0,
+      "partial": 0,
+      "percentDemonstrated": 46.4,
+      "unassessed": 37
+     },
+     "version": "4.1"
+    },
+    {
+     "denominator": 69,
+     "preservation": {
+      "demonstrated": 32,
+      "not-demonstrated": 0,
+      "partial": 0,
+      "percentDemonstrated": 46.4,
+      "unassessed": 37
+     },
+     "profile": "condensed",
+     "structure": {
+      "demonstrated": 26,
+      "not-demonstrated": 6,
+      "partial": 0,
+      "percentDemonstrated": 37.7,
+      "unassessed": 37
+     },
+     "version": "4.1"
+    },
+    {
+     "denominator": 72,
+     "preservation": {
+      "demonstrated": 34,
+      "not-demonstrated": 0,
+      "partial": 0,
+      "percentDemonstrated": 47.2,
+      "unassessed": 38
+     },
+     "profile": "expanded",
+     "structure": {
+      "demonstrated": 34,
+      "not-demonstrated": 0,
+      "partial": 0,
+      "percentDemonstrated": 47.2,
+      "unassessed": 38
+     },
+     "version": "4.2"
+    },
+    {
+     "denominator": 72,
+     "preservation": {
+      "demonstrated": 34,
+      "not-demonstrated": 0,
+      "partial": 0,
+      "percentDemonstrated": 47.2,
+      "unassessed": 38
+     },
+     "profile": "condensed",
+     "structure": {
+      "demonstrated": 28,
+      "not-demonstrated": 6,
+      "partial": 0,
+      "percentDemonstrated": 38.9,
+      "unassessed": 38
+     },
+     "version": "4.2"
+    },
+    {
+     "denominator": 74,
+     "preservation": {
+      "demonstrated": 35,
+      "not-demonstrated": 0,
+      "partial": 0,
+      "percentDemonstrated": 47.3,
+      "unassessed": 39
+     },
+     "profile": "expanded",
+     "structure": {
+      "demonstrated": 35,
+      "not-demonstrated": 0,
+      "partial": 0,
+      "percentDemonstrated": 47.3,
+      "unassessed": 39
+     },
+     "version": "4.3"
+    },
+    {
+     "denominator": 74,
+     "preservation": {
+      "demonstrated": 35,
+      "not-demonstrated": 0,
+      "partial": 0,
+      "percentDemonstrated": 47.3,
+      "unassessed": 39
+     },
+     "profile": "condensed",
+     "structure": {
+      "demonstrated": 29,
+      "not-demonstrated": 6,
+      "partial": 0,
+      "percentDemonstrated": 39.2,
+      "unassessed": 39
+     },
+     "version": "4.3"
+    },
+    {
+     "denominator": 83,
+     "preservation": {
+      "demonstrated": 38,
+      "not-demonstrated": 0,
+      "partial": 0,
+      "percentDemonstrated": 45.8,
+      "unassessed": 45
+     },
+     "profile": "expanded",
+     "structure": {
+      "demonstrated": 38,
+      "not-demonstrated": 0,
+      "partial": 0,
+      "percentDemonstrated": 45.8,
+      "unassessed": 45
+     },
+     "version": "4.4"
+    },
+    {
+     "denominator": 83,
+     "preservation": {
+      "demonstrated": 38,
+      "not-demonstrated": 0,
+      "partial": 0,
+      "percentDemonstrated": 45.8,
+      "unassessed": 45
+     },
+     "profile": "condensed",
+     "structure": {
+      "demonstrated": 31,
+      "not-demonstrated": 7,
+      "partial": 0,
+      "percentDemonstrated": 37.3,
+      "unassessed": 45
+     },
+     "version": "4.4"
+    },
+    {
+     "denominator": 91,
+     "preservation": {
+      "demonstrated": 51,
+      "not-demonstrated": 0,
+      "partial": 0,
+      "percentDemonstrated": 56.0,
+      "unassessed": 40
+     },
+     "profile": "expanded",
+     "structure": {
+      "demonstrated": 51,
+      "not-demonstrated": 0,
+      "partial": 0,
+      "percentDemonstrated": 56.0,
+      "unassessed": 40
+     },
+     "version": "4.5"
+    },
+    {
+     "denominator": 91,
+     "preservation": {
+      "demonstrated": 51,
+      "not-demonstrated": 0,
+      "partial": 0,
+      "percentDemonstrated": 56.0,
+      "unassessed": 40
+     },
+     "profile": "condensed",
+     "structure": {
+      "demonstrated": 37,
+      "not-demonstrated": 14,
+      "partial": 0,
+      "percentDemonstrated": 40.7,
+      "unassessed": 40
+     },
+     "version": "4.5"
+    }
+   ],
+   "cases": 210,
+   "claim": "Coverage of registered information requirements; specification completeness not established",
+   "declarations": {
+    "exact": 333,
+    "rows": 333
+   },
+   "method": "LOT requirements + source-to-RDF mapping + SAMOD-style answer tests (retrospective adaptation)",
+   "pendingReviews": 0,
+   "queryExecutions": 840,
+   "requirements": 94,
+   "sourceAssertions": {
+    "assertions": 1134,
+    "needsReviewSections": 0,
+    "sections": 344,
+    "testStatus": {
+     "no-targeted-test": 831,
+     "partial-tests": 154,
+     "targeted-tests": 149
+    }
+   },
+   "sourceAuditAccepted": true
+  }
+ },
+ "validation": {
+  "available": true,
+  "fixtures": 21,
+  "passed": 21,
+  "violations": 0,
+  "warnings": 0
+ }
+}

@@ -1,0 +1,10 @@
+##fileformat=VCFv4.4
+##source=VCF-Core-synthetic-examples
+##reference=https://example.org/reference.fa
+##contig=<ID=chr1,length=100000>
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=PS,Number=1,Type=Integer,Description="Phase set">
+##FORMAT=<ID=PSL,Number=P,Type=String,Description="Phase set list">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	SAMPLE1	SAMPLE2
+chr1	100	.	A	G	.	PASS	.	GT:PS:PSL	|0|1:100:.	|0|1:.:chr1*100*1,chr1*100*2
+chr1	200	.	C	T	.	PASS	.	GT:PS:PSL	|1|0:100:.	|1|0:.:chr1*100*1,chr1*100*2

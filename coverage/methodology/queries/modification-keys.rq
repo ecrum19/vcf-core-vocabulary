@@ -1,0 +1,18 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+PREFIX faldo: <http://biohackathon.org/resource/faldo#>
+# Expected answers are authored in inputs/cases.json from the source VCF.
+# An aliased key and its numeric ChEBI form denote one modification, and the M,
+# DPM and ADM families give that same modification its fraction, its detecting
+# depth and its modified-read depth. An unrecognised numeric identifier is still
+# carried, and an N modification reports both strands of every base.
+SELECT ?pos ?key ?residue ?strand ?fraction ?depth ?alleleDepth WHERE {
+  ?record vcfc:pos ?pos ; vcfc:hasCall/vcfc:hasSampleCall ?call .
+  ?call vcfc:hasFormatValue ?field .
+  ?field vcfc:declaredBy/vcfc:fieldId ?key ; vcfc:hasValueItem/vcfc:forBaseModification ?modification .
+  ?modification vcfc:modifiedResidue ?residue ; a ?strand .
+  FILTER(?pos > 40)
+  FILTER(?strand != vcfc:BaseModification)
+  OPTIONAL { ?modification vcfc:modificationFraction ?fraction }
+  OPTIONAL { ?modification vcfc:modificationDepth ?depth }
+  OPTIONAL { ?modification vcfc:modificationAlleleDepth ?alleleDepth }
+} ORDER BY ?pos ?key ?fraction

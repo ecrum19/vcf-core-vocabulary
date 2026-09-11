@@ -1,0 +1,13 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+# Expected answers are authored in inputs/cases.json from the source VCF.
+# Every GT allele value carries its own phase-set name and its own phasing
+# quality, positionally. A phase-set name may be reused on another chromosome,
+# and an unphased allele value carries neither a name nor a quality.
+SELECT ?pos ?slot ?phaseSet ?quality WHERE {
+  ?record vcfc:pos ?pos ; vcfc:hasCall/vcfc:hasSampleCall ?call .
+  ?call vcfc:hasGenotype/vcfc:hasAlleleCall ?allele ; vcfc:hasFormatValue ?field .
+  ?allele vcfc:callIndex ?slot .
+  ?field vcfc:declaredBy/vcfc:fieldId "PSQ" ; vcfc:hasValueItem ?item .
+  ?item vcfc:forGTAlleleIndex ?slot ; vcfc:itemValue ?quality .
+  OPTIONAL { ?allele vcfc:allelePhaseSet/vcfc:phaseSetName ?phaseSet }
+} ORDER BY ?pos ?slot

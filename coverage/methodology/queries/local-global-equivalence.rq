@@ -1,0 +1,19 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+# Expected answers are authored in inputs/cases.json from the source VCF.
+# Each site is written twice, once with the local-allele fields and once with the
+# global ones. A Number=LR depth is indexed by the local allele set and a Number=R
+# depth by the full ALT list, so the two only agree if the local indices are
+# resolved to global alleles; where the local set omits an allele the global
+# vector must carry the missing value there.
+SELECT ?pos ?allele ?localDepth ?globalDepth WHERE {
+  ?global vcfc:pos ?pos ; vcfc:hasCall/vcfc:hasSampleCall ?globalCall .
+  ?globalCall vcfc:hasFormatValue ?globalField .
+  ?globalField vcfc:declaredBy/vcfc:fieldId "AD" ; vcfc:hasValueItem ?globalItem .
+  ?globalItem vcfc:itemValue ?globalDepth ; vcfc:forAllele/vcfc:alleleIndex ?allele .
+  OPTIONAL {
+    ?local vcfc:pos ?pos ; vcfc:hasCall/vcfc:hasSampleCall ?localCall .
+    ?localCall vcfc:hasFormatValue ?localField .
+    ?localField vcfc:declaredBy/vcfc:fieldId "LAD" ; vcfc:hasValueItem ?localItem .
+    ?localItem vcfc:itemValue ?localDepth ; vcfc:forAllele/vcfc:alleleIndex ?allele .
+  }
+} ORDER BY ?pos ?allele

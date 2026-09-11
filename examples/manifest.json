@@ -80,10 +80,10 @@
    ]
   },
   {
-   "vcf": "coverage/paper/synthetic.vcf",
+   "vcf": "examples/profile-comparison/synthetic.vcf",
    "rdf": [
-    "coverage/paper/expanded.ttl",
-    "coverage/paper/condensed.ttl"
+    "examples/profile-comparison/expanded.ttl",
+    "examples/profile-comparison/condensed.ttl"
    ]
   },
   {
@@ -95,8 +95,8 @@
  ],
  "queries": [
   {
-   "query": "coverage/paper/sample-depth.rq",
-   "rdf": "coverage/paper/expanded.ttl",
+   "query": "examples/profile-comparison/sample-depth.rq",
+   "rdf": "examples/profile-comparison/expanded.ttl",
    "expected": [
     [
      "SAMPLE1",

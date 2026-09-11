@@ -22,7 +22,7 @@ def _load(name, path):
     return module
 
 
-serialization = _load('serialization', ROOT / 'coverage/curated/check_serialization.py')
+serialization = _load('serialization', ROOT / 'coverage/vcf45-inventory/check_serialization.py')
 examples = _load('vcf_examples', ROOT / 'scripts/vcf_examples.py')
 
 LF = ROOT / 'examples/serialization/lf-line-endings.vcf'

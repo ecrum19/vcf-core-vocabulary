@@ -871,7 +871,7 @@ ex:header a vcfc:VCFHeader ;
     vcfc:hasValueItem <file://example-vcf45-features.vcf#sample/1/S1/fmt/ADM5mC/item/0> .
 
 <file://example-vcf45-features.vcf#sample/1/S1/fmt/ADM5mC/item/0> a vcfc:FieldValueItem ;
-    vcfc:forBaseModification <file://example-vcf45-features.vcf#sample/1/S1/modification/0/0> ;
+    vcfc:forBaseModification <file://example-vcf45-features.vcf#sample/1/S1/modification/27551/0/0/forward> ;
     vcfc:forGTAlleleIndex 0 ;
     vcfc:itemValue 18 ;
     vcfc:valueIndex 0 .
@@ -895,7 +895,7 @@ ex:header a vcfc:VCFHeader ;
     vcfc:hasValueItem <file://example-vcf45-features.vcf#sample/1/S1/fmt/DPM5mC/item/0> .
 
 <file://example-vcf45-features.vcf#sample/1/S1/fmt/DPM5mC/item/0> a vcfc:FieldValueItem ;
-    vcfc:forBaseModification <file://example-vcf45-features.vcf#sample/1/S1/modification/0/0> ;
+    vcfc:forBaseModification <file://example-vcf45-features.vcf#sample/1/S1/modification/27551/0/0/forward> ;
     vcfc:forGTAlleleIndex 0 ;
     vcfc:itemValue 20 ;
     vcfc:valueIndex 0 .
@@ -918,7 +918,7 @@ ex:header a vcfc:VCFHeader ;
     vcfc:hasValueItem <file://example-vcf45-features.vcf#sample/1/S1/fmt/M5mC/item/0> .
 
 <file://example-vcf45-features.vcf#sample/1/S1/fmt/M5mC/item/0> a vcfc:FieldValueItem ;
-    vcfc:forBaseModification <file://example-vcf45-features.vcf#sample/1/S1/modification/0/0> ;
+    vcfc:forBaseModification <file://example-vcf45-features.vcf#sample/1/S1/modification/27551/0/0/forward> ;
     vcfc:forGTAlleleIndex 0 ;
     vcfc:itemValue "0.9"^^vcfc:VCFFloat ;
     vcfc:valueIndex 0 .
@@ -1474,7 +1474,7 @@ ex:samples a vcfc:SampleSet ;
     vcfc:alleleKind vcfc:BaseSequenceAllele ;
     vcfc:alleleValue "A" .
 
-<file://example-vcf45-features.vcf#sample/1/S1/modification/0/0> a faldo:ForwardStrandPosition,
+<file://example-vcf45-features.vcf#sample/1/S1/modification/27551/0/0/forward> a faldo:ForwardStrandPosition,
         vcfc:BaseModification ;
     vcfc:modificationAlleleDepth 18 ;
     vcfc:modificationDepth 20 ;

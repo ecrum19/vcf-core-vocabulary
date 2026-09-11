@@ -1,0 +1,11 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+# Expected answers are authored in inputs/cases.json from the source VCF.
+# Each GT allele value keeps its own phase-set name and its ordinal in the
+# traversal of the derivative chromosome; the ordinals order the whole sample.
+SELECT ?pos ?slot ?phaseSet ?ordinal WHERE {
+  ?record vcfc:pos ?pos ; vcfc:hasCall/vcfc:hasSampleCall ?call .
+  ?call vcfc:hasGenotype/vcfc:hasAlleleCall ?allele ; vcfc:hasFormatValue ?field .
+  ?allele vcfc:callIndex ?slot ; vcfc:allelePhaseSet/vcfc:phaseSetName ?phaseSet .
+  ?field vcfc:declaredBy/vcfc:fieldId "PSO" ; vcfc:hasValueItem ?item .
+  ?item vcfc:forGTAlleleIndex ?slot ; vcfc:itemValue ?ordinal .
+} ORDER BY ?ordinal

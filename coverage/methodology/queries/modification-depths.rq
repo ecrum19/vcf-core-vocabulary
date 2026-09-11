@@ -1,0 +1,13 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+# Expected answers are authored in inputs/cases.json from the source VCF.
+# The modification fraction, the depth of reads able to detect the modification
+# and the depth of reads carrying it are three different quantities of one
+# modification of one sample, and each must be retrievable on its own.
+SELECT ?sample ?residue ?fraction ?depth ?alleleDepth WHERE {
+  ?call vcfc:sampleId ?sample ; vcfc:hasFormatValue/vcfc:hasValueItem/vcfc:forBaseModification ?modification .
+  ?modification vcfc:modifiedResidue ?residue ; vcfc:modificationFraction ?fraction ;
+                vcfc:modificationDepth ?depth ; vcfc:modificationAlleleDepth ?alleleDepth .
+}
+# One modification is reached once through each of its three FORMAT keys; group
+# so the answer counts modifications rather than the keys that mention them.
+GROUP BY ?sample ?residue ?fraction ?depth ?alleleDepth

@@ -1,0 +1,2 @@
+# Offline RDF parsing and SPARQL evaluation.
+rdflib==7.6.0

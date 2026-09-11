@@ -1,7 +1,7 @@
 {
   "updated": "2026-09-07",
   "expanded": {
-    "source_file": "test-larger.vcf.gz",
+    "source_url": "https://github.com/ecrum19/VCF-RDFizer/blob/main/test/test_vcf_files/test-larger.vcf.gz",
     "source_sha256": "8c6b030e2aaa2025e38d201d30362766e1a0a266e3dd127302b93e5e60853c50",
     "vcf_version": "VCFv4.2",
     "reference": "GRCh38",

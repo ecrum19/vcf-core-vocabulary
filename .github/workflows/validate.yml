@@ -1,8 +1,8 @@
 name: Validate vocabulary and examples
 
 # The SHACL suite takes about three minutes, and most pull requests touch the
-# manuscript, README or generated site rather than the vocabulary. Path filters
-# keep CI off those changes; when the job does run it runs the full suite with
+# README or generated site rather than the vocabulary. Path filters keep CI off
+# those changes; when the job does run it runs the full suite with
 # validate:force, so a stale committed stamp can never suppress a real check.
 on:
   pull_request:

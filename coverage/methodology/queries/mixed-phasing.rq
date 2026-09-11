@@ -1,0 +1,2 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+SELECT ?index ?indicator WHERE { ?g vcfc:phasingStatus vcfc:MixedPhasing ; vcfc:hasAlleleCall ?a . ?a vcfc:callIndex ?index ; vcfc:phaseIndicator ?indicator } ORDER BY ?index

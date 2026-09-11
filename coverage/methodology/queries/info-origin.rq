@@ -1,0 +1,5 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+# Source-audit case: expected answers are authored from the VCF fixture, not execution.
+SELECT ?id ?source ?version WHERE {
+ ?d a vcfc:INFOHeaderLine ; vcfc:fieldId ?id ; vcfc:fieldSource ?source ; vcfc:fieldVersion ?version .
+}

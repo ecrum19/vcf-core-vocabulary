@@ -1,0 +1,17 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+# Preservation only: explicitly decode the documented VCF text encoding.
+SELECT ?local ?global WHERE {
+?file vcfc:hasRecord ?record ; vcfc:hasSampleSet/vcfc:hasSample ?s .
+  ?record vcfc:pos 200 ; vcfc:hasCall/vcfc:hasCallMatrix ?matrix .
+  ?s vcfc:sampleIndex ?sampleIndex ; vcfc:sampleName ?sample .
+?matrix vcfc:hasFormatValueVector ?vectorraw . ?vectorraw vcfc:declaredBy/vcfc:fieldId "LAA" ; vcfc:encodedValues ?packedraw .
+
+  BIND(CONCAT("^(?:[^\\t]*\\t){", STR(?sampleIndex - 1), "}([^\\t]*).*$") AS ?patternraw)
+  BIND(REPLACE(?packedraw, ?patternraw, "$1") AS ?raw)
+
+  # This witness contains two local ALT alleles; R37/R46 do not inherit credit.
+  VALUES ?local { 1 2 }
+  BIND(CONCAT("^(?:[^,]*,){", STR(?local - 1), "}([^,]*).*$") AS ?localPattern)
+  BIND(xsd:integer(REPLACE(?raw, ?localPattern, "$1")) AS ?global)
+}
