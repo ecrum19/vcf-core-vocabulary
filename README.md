@@ -2,7 +2,7 @@
 
 # VCF Core Vocabulary
 
-[![Vocabulary version: 2.1.0](https://img.shields.io/badge/vocabulary-v2.1.0-006875)](docs/RELEASE-NOTES-v2.1.0.md)
+[![Vocabulary version: 2.1.1](https://img.shields.io/badge/vocabulary-v2.1.1-006875)](docs/RELEASE-NOTES-v2.1.1.md)
 [![VCF validation profiles: 4.1–4.5](https://img.shields.io/badge/VCF_profiles-4.1%E2%80%934.5-006875)](shacl/README.md)
 [![License: CC BY 4.0](https://img.shields.io/badge/license-CC_BY_4.0-006875)](LICENSE)
 
@@ -18,7 +18,7 @@ genotypes as linked data. It preserves the source context needed to interpret a
 VCF call and provides links to external models of sequence variation. Any
 converter can adopt the vocabulary.
 
-**Version 2.1.0** · [Release notes](docs/RELEASE-NOTES-v2.1.0.md) ·
+**Version 2.1.1** · [Release notes](docs/RELEASE-NOTES-v2.1.1.md) ·
 [Examples](examples/README.md) · [Validation](shacl/README.md) ·
 [Coverage assessment](coverage/README.md)
 
@@ -50,7 +50,7 @@ fixtures and queries for genotypes, phasing and structural variation.
 ## Use the vocabulary
 
 The namespace is `https://w3id.org/vcf-core/vocab#`, conventionally `vcfc:`.
-VCF specification versions (4.1–4.5) and vocabulary releases (2.1.0) are separate.
+VCF specification versions (4.1–4.5) and vocabulary releases (2.1.1) are separate.
 
 The vocabulary is supplied as five Turtle modules. Load all five when working
 with the complete model; the core module alone does not contain every term.
@@ -118,14 +118,63 @@ things**, so their percentages can never be added or compared:
 
 | Assessment | Recorded result | What the number means |
 | --- | --- | --- |
-| [Specification-derived requirements](coverage/methodology/README.md) | **94** requirements, **189** cases; **41–48%** demonstrated per VCF version; **333/333** reserved Number/Type rows agree | Requirements read out of the VCF 4.1–4.5 specification text. Untested requirements count against the score, so this is a floor, not a ceiling. |
+| [Specification-derived requirements](coverage/methodology/README.md) | **94** requirements, **213** cases; **46–57%** demonstrated per VCF version; **333/333** reserved Number/Type rows agree | Requirements read out of the VCF 4.1–4.5 specification text. Untested requirements count against the score, so this is a floor, not a ceiling. |
 | [Curated VCF 4.5 inventory](coverage/vcf45-inventory/README.md) | **104/104** constructs represented; **87** with a validation rule | An authored list of VCF 4.5 constructs mapped to vocabulary terms. 100% of the list, which cannot reveal what the list omits. |
 
 The low percentages in the first row mean "not yet demonstrated by a test", not
-"not representable" — 47 of the 91 VCF 4.5 requirements have no test yet and each
-scores zero. [Why we keep both assessments](coverage/README.md#why-there-are-two-assessments)
-explains how they fail in opposite directions, and neither establishes complete
+"not representable". For VCF 4.5, 51 of 91 requirements have a passing test and 40
+do not — but of those 40, **none** is untested because the vocabulary cannot express
+it. Thirty-seven are simply unwritten: the test plan exists and the fixture does not.
+One is deliberately withheld while a specification defect is resolved upstream, and
+two are single requirements standing for every reserved INFO and FORMAT key. No query
+has ever failed in the expanded profile.
+[What the untested requirements actually are](coverage/methodology/README.md#what-the-untested-requirements-actually-are)
+breaks this down. [Why we keep both assessments](coverage/README.md#why-there-are-two-assessments)
+explains how the two fail in opposite directions, and neither establishes complete
 VCF conformance.
+
+## Things to improve
+
+**A genotype index does not say which alleles it stands for.** A `Number=G` or `Number=LG`
+value item carries only `vcfc:forGenotypeIndex`, a position in the standard genotype ordering.
+Nothing links that position to the allele pair it denotes, so the correspondence between a
+local-allele vector and its global equivalent — `LPL` position 1 meaning genotype 0/2 once
+`LAA=2,4` is applied — cannot be read from the graph. A consumer has to re-implement the
+ordering rule itself.
+
+*How it came up:* writing the local/global equivalence test for the coverage assessment
+(`R83-4.5-local-global-equivalence`). The allele-depth half works, because `Number=LR` and
+`Number=R` items both carry `vcfc:forAllele`, so the two vectors join on the allele resource.
+The genotype half has no equivalent join and is recorded as an untested gap.
+
+*Direction:* give a genotype-indexed item the alleles it stands for, the way an allele-indexed
+item already has `forAllele` — an ordered pair (or list, for non-diploid) of allele resources.
+Local and global genotype vectors would then join on the same alleles, with no ordering
+knowledge in the query.
+
+**Full test coverage is the goal and is not yet reached.** Every requirement in the
+specification-derived assessment is meant to end up with a passing test or an explicit,
+argued reason why it cannot have one. Today 51 of the 91 VCF 4.5 requirements have one, and
+most of the remainder are waiting on someone to write the fixture and query rather than on
+any modelling problem — the breakdown is
+[in the assessment README](coverage/methodology/README.md#what-the-untested-requirements-actually-are).
+Two specific tests are already specified and unwritten, R77 and R88; the largest single piece
+of work is R67 and R68, which between them stand for every reserved INFO and FORMAT key.
+
+**Reference blocks are deliberately untested, pending an upstream fix.** The gVCF tables in VCF
+4.3–4.5 cannot be used as a test oracle as printed: `FORMAT` reads `P` where no such key exists,
+`;` separates a sample sub-field where `:` is required, three `LEN` values contradict the
+inclusive length that `POS=4390, END=4390, LEN=1` establishes, and a variant row carries `MIN_DP`
+and `LEN` keys it cannot use.
+
+*How it came up:* tests for reference blocks (R45) were written against this reviewer's reading
+of those corrections, then withdrawn — the corrections are disputed in
+[samtools/hts-specs#868](https://github.com/samtools/hts-specs/issues/868), and expected answers
+built on one reading would have to be rewritten if the specification settles on another.
+
+*Direction:* register the drafted tests once #868 closes, following whatever the specification
+then says. `<NON_REF>` as an alias of `<*>`, and inferring `LEN` from `END`, are untested for the
+same reason.
 
 ## What is in this repository
 
@@ -148,8 +197,11 @@ committed inputs — edit the inputs, not the output.
 
 ## Releases, citation and contributions
 
-[Version 2.1.0](docs/RELEASE-NOTES-v2.1.0.md) adds structured assembly-contig,
-padding and FORMAT-key representations and documents the coverage methods.
+[Version 2.1.1](docs/RELEASE-NOTES-v2.1.1.md) is a patch release: no vocabulary term
+changes. It records the completed review of the specification-derived coverage
+assessment, the tests that review asked for, and the converter support they needed.
+[Version 2.1.0](docs/RELEASE-NOTES-v2.1.0.md) added structured assembly-contig,
+padding and FORMAT-key representations.
 Users of the former VCF-RDFizer namespace should follow the
 [2.0.0 migration guide](docs/RELEASE-NOTES-v2.0.0.md#migrating-from-v110).
 The [VCF-RDFizer converter](https://github.com/ecrum19/VCF-RDFizer) is a separate

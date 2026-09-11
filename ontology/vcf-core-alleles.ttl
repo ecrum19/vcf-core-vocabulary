@@ -15,7 +15,7 @@
   rdfs:label "VCF Core allele and value-indexing module"@en ;
   dct:description "VCF-specific allele carriers and indexed values for Number=A/R/G/LA/LR/LG/P/M fields."@en ;
   owl:imports <https://w3id.org/vcf-core/vocab> ;
-  owl:versionInfo "2.1.0" .
+  owl:versionInfo "2.1.1" .
 
 vcfc:Allele a owl:Class ;
   rdfs:label "VCF allele"@en ;

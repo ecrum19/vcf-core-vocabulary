@@ -1,0 +1,13 @@
+##fileformat=VCFv4.5
+##source=VCF-Core-synthetic-examples
+##reference=https://example.org/reference.fa
+##contig=<ID=chr19,length=100000>
+##contig=<ID=chr20,length=100000>
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Total read depth">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=PSL,Number=P,Type=String,Description="Phase set list">
+##FORMAT=<ID=PSQ,Number=P,Type=Integer,Description="Phase set list quality">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	SAMPLE1
+chr19	5	.	T	G	.	PASS	DP=100	GT:PSL:PSQ	|0/1:chr19*5*1,.:30,.
+chr20	10	.	A	T,G	.	PASS	DP=100	GT:PSL:PSQ	|1/2|2:chr20*10*1,.,chr19*5*1:40,.,30
+chr20	15	.	G	C	.	PASS	DP=100	GT:PSL:PSQ	/0|1/0:.,chr20*10*1,.:.,40,.

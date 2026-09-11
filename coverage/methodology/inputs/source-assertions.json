@@ -1161,7 +1161,9 @@
      "testGap": "A reciprocal single-mate example exists only in 4.5; PARID, multiple ALT associations and EVENT grouping remain untested."
     },
     {
-     "caseIds": [],
+     "caseIds": [
+      "R79-4.1-adjacency"
+     ],
      "end": 285,
      "id": "4.1:233-285:A09",
      "requirements": [
@@ -1169,7 +1171,7 @@
      ],
      "start": 233,
      "statement": "DPADJ/CNADJ/CICNADJ distinguish adjacency measurements from segment measurements.",
-     "testGap": "No targeted case for this assertion in this VCF version. See the linked requirement testPlan/interpretation."
+     "testGap": "R79-4.1-adjacency now checks DPADJ and CNADJ per sample and per adjacency, as the two worked tables of this version use them. CICNADJ has no worked example in any version and remains untested, as does the segment-scoped DP/CN contrast."
     },
     {
      "caseIds": [],
@@ -2509,7 +2511,9 @@
      "testGap": "No targeted case for this assertion in this VCF version. See the linked requirement testPlan/interpretation."
     },
     {
-     "caseIds": [],
+     "caseIds": [
+      "R79-4.1-adjacency"
+     ],
      "end": 859,
      "id": "4.1:819-859:A02",
      "requirements": [
@@ -2519,7 +2523,7 @@
      ],
      "start": 819,
      "statement": "Per-sample adjacency/read depth and inferred genome copy number remain distinct measurements.",
-     "testGap": "No targeted case for this assertion in this VCF version. See the linked requirement testPlan/interpretation."
+     "testGap": "R79-4.1-adjacency now checks the per-sample adjacency depth and the deconvolved copy number of the two worked tables as distinct measurements. The SAMPLE Genomes/Mixture description pairing under R35 and the genome-level reading of the same passage under R44 remain untested."
     }
    ],
    "disposition": "mapped",
@@ -3866,7 +3870,9 @@
      "testGap": "A reciprocal single-mate example exists only in 4.5; PARID, multiple ALT associations and EVENT grouping remain untested."
     },
     {
-     "caseIds": [],
+     "caseIds": [
+      "R79-4.2-adjacency"
+     ],
      "end": 302,
      "id": "4.2:250-302:A09",
      "requirements": [
@@ -3874,7 +3880,7 @@
      ],
      "start": 250,
      "statement": "DPADJ/CNADJ/CICNADJ distinguish adjacency measurements from segment measurements.",
-     "testGap": "No targeted case for this assertion in this VCF version. See the linked requirement testPlan/interpretation."
+     "testGap": "R79-4.2-adjacency now checks DPADJ and CNADJ per sample and per adjacency, as the two worked tables of this version use them. CICNADJ has no worked example in any version and remains untested, as does the segment-scoped DP/CN contrast."
     },
     {
      "caseIds": [],
@@ -5190,7 +5196,9 @@
      "testGap": "No targeted case for this assertion in this VCF version. See the linked requirement testPlan/interpretation."
     },
     {
-     "caseIds": [],
+     "caseIds": [
+      "R79-4.2-adjacency"
+     ],
      "end": 876,
      "id": "4.2:836-876:A02",
      "requirements": [
@@ -5200,7 +5208,7 @@
      ],
      "start": 836,
      "statement": "Per-sample adjacency/read depth and inferred genome copy number remain distinct measurements.",
-     "testGap": "No targeted case for this assertion in this VCF version. See the linked requirement testPlan/interpretation."
+     "testGap": "R79-4.2-adjacency now checks the per-sample adjacency depth and the deconvolved copy number of the two worked tables as distinct measurements. The SAMPLE Genomes/Mixture description pairing under R35 and the genome-level reading of the same passage under R44 remain untested."
     }
    ],
    "disposition": "mapped",
@@ -5690,7 +5698,9 @@
      "testGap": "No targeted case for this assertion in this VCF version. See the linked requirement testPlan/interpretation."
     },
     {
-     "caseIds": [],
+     "caseIds": [
+      "R79-4.3-adjacency"
+     ],
      "end": 1306,
      "id": "4.3:1262-1306:A02",
      "requirements": [
@@ -5700,7 +5710,7 @@
      ],
      "start": 1262,
      "statement": "Per-sample adjacency/read depth and inferred genome copy number remain distinct measurements.",
-     "testGap": "No targeted case for this assertion in this VCF version. See the linked requirement testPlan/interpretation."
+     "testGap": "R79-4.3-adjacency now checks the per-sample adjacency depth and the deconvolved copy number of the two worked tables as distinct measurements. The SAMPLE Genomes/Mixture description pairing under R35 and the genome-level reading of the same passage under R44 remain untested."
     }
    ],
    "disposition": "mapped",
@@ -5819,7 +5829,7 @@
      ],
      "start": 1428,
      "statement": "The unspecified ALT represents reference evidence against any unobserved alternate allele, with END-based reference intervals.",
-     "testGap": "Reviewer decision (VCF-expert review, 2026-09-10): request a test. The gVCF table is usable as a fixture once its FORMAT 'P' is corrected to 'PL' (no key 'P' exists; the six integer values equal G for three alleles at ploidy two, and GQ=52 is the second-smallest PL value). A case should check END-delimited reference-block intervals and the <*> allele against that corrected table."
+     "testGap": "Reviewer decision (VCF-expert review, 2026-09-10): request a test. The gVCF table is usable as a fixture once its FORMAT 'P' is corrected to 'PL' (no key 'P' exists; the six integer values equal G for three alleles at ploidy two, and GQ=52 is the second-smallest PL value). A case should check END-delimited reference-block intervals and the <*> allele against that corrected table. Left untested for now: the corrections this table needs are disputed upstream in samtools/hts-specs#868, so no oracle is registered until that resolves."
     }
    ],
    "disposition": "mapped",
@@ -7814,7 +7824,9 @@
      "testGap": "A reciprocal single-mate example exists only in 4.5; PARID, multiple ALT associations and EVENT grouping remain untested."
     },
     {
-     "caseIds": [],
+     "caseIds": [
+      "R79-4.3-adjacency"
+     ],
      "end": 671,
      "id": "4.3:601-671:A09",
      "requirements": [
@@ -7822,7 +7834,7 @@
      ],
      "start": 601,
      "statement": "DPADJ/CNADJ/CICNADJ distinguish adjacency measurements from segment measurements.",
-     "testGap": "No targeted case for this assertion in this VCF version. See the linked requirement testPlan/interpretation."
+     "testGap": "R79-4.3-adjacency now checks DPADJ and CNADJ per sample and per adjacency, as the two worked tables of this version use them. CICNADJ has no worked example in any version and remains untested, as does the segment-scoped DP/CN contrast."
     },
     {
      "caseIds": [],
@@ -9563,7 +9575,7 @@
      ],
      "start": 1686,
      "statement": "The unspecified ALT represents reference evidence against any unobserved alternate allele, with END-based reference intervals.",
-     "testGap": "Reviewer decision (VCF-expert review, 2026-09-10): request a test. The gVCF table is usable as a fixture once its FORMAT 'P' is corrected to 'PL' (no key 'P' exists; the six integer values equal G for three alleles at ploidy two, and GQ=52 is the second-smallest PL value). A case should check END-delimited reference-block intervals and the <*> allele against that corrected table."
+     "testGap": "Reviewer decision (VCF-expert review, 2026-09-10): request a test. The gVCF table is usable as a fixture once its FORMAT 'P' is corrected to 'PL' (no key 'P' exists; the six integer values equal G for three alleles at ploidy two, and GQ=52 is the second-smallest PL value). A case should check END-delimited reference-block intervals and the <*> allele against that corrected table. Left untested for now: the corrections this table needs are disputed upstream in samtools/hts-specs#868, so no oracle is registered until that resolves."
     }
    ],
    "disposition": "mapped",
@@ -9622,7 +9634,10 @@
   "4.4:1748-1879": {
    "assertions": [
     {
-     "caseIds": [],
+     "caseIds": [
+      "R31-4.4-multi-allele-units",
+      "R46-4.4-repeat-groups"
+     ],
      "end": 1879,
      "id": "4.4:1748-1879:A01",
      "requirements": [
@@ -9631,10 +9646,12 @@
      ],
      "start": 1748,
      "statement": "RN groups the flattened RUS/RUL/RUC/RB lists by ALT allele, with default RN and inferred RUL when applicable. The figure's CAGCAGCAGTTGTTG is (CAG)3(TTG)2, giving RN=2,1; RUS=CAG,TTG,CA; RUL=3,3,2; RUC=3,2,3; RB=9,6,6.",
-     "testGap": "Reviewer decision (VCF-expert review, 2026-09-10): request a test. The main worked example was verified arithmetically in this review and is usable as an oracle once the prose keys RS/RL/RC are read as RUS/RUL/RUC and the figure exponent is corrected from (CAG)4 to (CAG)3. A case should check the RN partitioning of RUS and RB across both ALT alleles."
+     "testGap": "R46-4.4-repeat-groups and R31-4.4-multi-allele-units now check the RN partitioning of RUS, RUC and RB across both ALT alleles on two loci with different partitions, the worked example's RN=1,3 and the corrected Figure 11 locus's RN=2,1. A defaulted RN, an RUL inferred from RUS, RUB, CIRUC and CIRB remain untested."
     },
     {
-     "caseIds": [],
+     "caseIds": [
+      "R89-4.4-repeat-summary"
+     ],
      "end": 1879,
      "id": "4.4:1748-1879:A02",
      "requirements": [
@@ -9642,7 +9659,7 @@
      ],
      "start": 1748,
      "statement": "CNV:TR retains reference interval, novel-repeat conventions, sample/allele length ratios and correspondence to phased sequence records.",
-     "testGap": "Reviewer decision (VCF-expert review, 2026-09-10): request a test. The summary/non-symbolic correspondence is internally consistent and verifiable: reference (CAG)10 at 101-130, allele 1 (CAG)30 with INFO CN=3, allele 2 (CAG)5(CA)(CAG)4 with INFO CN=29/30, FORMAT CN=(90+29)/30, and the two phased records on the matching haplotypes. A case should check the allelic length ratio and the phase-set link to the non-symbolic records."
+     "testGap": "R89-4.4-repeat-summary now checks the reference SVLEN, both allelic CN ratios, the overall FORMAT CN and the phase set that relates the summary record to the two non-symbolic records. Sequence-level equivalence between the two representations is not asserted and is not tested."
     },
     {
      "caseIds": [],
@@ -9759,7 +9776,9 @@
      "testGap": "The A case tests INFO AF, not FORMAT vectors; no G/R FORMAT oracle exists."
     },
     {
-     "caseIds": [],
+     "caseIds": [
+      "R82-4.4-phase-ordinals"
+     ],
      "end": 197,
      "id": "4.4:186-199:A04",
      "requirements": [
@@ -9767,7 +9786,7 @@
      ],
      "start": 197,
      "statement": "Number=P contains one value per GT allele slot.",
-     "testGap": "No targeted case for this assertion in this VCF version. See the linked requirement testPlan/interpretation."
+     "testGap": ""
     }
    ],
    "disposition": "mapped",
@@ -9897,7 +9916,7 @@
    ],
    "note": "Agent source audit: Assertions explicitly linked; test presence and gaps are listed separately.",
    "reviewQuestions": [],
-   "sourceFingerprint": "8ee2b928945bd3828e7159d9c772a3ee1d52102ee87b461233b40dd0b374a9a3"
+   "sourceFingerprint": "ceabab1da4f3d7044a12df804017b41c23bb523aa19cda3db23ed0e6a04bbe4e"
   },
   "4.4:2000-2008": {
    "assertions": [],
@@ -11546,7 +11565,10 @@
      "testGap": "No targeted case for this assertion in this VCF version. See the linked requirement testPlan/interpretation."
     },
     {
-     "caseIds": [],
+     "caseIds": [
+      "R82-4.4-phase-quality",
+      "R82-4.4-phase-separation"
+     ],
      "end": 639,
      "id": "4.4:445-639:A11",
      "requirements": [
@@ -11555,10 +11577,13 @@
      ],
      "start": 445,
      "statement": "PSL phase names can cross chromosomes, are distinct from PS, and correspond to GT allele slots.",
-     "testGap": "Reviewer decision (VCF-expert review, 2026-09-10): the PSL worked example is excluded as an oracle: its allele indices exceed the ALT lists, its leading phasing indicator contradicts the PSL missing value, and its ploidy is inconsistent between rows. Reviewer decision (VCF-expert review, 2026-09-10): request a test. A case should use the corrected reviewer-authored equivalent recorded in the section note and check that each GT allele slot carries its PSL name, that unphased slots carry the missing value, and that a phase-set name shared across CHROM links the records."
+     "testGap": "R82-4.4-phase-quality checks that each GT allele value keeps its own phase-set name, that a name is reused across chromosomes (chr19*5*1 appears again at chr20:10) and that an unphased allele carries none; R82-4.4-phase-separation checks that PS and PSL may share a record but never a sample-genotype, one sample using each mechanism to describe the same haplotype pair. Both use reviewer-authored records: the printed PSL table's allele indices exceed the ALT lists, its omitted leading indicator contradicts its own PSL, and its two chr20 rows disagree on ploidy, and the PS/PSL rule is stated without a worked example."
     },
     {
-     "caseIds": [],
+     "caseIds": [
+      "R82-4.4-phase-ordinals",
+      "R82-4.4-phase-quality"
+     ],
      "end": 639,
      "id": "4.4:445-639:A12",
      "requirements": [
@@ -11566,7 +11591,7 @@
      ],
      "start": 445,
      "statement": "PSO orders traversal of derivative chromosomes and PSQ retains per-phase-set quality/missingness.",
-     "testGap": "Reviewer decision (VCF-expert review, 2026-09-10): request a test. The PSO example is internally consistent and supplies the oracle: chr1:10 <DUP> allele 3 -> PSL chr1*10*3 / PSO 3; chr1:20 allele 3 -> chr1*10*1 / PSO 4 and allele 4 -> chr1*10*3 / PSO 1; chr1:30 allele 3 -> chr1*10*1 / PSO 2 and allele 4 -> chr1*10*3 / PSO 5. A case must recover, per sample-allele, the PSL name and PSO ordinal and reconstruct the single total traversal order 1..5."
+     "testGap": "R82-4.4-phase-ordinals checks the PSO traversal order and R82-4.4-phase-quality the per-allele PSQ values, including the missing ones. The PSQ example is reviewer-authored; the specification defines the field without a worked example."
     },
     {
      "caseIds": [],
@@ -12012,7 +12037,10 @@
      "testGap": "No targeted case for this assertion in this VCF version. See the linked requirement testPlan/interpretation."
     },
     {
-     "caseIds": [],
+     "caseIds": [
+      "R31-4.4-multi-allele-units",
+      "R46-4.4-repeat-groups"
+     ],
      "end": 980,
      "id": "4.4:666-980:A14",
      "requirements": [
@@ -12021,7 +12049,7 @@
      ],
      "start": 666,
      "statement": "RN counts repeat sequences per ALT; the flattened RUS/RUL/RUC/RB lists and missing-RN defaults preserve their grouping. The prose names RS, RL and RC are typos for RUS, RUL and RUC; no key of those names is declared in any version.",
-     "testGap": "Reviewer decision (VCF-expert review, 2026-09-10): request a test. A case should check that the flattened RUS/RUL/RUC/RB lists are partitioned back to their ALT alleles by RN. Substituting RUS/RUL/RUC for the prose RS/RL/RC makes the section's examples usable as an oracle; the corrected overview list is RN, RUS, RUL, RUC, RB and RUB."
+     "testGap": "R46-4.4-repeat-groups now checks that RN partitions the flattened RUS/RUL/RUC/RB lists back to their ALT alleles. RUB's separate partitioning by RUC, recorded under R88, remains untested."
     },
     {
      "caseIds": [],
@@ -13194,7 +13222,9 @@
   "4.5:1468-1520": {
    "assertions": [
     {
-     "caseIds": [],
+     "caseIds": [
+      "R92-4.5-contig-insertions"
+     ],
      "end": 1520,
      "id": "4.5:1468-1520:A01",
      "requirements": [
@@ -13203,7 +13233,7 @@
      ],
      "start": 1468,
      "statement": "Assembly-contig references retain complete, partial and circular insertion bounds and adjacency direction.",
-     "testGap": "Reviewer decision (VCF-expert review, 2026-09-10): MATEID in this subsection is excluded as an oracle: two values are self-references, one names the undefined bnd_C, and the remaining ones name a record that is not the mate of the same adjacency, because the contig-side breakends have no records. EVENT is the correct grouping mechanism here, and the one determinable correction is bnd_Y's MATEID=bnd_X. Reviewer decision (VCF-expert review, 2026-09-10): request a test. Test reciprocal-mate reconstruction (R32) on the six-breakend Figure 1 example, and test R92 on insertion bounds and adjacency direction only."
+     "testGap": "R92-4.5-contig-insertions now checks the complete, partial and circular assembly-contig insertions of this passage: the inserted boundary, its direction from the ALT bracket notation and the EVENT grouping, with MATEID registered only for the circular pair whose mates have records. The 4.1-4.4 equivalents have no case, and the complete-insertion shorthand row stays excluded as an oracle."
     }
    ],
    "disposition": "mapped",
@@ -13685,7 +13715,9 @@
      "testGap": "The A case tests INFO AF, not FORMAT vectors; no G/R FORMAT oracle exists."
     },
     {
-     "caseIds": [],
+     "caseIds": [
+      "R82-4.5-phase-ordinals"
+     ],
      "end": 198,
      "id": "4.5:184-248:A04",
      "requirements": [
@@ -13693,7 +13725,7 @@
      ],
      "start": 198,
      "statement": "Number=P contains one value per GT allele slot.",
-     "testGap": "No targeted case for this assertion in this VCF version. See the linked requirement testPlan/interpretation."
+     "testGap": ""
     },
     {
      "caseIds": [
@@ -13710,7 +13742,9 @@
      "testGap": "LAA index mapping is tested; equivalence of LA/LR/LG value vectors is not."
     },
     {
-     "caseIds": [],
+     "caseIds": [
+      "R84-4.5-modification-slots"
+     ],
      "end": 202,
      "id": "4.5:184-248:A06",
      "requirements": [
@@ -13719,7 +13753,7 @@
      ],
      "start": 202,
      "statement": "Number=M uses GT order, aggregated unphased duplicates, relevant bases on both strands, U/T equivalence and no slots for missing/symbolic alleles.",
-     "testGap": "Reviewer decision (VCF-expert review, 2026-09-10): request a test. The Number=M examples were manually enumerated in this review and are internally consistent, so they can serve directly as the oracle: 0/1 at C>A gives one value; 0/1 at C>CTAG gives three; 0|0 at C gives two per field; and the octoploid /3|1/0|4|0/0/3/1 gives five, aggregating unphased duplicates at first occurrence and counting relevant bases on both strands. A case should check GT-ordered allele aggregation and per-base ordering, including the missing value slot."
+     "testGap": "R84-4.5-modification-slots now checks all four Number=M examples: the GT order of the values, the aggregation of unphased duplicates at their first occurrence, the relevant bases on both strands, and the absence of values for missing and symbolic alleles. U/T equivalence has no worked example and remains untested."
     },
     {
      "caseIds": [],
@@ -13752,7 +13786,7 @@
      ],
      "start": 1846,
      "statement": "The unspecified ALT represents reference evidence against any unobserved alternate allele, with END-based reference intervals.",
-     "testGap": "No targeted case for this assertion in this VCF version. See the linked requirement testPlan/interpretation."
+     "testGap": "No targeted case for this assertion in this VCF version. See the linked requirement testPlan/interpretation. Left untested for now: the corrections this table needs are disputed upstream in samtools/hts-specs#868, so no oracle is registered until that resolves."
     },
     {
      "caseIds": [
@@ -13766,7 +13800,7 @@
      ],
      "start": 1846,
      "statement": "NON_REF aliases <*>; missing LEN falls back to END; explicitly supplied LEN defines sample-specific blocks.",
-     "testGap": "Reviewer decision (VCF-expert review, 2026-09-10): LEN is the inclusive block length, so END = POS + LEN - 1; the printed table uses ';' instead of ':' before LEN and three of its LEN values are off by one, and its variant row carries inapplicable MIN_DP and LEN keys. The registered gvcf-v4.5.vcf fixture and queries/r30-decode.rq already implement the correct inclusive relation and are confirmed by this review. The remaining gap - <NON_REF> alias equivalence and the INFO END fallback for a missing LEN - is unchanged and still requires a test."
+     "testGap": "Reviewer decision (VCF-expert review, 2026-09-10): LEN is the inclusive block length, so END = POS + LEN - 1; the printed table uses ';' instead of ':' before LEN and three of its LEN values are off by one, and its variant row carries inapplicable MIN_DP and LEN keys. The registered gvcf-v4.5.vcf fixture and queries/r30-decode.rq already implement the correct inclusive relation and are confirmed by this review. The remaining gap - <NON_REF> alias equivalence and the INFO END fallback for a missing LEN - is unchanged and still requires a test. Left untested for now: the corrections this table needs are disputed upstream in samtools/hts-specs#868, so no oracle is registered until that resolves."
     },
     {
      "caseIds": [],
@@ -13851,7 +13885,9 @@
    "assertions": [
     {
      "caseIds": [
-      "R31-4.5-repeat-units"
+      "R31-4.5-multi-allele-units",
+      "R31-4.5-repeat-units",
+      "R46-4.5-repeat-groups"
      ],
      "end": 2047,
      "id": "4.5:1917-2047:A01",
@@ -13861,10 +13897,12 @@
      ],
      "start": 1917,
      "statement": "RN groups the flattened RUS/RUL/RUC/RB lists by ALT allele, with default RN and inferred RUL when applicable. The figure's CAGCAGCAGTTGTTG is (CAG)3(TTG)2, giving RN=2,1; RUS=CAG,TTG,CA; RUL=3,3,2; RUC=3,2,3; RB=9,6,6.",
-     "testGap": "Reviewer decision (VCF-expert review, 2026-09-10): request a test. The main worked example was verified arithmetically in this review and is usable as an oracle once the prose keys RS/RL/RC are read as RUS/RUL/RUC and the figure exponent is corrected from (CAG)4 to (CAG)3. A case should check the RN partitioning of RUS and RB across both ALT alleles."
+     "testGap": "R46-4.5-repeat-groups and R31-4.5-multi-allele-units now check the RN partitioning of RUS, RUC and RB across both ALT alleles on two loci with different partitions, the worked example's RN=1,3 and the corrected Figure 11 locus's RN=2,1. A defaulted RN, an RUL inferred from RUS, RUB, CIRUC and CIRB remain untested."
     },
     {
-     "caseIds": [],
+     "caseIds": [
+      "R89-4.5-repeat-summary"
+     ],
      "end": 2047,
      "id": "4.5:1917-2047:A02",
      "requirements": [
@@ -13872,7 +13910,7 @@
      ],
      "start": 1917,
      "statement": "CNV:TR retains reference interval, novel-repeat conventions, sample/allele length ratios and correspondence to phased sequence records.",
-     "testGap": "Reviewer decision (VCF-expert review, 2026-09-10): request a test. The summary/non-symbolic correspondence is internally consistent and verifiable: reference (CAG)10 at 101-130, allele 1 (CAG)30 with INFO CN=3, allele 2 (CAG)5(CA)(CAG)4 with INFO CN=29/30, FORMAT CN=(90+29)/30, and the two phased records on the matching haplotypes. A case should check the allelic length ratio and the phase-set link to the non-symbolic records."
+     "testGap": "R89-4.5-repeat-summary now checks the reference SVLEN, both allelic CN ratios, the overall FORMAT CN and the phase set that relates the summary record to the two non-symbolic records. Sequence-level equivalence between the two representations is not asserted and is not tested."
     },
     {
      "caseIds": [],
@@ -14067,7 +14105,7 @@
    ],
    "note": "Agent source audit: Assertions explicitly linked; test presence and gaps are listed separately.",
    "reviewQuestions": [],
-   "sourceFingerprint": "690d9dee4ea5ab49ba3dc61cfcf1f31ce281df3d880c41faa1a072648ea4e393"
+   "sourceFingerprint": "7ae8c4b97da3bdbef4cf001ef269a818aaf04686102e92e67b39e8ba3cf87922"
   },
   "4.5:2492-2503": {
    "assertions": [],
@@ -14172,7 +14210,10 @@
   "4.5:2726-2739": {
    "assertions": [
     {
-     "caseIds": [],
+     "caseIds": [
+      "R84-4.5-modification-slots",
+      "R85-4.5-modification-keys"
+     ],
      "end": 2739,
      "id": "4.5:2726-2739:A01",
      "requirements": [
@@ -14183,10 +14224,12 @@
      ],
      "start": 2726,
      "statement": "Added base modification support (FORMAT M5mC, M5hmC, M6mA, etc.).",
-     "testGap": "Historical change mapped to current-version requirements; no dedicated change-regression case."
+     "testGap": "R84-4.5-modification-slots and R85-4.5-modification-keys exercise M5mC, M5hmC and an N-base alias. M6mA and the remaining alias keys are not exercised."
     },
     {
-     "caseIds": [],
+     "caseIds": [
+      "R85-4.5-modification-keys"
+     ],
      "end": 2739,
      "id": "4.5:2726-2739:A02",
      "requirements": [
@@ -14195,7 +14238,7 @@
      ],
      "start": 2726,
      "statement": "Reserved all FORMAT keys of the form M[0-9]+ as base modification fields.",
-     "testGap": "Changelog omits the base suffix in the numeric-key pattern."
+     "testGap": "R85-4.5-modification-keys now checks a numeric ChEBI key, its alias form and a numerically valid identifier no reader is expected to recognise. The changelog's own 'M[0-9]+' omits the trailing base letter that the main text requires."
     },
     {
      "caseIds": [],
@@ -15791,7 +15834,10 @@
      "testGap": ""
     },
     {
-     "caseIds": [],
+     "caseIds": [
+      "R82-4.5-phase-quality",
+      "R82-4.5-phase-separation"
+     ],
      "end": 812,
      "id": "4.5:497-812:A11",
      "requirements": [
@@ -15800,10 +15846,13 @@
      ],
      "start": 497,
      "statement": "PSL phase names can cross chromosomes, are distinct from PS, and correspond to GT allele slots.",
-     "testGap": "Reviewer decision (VCF-expert review, 2026-09-10): the PSL worked example is excluded as an oracle: its allele indices exceed the ALT lists, its leading phasing indicator contradicts the PSL missing value, and its ploidy is inconsistent between rows. Reviewer decision (VCF-expert review, 2026-09-10): request a test. A case should use the corrected reviewer-authored equivalent recorded in the section note and check that each GT allele slot carries its PSL name, that unphased slots carry the missing value, and that a phase-set name shared across CHROM links the records."
+     "testGap": "R82-4.5-phase-quality checks that each GT allele value keeps its own phase-set name, that a name is reused across chromosomes (chr19*5*1 appears again at chr20:10) and that an unphased allele carries none; R82-4.5-phase-separation checks that PS and PSL may share a record but never a sample-genotype, one sample using each mechanism to describe the same haplotype pair. Both use reviewer-authored records: the printed PSL table's allele indices exceed the ALT lists, its omitted leading indicator contradicts its own PSL, and its two chr20 rows disagree on ploidy, and the PS/PSL rule is stated without a worked example."
     },
     {
-     "caseIds": [],
+     "caseIds": [
+      "R82-4.5-phase-ordinals",
+      "R82-4.5-phase-quality"
+     ],
      "end": 812,
      "id": "4.5:497-812:A12",
      "requirements": [
@@ -15811,7 +15860,7 @@
      ],
      "start": 497,
      "statement": "PSO orders traversal of derivative chromosomes and PSQ retains per-phase-set quality/missingness.",
-     "testGap": "Reviewer decision (VCF-expert review, 2026-09-10): request a test. The PSO example is internally consistent and supplies the oracle: chr1:10 <DUP> allele 3 -> PSL chr1*10*3 / PSO 3; chr1:20 allele 3 -> chr1*10*1 / PSO 4 and allele 4 -> chr1*10*3 / PSO 1; chr1:30 allele 3 -> chr1*10*1 / PSO 2 and allele 4 -> chr1*10*3 / PSO 5. A case must recover, per sample-allele, the PSL name and PSO ordinal and reconstruct the single total traversal order 1..5."
+     "testGap": "R82-4.5-phase-ordinals checks the PSO traversal order and R82-4.5-phase-quality the per-allele PSQ values, including the missing ones. The PSQ example is reviewer-authored; the specification defines the field without a worked example."
     },
     {
      "caseIds": [],
@@ -15827,7 +15876,9 @@
     },
     {
      "caseIds": [
-      "R27-4.5-local-alleles"
+      "R27-4.5-local-allele-map",
+      "R27-4.5-local-alleles",
+      "R83-4.5-local-global-equivalence"
      ],
      "end": 812,
      "id": "4.5:497-812:A14",
@@ -15837,10 +15888,12 @@
      ],
      "start": 497,
      "statement": "LAA selects local ALT indices; missing LAA can mean the empty REF-only set when local fields are populated.",
-     "testGap": "Reviewer correction (2026-09-10): the registered case uses LAA=1,2 on a two-ALT record, not LAA=2,4 as this gap previously stated, so the local-to-global mapping it demonstrates is the identity and cannot distinguish a correct implementation from one that ignores LAA. Request a stronger fixture with a non-identity local set (for example ALT=A,C,T,<*> with LAA=2,4, as in the specification's own equivalence table). The REF-only empty LAA set and full local/global equivalence remain untested."
+     "testGap": "R27-4.5-local-allele-map adds the non-identity local set of the equivalence table (ALT=A,C,T,<*> with LAA=2,4, so local position 1 is global allele 2) and the REF-only row with an empty LAA. Full local/global equivalence against the parallel AD/PL rows remains untested."
     },
     {
-     "caseIds": [],
+     "caseIds": [
+      "R83-4.5-local-global-equivalence"
+     ],
      "end": 812,
      "id": "4.5:497-812:A15",
      "requirements": [
@@ -15848,10 +15901,11 @@
      ],
      "start": 497,
      "statement": "Local LA/LR/LG vectors map to global vectors; GQ keeps its meaning.",
-     "testGap": "No targeted case for this assertion in this VCF version. See the linked requirement testPlan/interpretation."
+     "testGap": "R83-4.5-local-global-equivalence checks the LR-to-R mapping on all four sites of the equivalence table, including the empty-LAA REF-only site. The LG-to-G mapping is not checked: both LPL and PL expose only a positional genotype index, and nothing in the graph relates that index to the allele pair it stands for. GQ's meaning under local alleles is not exercised."
     },
     {
      "caseIds": [
+      "R29-4.5-modification-depths",
       "R29-4.5-modifications"
      ],
      "end": 812,
@@ -15861,10 +15915,13 @@
      ],
      "start": 497,
      "statement": "M/DPM/ADM retain modification fractions and total/modified read depths per sample.",
-     "testGap": "Reviewer correction (2026-09-10): the registered case checks the modification fraction and the total detecting depth (DPM) only; the modified-read depth (ADM) is present in the fixture but not queried, so DPM and ADM are not shown to be distinguishable. Request a case that returns both depths separately."
+     "testGap": ""
     },
     {
-     "caseIds": [],
+     "caseIds": [
+      "R84-4.5-modification-slots",
+      "R85-4.5-modification-keys"
+     ],
      "end": 812,
      "id": "4.5:497-812:A17",
      "requirements": [
@@ -15874,7 +15931,7 @@
      ],
      "start": 497,
      "statement": "Numeric modification keys, aliases, strands and value-slot aggregation retain their specified identity.",
-     "testGap": "No targeted case for this assertion in this VCF version. See the linked requirement testPlan/interpretation."
+     "testGap": "R84-4.5-modification-slots checks the value-slot aggregation and the strands; R85-4.5-modification-keys checks that an alias key and its numeric ChEBI form denote one modification, that M, DPM and ADM give it three different quantities, that an unrecognised numeric identifier is still carried and that an N key reports both strands. No specification record combines alias and numeric keys, so those records are reviewer-authored."
     },
     {
      "caseIds": [],
@@ -15899,7 +15956,7 @@
      ],
      "start": 497,
      "statement": "Sample LEN defines a reference block, with END fallback and implicitly covered sample positions.",
-     "testGap": "Direct LEN-derived endpoints are tested; END fallback, NON_REF alias and implicit later-position constraints are not."
+     "testGap": "Direct LEN-derived endpoints are tested; END fallback, NON_REF alias and implicit later-position constraints are not. Left untested for now: the corrections this table needs are disputed upstream in samtools/hts-specs#868, so no oracle is registered until that resolves."
     },
     {
      "caseIds": [],
@@ -16864,7 +16921,9 @@
     },
     {
      "caseIds": [
-      "R31-4.5-repeat-units"
+      "R31-4.5-multi-allele-units",
+      "R31-4.5-repeat-units",
+      "R46-4.5-repeat-groups"
      ],
      "end": 1141,
      "id": "4.5:841-1141:A14",
@@ -16874,7 +16933,7 @@
      ],
      "start": 841,
      "statement": "RN counts repeat sequences per ALT; the flattened RUS/RUL/RUC/RB lists and missing-RN defaults preserve their grouping. The prose names RS, RL and RC are typos for RUS, RUL and RUC; no key of those names is declared in any version.",
-     "testGap": "Reviewer decision (VCF-expert review, 2026-09-10): request a test. A case should check that the flattened RUS/RUL/RUC/RB lists are partitioned back to their ALT alleles by RN. Substituting RUS/RUL/RUC for the prose RS/RL/RC makes the section's examples usable as an oracle; the corrected overview list is RN, RUS, RUL, RUC, RB and RUB."
+     "testGap": "R46-4.5-repeat-groups now checks that RN partitions the flattened RUS/RUL/RUC/RB lists back to their ALT alleles. RUB's separate partitioning by RUC, recorded under R88, remains untested."
     },
     {
      "caseIds": [],

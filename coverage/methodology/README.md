@@ -25,15 +25,44 @@ Three rules make the number conservative rather than flattering:
 - **Expected answers are authored from the specification, never copied from query
   output.** Otherwise the test would only prove the code agrees with itself.
 - **Untested requirements count against the score.** They sit in the denominator
-  as `unassessed`. This is why the percentages are in the 40s rather than the 90s:
-  47 of the 91 VCF 4.5 requirements have no test yet, and each scores zero.
+  as `unassessed`. This is why the percentages sit around a half rather than in
+  the 90s: 40 of the 91 VCF 4.5 requirements have no test yet, and each scores zero.
 - **Every passing query must also fail on purpose.** It is re-run against an
   empty graph and against a graph with the relevant predicate deleted. If it
   still passes, it was not really reading the data, and it does not count.
 
 So a low percentage here means "we have not demonstrated this yet", not "the
 vocabulary cannot do this". The two are easy to confuse and we keep them apart
-deliberately. For how this compares with the repository's other assessment, see
+deliberately.
+
+### What the untested requirements actually are
+
+For VCF 4.5, 51 of the 91 requirements have a passing test and **40 do not**. It is worth
+being precise about why, because the honest answer is not flattering in the way people
+usually assume:
+
+| Why a requirement has no test | Count |
+| --- | ---: |
+| A test plan is written and nobody has built the fixture and query yet | 37 |
+| Deliberately withdrawn: the specification text it needs is disputed upstream (R45, [hts-specs#868](https://github.com/samtools/hts-specs/issues/868)) | 1 |
+| One requirement standing for hundreds of separate keys — R67 and R68 cover *every* reserved INFO and FORMAT key, 396 authored assertions between them | 2 |
+| The vocabulary cannot represent it | **0** |
+
+**The gap is unwritten work, not a limit of the vocabulary.** Nothing sits in the untested
+column because the model could not express it. Two facts support that reading: no query
+has ever failed in the expanded profile — all 45 failing witnesses are condensed-profile
+structure queries, which is a deliberate storage trade-off described below — and every test
+added so far passed once its expected answer was correct.
+
+That said, the specification does make some rules hard to test, and that is a real effect,
+just a smaller one. It shows up *inside* requirements that are otherwise tested, as gaps
+recorded against them: the specification states a rule and prints no record exercising it.
+`PSQ`, the `PS`-versus-`PSL` exclusion and the alias-to-ChEBI correspondence are all in that
+position, and the cases covering them use records the reviewer had to author, labelled as
+such. `<NON_REF>` aliasing, `U`/`T` equivalence and `CICNADJ` remain untested for exactly
+this reason — there is nothing printed to check an answer against. Where no defensible
+oracle exists at all, the requirement is recorded as an accepted limitation rather than
+quietly skipped: R80 (GLE) and R94 (BDP/BCN) in the older versions. For how this compares with the repository's other assessment, see
 [why there are two](../README.md#why-there-are-two-assessments).
 
 ### The two axes
@@ -50,22 +79,23 @@ there, but only inside a string you have to take apart yourself.
 
 ## Review status
 
-Source interpretations, test adequacy and exclusions have been reviewed once
-against the pinned specifications; see [REVIEW-REPORT.md](REVIEW-REPORT.md) for
-the findings, the resolved source questions and the limitations accepted rather
-than fixed. The acceptance entries in [review.json](inputs/review.json) name that
-reviewing pass and **still need a human countersignature**: replace the `reviewer`
-field with the accepting person's name (`review.json` is excluded from the
-provenance hashes, so this does not invalidate any fingerprint).
+**Reviewed and accepted by Elias Crum on 11 September 2026.** Every requirement and
+the source audit carry a recorded decision in [review.json](inputs/review.json), and
+`methodology:check --require-reviewed` exits 0. [REVIEW-REPORT.md](REVIEW-REPORT.md)
+holds the findings, the resolved source questions, the limitations accepted rather
+than fixed, and the reviewer reference for the files and fields.
+
+Two agent passes prepared the material and the reviewer signed each item against its
+evidence. The 83 requirements not revisited in that signing session keep the earlier
+pass's rationale and still name it in their `reviewer` field; the twelve that gained
+or lost evidence were re-decided individually.
 
 ## Which document do you want?
 
 | Document | Use it for |
 | --- | --- |
 | This README | What is measured, how, the current results, and the limits. Start here. |
-| [REVIEWER-GUIDE.md](REVIEWER-GUIDE.md) | Reviewing the assessment: what every file and field means, which to edit, how acceptance is recorded. |
-| [REVIEW-CHECKLIST.md](REVIEW-CHECKLIST.md) | The reviewer's task tracker. |
-| [REVIEW-REPORT.md](REVIEW-REPORT.md) | Findings and decisions from the completed review pass. |
+| [REVIEW-REPORT.md](REVIEW-REPORT.md) | The review record: what was found, what changed, what is still open, and what every file and field means. |
 
 ## Justification and scope
 
@@ -139,23 +169,23 @@ the scores.** Assertion counts repeat information across sections and versions;
 they are an audit workload inventory, not another coverage denominator.
 
 <!-- results:start -->
-**94 registered requirements; 189 cases; 756 query slots** (two profiles × two axes).
+**94 registered requirements; 210 cases; 840 query slots** (two profiles × two axes).
 
 | VCF | Requirements | Expanded: preservation / structure | Condensed: preservation / structure |
 | --- | ---: | --- | --- |
-| 4.1 | 69 | 31 (44.9%) / 31 (44.9%) | 31 (44.9%) / 26 (37.7%) |
-| 4.2 | 72 | 33 (45.8%) / 33 (45.8%) | 33 (45.8%) / 28 (38.9%) |
-| 4.3 | 74 | 34 (45.9%) / 34 (45.9%) | 34 (45.9%) / 29 (39.2%) |
-| 4.4 | 83 | 34 (41.0%) / 34 (41.0%) | 34 (41.0%) / 29 (34.9%) |
-| 4.5 | 91 | 44 (48.4%) / 44 (48.4%) | 44 (48.4%) / 35 (38.5%) |
+| 4.1 | 69 | 32 (46.4%) / 32 (46.4%) | 32 (46.4%) / 26 (37.7%) |
+| 4.2 | 72 | 34 (47.2%) / 34 (47.2%) | 34 (47.2%) / 28 (38.9%) |
+| 4.3 | 74 | 35 (47.3%) / 35 (47.3%) | 35 (47.3%) / 29 (39.2%) |
+| 4.4 | 83 | 38 (45.8%) / 38 (45.8%) | 38 (45.8%) / 31 (37.3%) |
+| 4.5 | 91 | 51 (56.0%) / 51 (56.0%) | 51 (56.0%) / 37 (40.7%) |
 
 **Reserved declarations:** 333/333 explicit source rows match RDF Number/Type; 0 missing, 0 different.
 **Human review:** 0 pending items; source completeness accepted.
 
 **Source audit:** 344 sections; 1134 authored assertion entries; 0 sections flagged `needs-review`.
-**Assertion test inventory:** 146 with targeted cases, 135 with partial test evidence, 853 without a targeted case. These are test-presence categories, not passing-coverage scores.
+**Assertion test inventory:** 149 with targeted cases, 154 with partial test evidence, 831 without a targeted case. These are test-presence categories, not passing-coverage scores.
 
-For VCF 4.5, 9 condensed structural witnesses fail; 47 requirements lack tests.
+For VCF 4.5, 14 condensed structural witnesses fail; 40 requirements lack tests.
 <!-- results:end -->
 
 The source audit added R51–R94 after identifying omitted capabilities. Scores
@@ -163,7 +193,12 @@ therefore use a larger register than the earlier 50-requirement assessment.
 Added cases cover FILTER declarations and record-to-definition links, FORMAT
 attributes, ALT declarations, contig metadata, pedigree roles/URLs, sites-only
 files, cardinality/types, escaped strings, SAMPLE/META metadata and sample FT
-filter states/codes. Missing
+filter states/codes. The review pass then asked for nine more, all now registered:
+adjacency depth and copy number (R79), phase-set ordinals (R82), the RN
+partitioning of flattened repeat lists (R31/R46), tandem-repeat length ratios
+(R89), reference blocks and their lengths (R45), assembly-contig insertions (R92),
+base-modification value slots and key families (R84/R85), a non-identity local
+allele set (R27) and the two modification depths separately (R29). Missing
 cases remain explicit; adding a requirement never fabricates a passing outcome.
 
 Reserved declaration agreement checks explicit Number/Type rows only. It does
@@ -188,9 +223,10 @@ same key in one source (4.3 DP and END, 4.4/4.5 END); the duplicates agree.
 zero; the declaration is reproduced faithfully and is still inconsistent with the
 field's stated meaning.
 
-**What the condensed structure column measures.** All 29 failing witnesses are
-condensed-profile structure queries over per-sample FORMAT data (R18–R21 in every
-version, plus R27–R30 in 4.5, and R60). The condensed profile deliberately stores
+**What the condensed structure column measures.** All 45 failing witnesses are
+condensed-profile structure queries over per-sample FORMAT data (R18–R21 and R60 in
+every version; R79 in 4.1–4.3; R82 and R89 in 4.4 and 4.5; and R27–R30, R83, R84 and
+R85 in 4.5). The condensed profile deliberately stores
 one tab-separated `vcfc:encodedValues` literal per record and FORMAT key, aligned
 to the sample set, instead of materialising per-sample nodes; the structure axis
 forbids parsing compound literals, so those queries cannot succeed by construction.

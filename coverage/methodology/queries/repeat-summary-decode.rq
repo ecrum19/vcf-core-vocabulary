@@ -1,0 +1,19 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+# Preservation only: explicitly decode the documented VCF text encoding.
+SELECT ?id ?allele ?svlen ?copies ?total ?phaseSet WHERE {
+  ?file vcfc:hasRecord ?record ; vcfc:hasSampleSet/vcfc:hasSample ?s .
+  ?record vcfc:recordId ?id ; vcfc:hasCall/vcfc:hasCallMatrix ?matrix .
+  ?s vcfc:sampleIndex ?sampleIndex .
+  BIND(CONCAT("^(?:[^\\t]*\\t){", STR(?sampleIndex - 1), "}([^\\t]*).*$") AS ?column)
+  ?matrix vcfc:hasFormatValueVector ?phaseVector .
+  ?phaseVector vcfc:declaredBy/vcfc:fieldId "PS" ; vcfc:encodedValues ?packedPhase .
+  BIND(REPLACE(?packedPhase, ?column, "$1") AS ?phaseSet)
+  OPTIONAL {
+    ?matrix vcfc:hasFormatValueVector ?copyVector .
+    ?copyVector vcfc:declaredBy/vcfc:fieldId "CN" ; vcfc:encodedValues ?packedTotal .
+  }
+  # Decode after the optional join: records without a FORMAT CN vector must leave
+  # the overall copy number unbound rather than reporting a value of their own.
+  BIND(REPLACE(?packedTotal, ?column, "$1") AS ?total)
+  OPTIONAL { ?record vcfc:hasAltAllele ?a . ?a vcfc:alleleIndex ?allele ; vcfc:svLength ?svlen ; vcfc:copyNumber ?copies }
+} ORDER BY ?id ?allele

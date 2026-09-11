@@ -277,6 +277,23 @@ class MeasurementTests(unittest.TestCase):
             with patch.object(assess, "HERE", folder), patch.object(assess, "ROOT", folder), patch.object(assess, "evaluate", return_value={"summary.json": summary}), patch.object(sys, "argv", ["assess.py", "check", "--require-reviewed"]), contextlib.redirect_stdout(io.StringIO()):
                 self.assertEqual(assess.main(), 2)
 
+    def test_a_release_bump_does_not_reopen_recorded_reviews(self):
+        """Stamping a new release version must not invalidate a human decision."""
+        with tempfile.TemporaryDirectory() as tmp:
+            folder = Path(tmp)
+            (folder / "ontology").mkdir()
+            module = folder / "ontology/module.ttl"
+            module.write_text('<x> owl:versionInfo "1.0.0" ;\n'
+                              "  owl:versionIRI <https://example.org/vocab/1.0.0> ;\n"
+                              '  rdfs:label "term"@en .\n')
+            with patch.object(assess, "HERE", folder), patch.object(assess, "ROOT", folder):
+                before = assess.fingerprint(assess.input_hashes())
+                module.write_text(module.read_text().replace("1.0.0", "2.0.0"))
+                self.assertEqual(assess.fingerprint(assess.input_hashes()), before)
+                # Anything else in the same file still invalidates the review.
+                module.write_text(module.read_text().replace('"term"', '"renamed"'))
+                self.assertNotEqual(assess.fingerprint(assess.input_hashes()), before)
+
     def test_current_summary_keeps_untested_requirements_in_denominator(self):
         summary = json.loads((HERE / "generated/summary.json").read_text())
         register = json.loads((HERE / "inputs/requirements.json").read_text())

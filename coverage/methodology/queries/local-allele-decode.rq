@@ -1,0 +1,14 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+# Preservation only: explicitly decode the documented VCF text encoding.
+SELECT ?pos ?locals ?depths WHERE {
+  ?file vcfc:hasRecord ?record ; vcfc:hasSampleSet/vcfc:hasSample ?s .
+  ?record vcfc:pos ?pos ; vcfc:hasCall/vcfc:hasCallMatrix ?matrix .
+  ?s vcfc:sampleIndex ?sampleIndex .
+  BIND(CONCAT("^(?:[^\\t]*\\t){", STR(?sampleIndex - 1), "}([^\\t]*).*$") AS ?column)
+  ?matrix vcfc:hasFormatValueVector ?localVector .
+  ?localVector vcfc:declaredBy/vcfc:fieldId "LAA" ; vcfc:encodedValues ?packedLocals .
+  BIND(REPLACE(?packedLocals, ?column, "$1") AS ?locals)
+  ?matrix vcfc:hasFormatValueVector ?depthVector .
+  ?depthVector vcfc:declaredBy/vcfc:fieldId "LAD" ; vcfc:encodedValues ?packedDepths .
+  BIND(REPLACE(?packedDepths, ?column, "$1") AS ?depths)
+}

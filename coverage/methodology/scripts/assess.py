@@ -81,6 +81,34 @@ def run_query(graph, query, expected, axis):
             "emptyGraphRejected": True, "predicateDeletionRejected": sensitive}
 
 
+def evidence(path):
+    """Hash what a file asserts, not the release it was stamped with.
+
+    A version bump rewrites owl:versionInfo and owl:versionIRI in every ontology
+    module. That changes no term, no fixture and no expected answer, so it must
+    not re-open a recorded review. Only the stamped value is blanked; the triple
+    stays, and every other byte of the file still counts. The VCF specification
+    version a registry describes is a different property and is untouched.
+    """
+    data = path.read_bytes()
+    if path.suffix != ".ttl":
+        return data
+    data = re.sub(rb'owl:versionInfo\s+"[^"]*"', b'owl:versionInfo ""', data)
+    return re.sub(rb"owl:versionIRI\s+<[^>]*>", b"owl:versionIRI <>", data)
+
+
+def input_hashes():
+    """Conservative provenance: changing any normative module or converter helper
+    invalidates every semantic review. Generated outputs never hash themselves."""
+    paths = set(HERE.glob("sources/*")) | set(HERE.glob("scripts/*.py")) | set(HERE.glob("queries/*.rq")) | set(HERE.glob("fixtures/*"))
+    paths |= {HERE/"sources.lock.json", HERE/"requirements.txt"}
+    paths |= {p for p in HERE.glob("inputs/*.json") if p.name != "review.json"}
+    paths |= set(ROOT.glob("ontology/*.ttl")) | set(ROOT.glob("ontology/versions/*"))
+    paths |= {ROOT/"scripts/vcf_examples.py", ROOT/"scripts/version_registry.py"}
+    paths = {p for p in paths if p.is_file() and not p.name.endswith(".bundle.ttl")}
+    return {p.relative_to(ROOT).as_posix(): sha(evidence(p)) for p in sorted(paths)}
+
+
 def reviewed(entry, digest):
     return bool(entry and entry.get("fingerprint") == digest and
                 all(entry.get(k) for k in ("reviewer", "date", "rationale")))
@@ -145,15 +173,7 @@ def evaluate():
         assert fixture.read_text().splitlines()[0] == "##fileformat=VCFv"+c["version"], c["id"]
         case_by_req[c["requirement"]].append(c)
 
-    # Conservative provenance: changing any normative module or converter helper
-    # invalidates every semantic review. Generated outputs never hash themselves.
-    paths = set(HERE.glob("sources/*")) | set(HERE.glob("scripts/*.py")) | set(HERE.glob("queries/*.rq")) | set(HERE.glob("fixtures/*"))
-    paths |= {HERE/"sources.lock.json", HERE/"requirements.txt"}
-    paths |= {p for p in HERE.glob("inputs/*.json") if p.name != "review.json"}
-    paths |= set(ROOT.glob("ontology/*.ttl")) | set(ROOT.glob("ontology/versions/*"))
-    paths |= {ROOT/"scripts/vcf_examples.py", ROOT/"scripts/version_registry.py"}
-    paths = {p for p in paths if p.is_file() and not p.name.endswith(".bundle.ttl")}
-    hashes = {p.relative_to(ROOT).as_posix(): sha(p.read_bytes()) for p in sorted(paths)}
+    hashes = input_hashes()
     evidence_digest = fingerprint(hashes)
     ontology = Graph()
     for path in sorted(ROOT.glob("ontology/*.ttl")):

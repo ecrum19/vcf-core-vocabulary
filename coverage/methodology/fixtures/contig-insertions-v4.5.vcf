@@ -1,0 +1,17 @@
+##fileformat=VCFv4.5
+##source=VCF-Core-synthetic-examples
+##reference=https://example.org/reference.fa
+##contig=<ID=13,length=500000>
+##assembly=https://example.org/assembly.fa
+##INFO=<ID=SVTYPE,Number=1,Type=String,Description="Type of structural variant">
+##INFO=<ID=EVENT,Number=1,Type=String,Description="Event identifier for the novel adjacencies of one insertion">
+##INFO=<ID=MATEID,Number=.,Type=String,Description="ID of mate breakend">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
+13	123456	bnd_U	C	C[<ctg1>:1[	6	PASS	SVTYPE=BND;EVENT=INS_complete
+13	123457	bnd_V	A	]<ctg1>:329]A	6	PASS	SVTYPE=BND;EVENT=INS_complete
+13	223456	bnd_P1	C	C[<ctg1>:7[	6	PASS	SVTYPE=BND;EVENT=INS_partial
+13	223457	bnd_P2	A	]<ctg1>:214]A	6	PASS	SVTYPE=BND;EVENT=INS_partial
+13	323456	bnd_C1	C	C[<ctg1>:229[	6	PASS	SVTYPE=BND;EVENT=INS_circular
+13	323457	bnd_C2	A	]<ctg1>:45]A	6	PASS	SVTYPE=BND;EVENT=INS_circular
+<ctg1>	1	bnd_X	A	]<ctg1>:329]A	6	PASS	SVTYPE=BND;EVENT=INS_circular;MATEID=bnd_Y
+<ctg1>	329	bnd_Y	T	T[<ctg1>:1[	6	PASS	SVTYPE=BND;EVENT=INS_circular;MATEID=bnd_X

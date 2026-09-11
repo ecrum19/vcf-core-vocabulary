@@ -1,0 +1,9 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+# Expected answers are authored in inputs/cases.json from the source VCF.
+# RN partitions the flattened RUS/RUL/RUC/RB lists between the ALT alleles; each
+# repeat sequence must land under the allele RN assigns it, in its own position.
+SELECT ?pos ?allele ?index ?unit ?bases WHERE {
+  ?record vcfc:pos ?pos ; vcfc:hasAltAllele ?a .
+  ?a vcfc:alleleIndex ?allele ; vcfc:hasRepeatSequence ?repeat .
+  ?repeat vcfc:repeatSequenceIndex ?index ; vcfc:repeatUnitSequence ?unit ; vcfc:repeatBases ?bases .
+} ORDER BY ?pos ?allele ?index

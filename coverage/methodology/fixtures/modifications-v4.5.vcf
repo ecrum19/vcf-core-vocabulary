@@ -1,0 +1,19 @@
+##fileformat=VCFv4.5
+##source=VCF-Core-synthetic-examples
+##reference=https://example.org/reference.fa
+##contig=<ID=chr,length=1000>
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=M5mC,Number=M,Type=Float,Description="Alias for M27551C 5-Methylcytosine">
+##FORMAT=<ID=M5hmC,Number=M,Type=Float,Description="Alias for M76792C 5-Hydroxymethylcytosine">
+##FORMAT=<ID=M27551C,Number=M,Type=Float,Description="Fraction of bases modified with ChEBI 27551">
+##FORMAT=<ID=DPM5mC,Number=M,Type=Integer,Description="Alias for DPM27551C">
+##FORMAT=<ID=ADM5mC,Number=M,Type=Integer,Description="Alias for ADM27551C">
+##FORMAT=<ID=M999999C,Number=M,Type=Float,Description="Fraction of bases modified with an unrecognised ChEBI identifier">
+##FORMAT=<ID=MXaoN,Number=M,Type=Float,Description="Alias for M18107N xanthosine">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	SAMPLE1
+chr	10	.	C	A	.	.	.	GT:M5mC	0/1:0.95
+chr	20	.	C	CTAG	.	.	.	GT:M5mC	0/1:0,0.5,0.7
+chr	30	.	C	.	.	.	.	GT:M5mC:M5hmC	0|0:0.9,0:0,0.1
+chr	40	.	C	A,T,G,ACG	.	.	.	GT:M5mC	/3|1/0|4|0/0/3/1:0.25,0.1,0.5,0.6,.
+chr	50	.	C	A	.	.	.	GT:M5mC:M27551C:DPM5mC:ADM5mC:M999999C	0/1:0.9:0.9:20:18:0.4
+chr	60	.	A	G	.	.	.	GT:MXaoN	0/1:0.1,0.2,0.3,0.4

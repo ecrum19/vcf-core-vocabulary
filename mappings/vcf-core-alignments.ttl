@@ -32,8 +32,8 @@
   dct:description "The single curated record of every alignment vcf-core asserts against an external vocabulary. This file is the source of truth: vcf-core-alignments.ttl is generated from it by scripts/build-mapping-sets.py. Rows commented 'Also asserted inline in the vcf-core ontology modules' are additionally present in ontology/*.ttl and reach anyone loading the bundle; the rest reach only those who load the alignment module."@en ;
   dct:license <https://creativecommons.org/licenses/by/4.0/> ;
   dct:modified "2026-09-08"^^<http://www.w3.org/2001/XMLSchema#date> ;
-  owl:versionIRI <https://w3id.org/vcf-core/alignments/2.1.0> ;
-  owl:versionInfo "2.1.0" ;
+  owl:versionIRI <https://w3id.org/vcf-core/alignments/2.1.1> ;
+  owl:versionInfo "2.1.1" ;
   owl:imports <https://w3id.org/vcf-core/vocab> ;
   dct:source <https://w3id.org/vcf-core/mappings/vcf-core-alignments.sssom.tsv> ;
   rdfs:seeAlso <https://mapping-commons.github.io/sssom/> .

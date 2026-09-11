@@ -20,6 +20,12 @@ V = Namespace('https://w3id.org/vcf-core/vocab#')
 F = Namespace('http://biohackathon.org/resource/faldo#')
 C = Namespace('http://purl.obolibrary.org/obo/CHEBI_')
 ARITIES = dict(zip(['A','R','G','.','LA','LR','LG','P','M'], ['ArityPerAlt','ArityPerAllele','ArityPerGenotype','ArityVariable','ArityPerLocalAlt','ArityPerLocalAllele','ArityPerLocalGenotype','ArityPerGTAllele','ArityPerBaseModification']))
+# ChEBI identifiers for the VCF 4.5 base-modification aliases, and the base each
+# one occurs on. scripts/generate-reserved-keys.mjs holds the same table for the
+# reserved-key ontology; an alias outside it is an error rather than a guess.
+MODIFICATION_ALIASES = {'5mC':'27551','5hmC':'76792','5fC':'76794','5caC':'76793','5hmU':'16964','5fU':'80961','5caU':'17477','6mA':'28871','8oxoG':'44605','XaoN':'18107'}
+MODIFICATION_PROPERTIES = {'':'modificationFraction','DP':'modificationDepth','AD':'modificationAlleleDepth'}
+COMPLEMENT = {'A':'T','C':'G','G':'C','T':'A'}
 LINE_CLASSES = {'fileformat':'FileFormatHeaderLine','fileDate':'FileDateHeaderLine','source':'SourceHeaderLine','reference':'ReferenceHeaderLine','contig':'ContigHeaderLine','INFO':'INFOHeaderLine','FORMAT':'FORMATHeaderLine','FILTER':'FILTERHeaderLine','ALT':'ALTHeaderLine','META':'MetaHeaderLine','SAMPLE':'SampleHeaderLine','PEDIGREE':'PedigreeHeaderLine','pedigreeDB':'PedigreeDBHeaderLine','assembly':'AssemblyHeaderLine'}
 
 
@@ -45,6 +51,35 @@ def attributes(text):
         result.append((k,val))
     if len({k for k,v in result})!=len(result): raise ValueError('Duplicate header attribute')
     return result
+
+
+def modification_key(key):
+    """Split a Number=M FORMAT key into value property, ChEBI ID and modified base.
+
+    VCF 4.5 reserves M, DPM and ADM followed by either a ChEBI identifier or one
+    of the documented aliases, then the base letter the modification occurs on.
+    U is synonymous with T.
+    """
+    match=re.fullmatch(r'(DP|AD)?M(.+)',key)
+    if not match:raise ValueError('Not a base-modification key: '+key)
+    numeric=re.fullmatch(r'([0-9]+)([ACGTUN])',match[2])
+    if numeric:chebi,letter=numeric[1],numeric[2]
+    elif match[2] in MODIFICATION_ALIASES:chebi,letter=MODIFICATION_ALIASES[match[2]],match[2][-1]
+    else:raise ValueError('Unsupported fixture modification: '+key)
+    return MODIFICATION_PROPERTIES[match[1] or ''],chebi,'T' if letter=='U' else letter
+
+
+def modification_sites(seq, letter):
+    """Yield (offset, is forward strand) for every base that could carry it.
+
+    The order is the order the bases occur in the allele. A stranded
+    modification also applies to the complementary base on the reverse strand;
+    for N the negative-strand value immediately follows the positive one.
+    """
+    for k,base in enumerate(seq.upper()):
+        if letter=='N':yield k,True;yield k,False
+        elif base==letter:yield k,True
+        elif base==COMPLEMENT[letter]:yield k,False
 
 
 def materialize(path, profile='expanded', base=None):
@@ -113,19 +148,22 @@ def materialize(path, profile='expanded', base=None):
             cols=line.split('\t')
             if len(cols)!=(9+len(names) if names else 8):raise ValueError(f'{path}:{i}: sample columns must be tab-delimited')
             records.append(cols)
+    def assembly_contig(cid):
+        # An angle-bracketed name denotes a contig in the ##assembly file, not a
+        # declared reference sequence, so it gets its own resource rather than a
+        # fabricated ContigHeaderLine. Both CHROM and a breakend mate can use one.
+        if not assembly:raise ValueError(f'{path}: <{cid}> needs an ##assembly line')
+        ac=node('assembly/contig/'+quote(cid),'AssemblyContig')
+        put(ac,'assemblyContigId',cid);put(ac,'declaredInAssembly',assembly[0])
+        return ac
     for ri,cols in enumerate(records,1):
         chrom,pos,rid,ref,alt,qual,flt,info=cols[:8];r=node(f'record/{ri}','VCFRecord');call=node(f'call/{ri}','VariantCall')
         for p,val in [('recordIndex',ri),('chrom',chrom),('pos',int(pos)),('recordId',Literal('.',datatype=V.Null) if rid=='.' else rid),('ref',ref),('alt',Literal('.',datatype=V.Null) if alt=='.' else alt),('hasCall',call)]:put(r,p,val)
         put(file,'hasRecord',r)
         if chrom in contigs:put(r,'chromosome',contigs[chrom])
         elif re.fullmatch(r'<[^<>,\s]+>',chrom):
-            # VCF 4.5 fixed field 1: an angle-bracketed ID names a contig in the
-            # ##assembly file, not a declared reference sequence, so it gets its
-            # own resource rather than a fabricated ContigHeaderLine.
-            cid=chrom[1:-1];ac=node('assembly/contig/'+quote(cid),'AssemblyContig')
-            put(r,'chromAssemblyContig',ac);put(ac,'assemblyContigId',cid)
-            if not assembly:raise ValueError(f'{path}: CHROM {chrom} needs an ##assembly line')
-            put(ac,'declaredInAssembly',assembly[0])
+            # VCF 4.5 fixed field 1: an angle-bracketed CHROM names an assembly contig.
+            put(r,'chromAssemblyContig',assembly_contig(chrom[1:-1]))
         elif chrom not in contigs:raise ValueError(f'{path}: CHROM {chrom} is neither a declared contig nor a bracketed assembly contig')
         for j,idval in enumerate([] if rid=='.' else rid.split(';'),1):
             n=node(f'record/{ri}/id/{j}','RecordIdentifier');put(r,'hasIdentifier',n);put(n,'identifierValue',idval);put(n,'componentIndex',j);byid[idval]=ri
@@ -155,7 +193,10 @@ def materialize(path, profile='expanded', base=None):
                     match=re.search(r'[\[\]](.+):([0-9]+)[\[\]]',seq)
                     if not match:raise ValueError('Unparseable breakend '+seq)
                     loc=node(f'record/{ri}/allele/{ai}/remote','')
-                    g.add((loc,RDF.type,F.ExactPosition));g.add((loc,F.position,Literal(int(match[2]))));g.add((loc,F.reference,contigs[match[1]]));g.add((a,F.location,loc))
+                    # A large insertion places the mate on an assembly contig
+                    # rather than on a declared reference sequence.
+                    remote=assembly_contig(match[1][1:-1]) if re.fullmatch(r'<[^<>,\s]+>',match[1]) else contigs[match[1]]
+                    g.add((loc,RDF.type,F.ExactPosition));g.add((loc,F.position,Literal(int(match[2]))));g.add((loc,F.reference,remote));g.add((a,F.location,loc))
         # Padding-base interpretation (VCF 4.5 fixed field 4). Asserted only where
         # the specification determines it; a shared prefix alone is not evidence.
         alts=[x for x in seqs[1:] if x not in ('.','*')]
@@ -294,20 +335,27 @@ def materialize(path, profile='expanded', base=None):
                                 for j,item in enumerate(items):put(item,'forAllele',locals_[j+(number=='LA')])
                     for key,(fv,items) in fnodes.items():
                         if defs['FORMAT',key][1]['Number']!='M' or values[key]=='.':continue
-                        # Fixtures currently demonstrate 5mC; do not guess other chemistries.
-                        if key not in ('M5mC','DPM5mC','ADM5mC'):raise ValueError('Unsupported fixture modification: '+key)
-                        sites=[]
-                        for j,(_,token) in enumerate(tokens):
-                            if token=='.':continue
+                        prop,chebi,letter=modification_key(key)
+                        sites=[];aggregated=set()
+                        for j,(indicator,(_,token)) in enumerate(zip(indicators,tokens)):
+                            # Unphased allele values are aggregated and encoded at the
+                            # first occurrence; missing and symbolic alleles carry no
+                            # modifiable bases and so encode no values at all.
+                            if token=='.' or (indicator=='/' and token in aggregated):continue
+                            if indicator=='/':aggregated.add(token)
                             seq=seqs[int(token)]
                             if not re.fullmatch('[ACGTNacgtn]+',seq):continue
-                            sites.extend((j,k,basechar) for k,basechar in enumerate(seq.upper()) if basechar in 'CG')
+                            sites.extend((j,k,forward) for k,forward in modification_sites(seq,letter))
                         if len(sites)!=len(items):raise ValueError('Number=M fixture cardinality mismatch')
-                        for item,(j,k,basechar) in zip(items,sites):
-                            mod=node(f'sample/{ri}/{quote(name)}/modification/{j}/{k}','BaseModification');put(item,'forBaseModification',mod);put(item,'forGTAlleleIndex',j);put(mod,'modifiedResidue',C['27551']);put(mod,'modifiedBaseOffset',k)
-                            g.add((mod,RDF.type,F.ForwardStrandPosition if basechar=='C' else F.ReverseStrandPosition))
+                        for item,(j,k,forward) in zip(items,sites):
+                            # One resource per modification, allele slot and strand, so
+                            # fraction, depth and allele depth of the same chemistry meet
+                            # and two chemistries on one base stay apart.
+                            mod=node(f'sample/{ri}/{quote(name)}/modification/{chebi}/{j}/{k}/{"forward" if forward else "reverse"}','BaseModification')
+                            put(item,'forBaseModification',mod);put(item,'forGTAlleleIndex',j);put(mod,'modifiedResidue',C[chebi]);put(mod,'modifiedBaseOffset',k)
+                            g.add((mod,RDF.type,F.ForwardStrandPosition if forward else F.ReverseStrandPosition))
                             val=g.value(item,V.itemValue)
-                            if str(val)!='.':put(mod,{'M5mC':'modificationFraction','DPM5mC':'modificationDepth','ADM5mC':'modificationAlleleDepth'}[key],val)
+                            if str(val)!='.':put(mod,prop,val)
     # Cross-record breakend relationships are resolved only after all IDs exist.
     for ri,cols in enumerate(records,1):
         info=dict(entry.split('=',1) if '=' in entry else (entry,'') for entry in cols[7].split(';') if entry!='.')

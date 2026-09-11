@@ -1041,7 +1041,7 @@
     "sha256": "a53e7a50b1443ac16c3d546dd2309ffab4d919ba6d17509092df0acccdc5d279"
    }
   },
-  "interpretation": "Demonstrate this information capability using the listed finite examples; review its source interpretation and test adequacy."
+  "interpretation": "Map local allele indices back to the record's global ALT alleles. Tested 2026-09-11 by R27-4.5-local-allele-map on the specification's equivalence table, where LAA=2,4 on a four-ALT record makes the mapping non-identity, plus a REF-only row with an empty LAA. The earlier features-v4.5.vcf case uses LAA=1,2 on a two-ALT record and is retained, but its mapping is the identity and demonstrates nothing about LAA on its own. GT stays global even when local-allele fields are present."
  },
  {
   "id": "R28",
@@ -1079,7 +1079,7 @@
     "sha256": "f8d67de6110f37b377642005d1d4ff33c8c4e93a705e0f8e73bc9dac6f7dc6ad"
    }
   },
-  "interpretation": "Demonstrate this information capability using the listed finite examples; review its source interpretation and test adequacy."
+  "interpretation": "Associate base-modification fractions and depths with a sample. Tested 2026-09-11 by R29-4.5-modification-depths, which returns the fraction, the depth of reads able to detect the modification (DPM) and the depth of reads carrying it (ADM) as three separate quantities of one modification; the earlier case queried the first two only."
  },
  {
   "id": "R30",
@@ -1117,7 +1117,7 @@
     "sha256": "38be1f923ebe643e903926ab3fd8ee2cb1daae057c5d6a683565b7c601838af4"
    }
   },
-  "interpretation": "Demonstrate this information capability using the listed finite examples; review its source interpretation and test adequacy."
+  "interpretation": "Associate a tandem-repeat unit with its copy count. Tested 2026-09-11 by R31-4.4/4.5-multi-allele-units on the corrected Figure 11 locus, where three repeat sequences are shared between two ALT alleles, in addition to the single-allele repeats-v4.5.vcf case."
  },
  {
   "id": "R32",
@@ -1670,7 +1670,7 @@
     "sha256": "6c2293ff6f25734a1dd89106f58050cf336699bd114feb4f5132086235699165"
    }
   },
-  "interpretation": "Use a <*> reference block with END and a variant record alongside it. Resolved 2026-09-10: FORMAT LEN is the inclusive block length, so END = POS + LEN - 1; the 4.5 example table introduces LEN with ';' instead of ':' and three of its LEN values are off by one, so use the corrected values recorded in the source audit. In 4.3/4.4 the example's FORMAT 'P' is a typo for 'PL'. NON_REF alias equivalence and the LEN-from-END fallback remain untested and are an acknowledged gap.",
+  "interpretation": "Use a <*> reference block with END and a variant record alongside it. Resolved 2026-09-10: FORMAT LEN is the inclusive block length, so END = POS + LEN - 1; the 4.5 example table introduces LEN with ';' instead of ':' and three of its LEN values are off by one, and in 4.3/4.4 the example's FORMAT 'P' is a typo for 'PL'. Left unassessed 2026-09-11 by reviewer decision: those corrections are disputed upstream in samtools/hts-specs#868, and an oracle built on this reviewer's reading would have to be rewritten if the specification resolves them differently. Tests were drafted and withdrawn; register them once #868 closes.",
   "testPlan": "Use a <*> reference block with END and a variant record alongside it. Test NON_REF alias and 4.5 LEN fallback only under the relevant version rules; resolve source example length/separator conflicts first."
  },
  {
@@ -1693,7 +1693,7 @@
     "sha256": "38be1f923ebe643e903926ab3fd8ee2cb1daae057c5d6a683565b7c601838af4"
    }
   },
-  "interpretation": "Unassessed: add a source-reviewed RDF witness and independent expected-answer tests. No conclusion of vocabulary incapability follows.",
+  "interpretation": "Assign the flattened repeat lists to the correct ALT alleles. Tested 2026-09-11 by R46-4.4/4.5-repeat-groups on two loci whose RN partitions differ (1,3 and 2,1), so an implementation that ignored RN could not answer both. RUB's separate partitioning by RUC, a defaulted RN and an RUL inferred from RUS remain untested.",
   "testPlan": "Use RN=2,1, RUS=CAG,TG,CA and RUC=10,7,3. Expect ALT1 groups (CAG,10),(TG,7), ALT2 (CA,3); test missing/default RN and RUL independently."
  },
  {
@@ -2932,7 +2932,7 @@
     "sha256": "dce79637831bbc44bbda6e185a2714170d1e7940af893593ab806fe1e28141a9"
    }
   },
-  "interpretation": "Use DPADJ, CNADJ and CICNADJ with multiple adjacencies in 4.1-4.3; the fields are removed from the 4.4 reserved definitions. Reviewed 2026-09-10: a test is requested, using the worked examples at 4.1:836-839 and 4.1:852-855 (and their 4.2/4.3 equivalents). Recorded specification defect: these three keys are declared as ##INFO lines yet used as FORMAT keys in those same examples, so the FORMAT usage the examples show is what should be assessed.",
+  "interpretation": "Use DPADJ, CNADJ and CICNADJ with multiple adjacencies in 4.1-4.3; the fields are removed from the 4.4 reserved definitions. Recorded specification defect: these three keys are declared as ##INFO lines yet used as FORMAT keys in the worked examples, so the FORMAT usage is what is assessed. Tested 2026-09-11 by R79-<version>-adjacency on the two worked cancer-genome tables of each version. CICNADJ has no worked example anywhere and remains untested.",
   "testPlan": "Use DPADJ, CNADJ and CICNADJ with multiple adjacencies in 4.1–4.3; fields are removed from 4.4 reserved definitions."
  },
  {
@@ -3019,7 +3019,7 @@
     "sha256": "f8d67de6110f37b377642005d1d4ff33c8c4e93a705e0f8e73bc9dac6f7dc6ad"
    }
   },
-  "interpretation": "Use phase names across chromosomes and repeated regions with PSO ordering and missing PSQ; verify matching mate phase/ordinal and separation from PS. Reviewed 2026-09-10: Number=P dates from VCF 4.4, not 4.5, despite the 4.5 changelog, and the 4.4 erratum's 'Type=P' means 'Number=P'. The PSO example is internally consistent and supplies the oracle - PSL/PSO pairs (chr1*10*3,3), (chr1*10*1,4), (chr1*10*3,1), (chr1*10*1,2), (chr1*10*3,5) giving one total traversal order 1..5 of the derivative chromosome. A test is requested on that basis; the PSL table is excluded as an oracle.",
+  "interpretation": "Retain per-allele phase identity, derivative traversal order and phase quality. Number=P dates from VCF 4.4, not 4.5, despite the 4.5 changelog, and the 4.4 erratum's 'Type=P' means 'Number=P'. Tested 2026-09-11 across three cases per version: phase-ordinals on the specification's PSO example, whose ordinals 1-5 give one total traversal of the derivative chromosome; phase-quality on the PSL table with the reviewer's corrected genotypes and authored PSQ values, covering per-allele names, a name reused across chromosomes and positional missingness; and phase-separation on a reviewer-authored two-sample record showing that PS and PSL may share a record but never a sample-genotype. The printed PSL table is a specification defect (samtools/hts-specs#871) and is not used as printed.",
   "testPlan": "Use phase names across chromosomes and repeated regions with PSO ordering and missing PSQ; verify matching mate phase/ordinal and separation from PS."
  },
  {
@@ -3036,7 +3036,7 @@
     "sha256": "f8d67de6110f37b377642005d1d4ff33c8c4e93a705e0f8e73bc9dac6f7dc6ad"
    }
   },
-  "interpretation": "Use LAA=2,4 with LAD/LPL, REF-only missing LAA with populated local fields, and corresponding global vectors; compare value/allele associations and missingness.",
+  "interpretation": "Relate local-allele value vectors to their global equivalents, including an empty LAA set. Tested 2026-09-11 by R83-4.5-local-global-equivalence on the specification's equivalence table, which writes each of four sites twice: a Number=LR depth indexed by the local allele set must land on the same global allele as the Number=R depth of the paired record, and the global vector must carry the missing value wherever the local set omits an allele. The REF-only site with an empty LAA is included. The LPL-to-PL genotype correspondence remains untested: both sides expose only a positional genotype index and nothing relates that index to the allele pair it stands for, so the mapping cannot be read from the graph.",
   "testPlan": "Use LAA=2,4 with LAD/LPL, REF-only missing LAA with populated local fields, and corresponding global vectors; compare value/allele associations and missingness."
  },
  {
@@ -3053,7 +3053,7 @@
     "sha256": "a53e7a50b1443ac16c3d546dd2309ffab4d919ba6d17509092df0acccdc5d279"
    }
   },
-  "interpretation": "Use phased duplicate and unphased repeated alleles, U/T equivalence, N modifications on both strands, and missing/symbolic alleles; independently enumerate source-defined value slots.",
+  "interpretation": "Retain GT-dependent allele aggregation, base order and strand for Number=M values. Tested 2026-09-11 by R84-4.5-modification-slots on all four examples of the FORMAT-field subsection, whose value counts (1, 3, 2 per field and 5) were enumerated independently from the cardinality rules before registration. U/T equivalence and the unstranded storage convention have no worked example and remain untested.",
   "testPlan": "Use phased duplicate and unphased repeated alleles, U/T equivalence, N modifications on both strands, and missing/symbolic alleles; independently enumerate source-defined value slots."
  },
  {
@@ -3070,7 +3070,7 @@
     "sha256": "f8d67de6110f37b377642005d1d4ff33c8c4e93a705e0f8e73bc9dac6f7dc6ad"
    }
   },
-  "interpretation": "Compare M5mC/M27551C, DPM and ADM keys, including a numerically valid unrecognised identifier. Resolved 2026-09-10: the reserved genotype-key table governs the alias spelling, so the keys are MXaoN, DPMXaoN and ADMXaoN with a capital X; the four prose occurrences of MxaoN are typos, and FORMAT keys are case-sensitive. The full reserved patterns are M[0-9]+[ACGTUN], DPM[0-9]+[ACGTUN] and ADM[0-9]+[ACGTUN]; the 4.5 changelog's 'M[0-9]+' omits the required trailing base letter.",
+  "interpretation": "Compare M5mC/M27551C, DPM and ADM keys, including a numerically valid unrecognised identifier. The reserved genotype-key table governs the alias spelling, so the keys are MXaoN, DPMXaoN and ADMXaoN with a capital X; the four prose occurrences of MxaoN are typos, and FORMAT keys are case-sensitive. The full reserved patterns are M[0-9]+[ACGTUN], DPM[0-9]+[ACGTUN] and ADM[0-9]+[ACGTUN]; the 4.5 changelog's 'M[0-9]+' omits the required trailing base letter. Tested 2026-09-11 by R85-4.5-modification-keys. Its records are reviewer-authored, because no specification record combines an alias with its numeric form; the remaining alias keys are untested.",
   "testPlan": "Compare M5mC/M27551C, DPM and ADM keys, including a numerically valid unrecognised identifier; resolve the MXaoN/MxaoN spelling conflict before choosing that oracle."
  },
  {
@@ -3156,7 +3156,7 @@
     "sha256": "38be1f923ebe643e903926ab3fd8ee2cb1daae057c5d6a683565b7c601838af4"
    }
   },
-  "interpretation": "Use CNV:TR plus phased sequence alleles; retrieve reference SVLEN, total and allelic CN length ratios, and the relation without asserting exact sequence equivalence.",
+  "interpretation": "Retain a repeat summary's reference interval, allelic length ratios and its relation to phased sequence records. Tested 2026-09-11 by R89-4.4/4.5-repeat-summary on the worked example: SVLEN is the reference allelic length, INFO CN each allele's ratio and FORMAT CN the overall one, with phase set 100 relating the summary to the two non-symbolic records. Sequence equivalence between the two representations is deliberately not asserted, and CIRUC/CIRB bounds remain untested.",
   "testPlan": "Use CNV:TR plus phased sequence alleles; retrieve reference SVLEN, total and allelic CN length ratios, and the relation without asserting exact sequence equivalence."
  },
  {
@@ -3261,7 +3261,7 @@
     "sha256": "45c2eaa02d57d20ddef822d15bd1e06c3877904f5ee3a05ae4d47560d17cfc26"
    }
   },
-  "interpretation": "Use contig endpoints 1/329, subset 7/214 and a circular 229..329..1..45 insertion. Resolved 2026-09-10: the MATEID values printed in the assembly-contig insertion tables are not usable as expected answers - two are self-references, one names the undefined bnd_C, and the rest name a record that is not the mate of the same adjacency, because the contig-side breakends have no records. Register expected links from the ALT bracket coordinates and EVENT grouping instead, and take the complete-insertion shorthand as '13 123456 INS0 C C<ctg1>' rather than the printed row.",
+  "interpretation": "Use contig endpoints 1/329, subset 7/214 and a circular 229..329..1..45 insertion. The MATEID values printed in these tables are not usable as expected answers - two are self-references, one names the undefined bnd_C, and the rest name a record that is not the mate of the same adjacency, because the contig-side breakends have no records. Tested 2026-09-11 by R92-4.5-contig-insertions, which registers the boundaries and directions from the ALT bracket coordinates and groups the adjacencies by EVENT, with MATEID only for the circular pair whose mates do have records. The 4.1-4.4 equivalents of the same passage have no case, and the complete-insertion shorthand row stays excluded as an oracle.",
   "testPlan": "Use contig endpoints 1/329, subset 7/214 and a circular 229..329..1..45 insertion; reconcile the inconsistent example mate IDs before registering expected graph links."
  },
  {

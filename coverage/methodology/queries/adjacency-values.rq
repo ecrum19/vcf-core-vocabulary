@@ -1,0 +1,11 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+# Expected answers are authored in inputs/cases.json from the source VCF.
+# Adjacency-scoped depth and copy number stay attached to the breakend record and
+# the sample, and each adjacency keeps its own position in the value list.
+SELECT ?id ?sample ?key ?index ?value WHERE {
+  ?record vcfc:recordId ?id ; vcfc:hasCall/vcfc:hasSampleCall ?call .
+  ?call vcfc:sampleId ?sample ; vcfc:hasFormatValue ?field .
+  ?field vcfc:declaredBy/vcfc:fieldId ?key ; vcfc:hasValueItem ?item .
+  ?item vcfc:valueIndex ?index ; vcfc:itemValue ?value .
+  FILTER(?key IN ("DPADJ", "CNADJ"))
+} ORDER BY ?id ?sample ?key ?index

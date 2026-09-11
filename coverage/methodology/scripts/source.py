@@ -24,7 +24,9 @@ def sections(text):
     starts = [(1, "Preamble", "preamble")]
     zone = "vcf"
     for n, line in enumerate(lines, 1):
-        m = re.match(r"\s*\\(section|subsection|subsubsection)\*?\{(.+)\}", line)
+        # A trailing cross-reference label is markup, not part of the heading.
+        m = re.match(r"\s*\\(section|subsection|subsubsection)\*?\{(.+)\}",
+                     re.sub(r"\s*\\label\{[^{}]*\}\s*$", "", line))
         if not m:
             continue
         title = plain(m[2])

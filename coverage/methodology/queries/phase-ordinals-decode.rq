@@ -1,0 +1,23 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+# Preservation only: explicitly decode the documented VCF text encoding.
+SELECT ?pos ?slot ?phaseSet ?ordinal WHERE {
+  ?file vcfc:hasRecord ?record ; vcfc:hasSampleSet/vcfc:hasSample ?s .
+  ?record vcfc:pos ?pos ; vcfc:hasCall/vcfc:hasCallMatrix ?matrix .
+  ?s vcfc:sampleIndex ?sampleIndex .
+  BIND(CONCAT("^(?:[^\\t]*\\t){", STR(?sampleIndex - 1), "}([^\\t]*).*$") AS ?column)
+  ?matrix vcfc:hasFormatValueVector ?nameVector .
+  ?nameVector vcfc:declaredBy/vcfc:fieldId "PSL" ; vcfc:encodedValues ?packedNames .
+  BIND(REPLACE(?packedNames, ?column, "$1") AS ?names)
+  ?matrix vcfc:hasFormatValueVector ?ordinalVector .
+  ?ordinalVector vcfc:declaredBy/vcfc:fieldId "PSO" ; vcfc:encodedValues ?packedOrdinals .
+  BIND(REPLACE(?packedOrdinals, ?column, "$1") AS ?ordinals)
+  # Number=P lists carry one value per GT allele value; the records in this
+  # witness are triploid and tetraploid, and slots beyond a record's ploidy or
+  # without a phase set are dropped rather than reported as answers.
+  VALUES ?slot { 0 1 2 3 }
+  FILTER(?slot < 1 + STRLEN(?names) - STRLEN(REPLACE(?names, ",", "")))
+  BIND(CONCAT("^(?:[^,]*,){", STR(?slot), "}([^,]*).*$") AS ?item)
+  BIND(REPLACE(?names, ?item, "$1") AS ?phaseSet)
+  BIND(REPLACE(?ordinals, ?item, "$1") AS ?ordinal)
+  FILTER(?phaseSet != ".")
+}

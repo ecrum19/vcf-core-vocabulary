@@ -1,0 +1,13 @@
+##fileformat=VCFv4.4
+##source=VCF-Core-synthetic-examples
+##reference=https://example.org/reference.fa
+##contig=<ID=chr1,length=1000>
+##ALT=<ID=DUP,Description="Duplication">
+##INFO=<ID=SVCLAIM,Number=A,Type=String,Description="Structural variant claim">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=PSL,Number=P,Type=String,Description="Phase set list">
+##FORMAT=<ID=PSO,Number=P,Type=Integer,Description="Phase set list ordinal">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	SAMPLE1
+chr1	10	.	T	<DUP>	.	.	SVCLAIM=DJ	GT:PSL:PSO	/0/0|1:.,.,chr1*10*3:.,.,3
+chr1	20	.	A	G	.	.	.	GT:PSL:PSO	/0/0|0|1:.,.,chr1*10*1,chr1*10*3:.,.,4,1
+chr1	30	.	G	T	.	.	.	GT:PSL:PSO	/0/0|0|1:.,.,chr1*10*1,chr1*10*3:.,.,2,5

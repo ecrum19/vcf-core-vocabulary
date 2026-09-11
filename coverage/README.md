@@ -42,7 +42,7 @@ their percentages can never be added, averaged, or compared to each other.
 | **VCF versions** | 4.1, 4.2, 4.3, 4.4 and 4.5, scored separately | 4.5 only |
 | **How a passing item is decided** | A query returns independently authored expected answers | A reviewer judges the two axes; the script checks the cited terms and files exist |
 | **Sample profiles** | Expanded and condensed scored separately | Not separated |
-| **Current result** | 94 requirements, 189 cases; per-version scores in its README | 104/104 constructs represented; 87 also have a validation rule |
+| **Current result** | 94 requirements, 208 cases; per-version scores in its README | 104/104 constructs represented; 87 also have a validation rule |
 | **Untested items** | Counted in the denominator as `unassessed` — they lower the score | Not applicable; every construct carries a verdict |
 | **Best for** | An honest, conservative measure that shows its own gaps | A quick per-construct map from specification area to vocabulary term |
 

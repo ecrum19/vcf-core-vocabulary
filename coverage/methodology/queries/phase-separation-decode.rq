@@ -1,0 +1,17 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+# Preservation only: explicitly decode the documented VCF text encoding.
+SELECT ?pos ?sample ?genotype ?phaseSet ?phaseSetList WHERE {
+  ?file vcfc:hasRecord ?record ; vcfc:hasSampleSet/vcfc:hasSample ?s .
+  ?record vcfc:pos ?pos ; vcfc:hasCall/vcfc:hasCallMatrix ?matrix .
+  ?s vcfc:sampleIndex ?sampleIndex ; vcfc:sampleName ?sample .
+  BIND(CONCAT("^(?:[^\\t]*\\t){", STR(?sampleIndex - 1), "}([^\\t]*).*$") AS ?column)
+  ?matrix vcfc:hasFormatValueVector ?genotypeVector .
+  ?genotypeVector vcfc:declaredBy/vcfc:fieldId "GT" ; vcfc:encodedValues ?packedGenotypes .
+  BIND(REPLACE(?packedGenotypes, ?column, "$1") AS ?genotype)
+  ?matrix vcfc:hasFormatValueVector ?setVector .
+  ?setVector vcfc:declaredBy/vcfc:fieldId "PS" ; vcfc:encodedValues ?packedSets .
+  BIND(REPLACE(?packedSets, ?column, "$1") AS ?phaseSet)
+  ?matrix vcfc:hasFormatValueVector ?listVector .
+  ?listVector vcfc:declaredBy/vcfc:fieldId "PSL" ; vcfc:encodedValues ?packedLists .
+  BIND(REPLACE(?packedLists, ?column, "$1") AS ?phaseSetList)
+}

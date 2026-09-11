@@ -1,0 +1,15 @@
+##fileformat=VCFv4.3
+##source=VCF-Core-synthetic-examples
+##reference=https://example.org/reference.fa
+##contig=<ID=2,length=500000>
+##contig=<ID=13,length=500000>
+##INFO=<ID=SVTYPE,Number=1,Type=String,Description="Type of structural variant">
+##INFO=<ID=MATEID,Number=.,Type=String,Description="ID of mate breakend">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=DPADJ,Number=.,Type=Integer,Description="Read Depth of adjacency">
+##FORMAT=<ID=CNADJ,Number=.,Type=Integer,Description="Copy number of adjacency">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	Blood	TissueSample	TumorSample
+2	321681	bnd_W	G	G]13:421681]	6	PASS	SVTYPE=BND;MATEID=bnd_U	GT:DPADJ:CNADJ	0:32:1	0|1:9,21:.	1:.:1
+2	321682	bnd_V	T	[13:421682[T	6	PASS	SVTYPE=BND;MATEID=bnd_X	GT:DPADJ:CNADJ	0:29:1	0|1:11,25:.	1:.:1
+13	421681	bnd_U	A	A]2:321681]	6	PASS	SVTYPE=BND;MATEID=bnd_W	GT:DPADJ:CNADJ	0:34:1	0|1:10,23:.	1:.:1
+13	421682	bnd_X	C	[2:321682[C	6	PASS	SVTYPE=BND;MATEID=bnd_V	GT:DPADJ:CNADJ	0:31:1	0|1:8,20:.	1:.:1

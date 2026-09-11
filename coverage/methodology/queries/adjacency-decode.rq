@@ -1,0 +1,14 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+# Preservation only: explicitly decode the documented VCF text encoding.
+SELECT ?id ?sample ?depth ?copies WHERE {
+  ?file vcfc:hasRecord ?record ; vcfc:hasSampleSet/vcfc:hasSample ?s .
+  ?record vcfc:recordId ?id ; vcfc:hasCall/vcfc:hasCallMatrix ?matrix .
+  ?s vcfc:sampleIndex ?sampleIndex ; vcfc:sampleName ?sample .
+  BIND(CONCAT("^(?:[^\\t]*\\t){", STR(?sampleIndex - 1), "}([^\\t]*).*$") AS ?pattern)
+  ?matrix vcfc:hasFormatValueVector ?depthVector .
+  ?depthVector vcfc:declaredBy/vcfc:fieldId "DPADJ" ; vcfc:encodedValues ?packedDepth .
+  BIND(REPLACE(?packedDepth, ?pattern, "$1") AS ?depth)
+  ?matrix vcfc:hasFormatValueVector ?copyVector .
+  ?copyVector vcfc:declaredBy/vcfc:fieldId "CNADJ" ; vcfc:encodedValues ?packedCopies .
+  BIND(REPLACE(?packedCopies, ?pattern, "$1") AS ?copies)
+}

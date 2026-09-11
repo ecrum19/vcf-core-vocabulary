@@ -1,0 +1,14 @@
+PREFIX vcfc: <https://w3id.org/vcf-core/vocab#>
+# Expected answers are authored in inputs/cases.json from the source VCF.
+# PS and PSL may both appear in one record but never in one sample-genotype. PS
+# belongs to the genotype as a whole; PSL names a phase set per allele value. The
+# two samples here describe the same haplotype pair through the two mechanisms,
+# so each sample must expose exactly one of them.
+SELECT ?pos ?sample ?slot ?allele ?phaseSet ?allelePhaseSet WHERE {
+  ?record vcfc:pos ?pos ; vcfc:hasCall/vcfc:hasSampleCall ?call .
+  ?call vcfc:sampleId ?sample ; vcfc:hasGenotype ?genotype .
+  ?genotype vcfc:hasAlleleCall ?alleleCall .
+  ?alleleCall vcfc:callIndex ?slot ; vcfc:calledAllele/vcfc:alleleValue ?allele .
+  OPTIONAL { ?genotype vcfc:inPhaseSet/vcfc:phaseSetId ?phaseSet }
+  OPTIONAL { ?alleleCall vcfc:allelePhaseSet/vcfc:phaseSetName ?allelePhaseSet }
+} ORDER BY ?pos ?sample ?slot
