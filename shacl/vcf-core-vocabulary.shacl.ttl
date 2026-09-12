@@ -168,6 +168,15 @@ vcfc:VariantCallShape a sh:NodeShape ;
   # or ^[-+]?(INF|INFINITY|NAN)$ case-insensitively. xsd:double covers the
   # numeric forms plus INF/-INF/NaN; the final branch covers the INFINITY and
   # case-variant spellings that no XSD numeric datatype accepts.
+  #
+  # Because several datatypes conform, two correct producers can serialize the
+  # same QUAL differently -- vcf-core's own materializer writes vcfc:VCFFloat,
+  # VCF-RDFizer writes xsd:decimal, and both pass this shape. Producers SHOULD
+  # write vcfc:VCFFloat, the only branch that also carries INF/INFINITY/NAN.
+  # Consumers MUST NOT branch on DATATYPE(?qual): compare the lexical value, or
+  # accept the alternatives explicitly. Kept here rather than as an
+  # rdfs:comment because assess.py hashes ontology/*.ttl, so editing a comment
+  # there would invalidate every recorded review acceptance.
   sh:property [
     sh:path vcfc:qual ;
     sh:minCount 0 ; sh:maxCount 1 ;
