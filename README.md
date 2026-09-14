@@ -2,7 +2,7 @@
 
 # VCF Core Vocabulary
 
-[![Vocabulary version: 2.1.1](https://img.shields.io/badge/vocabulary-v2.1.1-006875)](docs/RELEASE-NOTES-v2.1.1.md)
+[![Vocabulary version: 2.1.2](https://img.shields.io/badge/vocabulary-v2.1.2-006875)](docs/RELEASE-NOTES-v2.1.2.md)
 [![VCF validation profiles: 4.1–4.5](https://img.shields.io/badge/VCF_profiles-4.1%E2%80%934.5-006875)](shacl/README.md)
 [![License: CC BY 4.0](https://img.shields.io/badge/license-CC_BY_4.0-006875)](LICENSE)
 
@@ -18,7 +18,7 @@ genotypes as linked data. It preserves the source context needed to interpret a
 VCF call and provides links to external models of sequence variation. Any
 converter can adopt the vocabulary.
 
-**Version 2.1.1** · [Release notes](docs/RELEASE-NOTES-v2.1.1.md) ·
+**Version 2.1.2** · [Release notes](docs/RELEASE-NOTES-v2.1.2.md) ·
 [Examples](examples/README.md) · [Validation](shacl/README.md) ·
 [Coverage assessment](coverage/README.md)
 
@@ -50,7 +50,7 @@ fixtures and queries for genotypes, phasing and structural variation.
 ## Use the vocabulary
 
 The namespace is `https://w3id.org/vcf-core/vocab#`, conventionally `vcfc:`.
-VCF specification versions (4.1–4.5) and vocabulary releases (2.1.1) are separate.
+VCF specification versions (4.1–4.5) and vocabulary releases (2.1.2) are separate.
 
 The vocabulary is supplied as five Turtle modules. Load all five when working
 with the complete model; the core module alone does not contain every term.
@@ -197,9 +197,13 @@ committed inputs — edit the inputs, not the output.
 
 ## Releases, citation and contributions
 
-[Version 2.1.1](docs/RELEASE-NOTES-v2.1.1.md) is a patch release: no vocabulary term
-changes. It records the completed review of the specification-derived coverage
-assessment, the tests that review asked for, and the converter support they needed.
+[Version 2.1.2](docs/RELEASE-NOTES-v2.1.2.md) is a patch release: no vocabulary term
+changes. It records which QUAL datatype producers should write, after a cross-producer
+check found two conforming graphs of the same file differing there.
+
+[Version 2.1.1](docs/RELEASE-NOTES-v2.1.1.md) recorded the completed review of the
+specification-derived coverage assessment, the tests that review asked for, and the
+converter support they needed.
 [Version 2.1.0](docs/RELEASE-NOTES-v2.1.0.md) added structured assembly-contig,
 padding and FORMAT-key representations.
 Users of the former VCF-RDFizer namespace should follow the
