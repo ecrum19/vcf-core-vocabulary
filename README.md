@@ -118,7 +118,7 @@ things**, so their percentages can never be added or compared:
 
 | Assessment | Recorded result | What the number means |
 | --- | --- | --- |
-| [Specification-derived requirements](coverage/methodology/README.md) | **94** requirements, **213** cases; **46–57%** demonstrated per VCF version; **333/333** reserved Number/Type rows agree | Requirements read out of the VCF 4.1–4.5 specification text. Untested requirements count against the score, so this is a floor, not a ceiling. |
+| [Specification-derived requirements](coverage/methodology/README.md) | **94** requirements, **210** cases; **46–56%** demonstrated per VCF version; **333/333** reserved Number/Type rows agree | Requirements read out of the VCF 4.1–4.5 specification text. Untested requirements count against the score, so this is a floor, not a ceiling. |
 | [Curated VCF 4.5 inventory](coverage/vcf45-inventory/README.md) | **104/104** constructs represented; **87** with a validation rule | An authored list of VCF 4.5 constructs mapped to vocabulary terms. 100% of the list, which cannot reveal what the list omits. |
 
 The low percentages in the first row mean "not yet demonstrated by a test", not
