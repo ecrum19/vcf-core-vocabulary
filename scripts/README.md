@@ -13,7 +13,8 @@ assessment-specific scripts and results live in
 - `generate-reserved-keys.mjs` creates the full reserved-key registry for one VCF version.
 - `vcf_examples.py` materializes the generated example graphs from their VCF sources.
 - `convert-example-nt-to-ttl.mjs` formats the canonical N-Triples example as Turtle.
-- `insert-class-hierarchy.mjs` adds the configured class-hierarchy extension after OCG builds the site.
+- `finalize-site.mjs` runs after OCG builds the site: it verifies the configured class-hierarchy
+  extension and removes the generated-page note OCG hardcodes on the Vocabulary Reference page.
 
 **Support**
 
