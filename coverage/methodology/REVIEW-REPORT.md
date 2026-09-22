@@ -6,7 +6,9 @@ rationale given at the time; `npm run methodology:check -- --require-reviewed` e
 
 Two agent passes prepared the material — a VCF-expert reading of the five pinned specifications
 on 10 September, then the tests it asked for on 11 September — and every decision below was
-taken by the reviewer, one item at a time, against the evidence.
+taken by the reviewer, one item at a time, against the evidence. Since 2.1.3 all 94 entries
+name the countersigning human reviewer, the queries and expected answers having been
+hand-checked.
 
 Reviewed artefact: `coverage/methodology/` at the pinned sources in
 [sources.lock.json](sources.lock.json); all five SHA-256 pins re-verified.
@@ -438,10 +440,11 @@ spelling (§2.17).
 ## Housekeeping
 
 The 83 requirements not revisited in the signing session carry fingerprints refreshed
-mechanically — their text, cases, fixtures, queries and expected answers are byte-identical to
-what was accepted on 10 September — but their `reviewer` field still names the agent pass.
-Replace it, or state in the README that those entries stay attributed to it. `review.json` is
-outside the provenance hash set, so editing the name invalidates nothing.
+mechanically: their text, cases, fixtures, queries and expected answers are byte-identical to
+what was accepted on 10 September. Their `reviewer` field named the agent pass until 2.1.3,
+which replaced it with the countersigning human reviewer after the queries and expected answers
+were hand-checked. `review.json` sits outside the provenance hash set, so that edit moved no
+fingerprint: all 94 were verified unchanged.
 
 ---
 
@@ -450,15 +453,10 @@ outside the provenance hash set, so editing the name invalidates nothing.
 ## What you edit, and what is generated
 
 Everything under `generated/` is rebuilt from the authored inputs and must never be hand-edited.
-
-| File | Required judgment |
-| --- | --- |
-| [requirements.json](inputs/requirements.json) | `question`, `interpretation`, `testPlan`, `versions`, `anchors.{version}`, `area`. Are capability and version scope faithful to the source? Keep IDs stable. |
-| [cases.json](inputs/cases.json) | `requirement`, `version`, `fixture`, `note`, and each axis/profile's `query` and `expected`. Does the expected answer follow from the source? Reused query code needs reading once; each case's expected answers and version need checking. |
-| [source-assertions.json](inputs/source-assertions.json) | The authored passage interpretations, their requirement links, `caseIds`, `testGap` and exclusions. This is input data, not automatic extraction. |
-| [declarations.json](generated/declarations.json) | `version`, `line`, `kind`, `key`, `number`, `type` against the reserved definitions, and extraction omissions. `status`/`actual` report literal comparisons. |
-| [results.json](generated/results.json) | Join `requirements[].requirement` and `queries[].case` to input IDs. Inspect every version/profile, both axes, `status`, `expected`, `actual`, `witness` and the controls. Check meaningful passes as well as failures. |
-| [summary.json](generated/summary.json) | `byVersion` denominators, axis counts, `percentDemonstrated`, `sourceAssertions`, `declarations`, `pendingReviews`. Arithmetic is automated; judge whether the scope supports the claims. |
+The authored inputs are [requirements.json](inputs/requirements.json) (capability and version
+scope; keep IDs stable), [cases.json](inputs/cases.json) (fixture, query and expected answer per
+axis and profile) and [source-assertions.json](inputs/source-assertions.json) (passage
+interpretations, requirement links, `caseIds`, `testGap`, exclusions).
 
 Within `expected`, outer arrays are answer rows and columns follow the SPARQL `SELECT`. Row order
 is ignored; duplicate rows count. JSON `null` means unbound; `"."` is the VCF missing-value token.
@@ -466,25 +464,11 @@ is ignored; duplicate rows count. JSON `null` means unbound; `"."` is the VCF mi
 
 ## Source-audit rows
 
-One row inventories a source section, not a test outcome. `requirements` holds the explicit
-semantic links from the authored assertions; the old line-overlap suggestions remain as
-`anchorRequirements`, and an overlap alone never establishes that a passage is accounted for.
-`assertions[].testStatus` reads `targeted-tests` (cases identified), `partial-tests` (some
-evidence with a stated gap) or `no-targeted-test` — none of which mean pass or fail.
-
-`disposition`, `note` and `relatedRequirements` are the only fields edited by hand:
-
-| Disposition | Meaning |
-| --- | --- |
-| `pending` | Passage not reviewed. |
-| `mapped` | All identified in-scope information is linked to requirements; this does not mean tests pass or exist. |
-| `needs-requirement` | A requirement needs adding, splitting or correcting. |
-| `needs-review` | Source meaning, scope or a defensible expected-answer test needs judgment. |
-| `duplicate` | Adds nothing beyond the linked requirements; identify them. |
-| `context-only` | Heading or background with no information capability. |
-| `out-of-scope` | Entire passage concerns excluded matters; explain why. |
-
-Save annotations **before** changing requirements, cases or the assertion input, because
+A row inventories a source section, not a test outcome. `assertions[].testStatus` reads
+`targeted-tests`, `partial-tests` or `no-targeted-test` — none of which mean pass or fail.
+`disposition`, `note` and `relatedRequirements` are the only hand-edited fields; dispositions are
+`pending`, `mapped`, `needs-requirement`, `needs-review`, `duplicate`, `context-only` and
+`out-of-scope`. Save annotations **before** changing requirements, cases or assertions, because
 rebuilding refuses unsaved ones:
 
 ```sh
@@ -495,23 +479,21 @@ npm run methodology:build
 ## Recording an acceptance
 
 An entry under `requirements` in [review.json](inputs/review.json), or the top-level
-`sourceAudit`, with four fields: the `fingerprint` currently in
-[review-queue.json](generated/review-queue.json) for that ID, `reviewer`, `date` and `rationale`.
-A blank rationale never counts as acceptance, and a fingerprint that has since moved is treated
-as unsigned. Editing `review.json` requires a rebuild, because its hash is recorded in the
-provenance.
+`sourceAudit`, carrying the `fingerprint` currently in
+[review-queue.json](generated/review-queue.json) for that ID, plus `reviewer`, `date` and
+`rationale`. A blank rationale never counts as acceptance, and a moved fingerprint is treated as
+unsigned.
 
-Every fingerprint mixes in a digest of the whole hashed input set — sources, scripts, queries,
-fixtures, the authored inputs and the ontology — so a change to that set re-opens every
-acceptance, including requirements the change did not touch. That is deliberate: changed evidence
-invalidates review. Batch input changes rather than interleaving them with signing.
+Every fingerprint mixes in a digest of the whole hashed input set, so any change to that set
+re-opens every acceptance, including requirements it did not touch. That is deliberate. Batch
+input changes rather than interleaving them with signing.
 
-**One exception, by design: a release version bump.** `owl:versionInfo` and `owl:versionIRI`
-values are blanked before an ontology module is hashed, so stamping a new release leaves the
-digest untouched and recorded decisions stand. Only the stamped value is ignored; every other
-byte of those files still counts, and the VCF specification version a registry describes is a
-different property and is not exempt. A regression test in
-[test_assessment.py](tests/test_assessment.py) holds both halves of that behaviour in place.
+**Two things are outside that set, by design.** `owl:versionInfo` and `owl:versionIRI` are blanked
+before an ontology module is hashed, so a release stamp leaves recorded decisions standing —
+though `owl:priorVersion` is *not* blanked, and changing it does re-open every review. And
+`review.json` itself is excluded, so the reviewer name can be recorded without invalidating
+anything; only its separate `reviewInputSha256` in `provenance.json` moves. A regression test in
+[test_assessment.py](tests/test_assessment.py) holds the version-bump behaviour in place.
 
 ## Reproducing this state
 
@@ -522,5 +504,4 @@ npm run methodology:test
 npm run methodology:check -- --require-reviewed
 ```
 
-All four succeed. The wider repository checks (`validate:rdf`, `validate:examples`,
-`validate:profiles`, `validate:shacl`, `validate:regressions`) also pass.
+All four succeed, as do the wider repository checks.

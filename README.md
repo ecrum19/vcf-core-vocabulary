@@ -8,7 +8,7 @@
 
 [![Vocabulary and example validation](https://github.com/ecrum19/vcf-core-vocabulary/actions/workflows/validate.yml/badge.svg?event=pull_request)](https://github.com/ecrum19/vcf-core-vocabulary/actions/workflows/validate.yml)
 [![Documentation publication](https://github.com/ecrum19/vcf-core-vocabulary/actions/workflows/publish-pages.yml/badge.svg?branch=main)](https://github.com/ecrum19/vcf-core-vocabulary/actions/workflows/publish-pages.yml)
-[![Coverage review: ongoing](https://img.shields.io/badge/coverage_review-ongoing-d89a4a)](coverage/methodology/README.md#review-status)
+[![Coverage review: complete](https://img.shields.io/badge/coverage_review-complete-3f7d3f)](coverage/methodology/README.md#review-status)
 
 **An RDF vocabulary for Variant Call Format (VCF) data, with validation profiles
 for VCF 4.1–4.5.**
