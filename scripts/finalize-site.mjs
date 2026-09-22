@@ -9,6 +9,13 @@ const hierarchyPath = path.join(sitePath, "assets", "ontology_hierarchy.ttl");
 const referencePath = path.join(sitePath, "ontology-reference.html");
 const ontologyPath = path.join(repoRoot, "ontology", "vcf-core-vocabulary.bundle.ttl");
 
+// OCG hardcodes this note on the Reference page and offers no configuration for
+// it. The page's own heading and table of contents already say what it is, so
+// the sentence is removed here rather than left to describe a build detail.
+const GENERATED_PAGE_NOTE =
+  '<p class="section-note">This page is generated from the configured ontology file '
+  + 'and links through to per-term pages when that feature is enabled.</p>';
+
 if (!fs.existsSync(hierarchyPath)) {
   throw new Error(`OCG did not generate the hierarchy asset: ${path.relative(repoRoot, hierarchyPath)}`);
 }
@@ -33,6 +40,18 @@ if (missingPrefixes.length) {
   fs.writeFileSync(hierarchyPath, `${missingPrefixes.join("\n")}\n${hierarchy}`);
 }
 
+const reference = fs.readFileSync(referencePath, "utf8");
+if (!reference.includes(GENERATED_PAGE_NOTE)) {
+  throw new Error(
+    "The generated-page note was not found in ontology-reference.html; OCG changed its wording, "
+    + "so scripts/finalize-site.mjs needs updating."
+  );
+}
+// Take the surrounding indentation and newline with it, so the published
+// markup keeps no blank line where the note stood.
+const escaped = GENERATED_PAGE_NOTE.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+fs.writeFileSync(referencePath, reference.replace(new RegExp(`[ \\t]*${escaped}\\n?`), ""));
+
 console.log(
-  `Class hierarchy inserted by OCG and verified in ${path.relative(repoRoot, referencePath)}.`
+  `Class hierarchy verified and the generated-page note removed in ${path.relative(repoRoot, referencePath)}.`
 );
