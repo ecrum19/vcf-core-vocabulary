@@ -118,7 +118,7 @@ things**, so their percentages can never be added or compared:
 
 | Assessment | Recorded result | What the number means |
 | --- | --- | --- |
-| [Specification-derived requirements](coverage/methodology/README.md) | **94** requirements, **213** cases; **46–57%** demonstrated per VCF version; **333/333** reserved Number/Type rows agree | Requirements read out of the VCF 4.1–4.5 specification text. Untested requirements count against the score, so this is a floor, not a ceiling. |
+| [Specification-derived requirements](coverage/methodology/README.md) | **94** requirements, **210** cases; **46–56%** demonstrated per VCF version; **333/333** reserved Number/Type rows agree | Requirements read out of the VCF 4.1–4.5 specification text. Untested requirements count against the score, so this is a floor, not a ceiling. |
 | [Curated VCF 4.5 inventory](coverage/vcf45-inventory/README.md) | **104/104** constructs represented; **87** with a validation rule | An authored list of VCF 4.5 constructs mapped to vocabulary terms. 100% of the list, which cannot reveal what the list omits. |
 
 The low percentages in the first row mean "not yet demonstrated by a test", not
@@ -128,7 +128,7 @@ it. Thirty-seven are simply unwritten: the test plan exists and the fixture does
 One is deliberately withheld while a specification defect is resolved upstream, and
 two are single requirements standing for every reserved INFO and FORMAT key. No query
 has ever failed in the expanded profile.
-[What the untested requirements actually are](coverage/methodology/README.md#what-the-untested-requirements-actually-are)
+[What the untested requirements actually are](coverage/methodology/README.md#what-the-untested-requirements-are)
 breaks this down. [Why we keep both assessments](coverage/README.md#why-there-are-two-assessments)
 explains how the two fail in opposite directions, and neither establishes complete
 VCF conformance.
@@ -157,7 +157,7 @@ specification-derived assessment is meant to end up with a passing test or an ex
 argued reason why it cannot have one. Today 51 of the 91 VCF 4.5 requirements have one, and
 most of the remainder are waiting on someone to write the fixture and query rather than on
 any modelling problem — the breakdown is
-[in the assessment README](coverage/methodology/README.md#what-the-untested-requirements-actually-are).
+[in the assessment README](coverage/methodology/README.md#what-the-untested-requirements-are).
 Two specific tests are already specified and unwritten, R77 and R88; the largest single piece
 of work is R67 and R68, which between them stand for every reserved INFO and FORMAT key.
 

@@ -12,7 +12,7 @@ hand-checked.
 
 Reviewed artefact: `coverage/methodology/` at the pinned sources in
 [sources.lock.json](sources.lock.json); all five SHA-256 pins re-verified.
-Current scores are in the [assessment README](README.md#scoring-and-outcome) and are regenerated,
+Current scores are in the [assessment README](README.md#scoring) and are regenerated,
 so they are not repeated here.
 
 ## What the assessment claims
