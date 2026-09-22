@@ -150,6 +150,6 @@
     "scripts/version_registry.py": "db5d590929bdd6fe4ce1df83315a59e0db1648b398f9b4e5659da90b1059861a"
   },
   "rdflib": "7.6.0",
-  "reviewInputSha256": "ce9af94be0fdfb5ec8e39d5055fb2838d8b3f98823120ad35f4288b26d55eb6d",
+  "reviewInputSha256": "644a11f9f56ce416d58bcb82502b4b02fd13e89eb6881ca604a5eb9ef8dc26c6",
   "schemaVersion": 1
 }
