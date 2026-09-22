@@ -28,157 +28,157 @@
       "date": "2026-09-10",
       "fingerprint": "5291bf7c16dbfb35edb5d009cbb8eaf7ea6bf1fcc4e3415a25c6cf0de04d9e72",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R02": {
       "date": "2026-09-10",
       "fingerprint": "8d2047de825adbe00419c78f70f30c05b22211fe730645d5950a5664115177a2",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R03": {
       "date": "2026-09-10",
       "fingerprint": "20f3cb93fa5c0aa028f1bcea73e2440b79aa3b0776a5d6b73ae961fc820c1088",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes. Verified against the corrected reading of the 4.4/4.5 changelog: ID, Number, Type and Description are required for INFO, and the changelog's 'only INFO' claim omits FORMAT. Cases pass in every version.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R04": {
       "date": "2026-09-10",
       "fingerprint": "90c4d3673e27a0040bae044e7e1ad1602c338b5438fc8b8467bc211daa27ecd7",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R05": {
       "date": "2026-09-10",
       "fingerprint": "f7d3af87cac2a9e806006417f276062b8a4e509eb9983399dc3d6a579b34c37c",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R06": {
       "date": "2026-09-10",
       "fingerprint": "60fbd03607db890313e6a511e5e8c3f7ec4151ba14ed727626044672b994b814",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R07": {
       "date": "2026-09-10",
       "fingerprint": "b6c7eb4a545d54f430b97a5bd0bf43f7769b5bf6e694785a683191e34f478e74",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R08": {
       "date": "2026-09-10",
       "fingerprint": "fa981a2b36fe5665621ca507adb4f3d0cfeca56992e2381a9509cf8a0eb547e9",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R09": {
       "date": "2026-09-10",
       "fingerprint": "78212b31a866d0a757fdae31dda16d66694d53a69be72a6471b8f71771b021ba",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R10": {
       "date": "2026-09-10",
       "fingerprint": "bafcd941a86961c728225bfaa46a4d5ebcc62a83f46759ab9503b296c6fbdcc9",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R11": {
       "date": "2026-09-10",
       "fingerprint": "e1d974c58251067e5e43a769d8328bbea281f290beef07bad04700100260384c",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R12": {
       "date": "2026-09-10",
       "fingerprint": "46536eb0a7c0a732087b6418211720fee9b3ca22359c654d41432be1b5e322d6",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R13": {
       "date": "2026-09-10",
       "fingerprint": "95154bef20dc4359d102b38898c6bc3d1a15354b0858a9aad3d350755d0e5e51",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R14": {
       "date": "2026-09-10",
       "fingerprint": "97b006c3e3dfce2da2a33d7f1c704859c64d2134433f3d88f3f83ced87a128c7",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R15": {
       "date": "2026-09-10",
       "fingerprint": "f062eabbf811dc704fc12592197a27b99f7d735a530cdcc83cdb0ace094a6e06",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R16": {
       "date": "2026-09-10",
       "fingerprint": "231fe4be32eabdd675db84592bc29edf271dec58637a1472c6f652200c36c2e2",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R17": {
       "date": "2026-09-10",
       "fingerprint": "0fef7293185972c03429e18530aa912363b42924f03d9ca66db56d754f00ea38",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R18": {
       "date": "2026-09-10",
       "fingerprint": "7fa678b044f621b94a7b3236ab783ee64cba30eb5c80d5bca7fce384907f5a24",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes. Failing witnesses accepted as a documented condensed-profile limitation, not vocabulary incapability: 4.1/condensed/structure, 4.2/condensed/structure, 4.3/condensed/structure, 4.4/condensed/structure, 4.5/condensed/structure; the same requirement passes on the structure axis in the expanded profile.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R19": {
       "date": "2026-09-10",
       "fingerprint": "0a32fc55b0699b647f95df1ed974c3b9435d56d346adfd589d4c4254c63af971",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes. Failing witnesses accepted as a documented condensed-profile limitation, not vocabulary incapability: 4.1/condensed/structure, 4.2/condensed/structure, 4.3/condensed/structure, 4.4/condensed/structure, 4.5/condensed/structure; the same requirement passes on the structure axis in the expanded profile.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R20": {
       "date": "2026-09-10",
       "fingerprint": "c05d4d9ca51a7ff7b39e7668185a8371357c320d082a50b36cd2b4af714c4e11",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes. Failing witnesses accepted as a documented condensed-profile limitation, not vocabulary incapability: 4.1/condensed/structure, 4.2/condensed/structure, 4.3/condensed/structure, 4.4/condensed/structure, 4.5/condensed/structure; the same requirement passes on the structure axis in the expanded profile.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R21": {
       "date": "2026-09-10",
       "fingerprint": "f1a824a75f1441fb2fafe3857989edd004de01b0b7601082c8e6f496d8df8878",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes. Failing witnesses accepted as a documented condensed-profile limitation, not vocabulary incapability: 4.1/condensed/structure, 4.2/condensed/structure, 4.3/condensed/structure, 4.4/condensed/structure, 4.5/condensed/structure; the same requirement passes on the structure axis in the expanded profile.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R22": {
       "date": "2026-09-10",
       "fingerprint": "7a28ec4030724050a5142dc85b7283a49740cfebf5ca45843bc9e6f452397ba1",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 1 registered case(s) for version(s) 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes. Untested version(s) accepted as unassessed: 4.3, 4.4.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R23": {
       "date": "2026-09-10",
       "fingerprint": "c550b6a870c6a8da8d152f1950e6d20141a980d4903711b3c740e824be5e0c56",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 1 registered case(s) for version(s) 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R24": {
       "date": "2026-09-10",
       "fingerprint": "873f38c497021816d18cf760c7d7444954839dc607fbcffec07769ecfedd86b3",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 1 registered case(s) for version(s) 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R25": {
       "date": "2026-09-10",
       "fingerprint": "9bd5d5e2e1cf1f3ee1a53f721396b1461255492c23a9ef6d5e3852d244930ee3",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 1 registered case(s) for version(s) 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R26": {
       "date": "2026-09-10",
       "fingerprint": "d7e08349f40fb3b884f0ee15c2b5d7cc1280f9a945a5d20ad8f54c151d61e363",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 1 registered case(s) for version(s) 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R27": {
       "date": "2026-09-11",
@@ -190,7 +190,7 @@
       "date": "2026-09-10",
       "fingerprint": "4c5e2f47e0c5c7697ffd4500729bbc7d9a2ff5e22dbf9cdb7fc02577b7734ccf",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 1 registered case(s) for version(s) 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes. Untested version(s) accepted as unassessed: 4.4. Failing witnesses accepted as a documented condensed-profile limitation, not vocabulary incapability: 4.5/condensed/structure; the same requirement passes on the structure axis in the expanded profile.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R29": {
       "date": "2026-09-11",
@@ -202,7 +202,7 @@
       "date": "2026-09-10",
       "fingerprint": "8e0725aba6e7151c275c9d5b680a6231e8d5009db8d0d56e3732e17700ab330c",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 1 registered case(s) for version(s) 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes. Failing witnesses accepted as a documented condensed-profile limitation, not vocabulary incapability: 4.5/condensed/structure; the same requirement passes on the structure axis in the expanded profile. Verified that FORMAT LEN is the inclusive block length, so END = POS + LEN - 1; the fixture and the decode query implement that correctly, while the specification's own 4.5 table uses ';' separators and three off-by-one LEN values. Condensed/structure failure accepted as a profile limitation.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R31": {
       "date": "2026-09-11",
@@ -214,79 +214,79 @@
       "date": "2026-09-10",
       "fingerprint": "9ea06257410c5d79c885795b2d17e36a7a5d316fcf72b799fa7d0e4ad0ca7ef4",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 1 registered case(s) for version(s) 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4. Verified the reciprocal-mate fixture and expected answers. Recorded that the assembly-contig insertion tables and the sample-mixture breakend tables are excluded as mate oracles, the latter because their ALT coordinates name CHROM 2 while the named mates are on CHROM 13.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R33": {
       "date": "2026-09-10",
       "fingerprint": "beacb965876c67656444ea5e6797f169b905578599fc5d864f9b1546c6340c49",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 4 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes. Untested version(s) accepted as unassessed: 4.5. Verified the version-dependent CIPOS scope: record-scoped Number=2 in 4.1-4.3 with an unbound allele, and per-ALT pairs in 4.4, both matching the registered expected answers.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R34": {
       "date": "2026-09-10",
       "fingerprint": "6fa04ffe38c0f1cbf461db7ef5e592793cc802f660b993737db4016649cc8cff",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 4 registered case(s) for version(s) 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes. Untested version(s) accepted as unassessed: 4.1. Scope corrected during this review: attribute order is removed from the scored requirement because VCF 4.4/4.5 state that implementations must not rely on it and need not preserve it, and 4.1-4.3 nowhere give it meaning. Identity, decoded value and escaping remain scored and pass.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R35": {
       "date": "2026-09-10",
       "fingerprint": "e4584fbf3e4bacd5129ad835bd856382a00810e6b449943e53555087a41fe0e5",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5. Version scope clarified: normative Genomes/Mixture grammar in 4.1/4.2, retained non-normative extension in 4.3-4.5. The version list was deliberately left unchanged so the clarification cannot raise a coverage percentage. Accepted limitation: Description entries cannot be paired positionally by grammar because the parallel list is a single quoted string containing ';'.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R36": {
       "date": "2026-09-10",
       "fingerprint": "01fecbc8f21acc919eaaabccb308d6e2c24f5bb3cbb93a26c03ddc31d058e755",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R37": {
       "date": "2026-09-10",
       "fingerprint": "6eebe680cfd27306f2fe28d70e6d7c4912e88cf7695df4e0e48f3346b1555db4",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R38": {
       "date": "2026-09-10",
       "fingerprint": "a3883cd8fdaf6f85b125cb4a0827db7608f3722ef65cec626edffdd64107947c",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.2, 4.3, 4.4, 4.5.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R39": {
       "date": "2026-09-10",
       "fingerprint": "703223131864441056905e00d336d1fc75f83785d5d87bad89a761e924322b8a",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R40": {
       "date": "2026-09-10",
       "fingerprint": "169642ebf8413fb1ac4609467884f6c5bc00291f983d35eaff27a5813f1a98ac",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R41": {
       "date": "2026-09-10",
       "fingerprint": "ac058461a910cc1a5aec50d7a50c3f1cf879678abfb4e855abcfe4ca96b3bb30",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R42": {
       "date": "2026-09-10",
       "fingerprint": "0238b91e06a7a8231d01b6930b993e32db8e07386021b1543b0b406d369c4f47",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R43": {
       "date": "2026-09-10",
       "fingerprint": "9e5d7ef6c1586e99e5d4c851652b1a86772712d9bf17d5ce6c50e02061098106",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R44": {
       "date": "2026-09-10",
       "fingerprint": "db2bbf2596854866d622aa2a13163bf3aabd88ca2319d964d77f1b2da07a2809",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R45": {
       "date": "2026-09-11",
@@ -304,193 +304,193 @@
       "date": "2026-09-10",
       "fingerprint": "f0234a389e6a3770cbcf8f85b5fa53c4477005898506f08ff1e5ca2a0057fe5a",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5. Anchor corrected during this review: it pointed at Fixed fields, while the type and precision definitions are in the Data types section from 4.3 and in the INFO field-format section in 4.1/4.2. Remains unassessed.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R48": {
       "date": "2026-09-10",
       "fingerprint": "7ff95949ff9b08f6b4425867726b038162659e1fea1dab8bb8ee12d8bdb5e02b",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5. Anchor corrected during this review: it pointed at the Information field format section, while the 'arbitrary keys are permitted' and 'additional FORMAT keys' statements that this requirement rests on are in Fixed fields and Genotype fields. Remains unassessed.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R49": {
       "date": "2026-09-10",
       "fingerprint": "282da8fee5b8d4b45c29da2eb6cf33f3a5191560660c3f79ccba61617d1bc435",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.4, 4.5. Resolved the blocking source conflict: the PSL worked example is excluded as an oracle because its allele indices exceed the ALT lists, its implicit leading phasing indicator contradicts the PSL missing value, and its ploidy is inconsistent between rows. A corrected reviewer-authored equivalent is recorded. Remains unassessed.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R50": {
       "date": "2026-09-10",
       "fingerprint": "5686835d280a0681f21e0f6d48f357ef111756a22626f5a51b448f0496675d20",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.5.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R51": {
       "date": "2026-09-10",
       "fingerprint": "c80e81eefe57d092247657edc88cb83b1cbb35fc8e0252863372d816f30c51e2",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 10 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R52": {
       "date": "2026-09-10",
       "fingerprint": "1b23a9a2dd3dea8b0ad089db06b4d297096a174f0e2ec8c868ae143901e62d65",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes. Verified against the corrected reading of the 4.4/4.5 changelog: the FORMAT section requires ID, Number, Type and Description just as the INFO section does, contrary to the changelog. Cases pass in every version.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R53": {
       "date": "2026-09-10",
       "fingerprint": "225bdd77fc47034e854c369e1d59c574622ae531b1a0068280c9a0c75492b642",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R54": {
       "date": "2026-09-10",
       "fingerprint": "b0a8738c45ea6c61a1902d29e53d61feeda10bd17ecc9f2f892862f23054db60",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R55": {
       "date": "2026-09-10",
       "fingerprint": "439319fe5ab06f2d6ad50ef934d8c7028d74cf48acc32377191c7da7fb7438de",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R56": {
       "date": "2026-09-10",
       "fingerprint": "ff9e8ea7ca33779bf57a48cbb9092db47fdc911f2abcd27b61612292ecda04a3",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R57": {
       "date": "2026-09-10",
       "fingerprint": "c31d06a8b297c40ce12c4f5324fe133231305822eb8b19aedf8e23aa732ba9b6",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R58": {
       "date": "2026-09-10",
       "fingerprint": "a8637cd1d96e4986606b529117c6c5ed2c6ab39f732d131121f526cf6b6bb8bc",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R59": {
       "date": "2026-09-10",
       "fingerprint": "23c337c64fab4181faf61c53d973905b0b1cc397ebd72a20aad1a931377645de",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 6 registered case(s) for version(s) 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R60": {
       "date": "2026-09-10",
       "fingerprint": "47682aa9782c233852ae058a1f2868354ce2f4b50ff7863296cfd9737582ab0b",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes. Failing witnesses accepted as a documented condensed-profile limitation, not vocabulary incapability: 4.1/condensed/structure, 4.2/condensed/structure, 4.3/condensed/structure, 4.4/condensed/structure, 4.5/condensed/structure; the same requirement passes on the structure axis in the expanded profile. Verified the FT states against the fixture and the specification: PASS, '.' for filters not applied, and semicolon-separated failure codes resolved to their FILTER declarations in order. Condensed/structure failure accepted as a profile limitation.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R61": {
       "date": "2026-09-10",
       "fingerprint": "d28371f4f9fe3cf86cb4c05211ac1088b23ff20656f5f2087a59eeb833c16dfc",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 10 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R62": {
       "date": "2026-09-10",
       "fingerprint": "6d737b513dcd164b6f91995e4c2dc36aa090586f2047f8090ea9231ea45bfec9",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 5 registered case(s) for version(s) 4.1, 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R63": {
       "date": "2026-09-10",
       "fingerprint": "e7617c86f2fae5e82ab1d3294f576a325ecf6f032be1cd913226a02f6ea45a97",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R64": {
       "date": "2026-09-10",
       "fingerprint": "26f83c6d2eae1ef7e7c3dc5ae29d1fed769f61350f7c3e941db5675436442e32",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.2, 4.3, 4.4, 4.5.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R65": {
       "date": "2026-09-10",
       "fingerprint": "98a734d1a3ae2ce27535d20bf127bd880c4f2cba8943800a36e788758721b52f",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; read all 4 registered case(s) for version(s) 4.2, 4.3, 4.4, 4.5 - fixture records, SPARQL patterns and independently authored expected answers - and inspected their results in both profiles and on both axes.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R66": {
       "date": "2026-09-10",
       "fingerprint": "c519962496705cbf961dc25f70e8207f149e2d36f7c60054e72e0e99eccfaffd",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R67": {
       "date": "2026-09-10",
       "fingerprint": "55088e3bcf7d57174b95279ce5fa86437cd9a9a23383df6d30128eba77dd7c10",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R68": {
       "date": "2026-09-10",
       "fingerprint": "801266b92b988898e2a0659296c149f6f0f7d2d4ddac1d5788ce1a94e580b913",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R69": {
       "date": "2026-09-10",
       "fingerprint": "09407793fc2f12ea40e881dc01eca47883259e16b3b9e5b161e1289a7e89fc49",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5. Resolved the flagged Q-suffix conflict: the error-probability reading governs, because the printed -10 log10 Pr(Data|Model) contradicts both the same sentence's 'log-complementary posterior' wording and the normative GQ/CNQ definitions. No expected answer depends on it. Remains unassessed.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R70": {
       "date": "2026-09-10",
       "fingerprint": "985810c620477d92acc65f68d274948833fd31fdacf1735cf211abe698c1b515",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R71": {
       "date": "2026-09-10",
       "fingerprint": "d9b0a6f08854a8e5030f4dbd4019a54636d806e12cfb966659a55c6751b4e8bb",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R72": {
       "date": "2026-09-10",
       "fingerprint": "f28ac95ed9ff18baa94649a56888b6cc46b153dd1b86d5effa2682181f07fc89",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5. Verified that the 4.1 prose '105 bp' is a typo corrected to 205 bp in the pinned 4.2 and 4.3 texts, and that POS, END and SVLEN agree on 205 deleted bases. Remains unassessed.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R73": {
       "date": "2026-09-10",
       "fingerprint": "1fb49426d66cad11548f0f1ffa144f5342df9d0bdaa903dab2ec486c3bdaa546",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R74": {
       "date": "2026-09-10",
       "fingerprint": "3679961b6c737087a05a6509bcb11afaeaaf3b2275765c8942e4809943f00b84",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R75": {
       "date": "2026-09-10",
       "fingerprint": "22bcc5373d704d38e456dc0067ffa261895cb673ae8ccd87a7d4c7855f99fde5",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.4, 4.5. Recorded that the specification's DUP example omits the mandatory SVCLAIM without determining its value, so that row is excluded as an oracle. Remains unassessed.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R76": {
       "date": "2026-09-10",
       "fingerprint": "8253845c9e3cee1650161820d64c101161f7b7202f12d5067d7ffee0a5337cd6",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.4, 4.5.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R77": {
       "date": "2026-09-10",
       "fingerprint": "ca583e342e8e56d08fea0b04ada72542f128965eb569a97edea8b77139fb7fd8",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5. Resolved the flagged conflict: the prose copy-number indexing from zero governs and list length is data-determined, because the declared Number=G is inconsistent with it. Recorded as a specification defect. Remains unassessed.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R78": {
       "date": "2026-09-10",
       "fingerprint": "94ae380e8f6fcccfe43303830a191617075b719aedf76c2347e785f7cffe4987",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R79": {
       "date": "2026-09-11",
@@ -502,13 +502,13 @@
       "date": "2026-09-10",
       "fingerprint": "cb4da1bbb71a01150255dd756386435e6e81030b61e2312bd698040aa146f2e8",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2. Accepted unassessed limitation: the 4.1/4.2 GLE example value contains the ':' sample sub-field separator, no escaping rule or complete sample-column example exists, and 4.3 removes the key as ill-defined, so no source-derived fixture or oracle is possible. No test is requested.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R81": {
       "date": "2026-09-10",
       "fingerprint": "ca79b17a0aee0ed88716760ee8da24c67c16198509bca7ad91616b92ef78cbe4",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R82": {
       "date": "2026-09-11",
@@ -538,19 +538,19 @@
       "date": "2026-09-10",
       "fingerprint": "5649736c0d13d1d24f952b33b28becdc196c2c2102d1b524bc2872a919350cb2",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.5.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R87": {
       "date": "2026-09-10",
       "fingerprint": "4158953b954d3f447ca5d9028b030b3730185568e175065228b4910576f845c4",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.4, 4.5.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R88": {
       "date": "2026-09-10",
       "fingerprint": "7d363ce4d36235ab528474e018230270250be4ddd96c47c443976a7e2eacb093",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.4, 4.5. Resolved the RUL/RUB nesting question: RUB is partitioned by RUC, one value per repeat unit, unlike RUS/RUL/RUC/RB which are partitioned by RN. The specification's RUB example is excluded as a copy-number oracle because its CN is inconsistent with both sum(RUB) and RUL*RUC. Remains unassessed.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R89": {
       "date": "2026-09-11",
@@ -562,13 +562,13 @@
       "date": "2026-09-10",
       "fingerprint": "c375e7198892fc3d0f015714451fb753c44a23ce746fa8e88d9897249acfa734",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R91": {
       "date": "2026-09-10",
       "fingerprint": "c235962bd207d2e7ad35d425809457a0ac4c21dfb71297a56ee36580fa3b0561",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.4, 4.5.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R92": {
       "date": "2026-09-11",
@@ -580,13 +580,13 @@
       "date": "2026-09-10",
       "fingerprint": "f470f7ffc0d6423bdf9ef05e88ba6c7eb15719315075e62026348cf2c985cabe",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3, 4.4, 4.5.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     },
     "R94": {
       "date": "2026-09-10",
       "fingerprint": "b5a8444af4cba0f33f19076b2106e8e8726b1cc59e7e23fc2aba7801821e68d3",
       "rationale": "Checked the question, interpretation, testPlan, version list and the pinned source anchor against the specification text; confirmed that no case is registered, so every applicable version is reported as unassessed, and checked that the linked assertions carry an explicit test gap. Untested version(s) accepted as unassessed: 4.1, 4.2, 4.3. Accepted unassessed limitation: BDP and BCN are undeclared prose-only names with no Number, Type or serialization in 4.1-4.3, the bundle table has no VCF grammar, and 4.4 deprecates bundles. No test is requested; the declared equivalents are covered by R78 and R79.",
-      "reviewer": "Claude Opus 5 - VCF-expert agent review pass (replace with the countersigning human reviewer's name)"
+      "reviewer": "Elias Crum"
     }
   },
   "sourceAudit": {
