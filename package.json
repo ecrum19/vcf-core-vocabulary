@@ -37,6 +37,6 @@
     "clean": "sh scripts/py.sh scripts/clean.py"
   },
   "devDependencies": {
-    "ontology-companion-generator": "1.5.0"
+    "ontology-companion-generator": "1.6.0"
   }
 }
